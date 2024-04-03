@@ -5,7 +5,7 @@
 !!! warning "No Controlled Data"
     This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
 
-Research Technologies in partnership with UITS has implemented an AWS rental storage solution. This AWS option is called Tier 2 which differs from Tier 1, the primary storage that is directly connected to the HPC clusters. Tier 1 is very fast, very expensive, and immediately available for active analyses. Tier 2 is intended for data not immediately undergoing active analyses and for backups (highly encouraged!). Researchers can use the software Globus to move data to Tier 2, and can also move data from other sources (called endpoints) like Google Drive. The data in Tier 2 will not be mounted on HPC, and so Globus will be used to move it back to Tier 1 if needed.
+Research Technologies in partnership with UITS has implemented an AWS rental storage solution. This AWS option is called Tier 2 which differs from Tier 1, the primary storage that is directly connected to the HPC clusters. Tier 1 is very fast, very expensive, and immediately available for active analyses. Tier 2 is intended for archival data not immediately undergoing active analyses and for backups (highly encouraged!). Researchers can use the software Globus to move data to Tier 2, and can also move data from other sources (called endpoints). The data in Tier 2 will not be mounted on HPC, and so Globus will be used to move it back to Tier 1 if needed.
 
 AWS storage is organized in "buckets." One S3 intelligent tiering bucket is supported per KFS account. A PI could sponsor multiple buckets by submitting separate requests each with a unique KFS number, and then provide permissions as they see fit. 
 
@@ -13,7 +13,7 @@ AWS storage is organized in "buckets." One S3 intelligent tiering bucket is supp
 ## Data Lifecycle
 
 !!! danger "Avoid large numbers of files"
-    Because AWS is set up for automatic archiving, files are moved into tiers where restore requests need to be submitted for each individual file that needs to be downloaded after a period of time. *We **strongly** recommend archiving directories (.zip, .tar.gz files, etc) prior to moving them to AWS.* This will significantly speed up your data transfers as well as reduce the complexity of file restorations. If you transfer hundreds or thousands of files to AWS, restore requests may take days or weeks to process. 
+    Because AWS is set up for automatic archiving, files are moved into tiers where restore requests need to be submitted for each individual file that needs to be downloaded after a period of time. {==*We **strongly** recommend archiving directories (.zip, .tar.gz files, etc) prior to moving them to AWS.*==} This will significantly speed up your data transfers as well as reduce the complexity of file restorations. If you transfer hundreds or thousands of files to AWS, restore requests may take days or weeks to process. 
 
 !!! warning "Small files"
     Warning: Very small files (less than 128KB ) are not subject to intelligent tiering and are not migrated to Glacier/Deep Glacier. This means they are permanently stored in the paid storage class. If you have many small files, we recommend making archives of your directories (.tar.gz, .zip, etc) prior to uploading them to AWS. This will also reduce transfer times significantly. 
@@ -29,7 +29,7 @@ After three months of inactivity in the Glacier access tier, data are automatica
 ``` mermaid
 graph LR
   A[Data uploaded<br>to AWS bucket] --> B[Data stored in<br>standard access tier];
-  B -->|Data downloaded| C[Counter resets];
+  B -->|Data downloaded| C[Standard access<br>tier reset];
   C --> B;
   B -->|Three months inactivity| D[Glacier access<br>storage tier];
   D --> |Restore request<br>submitted| C; 
@@ -46,23 +46,23 @@ Part of this service is paid for by researchers and the rest is either subsidize
 
 |Tier|Cost to Researchers|Duration|Data Retrieval|
 |-|-|-|-|
-|Standard|\$0 (First TB)<br>\$23/TB/Month[^2] (data > 1TB)|Three months (if data not downloaded). After three months, untouched data automatically migrate to Glacier.|Data Retrieval|
+|Standard|\$0 (First TB)<br>\$23/TB/Month[^2] (data $>$ 1 TB)|Three months (if data not downloaded). After three months, untouched data automatically migrate to Glacier.|Data may be immediately downloaded.|
 |Glacier|$0|Three months (if data not downloaded*). After three months, untouched data automatically migrated to Deep Glacier.|A restore request must be submitted. Restores may take a few minutes to hours. Data may be transferred once restored.|
 |Deep Glacier|$0|Unlimited (if data not downloaded)|A restore request must be submitted. Restores may take a few hours to days. Data may be transferred once restored.|
 
 ### Data Transfer Costs
-Data movement costs are subsidized by UITS so researchers are not charged any AWS transfer fees.
+Data movement costs are subsidized by UITS, researchers are not charged any AWS transfer fees.
 
 
 ## Request a Bucket
 !!! question "Who can submit a request?"
-    A group's PI is responsible for submitting a storage request unless they have [a group delegate](/registration_and_access/group_management/#delegating-group-management-rights). Delegates may perform Tier 2 storage operations on behalf of their PI by clicking Switch Users and entering their PI's NetID in the user portal. PIs may add delegates by entering their group member's NetID in the user portal under Add Delegate.
+    A group's PI is responsible for submitting a storage request unless they have [a group delegate](/registration_and_access/group_management/#delegating-group-management-rights) who may submit requests on their behalf.
 
-First, log into the [User Portal](https://portal.hpc.arizona.edu/portal/) and navigate to the Storage tab at the top of the page. Select Submit Tier 2 Storage Request.
+First, log into the [User Portal](https://portal.hpc.arizona.edu/portal/) and navigate to the Storage tab at the top of the page. Select **Submit Tier 2 Storage Request**.
 
 <img src="images/request_tier2_storage.png" style="width:500px;">
 
-This will open a web form. Add your KFS number under **KFS Number**(1) and the email address for the Department's financial contact under **Business contact email**. There will also be two optional fields: **Subaccount** and **Project**. These are used for tagging/reporting purposes in KFS billing. You can safely leave these entries blank if you're not sure what they are. Once you have completed the form, click **Send request**. The KFS number can be obtained from the same financial contact.
+This will open a web form. Add your KFS number under **KFS Number**(1) and the email address for the Department's financial contact under **Business contact email**. There will also be two optional fields: **Subaccount** and **Project**. These are used for tagging/reporting purposes in KFS billing. You can safely leave these entries blank if you're not sure what they are. Once you have completed the form, click **Send request**. 
 { .annotate }
 
 1.  A KFS number is used for accounting purposes and used by your Department's finance specialist. If you do not know your KFS number, contact your department's financial office. 
@@ -113,13 +113,13 @@ This will generate a **KeyID** and **Secret Access Key** used to establish the c
 
 ## Transferring Files
 
-The easiest way to transfer files from AWS to HPC is using Globus. We have instructions in our Transferring Files page on how to set up an endpoint to access your AWS bucket as well as how to initiate file transfers.
+The easiest way to transfer files from AWS to HPC is using Globus. We have instructions in our [Transferring Files](../../transfers/globus/) page on how to set up an endpoint to access your AWS bucket as well as how to initiate file transfers.
 
-Some other file transfer programs include [rclone](https://uarizona.atlassian.net/wiki/display/UAHPC/Transferring+Data#TransferringData-rclone) and [Cyberduck](https://cyberduck.io/).
+Some other file transfer programs include [rclone](../../transfers/rclone/) and [Cyberduck](../../transfers/cyberduck/).
 
 ## Restoring Archived Data
 
-Data that are not touched for at least 90 and 180 days are automatically retiered to archival storage (Glacier and Deep Glacier, respectively). Files stored in an archival state cannot be transferred out of AWS until they are restored. Restore requests can be submitted either via the User Portal or using a command line utility available on our compute nodes. 
+Data that are not touched for at least 90 and 180 days are automatically retiered to archival storage (Glacier and Deep Glacier, respectively). {==Files stored in an archival state cannot be transferred out of AWS until they are restored==}. Restore requests can be submitted either via the User Portal or using a command line utility available on our compute nodes. 
 
 The time it takes for an object to be retrieved is dependent on its storage class. Objects in Glacier may take a few hours while objects in Deep Glacier may take up to a day or two. Once an object has been restored, it will move back up to the frequent access tier and can be downloaded using any transfer method you prefer.
 
@@ -140,7 +140,7 @@ The time it takes for an object to be retrieved is dependent on its storage clas
     <img src="images/send_restore_request.png" style="width:500px;">
 
 === "CLI"
-    A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool (see the next section). This can be accessed using:
+    A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool. This can be accessed using:
     ```bash
     (elgato) [netid@junonia ~]$ interactive
     [netid@cpu37 ~]$ module load contrib ; module load bjoyce3/sarawillis/tier2-viewer

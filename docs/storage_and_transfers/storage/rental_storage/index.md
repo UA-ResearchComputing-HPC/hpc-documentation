@@ -3,19 +3,19 @@
 ## Overview
 
 !!! info "Accessibility"
-    Your ```/rental``` allocation is only mounted on our Data Transfer Nodes and is not directly accessible from the HPC login or compute nodes. 
+    Your ```/rental``` allocation is only mounted on our Data Transfer Nodes (hostname `filexfer.hpc.arizona.edu`) and is not directly accessible from the HPC login or compute nodes. 
 
 !!! warning "No Controlled Data"
     This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
 
-The storage we offer is configured with consideration given to the direct relationship between capacity, performance and cost. We offer a rental storage solution that has less performance than our primary SSD array making it affordable for researchers to rent. This storage array is located in the Research Data Center and is mounted on our data transfer nodes which makes it more accessible than most other options. Data in your rental space will be accessible via the command line and the graphical transfer application Globus. 
+We offer a rental storage solution that has less performance than our primary SSD array making it affordable for researchers to rent. This storage array is located in the Research Data Center and is mounted on our data transfer nodes which makes it more accessible than most other options. Data in your rental space will be accessible via the command line and the graphical transfer application Globus. 
 
 
 ## Pricing
 
 ### Cost per Year
 
-The first-year rate is $94.50 per TB, and [RII](https://research.arizona.edu/ "Research, Innovation & Impact") will provide matching funds for first-year allocations to make the {==*actual first-year cost to researchers $47.35*==}. These matching funds will be applied automatically, so in practice you will see the $47.35 rate. The ongoing rate after year one is $47.35 per TB per year.
+The first-year rate is $94.50 per TB, and [RII](https://research.arizona.edu/ "Research, Innovation & Impact") will provide matching funds for first-year allocations to make the {==actual first-year cost to researchers $47.35==}. These matching funds will be applied automatically, so in practice you will see the $47.35 rate. The ongoing rate after year one is $47.35 per TB per year.
 
 ### Billing
 Researchers must provide a KFS account for this service. Charges will be applied at the end of the academic year (June).
@@ -66,11 +66,11 @@ Connection to filexfer.hpc.arizona.edu closed.
 !!! warning
     Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
 !!! tip
-    It can take a few days to process the request is it has to route through the Financial Services Office (FSO). You will receive an email confirmation once it is complete.
+    It can take a few days to process the request as it has to route through the Financial Services Office (FSO). You will receive an email confirmation once it is complete.
 
-1. PIs or [Group Delegates](registration_and_access/group_management/#delegating-group-management-rights) can request rental storage on behalf of their group. To do so, navigate to the [User Portal](https://portal.hpc.arizona.edu) in your browser, then choose the **Storage** tab
+1. PIs or [Group Delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) can request rental storage on behalf of their group. To do so, navigate to the [User Portal](https://portal.hpc.arizona.edu) in your browser, then choose the **Storage** tab
 
-    <img src="images/request_rental_storage.png" style="width:300px;">
+    <img src="images/request_rental_storage.png" style="width:350px;">
 
 2. Select **Submit Rental Storage Request** under the **Rental Storage** heading and fill out the form. 
 
@@ -82,7 +82,7 @@ Connection to filexfer.hpc.arizona.edu closed.
 ## Resizing Your Allocation
 
 !!! warning
-    Resizing allocations up to 20TB can be done the user portal. For allocations larger than 20TB, contact our consulting team for help.
+    Resizing allocations up to 20TB can be done the user portal. For allocations larger than 20TB, [contact our consulting team](../../../support_and_training/consulting_services/) for help.
 
 Your rental allocation can be resized through the user portal by navigating to the **Storage** tab and selecting **Modify Rental Quota** under the **Rental Storage** heading.
 
@@ -94,7 +94,7 @@ Your rental allocation can be resized through the user portal by navigating to t
 You can check your allocation's size and current usage either through the user portal or on the command line.
 
 === "User Portal"
-    In the [user portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab and select **Check Rental Quota** from under the **Rental Storage** heading
+    In the [user portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab and select **Check Rental Quota** from under the **Rental Storage** heading. This option is only available to PIs and group delegates.
 
     <img src="images/check_rental_quota.png" width=500px>
 

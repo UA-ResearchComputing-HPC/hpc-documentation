@@ -1,4 +1,5 @@
 site_name: UArizona HPC Documentation
+repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
 nav:
 
@@ -97,6 +98,7 @@ nav:
       - Environment Variables: running_jobs/batch_jobs/environment_variables/index.md
       - Array Jobs: running_jobs/batch_jobs/array_jobs/index.md
       - Submitting Jobs: running_jobs/batch_jobs/submitting_jobs/index.md
+      #- Slurm Cheat Sheet: running_jobs/batch_jobs/slurm_reference/index.md
     #- Example Batch Jobs:
     #    - Apptainer Examples: running_jobs/batch_jobs/slurm_reference/index.md
     #   - Array Jobs:
