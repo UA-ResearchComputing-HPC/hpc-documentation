@@ -29,7 +29,7 @@ Other types of analysis may benefit from an increased number of jobs, such perfo
 
 <html>
 <div class="button-container">
-    <a href="/quick_start/overview"><button class="left-button"></button></a>
-    <a href="/quick_start/common_misconceptions"><button class="right-button"></button></a>
+    <a href="/quick_start/overview/"><button class="left-button"></button></a>
+    <a href="/quick_start/common_misconceptions/"><button class="right-button"></button></a>
 </div>
 </html>

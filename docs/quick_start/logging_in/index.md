@@ -67,6 +67,6 @@ A login node is a shared workspace with minimal computational capabilities and v
 <html>
 <div class="button-container">
     <a href="/quick_start/common_misconceptions/"><button class="left-button"></button></a>
-    <a href="/quick_start/storage_and_transfers"><button class="right-button"></button></a>
+    <a href="/quick_start/storage_and_transfers/"><button class="right-button"></button></a>
 </div>
 </html>

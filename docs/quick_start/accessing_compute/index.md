@@ -130,6 +130,6 @@ Constructing batch scripts involves specific syntax and parameters that are too 
 <html>
 <div class="button-container">
     <a href="/quick_start/storage_and_transfers/"><button class="left-button"></button></a>
-    <a href="/quick_start/software"><button class="right-button"></button></a>
+    <a href="/quick_start/software/"><button class="right-button"></button></a>
 </div>
 </html>

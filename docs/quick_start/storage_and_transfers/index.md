@@ -26,6 +26,6 @@ Now that we're on the login nodes and know where our files are, it's time to acc
 <html>
 <div class="button-container">
     <a href="/quick_start/logging_in/"><button class="left-button"></button></a>
-    <a href="/quick_start/accessing_compute"><button class="right-button"></button></a>
+    <a href="/quick_start/accessing_compute/"><button class="right-button"></button></a>
 </div>
 </html>
