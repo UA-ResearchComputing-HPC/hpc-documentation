@@ -7,16 +7,15 @@ on:
 
 jobs:
   deploy: 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install AWS CLI
+      - name: Update
         run: |
           sudo apt-get update
-          sudo apt-get install -y awscli
 
       - name: Sync with S3
         run: | 
