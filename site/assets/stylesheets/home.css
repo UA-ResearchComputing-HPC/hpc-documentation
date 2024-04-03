@@ -1,0 +1,653 @@
+/* styles.css (main stylesheet) */
+@import "buttons.css";
+
+
+@media screen and (max-width: 600px) {
+    /* Styles for small screens (e.g., mobile) */
+}
+
+/* General attributes of the page */
+body {
+    font-family: "Arial", sans-serif;
+}
+
+h1 {
+    font-size: 1.4rem
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+
+.md-main {
+    flex-grow: 0
+}
+
+.md-main__inner {
+    display: flex;
+    height: 100%;
+}
+
+.tx-container {
+    position: relative;
+    padding-top: .0rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2)), url('../images/home/AdobeStock_87909563.jpg') center center fixed;
+    background-size: cover;
+    color: #fff; /* Set text color to be visible on the gradient overlay */
+}
+
+.resources-tx-container {
+    position: relative;
+    padding-top: .0rem;
+    background: linear-gradient(to bottom, rgba(226, 233, 235, 0.9), rgba(226, 233, 235, 2)), url('../images/home/HPC-Photo_0.jpg') center center fixed;
+    background-size: cover;
+    color: #000 ; /* Set text color to be visible on the gradient overlay */
+}
+   
+.results-tx-container {
+    position: relative;
+    padding-top: .0rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2)), url('../../results/images/astro_tech.jpg') center center fixed;
+    background-size: cover;
+    color: #fff; /* Set text color to be visible on the gradient overlay */
+} 
+
+
+.body-paragraph {
+    font-size: 14px; /* Adjust the font size as needed */
+    font-family: inherit;
+    width: 100%;
+    padding: 10px 10%;
+    padding-bottom: 20px;
+}
+    
+div.fadeMe {
+    opacity:    0.5; 
+    background: #000; 
+    width:      100%;
+    height:     100%; 
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+}
+
+.tx-hero {
+    margin: 32px 2.8rem;
+    color: var(--md-primary-bg-color);
+    justify-content: center;
+}
+
+.resources-tx-hero {
+    margin: 32px 2.8rem;
+    color: #000;
+    justify-content: right;
+}
+
+.resources-tx-hero h1 {
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: 700
+}
+
+
+.tx-hero h1 {
+    margin-bottom: 1rem;
+    color: currentColor;
+    font-weight: 700
+}
+
+.tx-hero__content {
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.tx-hero__image{
+    width:17rem;
+    height:17rem;
+    order:1;
+    padding-right: 2.5rem;
+}
+
+.tx-hero .md-button {
+    margin-top: .5rem;
+    margin-right: .5rem;
+    color: var(--md-primary-bg-color)
+}
+
+.tx-hero .md-button--primary {
+    background-color: var(--md-primary-bg-color);
+    color: hsla(280deg, 37%, 48%, 1);
+    border-color: var(--md-primary-bg-color)
+}
+
+.tx-hero .md-button:focus,
+.tx-hero .md-button:hover {
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-default-bg-color);
+    border-color: var(--md-accent-fg-color)
+}
+
+.feature-item h2 svg {
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    transform: translateY(10%);
+}
+
+.top-hr {
+    margin-top: 42px;
+}
+
+.feature-item {
+    font-family: inherit;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 0 15px;
+    word-break: break-word
+}
+
+.feature-item h2 {
+    color: #333;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.feature-item p {
+    font-family: inherit;
+    line-height: 1.8em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #111;
+    margin: 0 0 10px;
+    display: block;
+}
+
+@media screen and (max-width:30em) {
+    .tx-hero h1 {
+        font-size: 1.4rem
+    }
+}
+
+@media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+        display: none
+    }
+
+    .tx-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tx-hero__content {
+        max-width: 22rem;
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        margin-left: 1.0rem;
+        margin-right: 4.0rem;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+        display: none
+    }
+
+    .top-hr {
+        width: 100%;
+        display: flex;
+        max-width: 61rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 .2rem;
+    }
+
+    .bottom-hr {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        max-width: 61rem;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 .2rem;
+    }
+
+    .feature-item {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .feature-item:hover {
+        background-color: #526cfe47;
+        border-radius: 3px;
+    }
+}
+
+.hr {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.text-center {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    font-family: inherit;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+
+.logos img {
+    flex: 1 1 auto;
+    padding: 25px;
+    max-height: 130px;
+    vertical-align: middle;
+}
+
+.hr-logos {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.md-footer-meta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.0rem;
+    font-size: 12px;
+    font-family: inherit;
+    color: "#717171";
+}
+
+.md-footer-land-acknowledgement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.0rem;
+    padding-left: 20%; 
+    padding-right: 20%;
+    padding-top: 50px; /* Add padding to the top */
+    padding-bottom: 50px; /* Add padding to the bottom */
+    font-size: 13px;
+    font-family: inherit;
+    color: "#717171";
+    background-color: #F4EDE5;
+}
+
+.md-footer-social {
+    padding-top: 20px;
+}
+    
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+    
+/* Caption text box */
+.text-box {
+    position: absolute;
+    top: 20%; /* Center vertically */
+    left: 33.33%; /* Adjust as needed for alignment */
+    width: 63%; ; /* Adjust as needed for width */
+    background-color: rgba(241, 241, 241, 0.93);
+    padding: 20px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: inherit;
+    color: #00266E;
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+    word-wrap: break-word;
+    max-width: 100%;
+}
+    
+/* Heading text styling */
+.heading {
+    color: #fff;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+    
+.demobox {
+    background-color: #cfc ;
+    padding: 10px ;
+    border: 1px solid green ;
+} 
+    
+.hero-section {
+  padding: 20px 10%;
+  padding-bottom: 60px;
+  border: none;
+}
+
+.our-mission {
+  background-color: #0C234B;
+  color: #f6f7fb;
+}
+    
+.quick-links {
+  color: #212121;
+  font-family: inherit;
+}
+    
+.hero-section h2 {
+    font-family: inherit;
+    line-height: normal;
+    font-weight: 600;
+}
+    
+.hero-section h3 {
+    font-family: inherit;
+    line-height: normal;
+    font-weight: 600;
+}
+    
+.hero-section p {
+    font-family: inherit;
+}
+    
+.card-container {
+    display: flex; /* Set the container as a flex container */
+    justify-content: center; /* Center cards horizontally */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+    
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px;
+    flex: 1; /* Allow flex item to shrink and grow, but don't allow it to shrink below its intrinsic width */
+    min-width: 100px; /* Set a minimum width for the card */
+    max-width: 300px; /* Set a maximum width for the card */
+}
+
+/* Media query for screens smaller than or equal to 600px */
+@media (max-width: 900px) {
+    .card {
+        flex-basis: calc(50% - 20px); /* Two cards per row with margin included */
+        max-width: calc(50% - 20px); /* Adjusting max-width for smaller screens */
+    }
+}
+
+.calendar_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px;
+    flex: 1; /* Allow flex item to shrink and grow, but don't allow it to shrink below its intrinsic width */
+}
+    
+.card img {
+    width: 100%; /* Make the image span the entire width of the card */
+    max-width: 100%;
+    padding-top: 10px;
+}
+    
+.container h4 {
+    font-family: inherit;
+    max-width: 100%;
+}
+
+.container p {
+    font-family: inherit;
+    max-width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+    padding-top: 10px;
+    position: relative;
+}
+    
+.video-container {
+    max-width: 800px;
+    width: 100%;
+    padding-top: 40%; /* Adjust the padding-top to set the aspect ratio */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+    
+.research-container {
+    display: grid;
+    align-items: center; 
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+    
+
+.vertical-space {
+    margin-bottom: 3cm;
+}
+
+
+
+body, #slider, .wrap, .slide-content{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:65vh;
+    overflow-x:hidden;
+}
+
+.wrap{position:relative;}
+
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0s;
+}
+
+.slide1{background-image: url('../images/home/puma.png');}
+.slide2{background-image: url('../images/home/cables.png');}
+.slide3{background-image: url('../images/home/HPC_0.png');}
+
+.slide-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    width: 40vw;
+    margin-left: auto;
+    
+}
+
+@media (max-width: 900px) {
+    .slide-content{
+        width: 100vw;
+    }
+}
+
+.slide-content p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.slide-content span{
+    font-size: 1rem;
+    color:ghostwhite;
+    background-color:rgba(0, 0, 0, 0.85);
+    padding:10px 20px;
+    min-width: fit-content; 
+    overflow: auto;
+
+}
+
+.dir-control{
+    cursor: pointer;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    width:0;
+    height:0;
+    z-index:5;
+}
+.fa {
+  display:inline-block;
+   line-height: 50px;
+   background-color:rgba(0,0,0, .3);
+   width:50px;
+   height:56px;
+   color:white;
+   text-align: center;
+   vertical-align: bottom;
+}
+
+#dir-control-left{
+    left:0;
+    margin-left:30px;
+}
+
+#dir-control-right{
+    right:0;
+    margin-right:60px;
+}
+.slider-active{
+    visibility:hidden;
+    opacity:0;
+}
+.slide.slide-is-active{
+    visibility:visible;
+    opacity: 1;
+}
+
+.slide-transition{
+    transition: all .5s ease-in-out;
+}

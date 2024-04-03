@@ -1,0 +1,227 @@
+site_name: UArizona HPC Documentation
+
+nav:
+
+  - Quick Start: 
+    - Overview: quick_start/overview/index.md
+    - What is HPC?: quick_start/supercomputing_in_plain_english/index.md
+    - Common Misconceptions: quick_start/common_misconceptions/index.md
+    - Logging In: quick_start/logging_in/index.md
+    - Storage and Transfers: quick_start/storage_and_transfers/index.md
+    - Accessing Compute Nodes: quick_start/accessing_compute/index.md
+    - Software: quick_start/software/index.md
+    - Summary: quick_start/summary/index.md
+
+  - Policies:
+    - Acceptable Use: policies/acceptable_use/index.md
+    - Acknowledgements: policies/acknowledgements/index.md
+    - Buy-in: policies/buy_in/index.md
+    - Committees: policies/committees/index.md
+    - Loss of University Affiliation: policies/loss_of_university_affiliation/index.md
+    - Maintenance: policies/maintenance/index.md
+    - Special Projects: policies/special_projects/index.md
+    
+  - Resources:
+    - Allocations: resources/allocations/index.md
+    - Compute Resources: resources/compute_resources/index.md
+    - Research Data Center: resources/data_center/index.md
+    - Secure Services:
+      - Overview: resources/secure_hpc/overview/index.md
+      - Prerequisites: resources/secure_hpc/prerequisites/index.md
+      - Access: resources/secure_hpc/access/index.md
+      - Storage and Transfers: resources/secure_hpc/storage_and_transfers/index.md
+
+  - Access:
+    - Account Creation: registration_and_access/account_creation/index.md
+    - Account Deletion: registration_and_access/account_deletion/index.md
+    - Group Management: registration_and_access/group_management/index.md
+    - System Access: registration_and_access/system_access/index.md
+    - VPN : registration_and_access/vpn/index.md
+    
+  - Storage and Transfers:
+    - Overview: storage_and_transfers/overview/index.md
+    - Storage:
+      - Overview: storage_and_transfers/storage/overview/index.md
+      - HPC Storage: storage_and_transfers/storage/hpc_storage/index.md
+      - Rental Storage: storage_and_transfers/storage/rental_storage/index.md
+      - RDAS Storage: storage_and_transfers/storage/rdas_storage/index.md
+      - Tier2 AWS Storage: storage_and_transfers/storage/tier2_storage/index.md
+    - Transfers:
+      - Overview: storage_and_transfers/transfers/overview/index.md
+      - Open OnDemand: storage_and_transfers/transfers/open_on_demand/index.md
+      - Cyberduck: storage_and_transfers/transfers/cyberduck/index.md
+      - FTP/LFTP/SFTP: storage_and_transfers/transfers/sftp_ftp_lftp/index.md
+      - Globus: storage_and_transfers/transfers/globus/index.md
+      - iRods: storage_and_transfers/transfers/irods/index.md
+      - rsync: storage_and_transfers/transfers/rsync/index.md
+      - rclone: storage_and_transfers/transfers/rclone/index.md
+      - SCP: storage_and_transfers/transfers/scp/index.md
+
+  - Software:
+    - Overview: software/overview/index.md
+    - Modules: software/modules/index.md
+    - User Installations: software/user_installations/index.md
+    - Common Datasets: software/common_datasets/index.md
+    - Popular Software:
+      - Gaussian: software/popular_software/gaussian/index.md
+      - Matlab: software/popular_software/matlab/index.md
+      - Perl: software/popular_software/perl/index.md
+      - Python and Anaconda: 
+        - Python: software/popular_software/python_and_anaconda/python/index.md
+        - Anaconda: software/popular_software/python_and_anaconda/anaconda/index.md
+      - R: software/popular_software/R/index.md
+      - VSCode Remote Connection: software/popular_software/vscode_remote_connection/index.md
+    - Containers: 
+      - What are Containers: software/containers/what_are_containers/index.md
+      - Containers on HPC: software/containers/containers_on_hpc/index.md
+      - Pulling Containers: software/containers/pulling_containers/index.md
+      - Building Containers: software/containers/building_containers/index.md
+      - Running Containers: software/containers/using_containers/index.md
+    #- Unsupported Software: software/unsupported/index.md
+
+  - Running Jobs:
+    - Overview: running_jobs/overview/index.md
+    - Job Limits: running_jobs/job_limits/index.md
+    - CPUs and Memory: running_jobs/cpus_and_memory/index.md
+
+    #- Job Scheduling Guide: 
+    #  - Slurm Overview: running_jobs/job_scheduling/slurm_overview/index.md
+    #  - Slurm Reference: running_jobs/job_scheduling/slurm_reference/index.md
+    #  - Using Your Allocation: running_jobs/job_scheduling/partition_requests/index.md
+    #  - GPUs: running_jobs/job_scheduling/gpus/index.md
+    - Open OnDemand/Graphical Jobs: running_jobs/open_on_demand/index.md
+    - Interactive Jobs: running_jobs/interactive_jobs/index.md
+    - Batch Jobs:
+      - Intro to Batch: running_jobs/batch_jobs/intro/index.md
+      - Batch Directives: running_jobs/batch_jobs/batch_directives/index.md
+      - Environment Variables: running_jobs/batch_jobs/environment_variables/index.md
+      - Array Jobs: running_jobs/batch_jobs/array_jobs/index.md
+      - Submitting Jobs: running_jobs/batch_jobs/submitting_jobs/index.md
+      #- Slurm Cheat Sheet: running_jobs/batch_jobs/slurm_reference/index.md
+    #- Example Batch Jobs:
+    #    - Apptainer Examples: running_jobs/batch_jobs/slurm_reference/index.md
+    #   - Array Jobs:
+    #      - Basic Array Job: running_jobs/example_batch_jobs/array_jobs/basic_array/index.md
+    #      - Array Jobs with Text Filenames: running_jobs/example_batch_jobs/array_jobs/array_read_filenames/index.md
+    #      - Array Jobs with Multiple Input Parameters: running_jobs/example_batch_jobs/array_jobs/array_read_parameters/index.md
+    #   - General Examples:
+    #      - Using a Pipefail: running_jobs/example_batch_jobs/general_examples/pipefail/index.md
+    #      - Job Dependencies: running_jobs/example_batch_jobs/general_examples/job_dependencies/index.md
+    #      
+    #   - Basic GNU Parallel Job: running_jobs/example_batch_jobs/basic_gnu_parallel_job/index.md
+    #   - Array Job Using GNU Parallel: running_jobs/example_batch_jobs/array_and_gnu_parallel/index.md
+    - Monitoring Jobs and Resources: running_jobs/monitoring_jobs_and_resources/index.md
+    - Parallelization: running_jobs/parallelization/index.md
+
+
+  - Support:
+    - Consulting Services: support_and_training/consulting_services/index.md
+    - Support Staff: support_and_training/people/index.md
+    - FAQs: 
+        - Account Access: support_and_training/faqs/account_access/index.md 
+        - General Computing: support_and_training/faqs/general_computing/index.md 
+        - Jobs and Scheduling: support_and_training/faqs/jobs_and_scheduling/index.md 
+        - Software and Modules: support_and_training/faqs/software_and_modules/index.md 
+        - Storage: support_and_training/faqs/storage/index.md
+        - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
+        - Secure Services: support_and_training/faqs/secure_services/index.md 
+        
+    - Workshops: 
+        - Events Calendar: support_and_training/workshops/events_calendar/index.md
+        - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md
+        - Intro to Machine Learning on HPC: 
+            - Python: support_and_training/workshops/intro_to_machine_learning/python/index.md
+            - R: support_and_training/workshops/intro_to_machine_learning/R/index.md
+        - Intro to Parallel Computing: support_and_training/workshops/intro_to_parallel_computing/index.md
+        - Intro to Containers: support_and_training/workshops/intro_to_containers/index.md
+        - Intro to Linux: support_and_training/workshops/intro_to_linux/index.md
+        - Intro to Visualization: support_and_training/workshops/intro_to_visualization/index.md
+        - Data Management Workshops: support_and_training/workshops/data_management_workshops/index.md
+    - Glossary: support_and_training/glossary/index.md
+    - Linux Cheat Sheet: support_and_training/cheat_sheet/index.md
+    - Grants: support_and_training/grants/index.md
+    - Community and External Resources: support_and_training/external_resources/index.md
+
+  - Results: results/index.md
+  
+
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - abbr
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+ 
+extra_css:
+    - assets/stylesheets/extra.css
+
+theme:
+  name: material
+  logo: assets/images/favicon.ico
+  custom_dir: docs/overrides
+  favicon: assets/images/favicon.ico
+  palette:
+    primary: custom
+    accent: custom
+  icon: 
+    annotation: material/star-four-points-circle
+
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.path
+    - toc.integrate
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy
+    - navigation.top
+    - announce.dismiss
+
+
+extra:
+  generator: false
+  social:
+    - icon: material/youtube
+      link: https://www.youtube.com/@universityofarizonauitsres7597
+      name: Training videos
+    - icon: material/at
+      link: mailto:hpc-consult@list.arizona.edu
+      name: HPC consulting
+    - icon: material/help-circle-outline
+      link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
+      name: Submit a help ticket
+    - icon: material/web
+      link: https://ood.hpc.arizona.edu/pun/sys/dashboard
+      name: Open OnDemand
+    - icon: material/account
+      link: https://portal.hpc.arizona.edu/portal/
+      name: User portal
+
+copyright: University of Arizona Research Computing

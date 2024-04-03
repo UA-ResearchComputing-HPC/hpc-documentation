@@ -1,0 +1,13 @@
+:root {
+    --md-primary-fg-color: #AB0520;
+    --md-accent-fg-color: #EF4056;
+}
+
+.md-banner {
+    color: white;
+    font-size: 16px;
+  }
+
+  .md-nav--secondary {
+    background-color: #f8f8f8; /* Set your desired background color */
+}

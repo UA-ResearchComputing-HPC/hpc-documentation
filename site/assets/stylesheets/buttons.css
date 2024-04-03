@@ -1,0 +1,56 @@
+/* Button Styles */
+
+/* Buttons for quick links */
+.quick-links-button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+    
+.button1 {
+    background-color: #003366; 
+    color: white;
+    border: 2px solid #003366;
+}
+    
+.button1:hover {
+    color: #003366;
+    background-color: white;
+    padding: 8px 16px;
+}
+
+.left-button, .right-button {
+    padding: 10px 20px;
+    background-color: #AB0520;
+    color: white;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.left-button::before {
+    content: "\2190"
+}
+
+.right-button::before {
+    content: "\2192"
+}
+
+.left-button:hover, .right-button:hover {
+    background-color: #8B0015;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}

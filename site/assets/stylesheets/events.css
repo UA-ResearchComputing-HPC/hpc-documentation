@@ -1,0 +1,250 @@
+.events-section {
+    display: flex;
+    flex-direction: column; /* Stack columns vertically */
+}
+
+.left-column {
+    flex: 1.3;
+    color: black;
+    background-color: #E2E9EB ;
+    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.2)), url('/assets/images/home/conference_background.jpg') center center fixed; */
+    /*background-size: contain; /* Adjusts the background image size */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.right-column {
+    flex: 2;
+    padding: 20px;
+    /*overflow: auto;*/
+    background-color: #E2E9EB ;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; /* Center items horizontally */
+}
+
+
+.event-card {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    #height: 140px;
+    background-color:white;
+    max-width: 800px;
+}
+
+.event-date {
+    flex: 1;
+    background-color: #001C48; /* Dark background color for the date */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.date-number {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.date-month {
+    font-size: 18px;
+}
+
+.event-details {
+    flex: 4;
+    padding: 20px;
+}
+
+.event-details h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.event-details a {
+    color: #001C48;
+    font-weight: bold;
+}
+
+.event-details a:hover {
+    color: #EF4056;
+    text-decoration: underline; 
+}
+
+.event-details p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.event-registration {
+
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.register-button {
+    background-color: #001C48; /* Button color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size: 15px; /* Adjust size as needed */
+    background-position: 5px center; /* Adjust position as needed */
+    height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline; 
+    float:left;
+}
+
+.register-button .svg-icon {
+    fill: white; /* Set the fill color of the SVG to white */
+}
+
+.register-button:hover {
+    background-color: #EF4056; /* Button color on hover */
+}
+
+.content-container {
+    border: 4px solid #001C48; /* Add thick blue border */
+    padding: 20px; /* Add padding to create space between the text and the border */
+    position: relative; /* Position relative to allow positioning of pseudo-elements */
+
+    max-width: 800px;
+}
+
+.content-container::before,
+.content-container::after {
+    content: ''; /* Add content to the pseudo-elements */
+    position: absolute; /* Position absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content-container::before {
+    border: 4px solid #001C48; /* Add thicker border */
+    z-index: -1; /* Move the pseudo-element behind the text */
+}
+
+.content-container::after {
+    border: 2px solid #001C48; /* Add thinner border */
+    z-index: -2; /* Move the pseudo-element further behind */
+}
+
+
+.event-time {
+    width: 120px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-color: #E2E9EB; /* Grey background color */
+    border-radius: 50px; /* Half of the height for oval shape */
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust size as needed */
+    background-position: 5px center; /* Adjust position as needed */
+    padding-left: 20px; /* Add padding to leave space for the SVG */
+    float:left;
+}
+
+.event-time-text {
+    color: black; /* Text color */
+}
+
+.event-location {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #E2E9EB; /* Grey background color */
+    border-radius: 50px; /* Half of the height for oval shape */
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust size as needed */
+    background-position: 5px center; /* Adjust position as needed */
+    padding-left: 20px; /* Add padding to leave space for the SVG */
+    float:left;
+}
+
+.event-location-text {
+    color: black; /* Text color */
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.event-time-container {
+    display: flex; /* Add flexbox */
+    align-items: center; /* Center items vertically */
+}
+
+
+/* Media query for screens smaller than or equal to 900px 
+@media (max-width: 900px) {
+    .events-section {
+        justify-content: space-between;
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex: 1 1 auto;  
+    }
+
+    .left-column {
+        overflow-y: hidden;
+    }
+    .right-column{
+        overflow-y: ;
+        flex-grow: 3;
+        overflow-y: visible;
+    }
+
+
+
+}
+*/
+
+/* This can be used when no upcoming events are scheduled. */
+.no-events {
+    background-color: white;
+    padding: 20px; /* Add padding to create space between the text and the border */
+    position: relative; /* Position relative to allow positioning of pseudo-elements */
+    width: 70%;
+    text-align: center;
+    border-color: #1E5288;
+    border: 1px solid #1E5288; /* Add thick blue border */
+
+}
+
+.no-events::before,
+.no-events::after {
+    content: ''; /* Add content to the pseudo-elements */
+    position: absolute; /* Position absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.no-events::before {
+    border: 4px solid #001C48; /* Add thicker border */
+    z-index: -1; /* Move the pseudo-element behind the text */
+}
+
+.no-events::after {
+    border: 2px solid #001C48; /* Add thinner border */
+    z-index: -2; /* Move the pseudo-element further behind */
+}

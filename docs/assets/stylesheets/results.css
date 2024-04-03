@@ -1,0 +1,42 @@
+body {
+    font-family: Roboto, mono;
+    margin: 0; /* Remove default margin to ensure the table spans the entire viewport width */
+}
+
+.table-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center the content horizontally */
+    width: 80%; /* Set the width of the container to 80% */
+}
+    
+table {
+    border-spacing: 0; /* Set border-spacing to 0 to remove spacing between cells */
+    width: 100%; /* Use 100% width to fill the container */
+    max-width: 100%; /* Ensure the table doesn't exceed the width of its container */
+    border: none; /* Remove the default table border */
+}
+
+
+
+th, td {
+    border-bottom: 1px solid #ddd; /* Add only bottom border to create horizontal lines between cells */
+    padding: 16px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Remove the bottom border from the last row */
+table tr:last-child th, table tr:last-child td {
+    border-bottom: none;
+}
+
+.body-container a {
+  color: #AB0520; /* Replace with your desired color code */
+  text-decoration: none; /* Optional: Remove underline if you don't want it */
+  font-weight: bold; 
+}
+
+.body-container a:hover {
+  color: #00266E; /* Replace with your desired hover color code */
+}

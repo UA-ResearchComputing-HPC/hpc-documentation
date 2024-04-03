@@ -1,0 +1,26 @@
+.pdf-container {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    height: 50vh; /* 75% of the viewport height */
+    margin: 0 auto; /* Center the container */
+}
+
+
+.auto-resizable-iframe {
+    max-width: 800px;
+    margin: 0px auto;
+  }
+  
+  .auto-resizable-iframe > div {
+    position: relative;
+    width: 100%; /* Ensure the div fills the entire width of its container */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+  }
+  
+  .auto-resizable-iframe iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
