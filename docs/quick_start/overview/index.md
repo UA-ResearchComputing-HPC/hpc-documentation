@@ -34,7 +34,7 @@ By the end of this quick start, you should know:
 
 
 <html>
-<a href="../supercomputing_in_plain_english"><button class="right-button" style="float: right;"></button></a>
+<a href="/quick_start/supercomputing_in_plain_english"><button class="right-button" style="float: right;"></button></a>
 </html>
 
 <br>

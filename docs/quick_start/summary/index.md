@@ -26,6 +26,6 @@ Please note that information related to other HPC clusters may not necessarily a
 
 <html>
 <div class="button-container">
-    <a href="../software"><button class="left-button"></button></a>
+    <a href="/quick_start/software"><button class="left-button"></button></a>
 </div>
 </html>

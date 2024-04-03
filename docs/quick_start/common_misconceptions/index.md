@@ -27,7 +27,7 @@ Well, it depends. Users can create custom environments and install packages for 
 
 <html>
 <div class="button-container">
-    <a href="../supercomputing_in_plain_english"><button class="left-button"></button></a>
-    <a href="../logging_in/"><button class="right-button"></button></a>
+    <a href="/quick_start/supercomputing_in_plain_english"><button class="left-button"></button></a>
+    <a href="/quick_start/logging_in/"><button class="right-button"></button></a>
 </div>
 </html>

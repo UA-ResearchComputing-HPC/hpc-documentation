@@ -24,7 +24,7 @@ Try running ```module avail``` without specifying any arguments. You'll notice w
 
 <html>
 <div class="button-container">
-    <a href="../accessing_compute/"><button class="left-button"></button></a>
-    <a href="../summary/"><button class="right-button"></button></a>
+    <a href="/quick_start/accessing_compute/"><button class="left-button"></button></a>
+    <a href="/quick_start/summary/"><button class="right-button"></button></a>
 </div>
 </html>
