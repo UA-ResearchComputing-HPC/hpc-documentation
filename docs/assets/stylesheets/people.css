@@ -46,3 +46,10 @@
     align-items: stretch;
 
 }
+
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Adjust maximum width of the card for smaller screens */
+    }
+}
