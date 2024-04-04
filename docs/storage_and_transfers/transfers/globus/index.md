@@ -169,7 +169,7 @@ Below are a list of HPC managed endpoints and how to configure them:
 
     <img src="images/add_guest_collection_aws.png" style="width:100%;">
 
-    Under Create New Guest Collection, click **Browse** next to the **Directory** field to find your group's AWS bucket. You will find it under /ua-rt-t2-faculty_netid/ where faculty_netid is the NetID of the faculty member who requested the bucket. Under **Display Name**, enter a descriptive name that you can use to identify your bucket. Once you've completed the process, click **Create Collection** at the bottom of the page.
+    Under Create New Guest Collection, click **Browse** next to the **Directory** field to find your group's AWS bucket. You will find it under `/ua-rt-t2-faculty_netid/` where faculty_netid is the NetID of the faculty member who requested the bucket. Under **Display Name**, enter a descriptive name that you can use to identify your bucket. Once you've completed the process, click **Create Collection** at the bottom of the page.
 
     !!! tip
         If you encounter Authentication/Consent Required after clicking Browse, click Continue, select your university credentials, and click Allow. That should bring you back to the Browse window.

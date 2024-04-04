@@ -19,7 +19,7 @@ An interactive session can be requested on any of our three clusters: El Gato, O
 
 We have a built-in shortcut command that will allow you to quickly and easily request a session by simply entering: ```interactive```
 
-The ```interactive``` command is essentially a convenient wrapper for a Slurm command called ```salloc```. This can be thought of as similar to the `sbatch` command, but for interactive jobs rather than [batch jobs](../batch_jobs/intro). When you request a session using interactive, the full `salloc` command being executed will be displayed for reference.
+The ```interactive``` command is essentially a convenient wrapper for a Slurm command called ```salloc```. This can be thought of as similar to the `sbatch` command, but for interactive jobs rather than [batch jobs](../batch_jobs/intro/). When you request a session using interactive, the full `salloc` command being executed will be displayed for reference.
 
 ```bash
 (ocelote) [netid@junonia ~]$ interactive

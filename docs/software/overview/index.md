@@ -8,7 +8,7 @@ The software is available in three different ways:
 
 - **Libraries** in the operating system (like ```fftw``` or ```screen```);
 - **Personal software** that you build or download and place in your own directory space;
-- and [**Modules**](../modules), which are external packages built and maintained by HPC team for system-wide usage.
+- and [**Modules**](../module/), which are external packages built and maintained by HPC team for system-wide usage.
 
 ???+ warning "Module availability"
     Software modules are not available on the login nodes. To access them, you will need to connect to a compute node either via an interactive session or batch job.

@@ -15,17 +15,3 @@ Attendance will be on zoom so there is no registration needed.
 [Click here to download PDF (Part 2)](files/2022_Part_2_Data_Management_in_the_HPC.pdf){ .md-button }
 </center>
 
-## Video Presentation (Part 1)
-
-**Will upload once on YouTube**
-
-<!-- MP4s are too large to store in git repos. Need to upload to youtube. 
-This hasn't been done, so I'll put the formatting below to prepare
-
-<div class="auto-resizable-iframe">
-  <div>
-    <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/<ID HERE>"></iframe>
-  </div>
-</div>
-
--->

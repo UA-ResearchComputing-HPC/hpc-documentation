@@ -18,7 +18,7 @@ Running a job with a large number of CPUs when the software has not been configu
 
 Navigating the HPC means being aware of the different types of nodes you can land on. For example, the login node is available to all users by default upon login, and is designed for managing and editing files. However, it is not designed to run production computations. Running jobs that are too computationally intensive on the login node can severely impact performance for other users. Such jobs will be noticed and stopped by the HPC systems team.
 
-Types of nodes on the UArizona HPC system include the Bastion Host, the Login Node, the Compute Nodes, and the Data Transfer Node. See [Compute Resources](../../resources/compute_resources) for information on the compute hardware available.
+Types of nodes on the UArizona HPC system include the Bastion Host, the Login Node, the Compute Nodes, and the Data Transfer Node. See [Compute Resources](../../resources/compute_resources/) for information on the compute hardware available.
 
 
 ### **As a user I (am)(am not) allowed to install my own software**

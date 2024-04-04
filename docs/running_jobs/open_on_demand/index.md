@@ -38,7 +38,7 @@ Need command line access to a terminal on HPC? No problem! Simply select the **C
 
 ## File Browser
 
-The file browser provides easy access to your `/home`, `/xdisk`, and `/groups` directories and allows you to view, edit, copy, and rename your files. You may also transfer small files (under 64 MB) between HPC and your local workstation using this interface. For larger transfers, see our section on [Transferring Data](/storage_and_transfers/transfers/overview) for more efficient methods. 
+The file browser provides easy access to your `/home`, `/xdisk`, and `/groups` directories and allows you to view, edit, copy, and rename your files. You may also transfer small files (under 64 MB) between HPC and your local workstation using this interface. For larger transfers, see our section on [Transferring Data](/storage_and_transfers/transfers/overview/) for more efficient methods. 
 
 **Access**
 

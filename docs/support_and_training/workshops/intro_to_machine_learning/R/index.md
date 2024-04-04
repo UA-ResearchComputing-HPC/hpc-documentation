@@ -13,21 +13,6 @@
 </center>
 
 
-## Video Presentation
-
-**Will upload once on YouTube**
-
-<!-- MP4s are too large to store in git repos. Need to upload to youtube. 
-This hasn't been done, so I'll put the formatting below to prepare
-
-<div class="auto-resizable-iframe">
-  <div>
-    <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/<ID HERE>"></iframe>
-  </div>
-</div>
-
--->
-
 ## Interactive Materials
 
 ### Exercise: Data Pre-processing

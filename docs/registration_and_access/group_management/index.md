@@ -2,7 +2,7 @@
 
 ## Overview
 
-HPC groups allow faculty members to manage file permissions, job allocations, and group members. When a PI creates a new HPC account, a group is created with an allocation of space and time. Additional storage is available for free upon request, called [xdisk](/storage_and_transfers/storage/overview)
+HPC groups allow faculty members to manage file permissions, job allocations, and group members. When a PI creates a new HPC account, a group is created with an allocation of space and time. Additional storage is available for free upon request, called [xdisk](../../storage_and_transfers/storage/hpc_storage/)
 
 There are two types of Groups: **Research Groups** and **Class Groups**.
 
@@ -11,7 +11,7 @@ There are two types of Groups: **Research Groups** and **Class Groups**.
 
 ## Research Groups
 
-If you are a faculty member who has [registered for an HPC account](../account_creation), a research group named after your UArizona NetID has been automatically created for you. This group has [an allocation of CPU hours](../../resources/allocations) associated with it as well as [communal storage for your data](../../storage_and_transfers/storage/hpc_storage).
+If you are a faculty member who has [registered for an HPC account](../account_creation/), a research group named after your UArizona NetID has been automatically created for you. This group has [an allocation of CPU hours](../../resources/allocations/) associated with it as well as [communal storage for your data](../../storage_and_transfers/storage/hpc_storage/).
 
 **Membership and Allocation**
 

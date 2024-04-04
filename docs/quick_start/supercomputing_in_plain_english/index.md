@@ -14,7 +14,7 @@ If you've never used an HPC system before, you may be wondering what one is and 
 
 Another main difference between a supercomputer and a personal workstation is that the supercomputer is a **shared resource**. This means there may be hundreds or even thousands of simultaneous users. Without some sort of coordination, managing which users get which resources turns into a major logistical challenge. That's why supercomputers use **job schedulers**, like [Slurm](https://slurm.schedmd.com/documentation.html). 
 
-A job scheduler is software used to coordinate user jobs. You can use it by writing a 'batch' script that requests compute resources (e.g., CPUs, RAM, GPUs) and includes instructions for running your code. You submit this script to the job scheduler using the ```sbatch``` command, which finds available resources on the supercomputer for your job. When the resources become available, it initiates the commands included in your batch script, and outputs the results to a text file. More information on running batch jobs can be found in the [Running Jobs](../../running_jobs/batch_jobs/intro) section.
+A job scheduler is software used to coordinate user jobs. You can use it by writing a 'batch' script that requests compute resources (e.g., CPUs, RAM, GPUs) and includes instructions for running your code. You submit this script to the job scheduler using the ```sbatch``` command, which finds available resources on the supercomputer for your job. When the resources become available, it initiates the commands included in your batch script, and outputs the results to a text file. More information on running batch jobs can be found in the [Running Jobs](../../running_jobs/batch_jobs/intro/) section.
 
 ### Why Should I Use a Supercomputer?
 

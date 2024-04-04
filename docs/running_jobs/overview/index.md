@@ -4,7 +4,7 @@ HPC operates as a shared system with resources in high demand. Computational tas
 
 ## Materials to Get Started
 
-If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../support_and_training/workshops/intro_to_hpc/), [parallel computing](../../support_and_training/workshops/intro_to_parallel_computing/), [containers](../../support_and_training/workshops/intro_to_containers/), among other topics. 
+If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../support_and_training/workshops/intro_to_hpc/), [parallel computing](../../support_and_training/workshops/intro_to_parallel_computing/), [containers](../../support_and_training/workshops/intro_to_containers/), among other topics. 
 
 
 ## Best Practices
@@ -52,21 +52,21 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">What is a Job?</button>
 <div class="content">
-    <p>A single instance of allocated computing resources is known as a Job. Jobs can be in the format of a graphical <a href="../open_on_demand">Open OnDemand application</a> instance, <a href="../interactive_jobs">interactive</a> terminal session, or <a href="../batch_jobs/intro/">batch submission</a> (a script scheduled for  execution at a later time), and require an active allocation of CPU-time under an associated PI account. See <a href="../../resources/allocations/">Time Allocations</a> for more information.
+    <p>A single instance of allocated computing resources is known as a Job. Jobs can be in the format of a graphical <a href="../open_on_demand/">Open OnDemand application</a> instance, <a href="../interactive_jobs/">interactive</a> terminal session, or <a href="../batch_jobs/intro/">batch submission</a> (a script scheduled for  execution at a later time), and require an active allocation of CPU-time under an associated PI account. See <a href="../../resources/allocations/">Time Allocations</a> for more information.
     <br>
     </p>
 </div>
 
 <button class="collapsible">How much am I charged for a job?</button>
 <div class="content">
-    <p>Each PI group is given a free monthly allocation of CPU hours on each cluster (see <a href="../../resources/allocations">Time Allocations</a> for more information). The amount charged to this allocation is equal to the number of CPUs used for a job multiplied by its total run time in hours. 
+    <p>Each PI group is given a free monthly allocation of CPU hours on each cluster (see <a href="../../resources/allocations/">Time Allocations</a> for more information). The amount charged to this allocation is equal to the number of CPUs used for a job multiplied by its total run time in hours. 
     <br>
     </p>
 </div>
 
 <button class="collapsible">How many jobs can I run?</button>
 <div class="content">
-    <p>Each user can submit a maximum of 1000 jobs per cluster, and there are further limits on memory, CPUs, and GPUs concurrently used per group. More information is available at <a href="../job_limits">Job Limits</a>. If you intend to submit a large number of jobs, especially if they are similar, they should be submitted as <a href="../batch_jobs/array_jobs/">array jobs</a>.
+    <p>Each user can submit a maximum of 1000 jobs per cluster, and there are further limits on memory, CPUs, and GPUs concurrently used per group. More information is available at <a href="../job_limits/">Job Limits</a>. If you intend to submit a large number of jobs, especially if they are similar, they should be submitted as <a href="../batch_jobs/array_jobs/">array jobs</a>.
     <br>
     </p>
 </div>
@@ -92,9 +92,9 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
     </p>
 </div>
 
-<button class="collapsible">Why is my job running slower on the HPC than on my laptop??</button>
+<button class="collapsible">Why is my job running slower on the HPC than on my laptop?</button>
 <div class="content">
-    <p> The most common reasons for this are (1) not requesting sufficient CPUs on the HPC, and (2) running software that is not utilizing those CPUs. Beyond these, the reason tends to be software-specific. A common misconception is that all software automatically utilizes every CPU that is allocated to a particular job. While some programs are configured to do this, many are not, especially when running scripting languages like Python. In these cases, the script will need to be updated with the relevant libraries in order to take advantage of parallelization. See <a href="../parallelization">Parallelization</a> for more info. 
+    <p> The most common reasons for this are (1) not requesting sufficient CPUs on the HPC, and (2) running software that is not utilizing those CPUs. Beyond these, the reason tends to be software-specific. A common misconception is that all software automatically utilizes every CPU that is allocated to a particular job. While some programs are configured to do this, many are not, especially when running scripting languages like Python. In these cases, the script will need to be updated with the relevant libraries in order to take advantage of parallelization. See <a href="../parallelization/">Parallelization</a> for more info. 
     <br>
     </p>
 </div>
