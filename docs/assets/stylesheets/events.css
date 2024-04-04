@@ -219,14 +219,12 @@
 
 /* This can be used when no upcoming events are scheduled. */
 .no-events {
-    background-color: white;
-    padding: 20px; /* Add padding to create space between the text and the border */
+    color: #001C48;
     position: relative; /* Position relative to allow positioning of pseudo-elements */
-    width: 70%;
+    max-width: 800px;
+    width: 100%;
     text-align: center;
-    border-color: #1E5288;
-    border: 1px solid #1E5288; /* Add thick blue border */
-
+    padding: 10px;
 }
 
 .no-events::before,
@@ -234,8 +232,8 @@
     content: ''; /* Add content to the pseudo-elements */
     position: absolute; /* Position absolutely */
     top: 0;
-    left: 0;
-    right: 0;
+    left: -40px0;
+    right: -40px;
     bottom: 0;
 }
 

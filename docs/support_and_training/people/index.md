@@ -1,61 +1,82 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/stylesheets/people.css">
+
 # Research Computing Support Staff
+
 
 Welcome to our Support Staff page, where you can get acquainted with the individuals who make up our HPC consulting team.
 
 ## Research Computing Facilitation Manager
 
-<div class="grid cards" markdown style="width: 49.5%;">
--   <center><img src="images/a.jpg" style="width:200px"></center>
-    <center>**Chris Reidy**</center>
+<div class="card-grid">
+  <div class="card">
+    <img src="images/a.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Chris Reidy</b></h4>
 
-    ---
-
-    Foo bar baz
+      <p>Foo bar baz</p>
+    </div>
+  </div>
 </div>
+
+
 
 
 ## HPC Consulting
 
+<div class="card-grid">
+  <div class="card">
+    <img src="images/b.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Ethan Jahn</b></h4>
+
+      <p>Barring foo</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/c.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Soham Pal</b></h4>
+
+      <p>Fooing baz</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/d.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Sara Willis</b></h4>
+
+      <p>Burble burble</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/e.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Derrick Zwickl</b></h4>
+
+      <p>Meep snarf</p>
+    </div>
+  </div>
 
 
-<div class="grid cards" markdown >
--   <center><img src="images/b.jpg" style="width:200px"></center>
-    <center>**Ethan Jahn**</center>
-
-    ---
-
-    barring foo
-
--   <center><img src="images/c.jpg" style="width:200px"></center>
-    <center>**Soham Pal**</center>
-
-    ---
-
-    fooing baz
-
--   <center><img src="images/d.jpg" style="width:200px"></center>
-    <center>**Sara Willis**</center>
-
-    ---
-
-    burble burble 
-
--   <center><img src="images/e.jpg" style="width:200px"></center>
-    <center>**Derrick Zwickl**</center>
-
-    ---
-
-    meep snarf
 
 </div>
 
+
+
+
 ## Visualization Consulting
 
-<div class="grid cards" markdown style="width: 49.5%;">
--   <center><img src="images/f.jpg" style="width:200px"></center>
-    <center>**Devin Bayly**</center>
+<div class="card-grid">
+  <div class="card">
+    <img src="images/f.jpg" style="width:200px;">
+    <div class="container">
+      <h4><b>Devin Bayly</b></h4>
 
-    ---
-
-    Bazzing foo
+      <p>Bazzing foo</p>
+    </div>
+  </div>
 </div>
