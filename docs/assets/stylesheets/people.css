@@ -1,0 +1,48 @@
+/* stylesheet for the people page to make a custom grid for our profiles */
+
+/* Center the image within the card */
+.card img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Left-align text content within the card */
+.card .container {
+    text-align: left;
+}
+
+.card {
+    max-width: 500px; /* Adjust the maximum width of the card */
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E2E9EB; /* Border around the card */
+
+    padding: 20px;
+    
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: .5s;
+}
+
+.card .container h4::after {
+    content: ''; /* Add content to the pseudo-element */
+    display: block; /* Change the pseudo-element to a block-level element */
+    width: 100%; /* Set width of the horizontal rule */
+    height: 1px; /* Set height of the horizontal rule */
+    background-color: #E2E9EB; /* Set color of the horizontal rule */
+    margin: 10px auto; /* Adjust margin to position the horizontal rule */
+}
+
+.card .container h4 {
+    text-align: center; /* Center the h4 element */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+    align-items: stretch;
+
+}
