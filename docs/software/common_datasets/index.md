@@ -6,12 +6,12 @@ These datasets and databases are available on the compute nodes under `/contrib/
 
 ## AlphaFold 2
 
-AlphaFold is an AI system developed by the Google DeepMind project to predict the 3D structure of a protein from its amino acid sequence. AlphaFold needs multiple datasets to run, the combined size of which is around 2.62 TB. You can find these datasets under ```/contrib/datasets/alphafold```.
+AlphaFold is an AI system developed by the Google DeepMind project to predict the 3D structure of a protein from its amino acid sequence. AlphaFold needs multiple datasets to run, the combined size of which is around 2.62 TB. You can find these datasets under `/contrib/datasets/alphafold`.
 
-We also host containers at ```/contrib/singularity/alphafold``` that you can use with the provided datasets to predict protein structures with AlphaFold. You can access the container by loading the alphafold module from an interactive session or a batch submission script. When you load the alphafold module, it defines the following additional environment variables that you can use to easily access the container and the datasets:
+We also host containers at `/contrib/singularity/alphafold` that you can use with the provided datasets to predict protein structures with AlphaFold. You can access the container by loading the `alphafold` module from an interactive session or a batch submission script. When you load the `alphafold` module, it defines the following additional environment variables that you can use to easily access the container and the datasets:
 
-* ```ALPHAFOLD_DIR``` which points to ```/contrib/singularity/alphafold```
-* ```ALPHAFOLD_DATADIR``` which points to ```/contrib/datasets/alphafold```
+* `ALPHAFOLD_DIR` which points to `/contrib/singularity/alphafold`
+* `ALPHAFOLD_DATADIR` which points to `/contrib/datasets/alphafold`
 
 The following batch submission script shows how you can use the container with the provided datasets.
 
@@ -62,6 +62,5 @@ model = LlamaForCausalLM.from_pretrained(llama_path)
 
 You can run the above code from either a Jupyter notebook (see [Open OnDemand](/running_jobs/open_on_demand/)), or a batch script. If you do not provide enough memory, then the Jupyter kernel will die, or the Slurm job will terminate with an out of memory (OOM) error message. We recommend that you request at least 60 GB of memory for the models with 7 billion parameters, and progressively more for the models with 13 billion and 70 billion parameters. For more information on using Llama2, we recommend that you check Llama2's Github [repository](https://github.com/meta-llama/llama) and HuggingFace [documentation](https://huggingface.co/docs/transformers/en/model_doc/llama2).
 
-
-## NCBI Blast
-The Blast databases are provided in support of the Blast module under `/contrib/datasets/blast`.
+## NCBI BLAST
+The Basic Local Alignment Search Tool (BLAST), developed by NCBI, is a program for comparing primary biological sequence information, such as amino-acid or nucleotide sequences. NCBI has several databases that you can use with BLAST. We have the `nr`, `nt`, and `taxdb` databases available locally under `/contrib/datasets/blast`. You can use these datasets with the `blast` module.
