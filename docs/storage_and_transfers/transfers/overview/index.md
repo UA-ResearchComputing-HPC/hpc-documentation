@@ -32,11 +32,15 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 ## Best Practices
 
-* **Limit file copy sessions**
+- [x] **Use the file transfer nodes for large data transfers**
+
+	Login and compute nodes are not designed for large file transfers and transfers intiated here may result in network problems. The data transfer nodes (DTNs) are specifically set up for moving large amounts of data and are accessible via the hostname `filexfer.hpc.arizona.edu`.
+
+- [x] **Limit file copy sessions**
 
 	You share bandwidth with others. Two or three scp sessions are probably ok; > 10 is not.
     
-* **Consolidate files**
+- [x] **Consolidate files**
 
 	If you are transferring many small files, consider collecting them in a [tarball](https://www.freecodecamp.org/news/how-to-compress-files-in-linux-with-tar-command/) first.
 

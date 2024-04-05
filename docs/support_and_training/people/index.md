@@ -26,11 +26,11 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/b.jpg" style="width:200px;">
+    <img src="images/jahn.png" style="width:200px;">
     <div class="container">
       <h4><b>Ethan Jahn</b></h4>
 
-      <p>Barring foo</p>
+      <p>Ethan has been a scientific programmer for over 10 years, and a user of High Performance Computing resources for over 7 years. They earned their PhD in Computational Astrophysics from UC Riverside in 2021, and spent two years as an Adjunct Professor of Physics at Riverside City College before joining the UA HPC team in August 2023. They continue to incorporate education, training, and outreach into their consulting practice, and have an interest in interdisciplinary approaches to science communication.</p>
     </div>
   </div>
 
@@ -48,7 +48,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
     <div class="container">
       <h4><b>Sara Willis</b></h4>
 
-      <p>Burble burble</p>
+      <p>Sara Willis is originally from the San Francisco Bay Area and graduated from The University of Arizona with a double major in math and physics. Following graduation, she transitioned to a role as a bioinformatician performing research in protein evolution. Finding she was weirdly passionate about software installations, writing and optimizing code, and debugging, she joined the HPC consulting team in 2019 to assist researchers with their computation.</p>
     </div>
   </div>
 
