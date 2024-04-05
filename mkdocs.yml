@@ -44,7 +44,7 @@ nav:
       - Overview: storage_and_transfers/storage/overview/index.md
       - HPC Storage: storage_and_transfers/storage/hpc_storage/index.md
       - Rental Storage: storage_and_transfers/storage/rental_storage/index.md
-      - RDAS Storage: storage_and_transfers/storage/rdas_storage/index.md
+      - R-DAS Storage: storage_and_transfers/storage/rdas_storage/index.md
       - Tier2 AWS Storage: storage_and_transfers/storage/tier2_storage/index.md
     - Transfers:
       - Overview: storage_and_transfers/transfers/overview/index.md

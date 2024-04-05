@@ -39,7 +39,9 @@ p {
 
 .md-main__inner {
     display: flex;
-    height: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .tx-container {
@@ -542,7 +544,7 @@ div.fadeMe {
     column-gap: 10px;
     margin: 0 auto;
     max-width: 1200px;
-
+    padding-top: 1rem;
 }
     
 
