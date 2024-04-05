@@ -4,7 +4,7 @@ Different versions of Python are available on HPC both as system modules as well
 
 ## Installation and Package Policy
 
-We maintain a two tiered approach to Python packages
+We maintain a two tiered approach to Python packages:
 
 * Tier 1: We install the basic Python packages that are required by most users (these are mostly libraries rather than packages, such as numpy and scipy). This is done for the versions of Python that we install as modules. Adding some packages might force an upgrade of numpy for example, which might break a user's environment that was dependent on the prior version.
 
@@ -14,9 +14,13 @@ We maintain a two tiered approach to Python packages
 
 !!! danger "Python 2 is no longer officially supported by the Python Software Foundation."
 
+!!! warning "Using the `python` command"
+    The command `python` defaults to the system 2.7.5 version. To use Python 3, use the command ```python3```.
+
 Multiple versions of Python are available on HPC. They are only available on compute nodes and are accessible either using a batch submission or interactive session. 
 
-|Version|Accessibility[^1]|
+
+|Version|Accessibility|
 |-|-|
 |Python 2.7.5|system version (no module)|
 |Python 3.6.8|system version (no module)|
@@ -98,4 +102,4 @@ Once you've selected your environment, try loading a custom package you've insta
 
 <img width="800" src="images/py-38-test.png">
 
-[^1]: Note: The command ```python``` defaults to the system 2.7.5 version. To use Python 3, use the command ```python3```.
+
