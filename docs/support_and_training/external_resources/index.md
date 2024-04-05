@@ -37,6 +37,11 @@ CyVerse provides life scientists with powerful computational infrastructure to h
 
 CyVerse is funded by the National Science Foundation’s Directorate for Biological Sciences. They are a dynamic virtual organization led by the University of Arizona to fulfill a broad mission that spans our partner institutions: Texas Advanced Computing Center, Cold Spring Harbor Laboratory, and the University of North Carolina at Wilmington.
 
+## Neuroimaging Core
+<img src="images/neuro.png" style="height:70px;"> 
+
+Are you part of the neuroimaging community and interested in using HPC? The UArizona Neuroimaging Core has [excellent documentation](https://neuroimaging-core-docs.readthedocs.io/en/latest/pages/hpc.html) to help you get started.
+
 ## Open Science Framework
 <img src="images/osf_black.png" style="height:50px;"> 
 
