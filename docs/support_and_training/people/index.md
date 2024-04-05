@@ -44,7 +44,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
   </div>
 
   <div class="card">
-    <img src="images/d.jpg" style="width:200px;">
+    <img src="images/willis.png" style="width:200px;">
     <div class="container">
       <h4><b>Sara Willis</b></h4>
 
