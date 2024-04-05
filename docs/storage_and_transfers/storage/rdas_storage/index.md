@@ -6,7 +6,7 @@
     R-DAS storage is not mounted on HPC compute or login nodes. Data stored in R-DAS will need to be copied over to the HPC filesystem in order to be accessible to jobs. Instructions on how to access R-DAS from HPC are included below.
     
 !!! tip "Group Sharing"
-    Faculty members/PIs can share their allocations with group members. To do so, in step 6 in the **Accessing Your R-DAS Allocation" section below, group members will choose the allocation with their faculty member's/PI's NetID.
+    Faculty members/PIs can share their allocations with group members. To do so, in step 6 in the [Accessing Your R-DAS Allocation](#accessing-your-r-das-allocation) section below, group members will choose the allocation with their faculty member's/PI's NetID.
 
 !!! warning "No Controlled Data"
     This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
@@ -45,7 +45,7 @@ PIs can request an allocation on R-DAS from [https://portal.hpc.arizona.edu/port
     
 ## Accessing Your R-DAS Allocation
 !!! tip
-    UA IP Address Required: To access your R-DAS allocation you need to be connected to either the UA campus network, or the UA SSL VPN. For information about connecting to a VPN, see [VPN - Virtual Private Network](registration_and_access/vpn/). If you are accessing your R-DAS allocation from an HPC cluster, then you are already on the UA campus network and do not need to connect to the UA SSL VPN. 
+    UArizona IP Address Required: To access your R-DAS allocation you need to be connected to either the UArizona campus network, or the UArizona SSL VPN. For information about connecting to a VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/). If you are accessing your R-DAS allocation from an HPC cluster, then you are already on the UArizona campus network and do not need to connect to the UArizona SSL VPN. 
     
 R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intended to be visual aids, but they include information from the consulting team. When you proceed, please enter your own information.
 

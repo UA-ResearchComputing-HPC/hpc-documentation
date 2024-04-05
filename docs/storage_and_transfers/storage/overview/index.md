@@ -4,11 +4,11 @@
 
 1. Data undergoing active analyses should be stored in HPC's local [High Performance Storage](../hpc_storage/).
 2. Large amounts of data not requiring immediate access from our HPC compute nodes can be stored at reasonable rates on our [Rental Storage](../rental_storage/). 
-3. RDAS is a [research data service](../rdas_storage/) which supports the mounting of SMB shares. The supported operating systems are MacOS, Linux, and Windows. It provides 5TB of free storage. 
+3. RDAS is a [research data service](../rdas_storage/) which supports the mounting of SMB shares. The supported operating systems are MacOS, Linux, and Windows. It provides 5 TB of free storage. 
 4. Research data not requiring immediate access should be stored in [General Research Data Storage (Tier 2)](../tier2_storage/). For example:
-    1. Large datasets where only subsets are actively being analyzed
-    2. Results no longer requiring immediate access
-    3. Backups (highly encouraged!)
+    1. Large datasets where only subsets are actively being analyzed.
+    2. Results no longer requiring immediate access.
+    3. Backups (highly encouraged!).
 5. Data that require HIPAA-compliance can be stored on [Soteria](../../../resources/secure_hpc/overview/) (currently in the pilot phase).
 
 

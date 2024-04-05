@@ -72,11 +72,11 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/f.jpg" style="width:200px;">
+    <img src="images/bayly.png" style="width:200px;">
     <div class="container">
       <h4><b>Devin Bayly</b></h4>
 
-      <p>Bazzing foo</p>
+      <p>I'm a member of the Research Technologies Data & Visualization team at the University of Arizona. I work with researchers, students and faculty to bring your data to life through drop ins, 1:1 consultations, collaborative projects both short & long term, and general protocols enhancing the visualization offerings of our High Performance Computer (HPC).</p>
     </div>
   </div>
 </div>

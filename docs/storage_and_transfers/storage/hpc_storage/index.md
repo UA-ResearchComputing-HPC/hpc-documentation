@@ -4,9 +4,9 @@
 
 The University’s Research Data Center provides data storage for active analysis on the high-performance computers (HPCs). Using central computing storage services and resources, University researchers, faculty researchers, and post-doctoral researchers are able to:
 
-* Share research data in a collaborative environment with other UArizona affiliates on the HPC system
-* Store large-scale computational research data
-* Request additional storage for further data analysis
+* Share research data in a collaborative environment with other UArizona affiliates on the HPC system.
+* Store large-scale computational research data.
+* Request additional storage for further data analysis.
 
 The storage is mounted as a filesystem and all the clusters have access to the same filesystems.
 
@@ -16,8 +16,8 @@ Every user has access to individual and shared storage on the system where they 
 |-|-|-|-|
 |```/home/uxx/netid```|An individual storage allocation provided for every HPC user|50 GB|Accessible for the duration of user's account|
 |```/groups/pi_netid```|A communal storage allocation provided for every research group|500 GB|Accessible for the duration of a PI's account|
-|```/xdisk/pi_netid```|Temporary communal storage available for every group on request. See xdisk section below for details.|200 GB to 20  TB|Up to 300 days|
-|```/tmp```|Local storage available on individual compute nodes.|$<$ 800 GB to 1.4 TB|Only accessible for the duration of a job's run.|
+|```/xdisk/pi_netid```|Temporary communal storage available for every group on request. [See xdisk section below](#xdisk) for details.|200 GB to 20  TB|Up to 300 days|
+|```/tmp```|Local storage available on individual compute nodes.|$<$ 800 GB to 1.4 TB|Only accessible for the duration of a job's run|
 
 ## Best Practices
 
@@ -27,7 +27,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
     
 	Running multiple instances of jobs performing significant I/O activity may be detrimental to the system, especially if these occur within the same subdirectories. It may be best to read in data at the beginning of a workflow, perform the entire analysis, then write at the very end. Reconfiguring your workflow to limit I/O may cost some time up front, but will most likely be made back through faster job completion. 
 
-    If you are running *array jobs*, please be cognizant of your I/O activity.
+    If you are running [array jobs](../../../running_jobs/batch_jobs/array_jobs/), please be cognizant of your I/O activity.
 
 - [x] **Use /tmp for working space**
 
@@ -43,7 +43,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
      
 - [x] **Watch your quotas**
 
-	You are limited in capacity and file count. Use ```uquota```. In ```/home``` the scheduler writes files in a hidden directory assigned to you.
+	You are limited in capacity and exceeding your storage quotas may have unintended side effects (e.g., login issues, data loss, or failed jobs). See the section below on checking your storage usage.
 
 - [x] **Avoid frequent snapshot files**
   
@@ -51,7 +51,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
 
 - [x] **Use parallel I/O**
 
-	Some modules enable parallelized file operations, such as ```phdf5```
+	Some modules enable parallelized file operations, such as ```phdf5```.
 
 ## Checking Your Storage Usage
 
@@ -76,17 +76,19 @@ The shared file system on HPC is the location for everything in ```/home```, ```
  
 ### What is xdisk?
 
-xdisk is a temporary storage allocation available to all PIs and offers up to 20 TB of usable space for their group for up to 300 days. PIs may only have one active xdisk at a time.
+xdisk is a temporary storage allocation available to all faculty members (PIs) and offers up to 20 TB of usable space for their group for up to 300 days. PIs may only have one active xdisk at a time.
 
-A PI can request an allocation either via the command line or through our web portal (no paperwork necessary!). Only faculty members (PIs) may request, alter, or delete an allocation from the command line. Members of their research group may be [delegated management rights](../../../registration_and_access/group_management/#delegating-group-management-rights) allowing them to manage a group's xdisk on their PI's behalf through our web portal.
+A PI can request an allocation either via the command line or through our web portal (no paperwork necessary!). Only PIs may request, alter, or delete an allocation from the command line. However, members of their research group may be [delegated management rights](../../../registration_and_access/group_management/#delegating-group-management-rights) allowing them to manage a group's xdisk on their PI's behalf through our web portal.
 
 Once an xdisk allocation is created, it is immediately available for use. Groups can find their allocations under ```/xdisk/pi_netid```. By default, a subdirectory is created for each group member under ```/xdisk/pi_netid/netid```. If a group member is added after the allocation is created, a directory is not automatically created for them. To add one, [reach out to our consultants](../../../support_and_training/consulting_services/).
 
-{==Because xdisk allocations are temporary, they will be removed as soon as their time limit is reached==}. Warnings will be sent to every group member at their netid@arizona.edu addresses beginning one month before the expiration. It is the group's responsibility to renew xdisk allocations or copy files to an alternate storage location prior to the expiration date. Once an xdisk allocation expires, everything in it is permanently deleted. The data is not deleted immediately, but on a regular basis or when the space is needed, so do not rely on it being recovered after expiration.
+{==Because xdisk allocations are temporary, they will be removed as soon as their time limit is reached==}. Warnings will be sent to every group member at their netid@arizona.edu addresses beginning one month before the expiration. It is the group's responsibility to renew xdisk allocations or copy files to an alternate storage location prior to the expiration date. Once an xdisk allocation expires, the contents are deleted. 
 
 PIs may request a new xdisk allocation immediately after their previous one has expired. This ensures groups will always have access to increased storage on HPC on a rolling basis with the requirement that housekeeping be done once per academic year. 
 
 ### Requesting, Modifying, and Deleting an Allocation
+
+#### User Portal
 
 === "Requesting an Allocation"
     !!! warning
@@ -96,7 +98,7 @@ PIs may request a new xdisk allocation immediately after their previous one has 
     
     <img src="images/manage_xdisk.png" style="width:500px;">
     
-    This will open a web form where you can enter your size and duration requirements. The maximum size that can be requested is 20000 GB and the maximum duration is 300 days. If a PI has created multiple research groups, you can specify the desired group ownership for the allocation from the Group dropdown menu. Once you click Ok, your allocation should immediately be available.
+    This will open a web form where you can enter your size and duration requirements. The maximum size that can be requested is 20000 GB and the maximum duration is 300 days. If a PI has created multiple research groups, you can specify the desired group ownership for the allocation from the **Group** dropdown menu. Once you click **Ok**, your allocation should immediately be available.
     
     <img src="images/manage_xdisk.png" style="width:500px;">
 
@@ -121,12 +123,14 @@ PIs may request a new xdisk allocation immediately after their previous one has 
     
     If you would like to request a new xdisk, you may do so as soon as the request is processed. Note: sometimes processing the request can take a few minutes, depending on the number of files and the size of the allocation.
     
-### CLI Commands (PIs only)
+#### CLI Commands (PIs only)
 
 !!! warning
-    The xdisk CLI commands are usable by PIs only. Group delegates can manage allocations via the user portal.
+    The xdisk CLI commands are usable by PIs only. Group delegates can manage allocations via the user portal after switching to their PI's account.
     
-`xdisk` is a locally written utility for PI's to create, delete, resize, and expire (renew) xdisk allocations. Any PIs who wish to utilize the CLI to manage their allocations can do so using the syntax shown below:
+`xdisk` is a locally written utility for PI's to create, delete, resize, and extend xdisk allocations. Any PIs who wish to utilize the CLI to manage their allocations can do so using the syntax shown below:
+
+
 
 |xdisk Function|Command|Examples|
 |-|-|-|
