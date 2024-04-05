@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/buttons.css">
+
 # Building Containers
 
 !!! warning 
@@ -75,3 +77,9 @@ INFO:    Build complete: python3.11_astropy.sif
 [sarawillis@cpu38 pull_example]$ 
 ```
 
+<html>
+<div class="button-container">
+    <a href="../pulling_containers/"><button class="left-button"></button></a>
+    <a href="../using_containers/"><button class="right-button"></button></a>
+</div>
+</html>

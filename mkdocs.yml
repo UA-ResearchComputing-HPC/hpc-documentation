@@ -76,8 +76,7 @@ nav:
       - Containers on HPC: software/containers/containers_on_hpc/index.md
       - Pulling Containers: software/containers/pulling_containers/index.md
       - Building Containers: software/containers/building_containers/index.md
-      - Running Containers: software/containers/using_containers/index.md
-    #- Unsupported Software: software/unsupported/index.md
+      - Using Containers: software/containers/using_containers/index.md
 
   - Running Jobs:
     - Overview: running_jobs/overview/index.md

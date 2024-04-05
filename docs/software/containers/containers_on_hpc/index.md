@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/buttons.css">
+
 # Containers on HPC
 
 !!! tip
@@ -43,3 +45,10 @@ export APPTAINER_CACHEDIR=/groups/pi/your_netid/.apptainer
 ```
 
 To make the change permanent, add this line to the hidden file in your home directory ```~/.bashrc```.
+
+<html>
+<div class="button-container">
+    <a href="../what_are_containers/"><button class="left-button"></button></a>
+    <a href="../pulling_containers/"><button class="right-button"></button></a>
+</div>
+</html>

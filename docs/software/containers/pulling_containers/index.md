@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/buttons.css">
+
+
 # Pulling Containers
 
 !!! warning 
@@ -59,3 +62,10 @@ $ apptainer build <local_image_name> docker://nvcr.io/<registry>/<app:tag>
 ```
 
 This Apptainer build command will download the app:tag NGC Docker image, convert it to Apptainer format, and save it to the local filename local_image_name. 
+
+<html>
+<div class="button-container">
+    <a href="../containers_on_hpc/"><button class="left-button"></button></a>
+    <a href="../building_containers/"><button class="right-button"></button></a>
+</div>
+</html>
