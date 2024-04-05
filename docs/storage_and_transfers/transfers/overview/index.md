@@ -1,12 +1,26 @@
 # Overview
 
-!!! warning "Log In Before Transferring"
-    To make transfers to/from HPC, you will need to have logged into your account at least once. If you have not, you may encounter "directory does not exist" errors. This is because your home directory is not created until you log in for the first time. See here about System Access
+!!! tip "Log In Before Transferring"
+    To make transfers to/from HPC, you will need to have logged into your account at least once. If you have not, you may encounter "directory does not exist" errors. This is because your home directory is not created until you log in for the first time. See our [System Access page](../../../registration_and_access/system_access/) for information on logging in.
+
+## Designated Data Transfer Node for File Transfers
+<img src="images/HPCDiagram_FileTransfers.png"  width=400px align="right">
 
 
-Files are transferred to shared data storage and not to the bastion node, login nodes, or compute nodes. Because the storage is shared, your files are accessible on all clusters; Puma, Ocelote and Elgato. When you look at the diagram above, you can intuitively see the efficiency of transferring data without additional hops.  Keeping mind that the data pipes are wider also, allowing for faster data transmission.
+For efficient file transfers to and from the HPC system, utilize the designated data transfer node, hostname: **`filexfer.hpc.arizona.edu`**. This node is optimized for handling large data transfers and is equipped with a high-speed 100 Gb interconnect.
 
-<img src="images/HPCDiagram_FileTransfers.png"  width=500px>
+**Why Use the Data Transfer Node?**
+
+- [x] **Optimized Performance.**
+
+    The dedicated data transfer node ensures efficient transfer speeds, particularly for large datasets.
+
+- [x] **Network Stability.**
+    
+    Utilizing the data transfer node helps prevent network congestion and potential disruptions on other components of the HPC system.
+
+!!! warning "Do not use hpc.arizona.edu"
+    Using the hostname `hpc.arizona.edu` for transfers will move your data to the HPC bastion host. The bastion host is not connected to the shared storage array (meaning files stored here will not be accessible on login/compute nodes) and has limited storage capacity. Users are restricted to 10 MB of space on this node and may experience login issues if this is exceeded.
 
 
 ## Data Transfers By Size
@@ -14,6 +28,19 @@ Files are transferred to shared data storage and not to the bastion node, login 
 1. Small Transfers: For small data transfers the [web portal](https://ood.hpc.arizona.edu) offers the most intuitive method.
 2. Transfers <100GB: we recommend sftp, scp or rsync using ```filexfer.hpc.arizona.edu```.  
 3. Transfers (>100GB), transfers outside the university, and large transfers within HPC: we recommend using Globus (GridFTP).
+
+
+## Best Practices
+
+* **Limit file copy sessions**
+
+	You share bandwidth with others. Two or three scp sessions are probably ok; > 10 is not.
+    
+* **Consolidate files**
+
+	If you are transferring many small files, consider collecting them in a [tarball](https://www.freecodecamp.org/news/how-to-compress-files-in-linux-with-tar-command/) first.
+
+
 
 ## Transfer Software Summary
 
