@@ -19,6 +19,39 @@ Every user has access to individual and shared storage on the system where they 
 |```/xdisk/pi_netid```|Temporary communal storage available for every group on request. See xdisk section below for details.|200 GB to 20  TB|Up to 300 days|
 |```/tmp```|Local storage available on individual compute nodes.|$<$ 800 GB to 1.4 TB|Only accessible for the duration of a job's run.|
 
+## Best Practices
+
+The shared file system on HPC is the location for everything in ```/home```, ```/groups```, and ```/xdisk```. The ```/tmp``` directory is also available to users, and refers to the local disk on each node. Your I/O activity can have dramatic activity on other users. Extreme read/write activity can cause bottlenecks and may be cancelled without warning. It is generally best to limit I/O whenever possible to avoid straining the system. The HPC consult team is available to help optimize workflows that may be impacted by I/O. 
+    
+- [x] **Be aware of I/O load.**
+    
+	Running multiple instances of jobs performing significant I/O activity may be detrimental to the system, especially if these occur within the same subdirectories. It may be best to read in data at the beginning of a workflow, perform the entire analysis, then write at the very end. Reconfiguring your workflow to limit I/O may cost some time up front, but will most likely be made back through faster job completion. 
+
+    If you are running *array jobs*, please be cognizant of your I/O activity.
+
+- [x] **Use /tmp for working space**
+
+	If you have multiple jobs that will use the same data, consider copying it to ```/tmp``` and run multiple jobs. This can increase performance and reduce I/O load.
+
+- [x] **Avoid storing many files in a single directory**
+
+	Hundreds of files is probably ok; tens of thousands is not.    
+
+- [x] **Avoid opening and closing files repeatedly in tight loops**
+
+	If possible, open files once at the beginning of your workflow/program, then close them at the end.
+     
+- [x] **Watch your quotas**
+
+	You are limited in capacity and file count. Use ```uquota```. In ```/home``` the scheduler writes files in a hidden directory assigned to you.
+
+- [x] **Avoid frequent snapshot files**
+  
+	This can stress the storage.
+
+- [x] **Use parallel I/O**
+
+	Some modules enable parallelized file operations, such as ```phdf5```
 
 ## Checking Your Storage Usage
 
