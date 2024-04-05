@@ -5,7 +5,7 @@ nav:
 
   - Quick Start: 
     - Overview: quick_start/overview/index.md
-    - What is HPC?: quick_start/supercomputing_in_plain_english/index.md
+    - What is HPC?: quick_start/what_is_hpc/index.md
     - Common Misconceptions: quick_start/common_misconceptions/index.md
     - Logging In: quick_start/logging_in/index.md
     - Storage and Transfers: quick_start/storage_and_transfers/index.md
