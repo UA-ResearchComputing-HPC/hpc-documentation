@@ -1,12 +1,12 @@
 ---
-title: Supercomputing in Plain English
+title: What Is HPC?
 show:
 
 ---
 
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 
-# Supercomputing in Plain English
+# What is HPC?
 
 ### What is HPC/What is a Supercomputer?
 
