@@ -40,7 +40,6 @@ nav:
     - VPN : registration_and_access/vpn/index.md
     
   - Storage and Transfers:
-    - Overview: storage_and_transfers/overview/index.md
     - Storage:
       - Overview: storage_and_transfers/storage/overview/index.md
       - HPC Storage: storage_and_transfers/storage/hpc_storage/index.md
