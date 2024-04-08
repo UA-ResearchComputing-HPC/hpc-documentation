@@ -25,9 +25,9 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 ## Data Transfers By Size
 
-1. Small Transfers: For small data transfers the [web portal](https://ood.hpc.arizona.edu) offers the most intuitive method.
-2. Transfers <100GB: we recommend sftp, scp or rsync using ```filexfer.hpc.arizona.edu```.  
-3. Transfers (>100GB), transfers outside the university, and large transfers within HPC: we recommend using Globus (GridFTP).
+1. Transfers $\leq$ 64 MB: For small data transfers, the [web portal](https://ood.hpc.arizona.edu) offers the most intuitive method.
+2. Transfers $<$100 GB: we recommend SFTP, SCP or Rsync using ```filexfer.hpc.arizona.edu```.  
+3. Transfers $>$100 GB, transfers outside the university, and large transfers within HPC: we recommend using Globus (GridFTP).
 
 
 ## Best Practices
@@ -38,7 +38,7 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 - [x] **Limit file copy sessions**
 
-	You share bandwidth with others. Two or three scp sessions are probably ok; > 10 is not.
+	You share bandwidth with others. Two or three SCP sessions are probably ok; $>$10 is not.
     
 - [x] **Consolidate files**
 
@@ -99,24 +99,24 @@ For efficient file transfers to and from the HPC system, utilize the designated 
         <td>On Windows, <a href="https://winscp.net/eng/index.php">WinSCP</a> is available as a GUI interface</td>
     </tr>
     <tr>
-        <td>rsync</td>
+        <td>Rsync</td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
         <td>&#x274C;</td>
         <td>&#x274C;</td>
         <td>&#x274C;</td>
         <td>&#x274C;</td>
-        <td>Grsync is a GUI interface for rsync for multiple platforms.</td>
+        <td>Grsync is a GUI interface for Rsync for multiple platforms.</td>
     </tr>
     <tr>
-        <td>rclone</td>
+        <td>Rclone</td>
         <td>&#x2705;</td>
         <td>&#x2753;</td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
-        <td>rclone has recently announced they have an <a href="https://rclone.org/gui/">experimental GUI</a>.</td>
+        <td>Rclone has recently announced they have an <a href="https://rclone.org/gui/">experimental GUI</a>.</td>
     </tr>
     <tr>
         <td>Cyberduck</td>
@@ -143,4 +143,4 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 
 ## File Transfers and SSH Keys
-Several of the file transfer methods listed below use authentication based on the SSH protocol, including scp, sftp and rsync. Therefore, adding your SSH Key to the ```filexfer.hpc.arizona.edu``` node can allow one to **avoid entering passwords** when using those methods. See the documentation for [adding SSH Keys](/registration_and_access/system_access/#ssh-keys).
+Several of the file transfer methods listed below use authentication based on the SSH protocol, including SCP, SFTP, and Rsync. Therefore, adding your SSH Key to the ```filexfer.hpc.arizona.edu``` node can allow one to **avoid entering passwords** when using those methods. See the documentation for [adding SSH Keys](/registration_and_access/system_access/#ssh-keys).
