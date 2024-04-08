@@ -37,6 +37,7 @@ nav:
     - Account Deletion: registration_and_access/account_deletion/index.md
     - Group Management: registration_and_access/group_management/index.md
     - System Access: registration_and_access/system_access/index.md
+    - System Overview: registration_and_access/system_overview/index.md
     - VPN : registration_and_access/vpn/index.md
     
   - Storage and Transfers:
@@ -52,9 +53,9 @@ nav:
       - Cyberduck: storage_and_transfers/transfers/cyberduck/index.md
       - FTP/LFTP/SFTP: storage_and_transfers/transfers/sftp_ftp_lftp/index.md
       - Globus: storage_and_transfers/transfers/globus/index.md
-      - iRods: storage_and_transfers/transfers/irods/index.md
-      - rsync: storage_and_transfers/transfers/rsync/index.md
-      - rclone: storage_and_transfers/transfers/rclone/index.md
+      - iRODS: storage_and_transfers/transfers/irods/index.md
+      - Rsync: storage_and_transfers/transfers/rsync/index.md
+      - Rclone: storage_and_transfers/transfers/rclone/index.md
       - SCP: storage_and_transfers/transfers/scp/index.md
 
   - Software:
