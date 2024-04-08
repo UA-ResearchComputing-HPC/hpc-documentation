@@ -104,7 +104,7 @@ Once you've selected your environment, try checking the Python version in your n
 
         Sometimes turning off auto-activation won't be enough because Anaconda will still be present in your ```PATH```. In this case, follow the instructions in the tab ***Temporary Removal*** or ***Permanent Removal***
 
-    By default, Anaconda's initialization will tell it to automatically activate itself when you log in (when Anaconda is active, you will see a `(conda)` preceding your command prompt). This is known to cause issues, for example, this behavior breaks OnDemand Desktop sessions preventing you from making a connection.
+    By default, Anaconda's initialization will tell it to automatically activate itself when you log in (when Anaconda is active, you will see a `(base)` preceding your command prompt). This is known to cause issues, for example, this behavior breaks OnDemand Desktop sessions preventing you from making a connection.
     
     If you have not already done so, disable this behavior by running the following from the command line in an interactive terminal session:
 
