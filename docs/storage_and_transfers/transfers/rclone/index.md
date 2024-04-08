@@ -1,13 +1,13 @@
 # Rclone
 
 !!! tip "Browser Availability"
-    If you encounter issues configuring rclone on HPC due to an internet browser not being available, try using a terminal in an [interactive desktop session in Open OnDemand](../../../running_jobs/open_on_demand/). This will allow you to grant application access graphically. 
+    If you encounter issues configuring Rclone on HPC due to an internet browser not being available, try using a terminal in an [interactive desktop session in Open OnDemand](../../../running_jobs/open_on_demand/). This will allow you to grant application access graphically. 
 
 !!! example "Reference"
-    For information on rclone commands, see: [https://rclone.org/commands/](https://rclone.org/commands/)
+    For information on Rclone commands, see: [https://rclone.org/commands/](https://rclone.org/commands/)
 
 
-Rclone is a CLI tool installed on ```filexfer.hpc.arizona.edu``` that can be used to transfer files between HPC and Cloud-based storage sites. To use rclone, you will need to start by configuring it. The walkthrough provided by rclone is fairly straightforward and has a large number of options to choose from. A configuration example for Google Drive is shown below. 
+Rclone is a CLI tool installed on ```filexfer.hpc.arizona.edu``` that can be used to transfer files between HPC and Cloud-based storage sites. To use Rclone, you will need to start by configuring it. The walkthrough provided by Rclone is fairly straightforward and has a large number of options to choose from. A configuration example for Google Drive is shown below. 
 
 
 ## Example Google Drive Configuration
