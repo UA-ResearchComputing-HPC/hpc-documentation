@@ -10,9 +10,13 @@ See our page on [Compute Resources](../../resources/compute_resources/) for more
 * a limited number of high-memory nodes
 * a fixed amount of memory (RAM) available per CPU
 
+!!! warning "Request Only Available Hardware"
+
+    Resource requests (i.e. [batch scripts](../batch_jobs/intro/#batch-script-structure), [interactive commands](../interactive_jobs/), and [OOD job forms](../open_on_demand/#job-viewer-and-composer)) must comply with available hardware, otherwise unexpected behavior, including errors, may occur. 
+
 ## Policy Limits
 
-To ensure fair use of the system for all researchers, limits have been placed on the maximum simultaneous usage of resources on a per-group, per-user, and per-job basis. These limits can be listed by using the ```job-limits``` command in a terminal session. For convenience, the output of this command for each cluster is listed below. Note that you will see the current usage of your group and personal jobs, so the output may vary.
+To ensure fair use of the system for all researchers, limits have been placed on the maximum simultaneous usage of resources on a per-group, per-user, and per-job basis. These limits can be listed by using the ```job-limits``` command in a terminal session. For convenience, the output of this command for each cluster is listed below. Note that you will see the current usage of your group and personal jobs, so the actual output may vary.
 
 === "Puma"
     ```bash
