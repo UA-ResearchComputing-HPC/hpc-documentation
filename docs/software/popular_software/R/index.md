@@ -57,62 +57,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 === "Anaconda"
     One common reason R packages won't install is an altered environment. This can frequently be caused by the presence of Anaconda (or Miniconda) installed locally or initialized in your account from our system module.
     
-    When Anaconda is initialized, your ```.bashrc``` file is edited so that it becomes the first thing in your ```PATH``` variable. This can cause all sorts of mayhem. To get around this, you can either use `conda deactivate` and then manually remove Anaconda from your ```PATH```, or comment out/delete the initialization in your ```~/.bashrc``` if you want the change to be permanent.
-
-    === "Turn off Auto-activation"
-        !!! danger "Removing Auto-activation may not always be sufficient"
-
-            Sometimes turning off auto-activation won't be enough because Anaconda will still be present in your ```PATH```. In this case, follow the instructions in the tab ***Temporary Removal*** or ***Permanent Removal***
-
-        Anaconda's initialization will tell it to automatically activate itself when you log in (when Anaconda is active, you will see a "(conda)" preceding your command prompt). To disable this behavior, run the following from the command line in an interactive terminal session:
-
-        ```
-        conda config --set auto_activate_base false
-        ```
-
-        This will suppress Anaconda's activation until you explicitly call ```conda activate``` and is a handy way to have more control over your environment. Once you run this, you will need to log out and log back in again.
-
-        
-
-    === "Temporary Removal"
-        You can either use the command ```conda deactivate``` and then manually edit your ```PATH``` variable to remove all paths where of `anaconda` or `miniconda` are present. Alternatively, copy the following code block and run it in your terminal:
-        ```
-        conda deactivate > /dev/null 2>&1
-        IFS=':' read -ra PATHAR <<< "$PATH"
-        for i in "${PATHAR[@]}"
-            do if [[ $i == *"conda"* ]]
-                then echo "removing $i from PATH"
-            else NEWPATH=$i:$NEWPATH
-            fi
-        done
-        export PATH=$NEWPATH
-        module unload gnu8 && module load gnu8
-        unset NEWPATH
-        echo "Successfully removed conda"
-        ```
-
-    === "Permanent Removal"
-        !!! warning "Be careful when editing your `~/.bashrc`"
-            Your ```~.bashrc``` file configures your environment each time you start a new session. Be careful when editing it. You may consider making a backup in case of unwanted changes.
-
-        The most permanent solution for removing Anaconda from your environment is to edit your `~/.bashrc` to manually remove its initilization. This change will remove Anaconda from all future terminal sessions but will not make the changes live right away. To make the changes live, log out of HPC and log back in again.
-        
-        Start by opening the file ~/.bashrc. This can be done using the command ```nano```
-
-        ```
-        $ nano ~/.bashrc # opens your bashrc file to edit
-        ```
-
-        Then comment out or delete the following lines and the text in between:
-
-        ```
-        # >>> conda initialize >>>
-        ...
-        # <<< conda initialize <<<
-        ```
-        To exit use ++control+x++, select ++y++ to save, and hit ++enter++ to confirm your filename.
-
-        If you need Anaconda again in the future, you can either uncomment the lines you commented out, or you can [initialize Anaconda](../python_and_anaconda/anaconda/) again.
+    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../python_and_anaconda/anaconda/#removing-anaconda-from-your-environment). 
 
 === "A Corrupted Environment"
 
