@@ -1,32 +1,30 @@
 # R
 
-!!! tip "Examples"
-    We have examples of using R in batch scripts available in our [Job Examples](../../../running_jobs/batch_jobs/example_batch_jobs/) section.
-
 R is a popular language for data analysis and visualization. Different versions are available as software modules and we provide the graphical interface RStudio for R through our Open OnDemand web interface.
 
 Similar to other languages that use package managers to install libraries contributed by the user community, we recommend you create and manage your own local libraries in your account. This ensures a stable global environment for all users and that you have the most control over your packages' versions and dependencies.
 
-We provide instructions below for how to create, use, and switch between libraries as well as some debugging techniques for when package installations fail. We also provide some script examples (click the button in the banner at the top of this page) for submitting R scripts as batch jobs.
+We provide instructions below for how to create, use, and switch between libraries as well as some debugging techniques for when package installations fail.
 
 RStudio is a popular method for running analyses (and for good reason!), but for longer-running jobs (say, many hours or days) or workflows that need more flexibility in their environment (e.g., need access to software installed as system modules such as gdal), we recommend batch submissions.
 
 ## Creating a Custom Library
 
 !!! tip ""
-     R packages can be finicky. See **Switching Between Custom Libraries** and **Common Problems** below to help with frequent user issues.
+     R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues.
 
 **Creating your first library**
 
-1. Make a local directory to store your packages
+1. Make a local directory to store your packages. It's recommended to include information about your library in the name, e.g., which version of R you're using. It's important to maintain a consistent version of R with your libraries since installing packages into one library with multiple versions or R will often cause trouble. Need to switch versions of R? [Creating a new library](#switching-between-custom-libraries) will help.
    ```bash
    mkdir -p ~/R/library_4.2
    ```
   
-2. Tell R where the directory is by creating an environment file[^1]
+2. Tell R where your library is by creating an environment file
     ```bash
     echo 'R_LIBS=~/R/library_4.2/' >> ~/.Renviron
     ```
+    The file ```~/.Renviron``` [is a "dot" file](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) which means it does not show up when you run a standard ```ls```.. This particular file can be used to control your R environment for each subsequent time you start a session. All the `echo` command does is append the line ```R_LIBS=~/R/library_4.2/``` to this file. 
     
 3. That's it! Now you can install packages and they will be stored in the directory you just created. For example, to install and load the package ```ggplot2```:
     ```bash
@@ -35,17 +33,18 @@ RStudio is a popular method for running analyses (and for good reason!), but for
     install.packages("ggplot2")
     ```
 
+
 ## Switching Between Custom Libraries
 
-If you're using different versions of R, we recommend you use different libraries. See **Common Problems** below for more information. When creating a library, consider including pertinent information in the name such as R version. For example, if you wanted to switch to using R 4.1, you could create a directory called ```library_4.1``` using:
+If you're switching versions of R, we recommend you use a different library. See **Common Problems** below for more information. When creating a library, consider including pertinent information in the name such as R version. For example, if you were previously using R 4.2 and wanted to switch to using R 4.1, you could create a directory called ```library_4.1``` using:
 ```bash
 mkdir -p ~/R/library_4.1
 ```
-Then, to use your new library, edit your ```~/.Renviron``` file[^1] using a text editor such as ```nano```:
+Then, to use your new library, edit your ```~/.Renviron``` file using a text editor such as ```nano```:
 ```bash
-nano ~/.environ
+nano ~/.Renviron
 ```
-Once your text editor opens, rename the ```R_LIBS``` you previously had in your file. In this case, this value would look like:
+Once your text editor opens, set the ```R_LIBS``` previously defined in your file to the name and location of your new library. In this case, this would look like:
 ```bash
 R_LIBS=~/R/library_4.1
 ```
@@ -58,21 +57,25 @@ Working on a cluster without root privileges can lead to complications. For gene
 === "Anaconda"
     One common reason R packages won't install is an altered environment. This can frequently be caused by the presence of Anaconda (or Miniconda) installed locally or initialized in your account from our system module.
     
-    When Anaconda is initialized, your ```.bashrc``` file is edited so that it becomes the first thing in your ```PATH``` variable. This can cause all sorts of mayhem. To get around this, you can either remove anaconda from your ```PATH``` and deactivate your environment, or comment out/delete the initialization in your ```~/.bashrc``` if you want the change to be permanent.
+    When Anaconda is initialized, your ```.bashrc``` file is edited so that it becomes the first thing in your ```PATH``` variable. This can cause all sorts of mayhem. To get around this, you can either use `conda deactivate` and then manually remove Anaconda from your ```PATH```, or comment out/delete the initialization in your ```~/.bashrc``` if you want the change to be permanent.
 
     === "Turn off Auto-activation"
-        Anaconda's initialization will tell it to automatically activate itself when you log in (when anaconda is active, you will see a "(conda)" preceding your command prompt). To disable this behavior, run the following from the command line in an interactive terminal session:
+        !!! danger "Removing Auto-activation may not always be sufficient"
+
+            Sometimes turning off auto-activation won't be enough because Anaconda will still be present in your ```PATH```. In this case, follow the instructions in the tab ***Temporary Removal*** or ***Permanent Removal***
+
+        Anaconda's initialization will tell it to automatically activate itself when you log in (when Anaconda is active, you will see a "(conda)" preceding your command prompt). To disable this behavior, run the following from the command line in an interactive terminal session:
 
         ```
         conda config --set auto_activate_base false
         ```
 
-        This will suppress anaconda's activation until you explicitly call ```conda activate``` and is a handy way to have more control over your environment. Once you run this, you will either need to log out and log back in again to make the changes live, or you can follow the instructions in the section below. 
+        This will suppress Anaconda's activation until you explicitly call ```conda activate``` and is a handy way to have more control over your environment. Once you run this, you will need to log out and log back in again.
 
-        Sometimes turning off auto-activation won't be enough because Anaconda will still be present in your ```PATH```. In this case, follow the instructions in the tab ***Temporary Removal*** or ***Permanent Removal***
+        
 
     === "Temporary Removal"
-        You can either use the command ```conda deactivate``` and then manually edit your ```PATH``` variable to remove all instances of anaconda/miniconda or copy the following and run it in your terminal:
+        You can either use the command ```conda deactivate``` and then manually edit your ```PATH``` variable to remove all paths where of `anaconda` or `miniconda` are present. Alternatively, copy the following code block and run it in your terminal:
         ```
         conda deactivate > /dev/null 2>&1
         IFS=':' read -ra PATHAR <<< "$PATH"
@@ -89,11 +92,10 @@ Working on a cluster without root privileges can lead to complications. For gene
         ```
 
     === "Permanent Removal"
-        !!! warning
-            Your ```.bashrc``` file configures your environment each time you start a new session. Be careful when editing it. You may consider making a backup before editing in case of unwanted changes.
+        !!! warning "Be careful when editing your `~/.bashrc`"
+            Your ```~.bashrc``` file configures your environment each time you start a new session. Be careful when editing it. You may consider making a backup in case of unwanted changes.
 
-        !!! tip 
-            Note: this change will remove anaconda from all future terminal sessions but will not make the changes live right away. To make the changes live, either follow the instructions above under Temporary Removal for removing anaconda from your PATH, or log out and back in again.
+        The most permanent solution for removing Anaconda from your environment is to edit your `~/.bashrc` to manually remove its initilization. This change will remove Anaconda from all future terminal sessions but will not make the changes live right away. To make the changes live, log out of HPC and log back in again.
         
         Start by opening the file ~/.bashrc. This can be done using the command ```nano```
 
@@ -110,13 +112,15 @@ Working on a cluster without root privileges can lead to complications. For gene
         ```
         To exit use ++control+x++, select ++y++ to save, and hit ++enter++ to confirm your filename.
 
+        If you need Anaconda again in the future, you can either uncomment the lines you commented out, or you can [initialize Anaconda](../python_and_anaconda/anaconda/) again.
+
 === "A Corrupted Environment"
 
     If Anaconda is not initialized in your account, there might be other culprits that are corrupting your environment.
 
     Look for any of the file types listed below on your account. If you find them, try removing them (make a backup if you need them) and try the installation again.
 
-    * Saved R sessions. If this is the case, after starting a session, you will get the message "[Previously saved workspace restored]". Old sessions are saved as a hidden file ```.RData``` in your home directory. 
+    * Saved R sessions. If this is the case, after starting a session, you will get the message `[Previously saved workspace restored]`. Old sessions may be saved as a hidden file ```.RData``` in your home directory. Alternatively, they may be stored under `~/.local/share/rstudio`. Where old sessions are stored is dependent on the version of R you are using.
     * Gnu compilers
     * Windows files
 
@@ -130,20 +134,20 @@ Working on a cluster without root privileges can lead to complications. For gene
     ```
     This directory can lead to unwanted behavior. For example, if you're trying to use a new custom library (such as when switching R version), R will still search x86_64-pc-linux-gnu-library for package dependencies and may cause installs to fail. To fix this, rename these types of folders something unique and descriptive.
 
-    To set up/switch custom libraries, follow the instructions in the **Creating a Custom R Library** section above.
+    To set up/switch custom libraries, follow the instructions in the [Creating a Custom R Library](#creating-a-custom-library) section above.
 
 === "Mixing R Versions"
 
-    Because HPC is a cluster where multiple versions of R are available, users should take care to avoid mixing and matching. Because packages often depend on one another, libraries using different versions of R can turn into a tangled mess.  Common errors that can crop up include: "Error: package or namespace load failed."
+    Because HPC is a cluster where multiple versions of R are available, users should take care to avoid mixing and matching. Because packages often depend on one another, libraries using different versions of R can turn into a tangled mess.  Common errors that can crop up include: `Error: package or namespace load failed.`
 
-    If you're switching R versions and have a custom library defined in your ~/.Renviron file, we recommend creating a new library.
+    If you're switching R versions and have a custom library defined in your `~/.Renviron` file, we recommend creating a new library.
 
 === "Open OnDemand RStudio Issues"
     RStudio is a great tool! Sometimes though, because it's a different environment than working directly from the terminal, you may run into problems. Specifically, these typically arise for installs or when using packages that rely on software modules.  
 
     **Package Installations**
 
-    If you're trying to install a package in an OOD RStudio session and you've tried all the troubleshooting advice above without luck, try starting R in the terminal and give the installation another try. You can access an R session in the terminal by first starting an [interactive session](../../../running_jobs/interactive_jobs/), then using:
+    If you're trying to install a package in an OOD RStudio session and you've tried all the troubleshooting advice in the other tabs without luck, try starting R in the terminal and give the installation another try. You can access an R session in the terminal by first starting an [interactive session](../../../running_jobs/interactive_jobs/), then using:
 
     ```
     $ module load R/<version>
@@ -153,9 +157,9 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     **Accessing Modules**
 
-    RStudio does not have access to **module load** commands. This means that if you have a package that relies on a system module, the easiest option is to work through an interactive terminal session or to submit a batch script.
+    RStudio does not have access to **module load** commands. This means that if you have a package that relies on a system module, the easiest option is to work through an [interactive terminal session](../../../running_jobs/interactive_jobs/) or to [submit a batch script](../../../running_jobs/batch_jobs/intro/).
 
-    The alternative is to to modify your RStudio environment. For example, the library hdf5r relies on the hdf5 software module. If you try to load hdf5r, you will get an error complaining about a shared object file. To get around this, you will need to manually add that shared object to your environment using dyn.load(). For example:
+    The alternative is to to modify your RStudio environment. For example, the library hdf5r relies on the hdf5 software module. If you try to load hdf5r, you will get an error complaining about a shared object file. To get around this, you will need to manually add that shared object to your environment using `dyn.load()`. For example:
 
     ```
     > library("hdf5r") # without using dyn.load()
@@ -166,11 +170,11 @@ Working on a cluster without root privileges can lead to complications. For gene
     > library("hdf5r") # success!
     >
     ```
-    This requires that you know the location of the relevant file(s). These can usually be tracked down by looking at your system path variables (e.g. LD_LIBRARY_PATH) after loading the relevant module in a terminal. It should be noted that modifying your system paths from RStudio will not help since RStudio has its own configuration file that overrides these. 
+    This requires that you know the location of the relevant file(s). These can usually be tracked down by looking at your system path variables (e.g. `LD_LIBRARY_PATH`) after loading the relevant module in a terminal. It should be noted that modifying your system paths from RStudio will not help since RStudio has its own configuration file that overrides these. 
 
     **Font Issues**
 
-    RStudio uses Singularity under the hood. As a result, there are some environment differences that may affect correct font formatting in images generated in RStudio. If you are experiencing this, add the following line to the hidden file ~/.Renviron in your account (you can create this file if it does not exist):
+    RStudio uses [Apptainer](../../containers/what_are_containers/) under the hood. As a result, there are some environment differences that may affect correct font formatting in images generated in RStudio. If you are experiencing this, add the following line to the hidden file `~/.Renviron` in your account (you can create this file if it does not exist):
 
     ```
     FONTCONFIG_PATH=/opt/ohpc/pub/apps/fontconfig/2.14.2/etc/fonts
@@ -247,10 +251,10 @@ When working on a large project in RStudio, it is possible for your R session's 
 To preserve space in your home, you can specify a different directory by setting the environment variable ```RSTUDIO_DATA_HOME```. To do this, open the hidden file ```~/.bashrc``` and add:
 
 ```
-export RSTUDIO_DATA_HOME=/path/to/new/directory
+export RSTUDIO_DATA_HOME=</path/to/new/directory>
 ```
 
-where ```/path/to/new/directory``` is the path to a different location where you have a larger space quota. For example, ```/groups/YOUR_PI/YOUR_NETID/rstudio_sessions```.
+where ```</path/to/new/directory>``` is the path to a different location where you have a larger space quota. For example, ```/groups/<YOUR_PI>/<YOUR_NETID>/rstudio_sessions```.
 
 ## Setting Your Working Directory in RStudio
 
@@ -291,7 +295,7 @@ where ```/path/to/new/directory``` is the path to a different location where you
 ## Popular Packages
 
 !!! info "Updates and Version Changes"
-    We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work that we have not caught, contact our consultants and they can help. 
+    We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
 
 === "Seurat and SeuratDisk"
     !!! tip "R Studio Version"
@@ -303,7 +307,7 @@ where ```/path/to/new/directory``` is the path to a different location where you
 
     === "Seurat"
         ```
-        (elgato) [netid@junonia ~]$ interactive -a your_group
+        (elgato) [netid@junonia ~]$ interactive -a <your_group>
         [netid@cpu38 ~]$ module load R/<version>
         [netid@cpu38 ~]$ module load gdal glpk libpng # software modules that are needed for Seurat's dependencies
         [netid@cpu38 ~]$ R
@@ -321,7 +325,7 @@ where ```/path/to/new/directory``` is the path to a different location where you
         SeuratDisk is similar to Seurat with a few more dependencies. It also includes the line ```unset CPPFLAGS``` due to a [reported issue with the dependency hdf5r](https://github.com/hhoeflin/hdf5r/issues/132):
 
         ```
-        (elgato) [netid@junonia ~]$ interactive -a your_group
+        (elgato) [netid@junonia ~]$ interactive -a <your_group>
         [netid@cpu1 ~]$ module load R/<version> gdal geos hdf5/1.10.5 libpng/1.6.37 glpk
         [netid@cpu1 ~]$ unset CPPFLAGS
         [netid@cpu1 ~]$ R
@@ -346,7 +350,7 @@ where ```/path/to/new/directory``` is the path to a different location where you
 
     You will also need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block under **Resolving Anaconda Issues** → **Temporary Removal** above.
 
-    When using the dyn.loads in RStudio, you will need to be careful to run them in the order shown below, otherwise you may wind up with "Undefined symbol" errors. If you repeatedly run into library errors working in RStudio, you might consider converting your workflow to a batch script that you can submit through the command line. 
+    When using the `dyn.load` in RStudio, you will need to be careful to run them in the order shown below, otherwise you may wind up with "Undefined symbol" errors. If you repeatedly run into library errors working in RStudio, you might consider converting your workflow to a batch script that you can submit through the command line. 
 
     [Monocle3's documentation](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) includes steps that you can use for a successful installation.
 
@@ -372,5 +376,3 @@ where ```/path/to/new/directory``` is the path to a different location where you
     ```
 
 
-
-[^1]: The file ```~/.Renviron``` is a "dot" file which means it does not show up when you run a standard ```ls```. Files that start with a ```.``` are hidden and are typically used for important configuration information. This particular file can be used to control your R environment for each subsequent time you start a session. All the echo command does is append the line ```R_LIBS=~/R/library``` to this file. 

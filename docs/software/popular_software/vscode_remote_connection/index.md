@@ -9,7 +9,7 @@ VSCode can also be run locally on laptop or desktop computers and used to make a
 
 ##Creating and Using a Remote Connection
 
-Remote VSCode sessions must connect to a compute node.  Briefly, the procedure is as follows:
+{==Remote VSCode sessions must connect to a compute node==}.  Briefly, the procedure is as follows:
 
 ```mermaid
 graph LR

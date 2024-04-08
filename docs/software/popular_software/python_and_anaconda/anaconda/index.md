@@ -4,7 +4,7 @@
 
     Anaconda is known to cause potential issues on HPC Clusters. If it is possible to design your workflow around the native Python package manager Pip, we highly encourage you to do so. 
 
-    If you decide to use Anaconda on our HPC system, please read this page carefully and make yourself aware of the common problems and how to best avoid them. Thank you.
+    If you decide to use Anaconda on our HPC system, please read this page carefully and make yourself aware of the common problems and how to best avoid them.
 
 
 ## Overview
@@ -27,7 +27,7 @@ Initializing Anaconda in your account only needs to be performed once and is wha
 !!! danger "Turn Off Auto-Activate"
     To ensure proper functioning of built-in system functions, turning off auto-activation is {==**highly recommended**==}. Do this by running ```conda config --set auto_activate_base false``` in a terminal following initialization.
     
-In an interactive session:
+In an interactive session, replacing `<version>` with your desired Anaconda module version:
 
 ```bash
 module load anaconda/<version>

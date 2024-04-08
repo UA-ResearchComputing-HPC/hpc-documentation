@@ -2,17 +2,16 @@
 
 ## Overview 
 
-There are four ways to run Matlab:
+There are three common ways to run Matlab:
 
-1. Using the Matlab graphical application through Open OnDemand.
-2. Graphical mode using the Open OnDemand Desktops.
-3. The command line version using modules.  This is the most common as you will typically submit a job using SLURM.
-4. Python 
+1. Using the Matlab graphical application through [Open OnDemand](https://ood.hpc.arizona.edu).
+2. Using a module to start a graphical mode in an Open OnDemand virtual desktop.
+3. The command line version using modules. This is the most common as you will typically submit a job using Slurm.
 
 Like any other application, Matlab has to be loaded as a module before you can use it. To see all the installed versions of the Matlab, use the command ```module avail matlab```.
 
 ## Running Matlab Analyses in Batch
-The typical procedure for performing calculations on UArizona HPC systems is to run your program non-interactively on compute nodes. The easiest way to run Matlab non-interactively is to use input/output redirection. This method uses Linux operators ```<``` and ```>``` to point Matlab to the input file and tell where to write the output (see the example script). The other method is to invoke Matlab from the Slurm script and execute specified statement using ```-r``` option. For details, refer to the [manual page for the matlab command](https://www.mathworks.com/help/matlab/ref/matlablinux.html).
+The typical procedure for performing calculations on UArizona HPC systems is to run your program non-interactively on compute nodes using a batch submission. The easiest way to run Matlab non-interactively is to use input/output redirection. This method uses Linux operators `<` and `>` to point Matlab to the input file and tell where to write the output (see the example script below). The other method is to execute a statement using the `-r` flag. For details, refer to the [manual page for the matlab command](https://www.mathworks.com/help/matlab/ref/matlablinux.html).
 
 An example batch script might look like the following:
 
@@ -37,12 +36,12 @@ The options ```-nodisplay``` and ```-nosplash``` in the example prevent Matlab f
 
 ### Temporary Files
 
-By default, Matlab PCT will dump files to ```~/.matlab/MATLAB_VERSION```. This causes problems when multiple Matlab PCT jobs are running simultaneously. Users should always define the environment variable ```MATLAB_PREFDIR``` so each job uses a unique temporary folder. Files there will be cleaned after the job finishes. For example:
+By default, Matlab PCT will dump files to ```~/.matlab/<MATLAB_VERSION>```. This causes problems when multiple Matlab PCT jobs are running simultaneously. Users should always define the environment variable ```MATLAB_PREFDIR``` so each job uses a unique temporary folder. Files there will be cleaned after the job finishes. For example:
 ```bash
-export MATLAB_PREFDIR=$(mktemp -d $SLURM_JOBTMP/matlab-XXXX)
+export MATLAB_PREFDIR=$(mktemp -d ${SLURM_JOBTMP}/matlab-XXXX)
 ```
 
-### Matlab and SLURM Resource Requests
+### Matlab and Slurm Resource Requests
 
 If you are trying to run Matlab in parallel interactively, you may encounter the following error:
 

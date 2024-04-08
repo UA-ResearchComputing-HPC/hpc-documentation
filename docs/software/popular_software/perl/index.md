@@ -15,7 +15,7 @@ This is perl 5, version 16, subversion 3 (v5.16.3) built for x86_64-linux-thread
 
 ## Perl Module Policy
 
-We provide a version of perl through modules or the operating. Installation of additional user libraries can be done in a perl environment using ```perl-virtualenv```.
+We provide a version of Perl through modules or the operating system. Installation of additional user libraries can be done in a Perl environment using ```perl-virtualenv```.
 
 For a helpful Perl tutorial, see: [http://www.tutorialspoint.com/perl/perl_modules.htm](http://www.tutorialspoint.com/perl/perl_modules.htm). Additionally, O'Reilly Media is a well regarded source for Perl 
 
@@ -23,7 +23,7 @@ For a helpful Perl tutorial, see: [http://www.tutorialspoint.com/perl/perl_modul
 
 One of the best things about Perl is the number of packages provided by the user community. Installing packages generally requires root access but that is not a viable solution in the HPC environment.
 
-An easy solution is to use perl-virtualenv to create a consistent personal Perl environment that will persist for each time you log in. An example of usage:
+An easy solution is to use `perl-virtualenv` on a compute node to create a consistent personal Perl environment. An example of usage:
 
 ```bash
 [netid@i0n1 ~]$ perl-virtualenv my_project    # Create virtual environment
@@ -38,3 +38,5 @@ Configuring Config-Trivial-0.81 ... OK
 4 distributions installed
 (my_project)[netid@i0n1 ~]$
 ```
+
+Once your environment is created, it can be activated for any future jobs or interactive sessions using the `source </path/to/environment>` command.

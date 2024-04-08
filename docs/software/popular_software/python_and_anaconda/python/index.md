@@ -1,14 +1,15 @@
 # Python Modules
 ## Overview 
-Different versions of Python are available on HPC both as system modules as well as system software on each compute node. Python 2 is available but is no longer supported by the Python Foundation, so we recommend you use Python 3. Python version 3 requires the ```python3``` command or ```pip3 list``` to differentiate.  It is very different from Python version 2, so do not assume that Python 3 will work for you or that all older modules will work with version 3.
+
+Different versions of Python are available on HPC both as system modules as well as system software on each compute node.
 
 ## Installation and Package Policy
 
 We maintain a two tiered approach to Python packages:
 
-* Tier 1: We install the basic Python packages that are required by most users (these are mostly libraries rather than packages, such as numpy and scipy). This is done for the versions of Python that we install as modules. Adding some packages might force an upgrade of numpy for example, which might break a user's environment that was dependent on the prior version.
+* Tier 1: We install the basic Python packages that are required by most users (these are mostly libraries rather than packages, such as numpy and scipy). This is done for the versions of Python that we install as modules. 
 
-* Tier 2: For packages that we do not provide we STRONGLY recommend the use of virtualenv, which is detailed below and provides a custom and easy to use personal Python environment.
+* Tier 2: For packages that we do not provide, or updates to the versions we do, we STRONGLY recommend the use of virtual environments, which is detailed below and provides a custom and easy to use personal Python environment.
 
 ## Available Python Versions
 
@@ -39,40 +40,40 @@ Multiple versions of Python are available on HPC. They are only available on com
 
 One of the best things about Python is the number of packages provided by the user community. On a personal machine, the most popular method today for managing these packages is the use of a package manager, like ```pip```. Unfortunately, these may require root access preventing you from being able to successfully install the libraries you need.
 
-There is an easy solution, however. You can use a virtual environment to create a personal python environment that will persist each time you log in. There is no risk of packages being updated under you for another user and allows greater control over your environment.
+There is an easy solution, however. You can use a virtual environment to create a personal Python environment that will persist each time you log in. There is no risk of packages being updated under you for another user and allows greater control over your environment.
 
 Virtual Environment Instructions
 
 1. Set up your virtual environment in your account. This step is done one time only and will be good for all future uses of your Python environment. You will need to be in an interactive session to follow along. 
  
-    Note: In the commands below, ```/path/to/virtual/env``` is the path to the directory where all of your environment's executables and packages will be saved. For example, if you use the path ```~/mypyenv```, this will create a directory in your home called ```mypyenv```. Inside will be directories ```bin```, ```lib```, ```lib64```, and ```include```. 
+    Note: In the commands below, ```</path/to/virtual/env>``` is the path to the directory where all of your environment's executables and packages will be saved. For example, if you use the path ```~/mypyenv```, this will create a directory in your home called ```mypyenv```. Inside will be directories ```bin```, ```lib```, ```lib64```, and ```include```. 
 
     === "Python Version $\geq$ 3.8"
         ```bash
         module load python/<version>
-        virtualenv --system-site-packages /path/to/virtual/env
+        virtualenv --system-site-packages </path/to/virtual/env>
         ```
     === "Python Version $<$ 3.8"
         ```bash
         module load python/<version>
-        python3 -m venv --system-site-packages /path/to/virtual/env
+        python3 -m venv --system-site-packages </path/to/virtual/env>
         ```
         
-2. To use your new environment, you'll need to activate it. Inside your virtual environment, there's a directory called bin that has a file called activate. Sourcing this will add all of the paths needed to your working environment. To activate, run the following, replacing /path/to/virtual/env with the path specific to your account:
+2. To use your new environment, you'll need to activate it. Inside your virtual environment, there's a directory called `bin` that has a file called `activate`. Sourcing this will add all of the paths needed to your working environment. To activate, run the following, replacing `</path/to/virtual/env>` with the path specific to your account:
 
     ```bash
-    source /path/to/virtual/env/bin/activate
+    source </path/to/virtual/env>/bin/activate
     ```
-3. Once your environment is active, you can use pip to install your python packages.  You should first upgrade to the latest version of pip. For example, to add the pycurl package to the virtual environment:
+3. Once your environment is active, you can use `pip` to install your Python packages. You should first upgrade to the latest version of pip. For example, to add the pycurl package to the virtual environment:
     
     ```bash
     pip install --upgrade pip
     pip install pycurl
     ```
-4. That's it! As long as your virtual environment is active, you will have access to the packages installed there. Virtual environments deactivate when you log out, so for each subsequent session or in batch jobs, you will just need to reactivate the environment to get access to your packages:
+4. That's it! As long as your virtual environment is active, you will have access to the packages you have installed. Virtual environments deactivate when you log out, so for each subsequent session or in batch jobs, you will just need to reactivate the environment to get access to your packages:
     ```bash
     module load python/<version>
-    source /path/to/virtual/env/bin/activate
+    source </path/to/virtual/env>/bin/activate
     ```
 
 ## Custom Jupyter Kernel
@@ -84,10 +85,10 @@ If you want to make one of your virtual environments available for use in one of
 
 ```bash
 module load python/3.8/3.8.2                     
-source /path/to/your/virtual/environment/bin/activate
+source </path/to/your/virtual/environment>/bin/activate
 ```
 
-Once your environment is ready to go, pip-install ```jupyter``` and create your own custom kernel. The ```--force-reinstall``` flag will allow you to install the ```jupyter``` package in your local environment and will not affect the system version. This will create a directory in ```~/.local/share/jupyter/kernels/``` in your account. In the following commands, replace ```<your_environment>``` with the name of your own environment: 
+Once your environment is ready to go, pip-install ```jupyter``` and create your own custom kernel. The ```--force-reinstall``` flag will allow you to install the ```jupyter``` package in your local environment and will not affect the system version. This will create the directory ```~/.local/share/jupyter/kernels/``` in your account. In the following commands, replace ```<your_environment>``` with the name of your own environment: 
 
 ```bash
 pip install jupyter --force-reinstall

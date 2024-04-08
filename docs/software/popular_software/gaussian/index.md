@@ -2,7 +2,7 @@
 
 ## Access
 
-In order to access Gaussian and Gaussview, you will need to belong to a special group called **g03**.  You can request to be added by [submitting a help ticket](../../../support_and_training/consulting_services/). This is a constraint in Gaussian that other modules do not have.
+In order to access Gaussian and Gaussview, you will need to belong to a special group called **g03**.  You can request to be added by [submitting a help ticket](../../../support_and_training/consulting_services/). This is a constraint specific to Gaussian that other modules do not have.
 
 ## GPU Notes
 
@@ -12,7 +12,7 @@ When reading these notes, keep in mind that the GPU nodes on Ocelote have one P1
 GPUs do not have the computational capabilities or memory size to run the algorithms in G16.  Allowing larger amounts of memory is even more important when using GPUs than for CPUs, since larger batches of work
 must be done at the same time in order to use the GPUs efficiently (see below).
 
-2. When using GPUs it is essential to have the GPU controlled by a specific CPU and much preferable if the CPU is physically close to the GPU it is controlling. The hardware arrangement can be checked using the `nvidia-smi` utility. For example, this output is for a machine with 2 16-core Haswell CPU chips and 4 K80 boards, each of which has two GPUs:
+2. When using GPUs it is essential to have the GPU controlled by a specific CPU and is much more efficient if the CPU is physically close to the GPU it is controlling. The hardware arrangement can be checked using the `nvidia-smi` utility. For example, this output is for a machine with 2 16-core Haswell CPU chips and 4 K80 boards, each of which has two GPUs:
 
     ```
     GPU0 GPU1 GPU2 GPU3 GPU4 GPU5 GPU6 GPU7 CPU Affinity 

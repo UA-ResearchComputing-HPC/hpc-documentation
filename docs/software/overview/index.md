@@ -7,8 +7,8 @@ Our HPC systems support over 100 software applications.  The first thing to know
 The software is available in three different ways:
 
 - **Libraries** in the operating system (like ```fftw``` or ```screen```);
-- **Personal software** that you build or download and place in your own directory space;
-- and [**Modules**](../module/), which are external packages built and maintained by HPC team for system-wide usage.
+- [**Personal software**](../user_installations/) that you build or download and place in your own directory space;
+- [**Modules**](../module/), which are external packages built and maintained by HPC team for system-wide usage.
 
 ???+ warning "Module availability"
     Software modules are not available on the login nodes. To access them, you will need to connect to a compute node either via an interactive session or batch job.
@@ -24,7 +24,7 @@ There is a plethora of software generally available for scientific and research 
 |**Generally useful**|Some software has to be configured to the specific compute environment of the user. You are encouraged to use our "contrib" environment to install your own.|
 |**Public license**|We do not install software if that would be a violation of its licensing.|
 |**Reasonably well written**|Some software takes days of effort and still does not work right.  We have limited resources and reserve the right to "give up". Sometimes software is written for workstations and does not function correctly in a shared environment.|
-|**Downloadable**|Some software requires additional steps to download installation files, such as registering on a website or accepting a license agreement. In these cases we ask researchers to download files and put them in a directory on the HPC storage. When you submit a software installation request let us know that you have already downloaded the files and provide path to the directory where they are located.|
+|**Downloadable**|Some software requires additional steps to download installation files, such as registering on a website or accepting a license agreement. In these cases we ask researchers to download files and put them in a directory on the HPC storage. When you submit a software installation request, let us know that you have already downloaded the files and provide path to the directory where they are located.|
 
 
 ### Commercial/Fee-based Software
@@ -41,14 +41,14 @@ The University of Arizona Research Computing facility has many commercial and fr
 
 ### Unsupported Software
 
-Unfortunately, our HPC system is not configured to support all software use cases. We have summarized the main scenarios which cause software to be unsupported by our system below. Prior to submitting an installation request, double-check that your software requirements don't fall into one of these categories. While the HPC may not be able to support these cases, it may be possible that other campus resources are able to. We encourage you to contact services listed in our [Community Resources](../../support_and_training/external_resources/) page.
+Unfortunately, our HPC system is not configured to support all software use cases. We have summarized the main scenarios which cause software to be unsupported by our system below. Prior to submitting an installation request, double-check that your software requirements don't fall into one of these categories. While the HPC may not be able to support these cases, it may be possible that other campus resources are able to. We encourage you to contact services listed in our [Community Resources](../../support_and_training/external_resources/) page to see if they are able to support your workflow's requirements.
 
 The below list is not exhaustive and may be expanded as new scenarios are encountered. If you are unsure whether your desired software is supported, feel free to [contact our consultants](../../support_and_training/consulting_services/).
 
 |Software Requirements||<div style="width: 150px;">Examples</div>|
 |-|-|-|
 |**Non-SSH External Connections**|Software requiring external communications that utilize protocols other than SSH are not supported.|
-|**Job Management/Scheduling**|The UArizona HPC uses Slurm as its task scheduler and resource manager. Software requiring different a scheduler is therefore unsupported.|Apache Spark<br>Sun Grid Engine|
+|**Job Management/Scheduling**|The UArizona HPC uses Slurm as its task scheduler and resource manager. Software requiring a different scheduler is unsupported.|Apache Spark<br>Sun Grid Engine|
 |**Workstation Software**|Software that is designed to be run on a local Linux workstation often requires root privileges and display management that may not be compatible with a shared, remote system like HPC|
 |**Persistent Databases/Servers**|The UArizona HPC is not configured to support databases, server instances, or other persistent software-specific daemons.|SQL databases<br>Application deployments<br>SAS server|
 |**Windows Applications**|While there are plenty of excellent Windows software suites available for scientific computing, they unfortunately cannot be run on HPC. There are, however, national resources available that may support your application. One example is JetStream2 available through an ACCESS Allocation. See our [Community Resources](../../support_and_training/external_resources/) page linked at the top of this page for more details.|ArcGIS|
