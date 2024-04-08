@@ -1,10 +1,10 @@
 # Overview
 
-HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm from one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
+HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm via an internet browser through [Open OnDemand](ood.hpc.arizona.edu), or via an [SSH connection](../../registration_and_access/system_access/#command-line-access) to one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
 
-## Materials to Get Started
+## New to HPC?
 
-If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../support_and_training/workshops/intro_to_hpc/), [parallel computing](../../support_and_training/workshops/intro_to_parallel_computing/), [containers](../../support_and_training/workshops/intro_to_containers/), among other topics. 
+If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../support_and_training/workshops/intro_to_hpc/), [parallel computing](../../support_and_training/workshops/intro_to_parallel_computing/), and [containers](../../support_and_training/workshops/intro_to_containers/), among other topics. 
 
 
 ## Best Practices

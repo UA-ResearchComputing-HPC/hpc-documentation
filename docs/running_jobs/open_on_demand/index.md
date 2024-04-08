@@ -145,3 +145,5 @@ When you first submit your job, it will show as having a status of "Queued". Onc
 
 === "Abaqus"
     A GUI for [Abaqus](https://www.technia.us/software/simulia/abaqus/) is available.
+
+    <img src="images/Abaqus.png" width=500px>

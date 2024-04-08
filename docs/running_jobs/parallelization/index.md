@@ -6,6 +6,8 @@ You might be surprised to learn that if you move code from a local computer to a
 
 Parallelization enables jobs to 'divide-and-conquer' independent tasks within a process when multiple threads are available. In practice, this typically means running a job with multiple CPUs on the HPC. On your local machine, running apps like your web browser is natively parallelized, meaning you don't have to worry about having so many tabs open. However, on the HPC, ***parallelization must almost always be explicitly configured and called from your job.*** This process is highly software-dependent, so please research the proper method for running your program of choice in parallel.
 
+If you are interested in learning more about parallelization, please check out our [Parallel Computing Workshop](../../support_and_training/workshops/intro_to_parallel_computing/)
+
 ## Scaling
 
 A classic example of the advantages of parallel computing is multiplying an $N \times N$ matrix by a scalar, which takes $N^2$ floating-point operations (flops). On one CPU, this will take an amount of time $t = N^2 / f$ where $f$ is the clock frequency of the CPU. On an integer $M$ number of CPUs, this computation will instead take $t' = \frac{t}{M}$. Most analyses involve computations which are not always as independent as matrix multiplication, leading to less than perfect speedup times. 
@@ -52,6 +54,17 @@ R provides the ```parallel``` library for multiprocessing. [Reference](https://d
 
 MATLAB provides the Parallel Computing Toolbox. [Reference](https://www.mathworks.com/products/parallel-computing.html).
 
+
+**MPI**
+
+We provide several versions and implementations of MPI as system modules:
+
+```bash
+[ejahn@cpu39 ~]$ module avail mpi
+
+---------------- /opt/ohpc/pub/moduledeps/gnu8 ----------------
+   mpich/3.3.1    openmpi3/3.1.4 (L)    openmpi4/4.1.1
+```
 
 
 
