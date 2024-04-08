@@ -110,7 +110,7 @@ $ elgato
 ```
     
     
-## X11 Forwarding
+### X11 Forwarding
 
 X11 forwarding is a mechanism that allows a user to start up a remote application (e.g. VisIt or Matlab) and forward the application display to their local machine. The key to make forwarding work successfully is to include the ```-X``` flag at each login step. To check whether X11 forwarding is active, you may run the command:
 
@@ -188,12 +188,12 @@ If it comes back blank, X11 forwarding is not enabled.
         shell -X
         ```
 
-## SSH Keys
-### Why Use SSH Keys?
+### SSH Keys
+#### Why Use SSH Keys?
 
 The Bastion Host uses two-factor authentication and will, by default, prompt you for a password and 2nd factor when you attempt to log in. As an alternative, you can use PKI (Public Key Authentication). This means you will not have to provide a password or Duo-authenticate for any future sessions. To do this, you will need to create an SSH Key on your local workstation and copy the public key to the ```~/.ssh/authorized_keys``` file in your HPC account on the bastion host.
 
-### Create and Use SSH Keys
+#### Create and Use SSH Keys
 
 
 === "Linux/Mac"
@@ -225,7 +225,7 @@ The Bastion Host uses two-factor authentication and will, by default, prompt you
 === "Windows"
     To setup SSH keys on Windows with the PuTTy client, refer to the [official PuTTy documentation](http://the.earth.li/~sgtatham/putty/0.63/htmldoc/Chapter8.html#pubkey).
 
-### Using SSH Keys for file transfers
+#### Using SSH Keys for file transfers
 
 Note that SSH Keys can also be used to avoid entering a password and 2nd factor when transferring files to to the cluster via the file transfer node (```filexfer.hpc.arizona.edu```) using command line programs like ```scp``` or ```sftp```.  Follow the steps above (2-4 under the Mac and Linux instructions), except use ```filexfer.hpc.arizona.edu``` instead of ```hpc.arizona.edu```. Note that you only need to generate the keys in Step 1 once. The same ```~/.ssh/id_rsa.pub``` file may be used to identify yourself to multiple hosts.
 
