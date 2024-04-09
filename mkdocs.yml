@@ -212,11 +212,11 @@ extra:
       link: https://www.youtube.com/@universityofarizonauitsres7597
       name: Training videos
     - icon: material/at
-      link: mailto:hpc-consult@list.arizona.edu
-      name: HPC consulting
-    - icon: material/help-circle-outline
       link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
-      name: Submit a help ticket
+      name: Contact HPC consulting
+    - icon: material/help-circle-outline
+      link: /support_and_training/faqs/account_access/
+      name: FAQs
     - icon: material/web
       link: https://ood.hpc.arizona.edu/pun/sys/dashboard
       name: Open OnDemand
