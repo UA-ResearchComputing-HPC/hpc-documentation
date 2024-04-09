@@ -104,3 +104,56 @@ Once you've selected your environment, try loading a custom package you've insta
 <img width="800" src="images/py-38-test.png">
 
 
+### Loading Modules in Jupyter
+
+In OnDemand Jupyter sessions, accessing HPC software modules directly from within a notebook can be challenging due to system configurations. However, it's still possible to access these modules when needed. For instance, machine learning packages like TensorFlow or PyTorch often require additional software modules such as CUDA for GPU utilization.
+
+To access software modules in your Jupyter notebooks, follow the steps below:
+
+**Step 1:** If you haven't already done so, create a custom kernel for your Jupyter notebook environment.
+
+**Step 2:** You will then need to edit your kernel configuration file `kernel.json` which is what sets up your environment at runtime. This file can be found in the following location, where `<kernel_name>` is a placeholder for the name you gave your kernel when it was created:
+
+```
+$HOME/.local/share/jupyter/kernels/<kernel_name>/kernel.json
+```
+
+**Step 3:** Next, you will need to modify your kernel's configuration by editing this file. Start by opening it with a text editor, for example `nano $HOME/.local/share/jupyter/kernels/<kernel_name>/kernel.json`. The contents of this file should look something like the following:
+
+```
+{
+ "argv": [
+  "</path/to/your/environment>/bin/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "<kernel_name>",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}
+```
+
+The part you need to change is the section under `argv`. We will change this from executing a Python command to a Bash command with a module load statement. Make a note of the path `</path/to/your/environment>/bin/python` to use in the edited file. The edited file should look like the following:
+
+```
+{
+ "argv": [
+ "bash",
+ "-c",
+ "module load <your_modules_here> ; </path/to/your/environment>/bin/python -m ipykernel_launcher -f {connection_file}"
+ ],
+ "display_name": "<kernel_name>",
+ "language": "python",
+ "metadata": {
+ "debugger": true
+ }
+}
+```
+
+Replace `<your_modules_here>` with the modules you would like to load and `</path/to/your/environment>/bin/python` with the path to your environment's python. 
+
+**Step 4:** Save the `kernel.json` file and restart your Jupyter notebook session.
