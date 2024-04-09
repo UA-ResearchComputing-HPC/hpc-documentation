@@ -1,4 +1,4 @@
-# Storage
+# Storage and Transfers
 
 ## HPC Storage
 
@@ -85,6 +85,16 @@
       Otherwise, data will need to be moved off HPC and made available on a mutually-accessible platform. This may include (but is not limited to): Google Drive, AWS S3, Box, and <a href="https://cyverse.org/data-store">CyVerse's Data Store</a>.
   </p>
 </div>
+
+
+<!-- Received message too long -->
+<button class="collapsible">Why am I getting the error <code>Received message too long</code> when I try to upload data to HPC?</button>
+<div class="content">
+  <p>
+      Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
+  </p>
+</div>
+
 
 <!-- -->
 
@@ -279,6 +289,9 @@ invalid request_days: 1
   </p>
 </div>
 
+
+
+
 </html>
 
 
@@ -450,6 +463,14 @@ invalid request_days: 1
 <div class="content">
   <p>
     This alert is sent to notify you whenever your storage usage grows by 10% relative to the previous week. This ensures that you're aware of any unintended spikes and the potential resulting costs. 
+  </p>
+</div>
+
+<!-- "The operation is not valid for the object's access tier"? -->
+<button class="collapsible">What does this file transfer error mean: "The operation is not valid for the object's access tier"?</button>
+<div class="content">
+  <p>
+    This error indicates your data have migrated to an archival storage tier (Glacier or Deep Glacier). They will first need to be <a href="../../../storage_and_transfers/storage/tier2_storage/#restoring-archived-data">restored</a> to the Standard access tier to make them downloadable.
   </p>
 </div>
 
