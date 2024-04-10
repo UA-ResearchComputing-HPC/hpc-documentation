@@ -2,7 +2,7 @@ site_name: UArizona HPC Documentation
 repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
 nav:
-
+  - Home: index.md
   - Quick Start: 
     - Overview: quick_start/overview/index.md
     - What is HPC?: quick_start/what_is_hpc/index.md
@@ -193,8 +193,6 @@ theme:
 
   features:
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.instant
     - navigation.path
     - toc.integrate
