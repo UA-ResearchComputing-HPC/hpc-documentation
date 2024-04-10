@@ -1,20 +1,6 @@
----
-
-title: UArizona HPC Documentation
-social:
-  cards_layout_options:
-    title: University of Arizona HPC Documentation
-hide:
-  - title
----
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/stylesheets/people.css">
-
-
 # UArizona HPC Documentation
 
-[Register for HPC Access](./registration_and_access/account_creation/){ .md-button } [Quick Start Guide](./quick_start/overview/){ .md-button .md-button--primary }
+[Register for HPC Access](./registration_and_access/account_creation/){ .md-button } 
 
 ## HPC Services
 
