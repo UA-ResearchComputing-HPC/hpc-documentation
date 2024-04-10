@@ -3,3 +3,40 @@
     float: right; /* Float the container to the right */
     margin-left: 20px; /* Add some margin to create space between the table and text */
   }
+
+.storage-summary-table {
+  font-size: .64rem;
+  border: 1px solid #E2E9EB;
+  border-collapse: collapse;
+}
+
+.storage-summary-table thead {
+  background-color: #0C234B;
+}
+
+.storage-summary-table th {
+  font-weight: bold;
+  background-color: #0C234B;
+  color: white;
+}
+
+.storage-summary-table tr:hover {
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease;
+}
+
+.storage-summary-table td {
+  max-width: 200px; 
+  word-wrap: break-word;
+}
+
+.storage-summary-table td, .storage-summary-table th {
+  padding: 20px;
+  border-bottom: 1px solid #E2E9EB;
+  text-align: left;
+}
+
+.storage-summary-table th:nth-child(3),
+.storage-summary-table td:nth-child(3) {
+    width: 150px; 
+}
