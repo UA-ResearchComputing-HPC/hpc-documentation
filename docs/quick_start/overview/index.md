@@ -4,9 +4,9 @@
 
 ## Overview
 
-Welcome to the UA HPC! 
+Welcome to the UArizona HPC! 
 
-This *Quick Start Tutorial* is the place to be if you are new to HPC, or simply wish to take a refresher of the basics. We will cover some concepts that are general to HPC, as well as how to get up and running with the system here at UA. This should help you get up and running quickly since every HPC system is slightly different; each with its own specific commands, allocation policy, partitions, accounts, and system layout. 
+This Quick Start Tutorial is the place to be if you are new to HPC, or simply wish to take a refresher of the basics. We will cover some concepts that are general to HPC, as well as those that are specific to the system here at UArizona.
 
 ## Getting Started Checklist
 
@@ -24,7 +24,7 @@ Before beginning this tutorial, you'll want to ensure that you're familiarized w
 By the end of this quick start, you should know:
 
 - [ ] What HPC is
-- [ ] How the UA HPC is structured
+- [ ] How the UArizona HPC is structured
 - [ ] How to log in
 - [ ] What storage you have access to
 - [ ] What time allocations are

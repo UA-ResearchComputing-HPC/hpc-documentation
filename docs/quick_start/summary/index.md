@@ -20,7 +20,7 @@ While this documentation covers some concepts and techniques that are widely app
 
 
 
-Please note that information related to other HPC clusters may not necessarily apply to the UA HPC cluster. Each system is configured differently, and what may be supported on another system may not be supported here, or vice versa. Please refer to this documentation site for information specific to the UA HPC, or ask [HPC Consult](/support_and_training/consulting_services/) if you have any questions.
+Please note that information related to other HPC clusters may not necessarily apply to the UArizona HPC cluster. Each system is configured differently, and what may be supported on another system may not be supported here, or vice versa. Please refer to this documentation site for information specific to the UArizona HPC, or ask [HPC Consult](/support_and_training/consulting_services/) if you have any questions.
 
 <iframe src="https://giphy.com/embed/XreQmk7ETCak0" width="480" height="360" frameBorder="0"></iframe><p><a href="https://giphy.com/gifs/retro-thumbs-up-XreQmk7ETCak0"></a></p>
 
