@@ -1,5 +1,4 @@
 site_name: UArizona HPC Documentation
-repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
 nav:
   - Home: index.md
@@ -206,6 +205,9 @@ theme:
 extra:
   generator: false
   social:
+    - icon: material/git
+      link: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
+      name: Documentation source
     - icon: material/youtube
       link: https://www.youtube.com/@universityofarizonauitsres7597
       name: Training videos
