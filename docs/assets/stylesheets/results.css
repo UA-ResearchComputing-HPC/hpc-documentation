@@ -7,7 +7,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center; /* Center the content horizontally */
-    width: 80%; /* Set the width of the container to 80% */
+    width: 100%; /* Set the width of the container to 80% */
 }
     
 table {
@@ -17,13 +17,15 @@ table {
     border: none; /* Remove the default table border */
 }
 
-
+h2 {
+    color: #0C234B;
+}
 
 th, td {
     border-bottom: 1px solid #ddd; /* Add only bottom border to create horizontal lines between cells */
     padding: 16px;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Remove the bottom border from the last row */
