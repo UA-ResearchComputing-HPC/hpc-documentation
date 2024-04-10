@@ -67,9 +67,8 @@ nav:
       - Gaussian: software/popular_software/gaussian/index.md
       - Matlab: software/popular_software/matlab/index.md
       - Perl: software/popular_software/perl/index.md
-      - Python and Anaconda: 
-        - Python: software/popular_software/python_and_anaconda/python/index.md
-        - Anaconda: software/popular_software/python_and_anaconda/anaconda/index.md
+      - Python: software/popular_software/python/index.md
+      - Anaconda: software/popular_software/anaconda/index.md
       - R: software/popular_software/R/index.md
       - VSCode Remote Connection: software/popular_software/vscode_remote_connection/index.md
     - Containers: 
