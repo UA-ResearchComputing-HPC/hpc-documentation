@@ -37,6 +37,7 @@ graph LR
 ## Storage Option Summary
 
 <html>
+<div class="storage-summary-table-container">
 <table class="storage-summary-table">
 <thead>
   <tr>
@@ -130,6 +131,7 @@ graph LR
   <td>Cloud</td>
 </tr>
 </table>
+</div>
 </html>
 
 

@@ -4,6 +4,20 @@
     margin-left: 20px; /* Add some margin to create space between the table and text */
   }
 
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+  .table-container {
+      float: none; /* Remove the float */
+      margin-left: 0; /* Remove the margin */
+      clear: both; /* Ensure the table clears any floated elements above it */
+  }
+}
+
+.storage-summary-table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 .storage-summary-table {
   font-size: .64rem;
   border: 1px solid #E2E9EB;

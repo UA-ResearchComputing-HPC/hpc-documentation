@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="../../../assets/stylesheets/tables.css">
+<link rel="stylesheet" href="../../../assets/stylesheets/code.css">
+
 
 # Introduction to Batch Jobs
 
@@ -63,22 +65,24 @@ An example batch script might look like the following:
 <!-- Sorry for the mess below, it's the only way I could get the code block to have multiple background colors and be able to be copied to the clipboard-->
 
 <html>
-  <pre style="background-color: transparent;"><code  style="background-color: transparent;"><div style="background-color: #d7fbff; padding: 10px;">#!/bin/bash</div><div style="background-color: #e6fff2; padding: 10px;"># --------------------------------------------------------------
-### Directives Section: Requests resources to run your job.
-# --------------------------------------------------------------
+<div class="code-container">
+  <pre style="background-color: transparent;"><code  style="background-color: transparent;"><div style="background-color: #d7fbff; padding: 10px;">#!/bin/bash</div><div style="background-color: #e6fff2; padding: 10px;"><span># --------------------
+### Directives Section
+# --------------------
 #SBATCH --job-name=hello_world
 #SBATCH --account=your_group
 #SBATCH --partition=standard
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=00:01:00</div><div style="background-color: #feffe6; padding: 10px;"># --------------------------------------------------------------
-### Code Section: Executes bash commands to run your job
-# --------------------------------------------------------------
+#SBATCH --time=00:01:00</span></div><div style="background-color: #feffe6; padding: 10px;"># --------------------
+### Code Section
+# --------------------
 module load python/3.9
 cd ~/hello_world
 python3 -c "print('hello world')"
 ### sleep is used for demonstration purposes
 sleep 30</div></code></pre>
+</div>
 </html>
 
 
