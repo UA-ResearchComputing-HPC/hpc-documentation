@@ -29,7 +29,7 @@ When creating a job request, please keep the following in mind:
 
 3. **Respect memory limits.** 
 
-    If your application needs more memory than is available, your job could fail and leave the node in a state that requires manual intervention.
+    If your application needs more memory than is available, your job could fail and leave the node in a state that requires manual intervention. The failure messages might reference '''OOM''' which means '''Out Of Memory'''
 
 4. **Do not run loops automating a large number of job submissions.** 
 
@@ -73,7 +73,7 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">How much memory can I request?</button>
 <div class="content">
-    <p>The total amount of memory assigned to a job <a href="../cpus_and_memory/">depends on the number of CPUs</a> assigned to a job. Memory is physically mounted to the CPUs, so there is a fixed amount available to the job equal to the memory of a single CPU multiplied by the number of CPUs.
+    <p>The total amount of memory assigned to a job <a href="../cpus_and_memory/">depends on the number of CPUs</a> assigned to a job. Memory is physically mounted to the CPUs, so there is a fixed amount available to the job equal to the memory of a single CPU multiplied by the number of CPUs. For example, if there is 64GB of memory and 16 cores the ratio is always 4GB per core. You can ask for less, but never more.
     <br>
     </p>
 </div>
@@ -94,7 +94,7 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">Why is my job running slower on the HPC than on my laptop?</button>
 <div class="content">
-    <p> The most common reasons for this are (1) not requesting sufficient CPUs on the HPC, and (2) running software that is not utilizing those CPUs. Beyond these, the reason tends to be software-specific. A common misconception is that all software automatically utilizes every CPU that is allocated to a particular job. While some programs are configured to do this, many are not, especially when running scripting languages like Python. In these cases, the script will need to be updated with the relevant libraries in order to take advantage of parallelization. See <a href="../parallelization/">Parallelization</a> for more info. 
+    <p> The strongest use cases for HPC are either running more jobs or larger jobs than your laptop. The advantages come from running jobs in parallel or parallelizing your code. A job that runs well on your laptop could be slower on HPC because you are waiting for other jobs to end or you havent taken advantage of the parallel features of HPC. See <a href="../parallelization/">Parallelization</a> for more info. 
     <br>
     </p>
 </div>
@@ -103,7 +103,7 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 <div class="content">
     <p>First, check our list of installed software by accessing an <a href="../interactive_jobs/">interactive terminal session</a>, then <a href="../../software/modules/">using module commands</a> to check for your software. If you do not see your desired software package there, then there are two options. 
     <ol>
-      <li> You can attempt to <a href="../../software/user_installations/">install the software for yourself</a> in one of your own directories</li>
+      <li> You can attempt to <a href="../../software/user_installations/">install the software for yourself</a> in one of your own directories.</li>
       <li> Or you can request HPC Consult to install the software as a system module.</li>
     </ol>
     </p>

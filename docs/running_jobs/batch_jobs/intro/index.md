@@ -5,9 +5,9 @@
 
 ## What are batch jobs?
 
-Some jobs don't need a GUI, may take a long time to run, and/or do not need user input. In these cases, batch jobs are useful because they allow a user to request resources for a job, then wait until it completes automatically without any further input. The user can even fully log off of HPC, and the submitted jobs will continue to run.  The program on HPC that takes requests and assigns resources at ideal times to optimize cluster usage is called a scheduler. All three clusters, Puma, Ocelote, and El Gato, use Slurm for resource management and job scheduling.
+Some jobs don't need a GUI, may take a long time to run, and/or do not need user input. In these cases, batch jobs are useful because they allow a user to request resources for a job, then wait until it completes automatically without any further input. The user can even fully log off HPC, and the submitted jobs will continue to run.  The program on HPC that takes requests and assigns resources at ideal times to optimize cluster usage is called a scheduler. All three clusters, Puma, Ocelote, and El Gato, use Slurm for resource management and job scheduling.
 
-**Contrast with graphical and interactive jobs**
+**Contrast between graphical and interactive jobs**
 
 The main difference between batch and GUI jobs is that batch jobs are only text-based and give no graphical feedback during runtime. While there is a method to submit jobs using a GUI, strictly speaking, batch jobs are of a different nature than GUI jobs.
 
@@ -56,7 +56,7 @@ A batch script is a text file that is written with three sections:
 
 1. <mark style="background-color: #d7fbff;">The "**shebang**"</mark> will always be the line ```#!/bin/bash```. This tells the system to interpret your file as a bash script. Our HPC systems use bash for all our environments, so it should be used in your scripts to get the most consistent, predictable results.
 2. <mark style="background-color: #e6fff2;">The **directives** section</mark> will have multiple lines, all of which start with ```#SBATCH```. These lines are interpreted as directives by the scheduler and are how you request resources on the compute nodes, set your output filenames, set your job name, request emails, etc. A list of directives is shown in [Batch Directives](../batch_directives/).
-3. <mark style="background-color: #feffe6;">The **code** section</mark> in your script is a set of bash commands that tells the system how to run your analyses. This includes any [module load commands](../../../software/modules/) you'd need to run to access your software, software commands to execute your analyses, directory changes, etc. 
+3. <mark style="background-color: #feffe6;">The **code** section</mark> in your script is a set of bash commands that tells the system how to run your analyses. This includes any [module load](../../../software/modules/) commands you'd need to run to access your software, software commands to execute your analyses, directory changes, etc. 
 
 An example batch script might look like the following:
 

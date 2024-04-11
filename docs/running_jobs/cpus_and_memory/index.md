@@ -45,7 +45,7 @@ graph LR
    D --> Z
 ```
 
-The dotted line above indicates that setting mem/CPU in your job is not strictly necessary. If you are requesting a standard node, this value is set for you by the scheduler. The only times you will need to set this value is:
+The dotted line above indicates that setting mem/CPU in your job is not generally necessary. If you are requesting a standard node, this value is set for you by the scheduler. The only times you will need to set this value is:
 
 1. If you're requsting a non-standard node (e.g. a high memory or Ocelote GPU node)
 2. If you're requesting an OnDemand application session. There is a field where you will fill in your mem/CPU requirement. 
