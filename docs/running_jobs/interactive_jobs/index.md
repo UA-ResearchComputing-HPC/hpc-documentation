@@ -4,7 +4,7 @@
 
 Interactive sessions are a way to gain access to a compute node from the command line. This is useful for [checking and using available software modules](../../software/modules/), testing [submission scripts](../batch_jobs/intro/), debugging code, compiling software, and running programs in real time. 
 
-The term "interactive session" in this context refers to jobs run from within the command line on a terminal client. Opening a terminal in an [interactive graphical desktop](../open_on_demand/) is also equivalent, but these sessions are fixed to the resources allocated to that OOD session. As you'll see below, one has more control over their resources when requesting an interactive session via SSH in a terminal client.
+The term "interactive session" in this context refers to jobs run from within the command line on a terminal client. Opening a terminal in an [interactive graphical desktop](../open_on_demand/) is also equivalent, but these sessions are fixed to the resources allocated to that Open OnDemand (OOD) session. As you'll see below, one has more control over their resources when requesting an interactive session via SSH in a terminal client.
 
 ## Clusters 
 
@@ -61,7 +61,7 @@ You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) com
 
 ### The ```salloc``` Command
 
-If ```interactive``` is insufficient to meet you resource requirements (e.g., if you need to request more than one GPU or a GPU MIG slice), you can use the Slurm command ```salloc``` to further customize your job. 
+If ```interactive``` is insufficient to meet your resource requirements (e.g., if you need to request more than one GPU or a GPU MIG slice), you can use the Slurm command ```salloc``` to further customize your job. 
 
 The command ```salloc``` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using ```salloc```, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
 

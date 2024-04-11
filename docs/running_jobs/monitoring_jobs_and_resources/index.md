@@ -33,7 +33,7 @@ Sometimes, if you check a pending job there is a message under the field ```Reas
 |```QOSGrpCPUMinutesLimit```|This message indicates that your high priority or qualified hours allocation has been exhausted for the month.|
 |```QOSMaxWallDurationPerJobLimit```|Your job's time limit exceeds the max allowable and will never run[^1]|
 |```Nodes_required_for_job_are_DOWN,_DRAINED_or_reserved_or_jobs_in_higher_priority_partitions```|This very long message simply means your job is waiting in queue until there is enough space for it to run|
-|```Priority```|Your job is waiting in queue until there is enough space for it to run.|
+|```Priority```|Your job is waiting in queue until there are enough resources for it to run.|
 |```QOSMaxCpuPerUserLimit```|Your job is not running because your per-user CPU limit has been reached[^1]|
 |```ReqNodeNotAvail, Reserved for maintenance```|Your job's time limit overlaps with an upcoming maintenance window. Run "uptime_remaining" to see when the system will go offline. If you remove and resubmit your job with a shorter walltime that does not overlap with maintenance, it will likely run. Otherwise, it will remain pending until after the maintenance window.|
 |```Resources```|Your job is waiting in queue until the required resources are available.|

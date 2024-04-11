@@ -14,7 +14,7 @@ Submitted batch job 807387
             807387  standard hello_wo    netid PD       0:06      1 
 ```
 
-The command ```squeue``` gives us detailed information about our batch jobs while they're in queue or running. Under ```ST``` you can check the state of your job. In this case, it's pending (```PD```) which means it's waiting in line with other jobs. Once the job starts running, it's state will change to ```R```, and when the job has completed running, ```squeue``` will return a blank line. 
+The command ```squeue``` gives us detailed information about our batch jobs while they're in queue or running. Under the heading ```ST``` you can check the state of your job. In this case, it's pending (```PD```) which means it's waiting in line with other jobs. Once the job starts running, it's state will change to ```R```, and when the job has completed running, ```squeue``` will return a blank line. 
 
 
 
