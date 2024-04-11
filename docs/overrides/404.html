@@ -4,31 +4,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/assets/stylesheets/home.css">
+<link rel="stylesheet" href="/assets/stylesheets/buttons.css">
 
 <center><img src="/assets/images/404/404.jpg" width="300px" style="padding: 20px;"></center>
 <center><h4 style="padding-left: 8cm; padding-right: 8cm;" >404 Error: It appears your data packet took a detour through a black hole. Don't worry, our astrophysicists are on it! Meanwhile, feel free to explore the rest of our galaxy.</h2></center>
-
+<center><a href="/"><button class="quick-links-button">Home</button></a></center>
 
 {% endblock %}
 {% block content %}{% endblock %}
 
 {% block footer %}
-<footer class="md-footer">
-    <div class="md-footer-meta md-typeset">
-        <div class="md-footer-meta__inner md-grid">
-            <!-- Copyright and theme information -->
-            <div class="md-copyright">
-                {% if config.copyright %}
-                <div class="md-copyright__highlight">
-                    {{ config.copyright }}
-                </div>
-                {% endif %}
-
-            </div>
-            {% block social %}
-            {% include "partials/social.html" %}
-            {% endblock %}
-        </div>
-    </div>
-</footer>
 {% endblock %}
+
