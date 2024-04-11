@@ -2,7 +2,7 @@
 
 
 
-<img src="images/uofa_cactus_computing2.png" alt="cactus" align="right" width="300">
+<img src="assets/images/home/uofa_cactus_computing2.png" alt="cactus" align="right" width="300">
 
 ## Introduction
 
@@ -17,22 +17,21 @@ This documentation site provides technical details relevant to using our HPC sys
 We think these sections are a good place to start learning about your HPC center and what it has to offer:
 
 <p style="display:inline-block;">
-  <img src="images/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview"> Quick Start</a></span>
-</p>
-
-<p style="margin-top: 0;">If you are new to the UA HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
-
-
-<p style="display:inline-block;">
-  <img src="images/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./registration_and_access/account_creation/"> Account Creation</a></span>
 </p>
 
-<p style="margin-top: 0;">If you are an active UA affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not with the UA but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
+<p style="margin-top: 0;">If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
 
 <p style="display:inline-block;">
-  <img src="images/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview"> Quick Start</a></span>
+</p>
+
+<p style="margin-top: 0;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
+
+<p style="display:inline-block;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a></span>
 </p>
 
@@ -56,7 +55,7 @@ UArizona HPC systems are available to all university faculty, staff, undergradua
 ??? example "Our Clusters"
 
     === "Puma"
-        <img src="images/puma.png" alt="puma" align="right" width="250">
+        <img src="assets/images/home/puma-logo.jpg" alt="puma" align="right" width="250">
         Implemented in the middle of 2020, Puma is the biggest cat yet. Similar to Ocelote, it has standard CPU nodes (with 94 cores and 512 GB of memory per node), GPU nodes (with Nvidia V100) and two high-memory nodes (3 TB). Local scratch storage increased to ~1.4 TB. Puma runs on CentOS 7.
 
         As is the case for our other supercomputers, we use the RFP process to get the best value for our financial resources, that meet our technical requirements. This time Penguin Computing one with AMD processors. This is tremendously valuable as each node comes with:
@@ -71,7 +70,7 @@ UArizona HPC systems are available to all university faculty, staff, undergradua
         - Six nodes with four Nvidia V100S GPU's each
 
     === "Ocelote"
-        <img src="images/ocelote.png" alt="ocelote" align="left" width="250">
+        <img src="assets/images/home/ocelot.png" alt="ocelote" align="left" width="250">
         Ocelote arrived in 2016. Lenovo's Nextscale M5 technology was the winner of the RFP mainly on price, performance and meeting our specific requirements. Ocelote has one large memory node with 2TB of memory and 46 nodes with Nvidia P100 GPUs for GPU-accelerated workflows. This cluster is actually the next generation of the IBM cluster we call ElGato. Lenovo purchased IBM's Intel server line in 2015.
 
         In 2021, Ocelote's operating system was upgraded from CentOS6 to CentOS7 and was configured to use SLURM, like Puma. It will continue until it is either too expensive to maintain or it is replaced by something else.
@@ -83,7 +82,7 @@ UArizona HPC systems are available to all university faculty, staff, undergradua
             - 46 nodes with Nvidia P100 GPU's
 
     === "El Gato"
-        <img src="images/elgato.png" alt="elgato" align="left" width="100">
+        <img src="assets/images/home/jones-flat.png" alt="elgato" align="left" width="100">
         Implemented at the start of 2014, ElGato has been reprovisioned with CentOS 7 and new compilers and libraries. From July 2021 it has been using Slurm for job submission. ElGato is our smallest cluster with 130 standard nodes each with 16 CPUs. Purchased by an NSF MRI grant by researchers in Astronomy and SISTA.
 
 <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 112.5V422.3c0 18 10.1 35 27 41.3c87 32.5 174 10.3 261-11.9c79.8-20.3 159.6-40.7 239.3-18.9c23 6.3 48.7-9.5 48.7-33.4V89.7c0-18-10.1-35-27-41.3C462 15.9 375 38.1 288 60.3C208.2 80.6 128.4 100.9 48.7 79.1C25.6 72.8 0 88.6 0 112.5zM288 352c-44.2 0-80-43-80-96s35.8-96 80-96s80 43 80 96s-35.8 96-80 96zM64 352c35.3 0 64 28.7 64 64H64V352zm64-208c0 35.3-28.7 64-64 64V144h64zM512 304v64H448c0-35.3 28.7-64 64-64zM448 96h64v64c-35.3 0-64-28.7-64-64z"/></svg> Funding Sources</h3>
