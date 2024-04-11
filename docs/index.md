@@ -12,6 +12,12 @@ HPC services are available at no cost to researchers. Each faculty member is eli
 
 This documentation site provides technical details relevant to using our HPC system. Whether you are just starting your journey into computational sciences or are a seasoned programmer, we hope you will find something useful in these pages.
 
+## Our Mission
+
+UArizona High Performance Computing is an interdisciplinary research center focused on facilitating research and discoveries that advance science and technology. We deploy and operate advanced computing and data resources for the research activities of students, faculty, and staff at the University of Arizona. We also provide consulting, technical documentation, and training to support our users.
+
+This site is divided into sections that describe the HPC resources that are available, how to use them, and the rules for use. The documentation you see here is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
+
 ## First Steps
 
 We think these sections are a good place to start learning about your HPC center and what it has to offer:
@@ -37,14 +43,6 @@ We think these sections are a good place to start learning about your HPC center
 
 <p style="margin-top: 0;"> Find out how to contact the HPC Consult team, or view our FAQs, workshops, glossary, cheat sheets, and more! </p>
 
-
-
-
-## Our Mission
-
-UArizona High Performance Computing is an interdisciplinary research center focused on facilitating research and discoveries that advance science and technology. We deploy and operate advanced computing and data resources for the research activities of students, faculty, and staff at the University of Arizona. We also provide consulting, technical documentation, and training to support our users.
-
-This site is divided into sections that describe the HPC resources that are available, how to use them, and the rules for use. The documentation you see here is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
 
 ## Available Resources
 
