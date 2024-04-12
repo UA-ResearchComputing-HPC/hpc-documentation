@@ -14,7 +14,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
     <div class="container">
       <h4><b>Chris Reidy</b></h4>
 
-      <p>Chris Reidy is a dedicated academic professional currently serving at the University of Arizona, where he has distinguished himself through his expertise and passion for his field. With a background in education and administration, Reidy has contributed significantly to the university community, demonstrating a commitment to fostering learning environments conducive to student success. Known for his collaborative spirit and innovative approach to challenges, he has played a pivotal role in various educational initiatives and administrative endeavors within the university. Reidy's dedication to excellence and his unwavering support for both students and colleagues alike make him an invaluable asset to the University of Arizona community.</p>
+      <p>Chris Reidy is a dedicated academic professional currently serving at the University of Arizona, where he has distinguished himself through his expertise and passion for his field. With a background in education and administration, Reidy has contributed significantly to the university community, demonstrating a commitment to fostering learning environments conducive to student success. Known for his collaborative spirit and innovative approach to challenges, he has played a pivotal role in various educational initiatives and administrative endeavors within the university. Reidy's dedication to excellence and his unwavering support for both students and colleagues alike make him an invaluable asset to the University of Arizona community. And by the way, ChatGPT wrote this for me.</p>
     </div>
   </div>
 </div>
@@ -76,7 +76,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
     <div class="container">
       <h4><b>Devin Bayly</b></h4>
 
-      <p>I'm a member of the Research Technologies Data & Visualization team at the University of Arizona. I work with researchers, students and faculty to bring your data to life through drop ins, 1:1 consultations, collaborative projects both short & long term, and general protocols enhancing the visualization offerings of our High Performance Computer (HPC).</p>
+      <p>I'm a member of the Research Technologies Data & Visualization team at the University of Arizona. I work with researchers, students and faculty to bring your data to life through drop ins, 1:1 consultations, collaborative projects both short & long term, and general protocols enhancing the visualization offerings of our High Performance Computing (HPC).</p>
     </div>
   </div>
 </div>

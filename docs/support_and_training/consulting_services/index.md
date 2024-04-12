@@ -9,7 +9,6 @@ Consulting is available free of cost to everyone and we welcome you to reach out
 
 * Help for new users getting started with our resources. We know using HPC systems for the first time can be intimidating so scheduling an in-person meeting where you can ask loads of questions can help a lot.
 * General issues that may occur, e.g., why is my job spending so long in the queue, where can I find information on topic &#60;A&#62;, why is this strange and unexpected thing happening, etc.
-* Advice on debugging software, package installations, and job failures.
 * Advice on code optimization and utilizing our resources more effectively/efficiently.
 
 ??? question "When can I ask for help?"
