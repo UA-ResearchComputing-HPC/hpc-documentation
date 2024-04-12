@@ -221,5 +221,8 @@ extra:
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/
       name: User portal
+    - icon: material/calendar-month
+      link: /support_and_training/workshops/events_calendar/
+      name: Upcoming workshops and events
 
 copyright: University of Arizona Research Computing
