@@ -24,27 +24,27 @@ We support the use of HPC and ML/DL containers available on NVIDIA GPU Cloud (NG
 
 ## Sharing Your Containers
 
-If you have containers that you would like to share with your research group or broader HPC community, you may do so in the space ```/contrib/singularity/shared```.
+If you have containers that you would like to share with your research group or broader HPC community, you may do so by creating a directory in the space ```/contrib/singularity/shared```.
 
 
 
 ## Cache Directory
 
-To speed up image downloads for faster, less redundant builds and pulls, Apptainer sets a cache directory in your home under ```~/.apptainer```. This directory stores images, metadata, and docker layers that can wind up being reasonably large. If you're struggling with space usage and your home's 50GB quota, one option is to set a new Apptainer cache directory. You can do this by setting the environment variable ```APPTAINER_CACHEDIR``` to a new directory. From Apptainer's documentation:
+To speed up image downloads for faster, less redundant builds and pulls, Apptainer sets a cache directory in your home under ```~/.apptainer```. This directory stores images, metadata, and docker layers that can wind up being reasonably large. If you're struggling with space usage and your home's 50 GB quota, one option is to set a new Apptainer cache directory. You can do this by setting the environment variable ```APPTAINER_CACHEDIR``` to a new location. From Apptainer's documentation:
 
 If you change the value of ```APPTAINER_CACHEDIR``` be sure to choose a location that is:
 
-    1. Unique to you. Permissions are set on the cache so that private images cached for one user are not exposed to another. This means that ```APPTAINER_CACHEDIR``` cannot be shared.
-    2. Located on a filesystem with sufficient space for the number and size of container images anticipated.
-    3. Located on a filesystem that supports atomic rename, if possible.
+1. Unique to you. Permissions are set on the cache so that private images cached for one user are not exposed to another. This means that ```APPTAINER_CACHEDIR``` cannot be shared.
+2. Located on a filesystem with sufficient space for the number and size of container images anticipated.
+3. Located on a filesystem that supports atomic rename, if possible.
 
-For example, if you wanted to set your cache directory to your PI's /groups directory under a directory you own, you could use:
+For example, if you wanted to set your cache directory to your PI's `/groups` directory under a directory you own, you could use:
 
 ```
 export APPTAINER_CACHEDIR=/groups/pi/your_netid/.apptainer
 ```
 
-To make the change permanent, add this line to the hidden file in your home directory ```~/.bashrc```.
+To make the change permanent, add this line to the hidden file in your home directory ```~/.bashrc```. If you are unfamiliar with this file and would like more information, see our [Linux cheat sheet guide](../../../support_and_training/cheat_sheet/#hidden-files-and-directories).
 
 <html>
 <div class="button-container">

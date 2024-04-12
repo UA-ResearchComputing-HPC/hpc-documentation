@@ -12,9 +12,9 @@ Apptainer Build is a tool that allows you to create containers. With Apptainer B
 
 ## Bootstrapping off a Local Image
 
-One common case users run into is using a python container hosted on HPC but needing additional packages installed in the image. To do this, it's possible to bootstrap off the local image and pip-install a new package in a section called ```%post``` which is executed during build time. 
+One common case users run into is using a Python container hosted on HPC (say, one of our Nvidia machine learning images) but finding they need additional packages installed in the image. To do this, it's possible to bootstrap off the local image and pip-install a new package in a section called ```%post``` which is executed during build time. 
 
-For example, say we want to use the HPC container nvidia-tensorflow-2.6.0.sif located in ```/contrib/singularity/nvidia/``` but we need it to have the package astropy installed which is currently missing. We can create a recipe file that takes this image, bootstraps off it, and pip-installs astropy. Our recipe file would look like the following:
+For example, say we want to use the HPC container `nvidia-tensorflow-2.6.0.sif` located in ```/contrib/singularity/nvidia/``` but we need it to have the package astropy installed which is currently missing. We can create a recipe file that takes this image, bootstraps off it, and pip-installs astropy. Our recipe file would look like the following:
 
 ```
 Bootstrap: localimage
@@ -24,7 +24,7 @@ From: /contrib/singularity/nvidia/nvidia-tensorflow-2.6.0.sif
   pip install astropy
 ```
 
-We'll call this recipe file something descriptive, e.g. tf2.6-astropy.recipe. Then, to build, all we need to do is use the syntax ```apptainer build <local_image_name>.sif <recipe_file>```. In this case:
+We'll call this recipe file something descriptive, e.g. tf2.6-astropy.recipe. Then, to build, all we need to do is use the syntax ```apptainer build <output_image> <recipe_file>```. In this case:
 
 ```
 [netid@cpu43 build_example]$ apptainer build tf2.6-astropy.sif tf2.6-astropy.recipe 
@@ -46,7 +46,7 @@ INFO:    Build complete: tf2.6-astropy.sif
 Bootstrapping off Ubuntu images is a great way to create a very customizable container where you can install your own software. Instead of pulling an Ubuntu image (see: [Pulling Containers](../pulling_containers/) for a tip on how to find an Ubuntu image), we can bootstrap directly off the image in our recipe file. 
 
 
-Let's say as an example, we want to install python 3.11 with a custom library. We can create a recipe file called python3.11_astropy.recipe:
+Let's say as an example, we want to install Python 3.11 with a custom library. We can create a recipe file called `python3.11_astropy.recipe` with the following contents:
 
 ```
 Bootstrap: docker
@@ -65,7 +65,7 @@ From: ubuntu:22.04
 
 ```
 
-And building using 
+Then to execute the build process and create our image, we can use:
 ```
 [netid@cpu38 pull_example]$ apptainer build python3.11_astropy.sif python3.11_astropy.recipe 
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace

@@ -8,7 +8,7 @@
 
 ## Pulling Docker Containers
 
-Apptainer has the ability to convert available docker images into sif format allowing them to be run on HPC. If you find an image on [Docker Hub](https://hub.docker.com/) that you would like to use, you can pull it using the ```apptainer pull command <local_image_name>.sif docker://docker_image```. 
+Apptainer has the ability to convert available docker images into sif format allowing them to be run on HPC. If you find an image on [Docker Hub](https://hub.docker.com/) that you would like to use, you can pull it using the ```apptainer pull <local_image_name>.sif docker://docker_image```. 
 
 As an example, we could pull an Ubuntu image from Docker Hub with OS 22.04 by searching for Ubuntu, opening the Tags tab, and copying their ```docker pull``` command:
 
@@ -61,7 +61,7 @@ The general format for any pull you want to do is:
 $ apptainer build <local_image_name> docker://nvcr.io/<registry>/<app:tag>
 ```
 
-This Apptainer build command will download the app:tag NGC Docker image, convert it to Apptainer format, and save it to the local filename local_image_name. 
+This Apptainer build command will download the `app:tag` NGC Docker image, convert it to Apptainer format, and save it to the local filename `<local_image_name>`. 
 
 <html>
 <div class="button-container">
