@@ -170,6 +170,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.tasklist:
       custom_checkbox: true
+      clickable_checkbox: true
   
 extra_javascript:
   - assets/javascripts/mathjax.js

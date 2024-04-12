@@ -11,6 +11,7 @@ Below is a list of the node types and physical hardware that are available on ea
 |Standard CPU Node|This is the general purpose node, designed to be used by the majority of jobs.|
 |High Memory CPU Node|Similar to the standard nodes, but with significantly more RAM. There a only a few of them and they should only be requested for jobs that are known to require more RAM than is provided by standard CPU nodes.|
 |GPU Node|Similar to the standard node, but with one or more GPUs available. The number of GPUs available per node is cluster-dependent.|
+|Buy-in Node|Nodes that have been purchased by research groups as part of [our buy-in process](../../policies/buy_in/). Buy-in nodes are only accessible to [high priority and windfall jobs](../allocations/).|
 
 **Available Hardware by Cluster and Node Type**
 
@@ -47,6 +48,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
     In addition to the V100 nodes, one node has four A100s, each subdivided into three smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. 
 
+
 === "Ocelote"
     <img src="images/p100_info.png" width=400px style="float: right; margin: 5px;">
     Ocelote has 46 compute nodes with Nvidia P100 GPUs that are available to researchers on campus. The limitation is a maximum of 10 concurrent jobs. Previously, one node with a V100 was available, but it has since been replaced with a P100. Tasks which require multiple GPUs must either request multiple nodes on Ocelote, or use Puma's GPU nodes.
@@ -58,7 +60,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 
-### MIG (Multi-Instance GPU) Resources
+### Multi-Instance GPU (MIG) Resources
 
 **Overview**
 
