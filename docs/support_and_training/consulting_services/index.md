@@ -1,10 +1,14 @@
 # Consulting Services
 
+<link rel="stylesheet" href="../../../assets/stylesheets/images.css">
+
 ## HPC Consulting Services
 
 [Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
-![Help Desk](images/HelpDesk_0.png){ align=right }
+
+<img class="img-right" src="images/HelpDesk_0.png" width="350px" style="padding: 20px;">
+
 Consulting is available free of cost to everyone and we welcome you to reach out! Our services include, but are not limited to:
 
 * Help for new users getting started with our resources. We know using HPC systems for the first time can be intimidating so scheduling an in-person meeting where you can ask loads of questions can help a lot.

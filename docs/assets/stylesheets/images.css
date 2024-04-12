@@ -4,6 +4,6 @@
 
 @media (max-width: 600px) {
     .img-right {
-        float: none; /* or float: left; depending on your preference */
+        float: left; /* or float: left; depending on your preference */
     }
 }
