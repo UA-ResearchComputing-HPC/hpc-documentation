@@ -1,18 +1,22 @@
 # External Resources
 
-Explore a number of resources beyond our center's offerings, from local community events to comprehensive software support and opportunities for accessing national supercomputing clusters. We've curated a collection of external organizations aimed at enhancing your HPC journey, providing diverse avenues for support and collaboration.
+Explore a number of resources beyond our center's offerings, from local community events to comprehensive software support and opportunities for accessing national supercomputing clusters. We've curated a collection of external organizations below to assist with education, research, and community building.
 
 ## ACCESS
 <img src="images/access_ci.jpg" style="height:50px;"> 
 
-XSEDE supports 13 supercomputers and high-end visualization and data analysis resources across the country.  These are made available for use by researchers including at the University of Arizona. This program ends at the end of August 2022 to be replaced with a new program called ACCESS. This is also funded by the National Science Foundation.
+!!! tip "ACCESS has succeeded the XSEDE program which concluded in August 2022."
 
-The new program is going through many changes so we will just include their website while has the most current information:
-[https://access-ci.org/](https://access-ci.org/).
+ACCESS is a comprehensive NSF-funded initiative designed to facilitate usage of national supercomputing resources for researchers, educators, and students. These resources encompass state-of-the-art computing clusters, data and storage services, scientific applications, educational materials, workshops, and dedicated support services.
 
-Researchers who have current project allocations that were awarded via XSEDE –including projects awarded at the August 22 XRAC meeting – should notice no changes to their resource access after August 31. For projects that expire on December 31, the ACCESS team recommends planning to submit a proposal during the usual September 15 to October 15 submission window under the existing XRAC guidelines.
+For University of Arizona (UArizona) affiliates, ACCESS presents an opportunity to leverage additional computing power and resources beyond what is available through UArizona's existing High-Performance Computing (HPC) infrastructure. Notable advantages and use cases for UArizona affiliates include:
 
-Researchers whose needs are at the smaller end of the scale should review the new [ACCESS Allocations Marketplace](https://allocations.access-ci.org/) information that is previewed on the XSEDE site pending the launch of the ACCESS site.
+- Researchers requiring extended computing time or additional computational resources beyond the capacity of UArizona's HPC systems.
+- Users seeking computational resources for Windows-based software applications. For instance, Jetstream2, a national resource, offers Windows Virtual Machines (VMs) to accommodate such needs.
+- Educators looking to harness GPU resources for classroom instruction. While UArizona's HPC facilities do provide GPU resources, high demand may lead to prolonged wait times, making ACCESS an appealing alternative.
+
+For more information on ACCESS, see: [https://access-ci.org/](https://access-ci.org/)
+
 
 ## Ansys
 <img src="images/Ansys_logo.jpg" style="height:50px;"> 

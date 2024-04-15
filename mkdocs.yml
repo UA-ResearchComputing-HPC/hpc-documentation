@@ -124,23 +124,35 @@ nav:
         - Storage and Transfers: support_and_training/faqs/storage/index.md
         - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
         - Secure Services: support_and_training/faqs/secure_services/index.md 
-        
-    - Workshops: 
-        - Events Calendar: support_and_training/workshops/events_calendar/index.md
-        - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md
-        - Intro to Machine Learning on HPC: 
-            - Python: support_and_training/workshops/intro_to_machine_learning/python/index.md
-            - R: support_and_training/workshops/intro_to_machine_learning/R/index.md
-        - Intro to Parallel Computing: support_and_training/workshops/intro_to_parallel_computing/index.md
-        - Intro to Containers: support_and_training/workshops/intro_to_containers/index.md
-        - Intro to Linux: support_and_training/workshops/intro_to_linux/index.md
-        - Intro to Visualization: support_and_training/workshops/intro_to_visualization/index.md
-        - Data Management Workshops: support_and_training/workshops/data_management_workshops/index.md
+    
+    #- Workshops: 
+    #    - Events Calendar: support_and_training/workshops/events_calendar/index.md
+    #    - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md
+    #    - Intro to Machine Learning on HPC: 
+    #        - Python: support_and_training/workshops/intro_to_machine_learning/python/index.md
+    #        - R: support_and_training/workshops/intro_to_machine_learning/R/index.md
+    #    - Intro to Parallel Computing: support_and_training/workshops/intro_to_parallel_computing/index.md
+    #    - Intro to Containers: support_and_training/workshops/intro_to_containers/index.md
+    #    - Intro to Linux: support_and_training/workshops/intro_to_linux/index.md
+    #    - Intro to Visualization: support_and_training/workshops/intro_to_visualization/index.md
+    #    - Data Management Workshops: support_and_training/workshops/data_management_workshops/index.md
     - Glossary: support_and_training/glossary/index.md
     - Linux Cheat Sheet: support_and_training/cheat_sheet/index.md
     - Grants: support_and_training/grants/index.md
     - Community and External Resources: support_and_training/external_resources/index.md
-
+  
+  - Events and Workshops: 
+    - Calendar: events/calendar/index.md
+    - HPC Workshop Materials: 
+      - Intro to HPC: events/workshop_materials/intro_to_hpc/index.md
+      - Intro to Machine Learning on HPC: 
+        - Python: events/workshop_materials/intro_to_machine_learning/python/index.md
+        - R: events/workshop_materials/intro_to_machine_learning/R/index.md
+      - Intro to Parallel Computing: events/workshop_materials/intro_to_parallel_computing/index.md
+      - Intro to Containers: events/workshop_materials/intro_to_containers/index.md
+      - Intro to Linux: events/workshop_materials/intro_to_linux/index.md
+      - Intro to Visualization: events/workshop_materials/intro_to_visualization/index.md
+      - Data Management Workshops: events/workshop_materials/data_management_workshops/index.md
   - Results: results/index.md
   
 

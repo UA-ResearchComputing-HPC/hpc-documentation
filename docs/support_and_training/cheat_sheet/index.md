@@ -39,8 +39,8 @@ Hidden files and directories start with a dot ```.``` and won't show up when you
 |-|-|-|
 |```~/.bash_profile```|	This file sets your working environment when you first log into HPC. This file sources your ```~/.bashrc``` (see below).|See the list in the danger block below.|
 |```~/.bashrc```|This file sets your working environment when you first log into HPC.|See the list in the danger block below.|
-|```~/.local```|This is a hidden directory in your home where pip-installed python packages, jupyter kernels, RStudio session information, etc. goes.|If you pip-install python packages when a virtual environment is not active, they will be installed in this directory. These will then be automatically loaded for all future python sessions (version-specific), including in Singularity images. This may cause versioning issues. We recommend always using [virtual environments](../../software/popular_software/python_and_anaconda/python/).|
-|```~/.apptainer```|A hidden directory in your home where Apptainer images and cache files are stored by default.|This directory can grow large quickly and fill up your home. You can modify your ```~/.bashrc``` to [set a different cache directory location](../../software/containers/containers_on_hpc/) that has a larger quota.
+|```~/.local```|This is a hidden directory in your home where pip-installed python packages, jupyter kernels, RStudio session information, etc. goes.|If you pip-install python packages when a virtual environment is not active, they will be installed in this directory. These will then be automatically loaded for all future python sessions (version-specific), including in Singularity images. This may cause versioning issues. We recommend always using [virtual environments](../../software/popular_software/python/).|
+|```~/.apptainer```|A hidden directory in your home where Apptainer images and cache files are stored by default.|This directory can grow large quickly and fill up your home. You can modify your ```~/.bashrc``` to [set a different cache directory location](../../software/containers/containers_on_hpc/#cache-directory) that has a larger quota.
 
 !!! danger
     When working with hidden configuration files in your account (`.bashrc` and `.bash_profile`), be careful of:
@@ -115,32 +115,39 @@ To see a file or directory's file permissions, run the command ```ls -l```. This
 |<code style="background-color: #deffbf;">r-x</code>|This describes the permissions that are set at the group level. In this case, they apply to anyone who is a member of the group <code style="background-color: #deffbf;">groupname</code>. To see your groups you're a member of, run the command ```groups```.|In this example, group members are allowed to see and execute the contents of this file, but they cannot modify it. 
 |<code style="background-color: #bffff6;">---</code>|This describes the permissions that are set for anyone else on the system.|In this example, the rest of the HPC community can't see or edit the contents of this file and can't execute it|
 
-Changing Permissions
+### Changing Permissions
+
+!!! tip "Permissions changes limitations"
+    Only the owner of a file or directory can change its permissions. 
 
 To change the permissions of a file or directory, you can use the command `chmod`. This command accepts two types of input: symbolic and octal.
 
-### Symbolic
+#### Symbolic
 
 Symbolic notation is the most intuitive to understand. It involves a comma-delimited list of permissions symbols, each representing a specific permission type (read, write, execute) for a particular user or group. Here's a breakdown of the symbols used:
 
-- `u` refers to the user who owns the file.
-- `g` refers to the group that the file belongs to.
-- `o` refers to other users who are not the owner or in the group.
-- `a` refers to all users (`u`, `g`, and `o`).
+|Symbol|Meaning|
+|-|-|
+|`u`|"User". Refers to the user who owns the file.|
+|`g`|"Group". Refers to the group that the file belongs to.|
+|`o`|"Other". Refers to other users who are not the owner or in the group.|
+|`a`|"All". Refers to all users (`u`, `g`, and `o`).|
 
-For each of these, you can use `+` to add a permission, `-` to remove a permission, or `=` to set the permissions explicitly. The permission symbols are:
+For each of these, you can use `+` to add a permission, `-` to remove a permission, or `=` to set the permissions explicitly. The permission symbols are: `r`,`w`, and `x` and match those described under [Types of Permissions above](#types-of-permissions).
 
-- `r` for read permission.
-- `w` for write permission.
-- `x` for execute permission.
+The general syntax is
+
+```
+chmod [who][operator][permissions]
+```
 
 Here are some examples of how you might use symbolic notation with the `chmod` command:
 
 - To give the owner read and write permissions: `chmod u+rw file.txt`
 - To remove execute permissions for the group: `chmod g-x file.txt`
-- To give all users read and execute permissions: `chmod a+rx file.txt`
+- To give all users read and execute permissions without write permissions: `chmod a=rx file.txt`
 
-### Octal
+#### Octal
 
 Octal notation is a more compact way of representing permissions using numbers. Each permission type (read, write, execute) is assigned a numeric value:
 
@@ -167,8 +174,9 @@ These commands will set the permissions of `file.txt` accordingly.
 
 ### Changing Group Ownership
 
-!!! tip
-    {==Users can't change the **user** ownership of a file==}. This is because this requires administrator privileges. User ownership changes can be requested from our consulting team. 
+!!! tip "Ownership changes limitations"
+    * Only the owner of a file or directory can change its group ownership
+    * Users can't change the **user** ownership of a file. This is because this requires administrator privileges. User ownership changes can be requested from our consulting team. 
 
 To change the group ownership of a file or directory, you can use ```chgrp```. For example:
 
