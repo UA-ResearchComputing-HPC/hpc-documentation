@@ -194,7 +194,7 @@ extra_css:
 
 theme:
   name: material
-  logo: assets/images/favicon.ico
+  logo: assets/images/docs.png
   custom_dir: docs/overrides
   favicon: assets/images/favicon.ico
   palette:
@@ -233,8 +233,6 @@ extra:
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/
       name: User portal
-    - icon: material/calendar-month
-      link: /support_and_training/workshops/events_calendar/
-      name: Upcoming workshops and events
+
 
 copyright: University of Arizona Research Computing

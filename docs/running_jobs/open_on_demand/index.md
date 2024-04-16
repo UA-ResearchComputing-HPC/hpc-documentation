@@ -1,5 +1,7 @@
 # Open OnDemand
 
+<link rel="stylesheet" href="../../assets/stylesheets/images.css">
+
 Open OnDemand (OOD), which is an NSF-funded open-source HPC portal, is available for users and provides web browser access for graphically interfacing with HPC. This service is available at [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/). 
 
 ### Why use Open OnDemand?
@@ -84,9 +86,11 @@ Open OnDemand provides access to graphical interfaces for some popular software.
 
 **Web Form**
 
-<img src="images/ood_web_form.png" style="width:400px;" align=right>
-
 First, select the desired application from Interactive Apps. This will take you to a form where you will enter your job information. This includes the entries in the following table:
+
+<img class="ood-form" src="images/ood_web_form.png" style="width:400px;">
+
+
 
 |Field|Description|Example|
 |-|-|-|

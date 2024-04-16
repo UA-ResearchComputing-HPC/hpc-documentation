@@ -1,6 +1,6 @@
 # Overview
 
-HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm via an internet browser through [Open OnDemand](ood.hpc.arizona.edu), or via an [SSH connection](../../registration_and_access/system_access/#command-line-access) to one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
+HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm via an internet browser through [Open OnDemand](https://ood.hpc.arizona.edu), or via an [SSH connection](../../registration_and_access/system_access/#command-line-access) to one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
 
 ## New to HPC?
 
@@ -17,29 +17,29 @@ If you are new to the UArizona HPC system, or to HPC systems in general, we reco
 
 When creating a job request, please keep the following in mind:
 
-1. **Don't ask for more resources than you really need.**
+- [x] **Don't ask for more resources than you really need.**
 
     The scheduler will have an easier time finding a slot for the two hours you need rather than the 48 hours you request.  When you run a job it will report back on the time used which you can use as a reference for future jobs. However don't cut the time too tight.  If something like shared I/O activity slows it down and you run out of time, the job will fail.
 
     Additionally, please do not request more CPUs than you plan to use. Increasing the number of CPUs without a clear plan of how your software is going to use them will not result in faster computation. Unused CPUs in a job represent wasted system resources, and will cost more CPU-hours to your allocation than you actually needed to spend. 
 
-2. **Test your submission scripts.**
+- [x] **Test your submission scripts.**
 
     Start small. You can use an [interactive session](../interactive_jobs/) to help build your script and run tests in real time.
 
-3. **Respect memory limits.** 
+- [x] **Respect memory limits.** 
 
     If your application needs more memory than is available, your job could fail and leave the node in a state that requires manual intervention. The failure messages might reference '''OOM''' which means '''Out Of Memory'''
 
-4. **Do not run loops automating a large number of job submissions.** 
+- [x] **Do not run loops automating a large number of job submissions.** 
 
     Executing large numbers of job submissions in rapid succession (e.g. in a scripted loop) can overload the system's scheduler and cause problems with overall system performance. Small numbers of automated jobs may be acceptable (e.g. less than 100), but a better alternative in almost all cases is to [use job arrays](../batch_jobs/array_jobs/) instead.
 
-5. **Hyperthreading is turned off.**  
+- [x] **Hyperthreading is turned off.**  
 
     Running multiple threads per core is generally not productive.  MKL is an exception to that if it is relevant to your workflow. Instead, running one thread per core and using multiple cores (i.e. "multiprocessing" rather than "multithreading") is a suggested alternative.
 
-6. **Open OnDemand Usage**
+- [x] **Open OnDemand Usage**
 
     Please be mindful of other users' needs and avoid monopolizing resources for extended periods when they are not actively being utilized. In practice, this means actively terminating sessions when you are finished rather than leaving the session open. Closing the browser tab does **not** terminate the session. This ensures fair access for all members of our community and promotes a collaborative environment, and ensures you are only charged for the time you actually used.
 
