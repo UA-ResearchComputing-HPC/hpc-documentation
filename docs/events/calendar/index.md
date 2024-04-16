@@ -11,11 +11,13 @@ Every semester, [we host training workshops](../workshops/intro_to_hpc/) on topi
 
 Check below for a list of upcoming workshops.
 
-## HPC Workshops
+## HPC Calendar
 
 !!! example "Currently no upcoming workshops. Check back later."
 
-## Community and External Workshops
+## Our Friends and Partners
+
+### Upcoming Events
 
 <div class="event-card">
     <div class="event-date">
@@ -43,6 +45,33 @@ Check below for a list of upcoming workshops.
             <a href="https://www.mathworks.com/company/events/seminars/parallel-computing-with-matlab-hands-on-workshop-4363824.html"> <button class="register-button">Register</button></a>
         </div>
 </div>
+
+### External Event Pages
+
+Please check out these workshops and activities from our partners around campus!
+
+- The Data Science Institute's [official calendar](https://datascience.arizona.edu/calendar)
+- Data Lab [home page](https://datainsight.arizona.edu/uarizona-data-lab)
+- The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
+
+
+### Data Lab Workshop Series
+
+Recurring workshops hosted by the Data Lab for Spring 2024
+
+- [Navigating the World of Data Engineering](https://datascience.arizona.edu/events/navigating-world-data-engineering) - Mondays 2-3pm
+
+- [Cracking the Coding Interview](https://datascience.arizona.edu/events/cracking-coding-interview) - Mon/Wed/Fri 4-5pm
+
+- [NextGen Geospatial Data Science](https://datascience.arizona.edu/events/nextgen-geospatial-data-science) - Tuesdays 2-3pm
+
+- [Data Science Essentials: From Jupyter to AI Tools](https://datascience.arizona.edu/events/data-science-essentials-jupyter-ai-tools) - Tuesdays 3-4pm
+
+- [Data Science Tapas: Savor the Tools of Data Mastery](https://datascience.arizona.edu/events/data-science-tapas-savor-tools-data-mastery) - Wednesdays 1-2pm
+
+- [Mastering Machine Learning: Your Path to Data-Driven Research](https://datascience.arizona.edu/events/mastering-machine-learning-your-path-data-driven-research) - Thursdays 2-3pm
+
+- [Introduction to Deep Learning](https://datascience.arizona.edu/events/deep-dive-data-guide-deep-learning) - Thursdays 3-4pm
 
 <!--
 !!! example "No upcoming workshops scheduled. Check back later"
