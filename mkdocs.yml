@@ -37,7 +37,7 @@ nav:
     - Account Deletion: registration_and_access/account_deletion/index.md
     - Group Management: registration_and_access/group_management/index.md
     - System Access: registration_and_access/system_access/index.md
-    - System Overview: registration_and_access/system_overview/index.md
+    - System Layout: registration_and_access/system_overview/index.md
     - VPN : registration_and_access/vpn/index.md
     
   - Storage and Transfers:
@@ -182,7 +182,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.tasklist:
       custom_checkbox: true
-      clickable_checkbox: true
+      #clickable_checkbox: true
   
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -194,7 +194,7 @@ extra_css:
 
 theme:
   name: material
-  logo: assets/images/docs.png
+  logo: assets/images/logo.png
   custom_dir: docs/overrides
   favicon: assets/images/favicon.ico
   palette:

@@ -15,7 +15,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="display:inline-block;">
   <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/workshops/events_calendar/"> Events Calendar</a></span>
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">Every semester we host training sessions on topics ranging from into to HPC, to machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
@@ -134,11 +134,6 @@ From Eric: “The access to increased time allocations as well as large volumes 
 One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
 High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown below. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
 
-## Our Mission
-
-UArizona High Performance Computing is an interdisciplinary research center focused on facilitating research and discoveries that advance science and technology. We deploy and operate advanced computing and data resources for the research activities of students, faculty, and staff at the University of Arizona. We also provide consulting, technical documentation, and training to support our users.
-
-The HPC Center is managed by the UITS [Research and Discovery Technologies](https://it.arizona.edu/research-and-discovery-technologies) department and funded in part by the [Office of Research, Innovation, and Impact](https://research.arizona.edu/) (RII).
 
 ## Acknowledgements
 

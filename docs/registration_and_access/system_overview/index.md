@@ -1,6 +1,6 @@
-# System Overview
+# System Layout
 
-The HPC system has a structure of interconnected nodes and storage systems. It is important to be aware of this structure while using the HPC to help with navigation and ensure proper usage of each type of node. To see more about the compute resources available, please see [this page](../../resources/compute_resources/). 
+The HPC system has a structure of interconnected nodes and storage systems. It is important to be aware of this structure while using the HPC to help with navigation and ensure proper usage of each type of node. To see more about the compute resources available, please see [our compute resources page](../../resources/compute_resources/). 
 
 Below is a graphic depiction of the layout of the HPC nodes:
 

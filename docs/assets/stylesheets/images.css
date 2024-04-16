@@ -1,31 +1,26 @@
-.img-right {
-    float: right;
-}
-
-@media (max-width: 600px) {
-    .img-right {
-        float: left; /* or float: left; depending on your preference */
-    }
-}
-
-
-.ood-form {
-    float: right;
-}
-
-@media (max-width: 800px) {
-    .ood-form {
-        float: none; 
-    }
-}
-
+.img-right, 
+.ood-form,
 .highlighted-research {
     float: right;
 }
 
+.ood-screenshots{
+    box-shadow: 5px 5px 5px #999;
+    width: 70%;
+}
+
 @media (max-width: 800px) {
-    .highlighted-research {
+    .img-right {
+        float: left; /* or float: left; depending on your preference */
+    }
+    .ood-form {
         float: none; 
-        width: 80%;
+    }
+    .highlighted-research {
+        float: left; 
+        width: 98%;
+    }
+    .ood-screenshots {
+        width: 100%;
     }
 }

@@ -4,7 +4,7 @@
 # What are Containers?
 
 !!! tip
-    Want to learn more about containers? Check out our [Intro to Containers workshop](../../../support_and_training/workshops/intro_to_containers/). 
+    Want to learn more about containers? Check out our [Intro to Containers workshop](../../../events/workshop_materials/intro_to_containers/). 
 
 
 <img class="img-right" src="images/Shipping.png" width="300px">

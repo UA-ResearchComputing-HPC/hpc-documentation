@@ -8,15 +8,15 @@ Open OnDemand (OOD), which is an NSF-funded open-source HPC portal, is available
 
 Since there are many ways to access HPC, including the command line terminal, why use Open OnDemand? Here are a few of the main reasons:
 
-- **GUI software available**
+- [x] **GUI software available**
 
     Many commonly used research software packages, such as RStudio and ANSYS, have graphical interfaces that streamline analysis workflows. Open OnDemand allows for easy access to these applications without the complications of server setup or image/port forwarding. 
 
-- **User friendly** 
+- [x] **User friendly** 
 
     Open OnDemand includes an interactive desktop application which mimics what you might find on your local workstation. This environment may be more intuitive to navigate when getting familiarized with the HPC.
 
-- **Standardized batch access** 
+- [x] **Standardized batch access** 
 
     Open OnDemand includes forms to submit batch jobs which include all the relevant parameters in one place. 
 
@@ -36,7 +36,7 @@ Since there are many ways to access HPC, including the command line terminal, wh
 
 Need command line access to a terminal on HPC? No problem! Simply select the **Clusters** dropdown menu to connect to one of HPC's login nodes. This is also detailed under [System Access](/registration_and_access/system_access/#web-access)
 
-<img src="images/OOD_CLI.png" style="width:500px;">
+<img class="ood-screenshots" src="images/OOD_CLI.png">
 
 ## File Browser
 
@@ -46,21 +46,21 @@ The file browser provides easy access to your `/home`, `/xdisk`, and `/groups` d
 
 In the browser at the top of the screen, select the **Files** dropdown
 
-<img src="images/OOD_Files.png" style="width:600px;">
+<img class="ood-screenshots" src="images/OOD_Files.png">
 
 You will be able to select your `/home` directory, `/groups`, or `/xdisk`. If you select `/groups` or `/xdisk`, enter your PI's NetID in the **Filter** field to find your shared group space.
 
-<img src="images/groups-files.png" style="width:1000px;">
+<img class="ood-screenshots" src="images/groups-files.png" style="width:100%;">
 
 **Editing Files**
 
 First, navigate to the file you wish to edit. Then, click the vertical ellipses on the right-hand side and select **Edit**
 
-<img src="images/choose_edit.png" style="width:600px;">
+<img class="ood-screenshots" src="images/choose_edit.png">
 
 This will open a file editor in your browser where you may select your color theme, text size, and syntax highlighting.
 
-<img src="images/file_editing.png" style="width:600px;">
+<img class="ood-screenshots" src="images/file_editing.png">
 
 ## Job Viewer and Composer
 
@@ -68,17 +68,17 @@ This will open a file editor in your browser where you may select your color the
 
 The Job Viewer allows you to check the status and time remaining of your running jobs. You can also cancel your jobs using this interface. Note: be careful looking at **All Jobs** since this will likely timeout trying to organize them all. To use the Job Viewer, navigate to the **Jobs** dropdown and select **Active Jobs**
 
-<img src="images/active-jobs-menu.png" style="width:600px;">
+<img class="ood-screenshots" src="images/active-jobs-menu.png">
 
 This will open a new page listing all your running and pending jobs. You may delete them by clicking the red trash icon under Actions, or view more information about individual jobs using the dropdown on the left next to the ID.
 
-<img src="images/active-jobs.png" style="width:800px;">
+<img class="ood-screenshots" src="images/active-jobs.png" style="width:100%;">
 
 **Job Composer**
 
 The Job Composer lets you create and run a Slurm script on any of our three clusters. It should be noted that the Job Composer creates a special string of directories in your `/home` starting with `ondemand/` which is where both your submission scripts and output files will be stored. Make note of the path to your files on the right-hand side of the Job Composer screen under **Script location**.
 
-<img src="images/job-composer-menu.png" style="width:600px;">
+<img class="ood-screenshots" src="images/job-composer-menu.png">
 
 ## Interactive Graphical Applications
 
