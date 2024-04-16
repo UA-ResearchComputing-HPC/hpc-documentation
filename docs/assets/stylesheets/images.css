@@ -7,3 +7,14 @@
         float: left; /* or float: left; depending on your preference */
     }
 }
+
+
+.ood-form {
+    float: right;
+}
+
+@media (max-width: 800px) {
+    .ood-form {
+        float: none; 
+    }
+}
