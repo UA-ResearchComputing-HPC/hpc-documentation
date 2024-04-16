@@ -1,6 +1,6 @@
 # Acknowledgements
 
-PIs should [notify our HPC consultants](../../support_and_training/consulting_services/) about posters or other publications (published, accepted, submitted, or in preparation) that benefited from the use of UA High Performance Computing, Statistical Consulting, and/or Data & Visualization Consulting. These will be listed in the Collection of Published Results.
+PIs should [notify our HPC consultants](../../support_and_training/consulting_services/) about posters or other publications (published, accepted, submitted, or in preparation) that benefited from the use of UArizona High Performance Computing, Statistical Consulting, and/or Data & Visualization Consulting. These will be listed in the Collection of Published Results.
 
 <center>[Results](../../results){ .md-button }</center>
 

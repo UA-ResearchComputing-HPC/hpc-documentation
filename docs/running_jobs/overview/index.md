@@ -45,7 +45,7 @@ When creating a job request, please keep the following in mind:
 
 ## Frequently Asked Questions 
 
-Below is a FAQ that includes answers to common questions and misconceptions about running jobs on HPC. Some are general information about HPC systems, but some contain information specific to the UA HPC. We recommend reviewing this FAQ whether you are a new user getting started on our system, or an experienced user returning to our documentation.
+Below is a FAQ that includes answers to common questions and misconceptions about running jobs on HPC. Some are general information about HPC systems, but some contain information specific to the UArizona HPC. We recommend reviewing this FAQ whether you are a new user getting started on our system, or an experienced user returning to our documentation.
 
 <html>
 <link rel="stylesheet" href="../../assets/stylesheets/animated_dropdown.css">

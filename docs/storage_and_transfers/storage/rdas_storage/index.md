@@ -86,7 +86,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
                     <img src="images/rdas_smb_linux_gui.png" width=500px>
 
-                4. A few moments later a window opens, prompting for your **Username** (```BLUECAT\``` followed by your UA NetID) and **Password** (UA NetID password). After entering the details, select **Connect** (on other file managers this may be **OK**). Some file managers, such as Caja and GNOME Files, also have a **Domain** field, whereas others, like Dolphin, do not. Either way, you do not need to modify its default value.
+                4. A few moments later a window opens, prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). After entering the details, select **Connect** (on other file managers this may be **OK**). Some file managers, such as Caja and GNOME Files, also have a **Domain** field, whereas others, like Dolphin, do not. Either way, you do not need to modify its default value.
 
                     <img src="images/rdas_password_linux_gui.png" width=300px>
 
@@ -94,7 +94,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
                     <img src="images/windows_shares_linux_gui.png" width=400px>
 
-                6. On some file managers, such as Dolphin, you can right away access your allocation by double clicking on it. On others, such as Caja and GNOME Files, double clicking on it will open another window prompting for your **Username** (```BLUECAT\``` followed by your UA NetID) and **Password** (UA NetID password). Select **Connect as user**, enter the details, and select **Connect**. Your allocation will be mounted as a local drive.
+                6. On some file managers, such as Dolphin, you can right away access your allocation by double clicking on it. On others, such as Caja and GNOME Files, double clicking on it will open another window prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). Select **Connect as user**, enter the details, and select **Connect**. Your allocation will be mounted as a local drive.
 
                     <img src="images/connect_as_user_linux_gui.png" width=400px>
 
@@ -105,7 +105,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
                 smbclient \\\\rdas.hpc.arizona.edu\\<share> -U BLUECAT\\<username>
                 ```
 
-                The ```<share>``` is the PI group that you belong to, and ```<username>``` is your UA NetID. The command will prompt for a password where you will enter your UA NetID password. This will start an ```smb``` shell. For example:
+                The ```<share>``` is the PI group that you belong to, and ```<username>``` is your UArizona NetID. The command will prompt for a password where you will enter your UArizona NetID password. This will start an ```smb``` shell. For example:
 
                 ```
                 ~ $ smbclient \\\\rdas.hpc.arizona.edu\\sohampal -U BLUECAT\\sohampal
@@ -181,7 +181,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
             <img src="images/rdas-screenshot-windows.png" width=800px>
 
-        3. A few moments later a window will open, prompting for your **Username** (```BLUECAT\``` followed by your UA NetID) and **Password** (UA NetID password). After entering the details, select **OK**.
+        3. A few moments later a window will open, prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). After entering the details, select **OK**.
 
             <img src="images/network_credentials_windows.png" width=300px>
 

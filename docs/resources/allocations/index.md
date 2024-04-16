@@ -15,7 +15,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
 === "Standard"
     Every group receives a free allocation of standard hours that refreshes on the first day of each month. 
 
-    ||Puma|Ocelote|ElGato|
+    ||Puma|Ocelote|El Gato|
     |-|-|-|-|
     |Standard CPU Hours|150,000|100,000|7,000|
 

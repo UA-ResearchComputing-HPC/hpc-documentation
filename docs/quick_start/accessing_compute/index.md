@@ -28,7 +28,7 @@ r1u26n2  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%
 r1u27n1  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%   
 ```
 
-Each line shows one compute node on the cluster you're connected to and how busy it currently is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest and newest and generally provides the most in terms of computational resources. However, we have two other clusters available: Ocelote and ElGato, each with a good number of computational resources available and shorter wait times to access them. 
+Each line shows one compute node on the cluster you're connected to and how busy it currently is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest and newest and generally provides the most in terms of computational resources. However, we have two other clusters available: Ocelote and El Gato, each with a good number of computational resources available and shorter wait times to access them. 
 
 When you first connected to a login node in the previous section, your terminal should have displayed:
 
@@ -100,7 +100,7 @@ salloc: Nodes cpu39 are ready for job
 cpu39.elgato.hpc.arizona.edu
 ```
 
-You'll notice once your job starts that your command line prompt changes to display the name of the compute node. If you run ````hostname````, this should match your command line prompt and show you the name of the compute node you're connected to. In my case, I'm connected to the ElGato compute node ```cpu39```.
+You'll notice once your job starts that your command line prompt changes to display the name of the compute node. If you run ````hostname````, this should match your command line prompt and show you the name of the compute node you're connected to. In my case, I'm connected to the El Gato compute node ```cpu39```.
 
 You'll also notice that your session has been assigned a job number (in the above, you can see this as ```Granted job allocation 1800857```). A job number is assigned to every job on the system and is used to keep track of job statistics and metrics. 
 
@@ -116,9 +116,9 @@ That's where batch jobs come in.
 
 ## Batch Jobs
 
-Batch jobs are the real workhorses of HPC. In contrast to interactive jobs, batch jobs are a way of submitting work to run on a compute node without the need for an active connection. Batch scripts are text files that act as blueprints that the scheduler uses to allocate resources and run the terminal commands needed to run your analysis. 
+Batch jobs are the real workhorses of HPC. In contrast to interactive jobs, batch jobs are a way of submitting work to run on a compute node without the need for an active connection. Batch scripts are text files that act as blueprints that the scheduler uses to allocate resources and execute the terminal commands needed to run your analysis. 
 
-Batch jobs are initiated by submitting a batch script using the command ```sbatch myscript.slurm```. The instructions are then sent to the scheduler, which finds CPUs for your job, and puts it in the queue to wait until they become available. The wait time depends on many factors, including the scale of your resource request and the overall system usage. To check on jobs you have submitted, use the command ```squeue --user=<your_netid>```. 
+Batch jobs are initiated by submitting a batch script using the command ```sbatch myscript.slurm```. The instructions in that script are then sent to the scheduler, which puts your job in queue to wait while it looks for the necessary resources. Once the resources required become available, your job automatically begins running. The time your job spends in queue depends on many factors, including the scale of your resource request and the overall system usage. To check on jobs you have submitted, use the command ```squeue --user=<your_netid>```. 
 
 After the scheduler has received your request, the rest happens automatically. This means you can close your SSH connection, or even turn off your personal computer and walk away without interrupting your jobs. This workflow enables you to submit tens, hundreds, or even thousands of jobs to run simultaneously, dramatically increasing your productivity over what is possible with a local workstation.
 

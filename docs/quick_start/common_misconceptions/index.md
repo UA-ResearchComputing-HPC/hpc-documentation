@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 # Common Misconceptions
 
-Both experienced and novice users may benefit from reading through these common misconceptions. 
+!!! tip "Both experienced and novice users may benefit from reading through these common misconceptions."
 
 ### **If I move my code to HPC, it will automatically run faster**
 

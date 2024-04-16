@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
+<link rel="stylesheet" href="../../assets/stylesheets/images.css">
 # Storage and Transfers
 
 When you first access a login node, you're located in your home directory. This is a space with a 50 GB limit and is accessible to only you. The files you store here are housed on a large storage array and are accessible anywhere you are on the system except the bastion host. 
@@ -11,11 +12,11 @@ When you first access a login node, you're located in your home directory. This 
 
 To store your files in your home, you will need to transfer them to the system. Small files can most easily be transferred to/from HPC using our web interface [Open OnDemand](https://ood.hpc.arizona.edu/). In the upper-left you'll see a dropdown called Files where you can select Home Directory. 
 
-<center><img src="images/home.png" style="width: 600px;" ></center>
+<center><img class="ood-screenshots" src="images/home.png"></center>
 
 On the following page, select "Upload" to open a window where you can drag/drop files.
 
-<center><img src="images/file_upload.png" style="width: 600px;" ></center>
+<center><img class="ood-screenshots" src="images/file_upload.png" ></center>
 
 For larger files, we have a designated **Data Transfer Node** (DTN). Comprehensive instructions for alternative methods for file transfers can be found on [our data transfer page](../../storage_and_transfers/transfers/overview/). 
 

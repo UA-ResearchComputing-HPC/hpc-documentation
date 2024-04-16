@@ -37,7 +37,7 @@ If you have software that you would like installed as a module, please refer to 
 
 Installing software packages locally into your own directories is encouraged. This means you can download, install, manage, and customize software from the internet (e.g. Pip, CRAN, GitHub) without waiting for someone else to install it on HPC for you. Software should be compiled on a compute node so that the load doesn't strain the login nodes and to ensure you have access to the newest system software and compilers.
 
-If you would like to install your own software, please refer to our guidelines on [User Installations](../../software/user_installations/)
+If you would like to install your own software, please refer to our guidelines in [User Installations](../../software/user_installations/) which also has some handy tips and tricks if you've never installed software locally (i.e., not in a root-owned location) before. 
 
 
 <html>

@@ -12,7 +12,7 @@ The storage is mounted as a filesystem and all the clusters have access to the s
 
 Every user has access to individual and shared storage on the system where they can host data for active analyses. A summary of these locations is shown below:
 
-|<div style="width:120px">Path</div>|Description|<div style="width:120px">Quota</div>|Duration|
+|<div style="width:130px">Path</div>|Description|<div style="width:120px">Quota</div>|Duration|
 |-|-|-|-|
 |```/home/uxx/netid```|An individual storage allocation provided for every HPC user|50 GB|Accessible for the duration of user's account|
 |```/groups/pi_netid```|A communal storage allocation provided for every research group|500 GB|Accessible for the duration of a PI's account|

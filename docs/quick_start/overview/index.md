@@ -4,7 +4,7 @@
 
 ## Overview
 
-Welcome to the UArizona HPC! 
+Welcome to the University of Arizona's (UArizona) High Performance Computing (HPC)! 
 
 This Quick Start Tutorial is the place to be if you are new to HPC, or simply wish to take a refresher of the basics. We will cover some concepts that are general to HPC, as well as those that are specific to the system here at UArizona.
 

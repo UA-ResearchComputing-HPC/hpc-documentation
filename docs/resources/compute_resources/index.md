@@ -32,7 +32,7 @@ Below is a list of the node types and physical hardware that are available on ea
     |High Memory|1| 48|41 GB|1968 GB|-|-|-|-|
     |GPU|46|28|8 GB|224 GB|1|16 GB|16 GB|46|
     
-=== "ElGato"
+=== "El Gato"
     | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|
     |-|-|-|-|-|
     |Standard|130|16|4 GB|64 GB|
@@ -53,8 +53,8 @@ Below is a list of the node types and physical hardware that are available on ea
     <img src="images/p100_info.png" width=400px style="float: right; margin: 5px;">
     Ocelote has 46 compute nodes with Nvidia P100 GPUs that are available to researchers on campus. The limitation is a maximum of 10 concurrent jobs. Previously, one node with a V100 was available, but it has since been replaced with a P100. Tasks which require multiple GPUs must either request multiple nodes on Ocelote, or use Puma's GPU nodes.
 
-=== "ElGato"
-    ElGato has no GPU nodes. During the quarterly maintenance cycle on April 27, 2022 the ElGato K20s and Ocelote K80s were removed after support was ended by Nvidia.
+=== "El Gato"
+    El Gato has no GPU nodes. During the quarterly maintenance cycle on April 27, 2022 the El Gato K20s and Ocelote K80s were removed after support was ended by Nvidia.
 
 
 
@@ -78,7 +78,7 @@ The addition of the MIG devices to the Slurm queues will have a number of impact
 
 ## System Technical Specifications
 
-||ElGato|Ocelote|Puma|
+||El Gato|Ocelote|Puma|
 |-|-|-|-|
 |Model|IBM System X iDataPlex dx360 M4|Lenovo NeXtScale nx360 M5|Penguin Altus XE2242|
 |Year Purchased|2013|2016 (2018 P100 nodes)|2020|

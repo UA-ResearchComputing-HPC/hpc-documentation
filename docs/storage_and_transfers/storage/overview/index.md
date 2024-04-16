@@ -93,7 +93,7 @@ graph LR
 </tr>
 <tr>
   <th>ReData</th>
-  <td><a href="https://data.library.arizona.edu/data-management/services/research-data-repository-redata">Research data</a>. Managed by UA Libraries</td>
+  <td><a href="https://data.library.arizona.edu/data-management/services/research-data-repository-redata">Research data</a>. Managed by UArizona Libraries</td>
   <td>Quota system</td>
   <td>Free</td>
   <td>&#10060;</td>

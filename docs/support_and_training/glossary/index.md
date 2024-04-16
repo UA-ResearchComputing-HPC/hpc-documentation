@@ -2,14 +2,14 @@
 
 **Cluster**
 
-A group of nodes connected to each other by a fast network.  The network in ElGato and Ocelote is 56Gb Infiniband.  What this gains for the user is the ability to connect nodes together to perform work beyond the capacity of a single node. Some jobs use hundreds of cores and terabytes of memory.
+A group of nodes connected to each other by a fast network.  The network in El Gato and Ocelote is 56Gb Infiniband.  What this gains for the user is the ability to connect nodes together to perform work beyond the capacity of a single node. Some jobs use hundreds of cores and terabytes of memory.
 <hr>
 
 **CPU/processor/socket/core**
 
 
 
-These terms are often used interchangeably, especially processor and CPU. The most straight forward way to think of the compute nodes is that they contain two physical sockets (or processor chips) which are located under their heatsinks. Each socket contains multiple cores.  Each core functions like a separate processor. Ocelote has 2 sockets with 14 cores in each so all you need to know is that there are 28 cores.  ElGato has 2 sockets with 6 cores in each, for a total of 12 cores. If your laptop is quad core, it has one socket with four cores, as a comparison.
+These terms are often used interchangeably, especially processor and CPU. The most straight forward way to think of the compute nodes is that they contain two physical sockets (or processor chips) which are located under their heatsinks. Each socket contains multiple cores.  Each core functions like a separate processor. Ocelote has 2 sockets with 14 cores in each so all you need to know is that there are 28 cores.  El Gato has 2 sockets with 6 cores in each, for a total of 12 cores. If your laptop is quad core, it has one socket with four cores, as a comparison.
 <hr>
 
 **Data Transfer Node (DTN)**
@@ -104,7 +104,7 @@ The efficiency of a parallel program, usually defined as the parallel speedup of
 
 **Scheduler/HPC scheduler**
 
-A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and ElGato use SLURM.
+A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and El Gato use SLURM.
 
 <hr>
 
@@ -140,7 +140,7 @@ Each tier of storage is larger and slower than the preceding tier. The first is 
 
 **Supercomputer**
 
-A large and powerful cluster. We currently have three: Puma, Ocelote, and ElGato.
+A large and powerful cluster. We currently have three: Puma, Ocelote, and El Gato.
 
 <hr>
 

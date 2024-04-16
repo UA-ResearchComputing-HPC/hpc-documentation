@@ -2,7 +2,7 @@
 
 
 ## Overview
-The University of Arizona's High Performance Computing (HPC) clusters are servers (computing nodes) and associated high performance storage. There are additional nodes to meet specific needs like high amounts of memory or GPUs. All UA research faculty can sign up for free monthly allocation [following these directions](/registration_and_access/account_creation/). For researchers who need compute resource beyond the free standard allocation, and who have funding available, we encourage 'buy-in' of additional compute nodes.
+The University of Arizona's High Performance Computing (HPC) clusters are servers (computing nodes) and associated high performance storage. There are additional nodes to meet specific needs like high amounts of memory or GPUs. All UArizona research faculty can sign up for free monthly allocation [following these directions](/registration_and_access/account_creation/). For researchers who need compute resource beyond the free standard allocation, and who have funding available, we encourage 'buy-in' of additional compute nodes.
 
 ## Benefits of Buy-in
 |||
@@ -10,16 +10,16 @@ The University of Arizona's High Performance Computing (HPC) clusters are server
 | **Dedicated Research Compute** | Research groups can 'Buy-In' (add resources such as processors, memory, etc.) to the base HPC systems as funding becomes available. Researchers receive 100% of the CPU*hour time their purchases create as a monthly high-priority allocation. This time receives the highest priority queue on the HPC systems.|
 |**Quality Environment**|The Buy-In option allows research groups to take advantage of the central machine room space that is designed for maintaining high performance computing resources. The UITS Research Technologies group physically maintains the purchased nodes, applies updates and patches, monitors the systems for performance and security, and manages software. Additionally, Research Technologies staff is [available for research support](../../support_and_training/consulting_services/). In short, essentially all costs associated with maintaining compute resources are covered by UITS rather than individual researchers.|
 |**Flexible Capacity**|Buy-in research group members also benefit from their resources being integrated into a larger computing resource. This means the buy-in resources can be used in conjunction with the free allocation and resources provided to address computational projects that would be beyond the capacity of a group running an independent system alone.|
-|**Shared Resource**|The University research computing community as a whole benefits from buy-in expansions to the HPC systems. As mentioned above, researchers who buy-in receive 100% of the allocation of time for their purchase. However if the buy-in resources are not fully utilized, they are made available as windfall resources. This helps to ensure full use of all HPC resources and can be used to justify future purchases of computing resources.|
+|**Shared Resource**|The University research computing community as a whole benefits from buy-in expansions to the HPC systems. As mentioned above, researchers who buy-in receive 100% of the allocation of time for their purchase. However if the buy-in resources are not fully utilized, they are made available as [windfall resources](../../resources/allocations#__tabbed_1_2). This helps to ensure full use of all HPC resources and can be used to justify future purchases of computing resources.|
 |**Cost Competitiveness**|Lower costs included in the grant proposals (i.e. hardware only, no operations costs) and evidence of campus cost‐sharing give a positive advantage during funding agency review.|
-|**Pricing**|For the year following the award the UA HPC request for proposal (RFP) pricing is locked in and is often considerably less than the "market price."|
+|**Pricing**|For the year following the award the UArizona HPC request for proposal (RFP) pricing is locked in and is often considerably less than the "market price."|
 
 ## Buy-in Policies
 * For Puma, the University of Arizona could only purchase whole chassis units from Penguin Computing. That is 4 CPU nodes (option 1D), 1 GPU node with 4 GPUs (option 2D), or 1 high memory nodes (option 3). Research Computing worked to match partial node buy-in requests to make full nodes.
-* Monthly high priority time is calculated as: (Number of CPUs * 24 hours * 365 year) / 12 months
-* Purchasing GPUs expands the limit the PI has on number of GPUs that can be used at any time
+* Monthly high priority time is calculated as: $\frac{{\text{{Number of CPUs}} \times 24 \text{{ hours/day}} \times 365 \text{{ days/year}}}}{{12 \text{{ months/year}}}}$
+* Purchasing GPUs expands the limit the PI has on number of GPUs that can be used at any time.
 * Buy-in high priority allocations will last the lifetime of the system. Puma was purchased in August 2020 and will be officially end-of-life August 2025.
-* The HPC Buy-in program is not designed to replace or compete with the very large‐scale resources at national NSF and DOE facilities, e.g. ACCESS, the Open Science Grid. National resources are available at no financial cost to most US-based researchers through competitive proposal processes. Please contact our [consulting team](../../support_and_training/consulting_services/) if you are interested in applying for these resources.
+* The HPC Buy-in program is not designed to replace or compete with the very large‐scale resources at national NSF and DOE facilities, e.g. [ACCESS](../../support_and_training/external_resources/#access), the Open Science Grid, etc. National resources are available at no financial cost to most US-based researchers through competitive proposal processes. Please contact our [consulting team](../../support_and_training/consulting_services/) if you are interested in applying for these resources.
 * The HPC Buy-in program is designed to meet the needs of researchers with medium‐scale HPC requirements who want guaranteed, consistent access to compute resources.
 
 ## High-priority Allocation Policies

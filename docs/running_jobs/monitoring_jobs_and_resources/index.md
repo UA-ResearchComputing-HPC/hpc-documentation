@@ -3,7 +3,7 @@
 ## Monitoring Jobs
 
 !!! tip 
-    Some of these functions are specific to the UA HPC, and may not work if invoked on other systems. 
+    Some of these functions are specific to the UArizona HPC, and may not work if invoked on other systems. 
 
 
 Every job has a unique ID associated with it that can be used to track its status, view resource allocations, and resource usage. Below is a list of some helpful commands you can use for job monitoring.
