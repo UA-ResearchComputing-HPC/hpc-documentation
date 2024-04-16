@@ -18,3 +18,14 @@
         float: none; 
     }
 }
+
+.highlighted-research {
+    float: right;
+}
+
+@media (max-width: 800px) {
+    .highlighted-research {
+        float: none; 
+        width: 80%;
+    }
+}

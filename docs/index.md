@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/stylesheets/images.css">
 
 
-<img class="img-right" src="assets/images/home/uofa_cactus_computing2.png" alt="cactus" width="300">
+<img class="img-right" src="assets/images/home/uofa_cactus_computing2.png" alt="cactus" width="300px" style="margin: 10px;">
 
 ## Introduction
 
@@ -93,18 +93,13 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Faster Interactive Sessions__
+-   :material-file-document-alert-outline:{ .lg .middle } __New HPC Documentation!__
 
     ---
 
-    Are you frustrated waiting for slow interactive sessions to start? Try using the standard queue on ElGato. We have provisioned 44 nodes to only accept the standard queue to facilitate faster connections. To access a session, run
+    Have you seen our shiny new documentation website? If not, check out, well, this page! The content is the same as the Confluence site you're used to, but (we hope) better organized, easier to navigate, and faster. Have suggestions? Let us know!
 
-    ```bash
-    (puma) [netid@junonia ~]$ elgato
-    (elgato) [netid@junonia ~]$ interactive -a <your_group> 
-    ```
 
-    See our page on [interactive jobs](./running_jobs/interactive_jobs/) for more info.
 
 -   :material-expansion-card:{ .lg .middle } __New MIG Resources__
 
@@ -128,13 +123,16 @@ These resources specifically do not support Regulated Research, which might be I
 
 ## Highlighted Research
 
-<img class="img-right" src="./assets/images/home/HypersonicTravel.jpg" width="300px">
+**Reconstructing the History of the Solar System Using HPC**
 
-**Faster Speeds Need Faster Computation**
+<img class="highlighted-research" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
 
-Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
 
-In the image to the right, instantaneous flow structures obtained from a DNS for a flared cone at Mach 6 are visualized using the Q-isocontours colored with instantaneous temperature disturbance values. The small scales towards the end of the computational domain indicate the regions where the boundary layer is turbulent. 
+Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
+From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
+
+One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
+High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown below. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
 
 ## Our Mission
 
