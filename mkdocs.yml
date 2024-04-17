@@ -26,11 +26,7 @@ nav:
     - Allocations: resources/allocations/index.md
     - Compute Resources: resources/compute_resources/index.md
     - Research Data Center: resources/data_center/index.md
-    - Secure Services:
-      - Overview: resources/secure_hpc/overview/index.md
-      - Prerequisites: resources/secure_hpc/prerequisites/index.md
-      - Access: resources/secure_hpc/access/index.md
-      - Storage and Transfers: resources/secure_hpc/storage_and_transfers/index.md
+    - Secure Services: resources/secure_hpc/index.md
 
   - Access:
     - Account Creation: registration_and_access/account_creation/index.md
