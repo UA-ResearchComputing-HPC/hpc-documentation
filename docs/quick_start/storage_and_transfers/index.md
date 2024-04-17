@@ -8,15 +8,15 @@ When you first access a login node, you're located in your home directory. This 
 
     Once your data reaches the 50 GB limit you will experience problems, like the inability to log into Open OnDemand because the session file cannot be created. And your jobs may fail with unexpected errors depending on how your software reacts to no more space for writing output. 
 
-<center><img src="images/filexfer.png" style="height: 300px;"></center>
+<center><img src="images/filexfer.png" title="HPC data storage" style="height: 300px;"></center>
 
 To store your files in your home, you will need to transfer them to the system. Small files can most easily be transferred to/from HPC using our web interface [Open OnDemand](https://ood.hpc.arizona.edu/). In the upper-left you'll see a dropdown called Files where you can select Home Directory. 
 
-<center><img class="ood-screenshots" src="images/home.png"></center>
+<center><img class="ood-screenshots" title="OnDemand home storage" src="images/home.png"></center>
 
 On the following page, select "Upload" to open a window where you can drag/drop files.
 
-<center><img class="ood-screenshots" src="images/file_upload.png" ></center>
+<center><img class="ood-screenshots" title="OnDemand data upload" src="images/file_upload.png" ></center>
 
 For larger files, we have a designated **Data Transfer Node** (DTN). Comprehensive instructions for alternative methods for file transfers can be found on [our data transfer page](../../storage_and_transfers/transfers/overview/). 
 

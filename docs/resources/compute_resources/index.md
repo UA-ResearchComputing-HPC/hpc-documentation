@@ -50,7 +50,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 === "Ocelote"
-    <img src="images/p100_info.png" width=400px style="float: right; margin: 5px;">
+    <img src="images/p100_info.png" title= width=400px style="float: right; margin: 5px;">
     Ocelote has 46 compute nodes with Nvidia P100 GPUs that are available to researchers on campus. The limitation is a maximum of 10 concurrent jobs. Previously, one node with a V100 was available, but it has since been replaced with a P100. Tasks which require multiple GPUs must either request multiple nodes on Ocelote, or use Puma's GPU nodes.
 
 === "El Gato"

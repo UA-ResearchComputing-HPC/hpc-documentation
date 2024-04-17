@@ -37,7 +37,7 @@ Type "shell" to access the job submission hosts for all environments
 ```
 If all has gone well, you are now connected to what is known as the bastion host. 
 
-<center><img src="images/bastion.png" style="height: 300px;"></center>
+<center><img src="images/bastion.png" title="HPC bastion host" style="height: 300px;"></center>
 
 The bastion host is the first computer you land on when you log in using the hostname ```hpc.arizona.edu```. This machine is only used to validate your credentials and provide a gateway to the rest of the HPC environment. It is not used for storing files and has no software installed so no computational work is done at this stage. As a test, try running the command ```hostname```:
 
@@ -55,7 +55,7 @@ Next, to advance from the bastion host, type the command ```shell```.
 
 After you type ```shell``` on the bastion host, you're connected to a computer called a login node. 
 
-<center><img src="images/login.png" style="height: 300px;"></center>
+<center><img src="images/login.png" title="HPC login nodes" style="height: 300px;"></center>
 
 We have two of these available and you will be assigned one at random. If you run the ```hostname``` command as you did on the bastion host, you should see either ```wentletrap``` or ```junonia```. 
 

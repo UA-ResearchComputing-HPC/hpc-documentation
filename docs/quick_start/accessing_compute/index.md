@@ -5,7 +5,7 @@
 
 Unlike the bastion host and login nodes, there are many compute nodes and each has, as the name suggests, a large amount of computational resources available to run your work. For example, Puma standard nodes have 94 available CPUs and a whopping 470 GB of RAM. 
 
-<center><img src="images/compute.png" style="height: 300px;"></center>
+<center><img src="images/compute.png" title="HPC compute nodes" style="height: 300px;"></center>
 
 To get a sense of what the cluster looks like, try running the command ```nodes-busy```. The output should look something like this:
 
