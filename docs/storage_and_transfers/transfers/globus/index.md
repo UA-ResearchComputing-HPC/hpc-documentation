@@ -11,7 +11,7 @@ A list of endpoint names managed by HPC are shown below for reference. For more 
 |UA HPC Filesystems|[HPC's main storage array](../../storage/hpc_storage/) (access to home, xdisk, and groups)|
 |UA Rental Storage Filesystem|[HPC rental storage](../../storage/rental_storage/)|
 |Tier 2 AWS Storage|[HPC-managed AWS S3 buckets](../../storage/tier2_storage/)|
-|UA HPC HIPAA Filesystems|[Soteria](../../../resources/secure_hpc/overview/)|
+|UA HPC HIPAA Filesystems|[Soteria](../../../resources/secure_hpc/)|
 
 ## Accessing Globus
 Globus can be used as a web application. To access it, navigate to [https://www.globus.org/](https://www.globus.org/). Next, click **Log In** in the upper right-hand corner

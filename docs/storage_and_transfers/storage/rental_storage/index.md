@@ -6,7 +6,7 @@
     Your ```/rental``` allocation is only mounted on our Data Transfer Nodes (hostname `filexfer.hpc.arizona.edu`) and is not directly accessible from the HPC login or compute nodes. 
 
 !!! warning "No Controlled Data"
-    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
+    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/) for more information. 
 
 We offer a rental storage solution that has less performance than our primary SSD array making it affordable for researchers to rent. This storage array is located in the Research Data Center and is mounted on our data transfer nodes which makes it more accessible than most other options. Data in your rental space will be accessible via the command line and the graphical transfer application Globus. 
 

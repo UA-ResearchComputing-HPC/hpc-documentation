@@ -3,7 +3,7 @@
 ## Overview
 
 !!! warning "No Controlled Data"
-    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
+    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/) for more information. 
 
 Research Technologies in partnership with UITS has implemented an AWS rental storage solution. This AWS option is called Tier 2 which differs from Tier 1, the primary storage that is directly connected to the HPC clusters. Tier 1 is very fast, very expensive, and immediately available for active analyses. Tier 2 is intended for archival data not immediately undergoing active analyses and for backups (highly encouraged!). Researchers can use the software Globus to move data to Tier 2, and can also move data from other sources (called endpoints). The data in Tier 2 will not be mounted on HPC, and so Globus will be used to move it back to Tier 1 if needed.
 

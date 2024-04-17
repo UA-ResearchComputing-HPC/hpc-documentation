@@ -9,7 +9,7 @@
     Faculty members/PIs can share their allocations with group members. To do so, in step 6 in the [Accessing Your R-DAS Allocation](#accessing-your-r-das-allocation) section below, group members will choose the allocation with their faculty member's/PI's NetID.
 
 !!! warning "No Controlled Data"
-    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/overview/) for more information. 
+    This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](../../../resources/secure_hpc/) for more information. 
 
 On October 16, 2023, we went live with the Research Desktop Attached Storage Array (R-DAS). R-DAS provides up to 5 TB of no-cost storage capacity for each PI group. Our requirement was to enable our users to easily share data with other research group members. You can treat the allocation as a drive mounted on your local computer. R-DAS is intended for storing open research data, but not controlled or regulated data.
 

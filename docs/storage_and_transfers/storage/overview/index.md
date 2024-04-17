@@ -11,7 +11,7 @@
     1. Large datasets where only subsets are actively being analyzed.
     2. Results no longer requiring immediate access.
     3. Backups (highly encouraged!).
-5. Data that require HIPAA-compliance can be stored on [Soteria](../../../resources/secure_hpc/overview/) (currently in the pilot phase).
+5. Data that require HIPAA-compliance can be stored on [Soteria](../../../resources/secure_hpc/) (currently in the pilot phase).
 
 
 <center>
@@ -19,7 +19,7 @@
 graph LR
   A[My data are...] --> B{Controlled?}
   B-->|Yes| C{HIPAA?};
-  C-->|Yes| D[<a href="../../../resources/secure_hpc/overview/">Soteria</a>];
+  C-->|Yes| D[<a href="../../../resources/secure_hpc/">Soteria</a>];
   C-->|No| E[Unsupported];
   B-->|No| F{Archival?}
   F-->|Yes| G[<a href="../../storage/tier2_storage/">AWS Tier 2<br>Storage</a>]

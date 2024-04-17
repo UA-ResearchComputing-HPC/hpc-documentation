@@ -8,7 +8,7 @@
 <button class="collapsible">How do I get access to Soteria?</button>
 <div class="content">
   <p>
-    You will first need to request access. Follow the instructions in our <a href="../../../resources/secure_hpc/overview/">Secure HPC page</a> to see all the steps that are required.
+    You will first need to request access. Follow the instructions in our <a href="../../../resources/secure_hpc/">Secure HPC page</a> to see all the steps that are required.
   </p>
 </div>
 
@@ -16,7 +16,7 @@
 <button class="collapsible">Why am I getting "Operation timed out" when I try to ssh to Soteria?</button>
 <div class="content">
   <p>
-    It's possible you're not <a href="../../../resources/secure_hpc/prerequisites/">connected to the VPN</a>. You will need to be connected to access any Soteria resources.
+    It's possible you're not <a href="../../../resources/secure_hpc/#prerequisites-and-registration">connected to the VPN</a>. You will need to be connected to access any Soteria resources.
   </p>
 </div>
 
