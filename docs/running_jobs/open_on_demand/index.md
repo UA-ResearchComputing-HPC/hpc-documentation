@@ -110,7 +110,7 @@ When you first submit your job, it will show as having a status of "Queued". Onc
 
 === "Virtual Desktop"
 
-    !!! danger "Anaconda compatability issues"
+    !!! danger "Anaconda compatibility issues"
         If you have Anaconda initialized in your account, ensure you have [turned off Conda's auto-activation feature](../../software/popular_software/anaconda/#__tabbed_1_1). If auto-activation is enabled, your desktop jobs will likely fail with the error `Could not connect to session bus` 
 
     One nice feature of Open OnDemand is the ability to interact with HPC using a virtual Desktop environment. This provides a user-friendly way to run applications, perform file management, and navigate through your directories as though you were working with a local computer. Additionally, it eliminates the need to use [X11 forwarding](../../registration_and_access/system_access/#x11-forwarding) when working with GUI applications allowing an easy way to interact with software such as Matlab, VisIt, or Anaconda.
