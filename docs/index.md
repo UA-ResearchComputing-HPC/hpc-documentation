@@ -6,19 +6,12 @@
 
 ## Introduction
 
-The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of CPU time and storage space. 
+The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations) and [storage space](./storage_and_transfers/storage/overview/). 
 
 This documentation site provides technical details relevant to using our HPC system. Whether you are just starting your journey into computational sciences or are a seasoned programmer, we hope you will find something useful in these pages. This site is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
 
 
-## Quick Links
-
-<p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
-</p>
-
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
+## Featured Links
 
 <p style="display:inline-block;">
   <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
@@ -41,10 +34,16 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
 
+<p style="display:inline-block;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
+</p>
+
+<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
 
 ## Available Resources
 
-??? example "Our Clusters"
+??? example "Our Clusters (click to expand)"
 
     === "Puma"
         <img class="img-right" src="assets/images/home/puma-logo.jpg" alt="puma" width="250">
@@ -123,17 +122,27 @@ These resources specifically do not support Regulated Research, which might be I
 
 ## Highlighted Research
 
-**Reconstructing the History of the Solar System Using HPC**
+=== "Planetary History"
+    
+    **Reconstructing the History of the Solar System Using HPC**
 
-<img class="highlighted-research" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
+    <img class="highlighted-research" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
 
+    Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
+    From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
 
-Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
-From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
+    One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
+    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown below. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
 
-One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
-High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown below. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
+=== "Hypersonic Flow"
+    
+    **Faster Speeds Need Faster Computation**
 
+    <img src="./assets/images/home/HypersonicTravel.jpg" align="right" width="300px">
+
+    Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
+
+    In the image to the right, instantaneous flow structures obtained from a DNS for a flared cone at Mach 6 are visualized using the Q-isocontours colored with instantaneous temperature disturbance values. The small scales towards the end of the computational domain indicate the regions where the boundary layer is turbulent. 
 
 ## Acknowledgements
 
