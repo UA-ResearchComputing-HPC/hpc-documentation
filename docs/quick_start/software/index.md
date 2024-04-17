@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
-# Software on HPC
+# Software
 
 It's hard to perform analyses without software. We've seen that software packages are not available on the login nodes, but now that we're connected to a compute node, we can view and use what's available. 
 

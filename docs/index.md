@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/stylesheets/images.css">
 
 
-<img class="img-right" src="assets/images/home/uofa_cactus_computing2.png" alt="cactus" width="300px" style="margin: 10px;">
+<img class="img-right" src="assets/images/home/uofa_cactus_computing2.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">
 
 ## Introduction
 
@@ -14,28 +14,28 @@ This documentation site provides technical details relevant to using our HPC sys
 ## Featured Links
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./registration_and_access/account_creation/"> Account Creation</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview"> Quick Start</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
 </p>
 
@@ -46,7 +46,7 @@ This documentation site provides technical details relevant to using our HPC sys
 ??? example "Our Clusters (click to expand)"
 
     === "Puma"
-        <img class="img-right" src="assets/images/home/puma-logo.jpg" alt="puma" width="250">
+        <img class="img-right" src="assets/images/home/puma-logo.jpg" title="Puma image" alt="puma" width="250">
         Implemented in the middle of 2020, Puma is the biggest cat yet. Similar to Ocelote, it has standard CPU nodes (with 94 cores and 512 GB of memory per node), GPU nodes (with Nvidia V100) and two high-memory nodes (3 TB). Local scratch storage increased to ~1.4 TB. Puma runs on CentOS 7.
 
         As is the case for our other supercomputers, we use the RFP process to get the best value for our financial resources, that meet our technical requirements. This time Penguin Computing one with AMD processors. This is tremendously valuable as each node comes with:
@@ -61,7 +61,7 @@ This documentation site provides technical details relevant to using our HPC sys
         - Six nodes with four Nvidia V100S GPU's each
 
     === "Ocelote"
-        <img class="img-right" src="assets/images/home/ocelot.png" alt="ocelote" width="250">
+        <img class="img-right" src="assets/images/home/ocelot.png" title="Ocelote image" alt="ocelote" width="250">
         Ocelote arrived in 2016. Lenovo's Nextscale M5 technology was the winner of the RFP mainly on price, performance and meeting our specific requirements. Ocelote has one large memory node with 2TB of memory and 46 nodes with Nvidia P100 GPUs for GPU-accelerated workflows. This cluster is actually the next generation of the IBM cluster we call El Gato. Lenovo purchased IBM's Intel server line in 2015.
 
         In 2021, Ocelote's operating system was upgraded from CentOS6 to CentOS7 and was configured to use SLURM, like Puma. It will continue until it is either too expensive to maintain or it is replaced by something else.
@@ -73,7 +73,7 @@ This documentation site provides technical details relevant to using our HPC sys
             - 46 nodes with Nvidia P100 GPU's
 
     === "El Gato"
-        <img class="img-right" src="assets/images/home/jones-flat.png" alt="elgato" width="100">
+        <img class="img-right" src="assets/images/home/jones-flat.png" title="ElGato image" alt="elgato" width="100">
         Implemented at the start of 2014, El Gato has been reprovisioned with CentOS 7 and new compilers and libraries. From July 2021 it has been using Slurm for job submission. El Gato is our smallest cluster with 130 standard nodes each with 16 CPUs. Purchased by an NSF MRI grant by researchers in Astronomy and SISTA.
 
 
@@ -126,19 +126,19 @@ These resources specifically do not support Regulated Research, which might be I
     
     **Reconstructing the History of the Solar System Using HPC**
 
-    <img class="highlighted-research" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
+    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
 
     Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
     From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
 
     One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
-    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown below. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
+    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown in the image above. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
 
 === "Hypersonic Flow"
     
     **Faster Speeds Need Faster Computation**
 
-    <img src="./assets/images/home/HypersonicTravel.jpg" align="right" width="300px">
+    <img src="./assets/images/home/HypersonicTravel.jpg" title="flow structures visualization" align="right" width="300px">
 
     Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
 

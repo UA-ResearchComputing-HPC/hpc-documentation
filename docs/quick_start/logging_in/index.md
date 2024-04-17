@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 
-# Logging In and System Layout
+# Logging In
 
 ??? warning "Account creation is necessary to log in"
     If you have not yet done so, you will need to register for an account to log in. See <a href="../../registration_and_access/account_creation/" target="_blank">our registration documentation</a> for steps. 

@@ -1,4 +1,4 @@
-# UArizona HPC Quick Start Guide
+# HPC Quick Start
 
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 
