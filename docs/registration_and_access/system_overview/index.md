@@ -4,7 +4,7 @@ The HPC system has a structure of interconnected nodes and storage systems. It i
 
 Below is a graphic depiction of the layout of the HPC nodes:
 
-<center><img src="images/nodes.png" style="height: 400px;"></center>
+<center><img src="images/nodes.png" title="HPC system diagram" style="height: 400px;"></center>
 
 **Bastion Host**
 

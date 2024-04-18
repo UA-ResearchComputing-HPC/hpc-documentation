@@ -20,7 +20,7 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
     2. Go to the dropdown menu at the top of the screen and select ```Clusters```
     3. Click ```>_Shell Access```
     
-        <img src="images/ood_shell.png" alt="ood-shell" width="800"/>
+        <img src="images/ood_shell.png" title="OnDemand shell access" alt="ood-shell" width="800"/>
         
     4. This will put you on the command line on one of the login nodes where you may perform regular housekeeping work, submit jobs, or request an interactive session. By default, you will automatically be connected to Puma. To navigate to a different cluster, use the displayed shortcuts. 
         
@@ -31,15 +31,15 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
         
     2. A form will appear where you will select the target cluster, enter the amount of time you'd like to be allotted (in hours), the number of cores you need, your PI Group (if you are unsure what your group name is, you can check in [https://portal.hpc.arizona.edu/portal/](https://portal.hpc.arizona.edu/portal/)), and the queue. Once you've filled in your request, click Launch.
         
-        <img src="images/desktop_form.jpg" width="700"/>
+        <img src="images/desktop_form.jpg" width="700" title="OnDemand Desktop form" />
         
     3. A window will appear with the status of your request. It will start in a Pending state and will switch to Running when your desktop session is ready. Click Launch Interactive Desktop to access your session.
         
-        <img src="images/desktop_tile.jpg" width="700"/>
+        <img src="images/desktop_tile.jpg" title="Running job tile" width="700"/>
         
     4. That's it! You can now use the cluster with a Desktop interface
         
-        <img src="images/desktop_session.png" width="700"/>
+        <img src="images/desktop_session.png" title="Desktop job interface" width="700"/>
 
 ## Command Line Access
 
@@ -64,7 +64,7 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
     === "PuTTY"
         PuTTY is the most popular open source SSH Windows client. To use it: download, install, and open the [Putty client](https://www.putty.org/). Next, open a connection and enter ```hpc.arizona.edu``` under **Host Name** and press **Open**
             
-        <img src="images/putty-login.jpg" width="400"/>
+        <img src="images/putty-login.jpg" title="PuTTY configuration"width="400"/>
             
         This will open a terminal. At the prompt, enter the following, replacing ```<netid>``` with your own NetID:
             
@@ -75,9 +75,13 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
         You will then be prompted to Duo-Authenticate. If the process is successful, you will be connected to the bastion host.
         
     === "MobaXterm"
-        MobaXterm is another available SSH Windows client. To connect to HPC, [download and install MobaXterm](https://mobaxterm.mobatek.net/download.html), open the software, select **Session → SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your UArizona NetID. To connect, click OK at the bottom of the screen:
+        MobaXterm is another available SSH Windows client. To connect to HPC, [download and install MobaXterm](https://mobaxterm.mobatek.net/download.html), open the software, select **Session** 
             
-        <img src="images/MobaXterm-session.png" width="470"/><img src="images/MobaXterm-connect.png" width="400"/>
+        <img src="images/MobaXterm-session.png" title="MobaXterm session" width="650px"/>
+
+        From there, select **SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your UArizona NetID. To connect, click OK at the bottom of the screen:
+        
+        <img src="images/MobaXterm-connect.png" title="MobaXterm SSH" width="650"/>
             
         This will open a terminal and will prompt you for your UArizona password. You will then need to Duo-authenticate. If everything is successful, you will be connected to the bastion host.
         
@@ -171,7 +175,7 @@ If it comes back blank, X11 forwarding is not enabled.
     === "PuTTY"
         To enable X11 forwarding in PuTTY, go to SSH → X11 and select the box next to Enable X11 forwarding.
             
-        <img src="images/putty-x11.png" width="400"/>
+        <img src="images/putty-x11.png" title="PuTTY X11" width="400"/>
             
         Once you've connected to the bastion host, connect to the login nodes with the an additional flag ```-X```:
             
@@ -181,7 +185,7 @@ If it comes back blank, X11 forwarding is not enabled.
     === "MobaXterm"
         To enable X11 forwarding in MobaXterm, open a new session, select **SSH**, and open **Advanced SSH settings**. Select the option below called **X11-Forwarding**.
             
-        <img src="images/MobaXterm-X11.png" width="600"/>
+        <img src="images/MobaXterm-X11.png" title="MobaXterm X11" width="600"/>
             
         Once you've connected to the bastion host, connect to the login nodes with the an additional flag ```-X```:
         ```bash

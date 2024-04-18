@@ -41,7 +41,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 === "Puma"
-    <img src="images/v100_info.jpg" width=400px style="float: right; margin: 5px;">
+    <img src="images/v100_info.jpg" title="v100 GPU specifications" width=400px style="float: right; margin: 5px;">
     Puma has a different arrangement for GPU nodes than Ocelote. Whereas Ocelote has one GPU per node, Puma has four. This has a financial advantage for providing GPU's with lower overall cost, and a technical advantage of allowing jobs that can use multiple GPU's to run faster than spanning multiple nodes.
     
     Puma's GPU nodes have four Nvidia V100S model GPUs. They are provisioned with 32 GB memory compared to 16 GB on the P100's.  
@@ -50,7 +50,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 === "Ocelote"
-    <img src="images/p100_info.png" title= width=400px style="float: right; margin: 5px;">
+    <img src="images/p100_info.png" title="p100 GPU specifications" width=400px style="float: right; margin: 5px;">
     Ocelote has 46 compute nodes with Nvidia P100 GPUs that are available to researchers on campus. The limitation is a maximum of 10 concurrent jobs. Previously, one node with a V100 was available, but it has since been replaced with a P100. Tasks which require multiple GPUs must either request multiple nodes on Ocelote, or use Puma's GPU nodes.
 
 === "El Gato"
@@ -61,6 +61,8 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 ### Multi-Instance GPU (MIG) Resources
+
+!!! info "MIG resources are only available on Puma"
 
 **Overview**
 

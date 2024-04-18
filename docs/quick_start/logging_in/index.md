@@ -2,12 +2,12 @@
 
 # Logging In
 
-??? warning "Account creation is necessary to log in"
+## System Access
+!!! warning "Account creation is necessary to log in"
     If you have not yet done so, you will need to register for an account to log in. See <a href="../../registration_and_access/account_creation/" target="_blank">our registration documentation</a> for steps. 
 
-## System Access
 
-!!! tip "Login issues"
+!!! info "Login issues"
     If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/account_access/).
 
 Once you've succesfully registered for an HPC account, you're ready to log in. There are two main methods to access the HPC system

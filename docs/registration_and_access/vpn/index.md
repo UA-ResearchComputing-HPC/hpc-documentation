@@ -20,11 +20,11 @@ You will find the following VPN services useful for accessing some of the resour
     Follow the steps below to connect to UArizona HPC VPN (the screenshots are from a Mac, but the experience is similar across OSs):
         
     1. Open Cisco Secure Client
-    2. Enter ```vpn.hpc.arizona.edu``` in the address bar and click **Connect**.<br><img src="images/cisco_connect.png" style="width:450px;">
-    3. In the window that launches, enter your UArizona NetID as your Username and click **OK**.<br><img src="images/cisco_username.png" style="width:450px;">
-    4. In the next window, enter your UArizona NetID password and click **OK**.<br><img src="images/cisco_password.png" style="width:450px;">
-    5. In the window that launches, enter the NetID+ method you selected when you enrolled.<br><img src="images/cisco_method.png" style="width:450px;">
-    6. Lastly, review the notice box and click Accept.<br><img src="images/cisco_accept.png" style="width:450px;">
+    2. Enter ```vpn.hpc.arizona.edu``` in the address bar and click **Connect**.<br><img src="images/cisco_connect.png" title="HPC VPN connection" style="width:450px;">
+    3. In the window that launches, enter your UArizona NetID as your Username and click **OK**.<br><img src="images/cisco_username.png" title="VPN username" style="width:450px;">
+    4. In the next window, enter your UArizona NetID password and click **OK**.<br><img src="images/cisco_password.png" title="VPN password" style="width:450px;">
+    5. In the window that launches, enter the NetID+ method you selected when you enrolled.<br><img src="images/cisco_method.png" title="VPN DUO auth" style="width:450px;">
+    6. Lastly, review the notice box and click Accept.<br><img src="images/cisco_accept.png" title="VPN accept" style="width:450px;">
         
 === "CLI"
     !!! failure "Use of sudo"

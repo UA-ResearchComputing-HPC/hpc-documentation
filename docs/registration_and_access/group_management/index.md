@@ -1,13 +1,21 @@
 # Group Management 
 
+<link rel="stylesheet" href="../../assets/stylesheets/images.css">
+
+
 ## Overview
 
 HPC groups allow faculty members to manage file permissions, job allocations, and group members. When a PI creates a new HPC account, a group is created with an allocation of space and time. Additional storage is available for free upon request, called [xdisk](../../storage_and_transfers/storage/hpc_storage/)
 
-There are two types of Groups: **Research Groups** and **Class Groups**.
+There are two types of Groups: 
 
-* Research groups include any faculty, postdocs, graduate students, DCCs, staff, or student workers actively affiliated with your group's research. 
-* Class groups are for educational purposes only and will include students enrolled in a semester-long course.
+* **Research Groups**
+
+    Research groups include any faculty, postdocs, graduate students, DCCs, staff, or student workers actively affiliated with your group's research. 
+
+* **Class Groups**
+
+    These are for educational purposes only and will include students enrolled in a semester-long course.
 
 ## Research Groups
 
@@ -26,17 +34,17 @@ Research groups can also be used to manage access permissions to files and folde
 
 To add members to your research group, go to [https://portal.hpc.arizona.edu/](https://portal.hpc.arizona.edu/) and click the **Manage Groups** tab at the top of the screen. Click your group's dropdown tab and click **Add Member**
 
-<img src="images/group_add.png" style="width:500px;">
+<img class="ood-screenshots" src="images/group_add.png" title="Manange group members">
 
 Enter the user's UArizona NetID in the box that appears, and select **Add**
 
-<img src="images/add_member.png" style="width:200px;">
+<img class="ood-screenshots" src="images/add_member.png" style="width: 300px;" title="Add NetID">
 
 To add members in bulk, you may also select **Upload Member List** and upload a CSV file of UArizona NetIDs.
 
 The process of adding new members may take a few seconds to complete. Once the changes have taken place, you will see the user's NetID in your group:
 
-<img src="images/added_user.png" style="width:500px;">
+<img class="ood-screenshots" src="images/added_user.png" title="Research group with new member">
 
 
 
@@ -46,7 +54,7 @@ A new group can be created at any time through the user portal. New groups will 
 
 To create a new group, log into the user portal, select the **Manage Groups** and select the **Add New Group** dropdown menu. 
 
-<img src="images/create-research-group.png" style="width:500px;">
+<img src="images/create-research-group.png" class="ood-screenshots" title="Add new research group">
 
 Once your group has been created, you will see it when running ```va``` (short for View Allocation) in the same block as your primary group:
 
@@ -71,15 +79,15 @@ If you are a faculty member and are teaching a course that makes use of HPC reso
 
 Log into your [user portal](https://portal.hpc.arizona.edu/), navigate to the **Manage Groups** tab, and select the **Add New Group** dropdown option at the top of the page.There will be an option to specify your **Group Type** on the right. Choose **Class** from the dropdown menu
 
-<img src="images/select-class-group.png" style="width:500px;">
+<img src="images/select-class-group.png" class="ood-screenshots" title="Select class group type">
 
 Under **Group Name**, enter something descriptive and then complete the process by clicking **Add Group**.
 
-<img src="images/name_group.png" style="width:500px;">
+<img src="images/name_group.png" class="ood-screenshots" title="Add class group">
 
 Once this process is complete, you can find your group's dropdown tab under **Manage Groups**. There you can add students either individually or in batch by uploading a CSV file with your student's NetIDs. You may also remove students from the group by clicking their NetIDs and then selecting Remove Member(s), or delete the group itself by selecting Delete Group.
 
-<img src="images/add_class_members.png" style="width:500px;">
+<img src="images/add_class_members.png" class="ood-screenshots" title="Class group interface">
 
 ### File Permissions and Storage
 Students in your class group will only be able to access files and directories owned by the class group. This means they will not be able to access files and directories owned by your standard research group. 
@@ -110,10 +118,10 @@ PI: parent_000 Total time: 100000:00:00
 ### Adding a Delegate
 PI's can delegate management rights to trusted group members. Delegates may create research and class groups, sponsor users, remove users, and request and manage storage offerings on behalf of their faculty sponsor. To add a group member as a delegate, the PI can click the **Manage Delegates** link on the home page of the [user portal](https://portal.hpc.arizona.edu/portal/). In the Manage Delegates window that appears, select **Add Delegate**, enter your group member's NetID, and click **Add**.
 
-<img src="images/add-delegate.png" style="width:500px;">
+<img src="images/add-delegate.png" class="ood-screenshots" title="Adding a group delegate">
 
 ### Instructions for Delegates
 
 Once a group member has been added as a delegate, they can log into the user portal, select **Switch User**, enter their PI's NetID in the pop-up field, and click **Switch User**. This will allow them to perform functions on their PI's behalf. They may switch back to their own account at any time by selecting Switch User and entering their own NetID.
 
-<img src="images/switch-user.png" style="width:500px;">
+<img src="images/switch-user.png" class="ood-screenshots" title="Delegate instructions">

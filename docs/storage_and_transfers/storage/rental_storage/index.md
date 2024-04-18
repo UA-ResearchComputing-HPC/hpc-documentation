@@ -70,11 +70,11 @@ Connection to filexfer.hpc.arizona.edu closed.
 
 1. PIs or [Group Delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) can request rental storage on behalf of their group. To do so, navigate to the [User Portal](https://portal.hpc.arizona.edu) in your browser, then choose the **Storage** tab
 
-    <img src="images/request_rental_storage.png" style="width:350px;">
+    <img src="images/request_rental_storage.png" title="Request rental storage" style="width:450px;">
 
 2. Select **Submit Rental Storage Request** under the **Rental Storage** heading and fill out the form. 
 
-    <img src="images/rental_storage_request_form.png" style="width:300px;">
+    <img src="images/rental_storage_request_form.png" title="Rental storage request form" style="width:350px;">
 
 3. Once your space has been created, you will receive an email notification that it is ready for use.
 
@@ -86,7 +86,7 @@ Connection to filexfer.hpc.arizona.edu closed.
 
 Your rental allocation can be resized through the user portal by navigating to the **Storage** tab and selecting **Modify Rental Quota** under the **Rental Storage** heading.
 
-<img src="images/resize_rental_allocation.png" width=400px>
+<img src="images/resize_rental_allocation.png" title="Resize rental allocation" width=450px>
     
 
 ## Checking Your Usage
@@ -96,7 +96,7 @@ You can check your allocation's size and current usage either through the user p
 === "User Portal"
     In the [user portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab and select **Check Rental Quota** from under the **Rental Storage** heading. This option is only available to PIs and group delegates.
 
-    <img src="images/check_rental_quota.png" width=500px>
+    <img src="images/check_rental_quota.png" title="Check rental quota" width=500px>
 
 === "Command Line"
     From an HPC login node, enter the command ```uquota```, for example:
