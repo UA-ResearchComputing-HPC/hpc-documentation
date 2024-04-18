@@ -85,11 +85,11 @@ ipython kernel install --name <your_environment> --user
 
 Once you've configured your kernel, go to [Open OnDemand](https://ood.hpc.arizona.edu/) and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your custom name. For example, if you created a conda environment with the kernel name py38, you should see the following:
 
-<img width="300" src="images/conda-custom-kernel.png">
+<img src="images/conda-custom-kernel.png" title="Select custom kernel" style="width: 300px; box-shadow: 5px 5px 5px #999;">
 
 Once you've selected your environment, try checking the Python version in your notebook using the ```sys``` module. Additionally, for demonstration purposes, we'll check that a custom package installed in py38 (emoji) can be imported and is working. 
 
-<img width="800" src="images/conda-kernel-testing.png">
+<img src="images/conda-kernel-testing.png" title="Test custom kernel" style="width: 800px; box-shadow: 5px 5px 5px #999;">
 
 ### Loading Modules in Jupyter
 

@@ -10,7 +10,7 @@ RStudio is a popular method for running analyses (and for good reason!), but for
 
 ## Creating a Custom Library
 
-!!! tip ""
+!!! tip "R Package Debugging"
      R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues.
 
 **Creating your first library**
@@ -179,15 +179,15 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     Now, in your desktop session's terminal, execute the rserver.sh script using ```./rserver.sh```
 
-    <img src="images/rserver_execute.png" width=500px>
+    <img src="images/rserver_execute.png" title="Execute rserver.sh" style="width: 600px;" >
 
     Next, open a Firefox window and enter ```localhost:8787``` for the URL. In your browser, you will be prompted to log into your RStudio server. Enter your NetID under Username. Under Password, enter the password you defined in the script server.sh.
 
-    <img src="images/rstudio_login.png" width=500px>
+    <img src="images/rstudio_login.png" title="Sign into RStudio" style="width: 500px; box-shadow: 5px 5px 5px #999;">
 
     This will open your RStudio session:
 
-    <img src="images/rstudio_open.png" width=500px>
+    <img src="images/rstudio_open.png" title="Open RStudio session" style="width: 650px;">
 
 ## Setting a New User State Directory
 
@@ -206,15 +206,15 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 === "Current Session"
     If you'd like to change your working directory in an RStudio session, one option is to use ```setwd("/path/to/directory")``` in your terminal. Alternatively, if you'd like to see the contents of your new workspace in your file browser, you can navigate to the **Session** dropdown tab, navigate to **Set Working Directory**, and click **Choose Directory...**
 
-    <img src="images/session-choose-directory.png" width=700px>
+    <img src="images/session-choose-directory.png" title="Choose working directory" style="width: 700px;">
 
     From there, either navigate to the desired subdirectory, or click the ellipsis ```...``` in the upper right to enter the full path to a directory.
 
-    <img src="images/session-choose-directory-2.png" width=500px>
+    <img src="images/session-choose-directory-2.png" title="Select working directory" style="width: 500px;">
 
     Once you click **OK** and then **Choose** in the main file navigation window, R will change its working directory and you should see the contents of your new space under the Files browser in the lower right.
 
-    <img src="images/session-choose-directory-3.png" width=500px>
+    <img src="images/session-choose-directory-3.png" title="Full path to working directory" style="width: 500px;">
 
 === "All Non-Project Sessions"
     If you'd like to permanently set a different default working directory for all non-project RStudio sessions, navigate to the **Tools** dropdown tab and select **Global Options...**

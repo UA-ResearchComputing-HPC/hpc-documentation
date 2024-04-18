@@ -12,7 +12,7 @@ Apptainer has the ability to convert available docker images into sif format all
 
 As an example, we could pull an Ubuntu image from Docker Hub with OS 22.04 by searching for Ubuntu, opening the Tags tab, and copying their ```docker pull``` command:
 
-<img src="images/ubuntu_docker.png" width=800px>
+<img src="images/ubuntu_docker.png" title="Ubuntu docker image" style="width: 100%;">
 
 Then, on HPC, we can run:
 
@@ -37,11 +37,11 @@ The NVIDIA GPU Cloud (NGC) provides GPU-accelerated HPC and deep learning contai
 
 To pull images, you'll need to [register with Nvidia](https://ngc.nvidia.com/signin). Once you have an account, you can view their images [from their catalogue](https://catalog.ngc.nvidia.com/). Click on the name of the software you're interested in to view available versions
 
-<img src="images/nvidia-catalogue.png" width=700px>
+<img src="images/nvidia-catalogue.png" title="Nvidia NGC catalog" style="width: 700px;">
 
 If you click on the **Tags** tab at the top of the screen, you'll find the different versions that are available for download. For example, if we click on TensorFlow, we can get the pull statement for the latest tag of TensorFlow 2 by clicking the ellipses and selecting Pull Tag.
 
-<img src="images/tf-tags.png" width=700px>
+<img src="images/tf-tags.png" title="Tensorflow tags" style="width: 100%;">
 
 This will copy a ```docker pull``` statement to your clipboard, in this case:
 

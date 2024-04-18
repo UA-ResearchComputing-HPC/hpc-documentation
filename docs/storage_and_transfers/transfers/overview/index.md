@@ -4,7 +4,7 @@
     To make transfers to/from HPC, you will need to have logged into your account at least once. If you have not, you may encounter "directory does not exist" errors. This is because your home directory is not created until you log in for the first time. See our [System Access page](../../../registration_and_access/system_access/) for information on logging in.
 
 ## Designated Data Transfer Node for File Transfers
-<img src="images/HPCDiagram_FileTransfers.png"  width=400px align="right">
+<img src="images/HPCDiagram_FileTransfers.png" title="Data storage diagram" width=400px align="right">
 
 
 For efficient file transfers to and from the HPC system, utilize the designated data transfer node, hostname: **`filexfer.hpc.arizona.edu`**. This node is optimized for handling large data transfers and is equipped with a high-speed 100 Gb interconnect.

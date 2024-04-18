@@ -7,7 +7,7 @@
     Want to learn more about containers? Check out our [Intro to Containers workshop](../../../events/workshop_materials/intro_to_containers/). 
 
 
-<img class="img-right" src="images/Shipping.png" width="300px">
+<img class="img-right" src="images/Shipping.png" title="Shipping containers illustration" style="width: 300px;">
 
 A container is a packaged unit of software that contains code and all its dependencies including, but not limited to: system tools, libraries, settings, and data. This makes applications and pipelines portable and reproducible, allowing for a consistent environment that can run on multiple platforms.
 

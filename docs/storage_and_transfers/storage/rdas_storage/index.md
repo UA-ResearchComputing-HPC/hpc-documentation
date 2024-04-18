@@ -29,19 +29,19 @@ PIs can request an allocation on R-DAS from [https://portal.hpc.arizona.edu/port
 1. Go to the **Storage** tab
 2. Select **Create Shared Desktop Storage** under **Research Desktop Storage**
 
-    <img src="images/create-rdas-storage.png" style="width:400px;">
+    <img src="images/create-rdas-storage.png" title="Request R-DAS allocation" style="width:400px; box-shadow: 5px 5px 5px #999;">
     
 3. Select **Create** from the window that opens. 
       
-    <img src="images/select-create.png" style="width:400px;">
+    <img src="images/select-create.png" title="Create R-DAS allocation" style="width:400px; box-shadow: 5px 5px 5px #999;">
     
 4. A window will open with the MOU agreement. Review it and, if it is acceptable to you, select **Agree**.
 
-    <img src="images/accept-mou.png" style="width:600px;">
+    <img src="images/accept-mou.png" title="R-DAS MOU agreement" style="width:600px; box-shadow: 5px 5px 5px #999;">
     
 5. You can now select the **View Shared Desktop Storage** option from the main **Storage** page in the user portal
 
-    <img src="images/view-rdas-storage.jpg" style="width:400px;">
+    <img src="images/view-rdas-storage.jpg" title="View R-DAS storage" style="width:400px; box-shadow: 5px 5px 5px #999;">
     
 ## Accessing Your R-DAS Allocation
 !!! tip
@@ -82,21 +82,21 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
                 2. Press ++ctrl+l++. This makes the location bar editable.
 
-                3. Enter ```smb://rdas.hpc.arizona.edu``` in the location bar, and press ++Enter++.
+                3. Enter ```smb://rdas.hpc.arizona.edu``` in the location bar, and press ++enter++.
 
-                    <img src="images/rdas_smb_linux_gui.png" width=500px>
+                    <img src="images/rdas_smb_linux_gui.png" title="Browse network" style="width: 500px; box-shadow: 5px 5px 5px #999;">
 
                 4. A few moments later a window opens, prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). After entering the details, select **Connect** (on other file managers this may be **OK**). Some file managers, such as Caja and GNOME Files, also have a **Domain** field, whereas others, like Dolphin, do not. Either way, you do not need to modify its default value.
 
-                    <img src="images/rdas_password_linux_gui.png" width=300px>
+                    <img src="images/rdas_password_linux_gui.png" title="R-DAS credentials" style="width: 300px; box-shadow: 5px 5px 5px #999;">
 
                 5. Select the allocation named after your group from the list of allocations displayed.
 
-                    <img src="images/windows_shares_linux_gui.png" width=400px>
+                    <img src="images/windows_shares_linux_gui.png" title="Locate R-DAS allocation" style="width: 450px; box-shadow: 5px 5px 5px #999;">
 
                 6. On some file managers, such as Dolphin, you can right away access your allocation by double clicking on it. On others, such as Caja and GNOME Files, double clicking on it will open another window prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). Select **Connect as user**, enter the details, and select **Connect**. Your allocation will be mounted as a local drive.
 
-                    <img src="images/connect_as_user_linux_gui.png" width=400px>
+                    <img src="images/connect_as_user_linux_gui.png" title="R-DAS credentials" style="width: 400px; box-shadow: 5px 5px 5px #999;">
 
             === "CLI"
 
@@ -162,15 +162,15 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
         3. From the drop-down menu, select **Connect to Server**.
         4. In the window that opens, enter ```smb://rdas.hpc.arizona.edu``` in the address bar, and select **Connect**.
     
-            <img src="images/smb-link-connect-mac.png" style="width:400px;">
+            <img src="images/smb-link-connect-mac.png" title="Connect to server" style="width:450px;">
         
         5. After a few moments a window opens prompting for your **Name** (UA NetID) and **Password** (UA NetID password). After entering the details, select Connect.
     
-            <img src="images/enter_username_mac.png" style="width:400px;">
+            <img src="images/enter_username_mac.png" title="R-DAS credentials" style="width:450px;">
     
         6. A window will open with the list of allocations on the array. Select the allocation named after your group, and then select **OK**.
 
-            <img src="images/list_of_allocations_mac.png" style="width:400px;">
+            <img src="images/list_of_allocations_mac.png" title="Locate R-DAS allocation" style="width:400px;">
         
         
     === "Windows"
@@ -179,12 +179,12 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
         1. Open Windows Explorer.
         2. Enter ```\\rdas.hpc.arizona.edu``` in the location bar, and press ++enter++.
 
-            <img src="images/rdas-screenshot-windows.png" width=800px>
+            <img src="images/rdas-screenshot-windows.png" title="Connect to network" style="width: 100%; box-shadow: 5px 5px 5px #999;">
 
         3. A few moments later a window will open, prompting for your **Username** (```BLUECAT\``` followed by your UArizona NetID) and **Password** (UA NetID password). After entering the details, select **OK**.
 
-            <img src="images/network_credentials_windows.png" width=300px>
+            <img src="images/network_credentials_windows.png" title="R-DAS credentials" style="width: 350px; box-shadow: 5px 5px 5px #999;">
 
         4. Select the allocation named after your group from the list of allocations displayed. You can directly open the allocation by double-clicking on it, or mount it by right clicking on it and selecting **Map network drive**.
 
-            <img src="images/rdas-screenshot-windows2.png" width=800px>
+            <img src="images/rdas-screenshot-windows2.png" title="Map network drive" style="width: 100%; box-shadow: 5px 5px 5px #999;">

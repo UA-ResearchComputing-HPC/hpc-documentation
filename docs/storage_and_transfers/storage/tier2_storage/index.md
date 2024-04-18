@@ -60,18 +60,18 @@ Data movement costs are subsidized by UITS, researchers are not charged any AWS 
 
 First, log into the [User Portal](https://portal.hpc.arizona.edu/portal/) and navigate to the Storage tab at the top of the page. Select **Submit Tier 2 Storage Request**.
 
-<img src="images/request_tier2_storage.png" style="width:500px;">
+<img src="images/request_tier2_storage.png" title="Submit Tier 2 storage request" style="width:500px; box-shadow: 5px 5px 5px #999;">
 
 This will open a web form. Add your KFS number under **KFS Number**(1) and the email address for the Department's financial contact under **Business contact email**. There will also be two optional fields: **Subaccount** and **Project**. These are used for tagging/reporting purposes in KFS billing. You can safely leave these entries blank if you're not sure what they are. Once you have completed the form, click **Send request**. 
 { .annotate }
 
 1.  A KFS number is used for accounting purposes and used by your Department's finance specialist. If you do not know your KFS number, contact your department's financial office. 
 
-<img src="images/create.png" style="width:500px;">
+<img src="images/create.png" title="Tier 2 storage request form" style="width:400px; box-shadow: 5px 5px 5px #999;">
 
 Submitting this form will open a ServiceNow ticket. Processing time may take up to a few days. Once your request has been completed, you will receive a confirmation email with a link to subscribe for account alerts (e.g., notifications for a sudden spike in usage). 
 
-<img src="images/subscription-confirmation.png" style="width:500px;">
+<img src="images/subscription-confirmation.png" title="Tier 2 subscription confirmation" style="width:500px; box-shadow: 5px 5px 5px #999;">
 
 
 ## Checking Your Usage
@@ -81,7 +81,7 @@ Submitting this form will open a ServiceNow ticket. Processing time may take up 
 === "User Portal"
     You may check your storage usage at any time in the [User Portal](https://portal.hpc.arizona.edu/portal/). Navigate to the **Storage** tab, select **View Tier 2 Storage**, and click **Query Usage**.
     
-    <img src="images/query-usage.png" style="width:500px;">
+    <img src="images/query-usage.png" title="View Tier 2 storage usage" style="width:500px; box-shadow: 5px 5px 5px #999;">
     
     To view the size and storage classes of individuall objects, you will need to use the CLI interface.
 === "CLI"
@@ -104,11 +104,11 @@ Access keys will allow you to connect your AWS bucket using tools such as Globus
 
 To generate an access key, log into the [User Portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab, and select **Regenerate IAM Access Key**.
 
-<img src="images/regenerate_access_keys.png" style="width:500px;">
+<img src="images/regenerate_access_keys.png" title="Generate IAM access key" style="width:500px; box-shadow: 5px 5px 5px #999;">
 
 This will generate a **KeyID** and **Secret Access Key** used to establish the connection. Save these keys somewhere safe since **once the window is closed, they cannot be retrieved**. If you forget your keys, you can regenerate a new pair.
 
-<img src="images/show_access_keys.png" style="width:500px;">
+<img src="images/show_access_keys.png" title="View IAM access keys" style="width:500px; box-shadow: 5px 5px 5px #999;">
 
 
 ## Transferring Files
@@ -129,15 +129,15 @@ The time it takes for an object to be retrieved is dependent on its storage clas
         
     In the [User Portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab by clicking **Restore Archived Tier 2 Storage Object**:
     
-    <img src="images/restore_tier2_object.png" style="width:500px;">
+    <img src="images/restore_tier2_object.png" title="Restore archived files" style="width:450px; box-shadow: 5px 5px 5px #999;">
     
     This will open a box where you can enter the path to a file or directory in your bucket. Enter the path to the object you would like to restore:
     
-    <img src="images/select-object.png" style="width:500px;">
+    <img src="images/select-object.png" title="Archived object restore path" style="width:500px; box-shadow: 5px 5px 5px #999;">
     
     Once you select an object, click **Send Request** to initiate the retrieval
     
-    <img src="images/send_restore_request.png" style="width:500px;">
+    <img src="images/send_restore_request.png" title="Send restore request" style="width:500px; box-shadow: 5px 5px 5px #999;">
 
 === "CLI"
     A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool. This can be accessed using:

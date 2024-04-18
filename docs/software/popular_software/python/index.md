@@ -36,7 +36,7 @@ Multiple versions of Python are available on HPC. They are only available on com
     * Useful overview of virtualenv and venv: [InfoWorld Article: Python virtualenv and venv do's and don'ts](https://www.infoworld.com/article/3306656/python/python-virtualenv-and-venv-dos-and-donts.html?idg_eid=33b8cb1248bcd5c9ddcec9cbccd1b5cb&email_SHA1_lc=579ec7d94c8828baab0995f0b5d55ab21c1a5f2a&cid=ifw_nlt_infoworld_daily_2018-09-19&utm_source=Sailthru&utm_medium=email&utm_campaign=InfoWorld%20Daily:%20Weekday%20Edition%202018-09-19&utm_term=infoworld_daily)
     * In the following instructions any module commands have to be run from an interactive session on a compute node
 <div style="float: right; width: 0px; height: 1px"></div>
-<div style="float: right; clear: right"><iframe width="420" height="315" src="https://www.youtube.com/embed/YOSkjsTVtrc" allowfullscreen></iframe></div>
+<div style="float: right; clear: right"><iframe width="420" height="315" title="Virtual environment walkthrough" src="https://www.youtube.com/embed/YOSkjsTVtrc" allowfullscreen></iframe></div>
 
 One of the best things about Python is the number of packages provided by the user community. On a personal machine, the most popular method today for managing these packages is the use of a package manager, like ```pip```. Unfortunately, these may require root access preventing you from being able to successfully install the libraries you need.
 
@@ -97,11 +97,11 @@ ipython kernel install --name <your_environment> --user
 
 Once you've successfully created your kernel, go to [Open OnDemand](https://ood.hpc.arizona.edu/) and start a Jupyter Notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your custom kernel's name. For example, if the custom kernel's name was ```py38-env```:
 
-<img width="300" src="images/use-py38-custom-kernel.png">
+<img src="images/use-py38-custom-kernel.png" title="Select custom kernel" style="width: 350px; box-shadow: 5px 5px 5px #999;" >
 
 Once you've selected your environment, try loading a custom package you've installed to check that everything is working as expected. In this example, we'll check with the non-standard package ```emoji``` which has been installed in this environment:
 
-<img width="800" src="images/py-38-test.png">
+<img src="images/py-38-test.png" title="Testing custom kernel" style="width: 800px; box-shadow: 5px 5px 5px #999;">
 
 
 ### Loading Modules in Jupyter

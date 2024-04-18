@@ -36,4 +36,4 @@ Windows users can use software like WinSCP to make SCP transfers. To use WinSCP,
 
 To connect, enter ```filexfer.hpc.arizona.edu``` in the **Host Name** field, enter your **NetID** under **User name**, and enter your password. Accept by clicking **Login**. You'll be prompted to Duo Authenticate:
 
-<img src="images/WinSCP_login.png" style="width:100%;">
+<img src="images/WinSCP_login.png" title="WinSCP interface" style="width:100%;">
