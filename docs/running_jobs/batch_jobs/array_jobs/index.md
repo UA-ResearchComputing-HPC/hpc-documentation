@@ -3,7 +3,7 @@
 
 ## What Are Job Arrays?
 
-<img src="images/array.png" width="500px" align="right">
+<img src="images/array.png" title="Array job visualization" width="500px" align="right">
 
 Slurm job arrays are a powerful feature for submitting and managing multiple similar jobs efficiently using a single script. Instead of submitting individual jobs, users define an array with shared characteristics, treating them as a unified entity. Each subjob within the array is assigned a unique environment variable, enabling easy differentiation. Array jobs are submitted in the same manner as regular batch jobs: `sbatch myscript.slurm`. Slurm then schedules and executes these tasks based on resource availability, streamlining the process.
 

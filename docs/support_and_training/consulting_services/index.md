@@ -7,7 +7,7 @@
 [Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
 
-<img class="img-right" src="images/HelpDesk_0.png" width="350px" style="padding: 20px;">
+<img class="img-right" src="images/HelpDesk_0.png" title="Helpdesk illustration" width="350px" style="padding: 20px;">
 
 Consulting is available free of cost to everyone and we welcome you to reach out! Our services include, but are not limited to:
 
@@ -47,7 +47,9 @@ Consulting is available free of cost to everyone and we welcome you to reach out
     We use ServiceNow and can be reached with [a support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f). Many in our research community are accustomed to using the list service for hpc-consult. That continues to work but is not as efficient. And we really want to discourage sending emails directly to your favorite consultant.  
     
 ### Office Hours
-![Office Hours](images/office_hours.png){ align=right }
+
+<img class="img-right" src="images/office_hours.png" title="Office hours interface" width="450px" style="padding: 20px;">
+
 
 We host virtual, drop-in office hours every Wednesday from 2:00-4:00pm. Drop by to visit with our consultants to ask any questions you have about using HPC resources. It might be a bunch of getting started questions, or you might want to share your screen to walk us through a particular problem you're hung up on. We have private spaces for one-on-one consults. You can [join us in Gather Town at this link](https://gather.town/app/dVsAprPNBVmI9NpL/hpc-office-hours). 
  

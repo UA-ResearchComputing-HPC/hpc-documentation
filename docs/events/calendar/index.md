@@ -5,7 +5,7 @@ title: UArizona HPC Events Calendar
 <link rel="stylesheet" href="../../assets/stylesheets/images.css">
 
 
-<img class="img-right" src="images/az_calendar.png" alt="cactus" width="200">
+<img class="img-right" src="images/az_calendar.png" title="Desert calendar illustration" alt="cactus" width="200">
 
 Every semester, [we host training workshops](../workshops/intro_to_hpc/) on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
 

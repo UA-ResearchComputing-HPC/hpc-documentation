@@ -11,7 +11,7 @@
 <div class="content">
   <p>
       If you are trying to log in to Open Ondemand and are seeing the following:
-      <img src="images/not_yet_approved.png" style="width:500px;">
+      <img src="images/not_yet_approved.png" title="You have not registered error" style="width:650px;">
       <ul>
           <li>You have not yet been sponsored by a faculty member. See our <a href="../../../registration_and_access/account_creation/">Account Creation</a> page for instructions on getting registered for HPC.</li>
           <li>If you are already registered for HPC, this may be a browser issue. Try logging in again in an incognito session or different browser to test. If this succeeds, clearing your browser's cookies should help.</li>
@@ -24,7 +24,7 @@
   <p>
       If you are trying to log in to Open Ondemand and are seeing the following:
       <br>
-      <img src="images/bad_request.png" style="width:500px;">
+      <img src="images/bad_request.png" title="Bad Request error" style="width:500px;">
       <br>
       this may be a browser issue. Try logging in again in an incognito session or different browser to test. If this succeeds, clearing your browser's cache should help.
   </p>
@@ -35,7 +35,7 @@
   <p>
       If you are trying to log in to Open Ondemand and are seeing the following:
       <br>
-      <img src="images/somethingwentwrong.png" style="width:500px;">
+      <img src="images/somethingwentwrong.png" title="Something Went Wrong error" style="width:500px;">
       <br>
       check your storage usage in your home directory. You can do this by logging into HPC in a terminal session and using the command <code>uquota</code>. If your storage usage is >50 GB, OnDemand cannot create the temporary files necessary to give access to the website. Try clearing out some space in your home and then logging back into OnDemand.
   </p>
@@ -46,7 +46,7 @@
   <p>
       If you're seeing:
       <br>
-      <img src="images/dbus_error.png" style="width:500px;">
+      <img src="images/dbus_error.png" title="Desktop bus error" style="width:500px;">
       <br>
       when trying to connect to an interactive desktop session, the likely culprit is Anaconda. For a permanent solution, you can run the following command from an interactive terminal session:
       <pre><code>

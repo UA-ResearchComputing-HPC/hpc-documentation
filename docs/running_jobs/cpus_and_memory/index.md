@@ -18,7 +18,7 @@ For example, using the table above we can see on Puma standard nodes you get 5 G
 The video below shows the relationship between memory and CPUs, specifically looking at one of our Puma nodes. 
 
 <center>
-<iframe width="420" height="280" src="https://www.youtube.com/embed/_dpbUqZ7rRk" allowfullscreen></iframe>
+<iframe width="420" height="280" title="HPC core to memory relationship video" src="https://www.youtube.com/embed/_dpbUqZ7rRk" allowfullscreen></iframe>
 </center>
 
 ## Determining Job Resources

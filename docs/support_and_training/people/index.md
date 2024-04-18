@@ -10,7 +10,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/reidy.jpeg" style="width:200px;">
+    <img src="images/reidy.jpeg" title="Chris Reidy" style="width:200px;">
     <div class="container">
       <h4><b>Chris Reidy</b></h4>
 
@@ -26,7 +26,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/jahn.png" style="width:200px;">
+    <img src="images/jahn.png" title="Ethan Jahn" style="width:200px;">
     <div class="container">
       <h4><b>Ethan Jahn</b></h4>
 
@@ -35,16 +35,16 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
   </div>
 
   <div class="card">
-    <img src="images/c.jpg" style="width:200px;">
+    <img src="images/c.jpg" title="Soham Pal" style="width:200px;">
     <div class="container">
       <h4><b>Soham Pal</b></h4>
 
-      <p>Fooing baz</p>
+      <p>Placeholder text</p>
     </div>
   </div>
 
   <div class="card">
-    <img src="images/willis.png" style="width:200px;">
+    <img src="images/willis.png" title="Sara Willis" style="width:200px;">
     <div class="container">
       <h4><b>Sara Willis</b></h4>
 
@@ -53,7 +53,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
   </div>
 
   <div class="card">
-    <img src="images/zwickl.jpeg" style="width:200px;">
+    <img src="images/zwickl.jpeg" title="Derrick Zwickl" style="width:200px;">
     <div class="container">
       <h4><b>Derrick Zwickl</b></h4>
 
@@ -72,7 +72,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/bayly.png" style="width:200px;">
+    <img src="images/bayly.png" title="Devin Bayly" style="width:200px;">
     <div class="container">
       <h4><b>Devin Bayly</b></h4>
 
