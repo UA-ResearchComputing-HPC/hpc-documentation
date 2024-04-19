@@ -46,7 +46,7 @@ This documentation site provides technical details relevant to using our HPC sys
 ??? example "Our Clusters (click to expand)"
 
     === "Puma"
-        <img class="img-right" src="assets/images/home/puma-logo.jpg" title="Puma image" alt="puma" width="250">
+        <img class="img-right" src="assets/images/home/puma.png" title="Puma image" alt="puma" width="250">
         Implemented in the middle of 2020, Puma is the biggest cat yet. Similar to Ocelote, it has standard CPU nodes (with 94 cores and 512 GB of memory per node), GPU nodes (with Nvidia V100) and two high-memory nodes (3 TB). Local scratch storage increased to ~1.4 TB. Puma runs on CentOS 7.
 
         As is the case for our other supercomputers, we use the RFP process to get the best value for our financial resources, that meet our technical requirements. This time Penguin Computing one with AMD processors. This is tremendously valuable as each node comes with:
@@ -61,7 +61,7 @@ This documentation site provides technical details relevant to using our HPC sys
         - Six nodes with four Nvidia V100S GPU's each
 
     === "Ocelote"
-        <img class="img-right" src="assets/images/home/ocelot.png" title="Ocelote image" alt="ocelote" width="250">
+        <img class="img-right" src="assets/images/home/ocelote.png" title="Ocelote image" alt="ocelote" width="250">
         Ocelote arrived in 2016. Lenovo's Nextscale M5 technology was the winner of the RFP mainly on price, performance and meeting our specific requirements. Ocelote has one large memory node with 2TB of memory and 46 nodes with Nvidia P100 GPUs for GPU-accelerated workflows. This cluster is actually the next generation of the IBM cluster we call El Gato. Lenovo purchased IBM's Intel server line in 2015.
 
         In 2021, Ocelote's operating system was upgraded from CentOS6 to CentOS7 and was configured to use SLURM, like Puma. It will continue until it is either too expensive to maintain or it is replaced by something else.
@@ -73,7 +73,7 @@ This documentation site provides technical details relevant to using our HPC sys
             - 46 nodes with Nvidia P100 GPU's
 
     === "El Gato"
-        <img class="img-right" src="assets/images/home/jones-flat.png" title="ElGato image" alt="elgato" width="100">
+        <img class="img-right" src="assets/images/home/jones.png" title="ElGato image" alt="elgato" width="100">
         Implemented at the start of 2014, El Gato has been reprovisioned with CentOS 7 and new compilers and libraries. From July 2021 it has been using Slurm for job submission. El Gato is our smallest cluster with 130 standard nodes each with 16 CPUs. Purchased by an NSF MRI grant by researchers in Astronomy and SISTA.
 
 
