@@ -11,3 +11,11 @@
   .md-nav--secondary {
     background-color: #f8f8f8; /* Set your desired background color */
 }
+
+.md-content {
+  --md-typeset-a-color:  #AB0520;
+}
+
+.md-typeset a {
+  text-decoration: underline;
+}
