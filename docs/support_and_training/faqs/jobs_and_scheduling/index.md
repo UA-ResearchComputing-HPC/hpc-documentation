@@ -81,12 +81,19 @@
   </p>
 </div>
 
-<button class="collapsible">Are any modules loaded by default?</button>
+<button class="collapsible">How can I disable core dumps?</button>
 <div class="content">
   <p>
-      Yes, when you start an interactive session via the terminal or submit a batch job, the modules gnu8, openmpi3, and cmake are loaded by default. If you need to use intel, you'll want to unload openmpi3 and gnu8 first.
-      However, if you start a terminal in an interactive desktop session through Open OnDemand, no modules are loaded by default in this environment. To start, at the minimum you'll want to run the command:
-      <pre><code class="language-bash">module load ohpc</code></pre>
+      To prevent core dump files from being generated in jobs (which can be quite large and may fill up your working directory), add the following to your batch script:
+      <pre><code class="language-bash">ulimit -c 0</code></pre>
+  </p>
+</div>
+
+<button class="collapsible">Is there a way to automatically cancel jobs if they encounter errors during execution?</button>
+<div class="content">
+  <p>
+      Yes, you can use a pipefail. This is a way to automatically kill a job after an error without moving on to any subsequent steps. To use this, add the following to the beginning of your batch script:
+      <pre><code class="language-bash">set -oe pipefail</code></pre>
   </p>
 </div>
     

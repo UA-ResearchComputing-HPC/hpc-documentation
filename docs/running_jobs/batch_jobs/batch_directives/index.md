@@ -137,6 +137,29 @@ where ```<N>``` and ```<M>``` are integers.
 
 For detailed information on job arrays, see our [job array tutorial](../array_jobs/).
 
+## Job Dependencies
+
+Slurm job dependencies allow users to submit to a series of jobs that depend on each other using the flag and options:
+```
+--dependency=<type:jobid[:jobid][,type:jobid[:jobid]]>
+```
+
+For example, say job `B` depends on the successful completion of job `A`. Job `B` can be submitted as a dependency of job `A` using the following method:
+
+```
+[netid@junonia ~]$  sbatch A.slurm
+Submitted batch job 1939000
+[netid@junonia ~]$ sbatch --afterok:1939000 B.slurm
+```
+This tells the scheduler to hold job `B` until job `A` completes. The `afterok` is the dependency `<type>`, in this case it ensures that job `B` runs only if job `A` completes successfully. The different options for `<type>` are show below:
+
+|Dependency Type|Meaning|
+|-|-|
+|`after`|Job can begin after the specified job(s) have started|
+|`afterany`|Job can begin after the specified job(s) have terminated. Job(s) will start regardless of whether the specified jobs failed or ran successfully|
+|`afterok`|Job can begin after the specified job(s) have completed successfully. If the specified job(s) fail, the dependency will never run.|
+|`afternotok`|Job can begin after the specified job(s) have failed. If the specified job(s) complete successfully, the dependency will never run.|
+
 ## Output Filenames
 
 The default output filename for a slurm job is ```slurm-<jobid>.out```. If desired, this can be customized using the directives

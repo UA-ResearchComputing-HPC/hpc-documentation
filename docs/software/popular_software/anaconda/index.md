@@ -67,6 +67,16 @@ and the installed packages with
 conda list
 ```
 
+## Conda in Batch Jobs
+
+If you've turned off Conda's auto-activate feature (recommended), add the following as your first bash command in your batch script:
+
+```
+source ~/.bashrc
+```
+
+This will allow you to run standard `conda activate` and `conda activate <environment name>` commands. Without the `source` command, you may get errors indicating that conda has not been initialized.
+
 ## Custom Jupyter Kernel
 
 If you want to make one of your conda environments available for use in one of our Open OnDemand Jupyter Notebooks, you can do so by creating a custom kernel. To do this, start an interactive terminal session and activate your environment:

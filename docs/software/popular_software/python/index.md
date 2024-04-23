@@ -42,7 +42,7 @@ One of the best things about Python is the number of packages provided by the us
 
 There is an easy solution, however. You can use a virtual environment to create a personal Python environment that will persist each time you log in. There is no risk of packages being updated under you for another user and allows greater control over your environment.
 
-Virtual Environment Instructions
+<br style="clear: both">
 
 1. Set up your virtual environment in your account. This step is done one time only and will be good for all future uses of your Python environment. You will need to be in an interactive session to follow along. 
  
@@ -75,6 +75,9 @@ Virtual Environment Instructions
     module load python/<version>
     source </path/to/virtual/env>/bin/activate
     ```
+    Note:
+    1. Always use the same `<version>` as the one you used to create your environment
+    2. Use the `module load` command before running your `source` command. If you activate your environment first, you will get a library error. 
 
 ## Custom Jupyter Kernel
 
