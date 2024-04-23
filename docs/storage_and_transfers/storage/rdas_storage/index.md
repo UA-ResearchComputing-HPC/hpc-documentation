@@ -52,9 +52,9 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
 !!! example "Choose your operating system"
 
-    === "Linux/HPC"
+    === "Linux"
         !!! warning "No ```sudo``` on HPC"
-            To connect to R-DAS from HPC, do not attempt to run ```sudo``` commands, these are only meant for your personal Linux machines. All required packages are already installed on the HPC clusters.
+            Do not attempt to run ```sudo``` commands on HPC, these are only meant for your personal Linux machines. To transfer data between R-DAS and HPC see [Access from HPC](#access-from-hpc).
             
         First, install the necessary software packages to access your allocation
         
@@ -75,10 +75,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
             === "GUI"
                 On a desktop environment, such as MATE, GNOME, KDE, you can mount your R-DAS allocation as a local drive with the corresponding file manager (Caja on MATE, GNOME Files, Dolphin on KDE). On HPC, you can use a [virtual desktop](../../../running_jobs/open_on_demand/).
             
-                1. Open the file manager (Caja, GNOME Files, Dolphin)(1).
-                    {.annotate}
-
-                    1.  On the HPC Interactive Desktop's MATE desktop environment, you can launch Caja by clicking the file drawer like icon in the top bar, or by selecting Applications > System Tools > Caja.
+                1. Open the file manager (Caja, GNOME Files, Dolphin)
 
                 2. Press ++ctrl+l++. This makes the location bar editable.
 
@@ -188,3 +185,28 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
         4. Select the allocation named after your group from the list of allocations displayed. You can directly open the allocation by double-clicking on it, or mount it by right clicking on it and selecting **Map network drive**.
 
             <img src="images/rdas-screenshot-windows2.png" title="Map network drive" style="width: 100%; box-shadow: 5px 5px 5px #999;">
+
+### Transfer data between R-DAS and HPC storage
+The simplest way to transfer data between your R-DAS share and HPC storage is to first transfer data to your local machine, and then from local machine to the destination. For more information on transferring data from local machine, see [Transfers](../../transfers/overview/). However if you do not want to store the data to your local machine as an intermediate step, then you can transfer data between R-DAS and HPC storage with the following steps:
+
+1. Mount the R-DAS share as a local drive following the steps above.
+2. Transfer the data using `rsync`, see [rsync](../../transfers/rsync/) for more information. For example, if your local machine is a Mac, then you can transfer the data from R-DAS to HPC storage with the following:
+   ```
+   rsync -ravz /Volumes/<share-name>/<path-to-source> <netid>@filexfer.hpc.arizona.edu:<path-to-destination>
+   ```
+
+The above steps assumes that you know the mount point of the R-DAS share on your local machines:
+
+- On Linux, it might take some amount of sleuthing to find out where it is mounted. File managers dependent on `gvfs` will typically mount it under `/run/user/<uid>/gvfs`.
+- On a Mac, it will typically be mounted at `/Volumes/<share-name>`.
+- On Window, you will have to map it to a dirve.
+
+We recommend that you use `rsync` to transfer the data from your R-DAS share to HPC storage. However, if you do not know the mount point of the R-DAS share, or if you do not want to use `rsync`, then the other alternative to transfer data between R-DAS and HPC storage is:
+
+<div class="annotate" markdown>
+1. Start an virtual desktop on Open OnDemand. See [Virtual Desktop](../../running_jobs/open_on_demand/#applications-available) for more information.
+2. Mount the R-DAS share following the Linux [GUI](#__tabbed_3_1) steps. (1)
+3. Transfer the data graphically, or using your favorite command line tool from the virtual desktop terminal. 
+</div>
+
+1.  On the HPC virtual desktop's MATE desktop environment, you can launch the file manager, Caja, by clicking the file drawer like icon in the top bar, or by selecting **Applications** > **System Tools** > **Caja**.
