@@ -60,11 +60,11 @@ nav:
     - User Installations: software/user_installations/index.md
     - Common Datasets: software/common_datasets/index.md
     - Popular Software:
+      - Anaconda: software/popular_software/anaconda/index.md
       - Gaussian: software/popular_software/gaussian/index.md
       - Matlab: software/popular_software/matlab/index.md
       - Perl: software/popular_software/perl/index.md
       - Python: software/popular_software/python/index.md
-      - Anaconda: software/popular_software/anaconda/index.md
       - R: software/popular_software/R/index.md
       - VSCode Remote Connection: software/popular_software/vscode_remote_connection/index.md
     - Containers: 
