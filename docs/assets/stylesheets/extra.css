@@ -4,8 +4,9 @@
 }
 
 .md-banner {
-    color: white;
+    color: black;
     font-size: 16px;
+    background-color:#F4EDE5;
   }
 
   .md-nav--secondary {

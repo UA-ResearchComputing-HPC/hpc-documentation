@@ -212,7 +212,7 @@ theme:
     - content.code.annotate
     - content.code.select
     - navigation.top
-    - announce.dismiss
+    #- announce.dismiss
 
 
 extra:
