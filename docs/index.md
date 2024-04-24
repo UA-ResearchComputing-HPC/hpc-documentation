@@ -22,7 +22,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="display:inline-block;">
   <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview">HPC Quick Start</a></span>
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview/">HPC Quick Start</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
