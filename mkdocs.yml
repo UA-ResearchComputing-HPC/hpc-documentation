@@ -233,6 +233,8 @@ extra:
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/
       name: User portal
-
+    - icon: material/chart-areaspline
+      link: https://metrics.hpc.arizona.edu/
+      name: HPC job metrics
 
 copyright: University of Arizona Research Computing
