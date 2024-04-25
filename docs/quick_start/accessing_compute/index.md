@@ -28,7 +28,7 @@ r1u26n2  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%
 r1u27n1  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%   
 ```
 
-Each line shows one compute node on the cluster you're connected to and how busy it currently is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest and newest and generally provides the most in terms of computational resources. However, we have two other clusters available: Ocelote and El Gato, each with a good number of computational resources available and shorter wait times to access them. 
+Each line shows one compute node on the cluster you're connected to and how busy it is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest, newest, and generally provides the most in terms of computational resources. However, we have two other clusters available: Ocelote and El Gato, each with a good number of computational resources available and shorter wait times to access them. 
 
 When you first connected to a login node in the previous section, your terminal should have displayed:
 
@@ -54,8 +54,8 @@ $ elgato
 This shows you the various shortcuts you can use to connect to the different clusters. Try running the command ```elgato``` now. You should see a change in your terminal prompt to indicate that your cluster has changed. 
 
 ```
-(puma) [user@wentletrap ~]$ elgato
-(elgato) [user@wentletrap ~]$ 
+(puma) [netid@wentletrap ~]$ elgato
+(elgato) [netid@wentletrap ~]$ 
 ```
 ### Job Charging
 
@@ -66,7 +66,7 @@ Every HPC group gets a **free** allocation of CPU hours that they can spend ever
 For this tutorial, we'll focus on the standard partition. This is a job queue and is the one that consumes your standard allocation. To use this job queue, you'll need to know your account name. To check, use the command ```va``` which stands for "view allocation". The output will look something like:
 
 ```
-(elgato) [user@gpu5 ~]$ va
+(elgato) [netid@wentletrap ~]$ va
 Windfall: Unlimited
 
 PI: parent_974 Total time: 7000:00:00
@@ -116,14 +116,75 @@ That's where batch jobs come in.
 
 ## Batch Jobs
 
-Batch jobs are the real workhorses of HPC. In contrast to interactive jobs, batch jobs are a way of submitting work to run on a compute node without the need for an active connection. Batch scripts are text files that act as blueprints that the scheduler uses to allocate resources and execute the terminal commands needed to run your analysis. 
+!!! example "Detailed Intro to Batch"
+    Below is a brief summary of batch scripts and how to run them. For a more detailed walkthrough, see our [Batch Jobs](../../running_jobs/batch_jobs/intro/) documentation.
 
-Batch jobs are initiated by submitting a batch script using the command ```sbatch myscript.slurm```. The instructions in that script are then sent to the scheduler, which puts your job in queue to wait while it looks for the necessary resources. Once the resources required become available, your job automatically begins running. The time your job spends in queue depends on many factors, including the scale of your resource request and the overall system usage. To check on jobs you have submitted, use the command ```squeue --user=<your_netid>```. 
+Batch jobs are the real workhorses of HPC. In contrast to interactive jobs, batch jobs are a way of submitting work to run on a compute node without the need for an active connection. This allows you to execute large jobs that may need a long time to run, or many (hundreds or even thousands) of jobs without the need to be present. 
 
-After the scheduler has received your request, the rest happens automatically. This means you can close your SSH connection, or even turn off your personal computer and walk away without interrupting your jobs. This workflow enables you to submit tens, hundreds, or even thousands of jobs to run simultaneously, dramatically increasing your productivity over what is possible with a local workstation.
+Batch jobs are run using batch scripts. Batch scripts are just text files that act as blueprints that the scheduler uses to allocate resources and execute the terminal commands needed to run your analysis. Batch scripts have three sections: 
 
-Constructing batch scripts involves specific syntax and parameters that are too detailed to cover in this Quick Start. Instead, see [Intro to Batch Jobs](../../running_jobs/batch_jobs/intro/) for details. 
+1. <mark style="background-color: #d7fbff;">The "**shebang**"</mark> will always be the line ```#!/bin/bash```. This tells the system to interpret your file as a bash script. Our HPC systems use bash for all our environments, so it should be used in your scripts to get the most consistent, predictable results.
+2. <mark style="background-color: #e6fff2;">The **directives** section</mark> will have multiple lines, all of which start with ```#SBATCH```. These lines are interpreted as [Slurm directives](../../running_jobs/batch_jobs/batch_directives/) by the scheduler and are how you request resources on the compute nodes, set your output filenames, set your job name, request emails, etc. 
+3. <mark style="background-color: #feffe6;">The **code** section</mark> in your script is a set of bash commands that tells the system how to run your analyses.
 
+An example batch script might look like the following:
+
+<!-- Sorry for the mess below, it's the only way I could get the code block to have multiple background colors and be able to be copied to the clipboard-->
+
+<html>
+<div class="code-container">
+  <pre style="background-color: transparent;"><code  style="background-color: transparent;"><div style="background-color: #d7fbff; padding: 10px;">#!/bin/bash</div><div style="background-color: #e6fff2; padding: 10px;"><span># --------------------
+### Directives Section
+# --------------------
+#SBATCH --job-name=hello_world
+#SBATCH --account=&#60;your_group&#62;
+#SBATCH --partition=standard
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --time=00:01:00</span></div><div style="background-color: #feffe6; padding: 10px;"># --------------------
+### Code Section
+# --------------------
+echo "Hello world, I am running on compute node $HOSTNAME"
+# sleep only used for demonstration purposes
+sleep 30</div></code></pre>
+</div>
+</html>
+
+In the script above, we're requesting one minute of runtime (`--time=00:01:00`), one CPU (`--ntasks=1`), one physical computer (`--nodes=1`), and are using the standard partition. More detailed information on what each of these directives mean plus many others can be found in our [Batch Directives](../../running_jobs/batch_jobs/batch_directives/) documentation.
+
+Try creating a file on HPC called `hello_world.slurm` and add the contents above, replacing `<your_group>` with your own group's name.
+
+!!! question "Not sure how to create a text file from the command line?"
+     Try `nano hello_world.slurm`, then simply enter your text. To save and exit, use ++ctrl++ + ++x++, select ++y++ to save, and ++enter++ to complete the process.
+
+Once you have your text file, you can submit your job by using the command `sbatch` followed by your script's name'. This will return a job ID (just like your interactive job). For example:
+
+```
+[netid@cpu39 ~]$ sbatch hello_world.slurm 
+Submitted batch job 1940917
+```
+
+This sends your script to the scheduler, which puts your job in queue. Once the resources you have requested become available, your job automatically begins running. The time your job spends in queue depends on many factors, including the scale of your resource request and the overall system usage. To check on jobs you have submitted, use the command ```squeue --job=<your_jobid>```. For example:
+
+```
+[netid@cpu39 ~]$ squeue --job 1940917
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           1940917  standard hello_wo    netid  R       0:08      1 cpu37
+```
+
+
+After the scheduler has received your request, the rest happens automatically. This means you can close your SSH connection, or even turn off your personal computer and walk away without interrupting your jobs. 
+!!! tip "Submitting from login and compute nodes"
+    You can submit your jobs either from the login nodes or from compute nodes. If you submit from an interactive session, you can terminate your interactive job and it will not affect the batch job you've submitted.
+
+Once your job starts, you should see an output text file with the name `slurm-<your_job_id>.out`. This will contain any text that would have been printed to the terminal if you had run your work interactively. This text file is updated in real time allowing you to monitor your job's progress as it runs. Checking the output of the script we just ran, you should see something that looks like the following: 
+
+```
+[netid@cpu39 ~]$ cat slurm-1940917.out 
+Hello world, I am running on compute node cpu37
+```
+
+That's it! You just ran your first batch job. As a next step, we'll cover how you can access software to run your analyses, allowing you to do more in your jobs than just run bash commands. 
 
 
 

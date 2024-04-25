@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 # Software
 
-It's hard to perform analyses without software. We've seen that software packages are not available on the login nodes, but now that we're connected to a compute node, we can view and use what's available. 
+As much fun as echoing "Hello World" is, it's hard to perform analyses without software. We've seen that software packages are not available on the login nodes, but now that we're interactively connected to a compute node, we can view and use what's available. 
 
 Since the HPC is a shared system, we need to organize our installed packages in a way that's helpful for everyone. There are three main categories of software on HPC:
 
@@ -11,10 +11,10 @@ System software represents executables pre-installed on the system, and are avai
 
 ## Modules 
 
+[Modules](../../software/modules/) are software packages that are only accessible on compute nodes. Modules make it easy to load and unload software from your environment and allow hundreds of packages to be available on the same system without dependency or versioning conflicts. 
+
 !!! tip "Specifying module versions"
     It's always good practice to specify which software version you need when loading a module to ensure a stable environment.
-
-[Modules](../../software/modules/) are software packages that are only accessible on compute nodes. Modules make it easy to load and unload software from your environment and allow hundreds of packages to be available on the same system without dependency or versioning conflicts. 
 
 You can view and load software modules using the commands ```module avail``` and ```module load```, respectively. For example:
 
@@ -29,7 +29,7 @@ You can view and load software modules using the commands ```module avail``` and
 Python 3.9.10
 ```
 
-Try running ```module avail``` without specifying any arguments. You'll notice we have *a lot* available.
+Try running ```module avail``` without specifying any arguments. You'll notice we have *a lot* available. These software packages can be used both interactively for shorter jobs and testing, or in your batch scripts.
 
 If you have software that you would like installed as a module, please refer to our [software policies](../../software/overview/) to see if it's a good candidate. 
 
