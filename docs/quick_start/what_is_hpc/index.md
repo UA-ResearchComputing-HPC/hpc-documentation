@@ -18,7 +18,7 @@ If you've never used an HPC system before, you may be wondering what one is and 
 
 ### What is HPC?
 
-HPC stands for **High Perfomance Computing** and is synonymous with the more colloquial term **Supercomputer**. A supercomputer is a collection, or cluster, of a large number of regular computers (referred to as **compute nodes**) connected over a network. Each of the computers is like a local workstation though typically much more capable. For example, a standard laptop might have 4 CPUs and 8 GB of RAM. Compare this with a standard compute node on one of our clusters, Puma, which has a whopping 94 CPUs and 470 GB of RAM. 
+HPC stands for **High Performance Computing** and is synonymous with the more colloquial term **Supercomputer**. A supercomputer is a collection, or cluster, of a large number of regular computers (referred to as **compute nodes**) connected over a network. Each of the computers is like a local workstation though typically much more capable. For example, a standard laptop might have 4 CPUs and 8 GB of RAM. Compare this with a standard compute node on one of our clusters, Puma, which has a whopping 94 CPUs and 470 GB of RAM. 
 
 ### Shared Resource Model
 
