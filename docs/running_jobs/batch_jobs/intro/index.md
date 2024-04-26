@@ -70,7 +70,7 @@ An example batch script might look like the following:
 ### Directives Section
 # --------------------
 #SBATCH --job-name=hello_world
-#SBATCH --account=your_group
+#SBATCH --account=&#60;your_group&#62;
 #SBATCH --partition=standard
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

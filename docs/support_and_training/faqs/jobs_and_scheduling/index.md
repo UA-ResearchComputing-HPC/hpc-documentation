@@ -23,7 +23,7 @@
   </p>
 </div>
 
-<button class="collapsible">My job has a Reason code when I check it with squeue. What does this mean?</button>
+<button class="collapsible">My job has a Reason code when I check it with <code>squeue</code>. What does this mean?</button>
 <div class="content">
   <p>If your job is in queue, sometimes Slurm will give you information on why it's not running. This may be for a number of reasons, for example there may be an upcoming maintenance cycle, your group's allocation may be exhausted, you may have requested resources that surpass system limits, or the node type you've requested may be very busy running jobs. We have a list of reason codes in our <a href="../../../running_jobs/monitoring_jobs_and_resources/#slurm-reason-codes">Monitoring Jobs and Resources</a> page that will give more comprehensive information on what these messages mean. If you don't see the reason code listed, <a href="../../../support_and_training/consulting_services/">contact our consultants</a>.
   </p>

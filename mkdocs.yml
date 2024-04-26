@@ -218,21 +218,21 @@ theme:
 extra:
   generator: false
   social:
-    - icon: material/youtube
-      link: https://www.youtube.com/@universityofarizonauitsres7597
-      name: Training videos
-    - icon: material/at
+    - icon: material/email
       link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
       name: Contact HPC consulting
-    - icon: material/help-circle-outline
+    - icon: material/help-box-multiple
       link: /support_and_training/faqs/account_access/
       name: FAQs
-    - icon: material/web
-      link: https://ood.hpc.arizona.edu/pun/sys/dashboard
-      name: Open OnDemand
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/
       name: User portal
+    - icon: material/web
+      link: https://ood.hpc.arizona.edu/pun/sys/dashboard
+      name: Open OnDemand
+    - icon: material/youtube
+      link: https://www.youtube.com/@universityofarizonauitsres7597
+      name: Training videos
     - icon: material/chart-areaspline
       link: https://metrics.hpc.arizona.edu/
       name: HPC job metrics

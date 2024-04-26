@@ -8,7 +8,7 @@
 !!! tip
     For detailed information on Apptainer recipes, see [Apptainer's official documentation](https://apptainer.org/docs/user/main/cli/apptainer_build.html).
 
-Apptainer Build is a tool that allows you to create containers. With Apptainer Build, you can package your application and its dependencies into a single unit, making it easier to deploy and share across different computing environments. Two useful options are to build your container by bootstraping off a container hosted locally on HPC or bootstrapping off an existing container hosted on Dockerhub. We'll cover both cases below.
+Apptainer Build is a tool that allows you to create containers. With Apptainer Build, you can package your application and its dependencies into a single unit, making it easier to deploy and share across different computing environments. Two useful options are to build your container by bootstrapping off a container hosted locally on HPC or bootstrapping off an existing container hosted on Dockerhub. We'll cover both cases below.
 
 ## Bootstrapping off a Local Image
 
@@ -35,7 +35,7 @@ INFO:    Verifying bootstrap image /contrib/singularity/nvidia/nvidia-tensorflow
 . . .
 INFO:    Creating SIF file...
 INFO:    Build complete: tf2.6-astropy.sif
-[sarawillis@cpu43 build_example]$ 
+[netid@cpu43 build_example]$ 
 ```
 
 ## Bootstrapping off a Docker Hub Image
@@ -74,7 +74,7 @@ INFO:    Starting build...
 . . .
 INFO:    Creating SIF file...
 INFO:    Build complete: python3.11_astropy.sif
-[sarawillis@cpu38 pull_example]$ 
+[netid@cpu38 pull_example]$ 
 ```
 
 <html>

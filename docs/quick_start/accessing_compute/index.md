@@ -157,7 +157,7 @@ Try creating a file on HPC called `hello_world.slurm` and add the contents above
 !!! question "Not sure how to create a text file from the command line?"
      Try `nano hello_world.slurm`, then simply enter your text. To save and exit, use ++ctrl++ + ++x++, select ++y++ to save, and ++enter++ to complete the process.
 
-Once you have your text file, you can submit your job by using the command `sbatch` followed by your script's name'. This will return a job ID (just like your interactive job). For example:
+Once you have your text file, you can submit your job by using the command `sbatch` followed by your script's name. This will return a job ID (just like your interactive job). For example:
 
 ```
 [netid@cpu39 ~]$ sbatch hello_world.slurm 

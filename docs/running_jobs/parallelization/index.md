@@ -32,7 +32,7 @@ Each node on HPC has multiple CPUs. These can be utilized simultaneously in shar
 
 Multiple nodes can be accessed simultaneously on HPC, but memory is distributed rather than shared. In this case, additional software is needed in order to facilitate communication between processes, such as OpenMPI or Intel MPI. 
 
-Please be aware of the type of parallelism used in your program. Some software is configured only for shared-memory paralleism and will not be able to use processors on multiple nodes. 
+Please be aware of the type of parallelism used in your program. Some software is configured only for shared-memory parallelism and will not be able to use processors on multiple nodes. 
 
 ## Implementation
 
@@ -60,7 +60,7 @@ MATLAB provides the Parallel Computing Toolbox. [Reference](https://www.mathwork
 We provide several versions and implementations of MPI as system modules:
 
 ```bash
-[ejahn@cpu39 ~]$ module avail mpi
+[netid@cpu39 ~]$ module avail mpi
 
 ---------------- /opt/ohpc/pub/moduledeps/gnu8 ----------------
    mpich/3.3.1    openmpi3/3.1.4 (L)    openmpi4/4.1.1

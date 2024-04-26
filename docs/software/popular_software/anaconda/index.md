@@ -207,7 +207,7 @@ Replace `<your_modules_here>` with the modules you would like to load and `</pat
     !!! warning "Be careful when editing your `~/.bashrc`"
         Your ```~/.bashrc``` file configures your environment each time you start a new session. Be careful when editing it. You may consider making a backup in case of unwanted changes. Not sure what a `~/.bashrc` is and want more information? Check out our [Linux cheat sheet guide](../../../../support_and_training/cheat_sheet/#hidden-files-and-directories).
 
-    The most permanent solution for removing Anaconda from your environment is to edit your `~/.bashrc` to manually remove its initilization. This change will remove Anaconda from all future terminal sessions.
+    The most permanent solution for removing Anaconda from your environment is to edit your `~/.bashrc` to manually remove its initialization. This change will remove Anaconda from all future terminal sessions.
         
     Start by opening the file `~/.bashrc`. This can be done using the command ```nano```
 

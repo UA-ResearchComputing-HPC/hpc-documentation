@@ -119,7 +119,7 @@ Some other file transfer programs include [rclone](../../transfers/rclone/) and 
 
 ## Restoring Archived Data
 
-Data that are not touched for at least 90 and 180 days are automatically retiered to archival storage (Glacier and Deep Glacier, respectively). {==Files stored in an archival state cannot be transferred out of AWS until they are restored==}. Restore requests can be submitted either via the User Portal or using a command line utility available on our compute nodes. 
+Data that are not touched for at least 90 and 180 days are automatically re-tiered to archival storage (Glacier and Deep Glacier, respectively). {==Files stored in an archival state cannot be transferred out of AWS until they are restored==}. Restore requests can be submitted either via the User Portal or using a command line utility available on our compute nodes. 
 
 The time it takes for an object to be retrieved is dependent on its storage class. Objects in Glacier may take a few hours while objects in Deep Glacier may take up to a day or two. Once an object has been restored, it will move back up to the frequent access tier and can be downloaded using any transfer method you prefer.
 

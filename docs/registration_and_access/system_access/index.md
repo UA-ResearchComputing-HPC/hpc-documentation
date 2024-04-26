@@ -54,9 +54,9 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
         
     Open the terminal and enter:
     ```bash
-    ssh netid@hpc.arizona.edu
+    ssh <netid>@hpc.arizona.edu
     ```
-    where netid is your UArizona NetID. When you press enter, you will be prompted for your university password. After successfully entering your password, you will be prompted to Duo Authenticate. If everything is successful, you will be connected to the bastion host.
+    where `<netid>` is your UArizona NetID. When you press enter, you will be prompted for your university password. After successfully entering your password, you will be prompted to Duo Authenticate. If everything is successful, you will be connected to the bastion host.
 
 === "Windows"
      Windows systems do not have any built-in support for using SSH, so you will have to download a software package to do so. There are several available for Windows workstations.  Free SSH clients are available for download from the University of Arizona's [Site License website](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=26fe95e12f309150a55e95acf699b686&sysparm_category=4bced1e12f309150a55e95acf699b6ad).  
@@ -210,7 +210,7 @@ The Bastion Host uses two-factor authentication and will, by default, prompt you
     You will be prompted to enter a passphrase. This is optional, but we strongly recommend that you do so.
         
     2. After running that command, you will have two new files on your local computer: ```~/.ssh/id_rsa``` and ```~/.ssh/id_rsa.pub```
-        ```id_rsa``` is your private key file. Do not share this with anybody! It is analagous to your password; anybody who has this file can impersonate you.
+        ```id_rsa``` is your private key file. Do not share this with anybody! It is analogous to your password; anybody who has this file can impersonate you.
         ```id_rsa.pub``` is your public key file. You will upload this onto any servers that you wish to automatically login to.
         
     3. Copy the public key to the Bastion Host (you will need to enter your password this one time): 

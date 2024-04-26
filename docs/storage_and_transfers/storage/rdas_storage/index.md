@@ -199,7 +199,7 @@ The above steps assumes that you know the mount point of the R-DAS share on your
 
 - On Linux, it might take some amount of sleuthing to find out where it is mounted. File managers dependent on `gvfs` will typically mount it under `/run/user/<uid>/gvfs`.
 - On a Mac, it will typically be mounted at `/Volumes/<share-name>`.
-- On Window, you will have to map it to a dirve.
+- On Window, you will have to map it to a drive.
 
 We recommend that you use `rsync` to transfer the data from your R-DAS share to HPC storage. However, if you do not know the mount point of the R-DAS share, or if you do not want to use `rsync`, then the other alternative to transfer data between R-DAS and HPC storage is:
 

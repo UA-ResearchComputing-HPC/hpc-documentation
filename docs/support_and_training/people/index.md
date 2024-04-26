@@ -57,7 +57,7 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
     <div class="container">
       <h4><b>Derrick Zwickl</b></h4>
 
-      <p>Derrick has worked with HPC resources for nearly 25 years as a researcher, software developer and support staff.  He  joined the UArizona HPC consulting team in early 2022.  Derrick is originally from Tucson, and was an undergraduate at  the University of Arizona.  He obtained a Ph.D. in Evolutional Biology from the University of Texas, developing  software for the estimation of evolutionary trees from DNA sequences. </p>
+      <p>Derrick has worked with HPC resources for nearly 25 years as a researcher, software developer and support staff.  He  joined the UArizona HPC consulting team in early 2022.  Derrick is originally from Tucson, and was an undergraduate at  the University of Arizona.  He obtained a Ph.D. in Evolutional Biology from the University of Texas, developing software for the estimation of evolutionary trees from DNA sequences. </p>
     </div>
   </div>
 

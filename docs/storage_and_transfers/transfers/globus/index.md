@@ -29,7 +29,7 @@ This will take you through the standard university WebAuth login process. Once y
 
 ## Globus Connect Personal
 
-To transfer files to/from your personal computer with Globus, you'll need to have a local endpoint set up. This can be achieved using Globus Connect Personal. Official documentation on how to install the relevant software and configure a local endpoint can be found in [Globus' offical how-to documentation](https://docs.globus.org/how-to/). An overview is shown for Mac, Linux, and Windows below.
+To transfer files to/from your personal computer with Globus, you'll need to have a local endpoint set up. This can be achieved using Globus Connect Personal. Official documentation on how to install the relevant software and configure a local endpoint can be found in [Globus' official how-to documentation](https://docs.globus.org/how-to/). An overview is shown for Mac, Linux, and Windows below.
 
 To start, regardless of operating system, go to [https://www.globus.org/](https://www.globus.org/), log in, navigate to the **Collections** tab, and select Get Globus Connect Personal
 

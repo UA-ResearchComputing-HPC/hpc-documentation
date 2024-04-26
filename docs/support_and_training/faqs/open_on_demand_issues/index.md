@@ -33,7 +33,7 @@
 <button class="collapsible">Why am I getting an error saying "We're sorry, but something went wrong" when trying to log in?</button>
 <div class="content">
   <p>
-      If you are trying to log in to Open Ondemand and are seeing the following:
+      If you are trying to log in to Open OnDemand and are seeing the following:
       <br>
       <img src="images/somethingwentwrong.png" title="Something Went Wrong error" style="width:500px;">
       <br>

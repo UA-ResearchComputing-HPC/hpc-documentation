@@ -5,7 +5,7 @@ High Performance Computing (HPC) facility users are responsible for [complying w
 The supercomputers represent a unique resource for the campus community. These computers have special characteristics that are not found, or are of limited availability, on other central computers, including parallel processing, large memory, and a Linux operating system. The UArizona HPC resources require close supervision by those charged with management of these resources.  
 
 ## Controlled Data
-UArizona HPC does not provide support for any type of controlled data. No controlled data (HIPAA, EAR, FERPA, PII, CUI, ITAR, etc.) can be analysed or stored on any HPC storage.
+UArizona HPC does not provide support for any type of controlled data. No controlled data (HIPAA, EAR, FERPA, PII, CUI, ITAR, etc.) can be analyzed or stored on any HPC storage.
 
 For HIPAA data we maintain a separate cluster called Soteria. See [Secure Services](../../resources/secure_hpc/).
 

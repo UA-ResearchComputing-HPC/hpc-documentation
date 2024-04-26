@@ -23,7 +23,7 @@ There are four available partitions, or queues, on the UArizona HPC which determ
 
 ## Nodes
 
-???+ danger "Mutli-Node Programs"
+???+ danger "Multi-Node Programs"
     
     In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
 
@@ -199,7 +199,7 @@ Filenames take patterns that allow for job information substitution. A list of f
 
 ## Examples and Explanations
 
-The below examples are complete sections of Slurm directives that will produce valid requests. Other directives can be added (like output files), but they are not strictly necessary to submit a valid request. For simplicity, the Puma cluster is assumed when discussing memory and GPU resources. Note that these examples do not include the shebang ```#!bin/bash``` statement, which should be at the top of _every_ slurm script. Also, note that the order of directives does not matter.
+The below examples are complete sections of Slurm directives that will produce valid requests. Other directives can be added (like output files), but they are not strictly necessary to submit a valid request. For simplicity, the Puma cluster is assumed when discussing memory and GPU resources. Note that these examples do not include the shebang ```#!bin/bash``` statement, which should be at the top of _every_ Slurm script. Also, note that the order of directives does not matter.
 
 === "Single CPU"
     ```

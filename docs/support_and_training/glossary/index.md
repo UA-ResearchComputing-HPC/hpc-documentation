@@ -74,7 +74,7 @@ Message passing interface, the software standard used for most programs that use
 
 **Network bandwidth**
 
-The amount of data that can be moved over a network per second. For FDR Infiniband on Ocelote that is 56Gbps (Giga bits per second)
+The amount of data that can be moved over a network per second. For FDR Infiniband on Ocelote that is 56 Gbps (Giga bits per second)
 
 <hr>
 
@@ -104,7 +104,7 @@ The efficiency of a parallel program, usually defined as the parallel speedup of
 
 **Scheduler/HPC scheduler**
 
-A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and El Gato use SLURM.
+A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and El Gato use Slurm.
 
 <hr>
 

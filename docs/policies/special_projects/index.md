@@ -15,7 +15,7 @@ Project requests must be submitted by a Principal Investigator (PI); partly beca
 * Special project allocations cannot be granted if they will impact the community of users with a standard allocation.
 * PIs can only be granted a special project once within a 12 month period (starting from the ending period of the last special project).
     * PI groups that routinely need more standard computing hours should supplement their needs in other ways (e.g. buy-in, accessing national/international computing resources, etc).
-    * [Our research faciliators](../../support_and_training/consulting_services/) can help UArizona PIs access national-scale computing centers (e.g. ACCESS, TACC, Open Science Grid, etc).
+    * [Our research facilitators](../../support_and_training/consulting_services/) can help UArizona PIs access national-scale computing centers (e.g. ACCESS, TACC, Open Science Grid, etc).
 
 ## Categories
 

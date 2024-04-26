@@ -9,7 +9,7 @@ In the cheat sheet below, we offer some basics as a reference. We also highly su
 ## Shell Basics
 
 ### Shortcuts
-Shortcuts can be used as standins for system locations, avoiding the need for full paths. A few examples:
+Shortcuts can be used as stand-ins for system locations, avoiding the need for full paths. A few examples:
 
 |Shortcut|Description|
 |-|-|

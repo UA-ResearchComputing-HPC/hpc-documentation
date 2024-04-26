@@ -70,7 +70,7 @@ Say you wanted to submit three jobs to analyze input files ```1.txt```, ```2.txt
 #SBATCH --array=1-3
 ```
 
-Next, we'll need to set up our Bash commands to analyze our three input files, one input file per subjob. Let's say we're running our analyses using the command ```<command>```. For the input filenames, we can make use of the environment variable ```$SLURM_ARRAY_TASK_ID``` by using it as a standin for the relevant integer:
+Next, we'll need to set up our Bash commands to analyze our three input files, one input file per subjob. Let's say we're running our analyses using the command ```<command>```. For the input filenames, we can make use of the environment variable ```$SLURM_ARRAY_TASK_ID``` by using it as a stand-in for the relevant integer:
 
 ```
 <command> ${SLURM_ARRAY_TASK_ID}.txt

@@ -34,7 +34,7 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 - [x] **Use the file transfer nodes for large data transfers**
 
-	Login and compute nodes are not designed for large file transfers and transfers intiated here may result in network problems. The data transfer nodes (DTNs) are specifically set up for moving large amounts of data and are accessible via the hostname `filexfer.hpc.arizona.edu`.
+	Login and compute nodes are not designed for large file transfers and transfers initiated here may result in network problems. The data transfer nodes (DTNs) are specifically set up for moving large amounts of data and are accessible via the hostname `filexfer.hpc.arizona.edu`.
 
 - [x] **Limit file copy sessions**
 

@@ -34,7 +34,7 @@ Research groups can also be used to manage access permissions to files and folde
 
 To add members to your research group, go to [https://portal.hpc.arizona.edu/](https://portal.hpc.arizona.edu/) and click the **Manage Groups** tab at the top of the screen. Click your group's dropdown tab and click **Add Member**
 
-<img class="ood-screenshots" src="images/group_add.png" title="Manange group members">
+<img class="ood-screenshots" src="images/group_add.png" title="Manage group members">
 
 Enter the user's UArizona NetID in the box that appears, and select **Add**
 
@@ -93,7 +93,7 @@ Once this process is complete, you can find your group's dropdown tab under **Ma
 Students in your class group will only be able to access files and directories owned by the class group. This means they will not be able to access files and directories owned by your standard research group. 
 
 ### Running Jobs and Allocations
-Due to Arizona sales tax restrictions, class groups may only use the windfall queue on Puma. However, standard hours may be used by students on Ocelote. To submit standard jobs on Ocelote, students will use the class group's name for the ```--account``` SLURM directive. For example:
+Due to Arizona sales tax restrictions, class groups may only use the windfall queue on Puma. However, standard hours may be used by students on Ocelote. To submit standard jobs on Ocelote, students will use the class group's name for the ```--account``` Slurm directive. For example:
 
 ```bash
 #SBATCH --account=hpc101

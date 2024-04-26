@@ -94,7 +94,7 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">Why is my job running slower on the HPC than on my laptop?</button>
 <div class="content">
-    <p> The strongest use cases for HPC are either running more jobs or larger jobs than your laptop. The advantages come from running jobs in parallel or parallelizing your code. A job that runs well on your laptop could be slower on HPC because you are waiting for other jobs to end or you havent taken advantage of the parallel features of HPC. See <a href="../parallelization/">Parallelization</a> for more info. 
+    <p> The strongest use cases for HPC are either running more jobs or larger jobs than your laptop. The advantages come from running jobs in parallel or parallelizing your code. A job that runs well on your laptop could be slower on HPC because you are waiting for other jobs to end or you haven't taken advantage of the parallel features of HPC. See <a href="../parallelization/">Parallelization</a> for more info. 
     <br>
     </p>
 </div>

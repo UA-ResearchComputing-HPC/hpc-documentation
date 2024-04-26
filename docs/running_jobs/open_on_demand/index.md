@@ -132,7 +132,7 @@ When you first submit your job, it will show as having a status of "Queued". Onc
     <img src="images/python-banner.png" title="OnDemand Jupyter notebook" style="width:100%;">
 
 
-=== "Rstudio"
+=== "RStudio"
 
     RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. For an overview of the RStudio IDE, see: [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
