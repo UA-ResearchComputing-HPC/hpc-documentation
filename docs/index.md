@@ -122,6 +122,18 @@ These resources specifically do not support Regulated Research, which might be I
 
 ## Highlighted Research
 
+=== "Pluto's Heart"
+
+    <img src="./assets/images/home/plutoheart.jpeg" title="cloud research" align="right" width="500px">
+
+    Ever since the cameras of NASA's New Horizons mission discovered a large heart-shaped structure on the surface of the dwarf planet Pluto in 2015, this "heart" has puzzled scientists because of its unique shape, geological composition and elevation. Scientists from the University of Bern in Switzerland and the University of Arizona used numerical simulations to investigate the origins of Sputnik Planitia, the western teardrop-shaped part of Pluto's heart surface feature. 
+
+    According to their research, Pluto's early history was marked by a cataclysmic event that formed Sputnik Planitia: a collision with a planetary body a little over 400 miles in diameter, roughly the size of Arizona from north to south. The team’s findings, published in Nature Astronomy, also suggest that the inner structure of Pluto is different from what was previously assumed, indicating that there is no subsurface ocean.
+
+    "The formation of Sputnik Planitia provides a critical window into the earliest periods of Pluto's history," said Adeene Denton, a planetary scientist at the UArizona Lunar and Planetary Laboratory who co-authored the paper. "By expanding our investigation to include more unusual formation scenarios, we've learned some totally new possibilities for Pluto's evolution, which could apply to other Kuiper Belt objects as well."
+
+    [Read the full story here!](https://news.arizona.edu/news/how-pluto-got-its-heart).
+
 === "Planetary History"
     
     **Reconstructing the History of the Solar System Using HPC**
@@ -133,6 +145,7 @@ These resources specifically do not support Regulated Research, which might be I
 
     One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
     High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown in the image above. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
+
 === "Cloud Research"
     <img src="./assets/images/home/sullivan_lab.png" title="cloud research" align="right" width="300px">
     Sylvia Sullivan is an Assistant Professor in Chemical and Environmental Engineering who performs atmospherically related research and has a joint appointment to the Department of Hydrology and Atmospheric Sciences. Her academic background is in chemical engineering, but she has picked up atmospheric science and computing skills along the way to model and understand cloud and storm systems. “I really liked environmental work because I felt it was very impactful,” she says.  Her research includes investigating cloud ice formation. From a chemical engineering perspective, you can think about clouds as a control volume, flows in and out and phase changes occurring inside. Along with this more technical view, Sylvia says she “fell in love with clouds because they are very beautiful and poetic”. This blend of fields brought her to the University of Arizona as it is one of the only Universities where Chemical and Environmental Engineering are in the same department. And besides, “Tucson is a wonderful location”.
