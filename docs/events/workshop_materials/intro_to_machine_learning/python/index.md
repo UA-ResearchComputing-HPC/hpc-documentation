@@ -64,12 +64,12 @@ UArizona HPC provides access to Jupyter notebooks via [Open OnDemand](../../../.
 <img src="images/ood_jupyter_form.png" alt="OOD Dashboard" height="400"/>
 4. After the session becomes available, select **Connect to Jupyter** (2).
 <img src="images/ood_jupyter_running.png" alt="Running" width="800"/>
-5. Once you are in the Jupyter dashboard, you can create a notebook as usual. Just choose the kernel that you installed when you create it.
+5. Once you are in the Jupyter dashboard, create a notebook with the kernel you had installed.
 <img src="images/ood_jupyter_start_kernel.png" alt="Choose kernel" width="800"/>
 </div>
 
 1. Use your PI's group's name for the *PI Group* field. You can find out your PI's group's name by running `va` in a terminal session.
-2. 1. After you select **Launch** in the previous step, OOD will take you to a page with a tile that shows your pending job. When it's first submitted, its status will show as **Queued**. Once it starts, it's status will change to **Running** and you'll see the **Connect to Jupyter** link. 
+2. After you select **Launch** in the previous step, OOD will take you to a page with a tile that shows your pending job. When it's first submitted, its status will show as **Queued**. Once it starts, it's status will change to **Running** and you'll see the **Connect to Jupyter** link. 
 
 ## Examples
 
@@ -470,7 +470,7 @@ interp.plot_confusion_matrix()
 
 <center><a class="md-button" href="files/penguins-clustering.ipynb">Click here to download Jupyter notebook</a></center>
 
-In this example we will luster penguins into groups based on their bill features. We will use the [Palmer penguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) dataset.
+In this example we will cluster penguins into groups based on their bill features. We will use the [Palmer penguins](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) dataset.
 
 <img src="images/palmerpenguins.png" width="600">
 
@@ -478,7 +478,7 @@ In this example we will luster penguins into groups based on their bill features
 
 #### Accessing the data
 
-There is Python package `palmerpenguins` that provides the data, along with some other goodies. However for the purposes of this example you can simply download the [penguins.csv](https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv) from the Github repo of the package.
+There is a Python package `palmerpenguins` that provides the data, along with some other goodies. However for the purposes of this example you can simply download the [penguins.csv](https://raw.githubusercontent.com/mcnakhaee/palmerpenguins/master/palmerpenguins/data/penguins.csv) from the Github repo of the package.
 
 #### Visualizing the data
 
@@ -517,7 +517,7 @@ There are three unique species of penguins in the dataset. It might be tempting 
 pd.plotting.scatter_matrix(penguins, columns=["bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g"], figsize=(8, 8))
 ```
 
-<img src="images/penguin_pairplot.png" alt="Penguin pair plot", width="600"/>
+<img src="images/penguins_pairplot.png" alt="Penguins pair plot", width="600"/>
 
 The figure above shows that only when we plot `bill_length_mm` vs `bill_depth_mm`, or `bill_length_mm` vs `flipper_length_mm` we see more than two clusters. This does not mean that there are not more that two clusters. It just means that in *two-dimensions* these are the only two cases where we see hints of more two clusters.
 
@@ -592,8 +592,3 @@ ax.scatter(centroids[:, 0], centroids[:, 1], marker="x", color="red")
 <img src="images/penguins_mean_shift_centroids.png" alt="Centroids of mean shift clusters", width="600"/>
 
 The algorithm gives the centroids for three clusters, but not necessarily in the positions that you would expect them. A good exercise will be to check the scikit-learn implementation of mean shift clustering, and see if the naive implementation above can be improved.
-
-
-<a href="/events/workshop_materials/intro_to_machine_learning/R/"><button class="right-button" style="float: right;"></button></a>
-
-<br>
