@@ -73,6 +73,6 @@ flowchart LR
 - The Elements of Statistical Learning by Hastie, Tibishirani, Friedman (language agnostic)
 - Pattern Recognition and Machine Learning by Bishop (language agnostic)
 
-<a href="/events/workshop_materials/intro_to_machine_learning/python/"><button class="right-button" style="float: right;"></button></a>
-
-<br>
+## Examples
+- [Go to Python version](../python/)
+- [Go to R version](../R/)
