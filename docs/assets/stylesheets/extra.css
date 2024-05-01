@@ -34,3 +34,7 @@
   background-color: #F4EDE5;
   color: #001C48;
 }
+
+.grid.cards > ul > li, .md-typeset .grid > .card {
+  background-color: #eaf9f9;
+}
