@@ -216,6 +216,9 @@ theme:
 
 
 extra:
+  analytics:
+    provider: google
+    property: G-3V0VRBSRZF
   generator: false
   social:
     - icon: material/email
