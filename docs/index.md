@@ -171,7 +171,8 @@ Published research that utilized UArizona HPC resources should follow our [guide
 
 If you wish for your research to be featured in our [Results](./results) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
 
+
 ----
 
 
-<p style="font-style: italic; font-size: 14px; color: #777777;">We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. Committed to diversity and inclusion, the University strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.</p>
+<p style="font-style: italic; font-size: 14px; color: #777777;" align=center>We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. Committed to diversity and inclusion, the University strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.</p>

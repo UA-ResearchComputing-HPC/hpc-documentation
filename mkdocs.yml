@@ -219,6 +219,19 @@ extra:
   analytics:
     provider: google
     property: G-3V0VRBSRZF
+    feedback:
+      title: Was this page informative?
+      ratings:
+        - icon: material/thumb-up
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Have suggestions for improvements? <a target="_blank" href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f">Contact us</a>. 
   generator: false
   social:
     - icon: material/email
