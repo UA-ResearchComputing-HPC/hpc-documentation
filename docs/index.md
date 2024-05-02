@@ -43,7 +43,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 ## Available Resources
 
-??? example "Our Clusters (click to expand)"
+??? info "Our Clusters (click to expand)"
 
     === "Puma"
         <img class="img-right" src="assets/images/home/puma.png" title="Puma image" alt="puma" width="200" hspace=50 vspace=20>
@@ -92,6 +92,12 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
+-   :material-expansion-card-variant:{ .lg .middle } __New Ocelote GPUs__
+
+    ---
+
+    We recently added 22 new P100 GPUs to Ocelote. Need to request multiple GPUs on a node and you're finding Puma queue times too slow? You can now request two GPUs per node on Ocelote using `--gres=gpu:2`. 
+
 -   :material-file-document-alert-outline:{ .lg .middle } __New HPC Documentation!__
 
     ---
@@ -112,11 +118,7 @@ These resources specifically do not support Regulated Research, which might be I
 
     Beginning on March 1st, 2024 the standard allocation of CPU hours on Puma has increased from 100,000 to 150,000, and on Ocelote from 70,000 to 100,000. 
 
--   :material-lectern:{ .lg .middle } __UArizona at Supercomputing__
 
-    ---
-
-    Our Research Technologies team represented the University of Arizona’s top tier research brand along with that of ASU and NAU at the Supercomputing Conference (SC23), this year held in Denver. [Read the full story here](https://it.arizona.edu/news/university-research-shines-supercomputing-conference).
 
 </div>
 
@@ -171,6 +173,5 @@ If you wish for your research to be featured in our [Results](./results) page, p
 
 ----
 
-## Land Recognition
 
-*We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. Committed to diversity and inclusion, the University strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.*
+<p style="font-style: italic; font-size: 14px; color: #777777;">We respectfully acknowledge the University of Arizona is on the land and territories of Indigenous peoples. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. Committed to diversity and inclusion, the University strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.</p>
