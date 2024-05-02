@@ -2,7 +2,7 @@
 
 ## Overview
 
-The RCGC (Research Computing Governance Committee) has approved support for "Special Projects" that use more than the standard allocation of hours. When a special project request is granted, an additional allocation of standard hours is provided for a limited period of time.   
+The Research Computing Governance Committee (RCGC) has approved support for "Special Projects" that use more than the standard allocation of hours. When a special project request is granted, an additional allocation of standard hours is provided for a limited period of time.   
 
 There is not a specific definition of what comprises a project, but it is often support for publication or grant deadlines, or graduation dates. Each request is considered on a case by case basis.
 
