@@ -15,6 +15,9 @@ Below is a list of the node types and physical hardware that are available on ea
 
 **Available Hardware by Cluster and Node Type**
 
+!!! tip "CPUs and Memory"
+    For information on memory to CPU ratios, shown as RAM/CPU in the tables below, see [CPUs and Memory](../../running_jobs/cpus_and_memory/)
+
 === "Puma"
     **Resources Available**
     
@@ -26,11 +29,12 @@ Below is a list of the node types and physical hardware that are available on ea
     
     
 === "Ocelote"
-    | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
+    | <div style="width: 120px;">Node Type</div> | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
     |-|-|-|-|-|-|-|-|-|
-    |Standard|400|28|6 GB|168 GB|-|-|-|-|
+    |Standard|389|28|6 GB|168 GB|-|-|-|-|
     |High Memory|1| 48|41 GB|1968 GB|-|-|-|-|
-    |GPU|46|28|8 GB|224 GB|1|16 GB|16 GB|46|
+    |Single GPU Nodes|46|28|8 GB|224 GB|1|16 GB|16 GB|46|
+    |Dual GPU Nodes|11|28|6 GB|168 GB|2|16 GB|16 GB|22|
     
 === "El Gato"
     | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|
@@ -50,8 +54,12 @@ Below is a list of the node types and physical hardware that are available on ea
 
 
 === "Ocelote"
+
     <img src="images/p100_info.png" title="p100 GPU specifications" width=400px style="float: right; margin: 5px;">
-    Ocelote has 46 compute nodes with Nvidia P100 GPUs that are available to researchers on campus. The limitation is a maximum of 10 concurrent jobs. Previously, one node with a V100 was available, but it has since been replaced with a P100. Tasks which require multiple GPUs must either request multiple nodes on Ocelote, or use Puma's GPU nodes.
+
+    Ocelote has 46 compute nodes with one Nvidia P100 and 11 compute nodes with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
+
+    Previously, one node with a V100 was available, but it has since been replaced with a P100. 
 
 === "El Gato"
     El Gato has no GPU nodes. During the quarterly maintenance cycle on April 27, 2022 the El Gato K20s and Ocelote K80s were removed after support was ended by Nvidia.
