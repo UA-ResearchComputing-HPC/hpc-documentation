@@ -13,38 +13,14 @@ Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-!!! example "Currently no upcoming workshops. Check back later."
+!!! example "No listed events. Check back later."
 
 ## Our Friends and Partners
 
 ### Upcoming Events
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">16</div>
-        <div class="date-month">Apr</div>
-    </div>
-        <div class="event-details">
-            <h3><a href="https://datascience.arizona.edu/events/uarizona-datalab-special-workshop-rna-seq">RNA-Seq (Hosted by the UArizona Data Science Institute)</a></h3>
-            <p>10:00am-1:00pm &#x25cf CATalyst Studios B254</p>
-        </div>
-        <div class="event-registration">
-            <a href="https://uarizona.co1.qualtrics.com/jfe/form/SV_ehcQ3E76g4NWRIG"> <button class="register-button">Register</button></a>
-        </div>
-</div>
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">24</div>
-        <div class="date-month">Apr</div>
-    </div>
-        <div class="event-details">
-            <h3><a href="https://www.mathworks.com/company/events/seminars/parallel-computing-with-matlab-hands-on-workshop-4363824.html">Matlab Parallel Computing Webinar</a></h3>
-            <p>1:00pm-4:00pm &#x25cf Online</p>
-        </div>
-        <div class="event-registration">
-            <a href="https://www.mathworks.com/company/events/seminars/parallel-computing-with-matlab-hands-on-workshop-4363824.html"> <button class="register-button">Register</button></a>
-        </div>
-</div>
+!!! example "No listed events. Check back later."
+
 
 ### External Event Pages
 
