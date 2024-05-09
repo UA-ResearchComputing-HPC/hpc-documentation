@@ -19,22 +19,6 @@ There are four available partitions, or queues, on the UArizona HPC which determ
 |Qualified|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;</code></pre>|Available to groups with an activate [special project](../../../policies/special_projects/).|
 
 
-
-
-## Nodes
-
-???+ danger "Multi-Node Programs"
-    
-    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
-
-    **If your application is not MPI-enabled, always set** ```--nodes=1```
-
-The term node refers to the number of physical computers allocated to your job. The syntax to allocate ```<N>``` nodes to a job is:
-
-```
-#SBATCH --nodes=<N>
-```
-
 ## CPUs
 
 Each job must specify the requested number of CPUs with the ```--ntasks``` directive.  This can be done in one of two ways:
@@ -50,6 +34,29 @@ Each job must specify the requested number of CPUs with the ```--ntasks``` direc
     #SBATCH --ntasks=1
     #SBATCH --cpus-per-task=<N>
     ```
+
+## Nodes
+
+???+ danger "Single vs. Multi-Node Programs"
+    
+    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
+
+    **If your application is not MPI-enabled, always set** ```--nodes=1```
+
+The term node refers to the number of physical computers allocated to your job. The syntax to allocate ```<N>``` nodes to a job is:
+
+```
+#SBATCH --nodes=<N>
+```
+
+
+## Time
+
+The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:SS```. The maximum amount of time that can be requested is 10 days for a batch job. More details in [Job Limits](../../job_limits/).
+
+```
+#SBATCH --time=HHH:MM:SS
+```
 
 ## Memory and High Memory Nodes
 
@@ -82,15 +89,6 @@ To request a high memory node, you will need the additional flag ```--constraint
 |Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=high_mem</code></pre>|
 
 
-## Time
-
-The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:SS```. The maximum amount of time that can be requested is 10 days for a batch job. More details in [Job Limits](../../job_limits/).
-
-```
-#SBATCH --time=HHH:MM:SS
-```
-
-
 ## GPUs
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
@@ -109,7 +107,7 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
   <tr>
     <td rowspan=3  style="vertical-align: middle;">Puma</td>
     <td><pre><code>#SBATCH --gres=gpu:1</code></pre></td>
-    <td>Request a single GPU. This will either target one Volta GPU (v100) or one <a href="../../../resources/compute_resources/#mig-multi-instance-gpu-resources">A100 MIG slice</a>, depending on availability. Only one GPU should be selected with this method to avoid being allocated multiple MIG slices.</td>
+    <td>Request a single GPU. This will either target one Volta GPU (v100) or one <a href="../../../resources/compute_resources/#__tabbed_2_1">A100 MIG slice</a>, depending on availability. Only one GPU should be selected with this method to avoid being allocated multiple MIG slices.</td>
   </tr>
   <tr>
     <td><pre><code>#SBATCH --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb</code></pre></td>
@@ -120,9 +118,14 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
     <td>Request <code>N</code> V100 GPUs where 1&le;<code>N</code>&le;4</td>
   </tr>
   <tr>
-    <td>Ocelote</td>
-    <td><pre><code>#SBATCH --gres=gpu:1</code></pre></td>
-    <td>Request one Pascal GPU (p100)</td>
+    <td rowspan=2  style="vertical-align: middle;">Ocelote</td>
+    <td><pre><code>#SBATCH --gres=gpu:1<br>#SBATCH --mem-per-cpu=8gb</code></pre></td>
+    <td>Request one GPU. This will target either a Pascal (p100) or Volta (v100)</td>
+  </tr>
+  </tr>
+    <td><pre><code>#SBATCH --gres=gpu:2<br>#SBATCH --mem-per-cpu=6gb</code></pre></td>
+    <td>Request two Pascal (p100) GPUs</td>
+  </tr>
 </table>
 
 

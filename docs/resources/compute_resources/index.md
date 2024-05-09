@@ -4,6 +4,9 @@
 
 Below is a list of the node types and physical hardware that are available on each of our three clusters. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
 
+!!! tip "Requesting resources in jobs"
+    For information on the specifics of requesting the compute resources detailed below, see our [Batch Jobs](../../running_jobs/batch_jobs/batch_directives/), [Interactive Jobs](../../running_jobs/interactive_jobs/#the-interactive-command), and/or [Open OnDemand Jobs](../../running_jobs/open_on_demand/#interactive-graphical-applications) guides. 
+
 **Node Types**
 
 |Node Type|Description|
@@ -43,7 +46,6 @@ Below is a list of the node types and physical hardware that are available on ea
 
 ## GPU Nodes
 
-
 === "Puma"
     <img src="images/v100_info.jpg" title="v100 GPU specifications" width=400px style="float: right; margin: 5px;">
     Puma has a different arrangement for GPU nodes than Ocelote. Whereas Ocelote has one GPU per node, Puma has four. This has a financial advantage for providing GPU's with lower overall cost, and a technical advantage of allowing jobs that can use multiple GPU's to run faster than spanning multiple nodes.
@@ -51,6 +53,18 @@ Below is a list of the node types and physical hardware that are available on ea
     Puma's GPU nodes have four Nvidia V100S model GPUs. They are provisioned with 32 GB memory compared to 16 GB on the P100's.  
 
     In addition to the V100 nodes, one node has four A100s, each subdivided into three smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. 
+    
+    **Multi-Instance GPU (MIG) Resources**    
+
+    !!! info "MIG resources are only available on Puma"
+
+    The Four A100 GPUs on Puma Node r5u13n1 are each subdivided into three smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 20 GB of GPU memory. The vast majority of jobs run on Puma in 2023 used less than this amount of GPU memory. The 12 MIG GPUs increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory.
+
+    Jobs requesting MIG resources will ideally be scheduled more quickly than those requesting the standard V100 GPUs, so MIG resources should be preferred when sufficient.
+
+    A limitation is that only one MIG slice can be addressed by a single application, so {==MIG slices are not appropriate for jobs utilizing multiple GPUs==}.
+
+    The addition of the MIG devices to the Slurm queues will have a number of impacts, and some users may need to make changes to submissions to ensure proper functioning of analyses. 
 
 
 === "Ocelote"
@@ -65,24 +79,6 @@ Below is a list of the node types and physical hardware that are available on ea
     El Gato has no GPU nodes. During the quarterly maintenance cycle on April 27, 2022 the El Gato K20s and Ocelote K80s were removed after support was ended by Nvidia.
 
 
-
-
-
-### Multi-Instance GPU (MIG) Resources
-
-!!! info "MIG resources are only available on Puma"
-
-**Overview**
-
-The Four A100 GPUs on Puma Node r5u13n1 are each subdivided into three smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 20 GB of GPU memory. The vast majority of jobs run on Puma in 2023 used less than this amount of GPU memory. The 12 MIG GPUs increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory.
-
-Jobs requesting MIG resources will ideally be scheduled more quickly than those requesting the standard V100 GPUs, so MIG resources should be preferred when sufficient.
-
-A limitation is that only one MIG slice can be addressed by a single application, so {==MIG slices are not appropriate for jobs utilizing multiple GPUs==}.
-
-**Using MIG Resources** 
-
-The addition of the MIG devices to the Slurm queues will have a number of impacts, and some users may need to make changes to submissions to ensure proper functioning of analyses. For more information on requesting GPU resources, see our [Batch Jobs](../../running_jobs/batch_jobs/batch_directives/#gpus), [Interactive Jobs](../../running_jobs/interactive_jobs/), and/or [Open OnDemand Jobs](../../running_jobs/open_on_demand/) guides. 
 
 
 

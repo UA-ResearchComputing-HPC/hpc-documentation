@@ -54,7 +54,7 @@ The values shown in the output can be combined and each mean the following:
 |```-N```|Total number of nodes (physical computers) to allocate to your job|```-N 2```|
 |```-m```|Total amount of memory {==per CPU==}. See [CPUs and Memory](../cpus_and_memory/) for more information and potential complications|```-m 5gb```|
 |```-Q```|Used to access {==high priority or qualified hours==}. Only for groups with [buy-in/special project hours](../../resources/allocations/)|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
-|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#mig-multi-instance-gpu-resources). If you want more control over your resources, you can use `salloc` directly using [GPU batch directives](../batch_jobs/batch_directives/#gpus)|```-q```|
+|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use `salloc` directly using [GPU batch directives](../batch_jobs/batch_directives/#gpus)|```-q```|
 |```-x```|Enable [X11 forwarding](/registration_and_access/system_access/#x11-forwarding). This flag takes no arguments.|```-x```|
 
 You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) commands using any desired Slurm directives for maximum customization.
