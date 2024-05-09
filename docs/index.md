@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/stylesheets/images.css">
 
 
-<img class="img-right" src="assets/images/home/uofa_cactus_computing2.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">
+<img class="img-right" src="assets/images/home/uofa_cactus_computing3.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">
 
 ## Introduction
 
@@ -14,32 +14,32 @@ This documentation site provides technical details relevant to using our HPC sys
 ## Featured Links
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./registration_and_access/account_creation/"> Account Creation</a></span>
 </p>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
+<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview/">HPC Quick Start</a></span>
 </p>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
+<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a></span>
 </p>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
+<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
 
 <p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_computing2.png" title="image bullet point" style="width: 30px; vertical-align: middle;">
+  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
   <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
 </p>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 2.6em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
+<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
 
 ## Available Resources
 
