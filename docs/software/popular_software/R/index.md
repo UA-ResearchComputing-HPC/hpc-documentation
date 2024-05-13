@@ -129,7 +129,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 ## Using RStudio
 
 === "Open OnDemand"
-    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/graphical_applications/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
+    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
 
 === "Singularity"
     In some circumstances, you may want to run RStudio using your own Singularity image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
