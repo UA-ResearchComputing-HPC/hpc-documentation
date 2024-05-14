@@ -5,4 +5,5 @@ This workshop provides an introduction to some concepts of visualization. It is 
 
 <center>
 [Click here to download PDF](files/IntroToViz.pdf){ .md-button }
+[Click here to download Jupyter notebook](files/intro-viz-workshop.ipynb){ .md-button }
 </center>
