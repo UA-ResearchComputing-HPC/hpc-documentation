@@ -47,3 +47,11 @@
 .md-feedback__note {
   font-size: 14px;
 }
+
+.highlight span.filename {
+  background-color: #f0e2d2;
+}
+
+.highlight .hll {
+  background-color:  #d2e0f0;
+}
