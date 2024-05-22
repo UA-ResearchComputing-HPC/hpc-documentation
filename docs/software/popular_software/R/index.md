@@ -57,7 +57,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 === "Anaconda"
     One common reason R packages won't install is an altered environment. This can frequently be caused by the presence of Anaconda (or Miniconda) installed locally or initialized in your account from our system module.
     
-    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../python_and_anaconda/anaconda/#removing-anaconda-from-your-environment). 
+    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../anaconda/#removing-anaconda-from-your-environment). 
 
 === "A Corrupted Environment"
 

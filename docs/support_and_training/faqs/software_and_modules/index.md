@@ -121,7 +121,7 @@ fi
 <button class="collapsible">How do I install Python packages?</button>
 <div class="content">
   <p>
-     You can install python packages locally using either a <a href="../../../software/popular_software/python_and_anaconda/python/#installing-python-packages-using-a-virtual-environment">virtual environment</a> or a <a href="../../../software/popular_software/python_and_anaconda/anaconda/#creating-a-conda-environment">local conda environment</a>. 
+     You can install python packages locally using either a <a href="../../../software/popular_software/python/#installing-python-packages-using-a-virtual-environment">virtual environment</a> or a <a href="../../../software/popular_software/anaconda/#creating-a-conda-environment">local conda environment</a>. 
   </p>
 </div>
 
@@ -130,7 +130,7 @@ fi
 <button class="collapsible">How do I access custom Python packages from an OOD Jupyter session?</button>
 <div class="content">
   <p>
-  You can install packages and make them available by first creating a virtual environment or conda environment, then setting up a custom Jupyter kernel. See instructions in our <a href="../../../software/popular_software/python_and_anaconda/python/">Python</a> or <a href="../../../software/popular_software/python_and_anaconda/anaconda/">Anaconda</a> documentation for details. 
+  You can install packages and make them available by first creating a virtual environment or conda environment, then setting up a custom Jupyter kernel. See instructions in our <a href="../../../software/popular_software/python/">Python</a> or <a href="../../../software/popular_software/anaconda/">Anaconda</a> documentation for details. 
   </p>
 </div>
 

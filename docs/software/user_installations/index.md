@@ -2,7 +2,7 @@
 
 ## Package managers
 
-Many popular programs, in particular [Python](../popular_software/python_and_anaconda/python/) and [R](../popular_software/R/) have built-in package managers that can be used to collect new software from the internet and easily install them to your environment. See the section corresponding to your preferred language on the left under the "Popular Software" heading for more detailed instructions.
+Many popular programs, in particular [Python](../popular_software/python/) and [R](../popular_software/R/) have built-in package managers that can be used to collect new software from the internet and easily install them to your environment. See the section corresponding to your preferred language on the left under the "Popular Software" heading for more detailed instructions.
 
 ## Manual installations
 

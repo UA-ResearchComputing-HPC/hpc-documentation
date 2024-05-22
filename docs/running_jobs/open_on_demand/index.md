@@ -119,7 +119,7 @@ When you first submit your job, it will show as having a status of "Queued". Onc
 
 === "Jupyter Notebooks"
     !!! tip
-        To access your own python packages in Jupyter, you can create custom kernels either using [a python module](../../../software/popular_software/python_and_anaconda/python/#custom-jupyter-kernel) or [using anaconda](../../../software/popular_software/python_and_anaconda/anaconda/#custom-jupyter-kernel).
+        To access your own python packages in Jupyter, you can create custom kernels either using [a python module](../../../software/popular_software/python/#custom-jupyter-kernel) or [using anaconda](../../../software/popular_software/anaconda/#custom-jupyter-kernel).
 
     The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.
 
