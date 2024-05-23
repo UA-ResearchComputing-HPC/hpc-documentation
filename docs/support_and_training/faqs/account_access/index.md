@@ -66,10 +66,12 @@
   <p>Faculty members who manage their own HPC groups can follow the instructions in our <a href="../../../registration_and_access/group_management/">Research and Class Groups</a> page.</p>
 </div>
 
-<button class="collapsible">I'm leaving the university/not affiliated with the university, can I maintain/receive access to HPC?</button>
+<button class="collapsible">I'm leaving the university/retiring/not affiliated with the university, can I maintain/receive access to HPC?</button>
 <div class="content">
   <p>Yes, if you are a former university affiliate or campus collaborator participating in research, you may register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC)</a>. Once your DCC status has been approved, you will receive a NetID+ which you may use to <a href="../../../registration_and_access/account_creation/">create an HPC Account</a>. If you already have an HPC Account, no further action is required.</p>
 </div>
+
+
 
 <div class="vertical-space"></div>
 <script src="../../../assets/javascripts/animated_dropdown.js"></script>

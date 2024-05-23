@@ -10,3 +10,6 @@ Unfortunately, we cannot extend HPC access prior to or after the loss of affilia
 
 Home directory data are retained for 90 days following the loss of affiliation. If university affiliation is reestablished and HPC access is restored within those 90 days, your files will be accessible when you log into HPC again. Data stored in shared locations such as `/groups` or `/xdisk` persist for as long as the storage location is available and are not deleted after a user loses access to the system.
 
+## Retirement and Emeritus Faculty
+
+HPC users who retire do not lose their university affiliation and will continue to have access to HPC resources. However, emeritus faculty members are not eligible for Principal Investigator (PI) status. They will need to be sponsored by an active university PI to retain access to compute and storage allocations.
