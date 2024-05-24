@@ -10,6 +10,60 @@ There are three common ways to run Matlab:
 
 Like any other application, Matlab has to be loaded as a module before you can use it. To see all the installed versions of the Matlab, use the command ```module avail matlab```.
 
+## Logging Into Mathworks
+With some of the latest versions, it's necessary to interactively log into Mathworks to access Matlab. This only needs to be done once using your university credentials. After your credentials are validated, they will be stored, allowing you to run batch jobs
+
+To start, open [an interactive session](../../../running_jobs/interactive_jobs/), load Matlab, and start an interactive instance:
+
+```bash title="Load and start Matlab"
+[netid@cpu37 ~]$ module load matlab/r2023b
+[netid@cpu37 ~]$ matlab
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Please enter your MathWorks Account email address and press Enter: 
+```
+
+at the prompt, enter your university email address. For example:
+
+```bash title="Enter your university password and go to URL" hl_lines="1 3"
+Please enter your MathWorks Account email address and press Enter: netid@arizona.edu
+You need a one-time password to sign in. To get a one-time password, follow these steps:
+	1. Go to https://www.mathworks.com/mw_account/otp
+	2. Enter your MathWorks Account email address.
+	3. Copy the generated one-time password.
+	4. Return here and enter the password.
+Enter the one-time password:
+```
+
+Next, go to the URL they provide (highlighted above) and enter your university email address again
+
+<img src="./images/mathworks_login.png" style="width: 400px">
+
+This will take you through the usual university WebAuth process. Once this is completed, you will be given a temporary code:
+
+<img src="./images/temporary_code.png" style="width: 400px">
+
+Copy this code to your clipboard and paste it into your terminal:
+
+```bash title="Enter one time password" hl_lines="2"
+Enter the one-time password:
+12345
+
+
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2023 The MathWorks, Inc.
+                                           R2023b Update 6 (23.2.0.2485118) 64-bit (glnxa64)
+                                                           December 28, 2023
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Using 1 thread(s) on compute node.
+>>
+```
+
+Once the process is complete, you should be able to use Matlab as usual. 
+
+
 ## Running Matlab Analyses in Batch
 The typical procedure for performing calculations on UArizona HPC systems is to run your program non-interactively on compute nodes using a batch submission. The easiest way to run Matlab non-interactively is to use input/output redirection. This method uses Linux operators `<` and `>` to point Matlab to the input file and tell where to write the output (see the example script below). The other method is to execute a statement using the `-r` flag. For details, refer to the [manual page for the matlab command](https://www.mathworks.com/help/matlab/ref/matlablinux.html).
 
