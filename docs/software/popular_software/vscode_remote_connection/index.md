@@ -19,6 +19,9 @@ B --> C[Connect VSCode to the<br>allocated compute node]
 
 The specific steps are these:
 
+!!! tip "Use the HPC VPN"
+    Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`
+
 1. Set up ssh key authentication on the file transfer node (```filexfer.hpc.arizona.edu```), which will allow VSCode to directly connect to the HPC systems without using passwords or Duo authentication.  Our documentation for setting up ssh keys on the bastion host appears here: [SSH Keys](/registration_and_access/system_access/#ssh-keys).  Follow the procedure documented on that page, but replace ```hpc.arizona.edu``` in any commands with ```filexfer.hpc.arizona.edu```.
 
 2. Use the Cisco AnyConnect VPN software to connect to ```vpn.hpc.arizona.edu```.  Cisco AnyConnect is the software that you would also use to connect to the general UArizona VPN.  Information on downloading and connecting Cisco AnyConnect appears here: [https://it.arizona.edu/service/ua-virtual-private-network-vpn](https://it.arizona.edu/service/ua-virtual-private-network-vpn)
