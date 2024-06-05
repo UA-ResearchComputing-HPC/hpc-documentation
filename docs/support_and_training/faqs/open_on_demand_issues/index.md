@@ -55,7 +55,22 @@ conda config --set auto_activate_base false
       This will prevent conda from auto-activating when you first log in and allow you to have more control over your environment. When you'd like to activate Anaconda, run <code>conda activate</code>. 
   </p>
 </div>
-    
+
+<button class="collapsible">Why are my Desktop sessions freezing with: 'noVNC encountered an error: Incomplete zlib block'?</button>
+<div class="content">
+  <p> 
+    If you're seeing the following error pop up when using an OnDemand Desktop session:
+    <br>
+    <img src="images/desktop_zlib_error.png" title="Desktop zlib error" style="width:500px;">
+    <br>
+    Check the compression value set for your job. If it has been set to zero, increase the value to something nonzero and retry your session. 
+    <br>
+    To check and modify your compression, go to your job tile in <a href="https://ood.hpc.arizona.edu/">ood.hpc.arizona.edu</a> under My Interactive Sessions and check the lower left-hand section.
+    <br>
+    <img src="images/desktop_compression.png" title="Desktop compression" style="width:500px;">
+
+  </p>
+</div>
     
 <div class="vertical-space"></div>
 <script src="../../../assets/javascripts/animated_dropdown.js"></script>
