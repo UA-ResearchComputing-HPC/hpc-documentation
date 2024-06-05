@@ -28,21 +28,21 @@ Below is a list of the node types and physical hardware that are available on ea
     |-|-|-|-|-|-|-|-|-|
     |Standard|192 standard<br>108 buy-in|94|5 GB|470 GB|-|-|-|-|
     |High Memory|3 standard<br>2 buy-in| 94|32 GB|3008 GB|-|-|-|-|-|
-    |GPU|8 standard<br>7 buy-in|94|5 GB|470 GB|4|32 GB (v100s)<br>20 GB ([MIGs](#mig-multi-instance-gpu-resources))|128 GB|32 standard<br>28 buy-in|
+    |GPU|9 standard<br>6 buy-in|94|5 GB|470 GB|4|32 GB (v100s)<br>20 GB (MIGs)|128 GB|36 standard<br>24 buy-in|
     
     
 === "Ocelote"
     | <div style="width: 120px;">Node Type</div> | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
     |-|-|-|-|-|-|-|-|-|
-    |Standard|389|28|6 GB|168 GB|-|-|-|-|
+    |Standard|360|28|6 GB|168 GB|-|-|-|-|
     |High Memory|1| 48|41 GB|1968 GB|-|-|-|-|
-    |Single GPU Nodes|46|28|8 GB|224 GB|1|16 GB|16 GB|46|
-    |Dual GPU Nodes|11|28|6 GB|168 GB|2|16 GB|16 GB|22|
+    |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
+    |Dual GPU Nodes|35|28|6 GB|168 GB|2|16 GB|32 GB|70|
     
 === "El Gato"
     | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|
     |-|-|-|-|-|
-    |Standard|130|16|4 GB|64 GB|
+    |Standard|118|16|4 GB|64 GB|
 
 ## GPU Nodes
 
@@ -88,14 +88,14 @@ Below is a list of the node types and physical hardware that are available on ea
 |-|-|-|-|
 |Model|IBM System X iDataPlex dx360 M4|Lenovo NeXtScale nx360 M5|Penguin Altus XE2242|
 |Year Purchased|2013|2016 (2018 P100 nodes)|2020|
-|Node Count|118|373 CPU-only<br>46 GPU<br>1 High Memory|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
-|Total System Memory|26 TB|82.6 TB|128 TB|
+|Node Count|118|360 CPU-only<br>60 GPU<br>1 High Memory|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
+|Total System Memory|23.5 TB|83.3 TB|169.7 TB|
 |Processors|2x Xeon E5-2650v2 8-core (Ivy Bridge)|2x Xeon E5-2695v3 14-core (Haswell)<br>2x Xeon E5-2695v4 14-core (Broadwell)<br>4x Xeon E7-4850v2 12-core (Ivy Bridge)|2x AMD EPYC 7642 48-core (Rome)|
 |Cores/Node (Schedulable)|16|28 (48 - High-memory node)|94|
-|Total Cores|1888|11696[^1]|30720[^1]|
+|Total Cores|1888|11724[^1]|30720[^1]|
 |Processor Speed|2.66 GHz|2.3 GHz (2.4GHz - Broadwell CPUs)|2.4 GHz|
-|Memory/Node|256 GB - GPU nodes<br>64 GB - CPU-only nodes|192 GB<br>(2 TB - High-memory node)|512 GB<br>(3 TB - High-memory nodes)|
-|Accelerators|46 NVIDIA P100 (16GB)|29 NVIDIA V100S|
+|Memory/Node|64 GB|192 GB<br>(2 TB - High-memory node)|512 GB<br>(3 TB - High-memory nodes)|
+|Accelerators||60 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>12 A100 20 GB MIG slices|
 |/tmp[^2]|~840 GB spinning|~840 GB spinning|~1440 TB NVMe|
 |HPL Rmax (TFlop/s)|46|382||
 |OS|CentOS 7|CentOS 7|CentOS 7|
