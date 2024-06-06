@@ -1,19 +1,58 @@
 <link rel="stylesheet" href="../../../assets/stylesheets/embedded_files.css">
 
+
 # Intro to HPC Workshop Materials
 
-<center>
-[Click here to download PDF (Fall 2023)](files/IntroToHPC.Fall2023.pdf){ .md-button }
-[Click here to download PDF (Spring 2024)](files/IntroToHPC.Spring2024.pdf){ .md-button }
+Video recordings and slides of previous Intro to HPC workshops are available here on this page. The more recent workshops will have more updated information, but older workshops are also available.
 
-</center>
+=== "ResBaz 2024"
+    
+    <center>
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/kwOub0gMOMM"></iframe>
+      </div>
+    </div>
 
-## Video Presentation
-<div class="auto-resizable-iframe">
-  <div>
-    <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/xlgL6u1jkVI"></iframe>
-  </div>
-</div>
+    <div class="auto-resizable-iframe">
+        <div>
+            <iframe frameborder="0" allowfullscreen="" src="files/IntrotoHPC.ResBaz2024.pdf"></iframe>
+        </div>
+    </div>
+
+    [Download ResBaz 2024 Slides](files/IntrotoHPC.ResBaz2024.pdf){ .md-button }
+    </center>
+
+=== "Spring 2024"
+    
+    <center>
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/xlgL6u1jkVI"></iframe>
+      </div>
+    </div>
+
+    <div class="auto-resizable-iframe">
+        <div>
+            <iframe frameborder="0" allowfullscreen="" src="files/IntroToHPC.Spring2024.pdf"></iframe>
+        </div>
+    </div>
+
+    [Download Spring 2024 Slides](files/IntroToHPC.Spring2024.pdf){ .md-button }
+    </center>
+
+=== "Fall 2023"
+    
+    <center>
+    <div class="auto-resizable-iframe">
+        <div>
+            <iframe frameborder="0" allowfullscreen="" src="files/IntroToHPC.Fall2023.pdf"></iframe>
+        </div>
+    </div>
+
+    [Download Fall 2023 Slides](files/IntroToHPC.Fall2023.pdf){ .md-button }
+    </center>
+
 
 
 ## Interactive Materials
