@@ -26,7 +26,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
     <center>
     	[PDF Slides](intro_to_linux/files/IntroToLinux.pdf){ .md-button }
-    	[PDF Slides](intro_to_linux/files/IntroToLinux.pptx){ .md-button }
+    	[PPT Slides](intro_to_linux/files/IntroToLinux.pptx){ .md-button }
     	[:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=9JIRVJjGOxU){ .md-button }
 	</center>
 
