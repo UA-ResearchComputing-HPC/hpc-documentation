@@ -36,7 +36,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="display:inline-block;">
   <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a></span>
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a> | <a href="./events/workshop_materials/"> Workshop Materials</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
