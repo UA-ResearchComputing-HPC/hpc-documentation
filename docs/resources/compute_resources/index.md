@@ -37,7 +37,7 @@ Below is a list of the node types and physical hardware that are available on ea
     |Standard|360|28|6 GB|168 GB|-|-|-|-|
     |High Memory|1| 48|41 GB|1968 GB|-|-|-|-|
     |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
-    |Dual GPU Nodes|35|28|6 GB|168 GB|2|16 GB|32 GB|70|
+    |Dual GPU Nodes|35|28|8 GB|224 GB|2|16 GB|32 GB|70|
     
 === "El Gato"
     | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|
@@ -71,7 +71,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
     <img src="images/p100_info.png" title="p100 GPU specifications" width=400px style="float: right; margin: 5px;">
 
-    Ocelote has 46 compute nodes with one Nvidia P100 and 11 compute nodes with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
+    Ocelote has 25 compute nodes with one Nvidia P100 and 35 compute nodes with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
 
     Previously, one node with a V100 was available, but it has since been replaced with a P100. 
 
