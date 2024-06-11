@@ -112,14 +112,14 @@ nav:
   - Support:
     - Consulting Services: support_and_training/consulting_services/index.md
     - Support Staff: support_and_training/people/index.md
-    - FAQs: 
-        - Account Access: support_and_training/faqs/account_access/index.md 
-        - General Computing: support_and_training/faqs/general_computing/index.md 
-        - Jobs and Scheduling: support_and_training/faqs/jobs_and_scheduling/index.md 
-        - Software and Modules: support_and_training/faqs/software_and_modules/index.md 
-        - Storage and Transfers: support_and_training/faqs/storage/index.md
-        - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
-        - Secure Services: support_and_training/faqs/secure_services/index.md    
+    - FAQs: support_and_training/faqs/index.md
+        # - Account Access: support_and_training/faqs/account_access/index.md 
+        # - General Computing: support_and_training/faqs/general_computing/index.md 
+        # - Jobs and Scheduling: support_and_training/faqs/jobs_and_scheduling/index.md 
+        # - Software and Modules: support_and_training/faqs/software_and_modules/index.md 
+        # - Storage and Transfers: support_and_training/faqs/storage/index.md
+        # - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
+        # - Secure Services: support_and_training/faqs/secure_services/index.md    
     # - Workshops: 
     #     - Events Calendar: support_and_training/workshops/events_calendar/index.md
     #     - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md

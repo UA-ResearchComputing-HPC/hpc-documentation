@@ -29,7 +29,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="display:inline-block;">
   <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a></span>
+  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a> | <a href="./support_and_training/faqs/">FAQs</a></span>
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
