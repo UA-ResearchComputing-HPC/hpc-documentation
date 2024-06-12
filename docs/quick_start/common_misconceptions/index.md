@@ -3,6 +3,9 @@
 
 !!! tip "Both experienced and novice users may benefit from reading through these common misconceptions."
 
+??? danger "Do not run computations on the login nodes." 
+    See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
 **If I move my code to HPC, it will automatically run faster**
 
 You might be surprised to learn that if you move code from a local computer to a supercomputer, it will not automatically run faster and may even run *slower*. This is because the power of a supercomputer comes from the volume of resources available (compute nodes, CPUs, GPUs, etc.) and not the clockspeed of the processors themselves. Performance boosts come from optimizing your code to make use of the additional processors available on HPC, a practice known as parallelization.

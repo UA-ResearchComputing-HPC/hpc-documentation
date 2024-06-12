@@ -6,6 +6,9 @@ Below is a graphic depiction of the layout of the HPC nodes:
 
 <center><img src="images/nodes.png" title="HPC system diagram" style="height: 400px;"></center>
 
+??? danger "Do not run computations on the login nodes." 
+    See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
 **Bastion Host**
 
 This is the first node that users access when using an [SSH connection](../system_access/#command-line-access). Open OnDemand users do not directly access this node. 
