@@ -240,7 +240,7 @@ extra:
       link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
       name: Contact HPC consulting
     - icon: material/help-box-multiple
-      link: /support_and_training/faqs/account_access/
+      link: /support_and_training/faqs/
       name: FAQs
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/

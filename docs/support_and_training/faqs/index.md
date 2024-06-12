@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../../../assets/stylesheets/spacing.css">
 
 
-# Overview
+# FAQs
 
 Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](mailto:hpc-consult@list.arizona.edu) and we will be happy to add it. 
 
@@ -83,8 +83,6 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
   <div class="content">
     <p>Yes, if you are a former university affiliate or campus collaborator participating in research, you may register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC)</a>. Once your DCC status has been approved, you will receive a NetID+ which you may use to <a href="../../../registration_and_access/account_creation/">create an HPC Account</a>. If you already have an HPC Account, no further action is required.</p>
   </div>
-
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 
 </html>
 
@@ -198,7 +196,6 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
         <pre><code class="language-bash">set -oe pipefail</code></pre>
     </p>
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 <!-- ----------------------------------------------------------------------------------------------
@@ -248,7 +245,6 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
     <br>
     For more information on working with hidden files, see our <a href="../../cheat_sheet/#hidden-files-and-directories">Linux cheat sheet page</a>. 
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -332,7 +328,6 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
     </p>
   </div>
       
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -493,7 +488,6 @@ _\ \ (_) |  _| |_ \ V  V / (_| | | |  __/ | (_| | | | | (_| | / /\/\ \ (_) | (_|
     </p>
   </div>
 
-<script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -584,7 +578,6 @@ _\ \ || (_) | | | (_| | (_| |  __/
         Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
     </p>
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -750,7 +743,6 @@ __  ____| (_)___| | __
         No, only one xdisk may be active per PI at a given time. 
     </p>
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -791,7 +783,6 @@ __  ____| (_)___| | __
         No, rental storage is not mounted on the HPC login or compute nodes which means jobs cannot access <code>/rental</code> directly. Data stored in <code>/rental</code> need to be moved to <code>/home</code>, <code>/groups</code>, or <code>/xdisk</code> to be available. 
     </p>
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -831,7 +822,6 @@ __  ____| (_)___| | __
         R-DAS is not mounted on the HPC compute nodes or login nodes, and is not meant for running computations. But you can follow the steps <a href="../../../storage_and_transfers/storage/rdas_storage/#__tabbed_3_1">in our R-DAS documentation</a> to share data between your R-DAS allocation and your HPC storage (<code>/home</code>, <code>/groups</code>, <code>/xdisk</code>): 
     </p>
   </div>
-  <script src="../../assets/javascripts/animated_dropdown.js"></script>
 </html>
 
 
@@ -973,7 +963,6 @@ __  ____| (_)___| | __
     </p>
   </div>
 
-  <script src="../../../assets/javascripts/animated_dropdown.js"></script>
 
 </html>
 

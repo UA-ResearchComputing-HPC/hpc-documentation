@@ -8,7 +8,7 @@
 
 
 !!! info "Login issues"
-    If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/account_access/).
+    If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/).
 
 Once you've successfully registered for an HPC account, you're ready to log in. There are two main methods to access the HPC system
 
