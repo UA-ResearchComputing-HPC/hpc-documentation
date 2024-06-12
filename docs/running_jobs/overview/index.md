@@ -2,6 +2,12 @@
 
 HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm via an internet browser through [Open OnDemand](https://ood.hpc.arizona.edu), or via an [SSH connection](../../registration_and_access/system_access/#command-line-access) to one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
 
+??? danger "Do not run jobs on Login Nodes"
+
+    A login node serves as a staging area where you can perform housekeeping work, edit scripts, and submit job requests for execution on one/some of the cluster’s compute nodes. It is important to know that **the login nodes are not the location where scripts are run**. Heavy computation on the login nodes slows the system down for all users and will not give you the resources or performance you need. Additionally, modules are not available on the login nodes. 
+
+    Tasks run on the login nodes that impact usability will be identified and cancelled by HPC infrastructure without warning. 
+
 ## New to HPC?
 
 If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../events/workshop_materials/intro_to_hpc/), [parallel computing](../../events/workshop_materials/intro_to_parallel_computing/), and [containers](../../events/workshop_materials/intro_to_containers/), among other topics. 
@@ -9,11 +15,6 @@ If you are new to the UArizona HPC system, or to HPC systems in general, we reco
 
 ## Best Practices
 
-!!! danger "Do not run jobs on Login Nodes"
-
-    A login node serves as a staging area where you can perform housekeeping work, edit scripts, and submit job requests for execution on one/some of the cluster’s compute nodes. It is important to know that **the login nodes are not the location where scripts are run**. Heavy computation on the login nodes slows the system down for all users and will not give you the resources or performance you need. Additionally, modules are not available on the login nodes. 
-
-    Tasks run on the login nodes that impact usability will be identified and cancelled by HPC infrastructure without warning. 
 
 When creating a job request, please keep the following in mind:
 

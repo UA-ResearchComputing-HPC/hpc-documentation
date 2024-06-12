@@ -10,6 +10,9 @@
 !!! info "Login issues"
     If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/).
 
+??? danger "Do not run computations on the login nodes." 
+    See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
 Once you've successfully registered for an HPC account, you're ready to log in. There are two main methods to access the HPC system
 
 1. **Open OnDemand**

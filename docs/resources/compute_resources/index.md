@@ -1,5 +1,8 @@
 # Compute Resources
 
+??? danger "Do not run computations on the login nodes." 
+    The compute resources described on this page are designed for handling computationally intensive tasks. See [Running Jobs](../../running_jobs/overview/) for detailed instructions. 
+
 ## Compute Resources Available by Cluster
 
 Below is a list of the node types and physical hardware that are available on each of our three clusters. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
