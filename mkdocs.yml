@@ -112,6 +112,14 @@ nav:
     #   - Array Job Using GNU Parallel: running_jobs/example_batch_jobs/array_and_gnu_parallel/index.md
     - Monitoring Jobs and Resources: running_jobs/monitoring_jobs_and_resources/index.md
     - Parallelization: running_jobs/parallelization/index.md
+    # Q is there a way to include the md on the main visualization page instead of in an  "INTRO " sub item?
+    - Visualization: 
+      - Intro: running_jobs/visualization/index.md
+      - Blender: 
+        - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
+        - Scaling Up Blender Rendering: running_jobs/visualization
+      - Paraview: running_jobs/visualization/blender/index.md
+      - VisIt: running_jobs/visualization/blender/index.md
 
 
   - Support:
