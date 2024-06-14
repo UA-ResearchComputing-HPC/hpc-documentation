@@ -118,7 +118,19 @@ nav:
       - Blender: 
         - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
         - Scaling Up Blender Rendering: running_jobs/visualization
-      - Paraview: running_jobs/visualization/blender/index.md
+      - Paraview: 
+        - Intro: running_jobs/visualization/blender/index.md
+        - Getting Started:  running_jobs/visualization/paraview/Getting Started With ParaView/index.md
+        - CGAl Vespa:  running_jobs/visualization/paraview/Advanced Computational Geometry in Paraview with CGAL & Vespa/index.md
+        - Paraview Python Plugins:  running_jobs/visualization/paraview/Demystifying Paraview Python Plugins (or at least a little less mystery)/index.md
+        - Essential Ideas: running_jobs/visualization/paraview/Essential Ideas for ParaView/index.md
+        - Getting Started with Paraview Terminal:  running_jobs/visualization/paraview/Getting Started With The Paraview Terminal (PvPython)/index.md
+        - Graphs and Exporting Data:  running_jobs/visualization/paraview/Graphs and Exporting Data/index.md
+        - Cameras and Keyframes:  running_jobs/visualization/paraview/ParaView Cameras and Keyframes/index.md
+        - Headless Batch Rendering:  running_jobs/visualization/paraview/Paraview Headless Batch Rendering/index.md
+        - Speeding up Filters & Rendering with Client Server configurations:  running_jobs/visualization/paraview/Speeding up Filters & Rendering with Client Server configurations/index.md
+        - Visualizing NetCDF Files:  running_jobs/visualization/paraview/Visualizing NetCDF Files/index.md
+        - Paratest images: running_jobs/visualization/paraview/paratestimages/index.md
       - VisIt: running_jobs/visualization/blender/index.md
 
 
