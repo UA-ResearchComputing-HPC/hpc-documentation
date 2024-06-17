@@ -131,7 +131,7 @@ nav:
         - Speeding up Filters & Rendering with Client Server configurations:  running_jobs/visualization/paraview/Speeding up Filters & Rendering with Client Server configurations/index.md
         - Visualizing NetCDF Files:  running_jobs/visualization/paraview/Visualizing NetCDF Files/index.md
         - Paratest images: running_jobs/visualization/paraview/paratestimages/index.md
-      - VisIt: running_jobs/visualization/blender/index.md
+      - VisIt: running_jobs/visualization/VisIt/index.md
 
 
   - Support:
