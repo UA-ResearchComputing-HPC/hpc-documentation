@@ -18,6 +18,7 @@
     * Support related to this document
 
 ![](images/gallery-21.jpg)
+![](images/spheres_and_paths_smaller.png)
 ![](images/gallery-36-large-thumb.jpg)
 ![](images/gallery-44-thumb.jpg)
 </div>
