@@ -115,10 +115,10 @@ nav:
         - Scaling Up Blender Rendering: running_jobs/visualization/blender/scaling_up_blender_rendering/index.md
       - Paraview: 
         - Intro: running_jobs/visualization/blender/index.md
+        - Essential Ideas: running_jobs/visualization/Paraview/Essential Ideas for ParaView/index.md
         - Getting Started:  "running_jobs/visualization/Paraview/Getting Started With ParaView/index.md"
         - CGAl Vespa:  running_jobs/visualization/Paraview/Advanced Computational Geometry in Paraview with CGAL & Vespa/index.md
         - Paraview Python Plugins:  running_jobs/visualization/Paraview/Demystifying Paraview Python Plugins (or at least a little less mystery)/index.md
-        - Essential Ideas: running_jobs/visualization/Paraview/Essential Ideas for ParaView/index.md
         - Getting Started with Paraview Terminal:  running_jobs/visualization/Paraview/Getting Started With The Paraview Terminal (PvPython)/index.md
         - Graphs and Exporting Data:  running_jobs/visualization/Paraview/Graphs and Exporting Data/index.md
         - Cameras and Keyframes:  running_jobs/visualization/Paraview/ParaView Cameras and Keyframes/index.md
