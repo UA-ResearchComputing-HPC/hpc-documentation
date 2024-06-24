@@ -112,7 +112,7 @@ nav:
       - Intro: running_jobs/visualization/index.md
       - Blender: 
         - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
-        - Scaling Up Blender Rendering: running_jobs/visualization
+        - Scaling Up Blender Rendering: running_jobs/visualization/blender/scaling_up_blender_rendering/index.md
       - Paraview: 
         - Intro: running_jobs/visualization/blender/index.md
         - Getting Started:  running_jobs/visualization/paraview/Getting Started With ParaView/index.md
