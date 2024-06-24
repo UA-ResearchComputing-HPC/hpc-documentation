@@ -1,3 +1,27 @@
+# VisIt
+<div class="grid" markdown>
+* Goal
+* Using OOD
+* Client/Server Configuration
+    * Pre-requisite Installations
+    * Steps on the HPC
+        * Setting up ssh keys for passwordless authentication to the HPC.
+        * Installing the VisIt server
+        * Copying the launcher script into server folder
+    * Steps for Linux
+        * Connecting to the HPC VPN.
+        * Installing visit
+            * local machine
+            * Installing the HPC host profiles
+            * running visit
+            * Filling in host profile
+    * Support related to this document
+
+![](images/gallery-21.jpg)
+![](images/gallery-36-large-thumb.jpg)
+![](images/gallery-44-thumb.jpg)
+</div>
+
 Goal
 ====
 
