@@ -126,6 +126,7 @@ nav:
         - Speeding up Filters & Rendering with Client Server configurations:  running_jobs/visualization/paraview/Speeding up Filters & Rendering with Client Server configurations/index.md
         - Visualizing NetCDF Files:  running_jobs/visualization/paraview/Visualizing NetCDF Files/index.md
         - Paratest images: running_jobs/visualization/paraview/paratestimages/index.md
+      - Arcgis Pro Heightmaps: running_jobs/visualization/creating_heightmaps_arcgis/index.md 
       - VisIt: running_jobs/visualization/VisIt/index.md
 
 
