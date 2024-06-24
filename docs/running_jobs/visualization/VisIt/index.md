@@ -337,7 +337,7 @@ is a great tool for the job.
 download the `host_uahpc2.xml`  file and save it to the visit directory
 in your home folder. Here's what that looks like in my case:
 
-  
+[host_uahpc2.xml](host_ua_hpx2.xml) 
 
 <span class="confluence-embedded-file-wrapper conf-macro output-inline"
 data-hasbody="false"
