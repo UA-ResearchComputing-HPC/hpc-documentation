@@ -60,7 +60,7 @@ In 1999, the U.S. Office of Management and Budget amended [OMB Circular A-110](h
 
 Federally funded research - access to publications and data
 
-The White House Office of Science and Technology Policy (OSTP) released a policy memorandum, “[Increasing Access to the Results of Federally Funded Scientific Research](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/ostp_public_access_memo_2013.pdf),” on February 22, 2013. See the [Federal Agency Policies for Public Access](http://new.library.arizona.edu/research/funder-requirements) website for brief descriptions of the policies for top UA federal funding agencies and where to get further help.
+The White House Office of Science and Technology Policy (OSTP) released a policy memorandum, “[Increasing Access to the Results of Federally Funded Scientific Research](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/ostp_public_access_memo_2013.pdf),” on February 22, 2013. See the [Federal Agency Policies for Public Access](http://new.library.arizona.edu/research/funder-requirements) website for brief descriptions of the policies for top UArizona federal funding agencies and where to get further help.
 
 The Library has created a [summary table of public access plans](https://data.library.arizona.edu/data-management/data-management-plans/funding-agencies-requirements) for all of the 19 federal funding agencies that fall under the OSTP memo.
 

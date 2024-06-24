@@ -12,7 +12,7 @@ The storage is mounted as a filesystem and all the clusters have access to the s
 
 Every user has access to individual and shared storage on the system where they can host data for active analyses. A summary of these locations is shown below:
 
-|<div style="width:120px">Path</div>|Description|<div style="width:120px">Quota</div>|Duration|
+|<div style="width:130px">Path</div>|Description|<div style="width:120px">Quota</div>|Duration|
 |-|-|-|-|
 |```/home/uxx/netid```|An individual storage allocation provided for every HPC user|50 GB|Accessible for the duration of user's account|
 |```/groups/pi_netid```|A communal storage allocation provided for every research group|500 GB|Accessible for the duration of a PI's account|
@@ -68,7 +68,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
 === "User Portal"
     You can check your storage allocation through our [online user portal](https://portal.hpc.arizona.edu/portal/) by navigating to the Storage tab and clicking Check Disk Quotas:
     
-    <img src="images/check_storage_quota.png" style="width:450px;">
+    <img src="images/check_storage_quota.png" title="User portal storage tab" style="width:450px;">
 
 
 
@@ -96,30 +96,30 @@ PIs may request a new xdisk allocation immediately after their previous one has 
     
     PIs or delegates can request an xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Manage XDISK**
     
-    <img src="images/manage_xdisk.png" style="width:500px;">
+    <img src="images/manage_xdisk.png" title="Manage xdisk" style="width:500px;">
     
     This will open a web form where you can enter your size and duration requirements. The maximum size that can be requested is 20000 GB and the maximum duration is 300 days. If a PI has created multiple research groups, you can specify the desired group ownership for the allocation from the **Group** dropdown menu. Once you click **Ok**, your allocation should immediately be available.
     
-    <img src="images/manage_xdisk.png" style="width:500px;">
+    <img src="images/request_new_xdisk.png" title="Request new xdisk" style="width:500px;">
 
 === "Modifying an Allocation"
 
     PIs or delegates may manage their xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Manage XDISK**
     
-    <img src="images/manage_xdisk.png" style="width:500px;">
+    <img src="images/manage_xdisk.png" title="Manage xdisk" style="width:500px;">
     
     This will open a form which will allow you to modify the size and duration of your xdisk. Xdisk allocations cannot be increased beyond 20000 GB and the maximum duration of 300 days. Note: the **Group** field may only be modified at the time of the allocation's creation.
     
-    <img src="images/request-xdisk.png" style="width:500px;">
+    <img src="images/request-xdisk.png" title="Modify xdisk" style="width:500px;">
 
 === "Deleting an Allocation"
     PIs or delegates may delete their xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Delete XDISK**
     
-    <img src="images/delete-xdisk.png" style="width:500px;">
+    <img src="images/delete-xdisk.png" title="Delete xdisk" style="width:500px;">
     
     Clicking this link will open a window with a prompt. Type **confirm** and then select **Delete XDISK** to complete the process.
     
-    <img src="images/confirm-delete.png" style="width:300px;">
+    <img src="images/confirm-delete.png" title="Confirm xdisk deletion" style="width:300px;">
     
     If you would like to request a new xdisk, you may do so as soon as the request is processed. Note: sometimes processing the request can take a few minutes, depending on the number of files and the size of the allocation.
     

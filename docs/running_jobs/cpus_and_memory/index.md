@@ -18,7 +18,7 @@ For example, using the table above we can see on Puma standard nodes you get 5 G
 The video below shows the relationship between memory and CPUs, specifically looking at one of our Puma nodes. 
 
 <center>
-<iframe width="420" height="280" src="https://www.youtube.com/embed/_dpbUqZ7rRk" allowfullscreen></iframe>
+<iframe width="420" height="280" title="HPC core to memory relationship video" src="https://www.youtube.com/embed/_dpbUqZ7rRk" allowfullscreen></iframe>
 </center>
 
 ## Determining Job Resources
@@ -45,9 +45,9 @@ graph LR
    D --> Z
 ```
 
-The dotted line above indicates that setting mem/CPU in your job is not strictly necessary. If you are requesting a standard node, this value is set for you by the scheduler. The only times you will need to set this value is:
+The dotted line above indicates that setting mem/CPU in your job is not generally necessary. If you are requesting a standard node, this value is set for you by the scheduler. The only times you will need to set this value is:
 
-1. If you're requsting a non-standard node (e.g. a high memory or Ocelote GPU node)
+1. If you're requesting a non-standard node (e.g. a high memory or Ocelote GPU node)
 2. If you're requesting an OnDemand application session. There is a field where you will fill in your mem/CPU requirement. 
 
 Note that there is no deterministic method of finding the exact amount of memory needed by a job _in advance_. A general rule of thumb is to overestimate it slightly and then scale down based on previous runs. Significant overestimation, however, can lead to inefficiency of system resources and unnecessary expenditure of CPU time allocations. 

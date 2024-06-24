@@ -6,8 +6,8 @@ A virtual private network (VPN) is a mechanism for creating a secure connection 
 
 You will find the following VPN services useful for accessing some of the resources offered by the Research and Discovery Technologies:
 
-* UA SSL VPN (```vpn.arizona.edu```): If you are not connected to the UA campus network you will need to connect to this VPN to access R-DAS.
-* UA HPC VPN (```vpn.hpc.arizona.edu```): You will need to connect to this VPN to use graphical applications that need X11 forwarding with the HPC clusters.
+* UArizona SSL VPN (```vpn.arizona.edu```): If you are not connected to the UArizona campus network you will need to connect to this VPN to access R-DAS.
+* UArizona HPC VPN (```vpn.hpc.arizona.edu```): You will need to connect to this VPN to use graphical applications that need X11 forwarding with the HPC clusters.
 
 
 ## Instructions for Connecting
@@ -15,16 +15,16 @@ You will find the following VPN services useful for accessing some of the resour
 
 
 === "GUI"
-    You can connect to the UArizona VPN services with the software Cisco Secure Client. It is available for Windows, Mac, and Linux distributions. On Linux distributions you might have a better experience with OpenConnect VPN (see CLI). Follow the UITS Knowledge Base guide for [Windows](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011053), [Mac](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010746), or [Linux](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010416), to install Cisco Secure Client on your computer. The guide also shows how you can connect to the UA SSL VPN.
+    You can connect to the UArizona VPN services with the software Cisco Secure Client. It is available for Windows, Mac, and Linux distributions. On Linux distributions you might have a better experience with OpenConnect VPN (see CLI). Follow the UITS Knowledge Base guide for [Windows](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011053), [Mac](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010746), or [Linux](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010416), to install Cisco Secure Client on your computer. The guide also shows how you can connect to the UArizona SSL VPN.
         
-    Follow the steps below to connect to UA HPC VPN (the screenshots are from a Mac, but the experience is similar across OSs):
+    Follow the steps below to connect to UArizona HPC VPN (the screenshots are from a Mac, but the experience is similar across OSs):
         
     1. Open Cisco Secure Client
-    2. Enter ```vpn.hpc.arizona.edu``` in the address bar and click **Connect**.<br><img src="images/cisco_connect.png" style="width:450px;">
-    3. In the window that launches, enter your UArizona NetID as your Username and click **OK**.<br><img src="images/cisco_username.png" style="width:450px;">
-    4. In the next window, enter your UArizona NetID password and click **OK**.<br><img src="images/cisco_password.png" style="width:450px;">
-    5. In the window that launches, enter the NetID+ method you selected when you enrolled.<br><img src="images/cisco_method.png" style="width:450px;">
-    6. Lastly, review the notice box and click Accept.<br><img src="images/cisco_accept.png" style="width:450px;">
+    2. Enter ```vpn.hpc.arizona.edu``` in the address bar and click **Connect**.<br><img src="images/cisco_connect.png" title="HPC VPN connection" style="width:450px;">
+    3. In the window that launches, enter your UArizona NetID as your Username and click **OK**.<br><img src="images/cisco_username.png" title="VPN username" style="width:450px;">
+    4. In the next window, enter your UArizona NetID password and click **OK**.<br><img src="images/cisco_password.png" title="VPN password" style="width:450px;">
+    5. In the window that launches, enter the NetID+ method you selected when you enrolled.<br><img src="images/cisco_method.png" title="VPN DUO auth" style="width:450px;">
+    6. Lastly, review the notice box and click Accept.<br><img src="images/cisco_accept.png" title="VPN accept" style="width:450px;">
         
 === "CLI"
     !!! failure "Use of sudo"

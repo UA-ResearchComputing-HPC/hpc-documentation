@@ -2,8 +2,8 @@ site_name: UArizona HPC Documentation
 repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
 nav:
-
-  - Quick Start: 
+  - Home: index.md
+  - HPC Quick Start: 
     - Overview: quick_start/overview/index.md
     - What is HPC?: quick_start/what_is_hpc/index.md
     - Common Misconceptions: quick_start/common_misconceptions/index.md
@@ -26,18 +26,14 @@ nav:
     - Allocations: resources/allocations/index.md
     - Compute Resources: resources/compute_resources/index.md
     - Research Data Center: resources/data_center/index.md
-    - Secure Services:
-      - Overview: resources/secure_hpc/overview/index.md
-      - Prerequisites: resources/secure_hpc/prerequisites/index.md
-      - Access: resources/secure_hpc/access/index.md
-      - Storage and Transfers: resources/secure_hpc/storage_and_transfers/index.md
+    - Secure Services: resources/secure_hpc/index.md
 
   - Access:
     - Account Creation: registration_and_access/account_creation/index.md
     - Account Deletion: registration_and_access/account_deletion/index.md
     - Group Management: registration_and_access/group_management/index.md
     - System Access: registration_and_access/system_access/index.md
-    - System Overview: registration_and_access/system_overview/index.md
+    - System Layout: registration_and_access/system_overview/index.md
     - VPN : registration_and_access/vpn/index.md
     
   - Storage and Transfers:
@@ -64,12 +60,11 @@ nav:
     - User Installations: software/user_installations/index.md
     - Common Datasets: software/common_datasets/index.md
     - Popular Software:
+      - Anaconda: software/popular_software/anaconda/index.md
       - Gaussian: software/popular_software/gaussian/index.md
       - Matlab: software/popular_software/matlab/index.md
       - Perl: software/popular_software/perl/index.md
-      - Python and Anaconda: 
-        - Python: software/popular_software/python_and_anaconda/python/index.md
-        - Anaconda: software/popular_software/python_and_anaconda/anaconda/index.md
+      - Python: software/popular_software/python/index.md
       - R: software/popular_software/R/index.md
       - VSCode Remote Connection: software/popular_software/vscode_remote_connection/index.md
     - Containers: 
@@ -137,31 +132,47 @@ nav:
   - Support:
     - Consulting Services: support_and_training/consulting_services/index.md
     - Support Staff: support_and_training/people/index.md
-    - FAQs: 
-        - Account Access: support_and_training/faqs/account_access/index.md 
-        - General Computing: support_and_training/faqs/general_computing/index.md 
-        - Jobs and Scheduling: support_and_training/faqs/jobs_and_scheduling/index.md 
-        - Software and Modules: support_and_training/faqs/software_and_modules/index.md 
-        - Storage: support_and_training/faqs/storage/index.md
-        - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
-        - Secure Services: support_and_training/faqs/secure_services/index.md 
-        
-    - Workshops: 
-        - Events Calendar: support_and_training/workshops/events_calendar/index.md
-        - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md
-        - Intro to Machine Learning on HPC: 
-            - Python: support_and_training/workshops/intro_to_machine_learning/python/index.md
-            - R: support_and_training/workshops/intro_to_machine_learning/R/index.md
-        - Intro to Parallel Computing: support_and_training/workshops/intro_to_parallel_computing/index.md
-        - Intro to Containers: support_and_training/workshops/intro_to_containers/index.md
-        - Intro to Linux: support_and_training/workshops/intro_to_linux/index.md
-        - Intro to Visualization: support_and_training/workshops/intro_to_visualization/index.md
-        - Data Management Workshops: support_and_training/workshops/data_management_workshops/index.md
+    - FAQs: support_and_training/faqs/index.md
+        # - Account Access: support_and_training/faqs/account_access/index.md 
+        # - General Computing: support_and_training/faqs/general_computing/index.md 
+        # - Jobs and Scheduling: support_and_training/faqs/jobs_and_scheduling/index.md 
+        # - Software and Modules: support_and_training/faqs/software_and_modules/index.md 
+        # - Storage and Transfers: support_and_training/faqs/storage/index.md
+        # - Open OnDemand Issues: support_and_training/faqs/open_on_demand_issues/index.md 
+        # - Secure Services: support_and_training/faqs/secure_services/index.md    
+    # - Workshops: 
+    #     - Events Calendar: support_and_training/workshops/events_calendar/index.md
+    #     - Intro to HPC: support_and_training/workshops/intro_to_hpc/index.md
+    #     - Intro to Machine Learning on HPC:
+    #         - Overview: support_and_training/workshops/intro_to_machine_learning/overview/index.md
+    #         - Python: support_and_training/workshops/intro_to_machine_learning/python/index.md
+    #         - R: support_and_training/workshops/intro_to_machine_learning/R/index.md
+    #     - Intro to Parallel Computing: support_and_training/workshops/intro_to_parallel_computing/index.md
+    #     - Intro to Containers: support_and_training/workshops/intro_to_containers/index.md
+    #     - Intro to Linux: support_and_training/workshops/intro_to_linux/index.md
+    #     - Intro to Visualization: support_and_training/workshops/intro_to_visualization/index.md
+    #     - Data Management Workshops: support_and_training/workshops/data_management_workshops/index.md
     - Glossary: support_and_training/glossary/index.md
     - Linux Cheat Sheet: support_and_training/cheat_sheet/index.md
     - Grants: support_and_training/grants/index.md
     - Community and External Resources: support_and_training/external_resources/index.md
-
+    - Website Accessibility: support_and_training/website_accessibility/index.md
+  
+  - Events and Workshops: 
+    - Calendar: events/calendar/index.md
+    - HPC Workshop Materials: events/workshop_materials/index.md
+      # - Intro to HPC: events/workshop_materials/intro_to_hpc/index.md
+      # - Intro to Machine Learning on HPC:
+      #   - Overview: events/workshop_materials/intro_to_machine_learning/overview/index.md
+      #   - Python: events/workshop_materials/intro_to_machine_learning/python/index.md
+      #   - R: events/workshop_materials/intro_to_machine_learning/R/index.md
+      # - Intro to Parallel Computing: events/workshop_materials/intro_to_parallel_computing/index.md
+      # - Intro to Containers: events/workshop_materials/intro_to_containers/index.md
+      # - Intro to Linux: events/workshop_materials/intro_to_linux/index.md
+      # - Intro to Visualization: events/workshop_materials/intro_to_visualization/index.md
+      # - Intro to Statistics: events/workshop_materials/intro_to_statistics/index.md
+      # - Data Management Workshops: events/workshop_materials/data_management_workshops/index.md
+      # - Managing and Optimizing Jobs: events/workshop_materials/optimization/index.md
   - Results: results/index.md
   
 
@@ -191,6 +202,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.tasklist:
       custom_checkbox: true
+      #clickable_checkbox: true
   
 extra_javascript:
   - assets/javascripts/mathjax.js
@@ -202,7 +214,7 @@ extra_css:
 
 theme:
   name: material
-  logo: assets/images/favicon.ico
+  logo: assets/images/home/uofa_cactus_computing3.png
   custom_dir: docs/overrides
   favicon: assets/images/favicon.ico
   palette:
@@ -213,35 +225,55 @@ theme:
 
   features:
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.instant
     - navigation.path
     - toc.integrate
     - content.tabs.link
     - content.tooltips
     - content.code.copy
+    - content.code.annotate
+    - content.code.select
     - navigation.top
-    - announce.dismiss
+    #- announce.dismiss
 
 
 extra:
+  analytics:
+    provider: google
+    property: G-3V0VRBSRZF
+    feedback:
+      title: Was this page informative?
+      ratings:
+        - icon: material/thumb-up
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Have suggestions for improvements? <a target="_blank" href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f">Contact us</a>. 
   generator: false
   social:
-    - icon: material/youtube
-      link: https://www.youtube.com/@universityofarizonauitsres7597
-      name: Training videos
-    - icon: material/at
+    - icon: material/email
       link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
       name: Contact HPC consulting
-    - icon: material/help-circle-outline
-      link: /support_and_training/faqs/account_access/
+    - icon: material/help-box-multiple
+      link: /support_and_training/faqs/
       name: FAQs
-    - icon: material/web
-      link: https://ood.hpc.arizona.edu/pun/sys/dashboard
-      name: Open OnDemand
     - icon: material/account
       link: https://portal.hpc.arizona.edu/portal/
       name: User portal
+    - icon: material/web
+      link: https://ood.hpc.arizona.edu/pun/sys/dashboard
+      name: Open OnDemand
+    - icon: material/youtube
+      link: https://www.youtube.com/@universityofarizonauitsres7597
+      name: Training videos
+    - icon: material/chart-areaspline
+      link: https://metrics.hpc.arizona.edu/
+      name: HPC job metrics
 
 copyright: University of Arizona Research Computing
+

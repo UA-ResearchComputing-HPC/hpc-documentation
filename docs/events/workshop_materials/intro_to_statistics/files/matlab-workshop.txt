@@ -1,0 +1,312 @@
+Text for Matlab workshop hands-on
+
+Examples used in this workshop
+https://www.mathworks.com/products/statistics.html
+
+Descriptive Statistics
+Visualizing Multivariate Data
+
+This example shows how to visualize multivariate data using various statistical plots. Many statistical analyses involve only two variables: a predictor variable and a response variable. Such data are easy to visualize using 2D scatter plots, bivariate histograms, boxplots, etc. It's also possible to visualize trivariate data with 3D scatter plots, or 2D scatter plots with a third variable encoded with, for example color. However, many datasets involve a larger number of variables, making direct visualization more difficult.
+
+load carbig
+X = [MPG,Acceleration,Displacement,Weight,Horsepower];
+varNames = {'MPG'; 'Acceleration'; 'Displacement'; 'Weight'; 'Horsepower'};
+
+figure
+gplotmatrix(X,[],Cylinders,['c' 'b' 'm' 'g' 'r'],[],[],false);
+text([.08 .24 .43 .66 .83], repmat(-.1,1,5), varNames, 'FontSize',8);
+text(repmat(-.12,1,5), [.86 .62 .41 .25 .02], varNames, 'FontSize',8, 'Rotation',90);
+
+Parallel Coordinate Plots
+
+The most straight-forward multivariate plot is the parallel coordinates plot. In this plot, the coordinate axes are all laid out horizontally, instead of using orthogonal axes as in the usual Cartesian graph. Each observation is represented in the plot as a series of connected line segments. For example, we can make a plot of all the cars with 4, 6, or 8 cylinders, and color observations by group.
+
+Cyl468 = ismember(Cylinders,[4 6 8]);
+parallelcoords(X(Cyl468,:), 'group',Cylinders(Cyl468), ...
+               'standardize','on', 'labels',varNames)
+
+Andrews Plots
+Another similar type of multivariate visualization is the Andrews plot. This plot represents each observation as a smooth function over the interval [0,1].
+andrewsplot(X(Cyl468,:), 'group',Cylinders(Cyl468), 'standardize','on')
+
+Each function is a Fourier series, with coefficients equal to the corresponding observation's values. In this example, the series has five terms: a constant, two sine terms with periods 1 and 1/2, and two similar cosine terms. Effects on the functions' shapes due to the three leading terms are the most apparent in an Andrews plot, so patterns in the first three variables tend to be the ones most easily recognized.
+
+There's a distinct difference between groups at t = 0, indicating that the first variable, MPG, is one of the distinguishing features between 4, 6, and 8 cylinder cars. More interesting is the difference between the three groups at around t = 1/3. Plugging this value into the formula for the Andrews plot functions, we get a set of coefficients that define a linear combination of the variables that distinguishes between groups.
+t1 = 1/3;
+[1/sqrt(2) sin(2*pi*t1) cos(2*pi*t1) sin(4*pi*t1) cos(4*pi*t1)]
+
+
+
+CLuster Analysis
+K-Means CLustering
+
+The function kmeans performs K-Means clustering, using an iterative algorithm that assigns objects to clusters so that the sum of distances from each object to its cluster centroid, over all clusters, is a minimum. Used on Fisher's iris data, it will find the natural groupings among iris specimens, based on their sepal and petal measurements. With K-means clustering, you must specify the number of clusters that you want to create.
+
+First, load the data and call kmeans with the desired number of clusters set to 2, and using squared Euclidean distance. To get an idea of how well-separated the resulting clusters are, you can make a silhouette plot. The silhouette plot displays a measure of how close each point in one cluster is to points in the neighboring clusters.
+
+load fisheriris
+[cidx2,cmeans2] = kmeans(meas,2,'dist','sqeuclidean');
+[silh2,h] = silhouette(meas,cidx2,'sqeuclidean');
+
+ptsymb = {'bs','r^','md','go','c+'};
+for i = 1:2
+    clust = find(cidx2==i);
+    plot3(meas(clust,1),meas(clust,2),meas(clust,3),ptsymb{i});
+    hold on
+end
+plot3(cmeans2(:,1),cmeans2(:,2),cmeans2(:,3),'ko');
+plot3(cmeans2(:,1),cmeans2(:,2),cmeans2(:,3),'kx');
+hold off
+xlabel('Sepal Length');
+ylabel('Sepal Width');
+zlabel('Petal Length');
+view(-137,10);
+grid on
+
+From the silhouette plot, you can see that most points in both clusters have a large silhouette value, greater than 0.8, indicating that those points are well-separated from neighboring clusters. However, each cluster also contains a few points with low silhouette values, indicating that they are nearby to points from other clusters.
+
+It turns out that the fourth measurement in these data, the petal width, is highly correlated with the third measurement, the petal length, and so a 3-D plot of the first three measurements gives a good representation of the data, without resorting to four dimensions. If you plot the data, using different symbols for each cluster created by kmeans, you can identify the points with small silhouette values as those points that are close to points from other clusters.
+
+The centroids of each cluster are plotted using circled X's. Three of the points from the lower cluster (plotted with triangles) are very close to points from the upper cluster (plotted with squares). Because the upper cluster is so spread out, those three points are closer to the centroid of the lower cluster than to that of the upper cluster, even though the points are separated from the bulk of the points in their own cluster by a gap. Because K-means clustering only considers distances, and not densities, this kind of result can occur.
+
+ANOVA
+
+In an ordinary ANOVA model, each grouping variable represents a fixed factor. The levels of that factor are a fixed set of values. The goal is to determine whether different factor levels lead to different response values.
+
+load mileage
+
+factory  = repmat(1:3,6,1);
+
+carmod = [ones(3,3); 2*ones(3,3)];
+
+mileage = mileage(:);
+factory = factory(:);
+carmod = carmod(:);
+[mileage factory carmod]
+
+[pvals,tbl,stats] = anovan(mileage, {factory carmod}, ... 
+'model',2, 'random',1,'varnames',{'Factory' 'Car Model'});
+
+
+
+Regression
+Bayesian Analysis for a Logistic Regression Model
+
+This example shows how to make Bayesian inferences for a logistic regression model using slicesample.
+
+rng(0,'twister');
+
+n = 20;
+sigma = 50;
+x = normrnd(10,sigma,n,1);
+mu = 30;
+tau = 20;
+theta = linspace(-40, 100, 500);
+y1 = normpdf(mean(x),theta,sigma/sqrt(n));
+y2 = normpdf(theta,mu,tau);
+postMean = tau^2*mean(x)/(tau^2+sigma^2/n) + sigma^2*mu/n/(tau^2+sigma^2/n);
+postSD = sqrt(tau^2*sigma^2/n/(tau^2+sigma^2/n));
+y3 = normpdf(theta, postMean,postSD);
+plot(theta,y1,'-', theta,y2,'--', theta,y3,'-.')
+legend('Likelihood','Prior','Posterior')
+xlabel('\theta')
+
+The data include observations of weight, number of cars tested, and number failed. We will work with a transformed version of the weights to reduce the correlation in our estimates of the regression parameters.
+
+% A set of car weights
+weight = [2100 2300 2500 2700 2900 3100 3300 3500 3700 3900 4100 4300]';
+weight = (weight-2800)/1000;     % recenter and rescale
+% The number of cars tested at each weight
+total = [48 42 31 34 31 21 23 23 21 16 17 21]';
+% The number of cars that have poor mpg performances at each weight
+poor = [1 2 0 3 8 8 14 17 19 15 17 21]';
+
+The logistic regression model can be written as:
+logitp = @(b,x) exp(b(1)+b(2).*x)./(1+exp(b(1)+b(2).*x));
+
+we use normal priors for the intercept b1 and slope b2, i.e.
+prior1 = @(b1) normpdf(b1,0,20);    % prior for intercept
+prior2 = @(b2) normpdf(b2,0,20);    % prior for slope
+
+By Bayes' theorem, the joint posterior distribution of the model parameters is proportional to the product of the likelihood and priors.
+post = @(b) prod(binopdf(poor,total,logitp(b,weight))) ...  % likelihood
+            * prior1(b(1)) * prior2(b(2));                  % priors
+
+Note that the normalizing constant for the posterior in this model is analytically intractable. However, even without knowing the normalizing constant, you can visualize the posterior distribution, if you know the approximate range of the model parameters.
+b1 = linspace(-2.5, -1, 50);
+b2 = linspace(3, 5.5, 50);
+simpost = zeros(50,50);
+for i = 1:length(b1)
+    for j = 1:length(b2)
+        simpost(i,j) = post([b1(i), b2(j)]);
+    end;
+end;
+mesh(b2,b1,simpost)
+xlabel('Slope')
+ylabel('Intercept')
+zlabel('Posterior density')
+view(-110,30)
+
+
+
+
+Classification
+Train Classification Ensemble
+load ionosphere
+Mdl = fitcensemble(X,Y)
+view(Mdl.Trained{1}.CompactRegressionLearner,'Mode','graph');
+
+Predict the quality of a radar return with average predictor measurements.
+
+
+
+Dimensionality Reduction
+CLassical Multidimension Scaling
+
+As a very simple example, you can reconstruct a set of points from only their inter-point distances. First, create some four dimensional points with a small component in their fourth coordinate, and reduce them to distances.
+rng default;  % For reproducibility
+X = [normrnd(0,1,10,3),normrnd(0,.1,10,1)];
+D = pdist(X,'euclidean');
+
+Next, use cmdscale to find a configuration with those inter-point distances. cmdscale accepts distances as either a square matrix, or, as in this example, in the vector upper-triangular form produced by pdist.
+[Y,eigvals] = cmdscale(D);
+
+cmdscale produces two outputs. The first output, Y, is a matrix containing the reconstructed points. The second output, eigvals, is a vector containing the sorted eigenvalues of what is often referred to as the "scalar product matrix," which, in the simplest case, is equal to Y*Y'. The relative magnitudes of those eigenvalues indicate the relative contribution of the corresponding columns of Y in reproducing the original distance matrix D with the reconstructed points.
+format short g
+[eigvals eigvals/max(abs(eigvals))]
+
+If eigvals contains only positive and zero (within round-off error) eigenvalues, the columns of Y corresponding to the positive eigenvalues provide an exact reconstruction of D, in the sense that their inter-point Euclidean distances, computed using pdist, for example, are identical (within round-off) to the values in D.
+maxerr4 = max(abs(D - pdist(Y)))   % Exact reconstruction
+
+If two or three of the eigenvalues in eigvals are much larger than the rest, then the distance matrix based on the corresponding columns of Y nearly reproduces the original distance matrix D. In this sense, those columns form a lower-dimensional representation that adequately describes the data. However it is not always possible to find a good low-dimensional reconstruction.
+maxerr3 = max(abs(D - pdist(Y(:,1:3))))  % Good reconstruction in 3D
+maxerr2 = max(abs(D - pdist(Y(:,1:2))))  % Poor reconstruction in 2D
+
+The reconstruction in three dimensions reproduces D very well, but the reconstruction in two dimensions has errors that are of the same order of magnitude as the largest values in D.
+max(max(D))
+
+Often, eigvals contains some negative eigenvalues, indicating that the distances in D cannot be reproduced exactly. That is, there might not be any configuration of points whose inter-point Euclidean distances are given by D. If the largest negative eigenvalue is small in magnitude relative to the largest positive eigenvalues, then the configuration returned by cmdscale might still reproduce D well.
+
+
+
+Probability Distributions
+
+Compare Multiple Distribution Fits
+
+This example shows how to fit multiple probability distribution objects to the same set of sample data, and obtain a visual comparison of how well each distribution fits the data.
+This data contains miles per gallon (MPG) measurements for different makes and models of cars, grouped by country of origin (Origin), model year (Model_Year), and other vehicle characteristics.
+
+load carsmall
+
+Transform Origin into a categorical array and remove the Italian car from the sample data. Since there is only one Italian car, fitdist cannot fit a distribution to that group using other than a kernel distribution.
+
+Origin = categorical(cellstr(Origin));
+MPG2 = MPG(Origin~='Italy');
+Origin2 = Origin(Origin~='Italy');
+Origin2 = removecats(Origin2,'Italy');
+
+Use fitdist to fit Weibull, normal, logistic, and kernel distributions to each country of origin group in the MPG data.
+
+[WeiByOrig,Country] = fitdist(MPG2,'weibull','by',Origin2);
+[NormByOrig,Country] = fitdist(MPG2,'normal','by',Origin2);
+[LogByOrig,Country] = fitdist(MPG2,'logistic','by',Origin2);
+[KerByOrig,Country] = fitdist(MPG2,'kernel','by',Origin2);
+WeiByOrig
+Country
+
+Plot the pdf for each distribution fit to the USA data, superimposed on a histogram of the sample data. Normalize the histogram for easier display.
+Create a histogram of the USA sample data.
+
+data = MPG(Origin2=='USA');
+figure
+histogram(data,10,'Normalization','pdf','FaceColor',[1,0.8,0]);
+
+line(x,pdf_Wei,'LineStyle','-','Color','r')
+line(x,pdf_Norm,'LineStyle','-.','Color','b')
+line(x,pdf_Log,'LineStyle','--','Color','g')
+line(x,pdf_Ker,'LineStyle',':','Color','k')
+legend('Data','Weibull','Normal','Logistic','Kernel','Location','Best')
+title('MPG for Cars from USA')
+xlabel('MPG')
+
+To investigate the two modes revealed in Step 5, group the MPG data by both country of origin (Origin) and model year (Model_Year), and use fitdist to fit kernel distributions to each group.
+
+[KerByYearOrig,Names] = fitdist(MPG,'Kernel','By',{Origin Model_Year});
+Names
+figure
+hold on
+for i = 12 : 14
+    plot(x,pdf(KerByYearOrig{i},x))
+end
+legend('1970','1976','1982')
+title('MPG in USA Cars by Model Year')
+xlabel('MPG')
+hold off
+
+When further grouped by model year, the pdf plots reveal two distinct peaks in the MPG data for cars made in the USA — one for the model year 1970 and one for the model year 1982. This explains why the histogram for the combined USA miles per gallon data shows two peaks instead of one.
+
+
+
+
+
+Hypothesis Testing
+Hypothesis testing is a common method of drawing inferences about a population based on statistical evidence from a sample.
+
+load gas
+prices = [price1 price2];
+
+As a first step, you might want to test the assumption that the samples come from normal distributions. A normal probability plot gives a quick idea.
+
+normplot(prices)
+
+Both scatters approximately follow straight lines through the first and third quartiles of the samples, indicating approximate normal distributions. The February sample (the right-hand line) shows a slight departure from normality in the lower tail. A shift in the mean from January to February is evident. A hypothesis test is used to quantify the test of normality. Since each sample is relatively small, a Lilliefors test is recommended.
+lillietest(price1)
+Lillietest(price2)
+
+The default significance level of lillietest is 5%. The logical 0 returned by each test indicates a failure to reject the null hypothesis that the samples are normally distributed. This failure may reflect normality in the population or it may reflect a lack of strong evidence against the null hypothesis due to the small sample size.
+sample_means = mean(prices)
+
+You might want to test the null hypothesis that the mean price across the state on the day of the January sample was $1.15. If you know that the standard deviation in prices across the state has historically, and consistently, been $0.04, then a z-test is appropriate.
+
+[h,pvalue,ci] = ztest(price1/100,1.15,0.04)
+
+The logical output h = 1 indicates a rejection of the null hypothesis at the default significance level of 5%. In this case, the 95% confidence interval on the mean does not include the hypothesized population mean of $1.15.
+
+You might want to investigate the shift in prices a little more closely. The function ttest2 tests if two independent samples come from normal distributions with equal but unknown standard deviations and the same mean, against the alternative that the means are unequal.
+[h,sig,ci] = ttest2(price1,price2)
+
+The null hypothesis is rejected at the default 5% significance level, and the confidence interval on the difference of means does not include the hypothesized value of 0. A notched box plot is another way to visualize the shift.
+
+boxplot(prices,1)
+h = gca;
+h.XTick = [1 2];
+h.XTickLabel = {'January','February'};
+xlabel('Month')
+ylabel('Prices ($0.01)')
+
+The plot displays the distribution of the samples around their medians. The heights of the notches in each box are computed so that the side-by-side boxes have nonoverlapping notches when their medians are different at a default 5% significance level. The computation is based on an assumption of normality in the data, but the comparison is reasonably robust for other distributions. The side-by-side plots provide a kind of visual hypothesis test, comparing medians rather than means. The plot above appears to barely reject the null hypothesis of equal medians.
+
+The nonparametric Wilcoxon rank sum test, implemented by the function ranksum, can be used to quantify the test of equal medians. It tests if two independent samples come from identical continuous (not necessarily normal) distributions with equal medians, against the alternative that they do not have equal medians
+
+[p,h] = ranksum(price1,price2)
+
+
+Control Charts
+load parts
+Construct the Xbar control chart using the Western Electric 2 rule (2 of 3 points at least 2 standard errors above the center line) to mark the out of control measurements.
+st = controlchart(runout,'rules','we2');
+
+For a better understanding of the Western Electric 2 rule, calculate and plot the 2 standard errors line on the chart.
+x = st.mean;
+cl = st.mu;
+se = st.sigma./sqrt(st.n);
+hold on
+plot(cl+2*se,'m')
+
+Identify the measurements that violate the control rule.
+R = controlrules('we2',x,cl,se);
+I = find(R)
+
+
+
+.

@@ -23,7 +23,9 @@ Software packages are available as modules and are accessible from the compute n
 |<pre><code>module purge</code></pre>| Unload all the software modules from your environment|
 |<pre><code>module help</code></pre>| Display a help menu for the module command|
 
-### Example
+## Examples
+
+### Loading Modules
 ```
 [netid@cpu39 ~]$ module avail python
 
@@ -43,6 +45,33 @@ The following have been reloaded with a version change:
 Python 3.11.4
 ```
 
+### Finding Executables and Libraries
+
+If you're looking for the specific paths added to your environment when loading a module, you can use the command `module show`. For example:
+
+```
+[netid@cpu38 ~]$ module show gromacs
+---------------------------------------------------------
+   /opt/ohpc/pub/moduledeps/gnu8-openmpi3/gromacs/2021.5:
+---------------------------------------------------------
+whatis("Name: gromacs ")
+whatis("Version: 2021.5 ")
+whatis("Molecular dynamics for biophysical chemistry ")
+setenv("GROMACS_BASE","/opt/ohpc/pub/apps/gromacs/2021.5")
+prepend_path("PATH","/opt/ohpc/pub/apps/gromacs/2021.5/bin")
+prepend_path{"CPPFLAGS","-I/opt/ohpc/pub/apps/gromacs/2021.5/include",delim=" "}
+prepend_path("MANPATH","/opt/ohpc/pub/apps/gromacs/2021.5/share/man")
+prepend_path("PKG_CONFIG_PATH","/opt/ohpc/pub/apps/gromacs/2021.5/lib64/pkgconfig")
+prepend_path{"LDFLAGS","-L/opt/ohpc/pub/apps/gromacs/2021.5/lib64",delim=" "}
+prepend_path("LD_LIBRARY_PATH","/opt/ohpc/pub/apps/gromacs/2021.5/lib64")
+unload("gnu8")
+load("gnu8")
+help([[ Adds gromacs to your environment
+]])
+```
+These paths will allow you to determine the locations of the executables, libraries, header files, etc. available to you after loading the software.
+
+
 
 ## Compilers
 
@@ -56,11 +85,11 @@ Puma, Ocelote, and El Gato all run CentOS7 and have the following compilers avai
 |gcc|7.3.0|<pre><code>module load gnu7/7.3.0</code></pre>|
 |gcc|8.3.0|<pre><code>module load gnu8/8.3.0 # Loaded by default</code></pre>|
 
-## Installing additional software
+## Software Install Requests
 
-You are allowed and encouraged to install software you may need on the HPC system. However, you cannot install software that requires root permission or use a method like 'yum install' that attempts to modify system paths. For information on installing software on the HPC, see our [User Installations](../user_installations/) page.
+If you need to use a software package and it is not installed on the system, we can install it for you, provided it meets the criteria outlined in our [software policies](../overview/#policies). Software can be requested by using our [HPC software install request Form](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=102d93a71ba720107947edf1604bcb55&sysparm_category=84d3d1acdbc8f4109627d90d6896191f). There is no expected time frame for how long it takes to install software, as there are many variables that determine this. If you haven't heard back within a week, it may be appropriate to follow up.
 
-Sometimes it is beyond the abilities or permissions of a user to install your desired software. In this case, please submit a request for our Consult team to install it for you via the [HPC Software Install Request form](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=102d93a71ba720107947edf1604bcb55&sysparm_category=84d3d1acdbc8f4109627d90d6896191f). There is no expected time frame for how long it takes to install software, as there are many variables that determine this. If you haven't heard back within a week, it may be appropriate to follow up.
+For software that doesn't meet the criteria outlined in our policies and doesn't fall into the unsupported software category, it may be possible for you to install it locally. We have instructions documented in our [user installations](../user_installations/) section.
 
 
 

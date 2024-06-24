@@ -1,8 +1,11 @@
 # Time Allocations
 
+??? danger "Do not run computations on the login nodes." 
+    CPU time allocations do not apply to login nodes. See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
 ## Group Allocations
 
-All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to UArizona High Performance Computing (HPC) services receive free standard allocations on the HPC machines which is shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
+All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to UArizona High Performance Computing (HPC) services receive free standard allocations on the HPC clusters which are shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
 
 !!! Warning "High Priority"
 
@@ -15,7 +18,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
 === "Standard"
     Every group receives a free allocation of standard hours that refreshes on the first day of each month. 
 
-    ||Puma|Ocelote|ElGato|
+    ||Puma|Ocelote|El Gato|
     |-|-|-|-|
     |Standard CPU Hours|150,000|100,000|7,000|
 
@@ -51,9 +54,9 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     ```
 
 === "Qualified"
-    Groups with an upcoming deadline (e.g., conference, paper submission, graduation) are eligible to apply for a [Special Project](/policies/special_projects/) allocation once per year. Special projects provide an additional pool of standard hours, known as "qualified hours" to the group for a limited amount of time. See the linked page for more information.
+    Groups with an upcoming deadline (e.g., conference, paper submission, graduation) are eligible to apply for a [Special Project](/policies/special_projects/) allocation once per year. Special projects provide an additional pool of standard hours, known as "qualified hours" to the group for a limited amount of time. 
 
-    In batch jobs, standard hours can be used with the directive:
+    In batch jobs, qualified hours can be used with the directive:
     ```bash
     #SBATCH --account=<PI GROUP>
     #SBATCH --partition=standard
@@ -67,7 +70,7 @@ See: [**interactive jobs**](../../running_jobs/interactive_jobs/#customizing-you
 
 The number of CPU hours a job consumes is determined by **the number of CPUs it is allocated multiplied by its requested walltime**. When a job is submitted, the CPU hours it requires are automatically deducted from the account. If the job ends early, the unused hours are automatically refunded.
 
-For example, a job requesting 50 CPUs for 10 hours will be charged 500 CPU hours. When the job is submitted, all 500 CPU hours are deducted from the user's account, shown as `encumbered`. However, if the job only runs for 8 hours and then completes, the unused 100 CPU hours would be refunded.
+For example, a job requesting 50 CPUs for 10 hours will be charged 500 CPU hours. When the job is submitted, all 500 CPU hours are deducted from the user's account. However, if the job only runs for 8 hours before completing, the unused 100 CPU hours would be refunded.
 
 ``` mermaid
 graph LR
@@ -77,14 +80,17 @@ graph LR
   D --> E[100 CPU hours<br>refunded];
 ```
 
-This accounting is the same regardless of which type of node you request. Standard, GPU, and high memory nodes are all charged using the same model and use the same allocation pool. If you find you are being charged for more CPUs that you are specifying in your submission script, it may be an [issue with your job's memory request](../../running_jobs/cpus_and_memory/).
+This accounting is the same regardless of which type of node you request. Standard, GPU, and high memory nodes are all charged using the same model and use the same allocation pool. 
+
+!!! tip "Charging discrepancies"
+    If you find you are being charged for more CPUs that you are specifying in your submission script, it may be an [issue with your job's memory request](../../running_jobs/cpus_and_memory/).
 
 Allocations are refreshed on the first day of each month. Unused hours from the previous month do not roll over.
     
 
 ## How to Find Your Remaining Allocation
 
-To view your allocation's used, unused, and [encumbered hours](/support_and_training/glossary/ "For information on terminology, see our glossary"), use the command ```va``` in a terminal. For example:
+To view your allocation's used, unused, and [encumbered hours](/support_and_training/glossary/ "For information on terminology, see our glossary"), use the command ```va``` (short for "view allocation") in a terminal. For example:
 ```bash
 (elgato) [user@gpu5 ~]$ va
 Windfall: Unlimited

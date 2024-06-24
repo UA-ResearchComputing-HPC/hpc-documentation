@@ -2,11 +2,13 @@
 
 # Using Containers
 
-##  Running Apptainer Images
+If you've gone through the previous sections, you have an idea of how to pull and create containers, but how do you actually use one? Apptainer can be used to run your analyses and applications in various ways: running a prepackaged workflow embedded in the image with `apptainer run`, executing commands within the container's environment using `apptainer exec`, or starting an interactive instance to work directly within the container using `apptainer shell`.
 
-Apptainer can be used to execute your workflows in various ways: running a prepackaged workflow embedded in the image, executing commands within the container's environment, or starting an interactive instance.
 
-### apptainer run
+
+## Running Prepackaged Apptainer Workflows
+
+!!! note "Note: Not every container may include a predefined workflow"
 
 ```apptainer run``` is used without any arguments and executes a predefined workflow embedded in the image. The general syntax is: 
 
@@ -29,9 +31,9 @@ For example:
                 ||     ||
 ```
 
-### apptainer exec
+## Executing Commands within Apptainer Images
 
-Apptainer exec instantiates your image and invokes a command from inside the container's environment. The general syntax is
+`apptainer exec` allows you to execute commands within an Apptainer image without entering it interactively. It simplifies running tasks by providing a command-line interface to interact with containerized applications, ensuring consistency and reproducibility in your workflow. The general syntax is
 
 ```
 apptainer exec app.sif <commands> 
@@ -40,11 +42,10 @@ apptainer exec app.sif <commands>
 For example:
 
 ```
-[netid@cpu38 run_example]$ singularity exec /contrib/singularity/nvidia/nvidia-tensorflow-2.6.0.sif python3 -c "import tensorflow as tf; print(tf.__version__)"
-2.6.2
+singularity exec /contrib/singularity/nvidia/nvidia-tensorflow-2.6.0.sif python3 script.py
 ```
 
-### apptainer shell
+## Using Apptainer Applications Interactively
 
 Apptainer shell starts an interactive session within the container's environment. This is optimal for testing, debugging, or using any sort of graphical interface installed in your image. The general syntax is
 

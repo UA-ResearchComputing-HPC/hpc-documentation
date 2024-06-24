@@ -46,7 +46,7 @@ Name                 Type
   y/n> n
 ```
 
-The next prompt will ask if you would like to use auto config, select N here or the configuration will not be successful. You will be given a URL. Copy and paste this into your web browser and follow the prompts to allow rclone to have access to your UArizona Google Drive account. When you are done, it will give you a verification code. Copy and paste this back into the terminal to proceed.
+The next prompt will ask if you would like to use auto config, select N here or the configuration will not be successful. You will be given a URL. Copy and paste this into your web browser and follow the prompts to allow Rclone to have access to your UArizona Google Drive account. When you are done, it will give you a verification code. Copy and paste this back into the terminal to proceed.
 
 ```
 Remote config

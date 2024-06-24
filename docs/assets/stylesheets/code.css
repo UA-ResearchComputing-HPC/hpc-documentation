@@ -1,0 +1,13 @@
+.code-container {
+    overflow-x: auto; /* Add horizontal scroll for smaller screens */
+    max-width: 100%; /* Ensure the code block doesn't extend beyond screen width */
+}
+
+
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+    .code-container {
+        overflow-x: hidden; /* Hide horizontal overflow on smaller screens */
+        max-width: none; /* Allow the code block to expand to fit smaller screens */
+    }
+}

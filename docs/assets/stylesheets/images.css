@@ -1,0 +1,26 @@
+.img-right, 
+.ood-form,
+.highlighted-research {
+    float: right;
+}
+
+.ood-screenshots{
+    box-shadow: 5px 5px 5px #999;
+    width: 70%;
+}
+
+@media (max-width: 800px) {
+    .img-right {
+        float: left; /* or float: left; depending on your preference */
+    }
+    .ood-form {
+        float: none; 
+    }
+    .highlighted-research {
+        float: left; 
+        width: 98%;
+    }
+    .ood-screenshots {
+        width: 100%;
+    }
+}

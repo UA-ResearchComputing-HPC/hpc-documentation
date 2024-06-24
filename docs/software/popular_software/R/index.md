@@ -10,7 +10,7 @@ RStudio is a popular method for running analyses (and for good reason!), but for
 
 ## Creating a Custom Library
 
-!!! tip ""
+!!! tip "R Package Debugging"
      R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues.
 
 **Creating your first library**
@@ -57,7 +57,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 === "Anaconda"
     One common reason R packages won't install is an altered environment. This can frequently be caused by the presence of Anaconda (or Miniconda) installed locally or initialized in your account from our system module.
     
-    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../python_and_anaconda/anaconda/#removing-anaconda-from-your-environment). 
+    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../anaconda/#removing-anaconda-from-your-environment). 
 
 === "A Corrupted Environment"
 
@@ -129,7 +129,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 ## Using RStudio
 
 === "Open OnDemand"
-    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/graphical_applications/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
+    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
 
 === "Singularity"
     In some circumstances, you may want to run RStudio using your own Singularity image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
@@ -179,15 +179,15 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     Now, in your desktop session's terminal, execute the rserver.sh script using ```./rserver.sh```
 
-    <img src="images/rserver_execute.png" width=500px>
+    <img src="images/rserver_execute.png" title="Execute rserver.sh" style="width: 600px;" >
 
     Next, open a Firefox window and enter ```localhost:8787``` for the URL. In your browser, you will be prompted to log into your RStudio server. Enter your NetID under Username. Under Password, enter the password you defined in the script server.sh.
 
-    <img src="images/rstudio_login.png" width=500px>
+    <img src="images/rstudio_login.png" title="Sign into RStudio" style="width: 500px; box-shadow: 5px 5px 5px #999;">
 
     This will open your RStudio session:
 
-    <img src="images/rstudio_open.png" width=500px>
+    <img src="images/rstudio_open.png" title="Open RStudio session" style="width: 650px;">
 
 ## Setting a New User State Directory
 
@@ -206,15 +206,15 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 === "Current Session"
     If you'd like to change your working directory in an RStudio session, one option is to use ```setwd("/path/to/directory")``` in your terminal. Alternatively, if you'd like to see the contents of your new workspace in your file browser, you can navigate to the **Session** dropdown tab, navigate to **Set Working Directory**, and click **Choose Directory...**
 
-    <img src="images/session-choose-directory.png" width=700px>
+    <img src="images/session-choose-directory.png" title="Choose working directory" style="width: 700px;">
 
     From there, either navigate to the desired subdirectory, or click the ellipsis ```...``` in the upper right to enter the full path to a directory.
 
-    <img src="images/session-choose-directory-2.png" width=500px>
+    <img src="images/session-choose-directory-2.png" title="Select working directory" style="width: 500px;">
 
     Once you click **OK** and then **Choose** in the main file navigation window, R will change its working directory and you should see the contents of your new space under the Files browser in the lower right.
 
-    <img src="images/session-choose-directory-3.png" width=500px>
+    <img src="images/session-choose-directory-3.png" title="Full path to working directory" style="width: 500px;">
 
 === "All Non-Project Sessions"
     If you'd like to permanently set a different default working directory for all non-project RStudio sessions, navigate to the **Tools** dropdown tab and select **Global Options...**
@@ -254,7 +254,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
         ```
         (elgato) [netid@junonia ~]$ interactive -a <your_group>
         [netid@cpu38 ~]$ module load R/<version>
-        [netid@cpu38 ~]$ module load gdal glpk libpng # software modules that are needed for Seurat's dependencies
+        [netid@cpu38 ~]$ module load gdal/3.3.2 glpk/5.0 libpng/1.6.37 # software modules that are needed for Seurat's dependencies
         [netid@cpu38 ~]$ R
         > install.packages("Seurat")
         ```
@@ -271,7 +271,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
         ```
         (elgato) [netid@junonia ~]$ interactive -a <your_group>
-        [netid@cpu1 ~]$ module load R/<version> gdal geos hdf5/1.10.5 libpng/1.6.37 glpk
+        [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2 geos/3.91 hdf5/1.10.5 libpng/1.6.37 glpk
         [netid@cpu1 ~]$ unset CPPFLAGS
         [netid@cpu1 ~]$ R
         > install.packages("Seurat")
@@ -301,7 +301,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
     ```
     (elgato) [netid@junonia ~]$ interactive -a your_group
-    [netid@cpu1 ~]$ module load R/<version> gdal
+    [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2
     [netid@cpu1 ~]$ R
     > install.packages("BiocManager")
     > BiocManager::install(c('BiocGenerics', 'DelayedArray', 'DelayedMatrixStats',
@@ -320,4 +320,240 @@ where ```</path/to/new/directory>``` is the path to a different location where y
     library(monocle3)
     ```
 
+=== "Terra"
 
+    To install the R package `terra`, you will need to load the module `gdal` which will pull in other dependencies (`geos`, `proj`, and `sqlite`). In this example, we'll use the modules `R/4.3` and `gdal/3.8.5`
+
+    ```
+    (elgato) [netid@junonia ~]$ interactive -a <your_group>
+    [netid@cpu1 ~]$ module load R/4.3 gdal/3.8.5
+    [netid@cpu1 ~]$ R
+    > install.packages("terra")
+    ```
+
+
+## Example Jobs
+
+!!! tip "Specify your R version"
+    Note that it's always a good idea to explicitly specify the version of R you want to use when loading an R module in a batch script. When modules are updated, the default changes to the most recent version. This may create conflicts and library issues. Always specifying your R version is a good way to ensure a consistent environment. 
+
+!!! example "Batch job basics"
+    The examples below assume a basic familiarity with batch scripts. If you've never submitted a batch script before, check out our [Introduction to Batch Jobs](../../../running_jobs/batch_jobs/intro/) for a comprehensive walkthrough. 
+
+Below are some examples on how to submit R analyses as batch jobs. R jobs may also be run using [interactive terminal sessions](../../../running_jobs/interactive_jobs/) or using RStudio through [Open OnDemand](../../../running_jobs/open_on_demand/ "Open OnDemand documentation"). 
+
+
+=== "Basic R Example"
+
+    [Download Example](files/basic-r-job.tar.gz){ .md-button .md-button--primary }
+
+    To run an R job as a batch submission, you can include all of your R commands in a single file and execute it with the command `Rscript`.
+
+    **R Script**
+
+    To start, we'll create a simple R script that will print the line `Hello World!`. We'll call this script `hello_world.r` and can create it using the command `touch`:
+    ```
+    [netid@wentletrap ~]$ touch hello_world.r
+    ```
+    Now, open the file in your favorite text editor and add the R commands that you want to run in your job. In this case, we'll use:
+    ``` 
+    #!/usr/bin/env Rscript
+
+    hello_string <- "Hello World! "
+    print (hello_string, quote=FALSE)
+    ```
+
+    **Slurm Script**
+
+
+    To call this R script in a batch submission, we'll load the R version we'd like to use and then execute our workflow with the command `Rscript hello_world.r`. Create a batch submission file using the same method as before,`touch submit_r_script.slurm`, and open it in your favorite text editor. Then, in your Slurm submission file, add the following:
+
+    ```
+    #!/bin/bash
+    #SBATCH --job-name=R-Plotting-Job
+    #SBATCH --ntasks=1
+    #SBATCH --nodes=1 
+    #SBATCH --time=00:01:00   
+    #SBATCH --partition=standard
+    #SBATCH --account=YOUR_GROUP
+
+    module load R/4.0.0
+    Rscript hello_world.r
+    ```
+
+    **Submitting your job**
+
+    To run the batch job, submit it to the scheduler using the command `sbatch` followed by the Slurm file’s name. This will return a job ID that you can use to track the status of your job. In this case:
+
+    ```
+    [netid@wentletrap ~]$ sbatch submit_r_script.slurm 
+    Submitted batch job 53341
+    ```     
+
+    **Output**
+
+    An output file will be generated by the scheduler containing any output that would have been printed to the terminal had you run your batch script interactively.
+    ```
+    [netid@wentletrap ~]$ cat slurm-53341.out 
+    [1] Hello World! 
+    ```
+
+=== "Plotting in a Batch Script"
+
+    [Download Example](files/r-plotting.tar.gz){ .md-button .md-button--primary }
+
+    Creating and saving figures as a part of your workflow is possible in a batch script. You can save your figure to a specified directory (the default is your working directory), give it a custom name, control your image quality and dimensions, and choose your output format (e.g., pdf, png, jpg, etc.). An example is included below.
+
+    **RScript**
+
+    To start, we'll write an R script that will create a sinusoidal plot. We'll call this script `example.r` and can create it using the command `touch`:
+
+    ```
+    [netid@wentletrap ~]$ touch example.r
+    ```
+
+    Now open the text file in your favorite editor and add the following:
+
+    ```
+    print ("In R Script. Plotting...")
+    x <- seq(-pi,pi,0.1)
+    png("rplot.png") 
+    plot(x, sin(x))
+    dev.off()
+    ```
+
+    In the example above, we're using `png("rplot.png")` to save our output figure to png format rather than displaying the image interactively and the `dev.off()` closes the file after it is generated. 
+
+    **Batch Script**
+
+    Next, we'll create our submission file using `touch submit_r_script.slurm` and add the contents:
+    ```
+    #!/bin/bash
+    #SBATCH --job-name=R-Plotting-Job
+    #SBATCH --ntasks=1
+    #SBATCH --nodes=1 
+    #SBATCH --time=00:01:00   
+    #SBATCH --partition=standard
+    #SBATCH --account=YOUR_GROUP
+
+    module load R/4.0.0
+    Rscript example.r
+    ```
+
+    The command `RScript` is used to execute our R script in batch mode allowing it to be run non-interactively.
+
+    **Job Submission**
+    
+    Next, we'll submit our job using `sbatch`:
+
+    ```
+    [netid@wentletrap ~]$ sbatch submit_r_script.slurm 
+    Submitted batch job 53337
+    ```
+
+    **Output**
+
+    Once our job has completed, we should see both a Slurm output file which contains any text that would have been printed to the terminal had we run our commands interactively, as well as the image file we specified. 
+    ```
+    [netid@wentletrap ~]$ ls
+    slurm-53337.out  rplot.png  example.r  submit_r_script.slurm
+    [netid@wentletrap ~]$ cat slurm-53337.out 
+    [1] "In R Script. Plotting..."
+    null device 
+              1    
+    ```
+    The contents of `rplot.png` should be:
+
+    <img src="images/rplot.png" style="width: 400px">
+
+=== "R Array Jobs"
+    
+    !!! tip "Array Jobs Intro"
+        Unsure what an array job is? See our [Array Jobs documentation](../../../running_jobs/batch_jobs/array_jobs/) which provides in-depth information on their function and implementation. 
+
+    [Download Example](files/r_array_example.tar.gz){ .md-button .md-button--primary }
+    
+    In this example, we’ll create an R script that generates 1000 randomized 1s and 0s, stores them as a dataframe, then saves the dataframe to an output file. We’ll run this R script as an array job to simulate what a researcher might do if they were performing multiple independent simulations using the same R script.
+
+    
+
+    **R Script**
+
+    This script is designed to accept command line input using the following syntax:
+
+    ```
+    Rscript r_array_example.R $SLURM_ARRAY_TASK_ID
+    ```
+    Since we’re using the same file for each simulation, if we were to create a single static output filename for our `save()` command, each simulation would overwrite the one that came before it. To deal with this issue, we’ll make use of the Slurm environment variable `$SLURM_ARRAY_TASK_ID` to differentiate them.
+    
+    The use of `commandArgs()` is to pull in that task ID to our R script so that we can use it in our output filenames.
+
+    Start by creating an R script by using the `touch` command
+
+    ```
+    [netid@cpu4 ~]$ touch save_example.R
+    ```
+    Next, open the file in your favorite text editor and add the contents:
+
+    ```
+    # We'll pull in any command line arguments used in executing this script.
+    # This is to grab the SLURM_ARRAY_TASK_ID that's associated with this particular
+    # array subjob. We'll use this integer to differentiate save files so multiple
+    # simulations don't overwrite one another.
+    args<-commandArgs(TRUE)
+
+    # An example of a workflow is included below
+
+    # Generate sample of 1000 random 0s and 1s
+    a <-sample(0:1, 1000, rep = TRUE)
+    # Save as data.fame
+    df <- data.frame(replicate(10,sample(0:1,1000,rep=TRUE)))
+
+    # Now we'll save our dataframe to a unique filename. If we run our job with:
+    # Rscript r_array_example.R $SLURM_ARRAY_TASK_ID
+    # then args[1] will be set to the job's unique integer. Using paste, we can
+    # add this into our save filename.
+    filename <- paste("random_sample_df_run", args[1], ".rda", sep = "", collapse = NULL)
+
+    # For demonstration purposes, we'll print out the expected filename
+    sprintf("Simulation complete. Saving dataframe to filename: %s", filename)
+
+    save(df, file = filename)
+    ```
+
+    **Submission Script**
+
+    Our submission script includes the usual directives as well as the additional `--array=1-2` directive. This tells the scheduler to submit two jobs with array indices 1 and 2. 
+
+    ```
+    #!/bin/bash
+    #SBATCH --account=your_group_here
+    #SBATCH --partition=standard
+    #SBATCH --time=00:01:00
+    #SBATCH --ntasks=1
+    #SBATCH --nodes=1
+    #SBATCH --array=1-2
+
+    module load R/4.1.0
+
+    Rscript save_example.R $SLURM_ARRAY_TASK_ID
+    ```
+
+    **Job Submission**
+
+    ```
+    [netid@cpu4 ~]$ sbatch r_array_example.slurm 
+    Submitted batch job 260764
+    ```
+
+    **Output**
+
+    We can now see that two jobs were submitted, each with their own Slurm output file as well as their own distinct R output.
+
+    ```
+    [netid@cpu4 ~]$ cat slurm-260764_* | grep Simulation
+    [1] "Simulation complete. Saving dataframe to filename: random_sample_df_run1.rda"
+    [1] "Simulation complete. Saving dataframe to filename: random_sample_df_run2.rda"
+    [netid@cpu4 ~]$ ls random_sample_df_run*
+    random_sample_df_run1.rda  random_sample_df_run2.rda
+    ```

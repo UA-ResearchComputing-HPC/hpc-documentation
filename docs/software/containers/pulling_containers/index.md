@@ -8,11 +8,11 @@
 
 ## Pulling Docker Containers
 
-Apptainer has the ability to convert available docker images into sif format allowing them to be run on HPC. If you find an image on [Docker Hub](https://hub.docker.com/) that you would like to use, you can pull it using the ```apptainer pull command <local_image_name>.sif docker://docker_image```. 
+Apptainer has the ability to convert available docker images into sif format allowing them to be run on HPC. If you find an image on [Docker Hub](https://hub.docker.com/) that you would like to use, you can pull it using the ```apptainer pull <local_image_name>.sif docker://docker_image```. 
 
 As an example, we could pull an Ubuntu image from Docker Hub with OS 22.04 by searching for Ubuntu, opening the Tags tab, and copying their ```docker pull``` command:
 
-<img src="images/ubuntu_docker.png" width=800px>
+<img src="images/ubuntu_docker.png" title="Ubuntu docker image" style="width: 100%;">
 
 Then, on HPC, we can run:
 
@@ -37,11 +37,11 @@ The NVIDIA GPU Cloud (NGC) provides GPU-accelerated HPC and deep learning contai
 
 To pull images, you'll need to [register with Nvidia](https://ngc.nvidia.com/signin). Once you have an account, you can view their images [from their catalogue](https://catalog.ngc.nvidia.com/). Click on the name of the software you're interested in to view available versions
 
-<img src="images/nvidia-catalogue.png" width=700px>
+<img src="images/nvidia-catalogue.png" title="Nvidia NGC catalog" style="width: 700px;">
 
 If you click on the **Tags** tab at the top of the screen, you'll find the different versions that are available for download. For example, if we click on TensorFlow, we can get the pull statement for the latest tag of TensorFlow 2 by clicking the ellipses and selecting Pull Tag.
 
-<img src="images/tf-tags.png" width=700px>
+<img src="images/tf-tags.png" title="Tensorflow tags" style="width: 100%;">
 
 This will copy a ```docker pull``` statement to your clipboard, in this case:
 
@@ -61,7 +61,7 @@ The general format for any pull you want to do is:
 $ apptainer build <local_image_name> docker://nvcr.io/<registry>/<app:tag>
 ```
 
-This Apptainer build command will download the app:tag NGC Docker image, convert it to Apptainer format, and save it to the local filename local_image_name. 
+This Apptainer build command will download the `app:tag` NGC Docker image, convert it to Apptainer format, and save it to the local filename `<local_image_name>`. 
 
 <html>
 <div class="button-container">
