@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="../../../assets/stylesheets/buttons.css">
+<link rel="stylesheet" href="../../../assets/stylesheets/images.css">
 
 # What are Containers?
 
 !!! tip
-    Want to learn more about containers? Check out our [Intro to Containers workshop](../../../support_and_training/workshops/intro_to_containers/). Additional examples of using containers can be found in our [batch jobs examples](../../../running_jobs/batch_jobs/example_batch_jobs/).
+    Want to learn more about containers? Check out our [Intro to Containers workshop](../../../events/workshop_materials/intro_to_containers/). 
 
 
-<img src="images/Shipping.png" align="right" width="300px">
+<img class="img-right" src="images/Shipping.png" title="Shipping containers illustration" style="width: 300px;">
 
 A container is a packaged unit of software that contains code and all its dependencies including, but not limited to: system tools, libraries, settings, and data. This makes applications and pipelines portable and reproducible, allowing for a consistent environment that can run on multiple platforms.
 
@@ -23,7 +24,7 @@ Apptainer (formerly Singularity) addresses this by completely containing the aut
 * You prefer to use a Linux distribution other than CentOS (e.g. Ubuntu).
 * You want a container with a database server like MariaDB.
 
-The documentation here provides instructions on how to either take a Docker image and run it from Apptainer, or create an image using Apptainer only.
+The documentation in this section provides instructions on how to either take a Docker image and run it from Apptainer, or create and run an image using Apptainer only.
 
 <html>
 <a href="../containers_on_hpc/"><button class="right-button" style="float: right;"></button></a>

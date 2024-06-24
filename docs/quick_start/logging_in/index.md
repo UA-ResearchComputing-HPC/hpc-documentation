@@ -1,20 +1,23 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 
-# Logging In and System Layout
-
-??? warning "Account creation is necessary to log in"
-    If you have not yet done so, you will need to register for an account to log in. See <a href="../../registration_and_access/account_creation/" target="_blank">our registration documentation</a> for steps. 
+# Logging In
 
 ## System Access
+!!! warning "Account creation is necessary to log in"
+    If you have not yet done so, you will need to register for an account to log in. See <a href="../../registration_and_access/account_creation/" target="_blank">our registration documentation</a> for steps. 
 
-!!! tip 
-    If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/account_access/).
 
-Once you've succesfully registered for an HPC account, you're ready to log in. There are two main methods to access the HPC system
+!!! info "Login issues"
+    If you experience any issues during the login process, [see our FAQs for common problems](../../support_and_training/faqs/).
+
+??? danger "Do not run computations on the login nodes." 
+    See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
+Once you've successfully registered for an HPC account, you're ready to log in. There are two main methods to access the HPC system
 
 1. **Open OnDemand**
 
-	This is a browser-based application that provides users with a graphical interface to access the HPC filesystem, run software that requires a graphical component, or access an interactive desktop environment. The login portal for Open OnDemand uses the familiar UArizona WebAuth login screen. HPC accounts are tied to university accounts, so use your standard NetID and password (i.e. the one used for your email).
+	This is a browser-based application that provides users with a graphical interface to access the HPC filesystem, run software that requires a graphical component, or access an interactive desktop environment. The [login portal for Open OnDemand](https://ood.hpc.arizona.edu/) uses the familiar UArizona WebAuth login screen. HPC accounts are tied to university accounts, so use your standard NetID and password (i.e. the one used for your email).
 
 2. **Terminal**
 
@@ -37,7 +40,7 @@ Type "shell" to access the job submission hosts for all environments
 ```
 If all has gone well, you are now connected to what is known as the bastion host. 
 
-<center><img src="images/bastion.png" style="height: 300px;"></center>
+<center><img src="images/bastion.png" title="HPC bastion host" style="height: 300px;"></center>
 
 The bastion host is the first computer you land on when you log in using the hostname ```hpc.arizona.edu```. This machine is only used to validate your credentials and provide a gateway to the rest of the HPC environment. It is not used for storing files and has no software installed so no computational work is done at this stage. As a test, try running the command ```hostname```:
 
@@ -55,7 +58,7 @@ Next, to advance from the bastion host, type the command ```shell```.
 
 After you type ```shell``` on the bastion host, you're connected to a computer called a login node. 
 
-<center><img src="images/login.png" style="height: 300px;"></center>
+<center><img src="images/login.png" title="HPC login nodes" style="height: 300px;"></center>
 
 We have two of these available and you will be assigned one at random. If you run the ```hostname``` command as you did on the bastion host, you should see either ```wentletrap``` or ```junonia```. 
 

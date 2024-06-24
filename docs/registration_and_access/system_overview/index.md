@@ -1,10 +1,13 @@
-# System Overview
+# System Layout
 
-The HPC system has a structure of interconnected nodes and storage systems. It is important to be aware of this structure while using the HPC to help with navigation and ensure proper usage of each type of node. To see more about the compute resources available, please see [this page](../../resources/compute_resources/). 
+The HPC system has a structure of interconnected nodes and storage systems. It is important to be aware of this structure while using the HPC to help with navigation and ensure proper usage of each type of node. To see more about the compute resources available, please see [our compute resources page](../../resources/compute_resources/). 
 
 Below is a graphic depiction of the layout of the HPC nodes:
 
-<center><img src="images/nodes.png" style="height: 400px;"></center>
+<center><img src="images/nodes.png" title="HPC system diagram" style="height: 400px;"></center>
+
+??? danger "Do not run computations on the login nodes." 
+    See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
 
 **Bastion Host**
 

@@ -2,20 +2,20 @@
 
 ## Overview
 
-The RCGC (Research Computing Governance Committee) has approved support for "Special Projects" that use more than the standard allocation of hours. When a special project request is granted, an additional allocation of standard hours is provided for a limited period of time.   
+The Research Computing Governance Committee (RCGC) has approved support for "Special Projects" that use more than the standard allocation of hours. When a special project request is granted, an additional allocation of standard hours is provided for a limited period of time.   
 
 There is not a specific definition of what comprises a project, but it is often support for publication or grant deadlines, or graduation dates. Each request is considered on a case by case basis.
 
 ## Authorized requestors
-Project requests must be submitted by a PI; partly because the additional time granted will go to the allocation of the PI.
+Project requests must be submitted by a Principal Investigator (PI); partly because the additional time granted will go to the allocation of the PI.
 
 ## Guidelines
 
-* All special project allocations are temporary
-* Special project allocations cannot be granted if they will impact the community of users with a standard allocation
-* PIs can only be granted a special project once within a 12 month period (starting from the ending period of the last special project)
-    * PI groups that routinely need more standard computing hours should supplement their needs in other ways (e.g. buy-in, accessing national/international computing resources, etc)
-    * The Research Computing group can help UArizona PIs access national-scale computing centers (e.g. ACCESS, TACC, Open Science Grid, etc)
+* All special project allocations are temporary.
+* Special project allocations cannot be granted if they will impact the community of users with a standard allocation.
+* PIs can only be granted a special project once within a 12 month period (starting from the ending period of the last special project).
+    * PI groups that routinely need more standard computing hours should supplement their needs in other ways (e.g. buy-in, accessing national/international computing resources, etc).
+    * [Our research facilitators](../../support_and_training/consulting_services/) can help UArizona PIs access national-scale computing centers (e.g. ACCESS, TACC, Open Science Grid, etc).
 
 ## Categories
 
@@ -28,6 +28,6 @@ Project requests must be submitted by a PI; partly because the additional time g
 ## Submitting a Request
 Requests are submitted via a web form in the [HPC user portal](https://portal.hpc.arizona.edu) under **Support** :material-arrow-right: **Requests**.  Please include:
 
-* Number of additional standard hours needed for the special project
-* Duration of the Special Project in months
-* Reason for the temporary increase
+* Number of additional standard hours needed for the special project.
+* Duration of the Special Project in months.
+* Reason for the temporary increase.

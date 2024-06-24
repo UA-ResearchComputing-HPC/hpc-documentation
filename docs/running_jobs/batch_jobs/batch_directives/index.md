@@ -19,22 +19,6 @@ There are four available partitions, or queues, on the UArizona HPC which determ
 |Qualified|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;</code></pre>|Available to groups with an activate [special project](../../../policies/special_projects/).|
 
 
-
-
-## Nodes
-
-???+ danger "Mutli-Node Programs"
-    
-    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
-
-    **If your application is not MPI-enabled, always set** ```--nodes=1```
-
-The term node refers to the number of physical computers allocated to your job. The syntax to allocate ```<N>``` nodes to a job is:
-
-```
-#SBATCH --nodes=<N>
-```
-
 ## CPUs
 
 Each job must specify the requested number of CPUs with the ```--ntasks``` directive.  This can be done in one of two ways:
@@ -50,6 +34,29 @@ Each job must specify the requested number of CPUs with the ```--ntasks``` direc
     #SBATCH --ntasks=1
     #SBATCH --cpus-per-task=<N>
     ```
+
+## Nodes
+
+???+ danger "Single vs. Multi-Node Programs"
+    
+    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
+
+    **If your application is not MPI-enabled, always set** ```--nodes=1```
+
+The term node refers to the number of physical computers allocated to your job. The syntax to allocate ```<N>``` nodes to a job is:
+
+```
+#SBATCH --nodes=<N>
+```
+
+
+## Time
+
+The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:SS```. The maximum amount of time that can be requested is 10 days for a batch job. More details in [Job Limits](../../job_limits/).
+
+```
+#SBATCH --time=HHH:MM:SS
+```
 
 ## Memory and High Memory Nodes
 
@@ -82,15 +89,6 @@ To request a high memory node, you will need the additional flag ```--constraint
 |Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=high_mem</code></pre>|
 
 
-## Time
-
-The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:SS```. The maximum amount of time that can be requested is 10 days for a batch job. More details in [Job Limits](../../job_limits/).
-
-```
-#SBATCH --time=HHH:MM:SS
-```
-
-
 ## GPUs
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
@@ -109,7 +107,7 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
   <tr>
     <td rowspan=3  style="vertical-align: middle;">Puma</td>
     <td><pre><code>#SBATCH --gres=gpu:1</code></pre></td>
-    <td>Request a single GPU. This will either target one Volta GPU (v100) or one <a href="../../../resources/compute_resources/#mig-multi-instance-gpu-resources">A100 MIG slice</a>, depending on availability. Only one GPU should be selected with this method to avoid being allocated multiple MIG slices.</td>
+    <td>Request a single GPU. This will either target one Volta GPU (v100) or one <a href="../../../resources/compute_resources/#__tabbed_2_1">A100 MIG slice</a>, depending on availability. Only one GPU should be selected with this method to avoid being allocated multiple MIG slices.</td>
   </tr>
   <tr>
     <td><pre><code>#SBATCH --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb</code></pre></td>
@@ -120,9 +118,14 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
     <td>Request <code>N</code> V100 GPUs where 1&le;<code>N</code>&le;4</td>
   </tr>
   <tr>
-    <td>Ocelote</td>
-    <td><pre><code>#SBATCH --gres=gpu:1</code></pre></td>
-    <td>Request one Pascal GPU (p100)</td>
+    <td rowspan=2  style="vertical-align: middle;">Ocelote</td>
+    <td><pre><code>#SBATCH --gres=gpu:1<br>#SBATCH --mem-per-cpu=8gb</code></pre></td>
+    <td>Request one GPU. This will target either a Pascal (p100) or Volta (v100)</td>
+  </tr>
+  </tr>
+    <td><pre><code>#SBATCH --gres=gpu:2<br>#SBATCH --mem-per-cpu=6gb</code></pre></td>
+    <td>Request two Pascal (p100) GPUs</td>
+  </tr>
 </table>
 
 
@@ -136,6 +139,29 @@ Array jobs in Slurm allow users to submit multiple similar tasks as a single job
 where ```<N>``` and ```<M>``` are integers. 
 
 For detailed information on job arrays, see our [job array tutorial](../array_jobs/).
+
+## Job Dependencies
+
+Slurm job dependencies allow users to submit to a series of jobs that depend on each other using the flag and options:
+```
+--dependency=<type:jobid[:jobid][,type:jobid[:jobid]]>
+```
+
+For example, say job `B` depends on the successful completion of job `A`. Job `B` can be submitted as a dependency of job `A` using the following method:
+
+```
+[netid@junonia ~]$  sbatch A.slurm
+Submitted batch job 1939000
+[netid@junonia ~]$ sbatch --afterok:1939000 B.slurm
+```
+This tells the scheduler to hold job `B` until job `A` completes. The `afterok` is the dependency `<type>`, in this case it ensures that job `B` runs only if job `A` completes successfully. The different options for `<type>` are show below:
+
+|Dependency Type|Meaning|
+|-|-|
+|`after`|Job can begin after the specified job(s) have started|
+|`afterany`|Job can begin after the specified job(s) have terminated. Job(s) will start regardless of whether the specified jobs failed or ran successfully|
+|`afterok`|Job can begin after the specified job(s) have completed successfully. If the specified job(s) fail, the dependency will never run.|
+|`afternotok`|Job can begin after the specified job(s) have failed. If the specified job(s) complete successfully, the dependency will never run.|
 
 ## Output Filenames
 
@@ -176,7 +202,7 @@ Filenames take patterns that allow for job information substitution. A list of f
 
 ## Examples and Explanations
 
-The below examples are complete sections of Slurm directives that will produce valid requests. Other directives can be added (like output files), but they are not strictly necessary to submit a valid request. For simplicity, the Puma cluster is assumed when discussing memory and GPU resources. Note that these examples do not include the shebang ```#!bin/bash``` statement, which should be at the top of _every_ slurm script. Also, note that the order of directives does not matter.
+The below examples are complete sections of Slurm directives that will produce valid requests. Other directives can be added (like output files), but they are not strictly necessary to submit a valid request. For simplicity, the Puma cluster is assumed when discussing memory and GPU resources. Note that these examples do not include the shebang ```#!bin/bash``` statement, which should be at the top of _every_ Slurm script. Also, note that the order of directives does not matter.
 
 === "Single CPU"
     ```

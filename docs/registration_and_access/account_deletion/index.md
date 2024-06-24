@@ -4,7 +4,7 @@
 
 If you wish to delete your HPC account, you may do so through the [User Portal](https://portal.hpc.arizona.edu/portal/). Navigate to the **Support** tab and click the **Close Your HPC Account** link. You will be prompted to manually confirm by entering *confirm* at the prompt. Click **Close Account** to complete the process.
 
-<img src=images/CloseAccount_0.png style="width=800px;">
+<img src=images/CloseAccount_0.png title="HPC account deletion" style="width=800px;">
 
 ## Loss of University Affiliation
 

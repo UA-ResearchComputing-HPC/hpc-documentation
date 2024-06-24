@@ -1,0 +1,49 @@
+/* styles.css (main stylesheet) */
+@import "buttons.css";
+
+
+@media screen and (max-width: 600px) {
+    /* Styles for small screens (e.g., mobile) */
+}
+
+/* General attributes of the page */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 1.4rem
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+
+.md-main {
+    flex-grow: 0
+}
+
+.md-main__inner {
+    display: flex;
+    height: 100%;
+}
+
+@media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+        display: none
+    }
+}

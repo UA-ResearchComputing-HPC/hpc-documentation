@@ -2,17 +2,17 @@
 
 **Cluster**
 
-A group of nodes connected to each other by a fast network.  The network in ElGato and Ocelote is 56Gb Infiniband.  What this gains for the user is the ability to connect nodes together to perform work beyond the capacity of a single node. Some jobs use hundreds of cores and terabytes of memory.
+A group of nodes connected to each other by a fast network.  The network in El Gato and Ocelote is 56Gb Infiniband.  What this gains for the user is the ability to connect nodes together to perform work beyond the capacity of a single node. Some jobs use hundreds of cores and terabytes of memory.
 <hr>
 
 **CPU/processor/socket/core**
 
 
 
-These terms are often used interchangeably, especially processor and CPU. The most straight forward way to think of the compute nodes is that they contain two physical sockets (or processor chips) which are located under their heatsinks. Each socket contains multiple cores.  Each core functions like a separate processor. Ocelote has 2 sockets with 14 cores in each so all you need to know is that there are 28 cores.  ElGato has 2 sockets with 6 cores in each, for a total of 12 cores. If your laptop is quad core, it has one socket with four cores, as a comparison.
+These terms are often used interchangeably, especially processor and CPU. The most straight forward way to think of the compute nodes is that they contain two physical sockets (or processor chips) which are located under their heatsinks. Each socket contains multiple cores.  Each core functions like a separate processor. Ocelote has 2 sockets with 14 cores in each so all you need to know is that there are 28 cores.  El Gato has 2 sockets with 6 cores in each, for a total of 12 cores. If your laptop is quad core, it has one socket with four cores, as a comparison.
 <hr>
 
-**Data Mover Node**
+**Data Transfer Node (DTN)**
 
 A node connected to the public internet and dedicated to moving data to/from external computers. We have two DTN nodes known collectively as ```filexfer.hpc.arizona.edu```.
 
@@ -50,7 +50,7 @@ The head node is for managing the cluster and is not available to users.
 
 **HPC**
 
-High performance computing. Implies a program too large for, or that takes too long on, a laptop or workstation. Also HTC (high throughput computing) similar but oriented to processing many small compute jobs.
+High performance computing. Implies a program too large for, or that takes too long on, a laptop or workstation. Also HTC (high throughput computing), similar, but oriented to processing many small compute jobs.
 
 <hr>
 
@@ -62,19 +62,19 @@ Intel processors (in this case "cores") have hyper-threading which can make one 
 
 **Login node**
 
-A cluster node accessible to users and dedicated to logins, editing, moving data, submitting jobs.  
+A cluster node accessible to users and dedicated to logins, editing, moving data, submitting jobs. We have two of them and it does not matter which one you connect to. Sometimes referred to as shell nodes.
 
 <hr>
 
 **MPI computing**
 
-Message passing interface, software standard used for most programs that use distributed memory. MPI calls lower-level functions, either networking or shared memory. On a cluster that means it can run transparently either on one node or multiple nodes. MPI has multiple implementations (OpenMPI, MVAPICH, OpenMPI or Intel MPI) that must be used consistently to both compile and run an MPI program.
+Message passing interface, the software standard used for most programs that use distributed memory. MPI calls lower-level functions, either networking or shared memory. On a cluster that means it can run transparently either on one node or multiple nodes. MPI has multiple implementations (OpenMPI, MVAPICH, OpenMPI or Intel MPI) that must be used consistently to both compile and run an MPI program.
 
 <hr>
 
 **Network bandwidth**
 
-The amount of data that can be moved over a network per second. For FDR Infiniband on Ocelote that is 56Gbps (Giga bits per second)
+The amount of data that can be moved over a network per second. For FDR Infiniband on Ocelote that is 56 Gbps (Giga bits per second)
 
 <hr>
 
@@ -104,13 +104,13 @@ The efficiency of a parallel program, usually defined as the parallel speedup of
 
 **Scheduler/HPC scheduler**
 
-A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and ElGato use SLURM.
+A program that maintains a list of batch jobs to be executed on a cluster, ranks them in some priority order, and executes batch jobs on compute nodes as they become available. It tries to keep the cluster from being overloaded or idle. Puma, Ocelote, and El Gato use Slurm.
 
 <hr>
 
 **Scratch storage**
 
-A temporary file system, designed for speed rather than reliability, and the first tier in the storage hierarchy. On Ocelote and ElGato these are internal SATA disks and referenced as ```/tmp```.
+A temporary file system, designed for speed rather than reliability, and the first tier in the storage hierarchy. On Puma these are internal SSD's and referenced as ```/tmp```.
 
 <hr>
 
@@ -140,7 +140,7 @@ Each tier of storage is larger and slower than the preceding tier. The first is 
 
 **Supercomputer**
 
-A large and powerful cluster. We currently have three: Puma, Ocelote, and ElGato.
+A large and powerful cluster. We currently have three: Puma, Ocelote, and El Gato.
 
 <hr>
 

@@ -13,6 +13,12 @@
   font-size: 15px;
 }
 
+/* Add a background color to the button when it's focused */
+.collapsible:focus {
+  background-color: #ccc;
+  border: 2px solid #EF4056;
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
   background-color: #ccc;
@@ -38,4 +44,14 @@
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Apply styles to links within expanded content */
+.collapsible:focus-within + .content a {
+  tabindex: 0; /* Enable tabbing for links when the collapsible button or its content is focused */
+}
+
+/* Apply styles to links within collapsed content */
+.collapsible:not(:focus-within) + .content a {
+  tabindex: -1; /* Disable tabbing for links when the collapsible button or its content is not focused */
 }

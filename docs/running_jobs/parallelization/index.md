@@ -6,7 +6,7 @@ You might be surprised to learn that if you move code from a local computer to a
 
 Parallelization enables jobs to 'divide-and-conquer' independent tasks within a process when multiple threads are available. In practice, this typically means running a job with multiple CPUs on the HPC. On your local machine, running apps like your web browser is natively parallelized, meaning you don't have to worry about having so many tabs open. However, on the HPC, ***parallelization must almost always be explicitly configured and called from your job.*** This process is highly software-dependent, so please research the proper method for running your program of choice in parallel.
 
-If you are interested in learning more about parallelization, please check out our [Parallel Computing Workshop](../../support_and_training/workshops/intro_to_parallel_computing/)
+If you are interested in learning more about parallelization, please check out our [Parallel Computing Workshop](../../events/workshop_materials/intro_to_parallel_computing/)
 
 ## Scaling
 
@@ -32,7 +32,7 @@ Each node on HPC has multiple CPUs. These can be utilized simultaneously in shar
 
 Multiple nodes can be accessed simultaneously on HPC, but memory is distributed rather than shared. In this case, additional software is needed in order to facilitate communication between processes, such as OpenMPI or Intel MPI. 
 
-Please be aware of the type of parallelism used in your program. Some software is configured only for shared-memory paralleism and will not be able to use processors on multiple nodes. 
+Please be aware of the type of parallelism used in your program. Some software is configured only for shared-memory parallelism and will not be able to use processors on multiple nodes. 
 
 ## Implementation
 
@@ -60,7 +60,7 @@ MATLAB provides the Parallel Computing Toolbox. [Reference](https://www.mathwork
 We provide several versions and implementations of MPI as system modules:
 
 ```bash
-[ejahn@cpu39 ~]$ module avail mpi
+[netid@cpu39 ~]$ module avail mpi
 
 ---------------- /opt/ohpc/pub/moduledeps/gnu8 ----------------
    mpich/3.3.1    openmpi3/3.1.4 (L)    openmpi4/4.1.1

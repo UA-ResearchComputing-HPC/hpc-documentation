@@ -20,12 +20,12 @@ The process of registering for an HPC account varies depending on your affiliati
     <br><br>
     <b>Step 2</b>: Go to <a href="https://portal.hpc.arizona.edu/portal/sendlink.php">https://portal.hpc.arizona.edu/portal/sendlink.php</a> and click the link on the left-hand side as shown below
     <br>
-    <img src="images/PI_Account_Creation_4.png" style="width:800px;">
+    <img src="images/PI_Account_Creation_4.png" title="PI self-sponsor link" style="width:800px;">
     <br>
      
      This will automatically redirect you back to the user portal, create a research group for you, and add you as a member. You will briefly see a pop-up notification verifying you've been added to your group. You can check this by going to the Manage Groups tab and clicking your group's dropdown menu to view its members. 
      <br>
-     <img src="images/PI_Account_Creation_4.5.png" style="width:350px;">
+     <img src="images/PI_Account_Creation_4.5.png" title="PI confirmation popup" style="width:350px;">
     </p>
 </div>
      
@@ -40,8 +40,8 @@ The process of registering for an HPC account varies depending on your affiliati
     <br> 
     To request sponsorship, navigate to <a href="https://portal.hpc.arizona.edu/portal/sendlink.php">https://portal.hpc.arizona.edu/portal/sendlink.php</a>. On the right-hand side, enter your sponsor's email address and click send. 
     
-    <img src="images/request_sponsorship.png" style="width:800px;">
-
+    <img src="images/request_sponsorship.png" title="request PI sponsorship" style="width:800px;">
+    <br>
     Your sponsor will then receive an email with a link used to authorize your account. Once they confirm your request, you will receive an email with instructions for accessing the HPC systems.
     <br><br>
     Note: it may take up to 15 minutes after approval to receive a confirmation email and for your account to officially be activated.

@@ -4,7 +4,8 @@
 .quick-links-button {
     border: none;
     color: white;
-    padding: 16px 32px;
+    background-color:#AB0520;
+    padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -12,7 +13,10 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 12px;
+}
+
+.quick-links-button:hover {
+    background-color: #EF4056;
 }
     
 .button1 {
