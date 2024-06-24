@@ -191,6 +191,8 @@ If it comes back blank, X11 forwarding is not enabled.
         ```bash
         shell -X
         ```
+    
+Once you're connected to the login nodes, you'll need to include an X11 forwarding flag when you start an [interactive session](../../running_jobs/interactive_jobs/). When using the `interactive` command, use the flag `-x`. When using `salloc` directly, use `--x11`.
 
 ### SSH Keys
 #### Why Use SSH Keys?
