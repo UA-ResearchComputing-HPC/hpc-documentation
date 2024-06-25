@@ -81,12 +81,12 @@ or, to request ```<N>``` GB of memory per CPU:
 
 **High Memory Node Requests**
 
-To request a high memory node, you will need the additional flag ```--constraint=high_mem```. It is recommended to use the exact directives below to avoid unexpected behavior.
+To request a high memory node, you will need the additional flag ```--constraint=hi_mem```. It is recommended to use the exact directives below to avoid unexpected behavior.
 
 |Cluster|Command|
 |-|-|
-|Ocelote|<pre><code>#SBATCH --mem-per-cpu=41gb<br>#SBATCH --constraint=high_mem</code></pre>|
-|Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=high_mem</code></pre>|
+|Ocelote|<pre><code>#SBATCH --mem-per-cpu=41gb<br>#SBATCH --constraint=hi_mem</code></pre>|
+|Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=hi_mem</code></pre>|
 
 
 ## GPUs
