@@ -7,20 +7,102 @@ title: UArizona HPC Events Calendar
 
 <img class="img-right" src="images/az_calendar.png" title="Desert calendar illustration" alt="cactus" width="200">
 
-Every semester, [we host training workshops](../workshops/intro_to_hpc/) on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
+Every semester, [we host training workshops](../workshop_materials/) on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
 
 Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-!!! example "No listed events. Check back later."
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">15</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/intro_to_hpc/">Intro to HPC</a></h3>
+        <p>10:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">16</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/intro_to_machine_learning/python/">Intro to ML with Python</a></h3>
+        <p>10:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">17</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/">Intro to Parallel</a></h3>
+        <p>10:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">18</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/">Statistics with Matlab</a></h3>
+        <p>10:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">18</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/intro_to_containers/">Intro to Containers</a></h3>
+        <p>11:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">19</div>
+        <div class="date-month">Jul</div>
+    </div>
+    <div class="event-details">
+        <h3><a href="../workshop_materials/">Intro to Visualization</a></h3>
+        <p>10:00am &#x25cf LOCATION TBD</p>
+    </div>
+    <div class="event-registration">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
+    </div>
+</div>
 
 ## Our Friends and Partners
 
 ### Upcoming Events
 
-!!! example "No listed events. Check back later."
-
+??? example "No listed events. Check back later."
+    *If you have an event that you would like us to display here, please [let us know](mailto:hpc-consult@list.arizona.edu)!*
 
 ### External Event Pages
 
