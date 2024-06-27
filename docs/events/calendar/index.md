@@ -20,7 +20,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/intro_to_hpc/">Intro to HPC</a></h3>
-        <p>10:00am &#x25cf LOCATION TBD</p>
+        <p>10:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
@@ -34,7 +34,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/intro_to_machine_learning/python/">Intro to ML with Python</a></h3>
-        <p>10:00am &#x25cf LOCATION TBD</p>
+        <p>10:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
@@ -48,7 +48,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/">Intro to Parallel</a></h3>
-        <p>10:00am &#x25cf LOCATION TBD</p>
+        <p>10:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
@@ -62,7 +62,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/">Statistics with Matlab</a></h3>
-        <p>10:00am &#x25cf LOCATION TBD</p>
+        <p>10:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
@@ -76,7 +76,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/intro_to_containers/">Intro to Containers</a></h3>
-        <p>11:00am &#x25cf LOCATION TBD</p>
+        <p>11:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
@@ -90,7 +90,7 @@ Check below for a list of upcoming workshops.
     </div>
     <div class="event-details">
         <h3><a href="../workshop_materials/">Intro to Visualization</a></h3>
-        <p>10:00am &#x25cf LOCATION TBD</p>
+        <p>10:00am &#x25cf Online via Zoom</p>
     </div>
     <div class="event-registration">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
