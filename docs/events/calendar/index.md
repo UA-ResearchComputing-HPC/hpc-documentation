@@ -101,8 +101,22 @@ Check below for a list of upcoming workshops.
 
 ### Upcoming Events
 
-??? example "No listed events. Check back later."
-    *If you have an event that you would like us to display here, please [let us know](mailto:hpc-consult@list.arizona.edu)!*
+<!-- ??? example "No listed events. Check back later."
+    *If you have an event that you would like us to display here, please [let us know](mailto:hpc-consult@list.arizona.edu)!* -->
+
+<div class="event-card">
+    <div class="event-date">
+        <div class="date-number">25</div>
+        <div class="date-month">Jul</div>
+    </div>
+        <div class="event-details">
+            <h3><a href="images/MATLAB_Python_Workshop_flyer.pdf">Amplifying the Impact of Your Projects with Computational Notebooks, MATLAB, and Python</a></h3>
+            <p>1:30pm &#x25cf Main Library B252</p>
+        </div>
+        <div class="event-registration">
+            <a href="https://libcal.library.arizona.edu/event/12679438"> <button class="register-button">Register</button></a>
+        </div>
+</div>
 
 ### External Event Pages
 
