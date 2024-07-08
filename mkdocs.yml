@@ -1,6 +1,7 @@
 site_name: UArizona HPC Documentation
 repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
+
 nav:
   - Home: index.md
   - HPC Quick Start: 
