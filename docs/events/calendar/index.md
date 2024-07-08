@@ -102,7 +102,7 @@ Check below for a list of upcoming workshops.
 ### Upcoming Events
 
 <!-- ??? example "No listed events. Check back later."
-    *If you have an event that you would like us to display here, please [let us know](mailto:hpc-consult@list.arizona.edu)!* -->
+    *If you have an event that you would like us to display here, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=8c4aa2761b1df0107947edf1604bcbd0&sysparm_category=84d3d1acdbc8f4109627d90d6896191f)!* -->
 
 <div class="event-card">
     <div class="event-date">
