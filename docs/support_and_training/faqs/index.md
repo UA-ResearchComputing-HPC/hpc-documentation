@@ -4,7 +4,7 @@
 
 # FAQs
 
-Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](mailto:hpc-consult@list.arizona.edu) and we will be happy to add it. 
+Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=8c4aa2761b1df0107947edf1604bcbd0&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) and we will be happy to add it. 
 
 
 <!-- ----------------------------------------------------------------------------------------------
