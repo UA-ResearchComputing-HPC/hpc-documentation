@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations) and [storage space](./storage_and_transfers/storage/overview/). 
+The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations/) and [storage space](./storage_and_transfers/storage/overview/). 
 
 This documentation site provides technical details relevant to using our HPC system. Whether you are just starting your journey into computational sciences or are a seasoned programmer, we hope you will find something useful in these pages. This site is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
 
