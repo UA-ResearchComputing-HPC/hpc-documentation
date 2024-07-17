@@ -16,6 +16,7 @@ nav:
 
   - Policies:
     - Acceptable Use: policies/acceptable_use/index.md
+    - Access: policies/access/index.md
     - Acknowledgements: policies/acknowledgements/index.md
     - Buy-in: policies/buy_in/index.md
     - Committees: policies/committees/index.md
