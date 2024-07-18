@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../../assets/stylesheets/embedded_files.css">
 # Intro to Containers on HPC
 
-There are times when the use of containers is more efficient for using HPC resources, and there are other times when it is the only way. This workshop will give you a quick view of some of the concepts and some interactive examples that will help you get familiar with Apptainer containers.
+There are times when the use of containers is more efficient for using HPC resources, and there are other times when it is the only way. This workshop will give you a quick view of some of the concepts and help you get familiar with Apptainer containers with some interactive examples.
 
 ## What is a container?
 
