@@ -113,7 +113,7 @@ We will look at a simple example of building an Apptainer container. Create a fi
 
 ```bash
 Bootstrap: docker
-From: debian:bookworm
+From: debian:bookworm-slim
 
 %post
   apt update -y && apt install -y nyancat
@@ -125,7 +125,7 @@ From: debian:bookworm
 Here is some explanation of what each line in the file means:
 
 -   **`Bootstrap: docker`:** This tells Apptainer that we want to use a container from Docker hub as a base for this container.
--   **`From: debian:bookworm-slim`:** This provides the name of container that we want to use as the base. In this case we are using a container based on the Debian Linux system as the base. Bookworm is the latest version of Debian. The part after `:` in `debian:bookworm-slim`, i.e. `bookworm-slim`, is usually called the tag, and used for versioning; `-slim` just indicates that this particular container has a minimal number of packages.
+-   **`From: debian:bookworm-slim`:** This provides the name of container that we want to use as the base. In this case we are using a container based on the Debian Linux system as the base. Bookworm is the latest version of Debian. The part after `:` in `debian:bookworm-slim`, i.e. `bookworm-slim`, is usually called the tag, and used for versioning; `-slim` indicates that this particular container has a minimal number of packages.
 -   **`%post`:** The `%` indicates a section in the file. All commands for installing software are mentioned under this section.
 -   **`apt update -y && apt install -y nyancat`:** These commands check for updates and then installs the `nyancat` package. Notice, we do not use `sudo` before the commands.
 -   **`%runscript`:** In this section you indicate which commands will run by default when you run the container.
@@ -307,7 +307,7 @@ def run_optimization():
         loss = mean_square(pred, Y)
 
     # Compute gradients.
-    gradients = g.gradient(loss, [W, b])    
+    gradients = g.gradient(loss, [W, b])
 
     # Update W and b following gradients.
     optimizer.apply_gradients(zip(gradients, [W, b]))
@@ -315,7 +315,7 @@ def run_optimization():
 # Run training for the given number of steps.
 for step in range(1, training_steps + 1):
     # Run the optimization to update W and b values.
-    run_optimization()    
+    run_optimization()
 
     if step % display_step == 0:
         pred = linear_regression(X)
@@ -329,8 +329,8 @@ Now create a bash script with the following content (replace the placeholder var
 #!/bin/bash
 #SBATCH --output=Sample-tensorflow-example-%a.out
 #SBATCH --ntasks=1
-#SBATCH --nodes=1             
-#SBATCH --time=00:01:00   
+#SBATCH --nodes=1
+#SBATCH --time=00:01:00
 #SBATCH --gres=gpu:1
 #SBATCH --partition=standard
 #SBATCH --account=<your-group>
