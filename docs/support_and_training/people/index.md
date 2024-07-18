@@ -35,11 +35,11 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
   </div>
 
   <div class="card">
-    <img src="images/c.jpg" title="Soham Pal" style="width:200px;">
+    <img src="images/soham.jpg" title="Soham Pal" style="width:200px;">
     <div class="container">
       <h4><b>Soham Pal</b></h4>
 
-      <p>Placeholder text</p>
+      <p>Soham is originally from India. He has been a scientific programmer and a HPC resource user for about 10 years. He earned his PhD in Computational Nuclear Physics from Iowa State University in 2022, developing software for the computation of electromagnetic properties of atomic nuclei. He worked at Amazon Web Services, before jonining the U of A HPC team in July 2023.</p>
     </div>
   </div>
 
