@@ -131,8 +131,8 @@ Working on a cluster without root privileges can lead to complications. For gene
 === "Open OnDemand"
     We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
 
-=== "Singularity"
-    In some circumstances, you may want to run RStudio using your own Singularity image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
+=== "Apptainer/Singularity"
+    In some circumstances, you may want to run RStudio using your own Apptainer (rebranded from Singularity) image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
 
     First, log into HPC using an Open OnDemand Desktop session and open a terminal. A Desktop session is the easiest solution to access RStudio since it eliminates the need for port forwarding.
 
@@ -141,7 +141,7 @@ Working on a cluster without root privileges can lead to complications. For gene
     ```
     mkdir $HOME/RStudio
     cd $HOME/RStudio
-    singularity pull ./geospatial.sif docker://rocker/geospatial.sif
+    apptainer pull ./geospatial.sif docker://rocker/geospatial.sif
     ```
 
     Next, create the necessary directories RStudio will use to generate temporary files. You will also generate a secure cookie key.
@@ -174,7 +174,7 @@ Working on a cluster without root privileges can lead to complications. For gene
     NETID=$(whoami)
     TMPDIR=$WD/rstudio-tmp
     SIF=$WD/$SIFNAME
-    PASSWORD=$PASSWORD singularity exec -B $TMPDIR/var/lib:/var/lib/rstudio-server -B $TMPDIR/var/run:/var/run/rstudio-server  -B $TMPDIR/tmp:/tmp $SIF rserver --auth-none=0 --auth-pam-helper-path=pam-helper --server-user=$NETID --www-address=127.0.0.1
+    PASSWORD=$PASSWORD apptainer exec -B $TMPDIR/var/lib:/var/lib/rstudio-server -B $TMPDIR/var/run:/var/run/rstudio-server  -B $TMPDIR/tmp:/tmp $SIF rserver --auth-none=0 --auth-pam-helper-path=pam-helper --server-user=$NETID --www-address=127.0.0.1
     ```
 
     Now, in your desktop session's terminal, execute the rserver.sh script using ```./rserver.sh```
