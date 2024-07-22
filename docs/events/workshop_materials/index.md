@@ -37,8 +37,8 @@ This page contains a catalogue of our previous training materials. Feel free to 
     An introduction to the theory and practice of parallel computing.
 
     <center>
-    	[PDF Slides](intro_to_parallel_computing/files/IntroToParallel.pdf){ .md-button }
-    	[:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=3Qwhlihf9wc){ .md-button }
+    	[PDF Slides](intro_to_parallel_computing/files/IntrotoParallelSummer2024.pdf){ .md-button }
+    	[:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=xEAX3tVk-PY){ .md-button }
 	</center>
 
 -   :material-function-variant:{ .lg .middle } __Machine Learning__
@@ -59,8 +59,10 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
    	Containers are self-contained software packages that include all the necessary dependencies to run a particular program. They can be useful for porting your analysis to a shared environment like the HPC. This workshop covers the basics of containers and how to use them on HPC.
 
-    <center>[Intro to Containers](intro_to_containers/index.md){ .md-button }</center>
-
+    <center>
+    [Intro to Containers](intro_to_containers/index.md){ .md-button }
+    [:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=nPt8C9gX1eY){ .md-button }
+    </center>
 
 -   :material-chart-multiple:{ .lg .middle } __Visualization__
 
@@ -83,6 +85,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 	[PDF Slides](intro_to_statistics/files/IntroToStatistics.pdf){ .md-button }
 	[PPT Slides](intro_to_statistics/files/IntroToStatistics.pptx){ .md-button }
 	[Examples](intro_to_statistics/files/matlab-workshop.txt){ .md-button }
+    [:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=xjSAIuFI8F4){ .md-button }
 	</center>
 
 -   :material-folder-open:{ .lg .middle } __Data Management__

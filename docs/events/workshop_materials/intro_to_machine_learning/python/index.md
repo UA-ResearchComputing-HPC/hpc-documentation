@@ -2,7 +2,11 @@
 <link rel="stylesheet" href="../../../../assets/stylesheets/buttons.css">
 # Intro to Machine Learning with Python on HPC
 
-We will discuss a few hands-on examples of machine learning with Python. You can run these in a Jupyter notebook, or using a batch script (see [Intro to HPC](../../intro-to-hpc/index.md)). Here we emphasize on using Jupyter notebooks. We recommend that you try these hands-on examples.
+We will discuss a few hands-on examples of machine learning with Python. You can run these in a Jupyter notebook, or using a batch script (see [Intro to HPC](../../intro_to_hpc/index.md)). Here we emphasize on using Jupyter notebooks. We recommend that you try these hands-on examples.
+
+See a presentation of this material from our Summer 2024 workshop series here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/28WtENqOWkI?si=Rs4FaHDHtcnYtOzH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Why use Python for machine learning?
 

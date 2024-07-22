@@ -2,7 +2,8 @@
 <link rel="stylesheet" href="../../../../assets/stylesheets/buttons.css">
 # Intro to Machine Learning with R on HPC
 
-We will discuss a few hands-on examples of machine learning with R. You can run these in a RStudio notebook, or using a batch script (see [Intro to HPC](../../intro-to-hpc/index.md)). Here we emphasize on using RStudio notebooks. We recommend that you try these hands-on examples.
+We will discuss a few hands-on examples of machine learning with R. You can run these in a RStudio notebook, or using a batch script (see [Intro to HPC](../../intro_to_hpc/index.md)). Here we emphasize on using RStudio notebooks. We recommend that you try these hands-on examples.
+
 
 ## Why use R for machine learning?
 

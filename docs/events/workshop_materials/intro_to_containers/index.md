@@ -3,6 +3,10 @@
 
 There are times when the use of containers is more efficient for using HPC resources, and there are other times when it is the only way. This workshop will give you a quick view of some of the concepts and help you get familiar with Apptainer containers with some interactive examples.
 
+See a presentation of this material from our Summer 2024 workshop series here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nPt8C9gX1eY?si=9fqEzxEP4dcOzBWj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What is a container?
 
 > "A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another." &#x2013; [Docker](https://www.docker.com/resources/what-container/)
