@@ -92,6 +92,14 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
+-   :material-alert-decagram:{ .lg .middle } __July 2024 Maintenance__
+
+    ---
+
+    * [User portal](https://portal.hpc.arizona.edu) interface change for mobile compatibility. 
+    * [Open OnDemand graphical jobs](./running_jobs/open_on_demand/#interactive-graphical-applications) limited to four days, reduced from 10 days. For workflows that need longer than four days, batch jobs can be used. [Contact our consultants](./support_and_training/consulting_services/) for help if you're unsure how to do this. 
+    * New partitions have been introduced for GPU jobs. This will prevent non-GPU jobs from running on GPU nodes, improving availability. See [batch directives](./running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for more information on how to request GPU nodes. 
+
 -   :material-expansion-card-variant:{ .lg .middle } __New Ocelote GPUs__
 
     ---
@@ -112,11 +120,7 @@ These resources specifically do not support Regulated Research, which might be I
 
     MIG resources entered the queues on Feb 26, 2024. The 12 MIG GPUs will increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory. Note: some batch scripts will need updates to work properly. [More information here](./resources/compute_resources/).
 
--   :material-clock-plus-outline:{ .lg .middle } __Increased Allocations__
 
-    ---
-
-    Beginning on March 1st, 2024 the standard allocation of CPU hours on Puma has increased from 100,000 to 150,000, and on Ocelote from 70,000 to 100,000. 
 
 
 

@@ -3,6 +3,9 @@
 ??? danger "Do not run computations on the login nodes." 
     CPU time allocations do not apply to login nodes. See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
 
+!!! info "July 31, 2024: New GPU Partitions"
+    Starting on July 31, 2024 GPU resources will need to 
+
 ## Group Allocations
 
 All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to UArizona High Performance Computing (HPC) services receive free standard allocations on the HPC clusters which are shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
@@ -22,30 +25,46 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     |-|-|-|-|
     |Standard CPU Hours|150,000|100,000|7,000|
 
-    In batch jobs, standard hours can be used with the directives
+    In batch jobs, standard hours can be used to request resources on CPU-only nodes with the directives
 
     ```bash
     #SBATCH --account=<PI GROUP>
     #SBATCH --partition=standard
     ```
 
+    {==**Starting July 31**==}: To request GPU resources using standard hours:
+    ```bash
+    #SBATCH --account=<PI GROUP>
+    #SBATCH --partition=gpu_standard
+    #SBATCH --gres=gpu:<options>
+    ```
+
+
+
 === "Windfall"
     {==Windfall is a partition available to jobs that enables them to run **without consuming your allocation**, but it also **reduces their priority**==}. This means windfall jobs are slower to start than other partitions. In addition to lower priority, windfall jobs are preemptible, meaning standard and high-priority jobs can interrupt a running windfall job, effectively placing it back in the queue. The purpose of windfall is to ensure that the clusters are busy at all times, and to allow researchers additional compute while increasing the efficiency of the system.
 
-    In batch jobs, the windfall partition can be used with the directive:
+    !!! note "The `--account` flag should be omitted when using the Windfall partition."
+
+    In batch jobs, the windfall partition can be used to request resources on CPU-only nodes with the directive:
 
     ```bash
     #SBATCH --partition=windfall
     ```
 
-    note that the ```--account``` flag is not used in this case.
+    {==**Starting July 31**==}: To request GPU resources:
+    ```bash
+    #SBATCH --partition=gpu_windfall 
+    #SBATCH --gres=gpu:<options>
+    ```
+
 
 
 === "High Priority"
     
     High priority allocations provide access to an additional pool of purchased compute nodes and increase the priority of jobs such that they start faster than standard jobs. Please check with your PI to ensure that your group has access before including these directives in your jobs.
     
-    In batch jobs, standard hours can be used with the directives:
+    In batch jobs, high priority hours can be used to request resources on CPU-only nodes with the directives:
 
     ```bash
     #SBATCH --account=<PI GROUP>
@@ -53,16 +72,34 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     #SBATCH --qos=user_qos_<PI GROUP>
     ```
 
+    {==**Starting July 31**==}: To request GPU resources with high priority hours:
+
+    ```bash
+    #SBATCH --account=<PI GROUP>
+    #SBATCH --partition=gpu_high_priority
+    #SBATCH --qos=user_qos_<PI GROUP>
+    #SBATCH --gres=gpu:<options>
+    ```
+
+
 === "Qualified"
     Groups with an upcoming deadline (e.g., conference, paper submission, graduation) are eligible to apply for a [Special Project](/policies/special_projects/) allocation once per year. Special projects provide an additional pool of standard hours, known as "qualified hours" to the group for a limited amount of time. 
 
-    In batch jobs, qualified hours can be used with the directive:
+    In batch jobs, qualified hours can be used to request resources on CPU-only nodes with the directive:
     ```bash
     #SBATCH --account=<PI GROUP>
     #SBATCH --partition=standard
     #SBATCH --qos=qual_qos_<PI GROUP>
     ```
+    {==**Starting July 31**==}: To request GPU resources with qualified hours:
+    ```bash
+    #SBATCH --account=<PI GROUP>
+    #SBATCH --partition=gpu_standard
+    #SBATCH --qos=qual_qos_<PI GROUP>
+    #SBATCH --gres=gpu:<options>
+    ```
 
+For more information on batch directives and `--gres` options, see our [batch directives](../../running_jobs/batch_jobs/batch_directives/) documentation.
 
 See: [**interactive jobs**](../../running_jobs/interactive_jobs/#customizing-your-resources), [**batch jobs**](../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions), or [**Open OnDemand**](../../running_jobs/open_on_demand/#web-form) for more information on the specific syntax for using hours in different jobs.
 

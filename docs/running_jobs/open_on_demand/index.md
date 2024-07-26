@@ -84,6 +84,9 @@ The Job Composer lets you create and run a Slurm script on any of our three clus
 
 Open OnDemand provides access to graphical interfaces for some popular software. These can be found under **Interactive Apps** through the Open OnDemand web browser. The process of starting and accessing these jobs is the same regardless of which application you select.
 
+!!! danger "July 31, 2024 changes"
+    Beginning on July 31, 2024, OnDemand graphical applications will be limited to four days of runtime to improve general resource availability. Jobs that take longer than four days to run may be converted to [batch jobs](../batch_jobs/intro/). If you have questions about using batch jobs, [reach out to our consultants](../../support_and_training/consulting_services/). 
+
 **Web Form**
 
 First, select the desired application from Interactive Apps. This will take you to a form where you will enter your job information. This includes the entries in the following table:

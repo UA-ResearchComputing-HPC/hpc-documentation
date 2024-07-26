@@ -9,14 +9,21 @@ The first section of a batch script (after the shebang) always contains the Slur
  
 ## Allocations and Partitions
 
-There are four available partitions, or queues, on the UArizona HPC which determine the priority of your jobs. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
+The partitions, or queues, on the UArizona HPC which determine the priority of your jobs and resources available to them are shown in the table below. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
 
-|Partition|Request Syntax|Comments|
+!!! info "New Partitions Coming July 31, 2024"
+    To improve GPU resource availability, we are introducing three new partitions: `gpu_standard`, `gpu_windfall`, and `gpu_high_priority`. This will prevent CPU-only jobs from occupying GPU node resources. Post-maintenance, these partition updates will need to be included in batch scripts that are requesting GPU nodes. 
+
+|<div style="width:110px">Partition</div>|Request Syntax|Comments|
 |-|-|-|
-|Standard|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard</code></pre>||
+|Standard|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard</code></pre>|Request a CPU-only node using standard hours.|
+|{==:material-bell-alert: **Coming July 31**<br>Standard GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using standard hours. See [the GPUs section below](#gpus) for details on the `gres` directive.|
 |Windfall|<pre><code>#SBATCH --partition=windfall</code></pre>|Unlimited access. Preemptible. Do not include an `--account` flag when requesting this partition.|
-|High Priority|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;</code></pre>|Only available to <a href="../../../policies/buy_in/">buy-in groups</a>.|
+|{==:material-bell-alert: **Coming July 31**<br>Windfall GPU==}|<pre><code>#SBATCH --partition=gpu_windfall<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using windfall. See [the GPUs section below](#gpus) for details on the `gres` directive. Do not include an `--account` flag when requesting this partition.|
+|High Priority|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;</code></pre>|Request a CPU-only node with high priority resources. Only available to <a href="../../../policies/buy_in/">buy-in groups</a>.|
+|{==:material-bell-alert: **Coming July 31**<br>High Priority GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources with high priority hours. Only available to <a href="../../../policies/buy_in/">buy-in groups</a>. See [the GPUs section below](#gpus) for details on the `gres` directive.|
 |Qualified|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;</code></pre>|Available to groups with an activate [special project](../../../policies/special_projects/).|
+|{==:material-bell-alert: **Coming July 31**<br>Qualified GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;|Request GPU resources with qualified hours. Available to groups with an activate [special project](../../../policies/special_projects/). See [the GPUs section below](#gpus) for details on the `gres` directive.|
 
 
 ## CPUs
@@ -90,6 +97,9 @@ To request a high memory node, you will need the additional flag ```--constraint
 
 
 ## GPUs
+
+!!! tip "New GPU Partitions"
+    Beginning July 31, GPU jobs will need to use GPU-specific partitions. See the [partitions section](#allocations-and-partitions) at the top of this page for details. 
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
 
@@ -242,11 +252,13 @@ The below examples are complete sections of Slurm directives that will produce v
     On Puma, up to 94 CPUs or 470 GB of memory can be requested. 
 
 === "Single GPU Node"
+    !!! info "July 31, 2024 Partitions update"
+        Beginning July 31, GPU jobs must use a GPU partition. See the [partitions](#allocations-and-partitions) section at the top of this page for details.
 
     ```
     #SBATCH --job-name=hello_world
     #SBATCH --account=your_group
-    #SBATCH --partition=standard
+    #SBATCH --partition=gpu_standard
     #SBATCH --nodes=1
     #SBATCH --ntasks=10
     #SBATCH --time=01:00:00
