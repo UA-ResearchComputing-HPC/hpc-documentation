@@ -86,7 +86,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
 
 </html>
 
-
+<hr>
 
 
 <!-- ----------------------------------------------------------------------------------------------
@@ -198,6 +198,8 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
   </div>
 </html>
 
+<hr> 
+
 <!-- ----------------------------------------------------------------------------------------------
    ___                          _     ___                            _   _             
   / _ \___ _ __   ___ _ __ __ _| |   / __\___  _ __ ___  _ __  _   _| |_(_)_ __   __ _ 
@@ -247,6 +249,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
   </div>
 </html>
 
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
    ___                      ___          ___                               _ 
@@ -330,6 +333,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
       
 </html>
 
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
  __        __ _                                            _                    _       _           
@@ -490,6 +494,7 @@ _\ \ (_) |  _| |_ \ V  V / (_| | | |  __/ | (_| | | | | (_| | / /\/\ \ (_) | (_|
 
 </html>
 
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
  __ _                             
@@ -571,13 +576,6 @@ _\ \ || (_) | | | (_| | (_| |  __/
     </p>
   </div>
 
-  <!-- Received message too long -->
-  <button class="collapsible">Why am I getting the error <code>Received message too long</code> when I try to upload data to HPC?</button>
-  <div class="content">
-    <p>
-        Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
-    </p>
-  </div>
 </html>
 
 
@@ -915,11 +913,76 @@ __  ____| (_)___| | __
     </p>
   </div>
 
-  <!-- I use workflows to move data using Google Drive, and to share with others. Will AWS support something similar? -->
-  <button class="collapsible">I use workflows to move data using Google Drive, and to share with others. Will AWS support something similar?</button>
+
+
+
+
+  <!-- Can I have multiple S3 buckets associated with my account? -->
+  <button class="collapsible">Can I have multiple S3 buckets associated with my account?</button>
   <div class="content">
     <p>
-       Amazon S3 will likely support what you do. Perhaps our consultants can help to rework your workflows.
+      Yes
+    </p>
+  </div>
+
+
+
+  <!-- What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?  -->
+  <button class="collapsible">What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?</button>
+  <div class="content">
+    <p>
+      This alert is sent to notify you whenever your storage usage grows by 10% relative to the previous week. This ensures that you're aware of any unintended spikes and the potential resulting costs. 
+    </p>
+  </div>
+
+
+
+
+</html>
+
+<!-- ----------------------------------------------------------------------------------------------
+  _______                   __              
+ |__   __|                 / _|             
+    | |_ __ __ _ _ __  ___| |_ ___ _ __ ___ 
+    | | '__/ _` | '_ \/ __|  _/ _ \ '__/ __|
+    | | | | (_| | | | \__ \ ||  __/ |  \__ \
+    |_|_|  \__,_|_| |_|___/_| \___|_|  |___/
+
+
+---------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+## Transfers
+
+### HPC
+
+<html>
+  <!-- Received message too long -->
+  <button class="collapsible">Why am I getting the error <code>Received message too long</code> when I try to use scp/sftp?</button>
+  <div class="content">
+    <p>
+        Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
+    </p>
+  </div>
+</html>
+
+### Tier 2 AWS
+
+<html>
+  <!-- "The operation is not valid for the object's access tier"? -->
+  <button class="collapsible">What does this file transfer error mean: "The operation is not valid for the object's access tier"?</button>
+  <div class="content">
+    <p>
+      This error indicates your data have migrated to an archival storage tier (Glacier or Deep Glacier). They will first need to be <a href="../../../storage_and_transfers/storage/tier2_storage/#restoring-archived-data">restored</a> to the Standard access tier to make them downloadable.
+    </p>
+  </div>
+
+    <!-- Are there any limits on uploads, e.g. may transfer size / day? -->
+  <button class="collapsible">Are there any limits on uploads, e.g. may transfer size/day?</button>
+  <div class="content">
+    <p>
+      The max file size is 5 TB based on <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html">Amazon's official documentation</a>.
     </p>
   </div>
 
@@ -931,40 +994,9 @@ __  ____| (_)___| | __
     </p>
   </div>
 
-  <!-- Can I have multiple S3 buckets associated with my account? -->
-  <button class="collapsible">Can I have multiple S3 buckets associated with my account?</button>
-  <div class="content">
-    <p>
-      Yes
-    </p>
-  </div>
-
-  <!-- Are there any limits on uploads, e.g. may transfer size / day? -->
-  <button class="collapsible">Are there any limits on uploads, e.g. may transfer size/day?</button>
-  <div class="content">
-    <p>
-      The max file size is 5 TB based on <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html">Amazon's official documentation</a>.
-    </p>
-  </div>
-
-  <!-- What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?  -->
-  <button class="collapsible">What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?</button>
-  <div class="content">
-    <p>
-      This alert is sent to notify you whenever your storage usage grows by 10% relative to the previous week. This ensures that you're aware of any unintended spikes and the potential resulting costs. 
-    </p>
-  </div>
-
-  <!-- "The operation is not valid for the object's access tier"? -->
-  <button class="collapsible">What does this file transfer error mean: "The operation is not valid for the object's access tier"?</button>
-  <div class="content">
-    <p>
-      This error indicates your data have migrated to an archival storage tier (Glacier or Deep Glacier). They will first need to be <a href="../../../storage_and_transfers/storage/tier2_storage/#restoring-archived-data">restored</a> to the Standard access tier to make them downloadable.
-    </p>
-  </div>
-
-
 </html>
+
+<hr>
 
 
 <!-- ----------------------------------------------------------------------------------------------
