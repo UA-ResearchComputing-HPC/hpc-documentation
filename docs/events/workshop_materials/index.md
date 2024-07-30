@@ -85,7 +85,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 	[PDF Slides](intro_to_statistics/files/IntroToStatistics.pdf){ .md-button }
 	[PPT Slides](intro_to_statistics/files/IntroToStatistics.pptx){ .md-button }
 	[Examples](intro_to_statistics/files/matlab-workshop.txt){ .md-button }
-    [:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=xjSAIuFI8F4){ .md-button }
+    [:fontawesome-brands-youtube: Video](https://www.youtube.com/watch?v=o33jDf3vELY){ .md-button }
 	</center>
 
 -   :material-folder-open:{ .lg .middle } __Data Management__
