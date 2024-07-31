@@ -23,10 +23,11 @@ The process of registering for an HPC account varies depending on your affiliati
     <img src="images/PI_Account_Creation_4.png" title="PI self-sponsor link" style="width:800px;">
     <br>
      
-     This will automatically redirect you back to the user portal, create a research group for you, and add you as a member. You will briefly see a pop-up notification verifying you've been added to your group. You can check this by going to the Manage Groups tab and clicking your group's dropdown menu to view its members. 
+     This will automatically redirect you back to the user portal, create a research group for you, and add you as a member. You can check your group and membership in the portal by going to the <b>Groups</b> tab and clicking your group's dropdown menu to view its members. 
      <br>
-     <img src="images/PI_Account_Creation_4.5.png" title="PI confirmation popup" style="width:350px;">
+     <img src="images/PI_Account_Creation_4.5.png" title="PI confirmation popup" style="width:800px;">
     </p>
+    <p>For more information on how you can manage your HPC group, see our <a href="../group_management/">Group Management</a> documentation.</p>
 </div>
      
 <button class="collapsible">I'm a student, postdoc, staff member, or Designated Campus Colleague</button>
