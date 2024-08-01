@@ -26,8 +26,14 @@ Project requests must be submitted by a Principal Investigator (PI); partly beca
 |**Greater than 100,000 hours per month** | These requests must provide a defined number of hours, defined duration not to exceed 6 months, and a defined statement of need (e.g. publication deadline). These requests required PIs to report back the results of their calculations (publications, conference presentations, etc) for potential inclusion in our online documentation. Benchmarking, profiling, or assessment of analyses run should also be provided to help the UArizona HPC understand how the additional computing time was used and ways that need can be met in the future without a special project. These requests will be forwarded to the HPC policies subcommittee of RCGC and require committee approval before being granted. |
 
 ## Submitting a Request
-Requests are submitted via a web form in the [HPC user portal](https://portal.hpc.arizona.edu) under **Support** :material-arrow-right: **Requests**.  Please include:
+Requests are submitted via a web form in the [HPC user portal](https://portal.hpc.arizona.edu) under **Support** :material-arrow-right: **Requests**. 
+
+<img src="./images/request-special-project.png" style="width: 800px">
+
+In the form that opens,  Please include:
 
 * Number of additional standard hours needed for the special project.
 * Duration of the Special Project in months.
 * Reason for the temporary increase.
+
+<img src="./images/special-project-form.png" style="width: 800px">
