@@ -6,6 +6,10 @@ The University of Arizona offers high performance computing resources to all act
 
 Users are required to have active university credentials to gain access to all HPC services. If you are collaborating with university members but are not actively affiliated with the university, you may apply for [Designated Campus Colleague (DCC) status](https://it.arizona.edu/service/designated-campus-colleague-accounts) through HR. DCC status grants non-affiliated individuals with active university credentials required for accessing university services.
 
+## Email List Registration
+
+All HPC account owners and sponsors are required to be members of the HPC-Announce email list and will automatically be added as members during the account creation process. This email list is used to send HPC system-related updates and notifications. Deleting your HPC account will automatically remove you from the listserv. 
+
 ## Registration Process
 
 * **Principal Investigators (PIs)**
