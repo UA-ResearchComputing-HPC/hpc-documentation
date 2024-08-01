@@ -31,7 +31,7 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
         
     2. A form will appear where you will select the target cluster, enter the amount of time you'd like to be allotted (in hours), the number of cores you need, your PI Group (if you are unsure what your group name is, you can check in [https://portal.hpc.arizona.edu/portal/](https://portal.hpc.arizona.edu/portal/)), and the queue. Once you've filled in your request, click Launch.
         
-        <img src="images/desktop_form.jpg" width="700" title="OnDemand Desktop form" />
+        <img src="images/desktop-form.png" width="700" title="OnDemand Desktop form" />
         
     3. A window will appear with the status of your request. It will start in a Pending state and will switch to Running when your desktop session is ready. Click Launch Interactive Desktop to access your session.
         
