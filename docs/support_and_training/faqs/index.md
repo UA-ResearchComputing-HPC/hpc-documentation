@@ -250,6 +250,30 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
 </html>
 
 <hr>
+## Maintenance
+<html>
+<!-- ----------------------------------------------------------------------------------------------
+                  _       _                                  
+                 (_)     | |                                 
+  _ __ ___   __ _ _ _ __ | |_ ___ _ __   __ _ _ __   ___ ___ 
+ | '_ ` _ \ / _` | | '_ \| __/ _ \ '_ \ / _` | '_ \ / __/ _ \
+ | | | | | | (_| | | | | | ||  __/ | | | (_| | | | | (_|  __/
+ |_| |_| |_|\__,_|_|_| |_|\__\___|_| |_|\__,_|_| |_|\___\___|
+
+---------------------------------------------------------------------------------------------- -->
+
+
+  <button class="collapsible">Why are my jobs sitting in queue for so long after maintenance?</button>
+  <div class="content">
+  <p>
+  If your jobs are sitting in queue for a long time after a system maintenance period, it's likely because it was a rolling maintenance cycle. During rolling maintenance, all nodes are put into a "drain" state. This means they stop accepting any new jobs until all the jobs running on them complete. Once they are empty, they are taken offline, updated, rebooted, and then put back online to accept new jobs. Because job runtimes can be up to 10 days, it may take up to 10 days for job queues to return to normal.
+
+  For more information on maintenance, see <a href="../../policies/maintenance/">our maintenance documentation</a>. 
+  </p>
+  </div>
+</html>
+
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
    ___                      ___          ___                               _ 
