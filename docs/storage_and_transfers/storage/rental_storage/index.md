@@ -68,13 +68,16 @@ Connection to filexfer.hpc.arizona.edu closed.
 !!! tip
     It can take a few days to process the request as it has to route through the Financial Services Office (FSO). You will receive an email confirmation once it is complete.
 
-1. PIs or [Group Delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) can request rental storage on behalf of their group. To do so, navigate to the [User Portal](https://portal.hpc.arizona.edu) in your browser, then choose the **Storage** tab
+1. PIs or [Group Delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) can request rental storage on behalf of their group. To do so, navigate to the [User Portal](https://portal.hpc.arizona.edu) in your browser, choose the **Storage** tab, then select **Submit Rental Storage Request** under the **Rental Storage** heading.
 
-    <img src="images/request_rental_storage.png" title="Request rental storage" style="width:450px;">
+    <img src="images/request_rental_storage.png" title="Request rental storage" style="width:700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
-2. Select **Submit Rental Storage Request** under the **Rental Storage** heading and fill out the form. 
+2. This will open a web form. Add your KFS number under **KFS Number**(1) and the email address for the Department's financial contact under **Business contact email**. There will also be two optional fields: **Subaccount** and **Project**. These are used for tagging/reporting purposes in KFS billing. You can safely leave these entries blank if you're not sure what they are. Once you have completed the form, click **:material-send:**. 
+    { .annotate }
 
-    <img src="images/rental_storage_request_form.png" title="Rental storage request form" style="width:350px;">
+    1.  A KFS number is used for accounting purposes and used by your Department's finance specialist. If you do not know your KFS number, contact your department's financial office. 
+
+    <img src="images/rental_storage_request_form.png" title="Rental storage request form" style="width:700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 3. Once your space has been created, you will receive an email notification that it is ready for use.
 
@@ -86,7 +89,7 @@ Connection to filexfer.hpc.arizona.edu closed.
 
 Your rental allocation can be resized through the user portal by navigating to the **Storage** tab and selecting **Modify Rental Quota** under the **Rental Storage** heading.
 
-<img src="images/resize_rental_allocation.png" title="Resize rental allocation" width=450px>
+<img src="images/resize_rental_allocation.png" title="Resize rental allocation" style="width: 700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
 
 ## Checking Your Usage
@@ -96,7 +99,7 @@ You can check your allocation's size and current usage either through the user p
 === "User Portal"
     In the [user portal](https://portal.hpc.arizona.edu/portal/), navigate to the **Storage** tab and select **Check Rental Quota** from under the **Rental Storage** heading. This option is only available to PIs and group delegates.
 
-    <img src="images/check_rental_quota.png" title="Check rental quota" width=500px>
+    <img src="images/check_rental_quota.png" title="Check rental quota" style="width: 700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 === "Command Line"
     From an HPC login node, enter the command ```uquota```, for example:

@@ -68,7 +68,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
 === "User Portal"
     You can check your storage allocation through our [online user portal](https://portal.hpc.arizona.edu/portal/) by navigating to the **Storage** tab and clicking **Check Disk Quotas**:
     
-    <img src="images/check_storage_quota.png" title="User portal storage tab" style="width:800px;">
+    <img src="images/check_storage_quota.png" title="User portal storage tab" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 
 
@@ -88,6 +88,9 @@ PIs may request a new xdisk allocation immediately after their previous one has 
 
 ### Requesting, Modifying, and Deleting an Allocation
 
+!!! warning "XDisk management is limited to PIs and delegates"
+    Only PIs and trusted delegates can create, delete, and modify xdisk allocations. The CLI interface is restricted to PIs only. Delegates may manage their groups allocation through the user portal. For more information on adding group delegates and how they can use the portal on their PI's behalf, see: [Delegating Group Management Rights](../../../registration_and_access/group_management/#delegating-group-management-rights). 
+
 #### User Portal
 
 === "Requesting an Allocation"
@@ -96,17 +99,17 @@ PIs may request a new xdisk allocation immediately after their previous one has 
     
     PIs or delegates can request an xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Create XDisk**
     
-    <img src="images/create-xdisk.png" title="Manage xdisk" style="width:800px;">
+    <img src="images/create-xdisk.png" title="Manage xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
     This will open a web form where you can enter your size and duration requirements in GB and days, respectively. The maximum size that can be requested is 20000 GB and the maximum duration is 300 days. In addition, specify the desired group ownership for the allocation from the **Group** dropdown menu This will determine file permissions and who has access. Once you click :material-plus-circle-outline:, your allocation should immediately be available.
     
-    <img src="images/create-xdisk-form.png" title="Request new xdisk" style="width:800px;">
+    <img src="images/create-xdisk-form.png" title="Request new xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 === "Modifying an Allocation"
 
     PIs or delegates may manage their xdisk allocation at any time through the user portal. Under the **Storage** tab, either select **Update XDisk Size** or **Update XDisk Duration**, depending on the property you would like to update.
     
-    <img src="images/manage_xdisk.png" title="Manage xdisk" style="width:800px;">
+    <img src="images/manage_xdisk.png" title="Manage xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
     This will open a form which will allow you to modify the size and duration of your xdisk. Xdisk allocations cannot be increased beyond 20000 GB and the maximum duration of 300 days. Note: the **Group** field may only be modified at the time of the allocation's creation.
     
@@ -114,11 +117,11 @@ PIs may request a new xdisk allocation immediately after their previous one has 
 === "Deleting an Allocation"
     PIs or delegates may delete their xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Delete XDisk**
     
-    <img src="images/delete-xdisk.png" title="Delete xdisk" style="width:800px;">
+    <img src="images/delete-xdisk.png" title="Delete xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
     Clicking this link will open a window with a prompt. Type **confirm** and then select :material-trash-can: to complete the process.
     
-    <img src="images/confirm-delete.png" title="Confirm xdisk deletion" style="width:800px;">
+    <img src="images/confirm-delete.png" title="Confirm xdisk deletion" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
     If you would like to request a new xdisk, you may do so as soon as the request is processed. Note: sometimes processing the request can take a few minutes, depending on the number of files and the size of the allocation.
     
