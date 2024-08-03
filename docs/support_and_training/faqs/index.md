@@ -196,6 +196,16 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
         <pre><code class="language-bash">set -oe pipefail</code></pre>
     </p>
   </div>
+
+  <button class="collapsible">Why am I getting the error <code>QOSGrpSubmitJobsLimit</code> when I try submitting my job?</button>
+  <div class="content">
+    <p>
+    If you're trying to submit a job and get:
+    <pre><code>sbatch: error: QOSGrpSubmitJobsLimit
+sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)</code></pre>
+    check that you're including a <code>--qos</code> directive in your job request. This is necessary to use high priority and qualified hours. Check our <a href="../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions">Slurm Batch Directives</a> page for specifics on how to do this.
+    </p>
+  </div>
 </html>
 
 <hr> 

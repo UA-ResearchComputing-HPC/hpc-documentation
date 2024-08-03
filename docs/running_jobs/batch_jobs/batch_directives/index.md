@@ -14,6 +14,13 @@ The partitions, or queues, on the UArizona HPC which determine the priority of y
 !!! info "{==:material-alert-decagram:NEW!==} Updated Partitions"
     To improve GPU resource availability, we have three new partitions: `gpu_standard`, `gpu_windfall`, and `gpu_high_priority`. This will prevent CPU-only jobs from occupying GPU node resources. GPU jobs must use the new partitions to be submitted successfully.
 
+!!! warning "Buy-in users must use the `--qos` directive"
+    If you're a member of a buy-in group and are trying to use your high priority hours, ensure you are including a `--qos` directive. When this directive is missing, you will recieve the error:
+    ```
+    sbatch: error: QOSGrpSubmitJobsLimit
+    sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+    ```
+
 |<div style="width:110px">Partition</div>|Request Syntax|Comments|
 |-|-|-|
 |Standard|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard</code></pre>|Request a CPU-only node using standard hours.|
