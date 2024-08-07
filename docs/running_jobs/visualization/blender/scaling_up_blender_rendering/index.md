@@ -57,10 +57,10 @@ in the past. This helps make sure that you work with the newest image if
 there were changes made.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47.png?version=1&amp;modificationDate=1664481167000&amp;cacheVersion=1&amp;api=v2&amp;width=1156&amp;height=138" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47.png?version=1&amp;modificationDate=1664481167000&amp;cacheVersion=1&amp;api=v2&amp;width=1156&amp;height=138 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47.png?version=1&amp;modificationDate=1664481167000&amp;cacheVersion=1&amp;api=v2&amp;width=1156&amp;height=138 1x" height="138" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-52-47_0.png 1x" height="138" /></span>
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43.png?version=1&amp;modificationDate=1664481223000&amp;cacheVersion=1&amp;api=v2&amp;width=583&amp;height=116" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43.png?version=1&amp;modificationDate=1664481223000&amp;cacheVersion=1&amp;api=v2&amp;width=583&amp;height=116 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43.png?version=1&amp;modificationDate=1664481223000&amp;cacheVersion=1&amp;api=v2&amp;width=583&amp;height=116 1x" height="116" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-53-43_0.png 1x" height="116" /></span>
 
 Now we go inside the container and start the Xvfb program to generate a
 virtual display named 99 with a screen 0 associated of 1024x720
@@ -81,7 +81,7 @@ trying to create displays, so I've blurred that out. Part of
 picking` :99` is to avoid using the same name as other folks on a node.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36.png?version=1&amp;modificationDate=1664481575000&amp;cacheVersion=1&amp;api=v2&amp;width=438&amp;height=86" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36.png?version=1&amp;modificationDate=1664481575000&amp;cacheVersion=1&amp;api=v2&amp;width=438&amp;height=86 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36.png?version=1&amp;modificationDate=1664481575000&amp;cacheVersion=1&amp;api=v2&amp;width=438&amp;height=86 1x" height="86" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_12-59-36_0.png 1x" height="86" /></span>
 
   
 
@@ -90,7 +90,7 @@ class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img sr
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7.png?version=1&amp;modificationDate=1664481667000&amp;cacheVersion=1&amp;api=v2&amp;width=697&amp;height=116" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7.png?version=1&amp;modificationDate=1664481667000&amp;cacheVersion=1&amp;api=v2&amp;width=697&amp;height=116 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7.png?version=1&amp;modificationDate=1664481667000&amp;cacheVersion=1&amp;api=v2&amp;width=697&amp;height=116 1x" height="116" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-1-7_0.png 1x" height="116" /></span>
 
 We are now ready to try to run a headless blender render.
 
@@ -114,10 +114,10 @@ and that samples are being taken and rendered to the image. The final
 line shows where the resulting png frame ends up.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21.png?version=1&amp;modificationDate=1664481741000&amp;cacheVersion=1&amp;api=v2&amp;width=707&amp;height=111" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21.png?version=1&amp;modificationDate=1664481741000&amp;cacheVersion=1&amp;api=v2&amp;width=707&amp;height=111 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21.png?version=1&amp;modificationDate=1664481741000&amp;cacheVersion=1&amp;api=v2&amp;width=707&amp;height=111 1x" height="111" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-2-21_0.png 1x" height="111" /></span>
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0.png?version=1&amp;modificationDate=1664481780000&amp;cacheVersion=1&amp;api=v2&amp;width=559&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0.png?version=1&amp;modificationDate=1664481780000&amp;cacheVersion=1&amp;api=v2&amp;width=638&amp;height=285 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0.png?version=1&amp;modificationDate=1664481780000&amp;cacheVersion=1&amp;api=v2&amp;width=559&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-3-0_0.png 1x" height="250" /></span>
 
 If you would like to watch the steps in video form feel free.
 
@@ -217,17 +217,17 @@ cores to render a gray cube on a gray background.
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32.png?version=1&amp;modificationDate=1664482291000&amp;cacheVersion=1&amp;api=v2&amp;width=800&amp;height=116" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32.png?version=1&amp;modificationDate=1664482291000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=187 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32.png?version=1&amp;modificationDate=1664482291000&amp;cacheVersion=1&amp;api=v2&amp;width=800&amp;height=116 1x" width="800" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-11-32_0.png 1x" width="800" /></span>
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16.png?version=1&amp;modificationDate=1664482336000&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=726" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16.png?version=1&amp;modificationDate=1664482336000&amp;cacheVersion=1&amp;api=v2&amp;width=537&amp;height=780 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16.png?version=1&amp;modificationDate=1664482336000&amp;cacheVersion=1&amp;api=v2&amp;width=500&amp;height=726 1x" width="500" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-12-16_0.png 1x" width="500" /></span>
 
   
 
   
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75989477/image2022-9-29_13-12-41.png?version=1&amp;modificationDate=1664482361000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75989477/image2022-9-29_13-12-41_0.png " class="confluence-embedded-image" /></span>
 
 <table>
 <thead>
@@ -236,9 +236,9 @@ class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.ne
 <p><br />
 </p>
 </div>
-<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1.png?version=1&amp;modificationDate=1664482381000&amp;cacheVersion=1&amp;api=v2&amp;width=411&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1.png?version=1&amp;modificationDate=1664482381000&amp;cacheVersion=1&amp;api=v2&amp;width=822&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1.png?version=1&amp;modificationDate=1664482381000&amp;cacheVersion=1&amp;api=v2&amp;width=411&amp;height=250 1x" height="250" /></span></th>
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-1_0.png 1x" height="250" /></span></th>
 <th><div class="content-wrapper">
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30.png?version=1&amp;modificationDate=1664482410000&amp;cacheVersion=1&amp;api=v2&amp;width=456&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30.png?version=1&amp;modificationDate=1664482410000&amp;cacheVersion=1&amp;api=v2&amp;width=912&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30.png?version=1&amp;modificationDate=1664482410000&amp;cacheVersion=1&amp;api=v2&amp;width=456&amp;height=250 1x" height="250" /></span></p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989477/image2022-9-29_13-13-30_0.png 1x" height="250" /></span></p>
 </div></th>
 </tr>
 </thead>

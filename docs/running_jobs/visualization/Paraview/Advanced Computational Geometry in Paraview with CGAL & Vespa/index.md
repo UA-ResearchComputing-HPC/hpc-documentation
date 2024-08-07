@@ -39,7 +39,7 @@ container to get started.
 <span class="confluence-embedded-file-wrapper conf-macro output-inline"
 data-hasbody="false"
 data-macro-id="d471f096-cf31-47f0-b6b4-9431ed0c6065"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/demo_state.pvsm?version=1&amp;modificationDate=1689381273000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-file"><embed src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989475/demo_state.pvsm?version=1&amp;modificationDate=1689381273000&amp;cacheVersion=1&amp;api=v2&amp;viewType=fileMacro" height="250" /></a></span>
+data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/demo_state.pvsm?version=1" class="confluence-embedded-file"><embed src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989475/demo_state.pvsm?version=1" height="250" /></a></span>
 
   
 
@@ -48,7 +48,7 @@ data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/demo_st
 <span class="confluence-embedded-file-wrapper conf-macro output-inline"
 data-hasbody="false"
 data-macro-id="8ba4d727-39c1-4e14-9536-2d26f083d5b9"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/vespa.mp4?version=1&amp;modificationDate=1689381376000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-file"><embed src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989475/vespa.mp4?version=1&amp;modificationDate=1689381376000&amp;cacheVersion=1&amp;api=v2&amp;viewType=fileMacro" height="400" /></a></span>
+data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/vespa.mp4?version=1" class="confluence-embedded-file"><embed src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989475/vespa.mp4?version=1" height="400" /></a></span>
 
   
 

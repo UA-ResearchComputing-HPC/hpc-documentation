@@ -283,7 +283,7 @@ If you'd like to inspect the code a copy is available here as well.
 <span class="confluence-embedded-file-wrapper conf-macro output-inline"
 data-hasbody="false"
 data-macro-id="50e07129-b0fb-431c-8164-b800aaea6659"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75991780/customlauncher?version=1&amp;modificationDate=1646180779000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-file"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75991780/customlauncher?version=1&amp;modificationDate=1646180779000&amp;cacheVersion=1&amp;api=v2&amp;viewType=fileMacro" height="250" /></a></span>
+data-macro-name="view-file"><a href="/wiki/download/attachments/75991780/customlauncher?version=1" class="confluence-embedded-file"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75991780/customlauncher?version=1" height="250" /></a></span>
 
   
 

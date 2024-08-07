@@ -19,20 +19,20 @@ Go ahead and generate a simple geometry that we are going to use for
 visualizing.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20.png?version=1&amp;modificationDate=1675574845000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=730" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20.png?version=1&amp;modificationDate=1675574845000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=730 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20.png?version=1&amp;modificationDate=1675574845000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=730 1x" width="1500" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png 1x" width="1500" /></span>
 
 Here I'm going with a cone shape selected from the `Sources` drop down
 menu. Make sure to select apply or you won't see your geometry in the
 viewport on the right.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56.png?version=1&amp;modificationDate=1675574938000&amp;cacheVersion=1&amp;api=v2&amp;width=512&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56.png?version=1&amp;modificationDate=1675574938000&amp;cacheVersion=1&amp;api=v2&amp;width=1024&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56.png?version=1&amp;modificationDate=1675574938000&amp;cacheVersion=1&amp;api=v2&amp;width=512&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png 1x" height="250" /></span>
 
 Next, make sure the `animation view `is visible by using the drop down
 menu 
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5.png?version=1&amp;modificationDate=1675575007000&amp;cacheVersion=1&amp;api=v2&amp;width=306&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5.png?version=1&amp;modificationDate=1675575007000&amp;cacheVersion=1&amp;api=v2&amp;width=612&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5.png?version=1&amp;modificationDate=1675575007000&amp;cacheVersion=1&amp;api=v2&amp;width=306&amp;height=400 1x" height="400" /></span>.
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png 1x" height="400" /></span>.
 
 We are going to add an orbit camera animation track which is also talked
 about in greater detail here [ParaView Cameras and
@@ -40,32 +40,32 @@ Keyframes](/wiki/spaces/UAHPC/pages/75989756/ParaView+Cameras+and+Keyframes).
 Don't forget to select the blue cross to add the track.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13.png?version=1&amp;modificationDate=1675575074000&amp;cacheVersion=1&amp;api=v2&amp;width=306&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13.png?version=1&amp;modificationDate=1675575074000&amp;cacheVersion=1&amp;api=v2&amp;width=612&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13.png?version=1&amp;modificationDate=1675575074000&amp;cacheVersion=1&amp;api=v2&amp;width=306&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png 1x" height="400" /></span>
 
 Then double click on the Camera and double click the cell that says
 `Path`.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21.png?version=1&amp;modificationDate=1675575145000&amp;cacheVersion=1&amp;api=v2&amp;width=565&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21.png?version=1&amp;modificationDate=1675575145000&amp;cacheVersion=1&amp;api=v2&amp;width=1130&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21.png?version=1&amp;modificationDate=1675575145000&amp;cacheVersion=1&amp;api=v2&amp;width=565&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png 1x" height="400" /></span>
 
 This opens up a window with another panel, and once you select the
 positions element you will see a yellow line added to the viewport
 containing the cone geometry.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22.png?version=1&amp;modificationDate=1675575327000&amp;cacheVersion=1&amp;api=v2&amp;width=327&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22.png?version=1&amp;modificationDate=1675575327000&amp;cacheVersion=1&amp;api=v2&amp;width=654&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22.png?version=1&amp;modificationDate=1675575327000&amp;cacheVersion=1&amp;api=v2&amp;width=327&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png 1x" height="250" /></span>
 
 Use the middle mouse button to move the track slightly of from the mid
 line of the cone
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9.png?version=1&amp;modificationDate=1675575373000&amp;cacheVersion=1&amp;api=v2&amp;width=327&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9.png?version=1&amp;modificationDate=1675575373000&amp;cacheVersion=1&amp;api=v2&amp;width=654&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9.png?version=1&amp;modificationDate=1675575373000&amp;cacheVersion=1&amp;api=v2&amp;width=327&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png 1x" height="250" /></span>
 
 Then select the `Up Direction` element and make sure that we have 0,0,1
 or the camera will be facing sideways
 
  <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31.png?version=1&amp;modificationDate=1675575453000&amp;cacheVersion=1&amp;api=v2&amp;width=307&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31.png?version=1&amp;modificationDate=1675575453000&amp;cacheVersion=1&amp;api=v2&amp;width=614&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31.png?version=1&amp;modificationDate=1675575453000&amp;cacheVersion=1&amp;api=v2&amp;width=307&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png 1x" height="250" /></span>
 
 Click Ok<span class="legacy-color-text-default">, and return to the
 animation view. On here we are going to set the` number of frames` to
@@ -74,21 +74,21 @@ allowing our parallel tasks to use whole numbers to identify which frame
 to render. </span>
 
 <span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4.png?version=1&amp;modificationDate=1675575606000&amp;cacheVersion=1&amp;api=v2&amp;width=966&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4.png?version=1&amp;modificationDate=1675575606000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=331 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4.png?version=1&amp;modificationDate=1675575606000&amp;cacheVersion=1&amp;api=v2&amp;width=966&amp;height=250 1x" height="250" /></span></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png 1x" height="250" /></span></span>
 
 <span class="legacy-color-text-default">At this point you should be able
 to click the play button and see the camera orbiting around the cone in
 the viewport. </span>
 
 <span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18.png?version=1&amp;modificationDate=1675575741000&amp;cacheVersion=1&amp;api=v2&amp;width=459&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18.png?version=1&amp;modificationDate=1675575741000&amp;cacheVersion=1&amp;api=v2&amp;width=918&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18.png?version=1&amp;modificationDate=1675575741000&amp;cacheVersion=1&amp;api=v2&amp;width=459&amp;height=250 1x" height="250" /></span></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png 1x" height="250" /></span></span>
 
 <span class="legacy-color-text-default">If this looks correct to you
 save the `paraview state file` with the name `cone_orbit.pvsm` with the
 file drop down menu.</span>
 
 <span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54.png?version=1&amp;modificationDate=1675575716000&amp;cacheVersion=1&amp;api=v2&amp;width=270&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54.png?version=1&amp;modificationDate=1675575716000&amp;cacheVersion=1&amp;api=v2&amp;width=540&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54.png?version=1&amp;modificationDate=1675575716000&amp;cacheVersion=1&amp;api=v2&amp;width=270&amp;height=400 1x" height="400" /></span></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png 1x" height="400" /></span></span>
 
 Part two: Slurm Array Batch Parallel Rendering
 ----------------------------------------------
@@ -105,7 +105,7 @@ graphical outputs. The code below is
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3.png?version=1&amp;modificationDate=1675572065000&amp;cacheVersion=1&amp;api=v2&amp;width=1021&amp;height=150" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3.png?version=1&amp;modificationDate=1675572065000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=188 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3.png?version=1&amp;modificationDate=1675572065000&amp;cacheVersion=1&amp;api=v2&amp;width=1021&amp;height=150 1x" height="150" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png 1x" height="150" /></span>
 
  There will probably be more output if you haven't done this container
 pull before since it will need to fetch the individual layers and add
@@ -277,7 +277,7 @@ times are becoming too long.
     sbatch --array=0-900 headless_batch.sh cone_orbit.pvsm
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38.png?version=1&amp;modificationDate=1675573907000&amp;cacheVersion=1&amp;api=v2&amp;width=701&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38.png?version=1&amp;modificationDate=1675573907000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=730 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38.png?version=1&amp;modificationDate=1675573907000&amp;cacheVersion=1&amp;api=v2&amp;width=701&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png 1x" height="400" /></span>
 
 **Before moving on to the next step ensure that all tasks have cleared
 because even one or two missing frames will <span
@@ -291,7 +291,7 @@ HPC](/wiki/spaces/UAHPC/pages/75991780/VisIt+Workflows+on+UA+HPC),
 Rendering](/wiki/spaces/UAHPC/pages/75990901/Blender+Command+Line+Rendering)).
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15.png?version=1&amp;modificationDate=1675574059000&amp;cacheVersion=1&amp;api=v2&amp;width=412&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15.png?version=1&amp;modificationDate=1675574059000&amp;cacheVersion=1&amp;api=v2&amp;width=824&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15.png?version=1&amp;modificationDate=1675574059000&amp;cacheVersion=1&amp;api=v2&amp;width=412&amp;height=250 1x" width="412" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png 1x" width="412" height="250" /></span>
 
 First ensure you have access to ffmpeg:
 

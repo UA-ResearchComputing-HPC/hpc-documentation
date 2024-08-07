@@ -107,7 +107,7 @@ to try to create this video:
 <span class="confluence-embedded-file-wrapper conf-macro output-inline"
 data-hasbody="false"
 data-macro-id="3a188bb6-4845-4852-b4fd-687515c27af3"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75989756/RenderView1_000000.mp4?version=1&amp;modificationDate=1661978383000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-file"><embed src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989756/RenderView1_000000.mp4?version=1&amp;modificationDate=1661978383000&amp;cacheVersion=1&amp;api=v2&amp;viewType=fileMacro" height="250" /></a></span>
+data-macro-name="view-file"><a href="/wiki/download/attachments/75989756/RenderView1_000000.mp4?version=1" class="confluence-embedded-file"><embed src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989756/RenderView1_000000.mp4?version=1" height="250" /></a></span>
 
 The data in the histogram is the magnitude of the displacement vectors
 (displ)

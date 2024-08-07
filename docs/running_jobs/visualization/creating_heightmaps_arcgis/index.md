@@ -32,7 +32,7 @@ start:
 3.  Record the tile labels.
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-7.png?version=1&amp;modificationDate=1650988268000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-7_0.png " class="confluence-embedded-image" /></span>
 
   
   
@@ -58,7 +58,7 @@ to<a href="http://pro.arcgis.com/en/pro-app/tool-reference/conversion/convert-la
 
   
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-21.png?version=1&amp;modificationDate=1650988282000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>  
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-21_0.png " class="confluence-embedded-image" /></span>  
   
 
 **Step Three: Create LAS Dataset**
@@ -70,7 +70,7 @@ for more information.
 
   
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-47.png?version=1&amp;modificationDate=1650988307000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>  
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-47_0.png " class="confluence-embedded-image" /></span>  
   
 
 **Step Four: Dataset to Raster**
@@ -81,7 +81,7 @@ information
 <a href="https://pro.arcgis.com/en/pro-app/2.7/help/analysis/raster-functions/las-dataset-to-raster-function.htm" class="external-link"><span>here</span></a>.
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-58.png?version=1&amp;modificationDate=1650988319000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-58_0.png " class="confluence-embedded-image" /></span>
 
 **Step Five: Project Raster**
 
@@ -99,7 +99,7 @@ projection to stay aligned.
   
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-52-27.png?version=1&amp;modificationDate=1650988347000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-52-27_0.png " class="confluence-embedded-image" /></span>
 
 **Step Six: Raster Calculator**
 
@@ -122,7 +122,7 @@ In the *Raster Calculator*, this will look like
 (“raster” – Lowest Value) / (Highest Value – Lowest Value) \* 65535
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-33.png?version=1&amp;modificationDate=1650988474000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-33_0.png " class="confluence-embedded-image" /></span>
 
 **Step Six: Copy Raster**
 
@@ -131,10 +131,10 @@ Raster* tool. Set the Pixel Type to “16 bit unsigned” and Format to
 “Tiff.” and output to a location on your computer.
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-8.png?version=1&amp;modificationDate=1650988448000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-8_0.png " class="confluence-embedded-image" /></span>
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-53-51.png?version=1&amp;modificationDate=1650988432000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-53-51_0.png " class="confluence-embedded-image" /></span>
 
 **Bonus Step: Open in Photoshop**
 
@@ -144,7 +144,7 @@ access to Photoshop. You can also use photoshop to view your rasters
 pixel size - a needed input for Blender.
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-53.png?version=1&amp;modificationDate=1650988494000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-54-53_0.png " class="confluence-embedded-image" /></span>
 
 **Final Step: Blender**
 

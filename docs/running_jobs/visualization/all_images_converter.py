@@ -9,22 +9,21 @@ step = "markdown_convert"
 if step == "markdown_convert":
     md_files = sorted(Path("./").rglob("*/index.md"))
     # print(md_files)
-    # for mdfile in md_files:
-    mdfile = Path("blender/command_line_rendering/index.md")
-    text = mdfile.read_text()
-    # print(text)
-    cleaned_1 = re.sub(r"\.png\?.*?[\d\s]","_0.png ",text)
-    # now remove the first of &amp sections
-    cleaned_2 = re.sub(r"\&amp\S*?\"","\"",cleaned_1)
-    # remove last amp sections
-    cleaned_3 = re.sub(r"\&amp\S*? ","",cleaned_2)
-    # replace the https:// with ../../all_images path
-    cleaned_4 = re.sub(r"https://","../../all_images/",cleaned_3)
+    for mdfile in md_files:
+        text = mdfile.read_text()
+        # print(text)
+        cleaned_1 = re.sub(r"\.png\?.*?[\d\s]","_0.png ",text)
+        # now remove the first of &amp sections
+        cleaned_2 = re.sub(r"\&amp\S*?\"","\"",cleaned_1)
+        # remove last amp sections
+        cleaned_3 = re.sub(r"\&amp\S*? ","",cleaned_2)
+        # replace the https:// with ../../all_images path
+        cleaned_4 = re.sub(r"https://uarizona","../../all_images/uarizona",cleaned_3)
 
 
-    # cleaned = re.sub(r"\.png\?.*?\"","_0.png\"",text)
-    print(cleaned_4)
-    mdfile.write_text(cleaned_4)
+        # cleaned = re.sub(r"\.png\?.*?\"","_0.png\"",text)
+        print(cleaned_4)
+        mdfile.write_text(cleaned_4)
 elif step == "confluence_convert":
     thumbnails = sorted(Path("all_images/uarizona.atlassian.net/wiki/download/thumbnails").glob("*/*"))
 

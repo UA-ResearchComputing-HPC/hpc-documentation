@@ -88,7 +88,7 @@ computer.
 Once open, close any popups and you will see the default layout
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=2&amp;modificationDate=1656538875000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=402" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=2&amp;modificationDate=1656538875000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=515 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=2&amp;modificationDate=1656538875000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=402 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/1.jpg?version=21x" width="1000" /></span>
 
   
 
@@ -111,7 +111,7 @@ scroll wheel can be used to zoom. The view can be reset at any time with
 the Reset button shown below:
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=3&amp;modificationDate=1656538935000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=78" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=3&amp;modificationDate=1656538935000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=100 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=3&amp;modificationDate=1656538935000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=78 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=3" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=32x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/2.jpg?version=31x" width="1000" /></span>
 
 ### Loading Data
 
@@ -119,13 +119,13 @@ Let’s load some example data into ParaView. Click the “Open” button from
 the toolbar (shown below), go to File → Open, or press Crtl + O.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=2&amp;modificationDate=1656538965000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=59" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=2&amp;modificationDate=1656538965000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=76 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=2&amp;modificationDate=1656538965000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=59 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/3.jpg?version=21x" width="1000" /></span>
 
 On the left side under Favorites, there should be a directory called
 Examples. From that, click can.ex2 and hit OK.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=2&amp;modificationDate=1656538978000&amp;cacheVersion=1&amp;api=v2&amp;width=711&amp;height=427" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=2&amp;modificationDate=1656538978000&amp;cacheVersion=1&amp;api=v2&amp;width=711&amp;height=427 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=2&amp;modificationDate=1656538978000&amp;cacheVersion=1&amp;api=v2&amp;width=711&amp;height=427 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/4.jpg?version=21x" width="1000" /></span>
 
 No data should appear yet but information about the data should appear
 in the properties tab. In this, we can select what information from our
@@ -134,11 +134,11 @@ settings. Press Apply to confirm the settings and you should see the
 example data appear in the view.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=2&amp;modificationDate=1656539006000&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=2&amp;modificationDate=1656539006000&amp;cacheVersion=1&amp;api=v2&amp;width=304&amp;height=433 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=2&amp;modificationDate=1656539006000&amp;cacheVersion=1&amp;api=v2&amp;width=280&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/5.jpg?version=21x" height="400" /></span>
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=75" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=75 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=75 1x" height="93" /></span><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=2&amp;modificationDate=1656539022000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=534" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=2&amp;modificationDate=1656539022000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=684 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=2&amp;modificationDate=1656539022000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=534 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=32x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=31x" height="93" /></span><span
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/6.jpg?version=21x" width="1000" /></span>
 
 ### Changing The Visualization
 
@@ -146,7 +146,7 @@ This visualization can be played with the green play button at the top
 of the screen.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=58" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=75 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3&amp;modificationDate=1656539104000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=58 1x" width="1000" /></span> 
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=3" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=32x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/7.jpg?version=31x" width="1000" /></span> 
 
 Currently, the colors just show the two different shapes. Let’s say we
 want to visualize the acceleration of all the points of the shape. In
@@ -154,7 +154,7 @@ the toolbar, find the drop-down that currently says vtkBlockColors and
 switch it to vel. Play the animation again to visualize the result.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=2&amp;modificationDate=1656539116000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=532" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=2&amp;modificationDate=1656539116000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=681 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=2&amp;modificationDate=1656539116000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=532 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/8.jpg?version=21x" width="1000" /></span>
 
 While this does provide some useful information, it may not be the best
 way of visualizing velocity. Instead, let's add some vectors to see how
@@ -175,7 +175,7 @@ factor until it looks right (0.0005 worked for me).
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=2&amp;modificationDate=1656539139000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=530" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=2&amp;modificationDate=1656539139000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=679 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=2&amp;modificationDate=1656539139000&amp;cacheVersion=1&amp;api=v2&amp;width=1000&amp;height=530 1x" width="1000" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=2" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=22x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/9.jpg?version=21x" width="1000" /></span>
 
 And there you have it! You can play the animation and watch as the
 arrows change with time.
@@ -186,10 +186,10 @@ Later tutorials will work with specific data types as well as other
 features included in ParaView but after this, you should have a base
 understanding of how to navigate the scene and load some basic data.
 
-<a href="https://www.youtube.com/watch?v=Ku9rtS3DHlU&amp;list=PLv0_lKDxKJWjTJx7K98UHB82jbKO0Icqj&amp;index=2" class="external-link">Visualization on HPC</a> youtube video
+<a href="https://www.youtube.com/watch?v=Ku9rtS3DHlU" class="external-link">Visualization on HPC</a> youtube video
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<a href="https://www.youtube.com/watch?v=Ku9rtS3DHlU&amp;list=PLv0_lKDxKJWjTJx7K98UHB82jbKO0Icqj&amp;index=2" class="external-link"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51.png?version=1&amp;modificationDate=1675976752000&amp;cacheVersion=1&amp;api=v2&amp;width=620&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51.png?version=1&amp;modificationDate=1675976752000&amp;cacheVersion=1&amp;api=v2&amp;width=1240&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51.png?version=1&amp;modificationDate=1675976752000&amp;cacheVersion=1&amp;api=v2&amp;width=620&amp;height=400 1x" height="400" /></span></a>
+<a href="https://www.youtube.com/watch?v=Ku9rtS3DHlU" class="external-link"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989684/image2023-2-9_14-5-51_0.png 1x" height="400" /></span></a>
 
   
 
