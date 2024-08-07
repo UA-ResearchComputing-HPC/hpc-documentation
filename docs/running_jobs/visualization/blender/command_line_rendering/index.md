@@ -11,7 +11,7 @@ Roadmap
 * Viewing Your Results
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19.png?version=1&amp;modificationDate=1649797399000&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=183" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19.png?version=1&amp;modificationDate=1649797399000&amp;cacheVersion=1&amp;api=v2&amp;width=1200&amp;height=366 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19.png?version=1&amp;modificationDate=1649797399000&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=183 1x" width="600" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19_0.png"  class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-3-19_0.png 1x" width="600" /></span>
 </div>
 Overview
 ========
@@ -38,21 +38,20 @@ Start up Open On Demand by going to
 or reading up about [OOD within our
 documentation](/wiki/spaces/UAHPC/pages/75990636/Open+On+Demand)
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.png?version=1&amp;modificationDate=1648598775000&amp;cacheVersion=1&amp;api=v2&amp;width=758&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.png?version=1&amp;modificationDate=1648598775000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=675 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.png?version=1&amp;modificationDate=1648598775000&amp;cacheVersion=1&amp;api=v2&amp;width=758&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.pngversion=1modificationDate=1648598775000cacheVersion=1api=v2width=758height=400" class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.pngversion=1modificationDate=1648598775000cacheVersion=1api=v2width=1280height=675 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-14.pngversion=1modificationDate=1648598775000cacheVersion=1api=v2width=758height=400 1x" height="400" /></span>
 
 Enter details of your request. Here we are requesting a 5 hour 16 core
 interactive session on elgato. Important to note that your own PI Group
 must be entered instead of `visteam` 
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43.png?version=1&amp;modificationDate=1648598804000&amp;cacheVersion=1&amp;api=v2&amp;width=461&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43.png?version=1&amp;modificationDate=1648598804000&amp;cacheVersion=1&amp;api=v2&amp;width=922&amp;height=800 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43.png?version=1&amp;modificationDate=1648598804000&amp;cacheVersion=1&amp;api=v2&amp;width=461&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-6-43_0.png 1x" height="400" /></span>
 
 when the request clears the allocation queue you will be able to launch
 your interactive desktop
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12.png?version=1&amp;modificationDate=1648598833000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=357" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12.png?version=1&amp;modificationDate=1648598833000&amp;cacheVersion=1&amp;api=v2&amp;width=1250&amp;height=638 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12.png?version=1&amp;modificationDate=1648598833000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=357 1x" width="700" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-7-12_0.png 1x" width="700" /></span>
 
 ------------------------------------------------------------------------
 
@@ -65,29 +64,29 @@ rendering python script
 At the remote desktop start screen open a terminal
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29.png?version=1&amp;modificationDate=1649798490000&amp;cacheVersion=1&amp;api=v2&amp;width=476&amp;height=244" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29.png?version=1&amp;modificationDate=1649798490000&amp;cacheVersion=1&amp;api=v2&amp;width=952&amp;height=488 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29.png?version=1&amp;modificationDate=1649798490000&amp;cacheVersion=1&amp;api=v2&amp;width=476&amp;height=244 1x" width="476" /></span><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14.png?version=1&amp;modificationDate=1649798535000&amp;cacheVersion=1&amp;api=v2&amp;width=335&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14.png?version=1&amp;modificationDate=1649798535000&amp;cacheVersion=1&amp;api=v2&amp;width=670&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14.png?version=1&amp;modificationDate=1649798535000&amp;cacheVersion=1&amp;api=v2&amp;width=335&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-21-29_0.png 1x" width="476" /></span><span
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-22-14_0.png 1x" height="250" /></span>
 
 Navigate to an existing folder where you have space
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41.png?version=1&amp;modificationDate=1649798621000&amp;cacheVersion=1&amp;api=v2&amp;width=637&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41.png?version=1&amp;modificationDate=1649798621000&amp;cacheVersion=1&amp;api=v2&amp;width=994&amp;height=624 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41.png?version=1&amp;modificationDate=1649798621000&amp;cacheVersion=1&amp;api=v2&amp;width=637&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-23-41_0.png 1x" height="400" /></span>
 
 Download blender with this `wget`  command from their clarkson mirror
 
-    wget "https://mirror.clarkson.edu/blender/release/Blender2.93/blender-2.93.8-linux-x64.tar.xz"
+    wget "../../all_images/mirror.clarkson.edu/blender/release/Blender2.93/blender-2.93.8-linux-x64.tar.xz"
 
  This lets us download the Long Term Support version of blender from
 their homepage
-<a href="https://www.blender.org/download/lts/2-93/" class="external-link">https://www.blender.org/download/lts/2-93/</a>
+<a href="../../all_images/www.blender.org/download/lts/2-93/" class="external-link">../../all_images/www.blender.org/download/lts/2-93/</a>
 
 Also make sure to uncompress the `tar.xz`  at the end using this command
 
     tar -xf blender-2.93.8-linux-x64.tar.xz
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8.png?version=1&amp;modificationDate=1649799008000&amp;cacheVersion=1&amp;api=v2&amp;width=641&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8.png?version=1&amp;modificationDate=1649799008000&amp;cacheVersion=1&amp;api=v2&amp;width=986&amp;height=615 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8.png?version=1&amp;modificationDate=1649799008000&amp;cacheVersion=1&amp;api=v2&amp;width=641&amp;height=400 1x" height="400" /></span><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9.png?version=1&amp;modificationDate=1649801230000&amp;cacheVersion=1&amp;api=v2&amp;width=497&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9.png?version=1&amp;modificationDate=1649801230000&amp;cacheVersion=1&amp;api=v2&amp;width=981&amp;height=493 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9.png?version=1&amp;modificationDate=1649801230000&amp;cacheVersion=1&amp;api=v2&amp;width=497&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_14-30-8_0.png 1x" height="400" /></span><span
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-4-12_15-7-9_0.png 1x" height="250" /></span>
 
 Here is the code that we will put into the `render.py`  file  
 
@@ -137,7 +136,7 @@ heightmap in a tiff format which is why we see messages like
 are doing a similar task.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31.png?version=1&amp;modificationDate=1648599032000&amp;cacheVersion=1&amp;api=v2&amp;width=571&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31.png?version=1&amp;modificationDate=1648599032000&amp;cacheVersion=1&amp;api=v2&amp;width=1044&amp;height=457 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31.png?version=1&amp;modificationDate=1648599032000&amp;cacheVersion=1&amp;api=v2&amp;width=571&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-10-31_0.png 1x" height="250" /></span>
 
 This output shows the initialization of other blender systems that may
 or may not be part of the rendering that you are doing. Unused systems
@@ -147,7 +146,7 @@ listed for diagnostic purposes it seems.
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4.png?version=1&amp;modificationDate=1648599065000&amp;cacheVersion=1&amp;api=v2&amp;width=419&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4.png?version=1&amp;modificationDate=1648599065000&amp;cacheVersion=1&amp;api=v2&amp;width=838&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4.png?version=1&amp;modificationDate=1648599065000&amp;cacheVersion=1&amp;api=v2&amp;width=419&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-4_0.png 1x" height="250" /></span>
 
 Once the initialization has completed the individual tiles of the larger
 image will begin rendering. This is where the massive multicore
@@ -158,25 +157,25 @@ of them running at the same time.
   
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26.png?version=1&amp;modificationDate=1648599086000&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=41" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26.png?version=1&amp;modificationDate=1648599086000&amp;cacheVersion=1&amp;api=v2&amp;width=1054&amp;height=73 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26.png?version=1&amp;modificationDate=1648599086000&amp;cacheVersion=1&amp;api=v2&amp;width=600&amp;height=41 1x" width="600" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-26_0.png 1x" width="600" /></span>
 
 There is also a time estimate which is usually an over estimate for the
 full duration of the rendering task.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45.png?version=1&amp;modificationDate=1648599106000&amp;cacheVersion=1&amp;api=v2&amp;width=614&amp;height=400" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45.png?version=1&amp;modificationDate=1648599106000&amp;cacheVersion=1&amp;api=v2&amp;width=1060&amp;height=690 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45.png?version=1&amp;modificationDate=1648599106000&amp;cacheVersion=1&amp;api=v2&amp;width=614&amp;height=400 1x" height="400" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-11-45_0.png 1x" height="400" /></span>
 
 If you want to make sure that all the cpu cores you have allocated are
 in use use the `htop -u <username>`  in a new terminal tab.
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12.png?version=1&amp;modificationDate=1648599133000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=350" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12.png?version=1&amp;modificationDate=1648599133000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=640 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12.png?version=1&amp;modificationDate=1648599133000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=350 1x" width="700" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-12_0.png 1x" width="700" /></span>
 
 When the process completes you will see blender quit after saving out an
 image to the folder you specify
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43.png?version=1&amp;modificationDate=1648599164000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=330" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43.png?version=1&amp;modificationDate=1648599164000&amp;cacheVersion=1&amp;api=v2&amp;width=1280&amp;height=604 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43.png?version=1&amp;modificationDate=1648599164000&amp;cacheVersion=1&amp;api=v2&amp;width=700&amp;height=330 1x" width="700" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-12-43_0.png 1x" width="700" /></span>
 
 ------------------------------------------------------------------------
 
@@ -186,10 +185,10 @@ Viewing Your Results
 This is a view of the image produced by the workflow
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41.png?version=1&amp;modificationDate=1648599222000&amp;cacheVersion=1&amp;api=v2&amp;width=547&amp;height=250" class="confluence-embedded-image" srcset="https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41.png?version=1&amp;modificationDate=1648599222000&amp;cacheVersion=1&amp;api=v2&amp;width=1094&amp;height=500 2x, https://uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41.png?version=1&amp;modificationDate=1648599222000&amp;cacheVersion=1&amp;api=v2&amp;width=547&amp;height=250 1x" height="250" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75990901/image2022-3-29_17-13-41_0.png 1x" height="250" /></span>
 
 <span
-class="confluence-embedded-file-wrapper"><img src="https://uarizona.atlassian.net/wiki/download/attachments/75990901/image2022-3-29_17-13-7.png?version=1&amp;modificationDate=1648599188000&amp;cacheVersion=1&amp;api=v2" class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990901/image2022-3-29_17-13-7_0.png " class="confluence-embedded-image" /></span>
 
 <span id="confluence-server-performance"
 style="display:none;">{"serverDuration": 21, "requestCorrelationId":
