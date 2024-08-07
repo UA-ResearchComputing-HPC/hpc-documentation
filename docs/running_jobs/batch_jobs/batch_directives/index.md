@@ -105,8 +105,11 @@ To request a high memory node, you will need the additional flag ```--constraint
 
 ## GPUs
 
-!!! tip "New GPU Partitions"
-    Beginning July 31, GPU jobs will need to use GPU-specific partitions. See the [partitions section](#allocations-and-partitions) at the top of this page for details. 
+!!! info "GPU partitions must be used"
+    GPU jobs will need to use GPU-specific partitions. See the [partitions section](#allocations-and-partitions) at the top of this page for details. 
+
+!!! warning "GPU options are per node"
+    When using `--gres=gpu:N`, keep in mind that the total number of GPUs the job is allocated `N` is per node. 
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
 
@@ -135,13 +138,9 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
     <td>Request <code>N</code> V100 GPUs where 1&le;<code>N</code>&le;4</td>
   </tr>
   <tr>
-    <td rowspan=2  style="vertical-align: middle;">Ocelote</td>
-    <td><pre><code>#SBATCH --gres=gpu:1<br>#SBATCH --mem-per-cpu=8gb</code></pre></td>
-    <td>Request one GPU. This will target either a Pascal (p100) or Volta (v100)</td>
-  </tr>
-  </tr>
-    <td><pre><code>#SBATCH --gres=gpu:2<br>#SBATCH --mem-per-cpu=6gb</code></pre></td>
-    <td>Request two Pascal (p100) GPUs</td>
+    <td rowspan=1  style="vertical-align: middle;">Ocelote</td>
+    <td><pre><code>#SBATCH --gres=gpu:N<br>#SBATCH --mem-per-cpu=8gb</code></pre></td>
+    <td>Request <code>N</code> GPUs, where 1&le;<code>N</code>&le;2. This will target either one or two Pascals (p100s)</td>
   </tr>
 </table>
 
