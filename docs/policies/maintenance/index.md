@@ -38,15 +38,35 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
     <p>
     <b>Type</b>: Rolling Maintenance
 
-    <li>
-    <a href="../../running_jobs/open_on_demand/">OnDemand graphical jobs</a> limited to four days to support general resource availability.
-    </li>
-    <li>
-    <a href="https://portal.hpc.arizona.edu/">User portal</a> upgraded to support mobile clients. 
-    </li>
-    <li>
-    <a href="../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions">New GPU partitions</a> introduced to improve GPU resource availability.
-    </li>
+    <li><a href="../../running_jobs/open_on_demand/">OnDemand graphical jobs</a> limited to four days to support general resource availability.</li>
+    <li><a href="https://portal.hpc.arizona.edu/">User portal</a> upgraded to support mobile clients. </li>
+    <li><a href="../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions">New GPU partitions</a> introduced to improve GPU resource availability.</li>
+    </p>
+  </div>
+
+  <button class="collapsible">April 24, 2024</button>
+  <div class="content">
+    <p>
+    <b>Type</b>: Rolling Maintenance
+
+    <li>OnDemand Upgrade.</li>
+    <li>Gatekeeper moved to EL8 operating system.</li>
+    <li>Enabled job script storage in slurm accounting.</li>
+    </p>
+  </div>
+
+
+    <button class="collapsible">January 31, 2024</button>
+  <div class="content">
+    <p>
+    <b>Type</b>: Rolling Maintenance
+
+    <li>General operating system patches.</li>
+    <li>Qumulo storage array update.</li>
+    <li>Slurm configuration improvements.</li>
+    <li>Metrics (XDMOD) OS upgrade.</li>
+    <li>RStudio Server support for R version 4.3.2.</li>
+    <li>OnDemand OS upgrades.</li>
     </p>
   </div>
   <script src="../../../assets/javascripts/animated_dropdown.js"></script>
