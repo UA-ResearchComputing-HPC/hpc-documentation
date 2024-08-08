@@ -109,7 +109,7 @@ To request a high memory node, you will need the additional flag ```--constraint
     GPU jobs will need to use GPU-specific partitions. See the [partitions section](#allocations-and-partitions) at the top of this page for details. 
 
 !!! warning "GPU options are per node"
-    When using `--gres=gpu:N`, keep in mind that the total number of GPUs the job is allocated `N` is per node. 
+    When using `--gres=gpu:N`, keep in mind that the total number of GPUs the job is allocated is `N` per node. 
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
 
