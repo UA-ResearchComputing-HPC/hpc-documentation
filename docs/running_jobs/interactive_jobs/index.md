@@ -65,6 +65,10 @@ If ```interactive``` is insufficient to meet your resource requirements (e.g., i
 
 The command ```salloc``` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using ```salloc```, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
 
+!!! info "GPU Partitions"
+	
+	New GPU partitions were added in the Summer 2024 maintenance cycle, which affects requests for interactive sessions via the ```salloc``` command when requesting GPU resources. See [batch directives](https://hpcdocs.hpc.arizona.edu/running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for details on the new partitions.
+
 **Single CPU Example**
 
 ```
@@ -78,10 +82,10 @@ salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=16 --time=
 
 **Multi-GPU Example (Puma)**
 ```
-salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=multi-gpu --gres=gpu:volta:2
+salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=multi-gpu --gres=gpu:volta:2
 ```
 
 **GPU MIG Slice Example**
 ```
-salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb
+salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb
 ```
