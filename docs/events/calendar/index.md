@@ -13,110 +13,38 @@ Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">15</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/intro_to_hpc/">Intro to HPC</a></h3>
-        <p>10:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
+We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon. Workshop location will be listed here when we receive confirmation. The registration button below will allow you to register for any/all of the workshops listed below. 
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">16</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/intro_to_machine_learning/python/">Intro to ML with Python</a></h3>
-        <p>10:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
+<center>[Register](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform?usp=sf_link){ .md-button }</center>
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">17</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/">Intro to Parallel</a></h3>
-        <p>10:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">18</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/">Statistics with Matlab</a></h3>
-        <p>10:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
+### Fall 2024 Workshop Schedule
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">18</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/intro_to_containers/">Intro to Containers</a></h3>
-        <p>11:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
-
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">19</div>
-        <div class="date-month">Jul</div>
-    </div>
-    <div class="event-details">
-        <h3><a href="../workshop_materials/">Intro to Visualization</a></h3>
-        <p>10:00am &#x25cf Online via Zoom</p>
-    </div>
-    <div class="event-registration">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdpYbAHEiErtD16B17w2JUfw5smtXEYap6lfZ6VOCOYA8bYw/viewform?usp=sf_link"> <button class="register-button">Register</button></a>
-    </div>
-</div>
+| Date | Topic | Instructor |
+| - | - | - |
+|Sep 6  | HPC Overview and Access | Ethan Jahn |
+|Sep 13 | Storage and Software Overview | Ethan Jahn |
+|Sep 20 | Scheduling and Running Jobs | Ethan Jahn |
+|Sep 27 | Managing and Optimizing Jobs | Ethan Jahn |
+|Oct 4  | Parallel Computing Theory | Ethan Jahn |
+|Oct 11 | Parallel Computing in Practice | Soham Pal |
+|Oct 18 | Software and Environments | Soham Pal |
+|Oct 25 | Error Handling and Debugging | Ethan Jahn |
+|Nov 1  | Intro to Containers | Soham Pal |
+|Nov 8  | Machine Learning on HPC | Soham Pal |
+|Nov 15 | Intro to Statistics | Chris Reidy |
+|Nov 22 | Using GPUs on HPC | Soham Pal |
+|Dec 6  | Intro to Visualization | Devin Bayly |
+|Dec 13 | Intermediate Techniques in Visualizatixon | Devin Bayly |
 
 ## Our Friends and Partners
 
 ### Upcoming Events
 
-<!-- ??? example "No listed events. Check back later."
-    *If you have an event that you would like us to display here, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=8c4aa2761b1df0107947edf1604bcbd0&sysparm_category=84d3d1acdbc8f4109627d90d6896191f)!* -->
+??? example "No listed events. Check back later."
+    *If you have an event that you would like us to display here, please let us know!*
 
-<div class="event-card">
-    <div class="event-date">
-        <div class="date-number">25</div>
-        <div class="date-month">Jul</div>
-    </div>
-        <div class="event-details">
-            <h3><a href="images/MATLAB_Python_Workshop_flyer.pdf">Amplifying the Impact of Your Projects with Computational Notebooks, MATLAB, and Python</a></h3>
-            <p>1:30pm &#x25cf Main Library B252</p>
-        </div>
-        <div class="event-registration">
-            <a href="https://libcal.library.arizona.edu/event/12679438"> <button class="register-button">Register</button></a>
-        </div>
-</div>
+
 
 ### External Event Pages
 
