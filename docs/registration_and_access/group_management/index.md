@@ -73,6 +73,16 @@ PI: parent_1206 Total time: 7000:00:00
     
 If you are a faculty member and are teaching a course that makes use of HPC resources, you can create a class group that will grant your students system access. Class groups are designed to be created and used for one semester only.
 
+### Class Group Restrictions
+
+Due to Arizona sales tax restrictions {==class groups are restricted to the Ocelote cluster and cannot use Puma or El Gato==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
+
+```bash
+#SBATCH --account=hpc101
+#SBATCH --partition=standard
+```
+Class group members may also use the Windfall partition on Ocelote. 
+
 ### Creating a Class Group
 
 Log into your [user portal](https://portal.hpc.arizona.edu/), navigate to the **Groups** tab, and select the **Add New Group** dropdown option at the top of the page.There will be an option to specify your **Group Type**. Choose **classGroup** from the dropdown menu. Then under **Group Name** enter the name of your group. Finally, click :material-account-multiple-plus: to complete the process. 
@@ -88,13 +98,13 @@ Once this process is complete, you can find your group's dropdown under the **Gr
 Students in your class group will only be able to access files and directories owned by the class group. This means they will not be able to access files and directories owned by your standard research group. 
 
 ### Running Jobs and Allocations
-Due to Arizona sales tax restrictions, {==class groups may only use the windfall queue on Puma==}. However, {==standard hours may be used by students on Ocelote==}. To submit standard jobs on Ocelote, students will use the class group's name for the ```--account``` Slurm directive. For example:
+Due to Arizona sales tax restrictions {==class groups may only use the Ocelote cluster==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
 
 ```bash
 #SBATCH --account=hpc101
 #SBATCH --partition=standard
 ```
-Standard hours used on Ocelote are pulled from the same pool as your research group so make sure to plan accordingly. If you run the command ```va```, you will see the class group as being nested under the total time allocated to your primary research group as well as any others you may have created. Students will not see the names of your other research groups if they run va unless they are members. 
+Standard hours used on Ocelote are pulled from the same pool as your research group so make sure to plan accordingly. If a student runs the command ```va```, they will see the class group as being nested under the total time allocated to your primary research group as well as any others you may have created. Students will not see the names of your other research groups if they run `va` unless they are members. 
 
 ```bash
 (ocelote) [faculty_netid@wentletrap ~]$ va
