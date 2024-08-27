@@ -50,7 +50,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
     === "Linux"
         !!! warning "No ```sudo``` on HPC"
-            Do not attempt to run ```sudo``` commands on HPC, these are only meant for your personal Linux machines. To transfer data between R-DAS and HPC see [Access from HPC](#access-from-hpc).
+            Do not attempt to run ```sudo``` commands on HPC, these are only meant for your personal Linux machines. To transfer data between R-DAS and HPC see [Transfer data between R-DAS and HPC storage](#transfer-data-between-r-das-and-hpc-storage).
             
         First, install the necessary software packages to access your allocation
         
