@@ -138,6 +138,14 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
+-   :material-chair-school:{ .lg .middle } __Fall Semester Workshops__
+
+    ---
+    
+    This Fall semester we are conducting the workshops in a different manner.  Rather than compress them into a week, there will be one each Friday at 11am.  We plan to use a hybrid modality – you can attend in person which provides greater opportunity to engage; or attend virtually by Zoom. In person sessions will be held in Weaver Science and Engineering Library Rm 212. There will be a recorded version made available on YouTube.
+
+    <center>[Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform) :fontawesome-solid-hippo: [Calendar](./events/calendar/) </center>
+
 -   :material-alert-decagram:{ .lg .middle } __July 2024 Maintenance__
 
     ---
@@ -160,11 +168,6 @@ These resources specifically do not support Regulated Research, which might be I
 
 
 
--   :material-expansion-card:{ .lg .middle } __New MIG Resources__
-
-    ---
-
-    MIG resources entered the queues on Feb 26, 2024. The 12 MIG GPUs will increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory. Note: some batch scripts will need updates to work properly. [More information here](./resources/compute_resources/).
 
 
 
