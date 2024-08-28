@@ -2,7 +2,7 @@
 
 # HPC Workshops and Training Materials
 
-This page contains a catalogue of our previous training materials. Feel free to browse, interact, download, and share as you see fit. See our [Calendar](../calendar) for upcoming virtual or in-person workshop events. 
+This page contains a catalogue of our previous training materials. Feel free to browse, interact, download, and share as you see fit. See our [Calendar](../calendar/) for upcoming virtual or in-person workshop events. 
 
 
 <div class="grid cards" markdown>

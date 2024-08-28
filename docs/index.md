@@ -179,7 +179,7 @@ These resources specifically do not support Regulated Research, which might be I
 
 Published research that utilized UArizona HPC resources should follow our [guidelines](./policies/acknowledgements/) on how to acknowledge us. 
 
-If you wish for your research to be featured in our [Results](./results) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
+If you wish for your research to be featured in our [Results](./results/) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
 
 
 ----

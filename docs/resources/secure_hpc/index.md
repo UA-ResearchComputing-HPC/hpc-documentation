@@ -76,7 +76,7 @@ This small cluster has four standard compute nodes. Each has 94 cores and 470 GB
 
 ## Compute Time Allocations
 
-All PI groups will receive a time allocation of 100,000 CPU hours per month. For general information on time allocations and charging, see our [Allocations documentation](../allocations "Learn about allocations and job charging")
+All PI groups will receive a time allocation of 100,000 CPU hours per month. For general information on time allocations and charging, see our [Allocations documentation](../allocations/ "Learn about allocations and job charging")
 
 
 ## Storage

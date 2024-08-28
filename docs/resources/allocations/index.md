@@ -12,11 +12,11 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
 
 !!! Warning "High Priority"
 
-    Please note that the High Priority partition is only available to PI groups who participated in the [buy-in process](/policies/buy_in) for Puma. PIs will be notified when another buy-in session is available
+    Please note that the High Priority partition is only available to PI groups who participated in the [buy-in process](../../policies/buy_in/) for Puma. PIs will be notified when another buy-in session is available
 
 !!! Example "Qualified Hours"
 
-    Qualified Hours are only available to groups which have been awarded a special project. See [Policies](/policies/special_projects/ "special projects") for information on how to apply. 
+    Qualified Hours are only available to groups which have been awarded a special project. See [Policies](../../policies/special_projects/ "special projects") for information on how to apply. 
 
 === "Standard"
     Every group receives a free allocation of standard hours that refreshes on the first day of each month. 
@@ -127,7 +127,7 @@ Allocations are refreshed on the first day of each month. Unused hours from the 
 
 ## How to Find Your Remaining Allocation
 
-To view your allocation's used, unused, and [encumbered hours](/support_and_training/glossary/ "For information on terminology, see our glossary"), use the command ```va``` (short for "view allocation") in a terminal. For example:
+To view your allocation's used, unused, and [encumbered hours](../../support_and_training/glossary/ "For information on terminology, see our glossary"), use the command ```va``` (short for "view allocation") in a terminal. For example:
 ```bash
 (elgato) [user@gpu5 ~]$ va
 Windfall: Unlimited
