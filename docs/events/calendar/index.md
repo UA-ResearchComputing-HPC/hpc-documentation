@@ -13,7 +13,7 @@ Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon. Workshop location will be listed here when we receive confirmation. The registration button below will allow you to register for any/all of the workshops listed below. 
+We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon. Workshop location will be listed here when we receive confirmation. The registration button below will allow you to register for any/all of the workshops listed below. Please note that you will need to be logged into your University of Arizona account in order to access the registration form.
 
 <center>[Register](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform?usp=sf_link){ .md-button }</center>
 
@@ -29,13 +29,13 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 |Oct 4  | Parallel Computing Theory | Ethan Jahn |
 |Oct 11 | Parallel Computing in Practice | Soham Pal |
 |Oct 18 | Software and Environments | Soham Pal |
-|Oct 25 | Error Handling and Debugging | Ethan Jahn |
+|Oct 25 | Machine Learning on HPC | Soham Pal |
 |Nov 1  | Intro to Containers | Soham Pal |
-|Nov 8  | Machine Learning on HPC | Soham Pal |
+|Nov 8  | Error Handling and Debugging | Ethan Jahn |
 |Nov 15 | Intro to Statistics | Chris Reidy |
 |Nov 22 | Using GPUs on HPC | Soham Pal |
 |Dec 6  | Intro to Visualization | Devin Bayly |
-|Dec 13 | Intermediate Techniques in Visualizatixon | Devin Bayly |
+|Dec 13 | Intermediate Techniques in Visualization | Devin Bayly |
 
 ## Our Friends and Partners
 
