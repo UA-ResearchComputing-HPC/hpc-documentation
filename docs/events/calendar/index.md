@@ -7,19 +7,43 @@ title: UArizona HPC Events Calendar
 
 <img class="img-right" src="images/az_calendar.png" title="Desert calendar illustration" alt="cactus" width="200">
 
-Every semester, [we host training workshops](../workshops/intro_to_hpc/) on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
+Every semester, [we host training workshops](../workshop_materials/) on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
 
 Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-!!! example "No listed events. Check back later."
+We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon. Workshop location will be listed here when we receive confirmation. The registration button below will allow you to register for any/all of the workshops listed below. Please note that you will need to be logged into your University of Arizona account in order to access the registration form.
+
+<center>[Register](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform?usp=sf_link){ .md-button }</center>
+
+
+### Fall 2024 Workshop Schedule
+
+| Date | Topic | Instructor |
+| - | - | - |
+|Sep 6  | HPC Overview and Access | Ethan Jahn |
+|Sep 13 | Storage and Software Overview | Ethan Jahn |
+|Sep 20 | Scheduling and Running Jobs | Ethan Jahn |
+|Sep 27 | Managing and Optimizing Jobs | Ethan Jahn |
+|Oct 4  | Parallel Computing Theory | Ethan Jahn |
+|Oct 11 | Parallel Computing in Practice | Soham Pal |
+|Oct 18 | Software and Environments | Soham Pal |
+|Oct 25 | Machine Learning on HPC | Soham Pal |
+|Nov 1  | Intro to Containers | Soham Pal |
+|Nov 8  | Error Handling and Debugging | Ethan Jahn |
+|Nov 15 | Intro to Statistics | Chris Reidy |
+|Nov 22 | Using GPUs on HPC | Soham Pal |
+|Dec 6  | Intro to Visualization | Devin Bayly |
+|Dec 13 | Intermediate Techniques in Visualization | Devin Bayly |
 
 ## Our Friends and Partners
 
 ### Upcoming Events
 
-!!! example "No listed events. Check back later."
+??? example "No listed events. Check back later."
+    *If you have an event that you would like us to display here, please let us know!*
+
 
 
 ### External Event Pages

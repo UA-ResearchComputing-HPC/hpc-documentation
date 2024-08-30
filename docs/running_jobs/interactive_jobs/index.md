@@ -54,7 +54,7 @@ The values shown in the output can be combined and each mean the following:
 |```-N```|Total number of nodes (physical computers) to allocate to your job|```-N 2```|
 |```-m```|Total amount of memory {==per CPU==}. See [CPUs and Memory](../cpus_and_memory/) for more information and potential complications|```-m 5gb```|
 |```-Q```|Used to access {==high priority or qualified hours==}. Only for groups with [buy-in/special project hours](../../resources/allocations/)|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
-|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use `salloc` directly using [GPU batch directives](../batch_jobs/batch_directives/#gpus)|```-q```|
+|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use `salloc` directly using [GPU batch directives](../batch_jobs/batch_directives/#gpus)|```-g```|
 |```-x```|Enable [X11 forwarding](/registration_and_access/system_access/#x11-forwarding). This flag takes no arguments.|```-x```|
 
 You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) commands using any desired Slurm directives for maximum customization.
@@ -64,6 +64,10 @@ You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) com
 If ```interactive``` is insufficient to meet your resource requirements (e.g., if you need to request more than one GPU or a GPU MIG slice), you can use the Slurm command ```salloc``` to further customize your job. 
 
 The command ```salloc``` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using ```salloc```, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
+
+!!! info "GPU Partitions"
+	
+	New GPU partitions were added in the Summer 2024 maintenance cycle, which affects requests for interactive sessions via the ```salloc``` command when requesting GPU resources. See [batch directives](https://hpcdocs.hpc.arizona.edu/running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for details on the new partitions.
 
 **Single CPU Example**
 
@@ -78,10 +82,10 @@ salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=16 --time=
 
 **Multi-GPU Example (Puma)**
 ```
-salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=multi-gpu --gres=gpu:volta:2
+salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=multi-gpu --gres=gpu:volta:2
 ```
 
 **GPU MIG Slice Example**
 ```
-salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb
+salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb
 ```

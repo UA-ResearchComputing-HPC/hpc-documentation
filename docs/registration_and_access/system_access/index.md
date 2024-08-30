@@ -31,7 +31,7 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
         
     2. A form will appear where you will select the target cluster, enter the amount of time you'd like to be allotted (in hours), the number of cores you need, your PI Group (if you are unsure what your group name is, you can check in [https://portal.hpc.arizona.edu/portal/](https://portal.hpc.arizona.edu/portal/)), and the queue. Once you've filled in your request, click Launch.
         
-        <img src="images/desktop_form.jpg" width="700" title="OnDemand Desktop form" />
+        <img src="images/desktop-form.png" width="700" title="OnDemand Desktop form" />
         
     3. A window will appear with the status of your request. It will start in a Pending state and will switch to Running when your desktop session is ready. Click Launch Interactive Desktop to access your session.
         
@@ -191,6 +191,54 @@ If it comes back blank, X11 forwarding is not enabled.
         ```bash
         shell -X
         ```
+    
+Once you're connected to the login nodes, you'll need to include an X11 forwarding flag when you start an [interactive session](../../running_jobs/interactive_jobs/). When using the `interactive` command, use the flag `-x`. When using `salloc` directly, use `--x11`.
+
+
+### Port Forwarding
+Port forwarding is a technique used to redirect network traffic from one network address and port number to another. In the context of HPC systems, port forwarding allows users to access remote resources or services that are not directly accessible due to network configurations.
+
+Common use cases for port forwarding include accessing remote desktops, running graphical applications, or accessing web-based interfaces of applications. Some examples of this might include using Jupyter Lab or a containerized RStudio instance. 
+
+The steps to set up port forwarding are the following:
+
+1. **Start a job**
+
+    This can either be done using an [interactive session](../../running_jobs/interactive_jobs/) or an [Open OnDemand job](../../running_jobs/open_on_demand/) (e.g. an interactive desktop session). Once your job starts, make note of the node name. For example, in an interactive session, you can use the command `hostname`
+
+    ```
+    (elgato) [user@wentletrap ~]$ interactive -a hpcteam -t 5:00:00
+    [user@cpu37 ~]$ hostname
+    cpu37.elgato.hpc.arizona.edu
+    ```
+
+2. **Connect to the HPC VPN**
+
+    [The HPC VPN](../vpn/) can be used with Cisco AnyConnect using `vpn.hpc.arizona.edu`. This is different from the standard university VPN and will allow you to connect directly to a compute node, bypassing the bastion and login nodes. 
+
+    !!! warning "Use the HPC VPN"
+
+        Note that it's always safer and more efficient to connect directly to your compute node rather than tunneling through the bastion and login nodes. If you tunnel through the bastion/login nodes, you may inadvertently use the same port as another user causing unwanted interference. Additionally, tunneling will result in reduced performance.
+
+3. **SSH to your compute node**
+
+    Once you're connected to the HPC VPN, ssh into your compute node with the additional arguments `-L <port>:localhost:<port>` where `<port>` is the port you want to use. For example:
+
+    ```
+    ssh -L 1234:localhost:1234 user@cpu37.elgato.hpc.arizona.edu
+    ```
+4. **Start your application and launch it in a web browser**
+
+    In your new terminal window, start your application, specifying the port number. For example:
+
+    ```
+    [user@cpu37 ~]$ jupyter lab --port 1234
+    ```
+
+    Your application should give you a URL that you can then use to access your session in a local web browser. 
+
+    <img src="images/jlab-port-forwarding.png" title="Jupyter lab with port forwarding" alt="jlab-port" width="800"/>
+
 
 ### SSH Keys
 #### Why Use SSH Keys?

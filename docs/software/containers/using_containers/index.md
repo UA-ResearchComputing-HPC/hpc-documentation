@@ -42,7 +42,7 @@ apptainer exec app.sif <commands>
 For example:
 
 ```
-singularity exec /contrib/singularity/nvidia/nvidia-tensorflow-2.6.0.sif python3 script.py
+apptainer exec /contrib/singularity/nvidia/nvidia-tensorflow-2.6.0.sif python3 script.py
 ```
 
 ## Using Apptainer Applications Interactively

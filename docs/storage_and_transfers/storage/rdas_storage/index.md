@@ -29,19 +29,15 @@ PIs can request an allocation on R-DAS from [https://portal.hpc.arizona.edu/port
 1. Go to the **Storage** tab
 2. Select **Create Shared Desktop Storage** under **Research Desktop Storage**
 
-    <img src="images/create-rdas-storage.png" title="Request R-DAS allocation" style="width:400px; box-shadow: 5px 5px 5px #999;">
+    <img src="images/create-rdas-storage.png" title="Request R-DAS allocation" style="width:700px; box-shadow: 5px 5px 5px #999;">
     
-3. Select **Create** from the window that opens. 
+3. Select **Open Submission Form :material-send:** from the window that opens. This will open the MOU agreement. Review it and, if it is acceptable to you, select **Submit Request :material-send:**. Note: you must scroll to the bottom of the MOU agreement to be able to submit the request. 
       
-    <img src="images/select-create.png" title="Create R-DAS allocation" style="width:400px; box-shadow: 5px 5px 5px #999;">
+    <img src="images/select-create.png" title="Create R-DAS allocation" style="width:700px; box-shadow: 5px 5px 5px #999;">
     
-4. A window will open with the MOU agreement. Review it and, if it is acceptable to you, select **Agree**.
+4. You can now select the **View Shared Desktop Storage** option from the main **Storage** page in the user portal
 
-    <img src="images/accept-mou.png" title="R-DAS MOU agreement" style="width:600px; box-shadow: 5px 5px 5px #999;">
-    
-5. You can now select the **View Shared Desktop Storage** option from the main **Storage** page in the user portal
-
-    <img src="images/view-rdas-storage.jpg" title="View R-DAS storage" style="width:400px; box-shadow: 5px 5px 5px #999;">
+    <img src="images/view-rdas-storage.png" title="View R-DAS storage" style="width:700px; box-shadow: 5px 5px 5px #999;">
     
 ## Accessing Your R-DAS Allocation
 !!! tip
@@ -54,7 +50,7 @@ R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intende
 
     === "Linux"
         !!! warning "No ```sudo``` on HPC"
-            Do not attempt to run ```sudo``` commands on HPC, these are only meant for your personal Linux machines. To transfer data between R-DAS and HPC see [Access from HPC](#access-from-hpc).
+            Do not attempt to run ```sudo``` commands on HPC, these are only meant for your personal Linux machines. To transfer data between R-DAS and HPC see [Transfer data between R-DAS and HPC storage](#transfer-data-between-r-das-and-hpc-storage).
             
         First, install the necessary software packages to access your allocation
         

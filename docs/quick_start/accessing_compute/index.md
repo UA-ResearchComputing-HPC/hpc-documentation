@@ -63,7 +63,7 @@ Before we connect to a compute node, let's quickly cover how access is charged.
 
 Every HPC group gets a **free** allocation of CPU hours that they can spend every month to access compute resources. You can think of a CPU hour as a token to buy one CPU for one hour, so if you want to reserve 5 CPUs for 10 hours, this will charge 50 CPU hours to your account. You can see more detailed information on job queues, allocations, and job charging on our [Time Allocations](../../resources/allocations/) page which has a comprehensive breakdown. 
 
-For this tutorial, we'll focus on the standard partition. This is a job queue and is the one that consumes your standard allocation. To use this job queue, you'll need to know your account name. To check, use the command ```va``` which stands for "view allocation". The output will look something like:
+For this tutorial, we'll focus on the standard partition. This is a job queue and is one that consumes your standard allocation. To use this job queue, you'll need to know your account name. To check, use the command ```va``` which stands for "view allocation". The output will look something like:
 
 ```
 (elgato) [netid@wentletrap ~]$ va

@@ -1,6 +1,7 @@
 site_name: UArizona HPC Documentation
 repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
+
 nav:
   - Home: index.md
   - HPC Quick Start: 
@@ -15,6 +16,7 @@ nav:
 
   - Policies:
     - Acceptable Use: policies/acceptable_use/index.md
+    - Access: policies/access/index.md
     - Acknowledgements: policies/acknowledgements/index.md
     - Buy-in: policies/buy_in/index.md
     - Committees: policies/committees/index.md

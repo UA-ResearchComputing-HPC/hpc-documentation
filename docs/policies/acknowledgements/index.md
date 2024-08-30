@@ -2,7 +2,7 @@
 
 PIs should [notify our HPC consultants](../../support_and_training/consulting_services/) about posters or other publications (published, accepted, submitted, or in preparation) that benefited from the use of UArizona High Performance Computing, Statistical Consulting, and/or Data & Visualization Consulting. These will be listed in the Collection of Published Results.
 
-<center>[Results](../../results){ .md-button }</center>
+<center>[Results](../../results/){ .md-button }</center>
 
 <h2> Acknowledging the UArizona HPC Resources </h2>
 The suggested format to acknowledge University of Arizona High-Performance Computing in a paper, poster, or presentation is:

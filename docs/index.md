@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations) and [storage space](./storage_and_transfers/storage/overview/). 
+The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations/) and [storage space](./storage_and_transfers/storage/overview/). 
 
 This documentation site provides technical details relevant to using our HPC system. Whether you are just starting your journey into computational sciences or are a seasoned programmer, we hope you will find something useful in these pages. This site is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
 
@@ -40,6 +40,52 @@ This documentation site provides technical details relevant to using our HPC sys
 </p>
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
+
+## Highlighted Research
+
+=== "Ten Millionth Job"
+
+    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/tenmillion.png" width="30%" style="margin: 20px;">
+
+    Puma has been a tremendous resource for our research community. Just recently it processed the 10 millionth job since we provisioned it in 2020. Just to get a perspective on that, if you took one step for each job you could walk to Niagara Falls. And back.
+
+    David Castellano, a member of Dr. Ryan Gutenkunst's team, was the researcher who achieved this milestone. They study the evolutionary processes that generated the complex networks that comprise life. Dr. Gutenkunst told us that David’s been maximizing his chances to hit this milestone with all the jobs he’s been running.
+
+    David says about his work: “Understanding the relationship between DNA mutation rates and fitness effects is central to evolutionary biology. My work is investigating this relationship in three species: Homo sapiens, Mus musculus, and Arabidopsis thaliana. The inference of fitness effects from population genomics data requires intensive computation which could not be possible without a High Performance Computing service.”
+
+    The software used in their research is called  ‘dadi’: Diffusion Approximations for Demographic Inference. This work on three species with 96 mutation types and 1000 bootstrap replicates equates to 288,000 compute jobs.
+
+
+=== "Planetary History"
+    
+    **Reconstructing the History of the Solar System Using HPC**
+
+    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
+
+    Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
+    From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
+
+    One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
+    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown in the image above. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
+
+    [Read more about the full story here!](https://news.arizona.edu/news/how-pluto-got-its-heart)
+
+=== "Cloud Research"
+    <img src="./assets/images/home/sullivan_lab.png" title="cloud research" align="right" width="300px">
+    Sylvia Sullivan is an Assistant Professor in Chemical and Environmental Engineering who performs atmospherically related research and has a joint appointment to the Department of Hydrology and Atmospheric Sciences. Her academic background is in chemical engineering, but she has picked up atmospheric science and computing skills along the way to model and understand cloud and storm systems. “I really liked environmental work because I felt it was very impactful,” she says.  Her research includes investigating cloud ice formation. From a chemical engineering perspective, you can think about clouds as a control volume, flows in and out and phase changes occurring inside. Along with this more technical view, Sylvia says she “fell in love with clouds because they are very beautiful and poetic”. This blend of fields brought her to the University of Arizona as it is one of the only Universities where Chemical and Environmental Engineering are in the same department. And besides, “Tucson is a wonderful location”.
+
+    <img src="./assets/images/home/cloud_research.png" title="cloud research" align="left" width="300px">
+    She is building a research group to study the impact of ice clouds, particularly their energetic and precipitation effects. Sylvia’s group runs very high-resolution simulations called storm resolving simulations, where the meshes are fine enough to represent individual storms. In global climate models, the mesh has a resolution on the order of 100 km, in which several storm cells can form simultaneously. These storm-resolving computations are very expensive and produce terabytes of data, which then need to be post-processed and visualized. Currently, Sylvia and her group are very focused on working with other visualization experts on campus to illustrate the structures and evolution of clouds and storm systems.
+
+=== "Hypersonic Flow"
+    
+    **Faster Speeds Need Faster Computation**
+
+    <img src="./assets/images/home/HypersonicTravel.jpg" title="flow structures visualization" align="right" width="300px">
+
+    Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
+
+    In the image to the right, instantaneous flow structures obtained from a DNS for a flared cone at Mach 6 are visualized using the Q-isocontours colored with instantaneous temperature disturbance values. The small scales towards the end of the computational domain indicate the regions where the boundary layer is turbulent. 
 
 ## Available Resources
 
@@ -92,6 +138,22 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
+-   :material-chair-school:{ .lg .middle } __Fall Semester Workshops__
+
+    ---
+    
+    This Fall semester we are conducting the workshops in a different manner.  Rather than compress them into a week, there will be one each Friday at 11am.  We plan to use a hybrid modality – you can attend in person which provides greater opportunity to engage; or attend virtually by Zoom. In person sessions will be held in Weaver Science and Engineering Library Rm 212. There will be a recorded version made available on YouTube.
+
+    <center>[Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform) :fontawesome-solid-hippo: [Calendar](./events/calendar/) </center>
+
+-   :material-alert-decagram:{ .lg .middle } __July 2024 Maintenance__
+
+    ---
+
+    * [User portal](https://portal.hpc.arizona.edu) interface change for mobile compatibility. 
+    * [Open OnDemand graphical jobs](./running_jobs/open_on_demand/#interactive-graphical-applications) limited to four days, reduced from 10 days. For workflows that need longer than four days, batch jobs can be used. [Contact our consultants](./support_and_training/consulting_services/) for help if you're unsure how to do this. 
+    * New partitions have been introduced for GPU jobs. This will prevent non-GPU jobs from running on GPU nodes, improving availability. See [batch directives](./running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for more information on how to request GPU nodes. 
+
 -   :material-expansion-card-variant:{ .lg .middle } __New Ocelote GPUs__
 
     ---
@@ -106,60 +168,18 @@ These resources specifically do not support Regulated Research, which might be I
 
 
 
--   :material-expansion-card:{ .lg .middle } __New MIG Resources__
 
-    ---
 
-    MIG resources entered the queues on Feb 26, 2024. The 12 MIG GPUs will increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory. Note: some batch scripts will need updates to work properly. [More information here](./resources/compute_resources/).
-
--   :material-clock-plus-outline:{ .lg .middle } __Increased Allocations__
-
-    ---
-
-    Beginning on March 1st, 2024 the standard allocation of CPU hours on Puma has increased from 100,000 to 150,000, and on Ocelote from 70,000 to 100,000. 
 
 
 
 </div>
 
-## Highlighted Research
-
-=== "Planetary History"
-    
-    **Reconstructing the History of the Solar System Using HPC**
-
-    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
-
-    Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
-    From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
-
-    One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
-    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown in the image above. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
-
-    [Read more about the full story here!](https://news.arizona.edu/news/how-pluto-got-its-heart)
-
-=== "Cloud Research"
-    <img src="./assets/images/home/sullivan_lab.png" title="cloud research" align="right" width="300px">
-    Sylvia Sullivan is an Assistant Professor in Chemical and Environmental Engineering who performs atmospherically related research and has a joint appointment to the Department of Hydrology and Atmospheric Sciences. Her academic background is in chemical engineering, but she has picked up atmospheric science and computing skills along the way to model and understand cloud and storm systems. “I really liked environmental work because I felt it was very impactful,” she says.  Her research includes investigating cloud ice formation. From a chemical engineering perspective, you can think about clouds as a control volume, flows in and out and phase changes occurring inside. Along with this more technical view, Sylvia says she “fell in love with clouds because they are very beautiful and poetic”. This blend of fields brought her to the University of Arizona as it is one of the only Universities where Chemical and Environmental Engineering are in the same department. And besides, “Tucson is a wonderful location”.
-
-    <img src="./assets/images/home/cloud_research.png" title="cloud research" align="left" width="300px">
-    She is building a research group to study the impact of ice clouds, particularly their energetic and precipitation effects. Sylvia’s group runs very high-resolution simulations called storm resolving simulations, where the meshes are fine enough to represent individual storms. In global climate models, the mesh has a resolution on the order of 100 km, in which several storm cells can form simultaneously. These storm-resolving computations are very expensive and produce terabytes of data, which then need to be post-processed and visualized. Currently, Sylvia and her group are very focused on working with other visualization experts on campus to illustrate the structures and evolution of clouds and storm systems.
-
-=== "Hypersonic Flow"
-    
-    **Faster Speeds Need Faster Computation**
-
-    <img src="./assets/images/home/HypersonicTravel.jpg" title="flow structures visualization" align="right" width="300px">
-
-    Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
-
-    In the image to the right, instantaneous flow structures obtained from a DNS for a flared cone at Mach 6 are visualized using the Q-isocontours colored with instantaneous temperature disturbance values. The small scales towards the end of the computational domain indicate the regions where the boundary layer is turbulent. 
-
 ## Acknowledgements
 
 Published research that utilized UArizona HPC resources should follow our [guidelines](./policies/acknowledgements/) on how to acknowledge us. 
 
-If you wish for your research to be featured in our [Results](./results) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
+If you wish for your research to be featured in our [Results](./results/) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
 
 
 ----

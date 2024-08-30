@@ -4,7 +4,7 @@
 
 # FAQs
 
-Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](mailto:hpc-consult@list.arizona.edu) and we will be happy to add it. 
+Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=8c4aa2761b1df0107947edf1604bcbd0&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) and we will be happy to add it. 
 
 
 <!-- ----------------------------------------------------------------------------------------------
@@ -86,7 +86,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
 
 </html>
 
-
+<hr>
 
 
 <!-- ----------------------------------------------------------------------------------------------
@@ -196,7 +196,19 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
         <pre><code class="language-bash">set -oe pipefail</code></pre>
     </p>
   </div>
+
+  <button class="collapsible">Why am I getting the error <code>QOSGrpSubmitJobsLimit</code> when I try submitting my job?</button>
+  <div class="content">
+    <p>
+    If you're trying to submit a job and get:
+    <pre><code>sbatch: error: QOSGrpSubmitJobsLimit
+sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)</code></pre>
+    check that you're including a <code>--qos</code> directive in your job request. This is necessary to use high priority and qualified hours. Check our <a href="../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions">Slurm Batch Directives</a> page for specifics on how to do this.
+    </p>
+  </div>
 </html>
+
+<hr> 
 
 <!-- ----------------------------------------------------------------------------------------------
    ___                          _     ___                            _   _             
@@ -247,6 +259,31 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
   </div>
 </html>
 
+<hr>
+## Maintenance
+<html>
+<!-- ----------------------------------------------------------------------------------------------
+                  _       _                                  
+                 (_)     | |                                 
+  _ __ ___   __ _ _ _ __ | |_ ___ _ __   __ _ _ __   ___ ___ 
+ | '_ ` _ \ / _` | | '_ \| __/ _ \ '_ \ / _` | '_ \ / __/ _ \
+ | | | | | | (_| | | | | | ||  __/ | | | (_| | | | | (_|  __/
+ |_| |_| |_|\__,_|_|_| |_|\__\___|_| |_|\__,_|_| |_|\___\___|
+
+---------------------------------------------------------------------------------------------- -->
+
+
+  <button class="collapsible">Why are my jobs sitting in queue for so long after maintenance?</button>
+  <div class="content">
+  <p>
+  If your jobs are sitting in queue for a long time after a system maintenance period, it's likely because it was a rolling maintenance cycle. During rolling maintenance, all nodes are put into a "drain" state. This means they stop accepting any new jobs until all the jobs running on them complete. Once they are empty, they are taken offline, updated, rebooted, and then put back online to accept new jobs. Because job runtimes can be up to 10 days, it may take up to 10 days for job queues to return to normal.
+
+  For more information on maintenance, see <a href="../../policies/maintenance/">our maintenance documentation</a>. 
+  </p>
+  </div>
+</html>
+
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
    ___                      ___          ___                               _ 
@@ -330,6 +367,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
       
 </html>
 
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
  __        __ _                                            _                    _       _           
@@ -490,6 +528,7 @@ _\ \ (_) |  _| |_ \ V  V / (_| | | |  __/ | (_| | | | | (_| | / /\/\ \ (_) | (_|
 
 </html>
 
+<hr>
 
 <!-- ----------------------------------------------------------------------------------------------
  __ _                             
@@ -571,13 +610,6 @@ _\ \ || (_) | | | (_| | (_| |  __/
     </p>
   </div>
 
-  <!-- Received message too long -->
-  <button class="collapsible">Why am I getting the error <code>Received message too long</code> when I try to upload data to HPC?</button>
-  <div class="content">
-    <p>
-        Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
-    </p>
-  </div>
 </html>
 
 
@@ -915,11 +947,76 @@ __  ____| (_)___| | __
     </p>
   </div>
 
-  <!-- I use workflows to move data using Google Drive, and to share with others. Will AWS support something similar? -->
-  <button class="collapsible">I use workflows to move data using Google Drive, and to share with others. Will AWS support something similar?</button>
+
+
+
+
+  <!-- Can I have multiple S3 buckets associated with my account? -->
+  <button class="collapsible">Can I have multiple S3 buckets associated with my account?</button>
   <div class="content">
     <p>
-       Amazon S3 will likely support what you do. Perhaps our consultants can help to rework your workflows.
+      Yes
+    </p>
+  </div>
+
+
+
+  <!-- What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?  -->
+  <button class="collapsible">What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?</button>
+  <div class="content">
+    <p>
+      This alert is sent to notify you whenever your storage usage grows by 10% relative to the previous week. This ensures that you're aware of any unintended spikes and the potential resulting costs. 
+    </p>
+  </div>
+
+
+
+
+</html>
+
+<!-- ----------------------------------------------------------------------------------------------
+  _______                   __              
+ |__   __|                 / _|             
+    | |_ __ __ _ _ __  ___| |_ ___ _ __ ___ 
+    | | '__/ _` | '_ \/ __|  _/ _ \ '__/ __|
+    | | | | (_| | | | \__ \ ||  __/ |  \__ \
+    |_|_|  \__,_|_| |_|___/_| \___|_|  |___/
+
+
+---------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+## Transfers
+
+### HPC
+
+<html>
+  <!-- Received message too long -->
+  <button class="collapsible">Why am I getting the error <code>Received message too long</code> when I try to use scp/sftp?</button>
+  <div class="content">
+    <p>
+        Check your <code>~/.bashrc</code> or <code>~/.bash_profile</code> to see if they are printing any output to the terminal. Transfer software like SCP or SFTP require a "silent" terminal to work successfully. If you find any <code>echo</code> or <code>printf</code> statements, comment them out and retry your transfer. 
+    </p>
+  </div>
+</html>
+
+### Tier 2 AWS
+
+<html>
+  <!-- "The operation is not valid for the object's access tier"? -->
+  <button class="collapsible">What does this file transfer error mean: "The operation is not valid for the object's access tier"?</button>
+  <div class="content">
+    <p>
+      This error indicates your data have migrated to an archival storage tier (Glacier or Deep Glacier). They will first need to be <a href="../../../storage_and_transfers/storage/tier2_storage/#restoring-archived-data">restored</a> to the Standard access tier to make them downloadable.
+    </p>
+  </div>
+
+    <!-- Are there any limits on uploads, e.g. may transfer size / day? -->
+  <button class="collapsible">Are there any limits on uploads, e.g. may transfer size/day?</button>
+  <div class="content">
+    <p>
+      The max file size is 5 TB based on <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html">Amazon's official documentation</a>.
     </p>
   </div>
 
@@ -931,40 +1028,9 @@ __  ____| (_)___| | __
     </p>
   </div>
 
-  <!-- Can I have multiple S3 buckets associated with my account? -->
-  <button class="collapsible">Can I have multiple S3 buckets associated with my account?</button>
-  <div class="content">
-    <p>
-      Yes
-    </p>
-  </div>
-
-  <!-- Are there any limits on uploads, e.g. may transfer size / day? -->
-  <button class="collapsible">Are there any limits on uploads, e.g. may transfer size/day?</button>
-  <div class="content">
-    <p>
-      The max file size is 5 TB based on <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html">Amazon's official documentation</a>.
-    </p>
-  </div>
-
-  <!-- What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?  -->
-  <button class="collapsible">What why am I receiving an email: "ALARM: "ua-rt-t2-netid capacity growth alarm" in US West (Oregon)"?</button>
-  <div class="content">
-    <p>
-      This alert is sent to notify you whenever your storage usage grows by 10% relative to the previous week. This ensures that you're aware of any unintended spikes and the potential resulting costs. 
-    </p>
-  </div>
-
-  <!-- "The operation is not valid for the object's access tier"? -->
-  <button class="collapsible">What does this file transfer error mean: "The operation is not valid for the object's access tier"?</button>
-  <div class="content">
-    <p>
-      This error indicates your data have migrated to an archival storage tier (Glacier or Deep Glacier). They will first need to be <a href="../../../storage_and_transfers/storage/tier2_storage/#restoring-archived-data">restored</a> to the Standard access tier to make them downloadable.
-    </p>
-  </div>
-
-
 </html>
+
+<hr>
 
 
 <!-- ----------------------------------------------------------------------------------------------
