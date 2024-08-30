@@ -41,10 +41,19 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 
 ### Upcoming Events
 
-??? example "No listed events. Check back later."
-    *If you have an event that you would like us to display here, please let us know!*
+<!-- ??? example "No listed events. Check back later."
+    *If you have an event that you would like us to display here, please let us know!* -->
 
+**Fall 2024 U of A Datalab Workshops**
 
+View these workshops on the [DataLab Website](https://datascience.arizona.edu/education/uarizona-data-lab)
+
+- Tues 2-3pm [NextGen Geospatial: AI & Cloud tools for Geographic Analysis](https://github.com/ua-datalab/Geospatial_Workshops/wiki) - Jeff Gillan
+- Tues 3-4pm [Exploring Tools for Data Analysis and AI Applications in Biosciences and Genomics](https://github.com/ua-datalab/Bioinformatics/wiki) - Michele Cosi & Carlos Lizarraga
+- Weds 1-2:30pm [Research Productivity](https://datascience.arizona.edu/events/leadership-through-project-management-team-culture-tips-successful-research-projects) - Rudy Salcido
+- Thurs 1-2pm [Advanced AI for Healthcare: A Transformative Force](https://github.com/ua-datalab/ai-healthcare) - Greg Chism
+- Thurs 2-3pm [Exploring the LLM Frontier: From Hugging Face to RAG and Beyond](https://github.com/ua-datalab/Generative-AI) - Carlos Lizarraga & Enrique Noriega Atala
+- Thurs 3-4pm [Natural Language Processing for All](https://github.com/ua-datalab/NLP-Speech) - Megh Krishnaswamy
 
 ### External Event Pages
 
@@ -54,24 +63,6 @@ Please check out these workshops and activities from our partners around campus!
 - Data Lab [home page](https://datainsight.arizona.edu/uarizona-data-lab)
 - The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
 
-
-### Data Lab Workshop Series
-
-Recurring workshops hosted by the Data Lab for Spring 2024
-
-- [Navigating the World of Data Engineering](https://datascience.arizona.edu/events/navigating-world-data-engineering) - Mondays 2-3pm
-
-- [Cracking the Coding Interview](https://datascience.arizona.edu/events/cracking-coding-interview) - Mon/Wed/Fri 4-5pm
-
-- [NextGen Geospatial Data Science](https://datascience.arizona.edu/events/nextgen-geospatial-data-science) - Tuesdays 2-3pm
-
-- [Data Science Essentials: From Jupyter to AI Tools](https://datascience.arizona.edu/events/data-science-essentials-jupyter-ai-tools) - Tuesdays 3-4pm
-
-- [Data Science Tapas: Savor the Tools of Data Mastery](https://datascience.arizona.edu/events/data-science-tapas-savor-tools-data-mastery) - Wednesdays 1-2pm
-
-- [Mastering Machine Learning: Your Path to Data-Driven Research](https://datascience.arizona.edu/events/mastering-machine-learning-your-path-data-driven-research) - Thursdays 2-3pm
-
-- [Introduction to Deep Learning](https://datascience.arizona.edu/events/deep-dive-data-guide-deep-learning) - Thursdays 3-4pm
 
 <!--
 !!! example "No upcoming workshops scheduled. Check back later"
