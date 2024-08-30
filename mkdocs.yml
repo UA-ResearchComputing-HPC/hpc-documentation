@@ -109,6 +109,26 @@ nav:
     #   - Array Job Using GNU Parallel: running_jobs/example_batch_jobs/array_and_gnu_parallel/index.md
     - Monitoring Jobs and Resources: running_jobs/monitoring_jobs_and_resources/index.md
     - Parallelization: running_jobs/parallelization/index.md
+    # Q is there a way to include the md on the main visualization page instead of in an  "INTRO " sub item?
+    - Visualization: 
+      - Intro: running_jobs/visualization/index.md
+      - Blender: 
+        - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
+        - Scaling Up Blender Rendering: running_jobs/visualization/blender/scaling_up_blender_rendering/index.md
+      - Paraview: 
+        - Essential Ideas: running_jobs/visualization/Paraview/Essential_Ideas_for_ParaView/index.md
+        - Getting Started: running_jobs/visualization/Paraview/Getting_Started_With_ParaView/index.md
+        - CGAl Vespa: running_jobs/visualization/Paraview/Advanced_Computational_Geometry_in_Paraview_with_CGAL_Vespa/index.md
+        - Paraview Python Plugins: running_jobs/visualization/Paraview/Demystifying_Paraview_Python_Plugins_(or_at_least_a_little_less_mystery)/index.md
+        - Getting Started with Paraview Terminal: running_jobs/visualization/Paraview/Getting_Started_With_The_Paraview_Terminal_(PvPython)/index.md
+        - Graphs and Exporting Data: running_jobs/visualization/Paraview/Graphs_and_Exporting_Data/index.md
+        - Cameras and Keyframes: running_jobs/visualization/Paraview/ParaView_Cameras_and_Keyframes/index.md
+        - Headless Batch Rendering: running_jobs/visualization/Paraview/Paraview_Headless_Batch_Rendering/index.md
+        - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/Paraview/Speeding_up_Filters_Rendering_with_Client_Server_configurations/index.md
+        - Visualizing NetCDF Files: running_jobs/visualization/Paraview/Visualizing_NetCDF_Files/index.md
+        - Paratest images: running_jobs/visualization/Paraview/paratestimages/index.md
+      - Arcgis Pro Heightmaps: running_jobs/visualization/creating_heightmaps_arcgis/index.md 
+      - VisIt: running_jobs/visualization/VisIt/index.md
 
 
   - Support:

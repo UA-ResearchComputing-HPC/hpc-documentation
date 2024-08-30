@@ -79,3 +79,9 @@ Want to get involved with the Tucson coding community? ResBaz AZ offers weekly e
 
 Have some code-specific, data science, or related questions? Consider joining the UArizona Data Science Slack channel: [https://jcoliver.github.io/uadatascience-slack/user-guide.html](https://jcoliver.github.io/uadatascience-slack/user-guide.html)
 
+## Data Cooperative 
+
+Many non HPC existing services available through the main library and the great folks at.
+[https://data.library.arizona.edu/](https://data.library.arizona.edu/)
+
+<img src="images/datacooperative.png">
