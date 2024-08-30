@@ -13,7 +13,7 @@ Check below for a list of upcoming workshops.
 
 ## HPC Calendar
 
-We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon. Workshop location will be listed here when we receive confirmation. The registration button below will allow you to register for any/all of the workshops listed below. Please note that you will need to be logged into your University of Arizona account in order to access the registration form.
+We are excited to host a full semester's worth of workshops this Fall. All workshops will be held on Fridays throughout the semester from 11am to noon in the Weaver Science and Engineering Library, Rm 212. The registration button below will allow you to register for any/all of the workshops listed below. Please note that you will need to be logged into your University of Arizona account in order to access the registration form.
 
 <center>[Register](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform?usp=sf_link){ .md-button }</center>
 
