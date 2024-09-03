@@ -37,6 +37,13 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 |Dec 6  | Intro to Visualization | Devin Bayly |
 |Dec 13 | Intermediate Techniques in Visualization | Devin Bayly |
 
+<object class="pdf" 
+    data="images/SupportServicesInfoSlide.pdf"
+    width="800"
+    height="500"
+    border="0">
+</object>
+
 ## Our Friends and Partners
 
 ### Upcoming Events
@@ -62,6 +69,7 @@ Please check out these workshops and activities from our partners around campus!
 - The Data Science Institute's [official calendar](https://datascience.arizona.edu/calendar)
 - Data Lab [home page](https://datainsight.arizona.edu/uarizona-data-lab)
 - The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
+
 
 
 <!--

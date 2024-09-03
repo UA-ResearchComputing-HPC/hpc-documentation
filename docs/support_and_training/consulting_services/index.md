@@ -4,8 +4,11 @@
 
 ## HPC Consulting Services
 
-[Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
+<!-- <img class="img" src="images/SupportServicesInfoSlide.jpg" title="Support Services Info" width="800px" style="padding: 20px;"> -->
+
+
+[Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
 <img class="img-right" src="images/HelpDesk_0.png" title="Helpdesk illustration" width="350px" style="padding: 20px;">
 
@@ -62,4 +65,11 @@ If you have never used Gather Town before and would like additional information,
 Visualization Consulting is a service that allows researchers to create graphical representations of their data. These computer-generated images and animations allow researchers to visually analyze that data and see the results of changing specific parameters. Services include consultation, demonstration, and training for high-resolution visualization output and simulation. 
 
 Visualization consulting can be requested by contacting **vislab-consult@list.arizona.edu**
+
+<object class="pdf" 
+    data="images/SupportServicesInfoSlide.pdf"
+    width="800"
+    height="500"
+    border="0">
+</object>
 
