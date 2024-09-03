@@ -55,12 +55,14 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 
 View these workshops on the [DataLab Website](https://datascience.arizona.edu/education/uarizona-data-lab)
 
-- Tues 2-3pm [NextGen Geospatial: AI & Cloud tools for Geographic Analysis](https://github.com/ua-datalab/Geospatial_Workshops/wiki) - Jeff Gillan
-- Tues 3-4pm [Exploring Tools for Data Analysis and AI Applications in Biosciences and Genomics](https://github.com/ua-datalab/Bioinformatics/wiki) - Michele Cosi & Carlos Lizarraga
-- Weds 1-2:30pm [Research Productivity](https://datascience.arizona.edu/events/leadership-through-project-management-team-culture-tips-successful-research-projects) - Rudy Salcido
-- Thurs 1-2pm [Advanced AI for Healthcare: A Transformative Force](https://github.com/ua-datalab/ai-healthcare) - Greg Chism
-- Thurs 2-3pm [Exploring the LLM Frontier: From Hugging Face to RAG and Beyond](https://github.com/ua-datalab/Generative-AI) - Carlos Lizarraga & Enrique Noriega Atala
-- Thurs 3-4pm [Natural Language Processing for All](https://github.com/ua-datalab/NLP-Speech) - Megh Krishnaswamy
+| Date | Topic | Instructor |
+| - | - | - |
+| Tues 2-3pm | [NextGen Geospatial: AI & Cloud tools for Geographic Analysis](https://github.com/ua-datalab/Geospatial_Workshops/wiki) | Jeff Gillan |
+| Tues 3-4pm | [Exploring Tools for Data Analysis and AI Applications in Biosciences and Genomics](https://github.com/ua-datalab/Bioinformatics/wiki) | Michele Cosi & Carlos Lizarraga |
+| Weds 1-2:30pm | [Research Productivity](https://datascience.arizona.edu/events/leadership-through-project-management-team-culture-tips-successful-research-projects) | Rudy Salcido |
+| Thurs 1-2pm | [Advanced AI for Healthcare: A Transformative Force](https://github.com/ua-datalab/ai-healthcare) | Greg Chism |
+| Thurs 2-3pm | [Exploring the LLM Frontier: From Hugging Face to RAG and Beyond](https://github.com/ua-datalab/Generative-AI) | Carlos Lizarraga & Enrique Noriega Atala |
+| Thurs 3-4pm | [Natural Language Processing for All](https://github.com/ua-datalab/NLP-Speech) | Megh Krishnaswamy |
 
 ### External Event Pages
 
