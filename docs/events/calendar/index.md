@@ -20,22 +20,27 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 
 ### Fall 2024 Workshop Schedule
 
-| Date | Topic | Instructor |
-| - | - | - |
-|Sep 6  | HPC Overview and Access | Ethan Jahn |
-|Sep 13 | Storage and Software Overview | Ethan Jahn |
-|Sep 20 | Scheduling and Running Jobs | Ethan Jahn |
-|Sep 27 | Managing and Optimizing Jobs | Ethan Jahn |
-|Oct 4  | Parallel Computing Theory | Ethan Jahn |
-|Oct 11 | Parallel Computing in Practice | Soham Pal |
-|Oct 18 | Software and Environments | Soham Pal |
-|Oct 25 | Machine Learning on HPC | Soham Pal |
-|Nov 1  | Intro to Containers | Soham Pal |
-|Nov 8  | Error Handling and Debugging | Ethan Jahn |
-|Nov 15 | Intro to Statistics | Chris Reidy |
-|Nov 22 | Using GPUs on HPC | Soham Pal |
-|Dec 6  | Intro to Visualization | Devin Bayly |
-|Dec 13 | Intermediate Techniques in Visualization | Devin Bayly |
+| Date | Topic | Room | Instructor |
+| - | - | - | - |
+|Sep 6  | HPC Overview and Access | Main B252/254 | Ethan Jahn |
+|Sep 13 | Storage and Software Overview | Main B252/254 | Ethan Jahn |
+|Sep 20 | Scheduling and Running Jobs | Weaver 212  | Ethan Jahn |
+|Sep 27 | Managing and Optimizing Jobs | Weaver 212 | Ethan Jahn |
+|Oct 4  | Parallel Computing Theory | Weaver 212 | Ethan Jahn |
+|Oct 11 | Parallel Computing in Practice | Weaver 212 | Soham Pal |
+|Oct 18 | Software and Environments | Weaver 212 | Soham Pal |
+|Oct 25 | Machine Learning on HPC | Weaver 212 | Soham Pal |
+|Nov 1  | Intro to Containers | Weaver 212 | Soham Pal |
+|Nov 8  | Error Handling and Debugging | Weaver 212 | Ethan Jahn |
+|Nov 15 | Intro to Statistics | Weaver 212 | Chris Reidy |
+|Nov 22 | Using GPUs on HPC | Weaver 212 | Soham Pal |
+|Dec 6  | Intro to Visualization | Weaver 212 | Devin Bayly |
+|Dec 13 | Intermediate Techniques in Visualization | Weaver 212 | Devin Bayly |
+
+Room Information:
+
+- Weaver Science Engineering Library: [Room 212 Learning Studio](https://lib.arizona.edu/sites/default/files/science-floor2.pdf)
+- Main Library: [B252/254 Learning Studio](https://lib.arizona.edu/sites/default/files/main-floor2.pdf)
 
 <object class="pdf" 
     data="images/SupportServicesInfoSlide.pdf"
