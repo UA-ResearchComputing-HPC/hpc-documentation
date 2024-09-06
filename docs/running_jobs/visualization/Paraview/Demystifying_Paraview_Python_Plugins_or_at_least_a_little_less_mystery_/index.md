@@ -1,3 +1,5 @@
+Paraview Python Plugins Demystified 
+========================
 If you've spent more than a minute with Paraview you're already aware
 that there are some things that could use a little more explanation.
 There's really just too much to cover in the depth that most

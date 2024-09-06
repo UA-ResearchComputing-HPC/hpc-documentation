@@ -65,6 +65,9 @@ If you have never used Gather Town before and would like additional information,
 Visualization Consulting is a service that allows researchers to create graphical representations of their data. These computer-generated images and animations allow researchers to visually analyze that data and see the results of changing specific parameters. Services include consultation, demonstration, and training for high-resolution visualization output and simulation. 
 
 Visualization consulting can be requested by contacting **vislab-consult@list.arizona.edu**
+ 
+We also offer drop-in hours at the Main Library.
+<a href="https://libcal.library.arizona.edu/event/10712342" class="external-link" title="https://libcal.library.arizona.edu/event/10712342">https://libcal.library.arizona.edu/event/10712342</a></span>
 
 <object class="pdf" 
     data="images/SupportServicesInfoSlide.pdf"
