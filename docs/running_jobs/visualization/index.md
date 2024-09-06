@@ -1,12 +1,6 @@
 Visualization Consulting
 ========================
 
-UA HPC offers consulting services in visualization. You can send an
-email to <span class="s1">**vislab-consult@list.arizona.edu** for
-technical support from Data & Visualization consultant.  
-We also offer drop-in hours at the Main Library.
-<a href="https://libcal.library.arizona.edu/event/10712342" class="external-link" title="https://libcal.library.arizona.edu/event/10712342">https://libcal.library.arizona.edu/event/10712342</a></span>
-
 <span class="s1">To see a gallery of past projects please visit
 <a href="https://rtdatavis.github.io/" class="external-link">https://rtdatavis.github.io/</a>.  
   
