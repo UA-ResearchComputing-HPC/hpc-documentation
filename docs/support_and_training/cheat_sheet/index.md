@@ -151,9 +151,12 @@ Here are some examples of how you might use symbolic notation with the `chmod` c
 
 Octal notation is a more compact way of representing permissions using numbers. Each permission type (read, write, execute) is assigned a numeric value:
 
-- `4` for read permission.
-- `2` for write permission.
-- `1` for execute permission.
+| Octal notation | Permission|
+|-|-|
+|`4` | read |
+|`2` | write|
+|`1` | execute|
+
 
 To set permissions, you add these values together for each permission type. For example:
 
@@ -175,14 +178,112 @@ These commands will set the permissions of `file.txt` accordingly.
 ### Changing Group Ownership
 
 !!! tip "Ownership changes limitations"
-    * Only the owner of a file or directory can change its group ownership
-    * Users can't change the **user** ownership of a file. This is because this requires administrator privileges. User ownership changes can be requested from our consulting team. 
+    Only the owner of a file or directory can change its group ownership
 
 To change the group ownership of a file or directory, you can use ```chgrp```. For example:
 
-```
+```bash
 chgrp groupname /path/to/file
 ```
+
+### Changing User Ownership
+
+Changing the user ownership of a file requires root permissions, even if the user owns the file they are trying to modify. If ownership modifications are needed, [contact our consulting team for assistance](../consulting_services/). 
+
+### File Management in Shared Spaces
+
+!!! warning "ACLs unavailable"
+    Using something like `setfacl` is possible on some systems to set the default permissions for specific directories and their contents. Unfortunately, ACLs are not available on our systems due to software limitations on our file servers. Some alternatives are detailed below. 
+
+
+If you're working in shared storage and want your files to be accessible to collaborators, sometimes it can be challenging to ensure those files are created with the correct group ownership and file permissions to allow access. In those cases, it might be helpful to look into setting the SGID (Set Group ID) and using the `umask` command described below.  
+
+#### Default Group Ownership
+
+The SGID (Set Group ID) bit can be set on a directory to ensure that files and directories created within that parent directory inherit its group ownership. This ensures that those files can be made accessible (with the proper permissions) to other members of that group.
+
+To set the SGID bit on a directory, use the `chmod` command with the `g+s` option:
+
+```bash
+chmod g+s /path/to/directory
+```
+
+You'll notice that when a directory does not have the SGID bit set, its group permissions will look something like `rwx`. When the SGID bit is set, the `x` will become either an `s` (if group execute permissions are set) or `S` (if group execute permissions are disabled). For example:
+
+```console
+(puma) [netid@wentletrap EXAMPLES]$ ls -ld parent_directory/
+drwxr-xr-x. 2 netid hpcteam 0 Sep  4 12:50 parent_directory/
+(puma) [netid@wentletrap EXAMPLES]$ chmod g+s parent_directory/
+(puma) [netid@wentletrap EXAMPLES]$ ls -ld parent_directory/
+drwxr-sr-x. 2 netid hpcteam 0 Sep  4 12:50 parent_directory/
+```
+
+#### Default Permissions
+
+The `umask` command controls the default file permissions for all new files and directories created {==at a user level==}. It defines which permissions should **not** be set by default, and thus indirectly determines the default permissions. 
+
+By setting an appropriate `umask`, you can ensure that files and directories are created with the permissions that are appropriate for your collaborative environment.
+
+To check your active umask value, you can run the command without arguments. For example, the default on our system is:
+
+```console
+(puma) [netid@wentletrap EXAMPLES]$ umask
+0022
+```
+To make sense of this output output, take the last three digits and subtract them from either `777` (for directories) or `666` (for files). So for example, in the output shown above, `0022` means new directories will always be created with the permissions `777` - `022` = `755` which is the same as `rwxr-xr-x`. Similarly, for files: `666` - `022` = `644` which is the same as `r-wr--r--`. If you're unfamiliar with octal formatting, see [octal file permissions above](#octal) for more information on how these numbers correspond to file permissions.
+
+To set a new `umask`, you can include arguments either in octal or symbolic format. Symbolic notation is a little more straightforward and intuitive than octal and uses the syntax 
+
+```
+umask u=<user permissions>,g=<group permissions>,o=<other permissions>
+```
+
+For example:
+
+```console hl_lines="5"
+(puma) [netid@junonia umask]$ touch test.txt && mkdir test_dir
+(puma) [netid@junonia umask]$ ls -l test.txt && ls -ld test_dir/
+-rw-r--r--. 1 netid hpcteam 0 Mar 30 10:24 test.txt
+drwxr-sr-x. 2 netid hpcteam 0 Mar 30 10:24 test_dir/
+(puma) [netid@junonia umask]$ umask u=rwx,g=rwx,o=
+(puma) [netid@junonia umask]$ rm -r test.txt test_dir/
+(puma) [netid@junonia umask]$ touch test.txt && mkdir test_dir
+(puma) [netid@junonia umask]$ ls -l test.txt && ls -ld test_dir/
+-rw-rw----. 1 netid hpcteam 0 Mar 30 10:24 test.txt
+drwxrws---. 2 netid hpcteam 0 Mar 30 10:24 test_dir/
+```
+Note how once `umask` is set by the user, the default permissions applied to the new test file and directory allow group edit access and remove "other" access completely. The octal notation to accomplish the same result would be `umask 007`. 
+
+Some things to keep in mind: 
+
+* {==`umask` only affects your active terminal session and does not propagate to future sessions.==} This means if you log out and log back in, your umask will be reset to the system default. If you'd like your default file permissions to be permanently changed, you can add your `umask` command to your ~/.bashrc. For more information on this file, see [hidden files and directories](#hidden-files-and-directories) above. 
+
+* `umask` applies to **all** new files and directories you create, so you'll want to make sure you are not inadvertently giving unwanted access to your data.
+
+#### Sticky Bits
+
+In shared environments with group write permissions, it's possible for users to accidentally or intentionally delete files or directories created by others. The Sticky Bit is a security feature that can help manage this issue by restricting file deletion within a directory.
+
+The Sticky Bit, when set on a directory, ensures that only the file's or directory's owner can delete or rename them. This can be particularly useful in shared directories where multiple users need to collaborate but should not interfere with each other's files. To set the Sticky Bit on a directory, use the chmod command with the `+t` option:
+
+```bash
+chmod +t /path/to/directory
+```
+The change will be displayed at the end of the permissions string either as a `t` (if execute permissions are set for "other") or a `T` (if execute permissions are disabled for "other"). For example:
+
+```console
+(puma) [netid1@wentletrap EXAMPLES]$ ls -ld parent_directory/
+drwxrws--T. 3 netid2 hpcteam 512 Sep  4 13:36 parent_directory/
+(puma) [netid1@wentletrap EXAMPLES]$ ls -l parent_directory/
+total 4
+drwxrws---. 2 netid2 hpcteam 0 Sep  4 13:36 other_user
+(puma) [netid1@wentletrap EXAMPLES]$ rm -r parent_directory/other_user/
+rm: cannot remove ‘parent_directory/other_user/’: Operation not permitted
+```
+
+Note that although `netid1` has full `rwx` permissions set for both `parent_directory` and `other_user`, they cannot delete `other_user` because the sticky bit is set on the parent directory. Note that if `netid2` were to try to delete it, they would be successful. 
+
+One thing to keep in mind is that the owner of the parent directory will still be able to delete the contents even if the sticky bit is set and they do not own the directory they are deleting.
 
 ## Compression and Archiving 
 

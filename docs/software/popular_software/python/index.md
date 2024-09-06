@@ -48,12 +48,12 @@ There is an easy solution, however. You can use a virtual environment to create 
  
     Note: In the commands below, ```</path/to/virtual/env>``` is the path to the directory where all of your environment's executables and packages will be saved. For example, if you use the path ```~/mypyenv```, this will create a directory in your home called ```mypyenv```. Inside will be directories ```bin```, ```lib```, ```lib64```, and ```include```. 
 
-    === "Python Version $\geq$ 3.8"
+    === "Python Version $<$ 3.8"
         ```bash
         module load python/<version>
         virtualenv --system-site-packages </path/to/virtual/env>
         ```
-    === "Python Version $<$ 3.8"
+    === "Python Version $\geq$ 3.8"
         ```bash
         module load python/<version>
         python3 -m venv --system-site-packages </path/to/virtual/env>

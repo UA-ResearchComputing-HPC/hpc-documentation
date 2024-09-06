@@ -4,8 +4,11 @@
 
 ## HPC Consulting Services
 
-[Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
+<!-- <img class="img" src="images/SupportServicesInfoSlide.jpg" title="Support Services Info" width="800px" style="padding: 20px;"> -->
+
+
+[Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
 <img class="img-right" src="images/HelpDesk_0.png" title="Helpdesk illustration" width="350px" style="padding: 20px;">
 
@@ -65,3 +68,11 @@ Visualization consulting can be requested by contacting **vislab-consult@list.ar
  
 We also offer drop-in hours at the Main Library.
 <a href="https://libcal.library.arizona.edu/event/10712342" class="external-link" title="https://libcal.library.arizona.edu/event/10712342">https://libcal.library.arizona.edu/event/10712342</a></span>
+
+<object class="pdf" 
+    data="images/SupportServicesInfoSlide.pdf"
+    width="800"
+    height="500"
+    border="0">
+</object>
+
