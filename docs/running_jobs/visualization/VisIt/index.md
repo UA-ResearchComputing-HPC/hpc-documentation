@@ -440,7 +440,7 @@ into `hpc.arizona.edu`  and running `squeue -u <netid>`. You will see an
 entry like this who's name is `visit.<netid>` 
 
 <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="images/image2022-3-1_18-38-17_small.png" class="confluence-embedded-image" srcset="images/image2022-3-1_18-38-17_big.png 2x, images/image2022-3-1_18-38-17_small.png 1x" height="55" /></span>
+class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="images/image2022-3-1_18-38-17_big.png" class="confluence-embedded-image" srcset="images/image2022-3-1_18-38-17_big.png 2x, images/image2022-3-1_18-38-17_big.png 1x" height="55" /></span>
 
 At this point you can request for VisIt to perform operations and graph
 different aspects of your data.
