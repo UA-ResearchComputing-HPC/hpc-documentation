@@ -24,25 +24,25 @@ ParaView](/wiki/spaces/UAHPC/pages/75989764/Visualization+With+ParaView)
 for more information.
 
 -   [Essential Ideas for
-    ParaView](/wiki/spaces/UAHPC/pages/75989804/Essential+Ideas+for+ParaView)
+    ParaView](Paraview/Essential_Ideas_for_ParaView)
 -   [Getting Started With
-    ParaView](/wiki/spaces/UAHPC/pages/75989684/Getting+Started+With+ParaView)
+    ParaView](Paraview/Getting_Started_With_ParaView)
 -   [ParaView Cameras and
-    Keyframes](/wiki/spaces/UAHPC/pages/75989756/ParaView+Cameras+and+Keyframes)
+    Keyframes](Paraview/ParaView_Cameras_and_Keyframes)
 -   [Visualizing NetCDF
-    Files](/wiki/spaces/UAHPC/pages/75989800/Visualizing+NetCDF+Files)
+    Files](Paraview/Visualizing_NetCDF_Files)
 -   [Getting Started With The Paraview Terminal
-    (PvPython)](/wiki/spaces/UAHPC/pages/75989151)
+    (PvPython)](Paraview/Getting_Started_With_The_Paraview_Terminal_PvPython_
 -   [Graphs and Exporting
-    Data](/wiki/spaces/UAHPC/pages/75989398/Graphs+and+Exporting+Data)
+    Data](Paraview/Graphs_and_Exporting_Data)
 -   [Paraview Headless Batch
-    Rendering](/wiki/spaces/UAHPC/pages/75989289/Paraview+Headless+Batch+Rendering)
+    Rendering](Paraview/Paraview_Headless_Batch_Rendering)
 -   [Speeding up Filters & Rendering with Client Server
-    configurations](/wiki/spaces/UAHPC/pages/75989606)
+    configurations](Paraview/Speeding_up_Filters_Rendering_with_Client_Server_configurations)
 -   [Advanced Computational Geometry in Paraview with CGAL &
-    Vespa](/wiki/spaces/UAHPC/pages/75989475)
+    Vespa](Paraview/Advanced_Computational_Geometryin_Paraview_with_CGAL_Vespa)
 -   [Demystifying Paraview Python Plugins (or at least a little less
-    mystery)](/wiki/spaces/UAHPC/pages/75989510)
+    mystery)](Paraview/Demystifying_Paraview_Python_Plugins_or_at_least_a_little_less_mystery_)
 
 Blender
 -------
@@ -55,15 +55,15 @@ Blender are available in several tutorials.
 <span class="legacy-color-text-blue3"></span>
 
 -   [Blender Command Line
-    Rendering](/wiki/spaces/UAHPC/pages/75990901/Blender+Command+Line+Rendering)
+    Rendering](blender/command_line_rendering)
 -   [Scaling up Blender
-    rendering](/wiki/spaces/UAHPC/pages/75989477/Scaling+up+Blender+rendering)
+    rendering](blender/scaling_up_blender_rendering)
 
 <span class="legacy-color-text-blue3">Visit</span>
 --------------------------------------------------
 
 Step by step instructions for using **VisIt** are on [this
-page](/wiki/spaces/UAHPC/pages/75991780/VisIt+Workflows+on+UA+HPC), and
+page](VisIt), and
 it is also available as a module on our system.
 
   
