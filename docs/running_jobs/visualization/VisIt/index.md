@@ -279,13 +279,8 @@ code
     wget "https://gist.githubusercontent.com/DevinBayly/310c8689c6221fd379aad34243441dda/raw/a8f5071bb8b1e96127e1ea01b2e8667940849f1a/customlauncher" -O customlauncher
 
 If you'd like to inspect the code a copy is available here as well.
+<a href="customlauncher" download>Customlauncher</a>
 
-<span class="confluence-embedded-file-wrapper conf-macro output-inline"
-data-hasbody="false"
-data-macro-id="50e07129-b0fb-431c-8164-b800aaea6659"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75991780/customlauncher?version=1" class="confluence-embedded-file"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75991780/customlauncher?version=1" height="250" /></a></span>
-
-  
 
 Steps for Linux
 ---------------
