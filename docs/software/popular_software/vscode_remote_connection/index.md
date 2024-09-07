@@ -5,7 +5,7 @@
 
 Visual Studio Code (VS Code) can be used to edit source code and other files on the HPC systems.  VS Code is available to run directly on HPC through the Open OnDemand system. 
 
-VS Code can also be run locally on laptop or desktop computers and used to make a remote connection to the HPC systems. This documentation is intended to detail the steps that must be taken to allow such a connection. For more detailed information on establishing SSH connections, refer to the VS Code documentation here: [https://code.visualstudio.com/docs/remote/ssh-tutorial](https://code.visualstudio.com/docs/remote/ssh-tutorial). There is also a general example shown in the section [Connection Example](#specifics-with-example) below.  
+VS Code can also be run locally on laptop or desktop computers and used to make a remote connection to the HPC systems. This documentation is intended to detail the steps that must be taken to allow such a connection. For more detailed information on establishing SSH connections, refer to the VS Code documentation here: [https://code.visualstudio.com/docs/remote/ssh-tutorial](https://code.visualstudio.com/docs/remote/ssh-tutorial). There is also a general example shown in the section [Connection Example](#specifics-with-example) below.
 
 ## General Method
 
@@ -37,17 +37,20 @@ C --> D[Connect VSCode to the<br>allocated compute node]
 
 We have detailed documentation for setting up SSH keys on the bastion host here: [SSH Keys](/registration_and_access/system_access/#ssh-keys). Follow the procedure documented on that page, but replace `hpc.arizona.edu` in any commands with `filexfer.hpc.arizona.edu`.
 
-**Step 2: Use the Cisco AnyConnect VPN software to connect to ```vpn.hpc.arizona.edu```**
+**Step 2: Connect to the HPC VPN (```vpn.hpc.arizona.edu```)**
 
-Cisco AnyConnect is the software that you would also use to connect to the general UArizona VPN. Information on downloading and connecting Cisco AnyConnect appears here: [https://it.arizona.edu/service/ua-virtual-private-network-vpn](https://it.arizona.edu/service/ua-virtual-private-network-vpn)
+Connect to the HPC VPN, preferably with Cisco AnyConnect. For detailed information on connecting to the HPC VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/).
+
+<!-- [https://it.arizona.edu/service/ua-virtual-private-network-vpn](https://it.arizona.edu/service/ua-virtual-private-network-vpn) -->
 
 Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`
 
-Start by opening Cisco Secure Client, then use the address `vpn.hpc.arizona.edu`.
+<!-- Start by opening Cisco Secure Client, then use the address `vpn.hpc.arizona.edu`. -->
 
-<img src="./images/hpc-vpn.png" style="width: 400px;">
+<!-- <img src="./images/hpc-vpn.png" style="width: 400px;"> -->
 
-After clicking connect, enter your NetID, password, and Duo authentication method. 
+<!-- After clicking connect, enter your NetID, password, and Duo authentication method. -->
+
  
 **Step 3: Start an HPC job for the length of time that you’d like to connect VS Code**
 
