@@ -124,7 +124,7 @@ nav:
         - Graphs and Exporting Data: running_jobs/visualization/Paraview/graphs_and_exporting_data/index.md
         - Cameras and Keyframes: running_jobs/visualization/Paraview/cameras_and_keyframes/index.md
         - Headless Batch Rendering: running_jobs/visualization/Paraview/headless_batch_rendering/index.md
-        - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/Paraview/speeding_up_filters_and_rendering_with_client_server_configuration/index.md
+        - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/Paraview/speeding_up_filters_and_rendering_with_client_server_configurations/index.md
         - Visualizing NetCDF Files: running_jobs/visualization/Paraview/visualizing_netcdf_files/index.md
       - Arcgis Pro Heightmaps: running_jobs/visualization/creating_heightmaps_arcgis/index.md 
       - VisIt: running_jobs/visualization/VisIt/index.md
