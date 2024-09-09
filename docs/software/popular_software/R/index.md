@@ -248,7 +248,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
     
     To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. This is because these libraries depend on software modules that RStudio doesn't have access to (see ***Common Problems → OOD RStudio Issues*** above for more information).
 
-    You will also need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block under ***Resolving Anaconda Issues → Temporary Removal*** above.
+    {==You will also need to make sure Anaconda is completely removed from your environment prior to the install==}. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
 
     === "Seurat"
         ```
@@ -271,7 +271,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
         ```
         (elgato) [netid@junonia ~]$ interactive -a <your_group>
-        [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2 geos/3.91 hdf5/1.10.5 libpng/1.6.37 glpk
+        [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2 geos/3.9.1 hdf5/1.10.5 libpng/1.6.37 glpk/5.0 libgit2/1.8.1
         [netid@cpu1 ~]$ unset CPPFLAGS
         [netid@cpu1 ~]$ R
         > install.packages("Seurat")
