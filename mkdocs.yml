@@ -115,19 +115,19 @@ nav:
       - Blender: 
         - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
         - Scaling Up Blender Rendering: running_jobs/visualization/blender/scaling_up_blender_rendering/index.md
-      - Paraview: 
-        - Essential Ideas: running_jobs/visualization/Paraview/essential_ideas/index.md
-        - Getting Started: running_jobs/visualization/Paraview/getting_started/index.md
-        - CGAl Vespa: running_jobs/visualization/Paraview/cgal_vespa/index.md
-        - Paraview Python Plugins: running_jobs/visualization/Paraview/paraview_python_plugins/index.md
-        - Getting Started with Paraview Terminal: running_jobs/visualization/Paraview/getting_started_with_paraview_terminal/index.md
-        - Graphs and Exporting Data: running_jobs/visualization/Paraview/graphs_and_exporting_data/index.md
-        - Cameras and Keyframes: running_jobs/visualization/Paraview/cameras_and_keyframes/index.md
-        - Headless Batch Rendering: running_jobs/visualization/Paraview/headless_batch_rendering/index.md
-        - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/Paraview/speeding_up_filters_and_rendering_with_client_server_configurations/index.md
-        - Visualizing NetCDF Files: running_jobs/visualization/Paraview/visualizing_netcdf_files/index.md
-      - Arcgis Pro Heightmaps: running_jobs/visualization/creating_heightmaps_arcgis/index.md 
-      - VisIt: running_jobs/visualization/VisIt/index.md
+      - ParaView: 
+        - Essential Ideas: running_jobs/visualization/paraview/essential_ideas/index.md
+        - Getting Started with Paraview GUI: running_jobs/visualization/paraview/getting_started_with_paraview_gui/index.md
+        - CGAl Vespa: running_jobs/visualization/paraview/cgal_vespa/index.md
+        - Paraview Python Plugins: running_jobs/visualization/paraview/paraview_python_plugins/index.md
+        - Getting Started with Paraview Terminal: running_jobs/visualization/paraview/getting_started_with_paraview_terminal/index.md
+        - Graphs and Exporting Data: running_jobs/visualization/paraview/graphs_and_exporting_data/index.md
+        - Cameras and Keyframes: running_jobs/visualization/paraview/cameras_and_keyframes/index.md
+        - Headless Batch Rendering: running_jobs/visualization/paraview/headless_batch_rendering/index.md
+        - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/paraview/speeding_up_filters_and_rendering_with_client_server_configurations/index.md
+        - Visualizing NetCDF Files: running_jobs/visualization/paraview/visualizing_netcdf_files/index.md
+      - ArcGIS Pro Heightmaps: running_jobs/visualization/arcgis_pro_heightmaps/index.md 
+      - VisIt: running_jobs/visualization/visit/index.md
 
 
   - Support:
