@@ -23,14 +23,7 @@ You can setup ParaView on our HPC cluster or on your workstation. Follow the ins
     
         ParaView is available for Windows, Mac, and Linux and can be downloaded from [https://www.paraview.org/download/](https://www.paraview.org/download/). You can choose which version to download from a drop-down menu on the page. This tutorial uses version 5.11.0, but you can use other versions if those work for you better. Run the downloaded executable (on Linux you will have to extract the files from a tarball) and follow the instructions to install it.
 
-## Running ParaView
-
-<!-- There are two ways to work with ParaView, either through the GUI (visual -->
-<!-- editor) or through a terminal. This tutorial will focus on the GUI, if -->
-<!-- you wish to use the terminal, check out the PvPython tutorial -->
-<!-- <a href="https://www.notion.so/Getting-Started-With-The-Paraview-Terminal-PvPython-b81abd6f027e4b9c87d716ec36c02129" class="external-link">here</a>. -->
-
-### ParaView GUI
+## Running ParaView GUI
 
 To run the ParaView GUI, find the ParaView executable and run it on your computer.
 
