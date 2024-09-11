@@ -41,16 +41,7 @@ We have detailed documentation for setting up SSH keys on the bastion host here:
 
 Connect to the HPC VPN, preferably with Cisco AnyConnect. For detailed information on connecting to the HPC VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/).
 
-<!-- [https://it.arizona.edu/service/ua-virtual-private-network-vpn](https://it.arizona.edu/service/ua-virtual-private-network-vpn) -->
-
-Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`
-
-<!-- Start by opening Cisco Secure Client, then use the address `vpn.hpc.arizona.edu`. -->
-
-<!-- <img src="./images/hpc-vpn.png" style="width: 400px;"> -->
-
-<!-- After clicking connect, enter your NetID, password, and Duo authentication method. -->
-
+Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
  
 **Step 3: Start an HPC job for the length of time that you’d like to connect VS Code**
 

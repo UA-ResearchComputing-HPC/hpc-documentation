@@ -285,38 +285,11 @@ If you'd like to inspect the code a copy is available here as well.
 Steps for Linux
 ---------------
 
-### Connecting to the HPC VPN.
+### Connecting to the HPC VPN
 
-For more information about this step please consult the respective
-confluence page [VPN - Virtual Private
-Network](/wiki/spaces/UAHPC/pages/75989402/VPN+-+Virtual+Private+Network).
-Here's an example of the process shown in screenshots:
+Connect to the HPC VPN, preferably with Cisco AnyConnect. For detailed information on connecting to the HPC VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/).
 
-<table>
-<thead>
-<tr class="header">
-<th><div class="content-wrapper">
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="images/image2022-3-1_16-31-35_small.png" class="confluence-embedded-image" srcset="images/image2022-3-1_16-31-35_big.png 2x, images/image2022-3-1_16-31-35_small.png 1x" height="400" /></span></p>
-</div></th>
-<th><div class="content-wrapper">
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="images/image2022-3-1_16-32-0_small.png" class="confluence-embedded-image" srcset="images/image2022-3-1_16-32-0_big.png 2x, images/image2022-3-1_16-32-0_small.png 1x" height="400" /></span></p>
-</div></th>
-<th><div class="content-wrapper">
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="images/image2022-3-1_16-32-32_small.png" class="confluence-embedded-image" srcset="images/image2022-3-1_16-32-32_big.png 2x, images/image2022-3-1_16-32-32_small.png 1x" height="400" /></span></p>
-</div></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-At this point you need to use either \`push\` for duo factor auth on the
-smart device, or \`phone\` for a call or \`sms\` for a collection of one
-time passcodes. It's also worth noting that on linux **openconnect**
-<a href="http://www.infradead.org/openconnect/" class="external-link">http://www.infradead.org/openconnect/</a>
-is a great tool for the job.
-
-  
+Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
 
 ### Installing visit
 
