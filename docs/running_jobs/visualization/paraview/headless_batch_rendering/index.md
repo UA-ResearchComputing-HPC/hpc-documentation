@@ -220,7 +220,7 @@ The `--array` option allows us to dynamically specify the number of array jobs t
         2125119_20  standard paraview sohampal  R       0:01      1 cpu45
 ...
 ```
-The output has been truncated to fit in to the space. You can see the jobs with array indices 101 to 900 are yet to start, while jobs with lower indices are running. It will take close to 14 seconds per frame for a simple animated scene like this, and since there are more frames to render than there are jobs to run, some jobs will take longer than others because they will render more than one frame. Perform either an HD or a 4K render of your material, instead of both, if the render times become too long.
+The output has been truncated to fit in to the space. You can see the jobs with array indices 101 to 900 are yet to start, while jobs with lower array indices are running. It will take close to 14 seconds per frame for a simple animated scene like this, and since there are more frames to render than there are jobs to run, some jobs will take longer than others because they will render more than one frame. Perform either an HD or a 4K render of your material, instead of both, if the render times become too long.
 
 ### Rendering Movie
 
