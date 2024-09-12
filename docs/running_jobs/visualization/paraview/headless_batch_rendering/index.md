@@ -1,133 +1,120 @@
-When producing rendering a video we can speed things up tremendously by recognizing that each frame is independent of every other. This allows us to perform the rendering of each frame of a video output in parallel. In this tutorial you will learn to prepare a scene in Paraview, and save its "state" so that a slurm array batch processing job can then render all the frames in a fraction of the time. At the end of the process we will use ffmpeg to stitch all the frames together into a movie that we can use to share our visualization results.
+When producing a rendering video we can speed things up tremendously by recognizing that each frame is independent of every other. This allows us to perform the rendering of each frame of a video output in parallel. In this tutorial you will learn to prepare a scene in ParaView, and save its "state" so that Slurm array jobs can then render all the frames in parallel, taking a fraction of the time it would otherwise take. At the end of the process you will use FFmpeg to stitch all the frames together into a movie.
 
-## Part one: Making an animation in the Paraview Graphical User Interface
+## Making an animation with ParaView GUI
 
-First follow the steps to launch Paraview that are explained in [Getting Started With ParaView GUI](../getting_started_with_paraview_gui/). Go ahead and generate a simple geometry that we are going to use for visualizing.
+Follow the steps in [Getting Started With ParaView GUI](../getting_started_with_paraview_gui/index.md) to launch ParaView. Generate a simple geometric shape, such as a cone, for this tutorial. You can select one from the **Sources → Geometric Shapes** drop down menu. Select **Apply** to see the geometry in the viewport on the right.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-27-20_0.png 1x" width="1500" /></span>
+<img src="images/paraview-cone.png" alt="ParaView cone shape"/>
 
-Here I'm going with a cone shape selected from the **Sources** drop down menu. Make sure to select apply or you won't see your geometry in the viewport on the right.
+Select the **Animation View** option from the **View** drop down menu. A pane titled **Animation View** will appear in the bottom of the window.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-28-56_0.png 1x" height="250" /></span>
+<img src="images/paraview-view-animation-view.png" alt="ParaView Animation View option in View menu"/>
 
-Next, make sure the `animation view`is visible by using the drop down menu.
+The **Animation View** pane will show an option to add an orbit camera animation track. Click the blue cross to add it. For more information on cameras, see [Cameras And Keyframes](../cameras_and_keyframes/index.md).
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-30-5_0.png 1x" height="400" /></span>.
+<img src="images/paraview-camera-blue-cross.png" alt="ParaView Animation View add camera"/>
 
-We are going to add an orbit camera animation track which is also talked about in greater detail here [Cameras And Keyframes](../cameras_and_keyframes/). Don't forget to select the blue cross to add the track.
+After adding a **Camera**, double click on it. This will open a window titled **Animation Keyframes**, containing a table. Double click the cell that says *Path*.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-31-13_0.png 1x" height="400" /></span>
+<img src="images/paraview-camera-path.png" alt="ParaView camera Animation Keyframes"/>
 
-Then double click on the Camera and double click the cell that says
-`Path`.
+This will open up a window titled **Key Frame Interpolation**.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-32-21_0.png 1x" height="400" /></span>
+<img src="images/paraview-camera-key-frame.png" alt="ParaView camera Key Frame Interpolation"/>
 
-This opens up a window with another panel, and once you select the positions element you will see a yellow line added to the viewport containing the cone geometry.
+Selecting the **Camera Position** element will add a yellow line added to the viewport containing the cone geometry. You can move the yellow line from the middle of the geometric shape with the middle mouse button.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-35-22_0.png 1x" height="250" /></span>
+<img src="images/paraview-cone-move-track.png" alt="ParaView camera move yellow line"/>
 
-Use the middle mouse button to move the track slightly of from the mid line of the cone
+Select the **Up Direction** element in the **Key Frame Interpolation** window and change the values to 0, 0, 1. Without this the camera will face sideways. 
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-36-9_0.png 1x" height="250" /></span>
+<img src="images/paraview-cone-up-direction.png" alt="ParaView camera up direction"/>
 
-Then select the `Up Direction` element and make sure that we have 0,0,1 or the camera will be facing sideways
+Click **Ok**, and return to the **Animation View**. Set both the *Number of Frames* and *End Time* to 1000. This will be important later when we use Slurm array jobs to produce a rendering video, as it will allow Slurm to identify frames by whole numbers. 
 
- <span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-37-31_0.png 1x" height="250" /></span>
+<img src="images/paraview-animation-view-num-frames.png" alt="ParaView Animation View set number of frames and end time to 1000"/>
 
-Click **Ok**, and return to the animation view. On here we are going to set the` number of frames` to 1000 and the `end time` to 1000. This distinction is important for allowing our parallel tasks to use whole numbers to identify which frame to render. 
+Click the **Play** button and see the camera orbiting around the geometric shape in the viewport. If this looks correct, save the ParaView state file by either clicking the **Save State** button, or selecting **Save State** from the **File** drop down menu.
 
-<span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-40-4_0.png 1x" height="250" /></span></span>
+<img src="images/paraview-save-state.png" alt="ParaView save state"/>
 
-At this point you should be able to click the play button and see the camera orbiting around the cone in the viewport.
+## Parallel Rendering with Slurm Array Jobs
 
-<span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-42-18_0.png 1x" height="250" /></span></span>
+The ParaView state file represents the data corresponding to the geometric shape and the animated camera perspective. We will render it in parallel with Slurm array jobs and create a video. 
 
-If this looks correct to you save the `paraview state file` with the name `cone_orbit.pvsm` with the file drop down menu.
-
-<span class="legacy-color-text-default"><span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-41-54_0.png 1x" height="400" /></span></span>
-
-## Part two: Slurm Array Batch Parallel Rendering
-
-We are ready to render now that we have the paraview state file representing our data and the animated camera perspective we want to make into a video. The first step is to get the singularity container that has a headless version of paraview in it. This means that we don't have to have a display connected for the program to be able to make graphical outputs. The code below is
-
+Start an interactive session on the HPC, and pull an Apptainer container with a headless version of ParaView 5.11.0 in it:
 ```bash
-apptainer pull -F docker://ghcr.io/devinbayly/paraview_headless:latest
+apptainer pull oras://ghcr.io/e-eight/containers/paraview-headless
 ```
-
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_21-41-3_0.png 1x" height="150" /></span>
-
-There will probably be more output if you haven't done this container pull before since it will need to fetch the individual layers and add them to the `.sif` file that is created in the current directory.
-
-We will now construct 3 separate scripts that we will use for our rendering. The first one is the slurm array job batch submission script. For more information about these kinds of allocation requests read up on [Batch Jobs](../../../batch_jobs/intro/).
-
-In this code you will need to replace your allocation account where it says `visteam`, but that is the only critical modification.
-
-### `headless_batch.sh`
-
+This will create a file called `paraview-headless_latest.sif`. Headless means that the program does not have access to a display to make graphical outputs. This works because we will use ParaView only to render the frames, not to view the movie. If the pulling the container fails for any reason, you can create one from an Apptainer definition file containing the following:
 ```bash
+Bootstrap: docker
+From: debian:bookworm-slim
+
+%post
+  apt update -y
+  apt install -y libgomp1 curl wget libglu1-mesa-dev freeglut3-dev mesa-common-dev libxcursor*
+  cd /opt
+  wget "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.0-osmesa-MPI-Linux-Python3.9-x86_64.tar.gz" -O paraview.tar.gz
+  tar xf paraview.tar.gz
+  rm paraview.tar.gz
+  apt-get clean && rm -rf /var/lib/apt/lists/*
+
+%environment
+  export PATH=/opt/ParaView-5.11.0-osmesa-MPI-Linux-Python3.9-x86_64/bin:$PATH
+```
+See [Containers](../../../../software/containers/what_are_containers/index.md) to learn more about Apptainer containers, and how to create them. 
+
+
+We will now construct one Slurm script and one Python script that we will use for our rendering. The Slurm script will submit an array job. For more information, on Slurm array jobs, see [Array Jobs](../../../batch_jobs/array_jobs/index.md). The Python script will contain all the logic for rendering the frames with ParaView.
+
+### Slurm Script
+
+In the following script replace `visteam` with your allocation account. 
+
+```bash title="headless_batch.slurm"
 #!/bin/bash
-#SBATCH --output=logs/Sample_SLURM_Job-%a.out
-#SBATCH --job-name=paraview_headless
+#SBATCH --output=logs/%x-%a.out
+#SBATCH --error=logs/%x-%a.err
+#SBATCH --job-name=paraview-headless
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --time=00:30:00
 #SBATCH --partition=standard
 #SBATCH --account=visteam
-mkdir -p logs
-pvsm_pth=$1 
-apptainer exec paraview_headless_latest.sif /bin/bash render_headless.sh "$pvsm_pth" ${SLURM_ARRAY_TASK_ID}
+
+pvsm_pth=$1
+apptainer exec paraview-headless_latest.sif pvpython render.py --pvsm "$pvsm_pth" --frame ${SLURM_ARRAY_TASK_ID}
 ```
 
-As it is written this will allocate 1 CPU task for the task of headlessly rendering a single frame with an upper time limit of 30 mins. Note that there is a `${SLURM_ARRAY_TASK_ID}` environment variable in use but no `#SBATCH --array=` line. This is because it is often nice to have the option to specify the size of the array job at run time as we will see below. This will simply start our headless singularity container for each array job and execute a script that is a wrapper around the ParaView `pvpython` program.
+As it is written this will allocate 1 CPU task for the task of headlessly rendering a single frame with an upper time limit of 30 mins. Note that there is a `${SLURM_ARRAY_TASK_ID}` environment variable in use but no `#SBATCH --array=` line. This is because it is often nice to have the option to specify the size of the array job at run time as we will see below. This will simply start the Apptainer container for each array job and execute a script that is a wrapper around the ParaView `pvpython` program. For more information on the `pvpython` program, see [Getting Started with ParaView Terminal](../getting_started_with_paraview_terminal/index.md).
 
-### `render_headless.sh`
+This next file is where many of the interesting bits actually are. 
 
-```bash
-!/bin/bash
+### Python Script
 
-/opt/ParaView-5.11.0-RC2-osmesa-MPI-Linux-Python3.9-x86_64/bin/pvpython  render.py --pvsm "$1" --frame "$2"
-```
+This script was initially generated with the `trace` utility built into ParaView. With the `trace` utility you can make a Python script by recording interactions with the ParaView GUI. For more information, see [Trace Recorder](https://www.paraview.org/Wiki/ParaView_and_Python#Trace_Recorder). The comments in the script explain what the code does.
 
-This file is really only here to allow us to encapsulate a rather long command which uses the path to the ParaView `pvpython` program inside the container to run the render.py python script with our ParaView state file's path, and our array job task ID as a frame number to render.
-
-This next file is where many of the interesting bits actually are. It should also be noted that this program was initially generated with the `trace` utility built into ParaView. This allows us to make a Python script by recording interactions within the GUI. For more information see, [https://www.paraview.org/Wiki/ParaView_and_Python#Trace_Recorder](https://www.paraview.org/Wiki/ParaView_and_Python#Trace_Recorder") Since most of the important explanations for this code are context sensitive I will switch to comments in code block below.
-
-### `render.py`
-
-```python
-# state file generated using paraview version 5.11.0-RC1
+```python title="render.py"
+# state file generated using paraview version 5.11.0
 from paraview.simple import *
 import paraview
 import os
 import argparse
 from pathlib import Path
 import time
-import uuid
 
 # this is for helping us determine the run time of each frame's render
 start = time.perf_counter()
 # get frame number to render and the path to the pvsm file to load
 parser = argparse.ArgumentParser()
-parser.add_argument("--pvsm")
+parser.add_argument("--pvsm", type=Path)
 parser.add_argument("--frame")
 args = parser.parse_args()
 
-#load the pvsm file
-# this brings in our cone geometry, as well as the animation track that we created with the orbiting camera
-paraview.simple.LoadState(args.pvsm)
+# load the pvsm file
+# this brings in our geometric shape, as well as the animation track that we created with the orbiting camera
+paraview.simple.LoadState(args.pvsm.name)
 paraview.compatibility.major = 5
 paraview.compatibility.minor = 11
 
@@ -150,17 +137,16 @@ renderView1.CenterAxesVisibility = 0
 # note: the Get..() functions create a new object, if needed
 # ----------------------------------------------------------------
 
-
 print(GetSources())
 
-#find out how many frames are in our animation
+# find out how many frames are in our animation
 
 anim = GetAnimationScene()
 print("animation length is",anim.EndTime)
 
 
 if __name__ == '__main__':
-#figure out what the output folder is for the frame
+# figure out what the output folder is for the frame
 
     render_folder = Path(f"{Path(args.pvsm.stem)}_renders")
 
@@ -191,12 +177,13 @@ if __name__ == '__main__':
         frame+=max_array_id
         continue
 
-# Otherwise go ahead and render them out using the correct resolutions
+# otherwise go ahead and render them out using the correct resolutions
       SaveScreenshot(f"{png_pth_hd}",renderView1,ImageResolution=[1920,1080])
       SaveScreenshot(f"{png_pth_4k}",renderView1,ImageResolution=[3840,2160])
       print("saved")
 
-# move on to the next frame that might need rendering using the number of array jobs as our offset. This ensures that we can use smaller sets of array jobs and still render all the frames we need.
+# move on to the next frame that might need rendering using the number of array jobs as our offset
+# this ensures that we can use smaller sets of array jobs and still render all the frames we need.
       frame+=max_array_id
 
 # get an end time for performance measuring
@@ -204,32 +191,49 @@ if __name__ == '__main__':
     print(f"elapsed {end-start}")
 ``` 
 
-The following command actually kicks off our rendering job. It allows us to dynamically specify the number of array jobs that will be run, and we will pass in the Slurm batch script as the second argument followed by the name of the ParaView state file. This state file's name will be used to generate a folder where our images are getting saved. We are using a vertical tmux split so that we can watch the queue of these jobs and see if they are actually running. It will take close to 14 seconds per frame for a simple animated scene like this, and since we have more frames to render than we have jobs to run, some jobs will take longer than others because they will render more than one frame. Note, you don't have to perform both an HD and a 4K render of your material either if the render times are becoming too long.
+### Submitting Array Jobs
 
+Submit a Slurm job array with the following, replacing `<state_file>` with the path to the ParaView state file that you had saved earlier:
 ```bash
-    sbatch --array=0-900 headless_batch.sh cone_orbit.pvsm
+sbatch --array=0-900 headless_batch.sh <state_file>
 ```
+The `--array` option allows us to dynamically specify the number of array jobs that we want to run, `0-900` means we specified a job array with array indices 0 to 900. After submitting the job, it might take a while to start, depending on the resource availability of the cluster. You can check the status of the job with `squeue -u <netid>`, replacing `<netid>` with your NetID. Assuming you have not submitted any other jobs and this job has started, you will see an output like the following:
+```bash
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+ 2125119_[101-900]  standard paraview sohampal PD       0:00      1 (None)
+         2125119_4  standard paraview sohampal  R       0:01      1 cpu39
+         2125119_5  standard paraview sohampal  R       0:01      1 cpu43
+         2125119_6  standard paraview sohampal  R       0:01      1 cpu43
+         2125119_7  standard paraview sohampal  R       0:01      1 cpu45
+         2125119_8  standard paraview sohampal  R       0:01      1 cpu45
+         2125119_9  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_10  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_11  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_12  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_13  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_14  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_15  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_16  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_17  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_18  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_19  standard paraview sohampal  R       0:01      1 cpu45
+        2125119_20  standard paraview sohampal  R       0:01      1 cpu45
+...
+```
+The output has been truncated to fit in to the space. You can see the jobs with array indices 101 to 900 are yet to start, while jobs with lower indices are running. It will take close to 14 seconds per frame for a simple animated scene like this, and since there are more frames to render than there are jobs to run, some jobs will take longer than others because they will render more than one frame. Perform either an HD or a 4K render of your material, instead of both, if the render times become too long.
 
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-11-38_0.png 1x" height="400" /></span>
+### Rendering Movie
 
-{==Before moving on to the next step ensure that all tasks have cleared because even one or two missing frames will cause errors in the next video production step.==}
-
-Making a video from the frames is a common task in visualization and is mentioned in other pages ([VisIt](../../visit/), [Blender](../../blender/)).
-
-<span
-class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png " class="confluence-embedded-image" srcset="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png 2x, ../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989289/image2023-2-4_22-14-15_0.png 1x" width="412" height="250" /></span>
-
-First ensure you have access to ffmpeg:
+From an interactive session load the `ffmpeg` module:
 
 ```bash
 module load ffmpeg
 ```
-
-Then use each frame as input to generate a video with no codec for the highest possible quality in other editing softwares
+Stitch together all the frames to generate a video, replacing `<video_name>` with the desired name for your video file:
 
 ```bash
-ffmpeg -i frame_%06d_HD.png -r 10 -c:v copy cone_orbit_HD.mov
+ffmpeg -i frame_%06d_HD.png -r 10 -c:v copy <video_name>
 ```
+You can automate the creation of this video with Slurm job dependencies. For more information, see [Job Dependencies](../../../batch_jobs/job_dependencies/index.md). This is the highest possible quality video that you can use in other video editing software without any codec. It shows the entire render in sequence even though all the frames were generated in parallel. Below is a gif created from the video file for a cone geometry.
 
-You now should have an HD movie showing the entire render in sequence even though all the frames were generated in parallel. Enjoy!
+![](images/cone_orbit_HD.gif)
