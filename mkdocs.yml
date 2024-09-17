@@ -29,7 +29,6 @@ nav:
     - Compute Resources: resources/compute_resources/index.md
     - Research Data Center: resources/data_center/index.md
     - Secure Services: resources/secure_hpc/index.md
-    - Updates: resources/updates/index.md
 
   - Access:
     - Account Creation: registration_and_access/account_creation/index.md
