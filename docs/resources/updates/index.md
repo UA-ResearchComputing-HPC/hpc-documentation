@@ -1,6 +1,6 @@
-In September 2024,  UA HPC Systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9. 
+# OS updates pre-announcement
 
-This update will have a number of impacts, but we are taking steps to minimize disruptions to HPC users
+In September 2024, UA HPC systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9. This update will have a number of impacts, but we are taking steps to minimize disruptions to HPC users.
 
 !!! success "Things to not worry about"
 
@@ -21,7 +21,6 @@ This update will have a number of impacts, but we are taking steps to minimize d
 
     * Previously functioning software modules no longer work in your analysis workflow.
     * You are uncertain whether you need to recompile your own software, or need assistance with recompilation.
-
 
   
 ## Submitting jobs to the updated cluster
