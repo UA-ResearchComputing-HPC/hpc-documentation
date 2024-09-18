@@ -19,6 +19,7 @@ This update will have a number of impacts, and  HPC staff are taking steps to mi
     * HPC staff have recompiled public software modules when necessary.
     * The majority of software modules previously available will remain available, sometimes with version changes.
     * The Open on Demand graphical interface is not yet available for the updated operating system
+    * Only one updated GPU node is currently available, limiting the abillity to test GPU code.
 
 !!! tip "When to contact HPC support"
 
