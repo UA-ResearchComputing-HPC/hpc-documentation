@@ -18,12 +18,12 @@ This update will have a number of impacts, and  HPC staff are taking steps to mi
     * Some previously compiled software will not run on the new system, and will need to be recompiled.
     * HPC staff have recompiled public software modules when necessary.
     * The majority of software modules previously available will remain available, sometimes with version changes.
+    * The Open on Demand graphical interface is not yet available for the updated operating system
 
 !!! tip "When to contact HPC support"
 
     * Previously functioning software modules no longer work in your analysis workflow.
     * You are uncertain whether you need to recompile your own software, or need assistance with recompilation.
-
 
   
 ## Submitting jobs to the updated cluster
