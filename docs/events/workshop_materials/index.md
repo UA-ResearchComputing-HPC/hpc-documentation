@@ -4,6 +4,15 @@
 
 This page contains a catalogue of our previous training materials. Feel free to browse, interact, download, and share as you see fit. See our [Calendar](../calendar/) for upcoming virtual or in-person workshop events. 
 
+## Fall 2024
+
+| Topic | Recording | Slides | 
+| - | :-: | :-: | 
+| HPC Overview and Access | [:fontawesome-brands-youtube:](https://youtu.be/-coYkKonS0o) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/1DLCz4FHqqOKCyZMl5nkgfYhn7E8RFEqu76_EH0vOLws/edit?usp=sharing)
+| Storage and Software Overview | [:fontawesome-brands-youtube:](https://youtu.be/blF9zL5E_2Q) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/1X19vX_aIYxP87JsA6VIItWgAeyyEjb9eiaGbiv2u6Zc/edit?usp=sharing)
+| Scheduling and Running Jobs | [:fontawesome-brands-youtube:](https://youtu.be/Swz0tgj4iBs) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/18IoGcKwaip4-P6xDlXMm46aTlpfquu9XDUVF7lGNs5c/edit?usp=sharing)
+
+## Previous Workshops
 
 <div class="grid cards" markdown>
 

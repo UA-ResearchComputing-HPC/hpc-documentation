@@ -20,11 +20,11 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 
 ### Fall 2024 Workshop Schedule
 
-| Date | Topic | Room | Instructor |
-| - | - | - | - |
-|Sep 6  | HPC Overview and Access | Main B252/254 | Ethan Jahn |
-|Sep 13 | Storage and Software Overview | Main B252/254 | Ethan Jahn |
-|Sep 20 | Scheduling and Running Jobs | Weaver 212  | Ethan Jahn |
+| Date | Topic | Room | Instructor | Recording | Slides | 
+| - | - | - | - | :-: | :-: | 
+|Sep 6  | HPC Overview and Access | Main B252/254 | Ethan Jahn | [:fontawesome-brands-youtube:](https://youtu.be/-coYkKonS0o) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/1DLCz4FHqqOKCyZMl5nkgfYhn7E8RFEqu76_EH0vOLws/edit?usp=sharing)
+|Sep 13 | Storage and Software Overview | Main B252/254 | Ethan Jahn | [:fontawesome-brands-youtube:](https://youtu.be/blF9zL5E_2Q) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/1X19vX_aIYxP87JsA6VIItWgAeyyEjb9eiaGbiv2u6Zc/edit?usp=sharing)
+|Sep 20 | Scheduling and Running Jobs | Weaver 212  | Ethan Jahn | [:fontawesome-brands-youtube:](https://youtu.be/Swz0tgj4iBs) | [:fontawesome-brands-google-drive:](https://docs.google.com/presentation/d/18IoGcKwaip4-P6xDlXMm46aTlpfquu9XDUVF7lGNs5c/edit?usp=sharing)
 |Sep 27 | Managing and Optimizing Jobs | Weaver 212 | Ethan Jahn |
 |Oct 4  | Parallel Computing Theory | Weaver 212 | Ethan Jahn |
 |Oct 11 | Parallel Computing in Practice | Weaver 212 | Soham Pal |
