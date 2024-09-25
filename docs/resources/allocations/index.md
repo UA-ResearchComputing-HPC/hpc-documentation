@@ -8,7 +8,7 @@
 
 ## Group Allocations
 
-All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to UArizona High Performance Computing (HPC) services receive free standard allocations on the HPC clusters which are shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
+All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to Arizona High Performance Computing (HPC) services receive free standard allocations on the HPC clusters which are shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
 
 !!! Warning "High Priority"
 

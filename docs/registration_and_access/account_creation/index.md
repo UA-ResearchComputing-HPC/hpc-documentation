@@ -1,7 +1,7 @@
 # Account Creation
 
 ## Overview
-All UArizona Faculty, Staff, Students, and Affiliates are eligible for HPC accounts free of cost.
+All Arizona Faculty, Staff, Students, and Affiliates are eligible for HPC accounts free of cost.
 
 If you are considered to be a PI in the University's employee system (EDS) you may establish a PI account. PI Accounts are self-sponsored, manage their own HPC group(s), and receive their own time and storage allocations to be shared among group members. Staff, students and affiliates must be sponsored by a PI at the PI's discretion to obtain HPC access. Users may be a member of more than one HPC group.
 
@@ -37,7 +37,7 @@ The process of registering for an HPC account varies depending on your affiliati
      <br><br>
     <b>Step 1</b>: Create an HPC account by navigating to <a href="https://portal.hpc.arizona.edu/">https://portal.hpc.arizona.edu/</a>.
     <br><br>
-    <b>Step 2</b>: Request sponsorship from a UArizona faculty member. Note: Your faculty sponsor will need their own HPC account before they are able to sponsor others.
+    <b>Step 2</b>: Request sponsorship from a Arizona faculty member. Note: Your faculty sponsor will need their own HPC account before they are able to sponsor others.
     <br> 
     To request sponsorship, navigate to <a href="https://portal.hpc.arizona.edu/portal/sendlink.php">https://portal.hpc.arizona.edu/portal/sendlink.php</a>. On the right-hand side, enter your sponsor's email address and click send. 
     
@@ -54,7 +54,7 @@ The process of registering for an HPC account varies depending on your affiliati
 <button class="collapsible">I'm not affiliated with the university</button>
 <div class="content"> 
     <p>
-    HPC systems are restricted to those with valid university credentials and are not available for general public use. However, if you are not officially affiliated with the university but are actively collaborating with university members, you may register for <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC) status</a>. This is done through human resources and provides collaborators with active UArizona credentials. Once your DCC status is approved, you may request sponsorship from a university faculty member (see the section above).
+    HPC systems are restricted to those with valid university credentials and are not available for general public use. However, if you are not officially affiliated with the university but are actively collaborating with university members, you may register for <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC) status</a>. This is done through human resources and provides collaborators with active Arizona credentials. Once your DCC status is approved, you may request sponsorship from a university faculty member (see the section above).
     </p>
 </div>
 

@@ -4,9 +4,9 @@
 
 ## Overview
 
-Welcome to the University of Arizona's (UArizona) High Performance Computing (HPC)! 
+Welcome to The University of Arizona's High Performance Computing (HPC)! 
 
-This Quick Start Tutorial is the place to be if you are new to HPC, or simply wish to take a refresher of the basics. We will cover some concepts that are general to HPC, as well as those that are specific to the system here at UArizona.
+This Quick Start Tutorial is the place to be if you are new to HPC, or simply wish to take a refresher of the basics. We will cover some concepts that are general to HPC, as well as those that are specific to the system here at Arizona.
 
 ## Getting Started Checklist
 
@@ -24,7 +24,7 @@ Before beginning this tutorial, you'll want to ensure that you're familiarized w
 By the end of this quick start, you should know:
 
 - [x] What HPC is
-- [x] How the UArizona HPC is structured
+- [x] How Arizona HPC is structured
 - [x] How to log in
 - [x] What storage you have access to
 - [x] What time allocations are

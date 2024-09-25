@@ -1,5 +1,5 @@
 ---
-title: UArizona HPC Events Calendar
+title: Arizona HPC Events Calendar
 ---
 <link rel="stylesheet" href="../../assets/stylesheets/events.css">
 <link rel="stylesheet" href="../../assets/stylesheets/images.css">
@@ -75,7 +75,7 @@ Please check out these workshops and activities from our partners around campus!
 
 - The Data Science Institute's [official calendar](https://datascience.arizona.edu/calendar)
 - Data Lab [home page](https://datainsight.arizona.edu/uarizona-data-lab)
-- The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
+- The Arizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
 
 
 

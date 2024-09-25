@@ -1,4 +1,4 @@
-site_name: UArizona HPC Documentation
+site_name: Arizona HPC Documentation
 repo_url: https://github.com/UA-ResearchComputing-HPC/hpc-documentation
 
 
@@ -117,11 +117,11 @@ nav:
         - Blender Command Line Rendering: running_jobs/visualization/blender/command_line_rendering/index.md
         - Scaling Up Blender Rendering: running_jobs/visualization/blender/scaling_up_blender_rendering/index.md
       - ParaView: 
-        - Essential Ideas: running_jobs/visualization/paraview/essential_ideas/index.md
-        - Getting Started with Paraview GUI: running_jobs/visualization/paraview/getting_started_with_paraview_gui/index.md
-        - CGAl Vespa: running_jobs/visualization/paraview/cgal_vespa/index.md
+        - Overview: running_jobs/visualization/paraview/overview/index.md
+        - Intro to Paraview GUI: running_jobs/visualization/paraview/getting_started_with_paraview_gui/index.md
+        - CGAL Vespa: running_jobs/visualization/paraview/cgal_vespa/index.md
         - Paraview Python Plugins: running_jobs/visualization/paraview/paraview_python_plugins/index.md
-        - Getting Started with Paraview Terminal: running_jobs/visualization/paraview/getting_started_with_paraview_terminal/index.md
+        - Intro to Paraview Terminal: running_jobs/visualization/paraview/getting_started_with_paraview_terminal/index.md
         - Graphs and Exporting Data: running_jobs/visualization/paraview/graphs_and_exporting_data/index.md
         - Cameras and Keyframes: running_jobs/visualization/paraview/cameras_and_keyframes/index.md
         - Headless Batch Rendering: running_jobs/visualization/paraview/headless_batch_rendering/index.md
@@ -181,6 +181,7 @@ nav:
 
 markdown_extensions:
   - attr_list
+  - def_list
   - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji

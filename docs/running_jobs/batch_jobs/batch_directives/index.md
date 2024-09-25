@@ -9,7 +9,7 @@ The first section of a batch script (after the shebang) always contains the Slur
  
 ## Allocations and Partitions
 
-The partitions, or queues, on the UArizona HPC which determine the priority of your jobs and resources available to them are shown in the table below. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
+The partitions, or queues, on the U of A HPC which determine the priority of your jobs and resources available to them are shown in the table below. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
 
 !!! info "{==:material-alert-decagram:NEW!==} Updated Partitions"
     To improve GPU resource availability, we have three new partitions: `gpu_standard`, `gpu_windfall`, and `gpu_high_priority`. This will prevent CPU-only jobs from occupying GPU node resources. GPU jobs must use the new partitions to be submitted successfully.
@@ -208,8 +208,8 @@ Filenames take patterns that allow for job information substitution. A list of f
 |<pre><code>#SBATCH --job-name=JobName</code></pre>|Optional: Specify a name for your job. This will not automatically affect the output filename.|
 |<pre><code>#SBATCH -e output_filename.err<br>#SBATCH -o output_filename.out</code></pre>|Optional: Specify output filename(s). If ```-e``` is missing, stdout and stderr will be combined.|
 |<pre><code>#SBATCH --open-mode=append</code></pre>|Optional: Append your job's output to the specified output filename(s).|
+|<pre><code>#SBATCH --mail-user=email@address.xyz</code></pre>|Optional: Specify email address. If this is missing, notifications will go to your Arizona email address by default.|
 |<pre><code>#SBATCH --mail-type=BEGIN&#124;END&#124;FAIL&#124;ALL</code></pre>|Optional: Request email notifications. **Beware of mail bombing yourself.**|
-|<pre><code>#SBATCH --mail-user=email@address.xyz</code></pre>|Optional: Specify email address. If this is missing, notifications will go to your UArizona email address by default.|
 |<pre><code>#SBATCH --export=VAR</pre></code>|Optional: Export a comma-delimited list of environment variables to a job.|
 |<pre><code>#SBATCH --export=all</pre></code>|Optional: Export your working environment to your job. This is the default.|
 |<pre><code>#SBATCH --export=none</pre></code>|Optional: Do not export working environment to your job.|

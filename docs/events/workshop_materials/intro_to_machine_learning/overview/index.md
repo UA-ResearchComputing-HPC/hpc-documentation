@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../../../assets/stylesheets/buttons.css">
 # Intro to Machine Learning on HPC
 
-This workshop introduces some of the basic concepts of machine learning, and shows how you can leverage UArizona HPC systems for machine learning. We recommend that you try the hands-on examples.
+This workshop introduces some of the basic concepts of machine learning, and shows how you can leverage Arizona HPC systems for machine learning. We recommend that you try the hands-on examples.
 
 ## What is machine learning?
 > "The training of programs developed by allowing a computer to learn from its experience, rather than through manually coding the individual steps."
@@ -57,7 +57,7 @@ flowchart LR
     - Trained models often learn biases in data
 - Lot of machine learning has traditionally been known as Statistics
 
-## Why use (UArizona) HPC for machine learning?
+## Why use HPC for machine learning?
 
 - Datasets are becoming larger and more varied
 - Models are becoming larger

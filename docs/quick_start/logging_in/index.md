@@ -17,7 +17,7 @@ Once you've successfully registered for an HPC account, you're ready to log in. 
 
 1. **Open OnDemand**
 
-	This is a browser-based application that provides users with a graphical interface to access the HPC filesystem, run software that requires a graphical component, or access an interactive desktop environment. The [login portal for Open OnDemand](https://ood.hpc.arizona.edu/) uses the familiar UArizona WebAuth login screen. HPC accounts are tied to university accounts, so use your standard NetID and password (i.e. the one used for your email).
+	This is a browser-based application that provides users with a graphical interface to access the HPC filesystem, run software that requires a graphical component, or access an interactive desktop environment. The [login portal for Open OnDemand](https://ood.hpc.arizona.edu/) uses the familiar Arizona WebAuth login screen. HPC accounts are tied to university accounts, so use your standard NetID and password (i.e. the one used for your email).
 
 2. **Terminal**
 

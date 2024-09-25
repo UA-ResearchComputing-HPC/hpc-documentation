@@ -54,7 +54,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
     ---
 
-    This workshop introduces some of the basic concepts of ML, and techniques that can be used on the UArizona HPC.
+    This workshop introduces some of the basic concepts of ML, and techniques that can be used on the Arizona HPC systems.
 
     <center>
     [Overview](intro_to_machine_learning/overview/index.md){ .md-button }
@@ -88,7 +88,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
     ---
 
-   	An overview of how to use the Matlab Statistics and Machine Learning toolbox on the UArizona HPC.
+   	An overview of how to use the Matlab Statistics and Machine Learning toolbox on the Arizona HPC systems.
 
     <center>
 	[PDF Slides](intro_to_statistics/files/IntroToStatistics.pdf){ .md-button }
@@ -101,7 +101,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
     ---
 
-    Learn about managing your data on UA's HPC cluster. Co-sponsored with University Libraries.
+    Learn about managing your data on Arizona's HPC systems. Co-sponsored with University Libraries.
 
     <center>
 	[PDF (Part 1)](data_management_workshops/files/2022_Part_1_Data_Management_in_the_HPC.pdf){ .md-button }

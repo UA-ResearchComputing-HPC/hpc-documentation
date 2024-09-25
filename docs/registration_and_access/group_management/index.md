@@ -19,7 +19,7 @@ There are two types of Groups:
 
 ## Research Groups
 
-If you are a faculty member who has [registered for an HPC account](../account_creation/), a research group named after your UArizona NetID has been automatically created for you. This group has [an allocation of CPU hours](../../resources/allocations/) associated with it as well as [communal storage for your data](../../storage_and_transfers/storage/hpc_storage/).
+If you are a faculty member who has [registered for an HPC account](../account_creation/), a research group named after your Arizona NetID has been automatically created for you. This group has [an allocation of CPU hours](../../resources/allocations/) associated with it as well as [communal storage for your data](../../storage_and_transfers/storage/hpc_storage/).
 
 **Membership and Allocation**
 
@@ -40,7 +40,7 @@ Click your group's dropdown tab and navigate to where it says **Add a new group 
 
 <img class="ood-screenshots" src="images/add_member.png" title="Add NetID">
 
-To add members in bulk, you may also select **Upload Member List** and upload a CSV file of UArizona NetIDs.
+To add members in bulk, you may also select **Upload Member List** and upload a CSV file of Arizona NetIDs.
 
 The process of adding new members may take a few seconds to complete. Once the changes have taken place, you will see the user's NetID in your group.
 

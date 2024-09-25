@@ -55,9 +55,9 @@ To create a Python virtual environment you need to be in an [interactive session
 
 1. Load these modules for GPU support.
 
-## Jupyter Notebooks on UArizona HPC
+## Jupyter Notebooks on Arizona HPC
 
-UArizona HPC provides access to Jupyter notebooks via [Open OnDemand](../../../../running_jobs/open_on_demand) (OOD). The following steps show how you can launch a Jupyter notebook from UArizona HPC's OOD portal:
+Arizona HPC provides access to Jupyter notebooks via [Open OnDemand](../../../../running_jobs/open_on_demand) (OOD). The following steps show how you can launch a Jupyter notebook from Arizona HPC's OOD portal:
 
 <div class="annotate" markdown>
 1. Navigate to [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/). After login, you will see the OOD dashboard.

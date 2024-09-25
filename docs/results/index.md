@@ -14,7 +14,7 @@ hide:
 
 !!! tip "Have you used our HPC for your published research? Let us know and we'll add you to the list!"
 
-Our users do some really cool stuff! Check out the list below for publications that were made possible by UArizona's HPC systems.
+Our users do some really cool stuff! Check out the list below for publications that were made possible by Arizona's HPC systems.
 
 
 <center>

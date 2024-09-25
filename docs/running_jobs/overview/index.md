@@ -10,7 +10,7 @@ HPC operates as a shared system with resources in high demand. Computational tas
 
 ## New to HPC?
 
-If you are new to the UArizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../events/workshop_materials/intro_to_hpc/), [parallel computing](../../events/workshop_materials/intro_to_parallel_computing/), and [containers](../../events/workshop_materials/intro_to_containers/), among other topics. 
+If you are new to the Arizona HPC system, or to HPC systems in general, we recommend reviewing our [quick start guide](../quick_start/) before getting into the details of running jobs. You may also want to take a look at our workshops which cover topics including [introduction to HPC](../../events/workshop_materials/intro_to_hpc/), [parallel computing](../../events/workshop_materials/intro_to_parallel_computing/), and [containers](../../events/workshop_materials/intro_to_containers/), among other topics. 
 
 
 ## Best Practices
@@ -46,7 +46,7 @@ When creating a job request, please keep the following in mind:
 
 ## Frequently Asked Questions 
 
-Below is a FAQ that includes answers to common questions and misconceptions about running jobs on HPC. Some are general information about HPC systems, but some contain information specific to the UArizona HPC. We recommend reviewing this FAQ whether you are a new user getting started on our system, or an experienced user returning to our documentation.
+Below is a FAQ that includes answers to common questions and misconceptions about running jobs on HPC. Some are general information about HPC systems, but some contain information specific to the Arizona HPC. We recommend reviewing this FAQ whether you are a new user getting started on our system, or an experienced user returning to our documentation.
 
 <html>
 <link rel="stylesheet" href="../../assets/stylesheets/animated_dropdown.css">

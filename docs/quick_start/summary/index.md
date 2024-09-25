@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 # Summary
 
-That's it! You now should have a sense of how UArizona's HPC systems are laid out, how to log in, and how to access compute nodes and software.
+That's it! You now should have a sense of how Arizona's HPC systems are laid out, how to log in, and how to access compute nodes and software.
 
 To continue learning about HPC, our online documentation has a lot more information that can help get you started. For example [FAQs](../../support_and_training/faqs/), information on [HPC storage](../../storage_and_transfers/storage/hpc_storage/), and [file transfers](../../storage_and_transfers/transfers/overview/). You may also want to check out [our workshops as well as other community events](../../events/calendar/) which offer great training materials on a variety of topics. 
 
@@ -20,7 +20,7 @@ While this documentation covers some concepts and techniques that are widely app
 
 
 
-Please note that information related to other HPC clusters may not necessarily apply to the UArizona HPC cluster. Each system is configured differently, and what may be supported on another system may not be supported here, or vice versa. Please refer to this documentation site for information specific to the UArizona HPC, or ask [HPC Consult](/support_and_training/consulting_services/) if you have any questions.
+Please note that information related to other HPC clusters may not necessarily apply to the Arizona HPC cluster. Each system is configured differently, and what may be supported on another system may not be supported here, or vice versa. Please refer to this documentation site for information specific to the Arizona HPC, or ask [HPC Consult](/support_and_training/consulting_services/) if you have any questions.
 
 <iframe src="https://giphy.com/embed/XreQmk7ETCak0" width="480" height="360" frameBorder="0"></iframe><p><a href="https://giphy.com/gifs/retro-thumbs-up-XreQmk7ETCak0"></a></p>
 

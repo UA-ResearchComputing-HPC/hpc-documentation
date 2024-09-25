@@ -2,7 +2,7 @@
 
 
 ## Overview
-The University of Arizona's High Performance Computing (HPC) clusters are servers (computing nodes) and associated high performance storage. There are additional nodes to meet specific needs like high amounts of memory or GPUs. All UArizona research faculty can sign up for free monthly allocation [following these directions](/registration_and_access/account_creation/). For researchers who need compute resource beyond the free standard allocation, and who have funding available, we encourage 'buy-in' of additional compute nodes.
+The University of Arizona's High Performance Computing (HPC) clusters are servers (computing nodes) and associated high performance storage. There are additional nodes to meet specific needs like high amounts of memory or GPUs. All Arizona research faculty can sign up for free monthly allocation [following these directions](/registration_and_access/account_creation/). For researchers who need compute resource beyond the free standard allocation, and who have funding available, we encourage 'buy-in' of additional compute nodes.
 
 ## Benefits of Buy-in
 |||
@@ -12,7 +12,7 @@ The University of Arizona's High Performance Computing (HPC) clusters are server
 |**Flexible Capacity**|Buy-in research group members also benefit from their resources being integrated into a larger computing resource. This means the buy-in resources can be used in conjunction with the free allocation and resources provided to address computational projects that would be beyond the capacity of a group running an independent system alone.|
 |**Shared Resource**|The University research computing community as a whole benefits from buy-in expansions to the HPC systems. As mentioned above, researchers who buy-in receive 100% of the allocation of time for their purchase. However if the buy-in resources are not fully utilized, they are made available as [windfall resources](../../resources/allocations#__tabbed_1_2). This helps to ensure full use of all HPC resources and can be used to justify future purchases of computing resources.|
 |**Cost Competitiveness**|Lower costs included in the grant proposals (i.e. hardware only, no operations costs) and evidence of campus cost‐sharing give a positive advantage during funding agency review.|
-|**Pricing**|For the year following the award the UArizona HPC request for proposal (RFP) pricing is locked in and is often considerably less than the "market price."|
+|**Pricing**|For the year following the award the Arizona HPC request for proposal (RFP) pricing is locked in and is often considerably less than the "market price."|
 
 ## Buy-in Policies
 * For Puma, the University of Arizona could only purchase whole chassis units from Penguin Computing. That is 4 CPU nodes (option 1D), 1 GPU node with 4 GPUs (option 2D), or 1 high memory nodes (option 3). Research Computing worked to match partial node buy-in requests to make full nodes.

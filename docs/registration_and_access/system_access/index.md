@@ -2,7 +2,7 @@
 
 ## Overview
 
-Logging into the HPC supercomputers starts with your UArizona NetID and password with two-factor authentication enabled. This section is intended to provide you with instructions on getting terminal access to the system from your specific OS, how to log into the system from our web interface (Open OnDemand), how to set up X11 (image) forwarding, and how to configure your account to allow for a password-less login with SSH keys.
+Logging into the HPC supercomputers starts with your Arizona NetID and password with two-factor authentication enabled. This section is intended to provide you with instructions on getting terminal access to the system from your specific OS, how to log into the system from our web interface (Open OnDemand), how to set up X11 (image) forwarding, and how to configure your account to allow for a password-less login with SSH keys.
 
 If you experience any problems, refer to our [FAQ page](../../support_and_training/faqs/) which provides some solutions to common problems.
 
@@ -56,7 +56,7 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
     ```bash
     ssh <netid>@hpc.arizona.edu
     ```
-    where `<netid>` is your UArizona NetID. When you press enter, you will be prompted for your university password. After successfully entering your password, you will be prompted to Duo Authenticate. If everything is successful, you will be connected to the bastion host.
+    where `<netid>` is your Arizona NetID. When you press enter, you will be prompted for your university password. After successfully entering your password, you will be prompted to Duo Authenticate. If everything is successful, you will be connected to the bastion host.
 
 === "Windows"
      Windows systems do not have any built-in support for using SSH, so you will have to download a software package to do so. There are several available for Windows workstations.  Free SSH clients are available for download from the University of Arizona's [Site License website](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=26fe95e12f309150a55e95acf699b686&sysparm_category=4bced1e12f309150a55e95acf699b6ad).  
@@ -79,11 +79,11 @@ If you experience any problems, refer to our [FAQ page](../../support_and_traini
             
         <img src="images/MobaXterm-session.png" title="MobaXterm session" width="650px"/>
 
-        From there, select **SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your UArizona NetID. To connect, click OK at the bottom of the screen:
+        From there, select **SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your Arizona NetID. To connect, click OK at the bottom of the screen:
         
         <img src="images/MobaXterm-connect.png" title="MobaXterm SSH" width="650"/>
             
-        This will open a terminal and will prompt you for your UArizona password. You will then need to Duo-authenticate. If everything is successful, you will be connected to the bastion host.
+        This will open a terminal and will prompt you for your Arizona password. You will then need to Duo-authenticate. If everything is successful, you will be connected to the bastion host.
         
         
 Once you reach the bastion host, regardless of method, you should see the following:
@@ -214,7 +214,7 @@ The steps to set up port forwarding are the following:
 
 2. **Connect to the HPC VPN**
 
-    [The HPC VPN](../vpn/) can be used with Cisco AnyConnect using `vpn.hpc.arizona.edu`. This is different from the standard university VPN and will allow you to connect directly to a compute node, bypassing the bastion and login nodes. 
+    [The HPC VPN](../vpn/) can be used with Cisco AnyConnect using `vpn.hpc.arizona.edu`. This is different from the standard Arizona VPN and will allow you to connect directly to a compute node, bypassing the bastion and login nodes. 
 
     !!! warning "Use the HPC VPN"
 
