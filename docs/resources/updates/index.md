@@ -1,3 +1,6 @@
+# Updates 
+
+
 In September 2024,  UA HPC Systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9.
 
 A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation.  Compute hour allocations on the test system will be independent of allocations on the existing Puma system.  
