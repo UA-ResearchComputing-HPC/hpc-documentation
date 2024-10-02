@@ -162,14 +162,26 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
-  <!-- August 22 2024-->
+  <!-- August 22 2024 -->
   <tr><td>Burrell, D. J., Spencer, M. F., & Driggers, R. G. (2024). <a href="https://www.sciencedirect.com/science/article/pii/S0030401824006977">Open-loop wavefront sensing in the presence of speckle and weak scintillation</a>. <i>Optics Communications</i>, 130960.</td></tr>
+
+  <!-- July 19 2024 -->
+  <tr><td>Sundman, M. H., Green, J. M., Fuglevand, A. J., & Chou, Y.-H. (2024). <a href="https://pubmed.ncbi.nlm.nih.gov/39132326/">TMS-derived short afferent inhibition discriminates cognitive status in older adults without dementia</a>. <i>Aging Brain, 6:100123.</i></td></tr>
+
+  <!-- December 2023 -->
+  <tr><td>Sundman, M. H., De Vault, B. E. A., Chen, Y. A., Madhavan, L., Fuglevand, A. J., & Chou, Y.-H. (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/37827912/">The (hyper)excitable brain: What can a ubiquitous TMS measure reveal about cognitive aging?</a> <i>Neurobiology of Aging, 132</i>, 250-252.</td></tr>
 
   <!-- November 3 2023 -->  
   <tr><td>Das Goswami, B. R., Jabbari, V., Shahbazian-Yassar, R., Mashayek, F., & Yurkiv, V. (2023). <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.3c05395?casa_token=v-5UQqtBjAsAAAAA:0VWfvq72p-YTxZN_hLTHCalgSDbUeYF8-zZEpcZM-9-k-No7agztfcnTNAx_3C7ePg3uwq52Ls0CbcA">Unraveling Ion Diffusion Pathways and Energetics in Polycrystalline SEI of Lithium-Based Batteries: Combined Cryo-HRTEM and DFT Study</a>. <i>The Journal of Physical Chemistry C</i>.</td></tr>
 
+  <!-- September 23 2023 -->
+  <tr><td>Kuo, P. H., Chen, Y. A., Rodriguez, R. Stuehm, C., Chalasani, P., Chen, N.-K., & Chou, Y.-H. (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/37836847/">Transcranial magnetic stimulation for the treatment of chemo brain</a>. <i>Sensors, 23(19)</i>:8017.
+
   <!-- March 5 2023 -->
   <tr><td>Gonzalez, E., Zarei, A., Hendler, N., Simmons, T., Zarei, A., Demieville, J., ... & Pauli, D. (2023). <a href="https://www.frontiersin.org/articles/10.3389/fpls.2023.1112973/full">PhytoOracle: Scalable, modular phenomics data processing pipelines</a>. Frontiers in Plant Science, 14.</td></tr>
+
+  <!-- February 2023 -->
+  <tr><td>Liu, Y., Lim, K., Sundman, M., Ugonna, C., Ton That, V., Cowen, S., & Chou, Y.-H. (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/35620910/">Association between responsiveness to transcranial magnetic stimulation and interhemispheric functional connectivity of sensorimotor cortex</a>. <i>Brain Connectivity, 13(1)</i>. 39-50.</td></tr>
 
   <!-- November 23 2022 -->
   <tr><td>Gong, Z., Rodriguez, N., Gagatsos, C. N., Guha, S., & Bash, B. A. (2022) <a href="https://ieeexplore.ieee.org/abstract/document/9962776">Quantum-Enhanced Transmittance Sensing.</a> <i>IEEE Journal of Selected Topics in Signal Processing, 17(2), 473-490.</i></td></tr>
@@ -185,6 +197,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 
   <!-- July 1 2022 -->
   <tr><td>Song, J. P., Clay, R. T., & Mazumdar, S. (2022). <a href="https://arxiv.org/abs/2207.00628">Valence Transition Theory of the Pressure-Induced Dimensionality Crossover in Superconducting Sr $ _ {14-x} $ Ca $ _x $ Cu $ _ {24} $ O $ _ {41} $</a>. <i>arXiv preprint arXiv:2207.00628</i>.</td></tr>
+
+  <!-- May 24 2022 -->
+  <tr><td>Chen, A. Y., Ton That, V., Ugonna, C., Liu, Y., Nadal, L., & Chou, Y.-H. (2022). <a href="https://pubmed.ncbi.nlm.nih.gov/35594397/">Diffusion MRI-guided theta burst stimulation enhances memory and functional connectivity along inferior longitudinal fasciculus in mild cognitive impairment</a>. <i>Proc Natl Acad Sci U S A, 119(21)</i>, e2113778119.</td></tr>
 
   <!-- May 9 2022 -->
   <tr><td>Dunham, A. M., Kiser, E., Kargel, J. S., Haritashya, U. K., Watson, C. S., Shugar, D. H., ... & DeCelles, P. G. (2022). <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2022GL098582">Topographic control on ground motions and landslides from the 2015 Gorkha earthquake</a>. <i>Geophysical Research Letters</i>, e2022GL098582.</td></tr>
@@ -264,6 +279,11 @@ Our users do some really cool stuff! Check out the list below for publications t
   <!-- January 2021 -->
   <tr><td>Tanjaroon, C., Mills, D. D., Hoyos, C. A. J., & Kukolich, S. G. (2021). <a href="https://www.sciencedirect.com/science/article/pii/S0009261420310617?casa_token=FSoEbAoFQDMAAAAA:R7Ex38gJJMj-AvZhV1BaQ2M9znEeN0hBqEHxYUGl0Tpq3o7pL4qnuq636YBftlN7jq6gmiFX-iU">Calculations and analysis of 55Mn nuclear quadrupole coupling for asymmetric top acyl methyl manganese pentacarbonyl</a>. <i>Chemical Physics Letters, 762</i>, 138151.</td></tr>
 
+  <!-- November 27 2020 -->
+  <tr><td>Sundman. M., Lim, K., Ton That, V., Mizell, J.-M., Ugonna, C., Rodriguez, R., Chen, N.-K., Fuglevand, A. J., Liu, Y., Wilson, R. C., Fellous, J.-M., Rapcsak, S., & Chou, Y.-H. (2020). <a href="https://pubmed.ncbi.nlm.nih.gov/33376989/">Transcranial magnetic stimulation reveals diminished homeostatic metaplasticity in cognitively impaired adults</a>. <i>Brain Communications, 2</i>, fcaa203.</td></tr>
+
+  <!-- May 30 2020 -->
+  <tr><td>Kuo, H. P., Zhang, X., Stuehm, C. Chou, Y.-H., Chen, N.-K. (2020). <a href="http://www.ischp.org/journal/index.php/jischp/article/view/2">Functional magnetic resonance imaging reveals Taiji effects on neuronal networks of the brain</a>. <i>Journal of Chinese Health Practices</i>.</td></tr>
   <!-- April 23 2020 -->
   <tr><td>Jaworski, C. C., Allan, C. W., & Matzkin, L. M. (2020). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1755-0998.13176?casa_token=WqYIxOwcc7YAAAAA%3Abiea56x1QlXbsWPtBvVx6boxxHT59bt893uIyW80Wt1a6FiUgtOVeRg2tIA4kxKYV9dV0KuV7sYLDGg">Chromosome‐level hybrid de novo genome assemblies as an attainable option for nonmodel insects</a>. <i>Molecular ecology resources, 20</i>(5), 1277-1293.</td></tr>
 
@@ -296,6 +316,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 
   <!-- December 2018 -->
   <tr><td>Schissler, A. G., Piegorsch, W. W., & Lussier, Y. A. (2018). <a href="https://journals.sagepub.com/doi/full/10.1177/0962280217712271?casa_token=I5eJb1_M9SoAAAAA%3AGWleL04wVjZc1HZTobNrD1Pnwf1qrJNgLlHe48bbqa-U3eSWCNJlaMKQ9LJh_HoRtutBj4NjFHLGYA">Testing for differentially expressed genetic pathways with single-subject N-of-1 data in the presence of inter-gene correlation</a>. <i>Statistical methods in medical research, 27</i>(12), 3797-3813.</td></tr>
+
+  <!-- August 8 2018 -->
+  <tr><td>Chen, N.-K., Chou, Y.-H., Sundman, M., Hickey, P., Kasoff, W. S., Bernstein, A., Lin, T., Rapcsak, S. Z., Sherman, S. J., Weingarten, C. P. (2018). <a href="https://pubmed.ncbi.nlm.nih.gov/29877094/">Alteration of Diffusion-Tensor Magnetic Resonance Imaging Measures in Brain Regions Involved in Early Stages of Parkinson's Disease</a>. <i>Brain Connectivity, 8(6)</i>, 343-349.</td></tr>
 
   <!-- July 2018 -->
   <tr><td>Alsayoud, A. Q., Manga, V. R., Muralidharan, K., Vita, J., Bringuier, S., Runge, K., & Deymier, P. (2018). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0008622318300538">Atomistic insights into the effect of polymerization on the thermophysical properties of 2-D C-60 molecular solids</a>. <i>Carbon, 133</i>, 267-274.</td></tr>
