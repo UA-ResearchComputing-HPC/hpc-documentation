@@ -163,6 +163,10 @@ Our users do some really cool stuff! Check out the list below for publications t
  <table class="table">
 
   <!-- October 8 2024 -->
+  <tr><td>Wang, Y.-H., & Gupta, H. V. (2024). <a href="https://doi.org/10.1029/2024WR037224">Towards interpretable physical-conceptual catchment-scale hydrological modeling using the mass-conserving-perceptron</a>. <i>Water Resources Research</i>, 60, e2024WR037224.</td></tr>
+
+
+  <!-- October 8 2024 -->
   <tr><td>Burrell, D. J., Spencer, M. F., & Driggers, R. G. (2024). <a href="https://iopscience.iop.org/article/10.1088/2040-8986/ad7f67">Closed-loop adaptive optics in the presence of speckle and weak scintillation</a>. <i>Journal of Optics</i>.
 
   <!-- August 22 2024 -->
