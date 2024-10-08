@@ -162,6 +162,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
+  <!-- October 8 2024 -->
+  <tr><td>Burrell, D. J., Spencer, M. F., & Driggers, R. G. (2024). <a href="https://iopscience.iop.org/article/10.1088/2040-8986/ad7f67">Closed-loop adaptive optics in the presence of speckle and weak scintillation</a>. <i>Journal of Optics</i>.
+
   <!-- August 22 2024 -->
   <tr><td>Burrell, D. J., Spencer, M. F., & Driggers, R. G. (2024). <a href="https://www.sciencedirect.com/science/article/pii/S0030401824006977">Open-loop wavefront sensing in the presence of speckle and weak scintillation</a>. <i>Optics Communications</i>, 130960.</td></tr>
 
