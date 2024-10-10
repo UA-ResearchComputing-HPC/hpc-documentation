@@ -18,12 +18,38 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
 
 ## Account Access
 
+### Registration
 <html>
   
   <button class="collapsible">How do I create an account?</button>
   <div class="content">
     <p>A step by step guide is available in our <a href="../../../registration_and_access/account_creation/">Account Creation</a> page. </p>
   </div>
+
+  <button class="collapsible">I'm a faculty member. How do I sponsor users/add members to my HPC research group?</button>
+  <div class="content">
+    <p>Faculty members who manage their own HPC groups can use <a href="https://portal.hpc.arizona.edu">our user portal</a> to add members to their group. If the user does not have an HPC account, this will sponsor them for access. You may also add existing HPC members to your group. We have instructions in our <a href="../../../registration_and_access/group_management/">Research and Class Groups</a> page that detail the process with screenshots.</p>
+  </div>
+
+  <button class="collapsible">I'm a faculty member and have received a sponsorship request email from someone. How can I approve them for access?</button>
+  <div class="content">
+    <p>If you have received a sponsorship request email, you can click the link at the bottom to approve it. This will redirect you to the user portal and will automatically add the requestor to your HPC group. No further action is required after clicking the link.</p>
+    <img src="./images/sponsorship_email.png" title="Sponsorship email request" style="width:700px;">
+    <p>If there are any issues with the sponsorship process, you may add the user manually through <a href="https://portal.hpc.arizona.edu">our user portal</a> by following the instructions in our <a href="../../../registration_and_access/group_management/">Research and Class Groups guide</a>.</p>
+
+  </div>
+
+  <button class="collapsible">I'm leaving the university/retiring/not affiliated with the university, can I maintain/receive access to HPC?</button>
+  <div class="content">
+    <p>Yes, if you are a former university affiliate or campus collaborator participating in research, you may register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC)</a>. Once your DCC status has been approved, you will receive a NetID+ which you may use to <a href="../../../registration_and_access/account_creation/">create an HPC Account</a>.</p>
+    <p>If you are a graduating student or leaving your position of employment, see our <a href="../../policies/loss_of_university_affiliation/">policies page on affiliation loss</a> for more details.</p>
+  </div>
+
+  </html>
+
+### Login Issues
+
+  <html>
 
   <button class="collapsible">Why can't I log in?</button>
   <div class="content">
@@ -38,14 +64,20 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
       </ul></p>
   </div>
 
-  <button class="collapsible">Why can't I enter my password in my terminal?</button>
+  <button class="collapsible">Why doesn't my password show after the prompt when logging in'?</button>
   <div class="content">
     <p>Linux systems do not display character strokes while entering your password which can make it look like the SSH client is frozen. Even though it doesn't appear that anything is happening, the system is still logging your input. To proceed, type your password at the prompt and press enter.</p>
   </div>
 
+  <button class="collapsible">I've forgotten my password, how can I reset it?</button>
+  <div class="content">
+    <p>HPC uses the same NetID login credentials as all UArizona services. If you need to reset your NetID password you can do so using <a href="https://netid-portal.iam.arizona.edu/">the NetID portal</a>.</p>
+  </div>
+
   <button class="collapsible">Why am I getting "You do not appear to have registered for an HPC account"?</button>
   <div class="content">
-    <p>If you have just registered for an HPC account, you need to wait a little while for the request to propagate through the University systems (this can take up to an hour).  Patience &#128578; </p>
+    <p>If you have just registered for an HPC account, you need to wait a little while for the request to propagate through the University systems (this can take up to an hour). </p>
+    <p>If you have not yet received sponsorship for HPC access, you will need a faculty member/PI to sponsor you. If you are a PI, ensure you have sponsored yourself by adding yourself to your group. Instructions on account creation can be found in our <a href="../../registration_and_access/account_creation/">Account Creation page</a>.</p>
   </div>
 
   <button class="collapsible">Why am I getting "permission denied" when I try to log in?</button>
@@ -69,20 +101,6 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
     </p>
   </div>
 
-  <button class="collapsible">I've forgotten my password, how can I reset it?</button>
-  <div class="content">
-    <p>HPC uses the same NetID login credentials as all UArizona services. If you need to reset your NetID password you can do so using <a href="https://netid-portal.iam.arizona.edu/">the NetID portal</a>.</p>
-  </div>
-
-  <button class="collapsible">How do I add members to my HPC research group?</button>
-  <div class="content">
-    <p>Faculty members who manage their own HPC groups can follow the instructions in our <a href="../../../registration_and_access/group_management/">Research and Class Groups</a> page.</p>
-  </div>
-
-  <button class="collapsible">I'm leaving the university/retiring/not affiliated with the university, can I maintain/receive access to HPC?</button>
-  <div class="content">
-    <p>Yes, if you are a former university affiliate or campus collaborator participating in research, you may register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague (DCC)</a>. Once your DCC status has been approved, you will receive a NetID+ which you may use to <a href="../../../registration_and_access/account_creation/">create an HPC Account</a>. If you already have an HPC Account, no further action is required.</p>
-  </div>
 
 </html>
 
@@ -108,15 +126,16 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
   <button class="collapsible">Why isn't my job running?</button>
   <div class="content">
     <p>
+    There are a few reasons your job may not be running, check below for some ideas on diagnosing the issue:
         <ul>
-        <li>There are a few reasons your job may not be running, check below for some ideas on diagnosing the issue:
-        Run <code>squeue --job <jobid></code> and see if there is anything listed under <code>(REASON)</code>. This may give an idea why your job is stuck in queue. We have a <a href="../../../running_jobs/monitoring_jobs_and_resources/#slurm-reason-codes">table in our Slurm documentation</a> that describes what each Reason code means. </li>
-        <li>Due to the number of HPC users, it may not always be possible to run a submitted job immediately. If there are insufficient resources available, your job will be queued and it may take up to a few hours for it to begin executing.</li>
-        <li>Your group may have run out of standard hours. You can check your allocation using the command <code>va</code>.</li>
-        <li>Your group/job has reached a resource usage limit (e.g., number of GPUs that may be used concurrently by a group, or a job has requested more than the 10 day max walltime). Try running <code>job-limits &#60;group_name&#62;</code> to see what limits you're subject to and if there are any problem jobs listed.</li>
-        <li>You may be requesting a rare resource (e.g., 4 GPUs on a single node on Puma or a high memory node).
+        <li>
+        <b>Run squeue</b>: On the command line, run <code>squeue --job=&lt;jobid&gt;</code> and see if there is anything listed under the column <code>(REASON)</code>. This may give an idea why your job is stuck in queue. We have a <a href="../../../running_jobs/monitoring_jobs_and_resources/#slurm-reason-codes">table in our Slurm documentation</a> that describes what each Reason code means.</li>
+        <li><b>Resource availability</b>: Due to the number of HPC users, it may not always be possible to run a submitted job immediately. If there are insufficient resources available, your job will be queued and it may take up to a few hours for it to begin executing.</li>
+        <li><b>Allocation exhausted</b>: Your group may have run out of standard hours. You can check your allocation using the command <code>va</code>.</li>
+        <li><b>Resource usage limitations</b>: Your group/job has reached a resource usage limit (e.g., number of GPUs that may be used concurrently by a group, or a job has requested more than the 10 day max walltime). Try running <code>job-limits &#60;group_name&#62;</code> to see what limits you're subject to and if there are any problem jobs listed. For more information on limits, see <a href="../../running_jobs/job_limits/">Job Limits documentation</a>.</li>
+        <li><b>Requesting rare resources</b>: You may be requesting a rare resource (e.g., 4 GPUs on a single node on Puma or a high memory node).
         <ul>
-            <li>If you are requesting a single GPU on Puma and are frustrated with the wait times, you might consider checking if Ocelote will work for your analyses. There are more GPU nodes available on that cluster, typically with shorter wait times.</li>
+            <li>If you are requesting a single GPU on Puma and are frustrated with the wait times, you might consider checking if Ocelote will work for your analyses. There are more GPU nodes available on that cluster, typically with shorter wait times. See our <a href="../../resources/compute_resources/">Compute Resources page</a> for more information on the resources available by cluster.</li>
             <li>If you are trying to run a job on a standard node and have been waiting for a very long time, try checking its status using <code>job-history &#60;jobid&#62;</code>. If you see <code>Allocated RAM/CPU</code> above 5 GB on Puma or above 6 GB on Ocelote, then you are queued for the high memory node which can have very long wait times. To queue for a standard node, cancel your job and check that your script has <a href="../../../running_jobs/cpus_and_memory/">the correct ratios</a>.</li>
         </ul></li>
         </ul>
@@ -220,7 +239,7 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
 ---------------------------------------------------------------------------------------------- -->
 
 
-## General Computing
+## Command Line
 
 <html>
   <button class="collapsible">Why aren't common commands working?</button>
@@ -298,6 +317,7 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
 
 ## Open OnDemand Issues
 
+### Website Access
 <html>
     
   <button class="collapsible">Why am I getting a message saying I'm not sponsored when trying to log in?</button>
@@ -309,6 +329,15 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
             <li>You have not yet been sponsored by a faculty member. See our <a href="../../../registration_and_access/account_creation/">Account Creation</a> page for instructions on getting registered for HPC.</li>
             <li>If you are already registered for HPC, this may be a browser issue. Try logging in again in an incognito session or different browser to test. If this succeeds, clearing your browser's cookies should help.</li>
         </ul>
+    </p>
+  </div>
+
+  <button class="collapsible">Why am I getting a message saying "Home directory not found"?</button>
+  <div class="content">
+    <p>If you're trying to log into Open OnDemand and are seeing the following, it means your home directory has not yet been created:</p>
+    <img src="./images/home_directory_not_found.png" title="Home directory not found" style="width:800px;">
+    <p>
+     Your home directory is created the first time you log into our system using a command line utility (such as the terminal, PuTTY, etc.). To create your home directory, either click the button <b style="color:#AB0520">Open Shell to create home directory</b> on the page, or <a href="../../registration_and_access/system_access/#command-line-access">log in via a command line utility</a>, then try logging into Open OnDemand again.
     </p>
   </div>
 
@@ -334,6 +363,11 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
     </p>
   </div>
 
+  </html>
+
+### Applications
+
+  <html>
   <button class="collapsible">Why are my Desktop sessions failing with 'Could not connect to session bus: failed to connect to socket /tmp/dbus-'?</button>
   <div class="content">
     <p>
