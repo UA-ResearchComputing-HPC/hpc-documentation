@@ -1,16 +1,15 @@
 # Updates 
 
+In September 2024, UA HPC systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9.
 
-In September 2024,  UA HPC Systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9.
+A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation. Compute hour allocations on the test system will be independent of allocations on the existing Puma system.
 
-A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation.  Compute hour allocations on the test system will be independent of allocations on the existing Puma system.
-
-This update will have a number of impacts, and  HPC staff are taking steps to minimize disruptions to HPC users
+This update will have a number of impacts, and we are taking steps to minimize disruptions to HPC users
 
 !!! success "Things to not worry about"
 
     * All user files will remain unchanged. 
-    * The SLURM scheduler and procedure for submitting jobs will remain unchanged. 
+    * The Slurm scheduler and procedure for submitting jobs will remain unchanged. 
     * HPC systems will continue to be available for use during the OS update. 
 
 !!! note "Things to note"
@@ -34,7 +33,7 @@ This update will have a number of impacts, and  HPC staff are taking steps to mi
 
 * A subset of nodes will be converted to the new OS, effectively creating a new cluster.
 * Initially, the updated cluster can be selected by entering `puma-tst`, just as the target cluster is currently specified by entering `puma`, `ocelote` or `elgato`. 
-* The resources available on the new Puma cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, SLURM batch scripts that work properly on Puma should work on the new Puma without modifications.
+* The resources available on the new Puma cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
 
 ## Important software changes 
 
@@ -72,7 +71,7 @@ The existing Anaconda modules on the HPC automatically load The Anaconda Reposit
 We are considering the following changes to help users transition to a new setup that will not be affected by the license restrictions:
 
 1. {==Deprecating the existing Anaconda modules.==} We will not install any new version of Anaconda. The existing modules will stay for a while, likely not beyond the end of the year, to give users time to transition to the new setup.
-2. {==We will create a new module based on the [Miniforge](https://github.com/conda-forge/miniforge) distribution.==} Miniforge provides access to two tools — `conda` and [`mamba`](https://mamba.readthedocs.io/en/latest/) — and the `conda-forge` repository.
+2. {==Creating a new module based on the [Miniforge](https://github.com/conda-forge/miniforge) distribution.==} Miniforge provides access to two tools — `conda` and [`mamba`](https://mamba.readthedocs.io/en/latest/) — and the `conda-forge` repository.
 
 With the Miniforge module you will be able to do the following:
 
