@@ -3,7 +3,7 @@
 
 In September 2024,  UA HPC Systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9.
 
-A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation.  Compute hour allocations on the test system will be independent of allocations on the existing Puma system.  
+A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation.  Compute hour allocations on the test system will be independent of allocations on the existing Puma system.
 
 This update will have a number of impacts, and  HPC staff are taking steps to minimize disruptions to HPC users
 
@@ -34,7 +34,7 @@ This update will have a number of impacts, and  HPC staff are taking steps to mi
 
 * A subset of nodes will be converted to the new OS, effectively creating a new cluster.
 * Initially, the updated cluster can be selected by entering `puma-tst`, just as the target cluster is currently specified by entering `puma`, `ocelote` or `elgato`. 
-* The resources available on the new Puma cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, SLURM batch scripts that work properly on Puma should work on the new Puma without modifications.    
+* The resources available on the new Puma cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, SLURM batch scripts that work properly on Puma should work on the new Puma without modifications.
 
 ## Important software changes 
 
@@ -57,3 +57,26 @@ This update will have a number of impacts, and  HPC staff are taking steps to mi
 | petsc-real/intel | petsc |
 | gsl-intel | gsl |
 | phdf5-intel | phdf5 |
+
+### Anaconda / Conda / Mamba
+
+While not part of the OS updates itself, we want to take this opportunity to bring to your attention upcoming changes to our use of Anaconda. Anaconda.org has started enforcing license restrictions which has necessitated these changes. You can read more about the license restrictions [here](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
+
+In short:
+
+1. The license restrictions only come into effect when a user installs packages from [The Anaconda Repository](https://repo.anaconda.com/).
+2. The license restrictions **do not** apply if a user uses the `conda` tool to install packages from community repositories like `conda-forge`.
+
+The existing Anaconda modules on the HPC automatically load The Anaconda Repository, and thus come under the purview of the license restrictions. If you use a local installation of `conda `(**not** the Anaconda modules), and you **only** install packages from community repositories, you need not read any further. However, you might still find the following useful.
+
+We are considering the following changes to help users transition to a new setup that will not be affected by the license restrictions:
+
+1. {==Deprecating the existing Anaconda modules.==} We will not install any new version of Anaconda. The existing modules will stay for a while, likely not beyond the end of the year, to give users time to transition to the new setup.
+2. {==We will create a new module based on the [Miniforge](https://github.com/conda-forge/miniforge) distribution.==} Miniforge provides access to two tools — `conda` and [`mamba`](https://mamba.readthedocs.io/en/latest/) — and the `conda-forge` repository.
+
+With the Miniforge module you will be able to do the following:
+
+1. Install software from [`conda-forge`](https://conda-forge.org/), which is an extensive community repository. Whatever software you want, you will likely find it there. Of course, if required you will be able to use other repositories, except The Anaconda Repository.
+2. You can use `mambda` instead of `conda`. While access to `conda` will not go away, `mamba` is a **much, much faster** drop-in replacement for `conda`. Almost anything `conda` can do, `mamba` can do faster. Sometimes even succeeding where `conda` fails. We think you will have a much pleasant experience with `mamba` than with `conda`.
+
+If you are on the fence about this change, we highly recommend that you use the transition period to recreate and test your workflows and scripts with the `mamba` + `conda-forge` setup. Please do not wait till the last moment to make the necessary changes. While `mamba` is a drop-in replacement for `conda`, it is not a guarantee that your existing scripts will not break. Going forward, `mamba` + `conda-forge` will be the main setup that we support. We will share more details about how to use `mamba` shortly.
