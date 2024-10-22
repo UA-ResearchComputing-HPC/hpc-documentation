@@ -57,6 +57,15 @@ Room Information:
 <!-- ??? example "No listed events. Check back later."
     *If you have an event that you would like us to display here, please let us know!* -->
 
+**Generative AI and Deep Learning with MATLAB: A Visual Approach**
+
+- When: Thursday, November 14, 11:30-1:00pm
+- Location: Main Library B252/254, CATalyst Learning Studios
+- Registration Link: [https://libcal.library.arizona.edu/calendar/events/matlab](https://libcal.library.arizona.edu/calendar/events/matlab)
+- [Click to view flyer](images/matlab-ai-flyer.pdf)
+
+
+
 **Fall 2024 U of A Datalab Workshops**
 
 View these workshops on the [DataLab Website](https://datascience.arizona.edu/education/uarizona-data-lab)
