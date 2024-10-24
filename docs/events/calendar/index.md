@@ -33,8 +33,8 @@ We are excited to host a full semester's worth of workshops this Fall. All works
 |Nov 1  | Intro to Containers | Online Only | Soham Pal |
 |Nov 8  | Error Handling and Debugging | Weaver 212 | Ethan Jahn |
 |Nov 15 | Intro to Statistics | Weaver 212 | Chris Reidy |
-|Nov 22 | Using GPUs on HPC | Online Only | Soham Pal |
-|Dec 6  | Intro to Visualization | Weaver 212 | Devin Bayly |
+|Nov 22 | <details><summary>Intro to Visualization</summary>The Intro to Data Visualization presentation aims to give attendees a select tour of the visualization field, bridging theory and practice. We will explore theory used to inform the selection of chart types, and contents that support a researchers intended message. We will then practice the standard visualization development cycle of drafting, critiquing, and refactoring for a number of examples. Attendees must bring with them material to draw with, and will leave with a general thought process that may apply to any visualization task. Optional coding exercises for applying these concepts are provided.</details> | Weaver 212 | Devin Bayly |
+|Dec 6  | Using GPUs on HPC | Online Only | Soham Pal |
 |Dec 13 | Intermediate Techniques in Visualization | Weaver 212 | Devin Bayly |
 
 
