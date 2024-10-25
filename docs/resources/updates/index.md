@@ -1,8 +1,12 @@
 # Updates 
 
-In September 2024, UA HPC systems will begin transitioning from the now unsupported CentOS 7 operating system to Rocky Linux 9.
+The Puma cluster is currently being updated from the outdated Centos 7 operating system to Rocky linux 9.  This will involve updating both the operating system and much of the installed software.  
 
-A testing period is beginning, allowing experienced users to volunteer to test the new system. Initially the test system will contain several dozen nodes, allowing for significant computation. Compute hour allocations on the test system will be independent of allocations on the existing Puma system.
+* A small number of nodes were previously made available in a testing environment.
+* **At the October 30th maintanance, an initial subset of compute nodes will be available for full production runs.**
+* During November and December 2024 more nodes will be updated.
+
+See the below for information on using the new system.
 
 This update will have a number of impacts, and we are taking steps to minimize disruptions to HPC users
 
@@ -14,6 +18,7 @@ This update will have a number of impacts, and we are taking steps to minimize d
 
 !!! note "Things to note"
 
+    * Compute hour allocations on the test system will be independent of allocations on the existing Puma system. 
     * Significant changes to system software have occurred, most importantly: 
         * updating the default compiler from GCC 8 (module `gnu8`) to GCC 13 (module `gnu13`).
         * updating the default MPI distribution from OpenMPI 3 (module `openmpi3`) to OpenMPI 5 (module `openmpi5`).
@@ -31,9 +36,22 @@ This update will have a number of impacts, and we are taking steps to minimize d
   
 ## Submitting jobs to the updated cluster
 
-* A subset of nodes will be converted to the new OS, effectively creating a new cluster.
-* Initially, the updated cluster can be selected by entering `puma-tst`, just as the target cluster is currently specified by entering `puma`, `ocelote` or `elgato`. 
-* The resources available on the new Puma cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
+* Subsets of nodes will be converted to the new OS, effectively creating a new cluster.
+* The updated cluster can be selected by entering `puma9`, just as the target cluster is currently specified by entering `puma`, `ocelote` or `elgato`. 
+* The resources available on the Puma9 cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
+
+## Adapting existing analyses. 
+Users may use currently cluster resources in a number of different ways.  Here are general guidelines for adapting to the new environment.  
+### Users of Open on Demand
+Open on Demand users should be able to continue usage unchanged. 
+### Users of software modules
+Users who load analysis software with the "module load" command will generally be able to continue their work unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
+### Users of conda environments
+Although we recommend switching to **Mamba** going forward, many conda users should be able to continue using their existing environments, although in some cases may need to recreate them.
+### Users of Python
+Users who run pure python code, with or without the use of virtual enviroments will likely be able to continue their analyses unchanged.  The same versions of python are available on Puma9
+### Users who compile code themselves
+In many cases user-compiled software will need to be recompiled to run on Puma9.
 
 ## Important software changes 
 
