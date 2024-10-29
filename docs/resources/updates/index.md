@@ -5,10 +5,11 @@ The Puma cluster is currently being updated from the outdated Centos 7 operating
 * A small number of nodes were previously made available in a testing environment.
 * **At the October 30th maintanance, an initial subset of compute nodes will be available for full production runs.**
 * During November and December 2024 more nodes will be updated.
+* In January all nodes will be updated, by which point all users must transition to continue using Puma resources.
 
 See the below for information on using the new system.
 
-This update will have a number of impacts, and we are taking steps to minimize disruptions to HPC users
+This update will have a number of impacts, and we are taking steps to minimize disruptions to HPC users.
 
 !!! success "Things to not worry about"
 
@@ -25,13 +26,6 @@ This update will have a number of impacts, and we are taking steps to minimize d
     * Some previously compiled software will not run on the new system, and will need to be recompiled.
     * HPC staff have recompiled public software modules when necessary.
     * The majority of software modules previously available will remain available, sometimes with version changes.
-    * The Open on Demand graphical interface is not yet available for the updated operating system
-    * Only one updated GPU node is currently available, limiting the abillity to test GPU code.
-
-!!! tip "When to contact HPC support"
-
-    * Previously functioning software modules no longer work in your analysis workflow.
-    * You are uncertain whether you need to recompile your own software, or need assistance with recompilation.
 
   
 ## Submitting jobs to the updated cluster
@@ -41,11 +35,13 @@ This update will have a number of impacts, and we are taking steps to minimize d
 * The resources available on the Puma9 cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
 
 ## Adapting existing analyses. 
-Users may use currently cluster resources in a number of different ways.  Here are general guidelines for adapting to the new environment.  
+If you have difficulty using the new updated Puma9 system, Please open a support ticket:  [HPC support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) 
+
+**Researchers may currently use cluster resources in a number of ways.  Here are general guidelines for adapting to the new environment:**  
 ### Users of Open on Demand
 Open on Demand users should be able to continue usage unchanged. 
 ### Users of software modules
-Users who load analysis software with the "module load" command will generally be able to continue their work unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
+Users who load analysis software with the "module load" command will generally be able to continue their analyses unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
 ### Users of conda environments
 Although we recommend switching to **Mamba** going forward, many conda users should be able to continue using their existing environments, although in some cases may need to recreate them.
 ### Users of Python
