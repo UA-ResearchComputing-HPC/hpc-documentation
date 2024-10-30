@@ -33,14 +33,27 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 
 <html>
 
+
+  <button class="collapsible">October 30, 2024</button>
+  <div class="content">
+    <p>
+    <b>Type</b>: Rolling Maintenance
+    <ul>
+    <li>Routine patching of all nodes and storage array.</li>
+    <li>OS upgrades continue. A block of nodes were migrated from CentOS 7 to Rocky 9, accessible from the login nodes using <code>puma9</code>. More details can be found on our <a href="../../resources/updates/">OS Updates page</a>.</li>
+    </ul>
+    </p>
+  </div>
+
   <button class="collapsible">July 31, 2024</button>
   <div class="content">
     <p>
     <b>Type</b>: Rolling Maintenance
-
+    <ul>
     <li><a href="../../running_jobs/open_on_demand/">OnDemand graphical jobs</a> limited to four days to support general resource availability.</li>
     <li><a href="https://portal.hpc.arizona.edu/">User portal</a> upgraded to support mobile clients. </li>
     <li><a href="../../running_jobs/batch_jobs/batch_directives/#allocations-and-partitions">New GPU partitions</a> introduced to improve GPU resource availability.</li>
+    </ul>
     </p>
   </div>
 
@@ -48,10 +61,11 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
   <div class="content">
     <p>
     <b>Type</b>: Rolling Maintenance
-
+    <ul>
     <li>OnDemand Upgrade.</li>
     <li>Gatekeeper moved to EL8 operating system.</li>
     <li>Enabled job script storage in slurm accounting.</li>
+    </ul>
     </p>
   </div>
 
@@ -60,13 +74,14 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
   <div class="content">
     <p>
     <b>Type</b>: Rolling Maintenance
-
+    <ul>
     <li>General operating system patches.</li>
     <li>Qumulo storage array update.</li>
     <li>Slurm configuration improvements.</li>
     <li>Metrics (XDMOD) OS upgrade.</li>
     <li>RStudio Server support for R version 4.3.2.</li>
     <li>OnDemand OS upgrades.</li>
+    </ul>
     </p>
   </div>
   <script src="../../../assets/javascripts/animated_dropdown.js"></script>
