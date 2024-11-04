@@ -255,7 +255,7 @@ extra:
           name: This page could be improved
           data: 0
           note: >-
-            Thanks for your feedback! Have suggestions for improvements? <a target="_blank" href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f">Contact us</a>. 
+            Thank you for your feedback! Have ideas to improve our site? Please share them in our quick, anonymous <a href="https://forms.gle/WWMkVU66A6pJvmhc9" target="_blank" rel="noopener">feedback form</a>. Your input helps us enhance our documentation!
   generator: false
   social:
     - icon: material/email
