@@ -1,5 +1,9 @@
 # Anaconda
 
+!!! Danger "Anaconda modules are deprecated"
+
+    Anaconda on UA HPC is now deprecated, which means no new version of the Anaconda distribution will be installed, and the existing modules will be removed some time in the future. We recommend users to modify their workflow to replace Anaconda with Mamba. For more information on how to use Mamba, check our [Mamba](../mamba/index.md) guide.
+
 !!! Warning "Known Issues with Anaconda"
 
     Anaconda is known to cause potential issues on HPC Clusters. If it is possible to design your workflow around the native Python package manager Pip, we highly encourage you to do so. 

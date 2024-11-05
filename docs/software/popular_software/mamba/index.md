@@ -9,7 +9,7 @@ Anaconda
 : Anaconda is a distribution built around Conda. It includes hundreds of packages, and access to the Anaconda repository, besides the package manager itself. The use of Anaconda on our HPC systems is now deprecated, due to recent developments in how the company behind Anaconda licenses the Anaconda repository. You can read more on that in the [Anaconda FAQs](https://www.anaconda.com/pricing/terms-of-service-faqs).
 
 Mamba
-: Mamba is a package manager which was initially developed as a faster alternative to Conda. It can create and manage Conda environments. For most cases, Mamba is a drop-in replacement for Conda. Mamba comes in multiple flavors. For more information, see the [Mamba documentation](https://mamba.readthedocs.io/en/latest/). The most relevant to for this documentation is the binary `micromamba`. For the rest of the document we will specifically focus on `micromamba`.
+: Mamba is a package manager which was initially developed as a faster alternative to Conda. It can create and manage Conda environments. For most cases, Mamba is a drop-in replacement for Conda. Mamba comes in multiple flavors, see the [Mamba documentation](https://mamba.readthedocs.io/en/latest/) for more information. The most relevant to us is the binary `micromamba`. For the rest of the document we will specifically focus on `micromamba`.
 
 Environment
 : In the context of this document, an environment is a directory that contains a specific collection of packages that you have installed. We will only consider Conda environments in this document, i.e. environments that can be created and managed with Conda. All flavors of Mamba, including `micromamba`, can create and manage Conda environments.
@@ -23,13 +23,11 @@ Environment
 You can check the available versions of `micromamba` with `module avail micromamba`. Once you have decided which version you want, you can load it and initialize it. You have to initialize it only once.
 
 In an interactive session, replacing <version> with your desired `micromamba` module version:
-
 ```bash
 module load micromamba/<version>
 micromamba shell init -s bash -r ~/micromamba
 source ~/.bashrc
 ```
-
 This will create a directory called `micromamba` in your home folder in which your Conda environments and associated packages will be installed.
 
 !!! Tip
@@ -52,20 +50,17 @@ This will create a directory called `micromamba` in your home folder in which yo
     For more information on environments, check out our [Software and Environments](../../events/workshop_materials/) workshop.
 
 After initializing `micromamba`, you can create a local Conda environment with it to install packages. If you are used to using Conda to create local environments, then `micromamba` is very similar. For example, in an interactive session, after loading the `micromamba` module:
-
 ```bash
 micromamba create -n myenv
 micromamba activate myenv
 ```
 
 This will create and activate a Conda environment called `myenv`. To view the environments available to you, run:
-
 ```bash
 micromamba env list
 ```
 
 Unlike some versions of Conda, `micromamba` will always create an empty environment with no packages installed. If you want to install packages, you can do so after activating the environment. You can also mention the packages you want to install when you create the environment. For example, the following command will create an environment named `py312` with Python 3.12 installed in it:
-
 ```bash
 micromamba create -n py312 python=3.12
 ```
@@ -80,13 +75,13 @@ After activating a Conda environment, you can install packages with:
 
 Which option you choose will depend on the package, and how the package maintainers make it available.
 
-By default `micromamba` downloads packages from the [`conda-forge`](https://conda-forge.org/packages/) repository. `conda-forge` is a community maintained repository containing a large number of packages typically used in scientific computing, data science, and others. However, if you want to install packages from other repositories you can do so. For example, the [`bioconda`](https://bioconda.github.io/conda-package_index.html) repository provides many packages used in bioinformatics. 
+By default `micromamba` downloads packages from the [`conda-forge`](https://conda-forge.org/packages/) repository or channel. `conda-forge` is a community maintained repository containing a large number of packages typically used in scientific computing, data science, and others. However, if you want to install packages from other repositories you can do so. For example, the [`bioconda`](https://bioconda.github.io/conda-package_index.html) repository provides many packages used in bioinformatics. 
 
 To install a package from the `bioconda` repository, run the following in an interactive environment, replacing `<package-name>` with the name of your desired package:
-
 ```bash
 micromamba install <package-name> -c bioconda
 ```
+If you want to install packages from any other repositories, simply replace `bioconda` with the name of the repository in the above command.
 
 !!! Tip
 
@@ -96,7 +91,6 @@ micromamba install <package-name> -c bioconda
     micromamba config append channels nodefaults
     micromamba config set channel_priority strict
     ```
-
 
 ## `micromamba` in Batch Jobs
 
@@ -129,15 +123,15 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
     3. Create a Jupyter kernel
     
     For example, if you want to use Python 3.11, you can try running the following commands from an interactive environment:
-    
     ```bash
     micromamba create -n <env_name> python=3.11
     micromamba activate <env_name>
     micromamba install jupyter # alternatively you can use pip install jupyter
     ipython kernel install --name <env_name> --user
-    ```
+    ``` 
+    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the **New** dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example if the kernels name was `torch311`:
     
-    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your kernel.
+    ![](images/python-kernel.png)
     
 === "R"
 
@@ -149,7 +143,6 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
     
 
     {==You have to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session to run the commands below.==} To install any of the R packages, first create a Conda environment with R installed in it:
-    
     ```bash
     micromamba create -n <env_name> r=4.4
     micromamba activate <env_name>
@@ -161,9 +154,7 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
         ```bash
         micromamba install r-seurat
         ``` 
-        
         Seurat can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
-
         
         For SeuratDisk, assuming you have already installed Seurat:
         
@@ -186,7 +177,6 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
         ```bash
         micromamba install r-terra
         ```
-    
         Terra can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
     
         For Monocle3, assuming you have already installed Terra:
@@ -210,7 +200,7 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
         devtools::install_github('cole-trapnell-lab/monocle3')
         ```
         
-    You cannot use RStudio on Open OnDemand (OOD) to use R packages with `micromamba`. This is because RStudio does not have access to the Conda environments. However, if you want a similar GUI experience, you can try Jupyter on OOD instead. To use your R packages from Jupyter, you have to install Jupyter in your Conda environment and then create a with the IRkernel package:
+    You cannot use RStudio on Open OnDemand (OOD) to use R packages install with `micromamba`. This is because RStudio does not have access to the Conda environments. However, if you want a similar GUI experience, you can try Jupyter on OOD instead. To use your R packages from Jupyter, you have to install Jupyter in your Conda environment and then create a with the IRkernel package:
     
     1. Install Jupyter and IRkernel:
     ```bash
@@ -220,10 +210,11 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
     ```bash
     R
     ```
-    3. Create a R kernel for Jupyter, replacing `<kernel_name>` with your desired kernel name:
+    3. Create a R kernel for Jupyter, replacing `<kernel_name>` and `<display_name>` with your desired kernel and display names:
     ```R
-    IRkernel::installspec(name = <kernel_name>)
+    IRkernel::installspec(name = "<kernel_name>", displayname = "<display_name>")
     ```
     
-    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your kernel.
+    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example, if you had given a display name `R 4.4` (the default kernel and display names are `ir` and `R`, respectively):
 
+    ![](images/r-kernel.png)
