@@ -82,7 +82,7 @@ There is an easy solution, however. You can use a virtual environment to create 
 ## Custom Jupyter Kernel
 
 !!! warning 
-    The default version of Python available in an OnDemand Jupyter Notebook is 3.8.2. If you would like to create a virtual environment using a standard Python module, you will need to use Python version 3.8.2. If you want to use a different version of python, you can use an [Anaconda environment](../anaconda/).
+    The default version of Python available in an OnDemand Jupyter Notebook is 3.8.2. If you would like to create a virtual environment using a standard Python module, you will need to use Python version 3.8.2. If you want to use a different version of python, you can use [Mamba](../mamba/index.md#__tabbed_1_1).
 
 If you want to make one of your virtual environments available for use in one of our Open OnDemand Jupyter Notebooks, you can do so by creating a custom kernel. To do this, start an interactive terminal session and activate your environment (if you do not have an environment, refer to the sections above on how to do so):
 

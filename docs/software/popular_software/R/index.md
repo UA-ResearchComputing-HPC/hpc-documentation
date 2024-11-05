@@ -128,6 +128,9 @@ Working on a cluster without root privileges can lead to complications. For gene
 
 ## Using RStudio
 
+!!! info "Jupyter"
+    You can also use Jupyter as an alternative GUI to RStudio. For more information, see [Mamba](../mamba/index.md#__tabbed_1_2).
+
 === "Open OnDemand"
     We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
 
@@ -241,6 +244,9 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
 !!! info "Updates and Version Changes"
     We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
+
+!!! info "Alternative installation"
+    The instructions below show how you can install these packages with the R modules described above. An alternative is to install these packages in a Conda environment with a package manager like Mamba. For more information, see [Mamba](../mamba/index.md#__tabbed_1_2).
 
 === "Seurat and SeuratDisk"
     !!! tip "R Studio Version"

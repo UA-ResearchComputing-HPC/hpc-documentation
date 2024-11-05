@@ -64,6 +64,7 @@ nav:
     - Popular Software:
       - Anaconda: software/popular_software/anaconda/index.md
       - Gaussian: software/popular_software/gaussian/index.md
+      - Mamba: software/popular_software/mamba/index.md
       - Matlab: software/popular_software/matlab/index.md
       - Perl: software/popular_software/perl/index.md
       - Python: software/popular_software/python/index.md
