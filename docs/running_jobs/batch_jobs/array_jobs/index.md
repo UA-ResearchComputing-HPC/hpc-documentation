@@ -1,6 +1,5 @@
 # Array Jobs
 
-
 ## What Are Job Arrays?
 
 <img src="images/array.png" title="Array job visualization" width="500px" align="right">
