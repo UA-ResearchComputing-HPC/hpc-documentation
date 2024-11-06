@@ -1,6 +1,6 @@
 # Updates 
 
-The Puma cluster is currently being updated from the outdated Centos 7 operating system to Rocky linux 9.  This will involve updating both the operating system and much of the installed software.  
+The Puma cluster is currently being updated from the outdated Centos 7 operating system to Rocky linux 9. This will involve updating both the operating system and much of the installed software.
 
 * A small number of nodes were previously made available in a testing environment.
 * **At the October 30th maintanance, an initial subset of compute nodes will be available for full production runs.**
@@ -35,19 +35,26 @@ This update will have a number of impacts, and we are taking steps to minimize d
 * The resources available on the Puma9 cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
 
 ## Adapting existing analyses. 
-If you have difficulty using the new updated Puma9 system, Please open a support ticket:  [HPC support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) 
 
-**Researchers may currently use cluster resources in a number of ways.  Here are general guidelines for adapting to the new environment:**  
-### Users of Open on Demand
-Open on Demand users should be able to continue usage unchanged. 
-### Users of software modules
-Users who load analysis software with the "module load" command will generally be able to continue their analyses unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
-### Users of conda environments
-Although we recommend switching to **Mamba** going forward, many conda users should be able to continue using their existing environments, although in some cases may need to recreate them.
-### Users of Python
-Users who run pure python code, with or without the use of virtual enviroments will likely be able to continue their analyses unchanged.  The same versions of python are available on Puma9
-### Users who compile code themselves
-In many cases user-compiled software will need to be recompiled to run on Puma9.
+!!! Tip "Support"
+    Please open a [support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) if you have difficulty using the new updated Puma9 system.
+
+Researchers may currently use cluster resources in a number of ways. {==Here are general guidelines for adapting to the new environment:==}
+
+**Users of Open OnDemand**
+: Open OnDemand users should be able to continue usage unchanged. 
+
+**Users of software modules**
+: Users who load analysis software with the `module load` command will generally be able to continue their analyses unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
+
+**Users of Conda environments**
+: We recommend switching to [Mamba](../../software/popular_software/mamba/index.md) going forward. However, many Conda users should be able to continue using their existing environments, although in some cases may need to recreate them.
+
+**Users of Python**
+: Users who run pure Python code, with or without the use of virtual environments will likely be able to continue their analyses unchanged. The same versions of Python are available on Puma9.
+
+**Users who compile code themselves**
+: In many cases user-compiled software will need to be recompiled to run on Puma9.
 
 ## Important software changes 
 
@@ -72,6 +79,9 @@ In many cases user-compiled software will need to be recompiled to run on Puma9.
 | phdf5-intel | phdf5 |
 
 ### Anaconda / Conda / Mamba
+
+!!! Info "Mamba Guide"
+    See [Mamba](../../software/popular_software/mamba/index.md) for our guide on using Mamba in place of Anaconda.
 
 While not part of the OS updates itself, we want to take this opportunity to bring to your attention upcoming changes to our use of Anaconda. Anaconda.org has started enforcing license restrictions which has necessitated these changes. You can read more about the license restrictions [here](https://www.anaconda.com/blog/update-on-anacondas-terms-of-service-for-academia-and-research).
 
