@@ -94,6 +94,7 @@ nav:
       - Batch Directives: running_jobs/batch_jobs/batch_directives/index.md
       - Environment Variables: running_jobs/batch_jobs/environment_variables/index.md
       - Array Jobs: running_jobs/batch_jobs/array_jobs/index.md
+      - Jobs with GNU Parallel: running_jobs/batch_jobs/gnu_parallel_jobs/index.md
       - Job Dependencies: running_jobs/batch_jobs/job_dependencies/index.md
       - Submitting Jobs: running_jobs/batch_jobs/submitting_jobs/index.md
       #- Slurm Cheat Sheet: running_jobs/batch_jobs/slurm_reference/index.md
@@ -107,8 +108,6 @@ nav:
     #      - Using a Pipefail: running_jobs/example_batch_jobs/general_examples/pipefail/index.md
     #      - Job Dependencies: running_jobs/example_batch_jobs/general_examples/job_dependencies/index.md
     #      
-    #   - Basic GNU Parallel Job: running_jobs/example_batch_jobs/basic_gnu_parallel_job/index.md
-    #   - Array Job Using GNU Parallel: running_jobs/example_batch_jobs/array_and_gnu_parallel/index.md
     - Monitoring Jobs and Resources: running_jobs/monitoring_jobs_and_resources/index.md
     - Parallelization: running_jobs/parallelization/index.md
     # Q is there a way to include the md on the main visualization page instead of in an  "INTRO " sub item?
