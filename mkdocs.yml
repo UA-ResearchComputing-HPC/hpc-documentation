@@ -245,6 +245,7 @@ theme:
 plugins:
   - blog:
       post_excerpt: optional
+  - search
 
 extra:
   analytics:
