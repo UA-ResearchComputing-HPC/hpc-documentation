@@ -11,7 +11,7 @@ RStudio is a popular method for running analyses (and for good reason!), but for
 ## Creating a Custom Library
 
 !!! tip "R Package Debugging"
-     R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues.
+     R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues. Alternatively, you can consider using [Mamba](../mamba/index.md#r) to manage your R packages.
 
 **Creating your first library**
 
@@ -129,7 +129,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 ## Using RStudio
 
 !!! info "Jupyter"
-    You can also use Jupyter as an alternative GUI to RStudio. For more information, see [Mamba](../mamba/index.md#__tabbed_1_2).
+    R is one of the core languages that Jupyter supports. You can also use Jupyter as an alternative GUI to RStudio. For more information, see [Mamba](../mamba/index.md#jupyter).
 
 === "Open OnDemand"
     We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
@@ -246,7 +246,7 @@ where ```</path/to/new/directory>``` is the path to a different location where y
     We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
 
 !!! info "Alternative installation"
-    The instructions below show how you can install these packages with the R modules described above. An alternative is to install these packages in a Conda environment with a package manager like Mamba. For more information, see [Mamba](../mamba/index.md#__tabbed_1_2).
+    The instructions below show how you can install these packages with the R modules described above. An alternative is to install these packages in a Conda environment with a package manager like Mamba. For more information, see [Mamba](../mamba/index.md#r).
 
 === "Seurat and SeuratDisk"
     !!! tip "R Studio Version"
@@ -314,8 +314,8 @@ where ```</path/to/new/directory>``` is the path to a different location where y
                            'limma', 'lme4', 'S4Vectors', 'SingleCellExperiment',
                            'SummarizedExperiment', 'batchelor', 'HDF5Array',
                            'terra', 'ggrastr'))
-    > install.packages("devtools")
-    > devtools::install_github('cole-trapnell-lab/monocle3')
+    > install.packages("remotes")
+    > remotes::install_github('cole-trapnell-lab/monocle3')
     ```
 
     Then, to load Monocle3 in RStudio:
