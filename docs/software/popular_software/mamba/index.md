@@ -112,109 +112,139 @@ You can use `micromamba` for some Python or R workflows which would otherwise be
     
     Do not use the `micromamba` module along with the language specific modules. Choose one or the other.
 
-=== "Python"
+### Python
 
-    One of the typical Python workflows on the HPC involves Jupyter through the Open OnDemand (OOD) interface. One issue of this is that if you use the Python modules then you are tied to the specific version of Python that Jupyter on OOD uses. If Jupyter on OOD uses Python 3.8, then you can only use the `python/3.8` module to install your packages.
+One of the typical Python workflows on the HPC involves Jupyter through the Open OnDemand (OOD) interface. One issue of this is that if you use the Python modules then you are tied to the specific version of Python that Jupyter on OOD uses. If Jupyter on OOD uses Python 3.8, then you can only use the `python/3.8` module to install your packages.
     
-    With `micromamba` you do not have that limitation. You can use your desired version of Python. All you have to do is the following:
+With `micromamba` you do not have that limitation. You can use your desired version of Python. All you have to do is the following:
     
-    1. Create and activate a Conda environment with your desired Python version
-    2. Install Jupyter in it
-    3. Create a Jupyter kernel
+1. Create and activate a Conda environment with your desired Python version
+2. Install Jupyter in it
+3. Create a Jupyter kernel
     
-    For example, if you want to use Python 3.11, you can try running the following commands from an interactive environment:
+For example, if you want to use Python 3.11, you can try running the following commands from an interactive environment:
+```bash
+micromamba create -n <env_name> python=3.11
+micromamba activate <env_name>
+micromamba install jupyter # alternatively you can use pip install jupyter
+ipython kernel install --name <env_name> --user
+``` 
+Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the **New** dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example if the kernel's name is `torch311`:
+    
+![](images/python-kernel.png)
+    
+### R
+
+Some of the most widely used R packages on the HPC have non-trivial installation processes when installed with the R modules, see the [Popular Packages](../R/index.md#popular-packages) for more information. Here we show how you can install these packages with `micromamba`.
+    
+!!! Info "Updates and Version Changes"
+    
+    We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact us](../../../support_and_training/consulting_services/) and we will help. 
+    
+
+{==You have to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session to run the commands below.==} To install any of the R packages, first create a Conda environment with R installed in it:
+```bash
+micromamba create -n <env_name> r=4.4
+micromamba activate <env_name>
+```
+If you want to install any other version of R, then replace 4.4 with that version number in the above command. You might have to choose different versions of the packages in the examples below if you use a version of R below 4.4.
+    
+=== "Seurat & SeuratDisk"
+    
+    To install Seurat, run:
     ```bash
-    micromamba create -n <env_name> python=3.11
-    micromamba activate <env_name>
-    micromamba install jupyter # alternatively you can use pip install jupyter
-    ipython kernel install --name <env_name> --user
+    micromamba install r-seurat
     ``` 
-    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the **New** dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example if the kernels name was `torch311`:
+    Seurat can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
     
-    ![](images/python-kernel.png)
+    For SeuratDisk, assuming you have already installed Seurat:
     
-=== "R"
-
-    Some of the most widely used R packages on the HPC have non-trivial installation processes when installed with the R modules, see the [Popular Packages](../R/index.md#popular-packages) for more information. Here we show how you can install these packages with `micromamba`.
-    
-    !!! Info "Updates and Version Changes"
-    
-        We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact us](../../../support_and_training/consulting_services/) and we will help. 
-    
-
-    {==You have to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session to run the commands below.==} To install any of the R packages, first create a Conda environment with R installed in it:
+    1. Install dependencies:
     ```bash
-    micromamba create -n <env_name> r=4.4
-    micromamba activate <env_name>
-    ```
-    
-    === "Seurat & SeuratDisk"
-    
-        To install Seurat, run:
-        ```bash
-        micromamba install r-seurat
-        ``` 
-        Seurat can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
-        
-        For SeuratDisk, assuming you have already installed Seurat:
-        
-        1. Install dependencies:
-        ```bash
-        micromamba install r-hdf5r r-remotes
-        ```
-        2. Start an R prompt:
-        ```bash
-        R
-        ```
-        3. Install SeuratDisk with the `install_github` function from the `remotes` R package:
-        ```R
-        remotes::install_github("mojaveazure/seurat-disk")
-        ``` 
-                
-    === "Terra & Monocle3"
-    
-        To install Terra, run:
-        ```bash
-        micromamba install r-terra
-        ```
-        Terra can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
-    
-        For Monocle3, assuming you have already installed Terra:
-        
-        1. Install dependencies:
-        ```bash
-        micromamba install r-biocmanager r-devtools r-ggrastr
-        ```
-        2. Start an R prompt:
-        ```bash
-        R
-        ```
-        3. Install more dependencies with BiocManager:
-        ```R
-        BiocManager::install(c('BiocGenerics', 'DelayedArray', 'DelayedMatrixStats',
-                       'limma', 'lme4', 'S4Vectors', 'SingleCellExperiment',
-                       'SummarizedExperiment', 'batchelor', 'HDF5Array'))
-        ```
-        4. Install Monocle3 with `install_github` function from the `remotes` R package:
-        ```R
-        devtools::install_github('cole-trapnell-lab/monocle3')
-        ```
-        
-    You cannot use RStudio on Open OnDemand (OOD) to use R packages install with `micromamba`. This is because RStudio does not have access to the Conda environments. However, if you want a similar GUI experience, you can try Jupyter on OOD instead. To use your R packages from Jupyter, you have to install Jupyter in your Conda environment and then create a with the IRkernel package:
-    
-    1. Install Jupyter and IRkernel:
-    ```bash
-    micromamba install jupyter r-irkernel
+    micromamba install r-hdf5r r-remotes
     ```
     2. Start an R prompt:
     ```bash
     R
     ```
-    3. Create a R kernel for Jupyter, replacing `<kernel_name>` and `<display_name>` with your desired kernel and display names:
+    3. Install SeuratDisk with the `install_github` function from the `remotes` R package:
     ```R
-    IRkernel::installspec(name = "<kernel_name>", displayname = "<display_name>")
-    ```
-    
-    Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example, if you had given a display name `R 4.4` (the default kernel and display names are `ir` and `R`, respectively):
+    remotes::install_github("mojaveazure/seurat-disk")
+    ``` 
+            
+=== "Terra & Monocle3"
 
-    ![](images/r-kernel.png)
+    To install Terra, run:
+    ```bash
+    micromamba install r-terra
+    ```
+    Terra can also be installed with R's built-in package manager `install.packages`. However installing it with `micromamba` is way faster, since it just downloads the relevant binaries, and does not have to do any local compilation.
+
+    For Monocle3, assuming you have already installed Terra:
+    
+    1. Install dependencies:
+    ```bash
+    micromamba install r-biocmanager r-remotes r-ggrastr
+    ```
+    2. Start an R prompt:
+    ```bash
+    R
+    ```
+    3. Install more dependencies with BiocManager:
+    ```R
+    BiocManager::install(c('BiocGenerics', 'DelayedArray', 'DelayedMatrixStats',
+                   'limma', 'lme4', 'S4Vectors', 'SingleCellExperiment',
+                   'SummarizedExperiment', 'batchelor', 'HDF5Array'))
+    ```
+    4. Install Monocle3 with `install_github` function from the `remotes` R package:
+    ```R
+    remotes::install_github('cole-trapnell-lab/monocle3')
+    ```
+
+#### Jupyter
+
+Jupyter is typically thought of as belonging to the Python ecosystem, but R is one of the core languages that Jupyter supports (1). While R practitioners tend to gravitate towards RStudio, you might find that Jupyter is an equally capable, in not more, IDE for programming in R. Particularly, if you are using the Open OnDemand (OOD) interfaces of Jupyter and RStudio, you might find the Jupyter experience to be smoother. With `micromamba` you can easily set up Jupyter for your R workflow. 
+{ .annotate }
+
+1. It is in the name: **Ju**[lia]**Pyt**[hon]e**R**. The three core languages that Jupyter supports.
+
+To use your R packages from Jupyter, you have to install Jupyter in your Conda environment and then create a with the IRkernel package:
+
+1. Install Jupyter and IRkernel:
+```bash
+micromamba install jupyter r-irkernel
+```
+2. Start an R prompt:
+```bash
+R
+```
+3. Create a R kernel for Jupyter, replacing `<kernel_name>` and `<display_name>` with your desired kernel and display names:
+```R
+IRkernel::installspec(name = "<kernel_name>", displayname = "<display_name>")
+```
+
+Once you've configured your kernel, go to OOD and start a Jupyter notebook. Once the session starts, open it and click the "new" dropdown menu in the upper right. If everything is working correctly, you should see your kernel. For example, if you had given a display name `R 4.4` (the default kernel and display names are `ir` and `R`, respectively):
+
+![](images/r-kernel.png)
+
+#### RStudio
+
+To use the Open OnDemand (OOD) interface of RStudio with your Conda environment, do the following:
+
+1. Create a directory `.UAz_ood` under your home directory. 
+2. Create a file `rstudio.sh` under `.UAz_ood` with the following contents, replacing `<env_name>` with the name of your environment:
+   ```bash
+   #!/bin/bash
+
+   source ~/.bashrc
+   micromamba activate <env_name>
+   ``` 
+
+!!! Warning "Version Issues"
+    Loading some packages such as `terra` in the RStudio Console might fail with an error message like the following:
+    ```bash
+    Error: package or namespace load failed for 'terra' in dyn.load(file, DLLpath = DLLpath, ...):
+     unable to load shared object '/groups/sohampal/micromamba/envs/r-test/lib/R/library/terra/libs/terra.so':
+      /lib64/libssl.so.3: version `OPENSSL_3.2.0' not found (required by /groups/sohampal/micromamba/envs/r-test/lib/R/library/terra/libs/../../../.././libcurl.so.4)
+    ```
+    The likely solution in such a case will be to install the correct version of the dependency, in this case, OpenSSL 3.2.0. However, doing so might require you to downgrade the version of R installed in your Conda environment. If you do not want to downgrade, then you might want to consider using Jupyter instead of RStudio as your IDE.
