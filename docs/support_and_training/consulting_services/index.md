@@ -4,9 +4,6 @@
 
 ## HPC Consulting Services
 
-!!! warning "Consulting Availability, Nov 16 - 22"
-    Our consultants will be attending the annual Supercomputing Conference from November 16 – 22. Response times may be delayed, and {==office hours on Wednesday, November 20, are canceled==}. 
-
 <!-- <img class="img" src="images/SupportServicesInfoSlide.jpg" title="Support Services Info" width="800px" style="padding: 20px;"> -->
 
 
