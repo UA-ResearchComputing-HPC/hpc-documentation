@@ -24,7 +24,7 @@ RStudio is a popular method for running analyses (and for good reason!), but for
     ```bash
     echo 'R_LIBS=~/R/library_4.2/' >> ~/.Renviron
     ```
-    The file ```~/.Renviron``` [is a "dot" file](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) which means it does not show up when you run a standard ```ls```.. This particular file can be used to control your R environment for each subsequent time you start a session. All the `echo` command does is append the line ```R_LIBS=~/R/library_4.2/``` to this file. 
+    The file ```~/.Renviron``` [is a "dot" file](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) which means it does not show up when you run a standard ```ls```. This particular file can be used to control your R environment for each subsequent time you start a session. All the `echo` command does is append the line ```R_LIBS=~/R/library_4.2/``` to this file. 
     
 3. That's it! Now you can install packages and they will be stored in the directory you just created. For example, to install and load the package ```ggplot2```:
     ```bash
@@ -102,20 +102,9 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     **Accessing Modules**
 
-    RStudio does not have access to **module load** commands. This means that if you have a package that relies on a system module, the easiest option is to work through an [interactive terminal session](../../../running_jobs/interactive_jobs/) or to [submit a batch script](../../../running_jobs/batch_jobs/intro/).
+    RStudio does not natively have access to `module load` commands. This means that if you have a package that relies on a system module, the easiest option is to work through an [interactive terminal session](../../../running_jobs/interactive_jobs/) or to [submit a batch script](../../../running_jobs/batch_jobs/intro/).
 
-    The alternative is to to modify your RStudio environment. For example, the library hdf5r relies on the hdf5 software module. If you try to load hdf5r, you will get an error complaining about a shared object file. To get around this, you will need to manually add that shared object to your environment using `dyn.load()`. For example:
-
-    ```
-    > library("hdf5r") # without using dyn.load()
-    Error: package or namespace load failed for ‘hdf5r’ in dyn.load(file, DLLpath = DLLpath, ...):
-    unable to load shared object '/home/u21/sarawillis/R/lib_4.0/hdf5r/libs/hdf5r.so':
-    libhdf5_hl.so.100: cannot open shared object file: No such file or directory
-    > dyn.load("/opt/ohpc/pub/libs/gnu8/hdf5/1.10.5/lib/libhdf5_hl.so.100")
-    > library("hdf5r") # success!
-    >
-    ```
-    This requires that you know the location of the relevant file(s). These can usually be tracked down by looking at your system path variables (e.g. `LD_LIBRARY_PATH`) after loading the relevant module in a terminal. It should be noted that modifying your system paths from RStudio will not help since RStudio has its own configuration file that overrides these. 
+    The alternative is to create a hidden directory in your account called `~/.UAz_ood/rstudio.sh` with the module load commands you need. More information on this can be found in the section [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) below.
 
     **Font Issues**
 
@@ -192,7 +181,44 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     <img src="images/rstudio_open.png" title="Open RStudio session" style="width: 650px;">
 
-## Setting a New User State Directory
+### Loading Modules in RStudio {==(:material-alert-decagram:New!)==}
+
+!!! danger annotate "Library installations still must be performed on the command line"
+    The method detailed below is used to faciliate **loading** R libraries in RStudio when they depend on system software modules. R library **installations** will still need to take place in an [interactive session](../../../running_jobs/interactive_jobs/) on the command line. (1)
+    
+    
+1.  This is because the container that is necessary to start RStudio overrides environment variables set by modules that are necessary for successful library compilations.
+
+If you are using the RStudio application in Open OnDemand, it is now possible to load additional [software modules](../../modules/) into your environment. You might want to do this if your R libraries depend on modules. An example of this might be the [Seurat package](#popular-packages) which depends on the modules gdal, proj, sqlite3, and geos. 
+
+**Method to Load Modules**
+
+To load modules, you will need to create a hidden directory in your home called `~/.UAz_ood`. Inside that directory, create a file called `rstudio.sh`. You can then add any `module load` statements you need to this file. The file `rstudio.sh` is sourced when your RStudio session initiates, so if you modify your the file, you will need to start a new RStudio session for the changes to take effect.
+
+An example of how to create this file with example contents is shown below. 
+
+**Example**
+
+This example assumes you are working on the command line. Start by first creating the necessary directory and file:
+
+```bash
+mkdir -p ~/.UAz_ood
+touch ~/.UAz_ood/rstudio.sh
+```
+Next, open `rstudio.sh` in your favorite text editor. If you are not familiar with command line text editors, a beginner-friendly tool is nano. For example:
+
+```bash
+nano ~/.UAz_ood/rstudio.sh
+```
+Next, in the file add the modules that you would like to load in RStudio. For example:
+
+```
+module load gdal/3.8.5 geos/3.9.5 proj/9.4.0 sqlite/3.45
+```
+
+Now, save and exit. If you're using nano, you can do this with ++ctrl+x++, then select ++y++ to save your changes and exit. Once your file exists with the desired contents, start an new OnDemand RStudio session. 
+
+### Setting a New User State Directory
 
 When working on a large project in RStudio, it is possible for your R session's data to fill up your home directory resulting in out-of-space errors (e.g. when trying to edit files, create new OOD sessions, etc). With the newest version of RStudio, you can find these saved session files under ```~/.local/share/rstudio```.
 
@@ -204,7 +230,7 @@ export RSTUDIO_DATA_HOME=</path/to/new/directory>
 
 where ```</path/to/new/directory>``` is the path to a different location where you have a larger space quota. For example, ```/groups/<YOUR_PI>/<YOUR_NETID>/rstudio_sessions```.
 
-## Setting Your Working Directory in RStudio
+### Setting Your Working Directory
 
 === "Current Session"
     If you'd like to change your working directory in an RStudio session, one option is to use ```setwd("/path/to/directory")``` in your terminal. Alternatively, if you'd like to see the contents of your new workspace in your file browser, you can navigate to the **Session** dropdown tab, navigate to **Set Working Directory**, and click **Choose Directory...**
@@ -242,19 +268,23 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
 ## Popular Packages
 
-!!! info "Updates and Version Changes"
-    We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
+Below, we document some installation instructions for common R packages. We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
 
-!!! info "Alternative installation"
+!!! tip "Alternative installation"
     The instructions below show how you can install these packages with the R modules described above. An alternative is to install these packages in a Conda environment with a package manager like Mamba. For more information, see [Mamba](../mamba/index.md#r).
 
 === "Seurat and SeuratDisk"
-    !!! tip "R Studio Version"
+    !!! info "R Studio Version"
         If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
-    
-    To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. This is because these libraries depend on software modules that RStudio doesn't have access to (see ***Common Problems → OOD RStudio Issues*** above for more information).
 
-    {==You will also need to make sure Anaconda is completely removed from your environment prior to the install==}. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
+    !!! bug "Anaconda must be removed from your environment"
+        You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
+
+    !!! warning "Installs must be done in a terminal"
+    
+        To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
+
+    
 
     === "Seurat"
         ```
@@ -265,13 +295,8 @@ where ```</path/to/new/directory>``` is the path to a different location where y
         > install.packages("Seurat")
         ```
 
-        If you want to load this software in an RStudio session, you will first need to use the following ```dyn.load``` commands. When using the ```dyn.load```s in RStudio, you will need to be careful to run them in the order shown below, otherwise you may wind up with "Undefined symbol" errors. If you repeatedly run into library errors working in RStudio, you might consider converting your workflow to a batch script that you can submit through the command line. See the section Example R Scripts above for more information.
-        ```
-        > dyn.load("/opt/ohpc/pub/apps/glpk/5.0/lib/libglpk.so.40")
-        > dyn.load("/opt/ohpc/pub/apps/gdal/3.3.2/lib/libgdal.so.29")
-        > dyn.load("/opt/ohpc/pub/apps/proj/7.2.1/lib/libproj.so.19")
-        > library(Seurat)
-        ```
+        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above for more information. 
+
     === "SeuratDisk"
         SeuratDisk is similar to Seurat with a few more dependencies. It also includes the line ```unset CPPFLAGS``` due to a [reported issue with the dependency hdf5r](https://github.com/hhoeflin/hdf5r/issues/132):
 
@@ -285,23 +310,19 @@ where ```</path/to/new/directory>``` is the path to a different location where y
         > remotes::install_github("mojaveazure/seurat-disk")
         ```
 
-        Then, to load the software in RStudio:
-
-        ```
-        > dyn.load("/opt/ohpc/pub/apps/glpk/5.0/lib/libglpk.so.40")
-        > dyn.load("/opt/ohpc/pub/apps/proj/7.2.1/lib/libproj.so.19")
-        > dyn.load("/opt/ohpc/pub/apps/gdal/3.3.2/lib/libgdal.so.29")
-        > dyn.load("/opt/ohpc/pub/libs/gnu8/hdf5/1.10.5/lib/libhdf5_hl.so.100")
-        > library(Seurat)
-        > library(SeuratDisk)
-        ```
+        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above for more information. 
 
 === "Monocle3"
-    To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. This is because it depends on software modules that RStudio doesn't have access to (see **Common Problems** → **OOD RStudio Issues** above for more information).
 
-    You will also need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block under **Resolving Anaconda Issues** → **Temporary Removal** above.
+    !!! info "R Studio Version"
+        If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
+    !!! warning "Installs must be done in a terminal"
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
 
-    When using the `dyn.load` in RStudio, you will need to be careful to run them in the order shown below, otherwise you may wind up with "Undefined symbol" errors. If you repeatedly run into library errors working in RStudio, you might consider converting your workflow to a batch script that you can submit through the command line. 
+    !!! bug "Anaconda must be removed from your environment"
+        You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
+
+
 
     [Monocle3's documentation](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) includes steps that you can use for a successful installation.
 
@@ -318,25 +339,27 @@ where ```</path/to/new/directory>``` is the path to a different location where y
     > remotes::install_github('cole-trapnell-lab/monocle3')
     ```
 
-    Then, to load Monocle3 in RStudio:
-
-    ```
-    dyn.load("/opt/ohpc/pub/apps/gdal/3.3.2/lib/libgdal.so.29")
-    dyn.load("/opt/ohpc/pub/apps/proj/7.2.1/lib/libproj.so.19")
-    library(monocle3)
-    ```
+    Then, to load Monocle3 in RStudio, you will need to create the file `~/.UAz_ood/rstudio.sh` as detailed in the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above. 
 
 === "Terra"
+
+    !!! info "R Studio Version"
+        If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
+    !!! warning "Installs must be done in a terminal"
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
+
+    !!! bug "Anaconda must be removed from your environment"
+        You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
 
     To install the R package `terra`, you will need to load the module `gdal` which will pull in other dependencies (`geos`, `proj`, and `sqlite`). In this example, we'll use the modules `R/4.3` and `gdal/3.8.5`
 
     ```
     (elgato) [netid@junonia ~]$ interactive -a <your_group>
-    [netid@cpu1 ~]$ module load R/4.3 gdal/3.8.5
+    [netid@cpu1 ~]$ module load R/<version> gdal/3.8.5
     [netid@cpu1 ~]$ R
     > install.packages("terra")
     ```
-
+    Then, to load Terra in RStudio, you will need to create the file `~/.UAz_ood/rstudio.sh` as detailed in the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above. 
 
 ## Example Jobs
 

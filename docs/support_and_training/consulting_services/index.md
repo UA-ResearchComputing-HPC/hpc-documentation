@@ -1,5 +1,8 @@
 # Consulting Services
 
+!!! warning ":material-turkey: Holiday Closure"
+    Consulting services will not be available during Thanksgiving closure: November 28th - December 1st, 2024.
+
 <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
 
 ## HPC Consulting Services
