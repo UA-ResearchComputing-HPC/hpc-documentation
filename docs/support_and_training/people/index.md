@@ -4,7 +4,7 @@
 # Research Computing Support Staff
 
 
-Welcome to our Support Staff page, where you can get acquainted with the individuals who make up our HPC consulting team.
+Welcome to our Support Staff page, where you can get acquainted with the individuals who make up our HPC consulting team. For contact information, see our [Consulting Services](../consulting_services/) page. 
 
 ## Research Computing Facilitation Manager
 
