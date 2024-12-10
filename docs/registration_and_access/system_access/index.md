@@ -250,7 +250,7 @@ The Bastion Host uses two-factor authentication and will, by default, prompt you
 
 #### Setting Up SSH Keys On Linux/Mac
 
-The proper use of SSH keys involves creating a public/private keypair, and configuring a couple of files on each system. Both Source and Destination systems need a directory in your `home` called `.ssh`. This is a hidden folder that will store the keypair and configuration files. Note that you will need to enter your password to access the system until this process is complete and all files are set up correctly.
+The proper use of SSH keys involves creating a public/private keypair, and configuring a couple of files on each system. Both Source (e.g. your laptop) and Destination (e.g. the HPC Bastion Host) systems need a directory in your `home` called `.ssh`. This is a hidden folder that will store the keypair and configuration files. Note that you will need to enter your password to access the system until this process is complete and all files are set up correctly.
 
 !!! danger "Important Note on Account Security"
     Do not store a backup of these keys on **any** other system! If you lose the keys, you will still be access the HPC using your UA password. If a third party obtains your SSH key, they will gain access to your account.
@@ -279,11 +279,7 @@ The proper use of SSH keys involves creating a public/private keypair, and confi
 <div style="margin-left: 1cm">
 <p>In this case, we will be treating the Bastion Host as the Destination. This is necessary because it serves as the authentication host, meaning users are required to pass through it before accessing the rest of the HPC environment. Note that the Bastion Host has very limited storage space and a different file system than the main HPC. <i>Do not put any files on the Bastion Host other than what is necessary to set up SSH Keys.</i> Files that you place on the Bastion Host will <u>not</u> be present on the main HPC. You can read more about the system layout <a href="../../registration_and_access/system_overview/">here</a>. </p>
 
-<p>A file containing a list of accepted public keys called <code>authorized_keys</code> needs to be present in <code>~/.ssh</code> on <i>Destination</i>.</p>
-
-<p>You will then need to copy the contents of <code>id_rsa.pub</code> from <i>Source</i> into the <code>authorized_keys</code> file on <i>Destination</i>. </p>
-
-<p>This can be done with the command <code>ssh-copy-id netid@hpc.arizona.edu</code>. If your computer does not support the this command, or if this process does not yield desired results, you will need to copy it manually:</p>
+<p>A file containing a list of accepted public keys called <code>authorized_keys</code> needs to be present in <code>~/.ssh</code> on <i>Destination</i>. You will then need to copy the contents of <code>id_rsa.pub</code> from <i>Source</i> into this file. This can be done with the command <code>ssh-copy-id netid@hpc.arizona.edu</code>. If your computer does not support the this command, or if this process does not yield desired results, you will need to copy it manually:</p>
 
 ```bash
 scp ~/.ssh/id_rsa.pub netid@hpc.arizona.edu:
@@ -335,7 +331,7 @@ Host uahpclogin
 
 <div style="margin-left: 1cm">
 
-<p>SSH Keys can also be used to avoid entering a password and two-factor authentication when transferring files to or from the cluster via (<code>filexfer.hpc.arizona.edu</code>).</p>
+<p>SSH Keys can also be used to avoid entering a password and two-factor authentication when transferring files to or from the cluster via <code>filexfer.hpc.arizona.edu</code>.</p>
 
 <p>Put an empty line after the last entry in <code>~/.ssh/config</code> on <i>Source</i> and add the following contents, again making sure to replace <code>&lt;netid&gt;</code> with you correct UA net id.</p>
 
