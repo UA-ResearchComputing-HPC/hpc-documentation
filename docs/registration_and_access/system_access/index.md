@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/animated_dropdown.css">
+<link rel="stylesheet" href="../../../assets/stylesheets/spacing.css">
+
 # System Access
 
 ## Overview
@@ -243,42 +246,139 @@ The steps to set up port forwarding are the following:
 ### SSH Keys
 #### Why Use SSH Keys?
 
-The Bastion Host uses two-factor authentication and will, by default, prompt you for a password and 2nd factor when you attempt to log in. As an alternative, you can use PKI (Public Key Authentication). This means you will not have to provide a password or Duo-authenticate for any future sessions. To do this, you will need to create an SSH Key on your local workstation and copy the public key to the ```~/.ssh/authorized_keys``` file in your HPC account on the bastion host.
+The Bastion Host uses two-factor authentication and will, by default, prompt you for a password and 2nd factor when you attempt to log in. As an alternative, you can use PKI (Public Key Authentication). This means you will not have to provide a password or Duo-authenticate for any future sessions. In brief, you will need to create an SSH Key on your local workstation and copy the public key to the ```~/.ssh/authorized_keys``` file in your HPC account on the bastion host. More detailed explanation & instructions below.
 
-#### Create and Use SSH Keys
+#### Setting Up SSH Keys On Linux/Mac
+
+The proper use of SSH keys involves creating a public/private keypair, and configuring a couple of files on each system. 
+
+Both Source and Destination systems need a directory in you ```home``` called ```.ssh```. This is a hidden folder that will store the keypair and configuration files. 
+
+Note that you will need to enter your password to access the system until this process is complete and all files are set up correctly.
+
+!!! danger "Important Note on Account Security"
+    Do not store a backup of these keys on **any** other system! If you lose the keys, you will still be access the HPC using your UA password. If a third party obtains your SSH key, they will gain access to your account.
 
 
-=== "Linux/Mac"
-    In a Terminal session on your local workstation:
+<html>
 
-    1. Create a public-key pair: 
-    ```bash
-    ssh-keygen -t rsa
-    ```
-    You will be prompted to enter a passphrase. This is optional, but we strongly recommend that you do so.
-        
-    2. After running that command, you will have two new files on your local computer: ```~/.ssh/id_rsa``` and ```~/.ssh/id_rsa.pub```
-        ```id_rsa``` is your private key file. Do not share this with anybody! It is analogous to your password; anybody who has this file can impersonate you.
-        ```id_rsa.pub``` is your public key file. You will upload this onto any servers that you wish to automatically login to.
-        
-    3. Copy the public key to the Bastion Host (you will need to enter your password this one time): 
-    ```bash
-    ssh-copy-id netid@hpc.arizona.edu
-    ```
-    3b. If your computer does not support the ssh-copy-id command, run the following commands:
-    ```bash
-    scp ~/.ssh/id_rsa.pub netid@hpc.arizona.edu:
-    ssh netid@hpc.arizona.edu # (you will need to use your password this time)
-    mkdir -p ~/.ssh && cat ~/id_rsa.pub >> .ssh/authorized_keys && rm ~/id_rsa.pub # On the server, copies the key into the appropriate file
-    ```
-        
-    Now, logout and attempt to login to the server again. You should not be prompted for a password!
-        
-=== "Windows"
-    To setup SSH keys on Windows with the PuTTy client, refer to the [official PuTTy documentation](http://the.earth.li/~sgtatham/putty/0.63/htmldoc/Chapter8.html#pubkey).
+<b>1. Setting up on Source</b>
 
-#### Using SSH Keys for file transfers
+<div style="margin-left: 1cm">
+<p>The following files need to be present in <code>$HOME/.ssh</code> on <i>Source</i></p>
 
-Note that SSH Keys can also be used to avoid entering a password and 2nd factor when transferring files to to the cluster via the file transfer node (```filexfer.hpc.arizona.edu```) using command line programs like ```scp``` or ```sftp```.  Follow the steps above (2-4 under the Mac and Linux instructions), except use ```filexfer.hpc.arizona.edu``` instead of ```hpc.arizona.edu```. Note that you only need to generate the keys in Step 1 once. The same ```~/.ssh/id_rsa.pub``` file may be used to identify yourself to multiple hosts.
+<ul>
+    <li>private key: <code>id_rsa</code> -- Do not share this with anybody! It is analogous to your password; anybody who has this file will gain access to your account.</li>
+    <li>public key: <code>id_rsa.pub</code> -- Upload this onto any servers that you wish to automatically login to. It is recommended to use different keys for different servers.</li>
+    <li>configuration file: <code>config</code></li>
+</ul>
+
+<p>The keypair is generated on <i>Source</i> with the command <code>ssh-keygen -t rsa</code>. You will be prompted to enter a passphrase. This is optional but recommended. </p>
+
+<p>You may need to enter a name other than the default <code>id_rsa</code> if you already have a keypair with that name on your system, or if you wish to use mutliple SSH keys to access different servers.</p>
+</div> 
+
+<b>2. Setting up on Destination</b>
+
+<div style="margin-left: 1cm">
+<p>The following files need to be present in <code>$HOME/.ssh</code> on <i>Destination</i></p>
+
+<ul>
+    <li>list of accepted public keys: <code>authorized_keys</code></li>
+</ul>
+
+<p>You will then need to copy the contents of <code>id_rsa.pub</code> from <i>Source</i> into the <code>authorized_keys</code> file on <i>Destination</i>. </p>
+
+<p>This can be done with the command <code>ssh-copy-id netid@hpc.arizona.edu</code>. If your computer does not support the this command, or if this process does not yield desired results, you will need to copy it manually:</p>
+
+```bash
+scp ~/.ssh/id_rsa.pub netid@hpc.arizona.edu:
+ssh netid@hpc.arizona.edu
+mkdir -p ~/.ssh && cat ~/id_rsa.pub >> .ssh/authorized_keys && rm ~/id_rsa.pub 
+```
+</div>
+
+<b>3. Configuring the SSH Agent</b>
+
+<div style="margin-left: 1cm">
+<p>Sometimes the ssh agent does not associate the right key with the right server, and you may still have to enter your password. If this occurs, setting up a config file can correct the error. </p>
+
+<p>On <i>Source</i>, run <code>touch ~/.ssh/config</code></p>
+
+<p>Then, copy the following code block into the new file, making sure to replace <code>&lt;netid&gt;</code> with your correct UA net id. You can change the contents of <code>Host</code> to any name you like. Do not change <code>HostName</code>. Make sure <code>IdentityFile</code> matches the key you generated in step one, in particular if you gave it a different name.</p>
+
+```bash
+Host uahpcbastion
+    HostName hpc.arizona.edu
+    User <netid>
+    IdentityFile ~/.ssh/id_rsa
+```
+
+<p>This will associate the identity file with the HPC server, and will also allow you to replace <code>hpc.arizona.edu</code> with <code>uahpcbastion</code> in the command line, e.g. <code>ssh uahpcbastion</code></p>
+
+<p>Now, logout and attempt to login to the server again. You should not be prompted for a password!</p>
+</div>
+
+<b>4. Direct Access to Login Nodes</b>
+
+<div style="margin-left: 1cm">
+<p>You can set up a proxy jump in order to access the login nodes without having to type "shell" from the Bastion Host. Put an empty line after the last entry in <code>$HOME/.ssh/config</code> and add the following contents, again making sure to replace <code>&lt;netid&gt;</code> with you correct UA net id. You may change the "Host" entry as you prefer, and make sure the name after "ProxyJump" matches the name you gave to the Bastion Host in the previous entry. </p>
+
+```bash
+Host uahpclogin
+    HostName shell.hpc.arizona.edu
+    User <netid>
+    IdentityFile ~/.ssh/id_rsa
+    ProxyJump uahpcbastion
+```
+
+Now you should be able to run `ssh uahpclogin` from *Source* to directly access the login nodes
+</div>
+
+<b>5. Accessing the File Transfer Node</b>
+
+<div style="margin-left: 1cm">
+
+<p>Note that SSH Keys can also be used to avoid entering a password and 2nd factor when transferring files to or from the cluster via the file transfer node (<code>filexfer.hpc.arizona.edu</code>).</p>
+
+<p>Put an empty line after the last entry in <code>$HOME/.ssh/config</code> and add the following contents, again making sure to replace <code>&lt;netid&gt;</code> with you correct UA net id.</p>
+
+```bash
+Host uahpcfxfr
+    HostName filexfer.hpc.arizona.edu
+    User <netid>
+    IdentityFile ~/.ssh/id_rsa
+```
+
+<p>You should now be able to use <code>scp</code>, <code>sftp</code>, and the like without entering your password. </p>
+
+<p>You may also wish to access the file transfer node from the login node without entering your password, for example to copy data from <code>/rental</code>. In this case, you will need to perform steps 1-3 but treating <i>Source</i> as the login node and <i>Destination</i> as the file transfer node. It may be helpful to name this new key something indicating that is for the file transfer node, for example <code>fxfr</code> and <code>fxfr.pup</code>. </p>
+
+<p>Since both <i>Source</i> and <i>Destination</i> share access to your home folder, your public and private keys will both be in the <code>$HOME/.ssh</code> folder on the HPC, as will the <code>authorized_keys</code> and <code>config</code> files. Make sure to create these and put the contents of <code>fxfr.pub</code> into <code>authorized_keys</code>. </p>
+
+<p>Then, add the following code block to <code>$HOME/.ssh/config</code>:</p>
+
+```bash
+Host uahpcfxfr
+    HostName filexfer.hpc.arizona.edu
+    User <netid>
+    IdentityFile ~/.ssh/fxfr
+```
+
+<p>Now, you should be able to perform <code>ssh</code>, <code>scp</code>, <code>sftp</code>, and the like from the HPC login node to/from the HPC file transfer node without having to enter your password.</p>
+
+</div>
+
+</html>
+
+#### Setting Up SSH Keys On Windows
+
+To set up SSH keys on Windows with the PuTTy client, refer to the [official PuTTy documentation](http://the.earth.li/~sgtatham/putty/0.63/htmldoc/Chapter8.html#pubkey).
+
+To set up SSH keys on Windows for file transfers using WinSCP, refer to the [official WinSCP documentation](https://winscp.net/eng/docs/guide_public_key).
+
+If you are a Windows user and would like to set up SSH keys to access the file transfer node from a login node without entering your password, please read through the above section on setting up SSH Keys on Linux, since the HPC is a Linux system. Some information in steps 1-4 may be relevant, but you should not perform those actions on your local computer. Then, refer to step 5 for specific directions on setting this up. Do so from an active SSH session on an HPC login node.
+
+#### Learn More
 
 If you would like to learn more about SSH keys and more, please refer to this [in-depth guide](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys "SSH Essentials") created by our friends at Digital Ocean.
