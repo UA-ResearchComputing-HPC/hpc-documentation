@@ -42,7 +42,7 @@ This update will have a number of impacts, and we are taking steps to minimize d
 Researchers may currently use cluster resources in a number of ways. {==Here are general guidelines for adapting to the new environment:==}
 
 **Users of Open OnDemand**
-: Open OnDemand users should be able to continue usage unchanged. 
+: Open OnDemand users should generally be able to continue usage unchanged. However, users of RStudio should see the R section below. 
 
 **Users of software modules**
 : Users who load analysis software with the `module load` command will generally be able to continue their analyses unchanged.  All commonly used software modules have been transferred to Puma9, sometimes with version updates or changes.
@@ -52,6 +52,11 @@ Researchers may currently use cluster resources in a number of ways. {==Here are
 
 **Users of Python**
 : Users who run pure Python code, with or without the use of virtual environments will likely be able to continue their analyses unchanged. The same versions of Python are available on Puma9.
+
+**Users of R**
+
+ * The primary challenge for R users will be to maintage separate R package libraries for the old and new operating systems.  R packages installed under the old Centos 7 operating system may not function under the new Rocky 9 systems, and vice versa. 
+ * R users should maintain separate R libraries and switch between them as necessary. See the "Creating a Custom Library" and "Switching Between Custom Libraries" sections on our [R documentation](../../software/popular_software/R/index.md) page for details.  We suggest that your Puma9 R library be named something like library_4.4-puma9.  
 
 **Users who compile code themselves**
 : In many cases user-compiled software will need to be recompiled to run on Puma9.
