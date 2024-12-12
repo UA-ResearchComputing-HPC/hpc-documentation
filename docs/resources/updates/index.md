@@ -1,6 +1,6 @@
 # Updates 
 
-The Puma cluster is currently being updated from the outdated Centos 7 operating system to Rocky linux 9. This will involve updating both the operating system and much of the installed software.
+The Puma cluster is currently being updated from the outdated CentOS 7 operating system to Rocky Linux 9. This will involve updating both the operating system and much of the installed software.
 
 * A small number of nodes were previously made available in a testing environment.
 * **At the October 30th maintanance, an initial subset of compute nodes will be available for full production runs.**
@@ -55,8 +55,8 @@ Researchers may currently use cluster resources in a number of ways. {==Here are
 
 **Users of R**
 
- * The primary challenge for R users will be to maintage separate R package libraries for the old and new operating systems.  R packages installed under the old Centos 7 operating system may not function under the new Rocky 9 systems, and vice versa. 
- * R users should maintain separate R libraries and switch between them as necessary. See the "Creating a Custom Library" and "Switching Between Custom Libraries" sections on our [R documentation](../../software/popular_software/R/index.md) page for details.  We suggest that your Puma9 R library be named something like library_4.4-puma9.  
+ * The primary challenge for R users will be to maintain separate R package libraries for the old and new operating systems. R packages installed under the old CentOS 7 operating system may not function under the new Rocky 9 systems, and vice versa. 
+ * R users should maintain separate R libraries and switch between them as necessary. See the [Creating a Custom Library](../../software/popular_software/R/index.md#creating-a-custom-library) and [Switching Between Custom Libraries](../../software/popular_software/R/index.md#switching-between-custom-libraries) sections on our [R documentation](../../software/popular_software/R/index.md) page for details.  We suggest that your Puma9 R library be named something like `~/R/library_4.4-puma9`. 
 
 **Users who compile code themselves**
 : In many cases user-compiled software will need to be recompiled to run on Puma9.
