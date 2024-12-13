@@ -2,6 +2,31 @@
 
 Rclone is a CLI tool installed on ```filexfer.hpc.arizona.edu``` that can be used to transfer files between HPC and Cloud-based storage sites. To use Rclone, you will need to start by configuring it. Rclone's configuration process is fairly straightforward and has a large number of options to choose from. Some configuration examples are shown below. 
 
+??? info "Newer Version Available"
+
+    As of December 12, 2024 a newer version of `rclone` is available on the file transfer nodes. In the default environment:
+
+    ```console
+    [user@sdmz-dtn-3 ~]$ rclone --version
+    rclone v1.58.1
+    ```
+
+    The command to activate the new environment is `optrclone`:
+
+    ```console
+    [user@sdmz-dtn-3 ~]$ optrclone
+    Selecting version 1.68.2
+    [user@sdmz-dtn-3 ~]$ rclone --version
+    rclone v1.68.2
+    ```
+
+    Exiting the new environment:
+
+    ```console
+    [user@sdmz-dtn-3 ~]$ exit
+    [user@sdmz-dtn-3 ~]$ rclone --version
+    rclone v1.58.1
+    ```
 
 ## Configuring Rclone
 
