@@ -3,8 +3,6 @@
 ??? danger "Do not run computations on the login nodes." 
     CPU time allocations do not apply to login nodes. See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
 
-!!! info "{==:material-alert-decagram:NEW!==} Updated Partitions"
-    We have introduced new GPU partitions to improve the availability of GPU resources on the cluster. To submit GPU jobs, these new partitions must be used. For more information, see [Batch Job Directives](../../running_jobs/batch_jobs/batch_directives/).
 
 ## Group Allocations
 
@@ -32,7 +30,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     #SBATCH --partition=standard
     ```
 
-    {==:material-alert-decagram:NEW!==} To request GPU resources using standard hours:
+    To request GPU resources using standard hours:
     ```bash
     #SBATCH --account=<PI GROUP>
     #SBATCH --partition=gpu_standard
@@ -52,7 +50,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     #SBATCH --partition=windfall
     ```
 
-    {==:material-alert-decagram:NEW!==} To request GPU resources:
+    To request GPU resources:
     ```bash
     #SBATCH --partition=gpu_windfall 
     #SBATCH --gres=gpu:<options>
@@ -72,7 +70,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     #SBATCH --qos=user_qos_<PI GROUP>
     ```
 
-    {==:material-alert-decagram:NEW!==} To request GPU resources with high priority hours:
+    To request GPU resources with high priority hours:
 
     ```bash
     #SBATCH --account=<PI GROUP>
@@ -91,7 +89,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
     #SBATCH --partition=standard
     #SBATCH --qos=qual_qos_<PI GROUP>
     ```
-    {==:material-alert-decagram:NEW!==} To request GPU resources with qualified hours:
+    To request GPU resources with qualified hours:
     ```bash
     #SBATCH --account=<PI GROUP>
     #SBATCH --partition=gpu_standard

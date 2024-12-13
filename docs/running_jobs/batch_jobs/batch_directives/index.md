@@ -11,9 +11,6 @@ The first section of a batch script (after the shebang) always contains the Slur
 
 The partitions, or queues, on the UArizona HPC which determine the priority of your jobs and resources available to them are shown in the table below. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
 
-!!! info "{==:material-alert-decagram:NEW!==} Updated Partitions"
-    To improve GPU resource availability, we have three new partitions: `gpu_standard`, `gpu_windfall`, and `gpu_high_priority`. This will prevent CPU-only jobs from occupying GPU node resources. GPU jobs must use the new partitions to be submitted successfully.
-
 !!! warning "Buy-in users must use the `--qos` directive"
     If you're a member of a buy-in group and are trying to use your high priority hours, ensure you are including a `--qos` directive. When this directive is missing, you will recieve the error:
     ```
@@ -24,13 +21,13 @@ The partitions, or queues, on the UArizona HPC which determine the priority of y
 |<div style="width:110px">Partition</div>|Request Syntax|Comments|
 |-|-|-|
 |Standard|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard</code></pre>|Request a CPU-only node using standard hours.|
-|{==:material-alert-decagram: **NEW!**<br>Standard GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using standard hours. See [the GPUs section below](#gpus) for details on the `gres` directive.|
+|Standard GPU|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using standard hours. See [the GPUs section below](#gpus) for details on the `gres` directive.|
 |Windfall|<pre><code>#SBATCH --partition=windfall</code></pre>|Unlimited access. Preemptible. Do not include an `--account` flag when requesting this partition.|
-|{==:material-alert-decagram: **NEW!**<br>Windfall GPU==}|<pre><code>#SBATCH --partition=gpu_windfall<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using windfall. See [the GPUs section below](#gpus) for details on the `gres` directive. Do not include an `--account` flag when requesting this partition.|
+|Windfall GPU|<pre><code>#SBATCH --partition=gpu_windfall<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources using windfall. See [the GPUs section below](#gpus) for details on the `gres` directive. Do not include an `--account` flag when requesting this partition.|
 |High Priority|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;</code></pre>|Request a CPU-only node with high priority resources. Only available to <a href="../../../policies/buy_in/">buy-in groups</a>.|
-|{==:material-alert-decagram: **NEW!**<br>High Priority GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources with high priority hours. Only available to <a href="../../../policies/buy_in/">buy-in groups</a>. See [the GPUs section below](#gpus) for details on the `gres` directive.|
+|High Priority GPU|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_high_priority<br>#SBATCH --qos=user_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;</code></pre>|Request GPU resources with high priority hours. Only available to <a href="../../../policies/buy_in/">buy-in groups</a>. See [the GPUs section below](#gpus) for details on the `gres` directive.|
 |Qualified|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;</code></pre>|Available to groups with an activate [special project](../../../policies/special_projects/).|
-|{==:material-alert-decagram: **NEW!**<br>Qualified GPU==}|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;|Request GPU resources with qualified hours. Available to groups with an activate [special project](../../../policies/special_projects/). See [the GPUs section below](#gpus) for details on the `gres` directive.|
+|Qualified GPU|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;|Request GPU resources with qualified hours. Available to groups with an activate [special project](../../../policies/special_projects/). See [the GPUs section below](#gpus) for details on the `gres` directive.|
 
 
 ## CPUs
