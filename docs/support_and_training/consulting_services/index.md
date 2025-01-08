@@ -1,8 +1,5 @@
 # Consulting Services
 
-!!! info ":fontawesome-regular-snowflake: Holiday Closure :fontawesome-regular-snowflake:"
-    Consulting services will be suspended during the [university winter closure](https://hr.arizona.edu/sites/default/files/University_of_Arizona_Holiday_Schedule.pdf) from Tuesday, December 24, 2024, to Wednesday, January 1, 2025. During this period, HPC systems will remain available."
-
 
 <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
 

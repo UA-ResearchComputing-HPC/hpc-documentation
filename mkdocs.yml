@@ -182,6 +182,8 @@ nav:
 
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - attr_list
   - def_list
   - md_in_html
@@ -208,6 +210,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
       #clickable_checkbox: true
+
   
 extra_javascript:
   - assets/javascripts/mathjax.js
