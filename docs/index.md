@@ -41,6 +41,20 @@ This documentation site provides technical details relevant to using our HPC sys
 
 <p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
 
+## System Highlights 2024
+
+[Download Full Report](./assets/pdfs/HPC%20FY24%20Metrics.pdf){ .md-button .md-button--primary }
+
+Over the past four years, Puma has been a vital resource for researchers at the University of Arizona. In fiscal year 2024, our systems supported over 300 million compute hours enabling diverse research spanning climate modeling, genomics, neuroimaging, and beyond. With more than 80 active departments, 500 principal investigators, and 1,500 users, Puma continues to advance discovery and innovation.
+
+Researchers rely on our HPC resources not only for computational power, but also for expert support. This past year, we assisted users with nearly 2000 support requests. Explore highlights from this year, including testimonials from researchers and key statistics by downloading the full annual report. 
+
+<img src="./assets/images/home/compute-time-by-department-24e.png" style="height: 220px;">
+<img src="./assets/images/home/compute-time-by-department-key.png" style="height:220px;">
+<img src="./assets/images/home/compute-hours-by-dept-raw.png" style="height:220px;">
+
+
+
 ## Highlighted Research
 
 === "Ten Millionth Job"
