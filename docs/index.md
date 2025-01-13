@@ -152,6 +152,12 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
+-   :material-update:{ .lg .middle } __Puma OS Update__
+
+    ---
+
+    Starting October 30, 2024, we began updating Puma’s operating system from CentOS 7 to Rocky Linux 9. The migration is expected to be completed by the end of January 2025. Need help transitioning to the new operating system? Visit our [migration documentation](./resources/updates/) for detailed instructions.
+
 -   :material-chair-school:{ .lg .middle } __Fall Semester Workshops__
 
     ---
@@ -173,19 +179,6 @@ These resources specifically do not support Regulated Research, which might be I
     ---
 
     We recently added 22 new P100 GPUs to Ocelote. Need to request multiple GPUs on a node and you're finding Puma queue times too slow? You can now request two GPUs per node on Ocelote using `--gres=gpu:2`. 
-
--   :material-file-document-alert-outline:{ .lg .middle } __New HPC Documentation!__
-
-    ---
-
-    Have you seen our shiny new documentation website? If not, check out, well, this page! The content is the same as the Confluence site you're used to, but (we hope) better organized, easier to navigate, and faster. Have suggestions? Let us know!
-
-
-
-
-
-
-
 
 </div>
 
