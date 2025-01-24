@@ -32,7 +32,16 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 ## Maintenance History 
 
 <html>
-
+  <button class="collapsible">January 29, 2025</button>
+  <div class="content">
+  <p>
+  <b>
+  </p>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine patching of all nodes.</li>
+  <li>Completion of OS migration. All remaining CentOS 7 Puma nodes migrated to Rocky Linux 9. Puma9 made default cluster.</li>
+  </ul>
+  </div>
 
   <button class="collapsible">October 30, 2024</button>
   <div class="content">
