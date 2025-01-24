@@ -162,6 +162,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
+  <!-- November 6, 2024 -->
+  <tr><td>Wu, J., Zhu, X., AlYahyaei, K., Peyghambarian, N., & Norwood, R. A. (2024). <a href="https://doi.org/10.1364/JOSAB.540894">Toward 10-watt-level single-frequency fiber laser oscillators</a>. <i>Journal of the Optical Society of America B</i>, 41(12), 2675-2683.</td></tr>
+
   <!-- October 8 2024 -->
   <tr><td>Wang, Y.-H., & Gupta, H. V. (2024). <a href="https://doi.org/10.1029/2024WR037224">Towards interpretable physical-conceptual catchment-scale hydrological modeling using the mass-conserving-perceptron</a>. <i>Water Resources Research</i>, 60, e2024WR037224.</td></tr>
 
