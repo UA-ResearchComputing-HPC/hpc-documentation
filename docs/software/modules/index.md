@@ -3,6 +3,9 @@
 !!! tip "Availability"
     Software modules are not available on the login nodes. You will need to be on a compute node to access them.
 
+!!! warning "Cluster Differences"
+    Ocelote and El Gato both run CentOS 7 as their operating system and share the same system libraries and modules. These two clusters can generally be used interchangably. Puma uses Rocky Linux 9 as its operating system and has different system libraries and modules than Ocelote and El Gato. This means workflows may not be transferrable between Puma and the other two clusters. Take note of which cluster you're using to prevent software failures.
+
 Software packages are available as modules and are accessible from the compute nodes of any of our three clusters. A software module is a tool used to manage software environments and dependencies. It allows you to easily load and unload different software packages, libraries, and compilers needed for computational tasks without conflicts. This ensures access to many specific tools, and even different versions of the same tools, without affecting the overall system configuration.
 
 ## Module Commands
@@ -75,15 +78,27 @@ These paths will allow you to determine the locations of the executables, librar
 
 ## Compilers
 
-Puma, Ocelote, and El Gato all run CentOS7 and have the following compilers available:
+### Puma
 
 |Compiler|Version|Module Command|
 |-|-|-|
-|Intel|2020.1|<pre><code>module load intel/2020.1</code></pre>|
-|Intel|2020.4|<pre><code>module load intel/2020.4</code></pre>|
+|gcc|12.2.0|<pre><code>module load gnu12/12.2.0</code></pre>|
+|gcc|13.2.0|<pre><code>module load gnu13/13.2.0 # Recommended. Loaded by default.</code></pre>|
+|intel|2023.2.1|<pre><code>module load intel/2023.2.1</code></pre>|
+|intel|2024.0.0|<pre><code>module load intel/2024.0.0 # Default</code></pre>|
+|intel|2024.1.2|<pre><code>module load intel/2024.1.2</code></pre>|
+
+
+### Ocelote and El Gato
+
+|Compiler|Version|Module Command|
+|-|-|-|
 |gcc|5.4.0|<pre><code>module load gnu/5.4.0</code></pre>|
 |gcc|7.3.0|<pre><code>module load gnu7/7.3.0</code></pre>|
-|gcc|8.3.0|<pre><code>module load gnu8/8.3.0 # Loaded by default</code></pre>|
+|gcc|8.3.0|<pre><code>module load gnu8/8.3.0 # Recommended. Loaded by default</code></pre>|
+|Intel|2020.1|<pre><code>module load intel/2020.1</code></pre>|
+|Intel|2020.4|<pre><code>module load intel/2020.4</code></pre>|
+
 
 ## Software Install Requests
 

@@ -8,11 +8,14 @@ The term "interactive session" in this context refers to jobs run from within th
 
 ## Clusters 
 
-An interactive session can be requested on any of our three clusters: El Gato, Ocelote, and Puma. Since the request to start an interactive session is processed by Slurm, these jobs will be subject to the same wait times as batch jobs. Since Puma is typically busy with high traffic throughput, it is not recommended to request an interactive session on this cluster unless specific resources are needed and longer wait times are acceptable to the user. 
+An interactive session can be requested on any of our three clusters: El Gato, Ocelote, and Puma. 
+
+Ocelote and El Gato share the same operating system (CentOS 7), system libraries, and software modules. El Gato typically has shorter wait times, so if you're compiling software or running small test jobs for workflows to run on either El Gato or Ocelote, it may be advantageous to request a session on El Gato for more immediate access. 
+
+Puma runs a newer operating system (Rocky Linux 9), has newer system libraries, and its own software modules. If you are using Puma for your production work, you will want to stick to requesting interactive sessions on Puma for testing and compiling. Workflows may not be transferrable between the older clusters and Puma, so make sure to check which software ecosystem you're using to ensure the most predictable results. 
 
 
 ## How to Request an Interactive Session
-
 
 
 ### The ```interactive``` Command
@@ -48,13 +51,13 @@ The values shown in the output can be combined and each mean the following:
 
 |Flag|Explanation|<div style="width:250px">Example</div>|
 |-|-|-|
-|```-a```|This is followed by your group's name will switch you to using the standard partition. This is highly recommended to keep your sessions from being interrupted and to help them start faster|```-a my_group```|
-|```-t```|The amount of time to reserve for your job in the format ```hhh:mm:ss```|```-t 05:00:00```|
-|```-n```|Total number of tasks (CPUs) to allocate to your job. By default, this will be on a single node|```-n 16```|
-|```-N```|Total number of nodes (physical computers) to allocate to your job|```-N 2```|
-|```-m```|Total amount of memory {==per CPU==}. See [CPUs and Memory](../cpus_and_memory/) for more information and potential complications|```-m 5gb```|
-|```-Q```|Used to access {==high priority or qualified hours==}. Only for groups with [buy-in/special project hours](../../resources/allocations/)|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
-|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use `salloc` directly using [GPU batch directives](../batch_jobs/batch_directives/#gpus)|```-g```|
+|```-a```|This is followed by your group's name and will switch you to using the standard partition. This is highly recommended to keep your sessions from being interrupted and to help them start faster.|```-a my_group```|
+|```-t```|The amount of time to reserve for your job in the format ```hhh:mm:ss```.|```-t 05:00:00```|
+|```-n```|Total number of tasks (CPUs) to allocate to your job. By default, these CPUs will be allocated on a single node.|```-n 16```|
+|```-N```|Total number of nodes (physical computers) to allocate to your job.|```-N 2```|
+|```-m```|Total amount of memory {==per CPU==}. See [CPUs and Memory](../cpus_and_memory/) for more details and information on potential complications.|```-m 5gb```|
+|```-Q```|Used to access {==high priority or qualified hours==}. Only for groups with [buy-in or special project hours](../../resources/allocations/).|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
+|```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use [`salloc` directly](#the-salloc-command) using [GPU batch directives](../batch_jobs/batch_directives/#gpus).|```-g```|
 |```-x```|Enable [X11 forwarding](/registration_and_access/system_access/#x11-forwarding). This flag takes no arguments.|```-x```|
 
 You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) commands using any desired Slurm directives for maximum customization.
@@ -65,9 +68,6 @@ If ```interactive``` is insufficient to meet your resource requirements (e.g., i
 
 The command ```salloc``` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using ```salloc```, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
 
-!!! info "GPU Partitions"
-	
-	New GPU partitions were added in the Summer 2024 maintenance cycle, which affects requests for interactive sessions via the ```salloc``` command when requesting GPU resources. See [batch directives](https://hpcdocs.hpc.arizona.edu/running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for details on the new partitions.
 
 **Single CPU Example**
 

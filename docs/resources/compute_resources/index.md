@@ -101,7 +101,7 @@ Below is a list of the node types and physical hardware that are available on ea
 |Accelerators||60 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>12 A100 20 GB MIG slices|
 |/tmp[^2]|~840 GB spinning|~840 GB spinning|~1440 TB NVMe|
 |HPL Rmax (TFlop/s)|46|382||
-|OS|CentOS 7|CentOS 7|CentOS 7|
+|OS|CentOS 7|CentOS 7|Rocky Linux 9|
 |Interconnect|FDR Inifinband|FDR Infiniband for node-node<br>10 Gb Ethernet node-storage|1x 25 Gb/s Ethernet RDMA (RoCEv2)<br>1x 25 Gb/s Ethernet to storage|
 
 

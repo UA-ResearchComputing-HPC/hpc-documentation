@@ -107,7 +107,7 @@ Researchers rely on our HPC resources not only for computational power, but also
 
     === "Puma"
         <img class="img-right" src="assets/images/home/puma.png" title="Puma image" alt="puma" width="200" hspace=50 vspace=20>
-        Implemented in the middle of 2020, Puma is the biggest cat yet. Similar to Ocelote, it has standard CPU nodes (with 94 cores and 512 GB of memory per node), GPU nodes (with Nvidia V100) and two high-memory nodes (3 TB). Local scratch storage increased to ~1.4 TB. Puma runs on CentOS 7.
+        Implemented in the middle of 2020, Puma is the biggest cat yet. Similar to Ocelote, it has standard CPU nodes (with 94 cores and 512 GB of memory per node), GPU nodes (with Nvidia V100) and two high-memory nodes (3 TB). Local scratch storage increased to ~1.4 TB. Puma runs on Rocky Linux 9.
 
         As is the case for our other supercomputers, we use the RFP process to get the best value for our financial resources, that meet our technical requirements. This time Penguin Computing one with AMD processors. This is tremendously valuable as each node comes with:
 
@@ -156,7 +156,7 @@ These resources specifically do not support Regulated Research, which might be I
 
     ---
 
-    Starting October 30, 2024, we began updating Puma’s operating system from CentOS 7 to Rocky Linux 9. The migration is expected to be completed by the end of January 2025. Need help transitioning to the new operating system? Visit our [migration documentation](./resources/updates/) for detailed instructions.
+    As of January 29th, 2025, Puma’s operating system has been updated from CentOS 7 to Rocky Linux 9. Need help transitioning to the new operating system? Visit our [migration documentation](./resources/updates/) for detailed instructions.
 
 -   :material-chair-school:{ .lg .middle } __Fall Semester Workshops__
 
