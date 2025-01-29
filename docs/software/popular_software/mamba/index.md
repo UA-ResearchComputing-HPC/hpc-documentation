@@ -122,7 +122,7 @@ micromamba activate <env-name>
     If you have already correctly initialized `micromamba` as mentioned above and you are still getting this error message, you can do one of the following to ensure that Slurm sources your `.bashrc` (where the relevant `micromamba` information is stored):
 
     - Replace `#!/bin/bash` at the top of your batch script with `#!/bin/bash --login`
-    - Add `source .bashrc` to your batch script before you activate the virtual environment
+    - Add `source ~/.bashrc` to your batch script before you activate the virtual environment
 
     Alternatively, instead of activating a Conda environment with `micromamba`, you can use `micromamba run -n <env-name> <command>` to run your command in that Conda environment. For example, if you have the following in your batch script
     ```bash
