@@ -143,7 +143,7 @@ micromamba activate <env-name>
 You can use `micromamba` for some Python or R workflows which would otherwise be non-trivial to do with the corresponding language modules.
 !!! Warning
     
-    Do not use the `micromamba` module along with the language specific modules. Choose one or the other.
+    Do not use the `micromamba` module along with the Python or R modules, such as `python/3.8` or `R/4.4`. Choose one or the other.
 
 ### Python
 
