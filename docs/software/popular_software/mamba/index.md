@@ -119,7 +119,7 @@ micromamba activate <env-name>
     ...
     ```
 
-    If you have already correctly initialized `micromamba` as mentioned above and you are still getting this error message, you can do one of the following to ensure that Slurm sources your `.bashrc` (where all your `micromamba` information is stored):
+    If you have already correctly initialized `micromamba` as mentioned above and you are still getting this error message, you can do one of the following to ensure that Slurm sources your `.bashrc` (where the relevant `micromamba` information is stored):
 
     - Replace `#!/bin/bash` at the top of your batch script with `#!/bin/bash --login`
     - Add `source .bashrc` to your batch script before you activate the virtual environment
