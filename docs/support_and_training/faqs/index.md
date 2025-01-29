@@ -559,7 +559,13 @@ _\ \ (_) |  _| |_ \ V  V / (_| | | |  __/ | (_| | | | | (_| | / /\/\ \ (_) | (_|
       </code></pre>
     </p>
   </div>
-
+  
+  <!-- How do I initialize micromamba in Slurm batch scripts? -->
+  <button class="collapsible">How do I initialize <code>micromamba</code> in Slurm batch scripts?</button>
+  <div class="content">
+    <p>
+        You should initialize <code>micromamba</code> only once, and from an interactive session. If you are getting <code>micromamba</code> initialization errors when submitting jobs with Slurm batch scripts, then see <a href="../../software/popular_software/mamba/#micromamba-in-batch-jobs"><code>micromamba</code> in Batch Jobs</a> for solutions.
+    </p>
 </html>
 
 <hr>

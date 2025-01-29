@@ -28,7 +28,7 @@ module load micromamba/<version>
 micromamba shell init -s bash -r ~/micromamba
 source ~/.bashrc
 ```
-This will create a directory called `micromamba` in your home folder in which your Conda environments and associated packages will be installed.
+This will create a directory called `micromamba` in your home folder in which your Conda environments and associated packages will be installed, and all that information to your `.bashrc`. 
 
 !!! Tip
 
@@ -104,6 +104,39 @@ micromamba activate <env-name>
 !!! Tip
 
     You should install packages in your Conda environment from an interactive session. Do not put those instructions in a batch script.
+
+
+!!! Tip "Initialization Error"
+
+    Sometimes batch jobs with `micromamba` might fail with the following error message:
+
+    ```bash
+    critical libmamba Shell not initialized
+
+    'micromamba' is running as a subprocess and can't modify the parent shell.
+    Thus you must initialize your shell before using activate and deactivate.
+
+    ...
+    ```
+
+    If you have already correctly initialized `micromamba` as mentioned above and you are still getting this error message, you can do one of the following to ensure that Slurm sources your `.bashrc` (where all your `micromamba` information is stored):
+
+    - Replace `#!/bin/bash` at the top of your batch script with `#!/bin/bash --login`
+    - Add `source .bashrc` to your batch script before you activate the virtual environment
+
+    Alternatively, instead of activating a Conda environment with `micromamba`, you can use `micromamba run -n <env-name> <command>` to run your command in that Conda environment. For example, if you have the following in your batch script
+    ```bash
+    module load micromamba
+    micromamba activate myenv
+    python myscript.py
+    ```
+    you can replace it with
+    ```bash
+    module load micromamba
+    micromamba run -n myenv python myscript.py
+    ```
+    In this case you will not have to source your `.bashrc` from your batch script.
+
 
 ## Language specific suggestions
 
