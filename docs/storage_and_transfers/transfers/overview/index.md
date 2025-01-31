@@ -72,7 +72,7 @@ For efficient file transfers to and from the HPC system, utilize the designated 
         <td>Globus</td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
-        <td>&#x2705;</td>
+        <td>&#x274C;</td>
         <td>&#x2705;</td>
         <td>&#x274C;</td>
         <td>&#x274C;</td>

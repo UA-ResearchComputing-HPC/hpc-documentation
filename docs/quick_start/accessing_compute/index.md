@@ -57,6 +57,10 @@ This shows you the various shortcuts you can use to connect to the different clu
 (puma) [netid@wentletrap ~]$ elgato
 (elgato) [netid@wentletrap ~]$ 
 ```
+
+!!! warning "Not every cluster is the same"
+    Note that we are using El Gato in this tutorial. This is our smallest cluster and runs an older operating system than our newest and largest, Puma. This means workflows developed on one may not be compatible with the other. For information on the operating systems used by our clusters, see: [Compute Resources](../../resources/compute_resources/). 
+
 ### Job Charging
 
 Before we connect to a compute node, let's quickly cover how access is charged. 
