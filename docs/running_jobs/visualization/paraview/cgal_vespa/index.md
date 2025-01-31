@@ -4,7 +4,7 @@ You will have to build the VESPA plugin to use it with ParaView. If you plan to 
 
 1. Start an OOD Interactive Desktop session.
 2. Open a terminal in the Interactive Desktop session.
-3. Run `apptainer run /contrib/singularity/ua-hpc/paraview/paraview-5.13.0-git-vespa.sif`
+3. Run `apptainer run /contrib/singularity/ua-hpc/visualization/paraview/paraview-5.13.0-git-vespa.sif`
 4. Once the ParaView GUI starts, close all popups to get to the default layout. 
 5. From the top toolbar select **Tools → Manage Plugins..**.
 6. Once the **Plugin Manager** window opens, scroll down to find the VESPA plugin. Select it and click **Load Selected**. Then click **Close**.
