@@ -11,10 +11,10 @@ You can setup ParaView on our HPC cluster or on your workstation. Follow the ins
         
         1. Start an Interactive Desktop session from Open OnDemand (OOD).
         2. Open a termimal in the Interactive Desktop session.
-        3. Run `apptainer run /contrib/singularity/ua-hpc/paraview/paraview-5.11.0.sif` from the terminal.
+        3. Run `apptainer run /contrib/singularity/ua-hpc/visualization/paraview/paraview-5.11.0.sif` from the terminal.
         
         !!! Tip
-            You can see all the available Paraview containers with `ls /contrib/singularity/ua-hpc/paraview/`.
+            You can see all the available Paraview containers with `ls /contrib/singularity/ua-hpc/visualization/paraview/`.
         
     === "Workstation"
     

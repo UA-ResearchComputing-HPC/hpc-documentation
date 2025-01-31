@@ -7,7 +7,7 @@ This workflow uses offscreen rendering and a GPU to speed up interactive workflo
 To launch the ParaView server:
 
 1. Start an interactive session with 1 GPU. Replacing `<account-name>` with your own account name, run `interactive -a <account-name> -g -t 3:00:00 -n 16`. 
-2. Run `apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0-headless-egl.sif pvserver --displays=0`.
+2. Run `apptainer exec /contrib/singularity/ua-hpc/visualization/paraview/paraview-5.11.0-headless-egl.sif pvserver --displays=0`.
 
 The `pveserver` program starts up a process which listens for connections from the graphical interface and fulfills requests on its behalf. This particular container contains the embedded graphics library EGL with which we can perform renderings without the need for an X-server display. 
 

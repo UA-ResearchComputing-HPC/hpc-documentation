@@ -3,7 +3,7 @@ Welcome to this tutorial on PvPython, ParaView’s terminal that holds all the s
 
 ## ParaView Terminal
 
-To run PvPython on the HPC, from an OOD Interactive Desktop terminal, run `apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0.sif pvpython`. If you are running ParaView on your workstation, find the `pvpython` executable on your computer.
+To run PvPython on the HPC, from an OOD Interactive Desktop terminal, run `apptainer exec /contrib/singularity/ua-hpc/visualization/paraview/paraview-5.11.0.sif pvpython`. If you are running ParaView on your workstation, find the `pvpython` executable on your computer.
 
 This will launch you in to a Python shell. After the Python shell starts, run
 

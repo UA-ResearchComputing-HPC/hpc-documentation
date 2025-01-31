@@ -58,7 +58,7 @@ We will use the Slurm script below to submit the array job. It refers to a Pytho
 #SBATCH --account=visteam
 
 pvsm_pth=$1
-apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0-headless-osmesa.sif pvpython render.py --pvsm "$pvsm_pth" --frame ${SLURM_ARRAY_TASK_ID}
+apptainer exec /contrib/singularity/ua-hpc/visualization/paraview/paraview-5.11.0-headless-osmesa.sif pvpython render.py --pvsm "$pvsm_pth" --frame ${SLURM_ARRAY_TASK_ID}
 ```
 
 As it is written this will allocate 1 CPU task for the task of headlessly rendering a single frame with an upper time limit of 30 mins. Note that there is a `${SLURM_ARRAY_TASK_ID}` environment variable in use but no `#SBATCH --array=` line. This is because it is often nice to have the option to specify the size of the array job at run time as we will see below. This will simply start the Apptainer container for each array job and execute a script that is a wrapper around the ParaView `pvpython` program. For more information on the `pvpython` program, see [Getting Started with ParaView Terminal](../getting_started_with_paraview_terminal/index.md).
