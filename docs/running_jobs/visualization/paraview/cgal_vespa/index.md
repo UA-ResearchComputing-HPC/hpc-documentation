@@ -1,67 +1,23 @@
-If you need advanced Computational Geometry support for your
-visualization and analysis, then we have you covered!
+You can do advanced mesh processing with ParaView using the VESPA plugin. VESPA adds state-of-the-art mesh processing algorithms from the CGAL (Computational Geometry Algorithms Library) C++ library to ParaView. For more information on what you can do with these algorithms, see [VESPA: Advanced Mesh Processing Based on CGAL for VTK and ParaView](https://www.kitware.com/vespa-advanced-mesh-processing-based-on-cgal-for-vtk-and-paraview/). 
 
-  
+You will have to build the VESPA plugin to use it with ParaView. If you plan to run your ParaView workflows on the HPC, then we have pre-built ParaView containers with the VESPA plugin installed. To run ParaView with VESPA on the HPC:
 
-Follow these steps to get up and running with an OOD remote desktop and
-a custom compiled paraview container providing cgal vespa.
+1. Start an OOD Interactive Desktop session.
+2. Open a terminal in the Interactive Desktop session.
+3. Run `apptainer run /contrib/singularity/ua-hpc/paraview/paraview-5.13.0-git-vespa.sif`
+4. Once the ParaView GUI starts, close all popups to get to the default layout. 
+5. From the top toolbar select **Tools → Manage Plugins..**.
+6. Once the **Plugin Manager** window opens, scroll down to find the VESPA plugin. Select it and click **Load Selected**. Then click **Close**.
 
-  
+Once the VESPA plugin is loaded, you can use the following filters to estimate volumes contained within areas of interest in imaging data
 
-    # pull the container
-    apptainer pull docker://ghcr.io/devinbayly/cgal_vespa:latest
-
-When this is complete you must run the container and start paraview
-
-    apptainer exec cgal_vespa_latest.sif /opt/paraview_build/bin/paraview
-
-When paraview starts you need to import the Vespa paraview plugin which
-will be at this system path
-
-    /usr/local/lib/paraview-5.11/plugins/VESPAPlugin/VESPAPlugin.so
-
-  
-
-Then the following filters can help for estimating volumes contained
-within areas of interest in imaging data
-
--   threshold
--   extract surface
--   tetrahedralize
--   Alpha Wrap (CGAL Vespa)
+-   Threshold
+-   Extract Surface
+-   Tetrahedralize
+-   Alpha Wrap (from VESPA)
 -   Connectivity
 -   Compute Connected Surface Properties
 
-Refer to the screen recording shared here for other details, as well as
-the demo\_state.pvsm which you can just load in the custom paraview
-container to get started.
+You can refer to the screen recording below, as well as to the [demo_state.pvsm](files/demo_state.pvsm) file (which you can load in ParaView), to get started.
 
-<span class="confluence-embedded-file-wrapper conf-macro output-inline"
-data-hasbody="false"
-data-macro-id="d471f096-cf31-47f0-b6b4-9431ed0c6065"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/demo_state.pvsm?version=1" class="confluence-embedded-file"><embed src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989475/demo_state.pvsm?version=1" height="250" /></a></span>
-
-  
-
-  
-
-<span class="confluence-embedded-file-wrapper conf-macro output-inline"
-data-hasbody="false"
-data-macro-id="8ba4d727-39c1-4e14-9536-2d26f083d5b9"
-data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/vespa.mp4?version=1" class="confluence-embedded-file"><embed src="../../all_images/uarizona.atlassian.net/wiki/download/thumbnails/75989475/vespa.mp4?version=1" height="400" /></a></span>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-<span id="confluence-server-performance"
-style="display:none;">{"serverDuration": 17, "requestCorrelationId":
-"6bc9cdeba83c4a7bb82f184a96d6b19b"}</span>
+<iframe width="800" height="450" src="videos/vespa.mp4" allowfullscreen></iframe>

@@ -1,35 +1,15 @@
-For Both of these configurations it is recommended that you start up a
-remote desktop and launch paraview according to the instructions on the
-previous documented page Getting Started With ParaView. Using the
-Embedded graphics library paraview binary
+For both of these configurations it is recommend that you follow [Getting Started with ParaView GUI](../getting_started_with_paraview_gui/index.md) for general workflow suggestions. 
 
 ### Steps To launch a EGL server
 
-This workflow uses offscreen rendering and a gpu to speed up interactive
-workflows.
+This workflow uses offscreen rendering and a GPU to speed up interactive workflows.
 
-First request an allocation on Ocelote that has 1 gpu **Please remember
-to replace the <span
-class="legacy-color-text-green2">`<your account>`</span> with your own
-account name**
+To launch the ParaView server:
 
-`salloc -A <your account> -p standard --gres=gpu:1 -t 3:00:00 -N 1 -n 16`
+1. Start an interactive session with 1 GPU. Replacing `<account-name>` with your own account name, run `interactive -a <account-name> -g -t 3:00:00 -n 16`. 
+2. Run `apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0-headless-egl.sif pvserver --displays=0`.
 
-The following lines will download a version of paraview that we can use
-for offscreen headless rendering. The command will actually rename the
-export file in order to make it easier to uncompress it.
-
-`wget "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.1-egl-MPI-Linux-Python3.9-x86_64.tar.gz" -O paraview_egl.tar.gz`
-
-Here we uncompress the tar file
-
-`tar xf paraview_egl.tar.gz`
-
-The folder we get from this will probably include the full paraview
-version name so we will use a \* pattern match character to go into the
-bin folder where the `pvserver` program we need to use resides
-
-`cd ParaView-5.11.1*/bin/`
+The `pveserver` program starts up a process which listens for connections from the graphical interface and fulfills requests on its behalf. This particular container contains the embedded graphics library EGL with which we can perform renderings without the need for an X-server display. 
 
 Here's where the exciting part occurs. We will use the `pvserver`
 program to start up a process which listens for connections from the

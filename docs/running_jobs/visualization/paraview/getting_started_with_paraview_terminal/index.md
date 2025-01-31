@@ -1,13 +1,11 @@
-Welcome to this tutorial on PvPython, ParaView’s terminal that holds all the same functionality as ParaView’s GUI interface, but allows for an interface more familiar to terminal users. If you haven’t already, check out [Getting Started](../getting_started/index.md) for the installation and basic functionality of the software. This tutorial will follow the same procedure as the GUI tutorial, of course, except that it uses the terminal. A note on using the terminal: PvPython is not particularly intuitive and not particularly well documented. If you're interested in creating scripts I would recommend reading this entire article (especially [How To Find Python Commands](#how-to-find-python-commands)) before getting started.
+Welcome to this tutorial on PvPython, ParaView’s terminal that holds all the same functionality as ParaView’s GUI interface, but allows for an interface more familiar to terminal users. For the GUI tutorial, see [Getting Started With ParaView GUI](../getting_started_with_paraview_gui/index.md) for the installation and basic functionality of the software. This tutorial will follow the same procedure as the GUI tutorial, of course, except that it uses the terminal. 
+
 
 ## ParaView Terminal
 
-To get started with PvPython, find the `pvpython` executable on your computer. (1)
-{ .annotate }
+To run PvPython on the HPC, from an OOD Interactive Desktop terminal, run `apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0.sif pvpython`. If you are running ParaView on your workstation, find the `pvpython` executable on your computer.
 
-1. In Windows you can do this by searching *PvPython* from the Start menu.
-
-The first thing you should do after opening the terminal is run
+This will launch you in to a Python shell. After the Python shell starts, run
 
 ```python
 from paraview.simple import *

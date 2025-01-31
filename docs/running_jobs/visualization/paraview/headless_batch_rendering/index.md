@@ -40,37 +40,11 @@ Click the **Play** button and see the camera orbiting around the geometric shape
 
 ## Parallel Rendering with Slurm Array Jobs
 
-The ParaView state file represents the data corresponding to the geometric shape and the animated camera perspective. We will render it in parallel with Slurm array jobs and create a video. 
-
-Start an interactive session on the HPC, and pull an Apptainer container with a headless version of ParaView 5.11.0 in it:
-```bash
-apptainer pull oras://ghcr.io/e-eight/containers/paraview-headless
-```
-This will create a file called `paraview-headless_latest.sif`. Headless means that the program does not have access to a display to make graphical outputs. This works because we will use ParaView only to render the frames, not to view the movie. If the pulling the container fails for any reason, you can create one from an Apptainer definition file containing the following:
-```bash
-Bootstrap: docker
-From: debian:bookworm-slim
-
-%post
-  apt update -y
-  apt install -y libgomp1 curl wget libglu1-mesa-dev freeglut3-dev mesa-common-dev libxcursor*
-  cd /opt
-  wget "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.0-osmesa-MPI-Linux-Python3.9-x86_64.tar.gz" -O paraview.tar.gz
-  tar xf paraview.tar.gz
-  rm paraview.tar.gz
-  apt-get clean && rm -rf /var/lib/apt/lists/*
-
-%environment
-  export PATH=/opt/ParaView-5.11.0-osmesa-MPI-Linux-Python3.9-x86_64/bin:$PATH
-```
-See [Containers](../../../../software/containers/what_are_containers/index.md) to learn more about Apptainer containers, and how to create them. 
-
-
-We will now construct one Slurm script and one Python script that we will use for our rendering. The Slurm script will submit an array job. For more information, on Slurm array jobs, see [Array Jobs](../../../batch_jobs/array_jobs/index.md). The Python script will contain all the logic for rendering the frames with ParaView.
+The ParaView state file represents the data corresponding to the geometric shape and the animated camera perspective. We will render it in parallel with Slurm [array jobs](../../../batch_jobs/array_jobs/index.md) and create a video. For this we will use a container containing a headless version of ParaView 5.11.0.
 
 ### Slurm Script
 
-In the following script replace `visteam` with your allocation account. 
+We will use the Slurm script below to submit the array job. It refers to a Python script `render.py` which contains the logic necessary to render the frames with ParaView. Replace `visteam` in the script with your allocation account. 
 
 ```bash title="headless_batch.slurm"
 #!/bin/bash
@@ -84,16 +58,14 @@ In the following script replace `visteam` with your allocation account.
 #SBATCH --account=visteam
 
 pvsm_pth=$1
-apptainer exec paraview-headless_latest.sif pvpython render.py --pvsm "$pvsm_pth" --frame ${SLURM_ARRAY_TASK_ID}
+apptainer exec /contrib/singularity/ua-hpc/paraview/paraview-5.11.0-headless-osmesa.sif pvpython render.py --pvsm "$pvsm_pth" --frame ${SLURM_ARRAY_TASK_ID}
 ```
 
 As it is written this will allocate 1 CPU task for the task of headlessly rendering a single frame with an upper time limit of 30 mins. Note that there is a `${SLURM_ARRAY_TASK_ID}` environment variable in use but no `#SBATCH --array=` line. This is because it is often nice to have the option to specify the size of the array job at run time as we will see below. This will simply start the Apptainer container for each array job and execute a script that is a wrapper around the ParaView `pvpython` program. For more information on the `pvpython` program, see [Getting Started with ParaView Terminal](../getting_started_with_paraview_terminal/index.md).
 
-This next file is where many of the interesting bits actually are. 
+### `render.py`
 
-### Python Script
-
-This script was initially generated with the `trace` utility built into ParaView. With the `trace` utility you can make a Python script by recording interactions with the ParaView GUI. For more information, see [Trace Recorder](https://www.paraview.org/Wiki/ParaView_and_Python#Trace_Recorder). The comments in the script explain what the code does.
+This file is where many of the interesting bits actually are. It was initially generated with the `trace` utility built into ParaView. With the `trace` utility you can make a Python script by recording interactions with the ParaView GUI. For more information, see [Trace Recorder](https://www.paraview.org/Wiki/ParaView_and_Python#Trace_Recorder). The comments in the script explain what the code does.
 
 ```python title="render.py"
 # state file generated using paraview version 5.11.0
