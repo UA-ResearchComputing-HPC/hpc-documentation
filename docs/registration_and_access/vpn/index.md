@@ -15,7 +15,7 @@ You will find the following VPN services useful for accessing some of the resour
 
 
 === "GUI"
-    You can connect to the UArizona VPN services with the software Cisco Secure Client. It is available for Windows, Mac, and Linux distributions. On Linux distributions you might have a better experience with OpenConnect VPN (see CLI). Follow the UITS Knowledge Base guide for [Windows](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011053), [Mac](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010746), or [Linux](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0010416), to install Cisco Secure Client on your computer. The guide also shows how you can connect to the UArizona SSL VPN.
+    You can connect to the UArizona VPN services with the software Cisco Secure Client. It is available for Windows, Mac, and Linux distributions. On Linux distributions you might have a better experience with OpenConnect VPN (see CLI). Follow the [UITS Knowledge Base guide](https://uarizona.service-now.com/sp?id=kb_article_view&sysparm_article=KB0011701&sys_kb_id=a83f1b551b5dda103578773bdc4bcbea&spa=1) to install Cisco Secure Client on your computer. 
         
     Follow the steps below to connect to UArizona HPC VPN (the screenshots are from a Mac, but the experience is similar across OSs):
         
