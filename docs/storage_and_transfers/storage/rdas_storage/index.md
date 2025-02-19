@@ -41,7 +41,7 @@ PIs can request an allocation on R-DAS from [https://portal.hpc.arizona.edu/port
     
 ## Accessing Your R-DAS Allocation
 !!! tip
-    UArizona IP Address Required: To access your R-DAS allocation you need to be connected to either the UArizona campus network, or the UArizona SSL VPN. For information about connecting to a VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/). If you are accessing your R-DAS allocation from an HPC cluster, then you are already on the UArizona campus network and do not need to connect to the UArizona SSL VPN. 
+    UArizona IP Address Required: To access your R-DAS allocation you need to be connected to either the UArizona campus network, or the UArizona SSL VPN. For information about connecting to a VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/). If you are accessing your R-DAS allocation from an HPC cluster, then you are already on the UArizona campus network and do not need to connect to the UArizona SSL VPN. **Please note that the correct VPN to access R-DAS is the UArizona SSL VPN (vpn.arizona.edu), and not the HPC VPN (vpn.hpc.arizona.edu).** 
     
 R-DAS can be accessed from Linux, MacOS, or Windows. The screenshots are intended to be visual aids, but they include information from the consulting team. When you proceed, please enter your own information.
 
