@@ -26,11 +26,12 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
 
 <div class="card-grid">
   <div class="card">
-    <img src="images/jahn.png" title="Ethan Jahn" style="width:200px;">
+    <img src="images/jahn.jpg" title="Ethan Jahn" style="width:200px;">
     <div class="container">
       <h4><b>Ethan Jahn</b></h4>
 
-      <p>Ethan has been a scientific programmer for over 10 years, and a user of High Performance Computing resources for over 7 years. They earned their PhD in Computational Astrophysics from UC Riverside in 2021, and spent two years as an Adjunct Professor of Physics at Riverside City College before joining the UArizona HPC team in August 2023. They continue to incorporate education, training, and outreach into their consulting practice, and have an interest in interdisciplinary approaches to science communication.</p>
+      <p>Ethan has been a scientific programmer for over 10 years, and a user of High Performance Computing resources for over 7 years. He earned his PhD in Computational Astrophysics from UC Riverside in 2021, and spent two years as an Adjunct Professor of Physics at Riverside City College before joining the UArizona HPC team in August 2023. He continues to incorporate education, training, and outreach into their consulting practice, and has an interest in interdisciplinary approaches to science communication.</p>
+
     </div>
   </div>
 
