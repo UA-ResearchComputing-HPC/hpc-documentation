@@ -30,13 +30,28 @@ source ~/.bashrc
 ```
 This will create a directory called `micromamba` in your home folder in which your Conda environments and associated packages will be installed, and all that information to your `.bashrc`. 
 
-!!! Tip
+<!-- !!! Tip
 
     Your home directory can fill up pretty fast with environments and packages installed with `micromamba`. You can change the location where your environments and packages are installed to avoid that. Your PI's group directory can be a good choice for this. Run the following commands to change the location:
     ```bash
     micromamba config append envs_dirs <new_location>/envs
     micromamba config append pkgs_dirs <new_location>/pkgs
-    ```
+    ``` -->
+
+While it is feasible to use the default micromamba root prefix `$HOME/micromamba`, it is important to be aware of the disk space used by your Conda environments in this directory. **Since home folders only have 50GB, it is easy to fill them up.** If you would like to change the default installation directory for new Conda environments installed with micromamba, you will need to edit your `~/.bashrc` file. Run the following command to override the default root prefix with your desired path:
+
+```bash
+echo 'export MAMBA_ROOT_PREFIX=/path/to/desired/folder' >> ~/.bashrc
+```
+
+A recommended option would be to use a personal folder within your PI's `groups` directory. Something like this:
+
+```bash
+/groups/<pi-netid>/<my-netid>/micromamba
+```
+
+Once you have run the above command, you will need to run `source ~/.bashrc` for the changes to activate in your current session.
+
 
 ## Creating a Conda Environment
 
