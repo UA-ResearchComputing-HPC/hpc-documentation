@@ -1,12 +1,29 @@
 # Software Modules
 
-!!! tip "Availability"
-    Software modules are not available on the login nodes. You will need to be on a compute node to access them.
+## What are Software Modules?
 
-!!! warning "Cluster Differences"
-    Ocelote and El Gato both run CentOS 7 as their operating system and share the same system libraries and modules. These two clusters can generally be used interchangably. Puma uses Rocky Linux 9 as its operating system and has different system libraries and modules than Ocelote and El Gato. This means workflows may not be transferrable between Puma and the other two clusters. Take note of which cluster you're using to prevent software failures.
+<img src="./images/simple_module.gif" style="width: 500px;" align=right>
 
-Software packages are available as modules and are accessible from the compute nodes of any of our three clusters. A software module is a tool used to manage software environments and dependencies. It allows you to easily load and unload different software packages, libraries, and compilers needed for computational tasks without conflicts. This ensures access to many specific tools, and even different versions of the same tools, without affecting the overall system configuration.
+High-Performance Computing (HPC) environments host a diverse array of software applications, libraries, and compilers. Managing these efficiently can be challenging due to varying versions, configurations, and dependencies, which can lead to conflicts if not handled properly. For instance, one user might require Python 3.6 for their workflow, while another needs Python 3.12. If both versions were installed in a standard system location (e.g., `/usr/bin` or `/usr/local/bin`), they could interfere with each other, causing instability and compatibility issues.
+
+To address this, HPC systems employ a **module system**. Software packages are installed in non-standard locations, avoiding conflicts with system-wide paths. Instead of modifying global settings, users dynamically manage their software environments using modules. With simple commands, users can load, unload, and switch between different software packages and versions, ensuring a clean and consistent environment tailored to their needs.
+
+
+## How Software Modules Work
+
+Software modules are managed using the `module` command. When you load a module, it sources a lightweight configuration file that dynamically adjusts environment variables, paths, and dependencies, making the correct software version available. Unloading a module reverts these changes, restoring your environment to its previous state.
+
+This approach gives you fine-grained control over your software environment, enabling adjustments without impacting other users or system-wide configurations
+
+## Module Availability
+
+Software modules are {==only available on compute nodes==} and are not accessible on the login nodes. 
+
+It’s also important to be aware of differences between the clusters:
+
+- **Ocelote** and **El Gato** both run **CentOS 7** and share the same system libraries and modules. These clusters can generally be used interchangeably.
+
+- **Puma**, however, runs **Rocky Linux 9**, which has different system libraries and modules than Ocelote and El Gato. As a result, workflows that work on Ocelote or El Gato may not be transferable to Puma without modifications.
 
 ## Module Commands
 
@@ -15,21 +32,21 @@ Software packages are available as modules and are accessible from the compute n
 
 |Command | Description|
 |-|-|
-|<pre><code>module avail</code></pre>| Display all the software and versions installed on the system|
-|<pre><code>module avail &#60;search_term&#62;</code></pre>|Display all installed modules matching ```<search_term>```|
-|<pre><code>module list</code></pre>|Display the software you have loaded in your environment|
-|<pre><code>module whatis &#60;module_name&#62;</code></pre>|Displays some descriptive information about a specific module|
-|<pre><code>module show &#60;module_name&#62;</code></pre>|Displays system variables that are set/modified when loading module ```<module_name>```|
+|<pre><code>module avail</code></pre>| Display all the software and versions installed on the system.|
+|<pre><code>module avail &#60;search_term&#62;</code></pre>|Display all installed modules matching ```<search_term>```. For example `module avail python`.|
+|<pre><code>module list</code></pre>|Display the software you have loaded in your environment.|
+|<pre><code>module whatis &#60;module_name&#62;</code></pre>|Displays some descriptive information about a specific module.|
+|<pre><code>module show &#60;module_name&#62;</code></pre>|Displays system variables that are set/modified when loading module ```<module_name>```. This can be helpful for locating the executables that are provided by the module.|
 |<pre><code>module load &#60;module_name&#62;</code></pre>|Load a software module in your environment|
 |<pre><code>module unload &#60;module_name&#62;</code></pre>|Unload a specific software package from your environment|
-|<pre><code>module swap &#60;module_name&#62;/&#60;version1&#62; &#60;module_name&#62;/&#60;version2&#62;</code></pre>| Switch versions of a software module|
-|<pre><code>module purge</code></pre>| Unload all the software modules from your environment|
+|<pre><code>module swap &#60;module_name&#62;/&#60;version1&#62; &#60;module_name&#62;/&#60;version2&#62;</code></pre>|Switch versions of a software module.|
+|<pre><code>module purge</code></pre>| Unload all software modules from your environment|
 |<pre><code>module help</code></pre>| Display a help menu for the module command|
 
 ## Examples
 
 ### Loading Modules
-```
+```bash title="Loading Python 3.9"
 [netid@cpu39 ~]$ module avail python
 
 ------------------- /opt/ohpc/pub/modulefiles --------------------
@@ -50,9 +67,9 @@ Python 3.11.4
 
 ### Finding Executables and Libraries
 
-If you're looking for the specific paths added to your environment when loading a module, you can use the command `module show`. For example:
+If you're looking for the specific variables that will be modified when loading a module, you can use the command `module show`. For example:
 
-```
+```bash title="Environment variables modified by Gromacs module"
 [netid@cpu38 ~]$ module show gromacs
 ---------------------------------------------------------
    /opt/ohpc/pub/moduledeps/gnu8-openmpi3/gromacs/2021.5:
@@ -72,7 +89,14 @@ load("gnu8")
 help([[ Adds gromacs to your environment
 ]])
 ```
-These paths will allow you to determine the locations of the executables, libraries, header files, etc. available to you after loading the software.
+These paths can help you to determine the locations of the executables, libraries, header files, etc. available to you after loading the software. For example, the environment variable `PATH` is what allows the system to find executables, so, in the case above, we would look at the line: `prepend_path("PATH","/opt/ohpc/pub/apps/gromacs/2021.5/bin")` to determine where Gromacs' executables live. We can then search this path to see what they are:
+
+```bash title="Executables provided by Gromacs"
+[netid@cpu38 ~]$ ls /opt/ohpc/pub/apps/gromacs/2021.5/bin
+gmx_mpi     GMXRC      gmx-completion.bash  gmx-completion-gmx_mpi.bash
+GMXRC.bash  GMXRC.csh  demux.pl             xplor2gmx.pl
+GMXRC.zsh
+```
 
 
 
