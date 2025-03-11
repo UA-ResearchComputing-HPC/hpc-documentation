@@ -2,6 +2,8 @@
 
 <link rel="stylesheet" href="../../assets/stylesheets/images.css">
 
+[Open OnDemand](https://ood.hpc.arizona.edu/){ .md-button }
+
 Open OnDemand (OOD), which is an NSF-funded open-source HPC portal, is available for users and provides web browser access for graphically interfacing with HPC. This service is available at [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/). 
 
 ### Why use Open OnDemand?
@@ -42,7 +44,7 @@ Need command line access to a terminal on HPC? No problem! Simply select the **C
 
 The file browser provides easy access to your `/home`, `/xdisk`, and `/groups` directories and allows you to view, edit, copy, and rename your files. You may also transfer small files (under 64 MB) between HPC and your local workstation using this interface. For larger transfers, see our section on [Transferring Data](/storage_and_transfers/transfers/overview/) for more efficient methods. 
 
-**Access**
+### Access
 
 In the browser at the top of the screen, select the **Files** dropdown
 
@@ -52,7 +54,7 @@ You will be able to select your `/home` directory, `/groups`, or `/xdisk`. If yo
 
 <img class="ood-screenshots" title="OnDemand file filtering" src="images/groups-files.png" style="width:100%;">
 
-**Editing Files**
+### Editing Files
 
 First, navigate to the file you wish to edit. Then, click the vertical ellipses on the right-hand side and select **Edit**
 
@@ -64,7 +66,7 @@ This will open a file editor in your browser where you may select your color the
 
 ## Job Viewer and Composer
 
-**Job Viewer**
+### Job Viewer
 
 The Job Viewer allows you to check the status and time remaining of your running jobs. You can also cancel your jobs using this interface. Note: be careful looking at **All Jobs** since this will likely timeout trying to organize them all. To use the Job Viewer, navigate to the **Jobs** dropdown and select **Active Jobs**
 
@@ -74,7 +76,7 @@ This will open a new page listing all your running and pending jobs. You may del
 
 <img class="ood-screenshots" title="OnDemand active job browser" src="images/active-jobs.png" style="width:100%;">
 
-**Job Composer**
+### Job Composer
 
 The Job Composer lets you create and run a Slurm script on any of our three clusters. It should be noted that the Job Composer creates a special string of directories in your `/home` starting with `ondemand/` which is where both your submission scripts and output files will be stored. Make note of the path to your files on the right-hand side of the Job Composer screen under **Script location**.
 
@@ -84,32 +86,37 @@ The Job Composer lets you create and run a Slurm script on any of our three clus
 
 Open OnDemand provides access to graphical interfaces for some popular software. These can be found under **Interactive Apps** through the Open OnDemand web browser. The process of starting and accessing these jobs is the same regardless of which application you select.
 
-!!! danger "July 31, 2024 changes"
-    Beginning on July 31, 2024, OnDemand graphical applications will be limited to four days of runtime to improve general resource availability. Jobs that take longer than four days to run may be converted to [batch jobs](../batch_jobs/intro/). If you have questions about using batch jobs, [reach out to our consultants](../../support_and_training/consulting_services/). 
+!!! warning "Fair Use of GPUs"
+    GPUs are a limited shared resource, and reserving them while leaving them inactive for extended periods negatively impacts the user community. Please ensure you actively using your session while it is active and release the resources when they are no longer needed. This helps ensure fair access for everyone. 
 
-**Web Form**
+### Web Form
 
 First, select the desired application from Interactive Apps. This will take you to a form where you will enter your job information. This includes the entries in the following table:
 
-<img class="ood-form" src="images/ood_web_form.png" title="OnDemand interactive app web form" style="width:400px;">
+!!! tip "Need to use a GPU?"
+    If you need to use GPUs, make sure you're selecting **&lt;Partition&gt; with GPU(s)** from the **Queue** dropdown. This will make the GPU selection option available. Detailed information on the GPUs available can be found on our [resources page](../../resources/compute_resources/#gpu-nodes).
 
+
+
+<img class="ood-form" src="images/ood_web_form.png" title="OnDemand interactive app web form" style="width:400px;">
 
 
 |Field|Description|Example|
 |-|-|-|
 |Cluster|Select which cluster to submit the job request to.	|Puma|
-|Run Time|	The maximum number of hours the job can run. Please note that the maximum possible run time is 10 days (240 hours).| 4|
-|Core Count on a single node| The number of CPUs needed. This affects the amount of memory your job is allocated. The maximum that can be requested is [dependent on which cluster you choose](../../resources/compute_resources/). | 16|
-|Memory per core|The amount of memory needed {==per core==} in GB. The amount that can be requested is dependent on which cluster you choose and your desired node type. For more information, see our [CPUs and Memory page](../cpus_and_memory/).|5|
-|GPUs required|[The number and type of GPUs](../../resources/compute_resources/#gpu-nodes) needed for your job, if any. |One A100 20GB GPU|
+|Windowing Environment|Preset for the user. Cannot be changed.||
+|Queue|The partition to use. Standard is the most common. If your group has buy-in hours, you may use High Priority. If you need access to GPUs, select your partition in the dropdown with the additional descriptor "With GPU(s)"|Standard|
+|Run Time|The number of hours to reserve for your job. The maximum allowable is 96 hours (4 days).|10|
+|Core Count on a single node| The number of CPUs needed. This affects the amount of memory your job is allocated. The maximum that can be requested is [dependent on which cluster you choose](../../resources/compute_resources/). | 8|
+|Memory per core|The amount of memory needed {==per core==} in GB. The amount that can be requested is dependent on which cluster you choose and your desired node type. For more information, see our [CPUs and Memory page](../cpus_and_memory/).|5GB/core|
 |PI Group|Your accounting group. If you do not know your group name, you can either check in the user portal, or can run `va` on the command line. If the group you entered does not exist, you will receive an error `sg: group 'group_name' does not exist`|your-group|
-|Queue| The queue, or partition, to use. Standard is the most common. If your group has buy-in hours, you may use High Priority.|Standard|
+
 
 Once you've entered all your details, click **Launch** at the bottom of the page. This will take you to a tile with information about your job including job ID and session ID. This information can used for debugging purposes. 
 
 When you first submit your job, it will show as having a status of "Queued". Once your job reaches the front of the queue, it will show a status of "Starting". When your session is ready, you can launch the application using **Connect** at the bottom of the tile.
 
-## Applications Available
+### Applications Available
 
 === "Virtual Desktop"
 
