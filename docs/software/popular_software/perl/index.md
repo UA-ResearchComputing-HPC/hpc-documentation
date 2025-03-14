@@ -19,7 +19,7 @@ We provide a version of Perl through modules or the operating system. Installati
 
 For a helpful Perl tutorial, see: [http://www.tutorialspoint.com/perl/perl_modules.htm](http://www.tutorialspoint.com/perl/perl_modules.htm). Additionally, O'Reilly Media is a well regarded source for Perl 
 
-### Installing Perl Packages Using perl-virtualenv
+## Installing Perl Packages Using perl-virtualenv
 
 One of the best things about Perl is the number of packages provided by the user community. Installing packages generally requires root access but that is not a viable solution in the HPC environment.
 
@@ -40,3 +40,21 @@ Configuring Config-Trivial-0.81 ... OK
 ```
 
 Once your environment is created, it can be activated for any future jobs or interactive sessions using the `source </path/to/environment>` command.
+
+## Installing cpanm
+
+If you find that `cpanm` is not available, you can install it to your home folder:
+
+```bash
+wget -O cpanm https://cpanmin.us
+chmod +x cpanm
+mkdir -p ~/bin
+mv cpanm ~/bin/
+```
+
+This creates a folder in your home directory called `bin` and adds the `cpanm` binary to it. You can run `cpanm` by providing the full path, e.g. `$HOME/bin/cpanm`. You can add the `bin` folder to your `PATH` by performing the following command. All items within `$HOME/bin` should then be available to execute from any location. 
+
+```bash
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
