@@ -118,11 +118,11 @@ HPC managed endpoints allow you to connect to HPC-affiliated storage to initiate
 Below are a list of HPC managed endpoints and how to configure them:
 
 === "HPC Storage"
-    The endpoint for HPC can be found by searching {==**UA HPC Filesystems**==} under the **Collections** tab.
+    The endpoint for HPC can be found by typing {==**UA HPC Filesystems**==} in the search bar under the **Collections** tab.
 
     <img src="images/ua_hpc_filesystems_endpoint.png" title="UA HPC Filesystems endpoint" style="width:100%; box-shadow: 5px 5px 5px #999;">
     
-    Click the result, then click **Open in File Manager** to access your HPC files.
+    Click the result with the subheading "Subscribed Mapped Collection", then click **Open in File Manager** to access your HPC files.
 
     <img src="images/open_hpc_filesystems_manager.png" title="Open file manager" style="width:100%; box-shadow: 5px 5px 5px #999;">
 
@@ -135,7 +135,7 @@ Below are a list of HPC managed endpoints and how to configure them:
 
 === "Rental Storage"
 
-    The endpoint for [rental storage](../../storage/rental_storage/) (found on the filexfer nodes under ```/rental```) can be found by searching {==**UA Rental Storage Filesystem**==} under the **Collections** tab.
+    The endpoint for [rental storage](../../storage/rental_storage/) (found on the filexfer nodes under ```/rental```) can be found by typing {==**UA Rental Storage Filesystem**==} in the search bar under the **Collections** tab.
 
     <img src="images/globus_rental_endpoint.png" title="HPC rental endpoint" style="width:100%;box-shadow: 5px 5px 5px #999;">
 
@@ -153,7 +153,7 @@ Below are a list of HPC managed endpoints and how to configure them:
 
 === "Tier 2 AWS Storage"
 
-    To access a [Tier 2 AWS S3 bucket](../../storage/tier2_storage/), in the Collections tab, enter {==**UA AWS S3**==} in the search bar. In the results, you should see the name UA AWS S3 show up with the description {==Subscribed Mapped Collection==}. Click the endpoint's name to proceed
+    To access a [Tier 2 AWS S3 bucket](../../storage/tier2_storage/), in the Collections tab, type {==**UA AWS S3**==} in the search bar. In the results, you should see the name UA AWS S3 show up with the description {==Subscribed Mapped Collection==}. Click the endpoint's name to proceed
 
     <img src="images/aws_s3_endpoint.png" title="Tier 2 AWS endpoint" style="width:100%; box-shadow: 5px 5px 5px #999;">
 
