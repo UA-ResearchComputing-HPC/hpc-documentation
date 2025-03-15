@@ -38,7 +38,7 @@ Supercomputers provide opportunities for data storage and parallel processing th
 
 Increasing the data throughput of a single job is known as **scaling up**. This may mean moving from a 500 GB database on a workstation to a 5 TB database on the HPC, or raising the resolution of your simulation by a factor of 10 or 100. 
 
-Other types of analyses may benefit from an increased number of jobs, such performing parameter sweeps, running Monte Carlo simulations, or performing molecular dynamics simulations. Local machines are limited by the number of cores accessible to them, decreasing the number of simultaneous computations as compared to an HPC. An increase in the number of CPUs used during analysis is known as **scaling out** your work.
+Other types of analyses may benefit from an increased number of jobs, such as performing parameter sweeps, running Monte Carlo simulations, or performing molecular dynamics simulations. Local machines are limited by the number of cores accessible to them, decreasing the number of simultaneous computations as compared to an HPC. An increase in the number of CPUs used during analysis is known as **scaling out** your work.
 
 
 ### Workflow Automation 
