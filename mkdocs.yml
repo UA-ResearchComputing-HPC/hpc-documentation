@@ -111,6 +111,7 @@ nav:
     #      - Job Dependencies: running_jobs/example_batch_jobs/general_examples/job_dependencies/index.md
     #      
     - Monitoring Jobs and Resources: running_jobs/monitoring_jobs_and_resources/index.md
+    - Resource Optimization: running_jobs/resource_optimization/index.md
     - Parallelization: running_jobs/parallelization/index.md
     # Q is there a way to include the md on the main visualization page instead of in an  "INTRO " sub item?
     - Visualization: 
