@@ -14,6 +14,7 @@ Before beginning this tutorial, you'll want to ensure that you're familiarized w
 
 - [x] **Policies**: Read up on our HPC guidelines. In particular:
     * [x] <a href="../../policies/acceptable_use/" target="_blank">Acceptable use</a>
+    * [x] <a href="../../policies/standard_practices/" target="_blank">Standard Practices</a>
     * [x] <a href="../../policies/acknowledgements/" target="_blank">Acknowledgements</a>
     * [x] <a href="../../policies/loss_of_university_affiliation/" target="_blank">What happens if you lose university affiliation</a>
 - [x] **Register for an account**: To log into HPC, you'll need to have registered for an account. If you have not yet done so, see <a href="../../registration_and_access/account_creation/" target="_blank">our registration documentation</a> for steps. Note that the process varies based on your university affiliation. 
