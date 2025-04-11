@@ -11,11 +11,12 @@ We don't expect users to be experts in HPC before they start, so if you're not y
 
 1. **Computer Literacy:** HPC users should have a basic degree of computer literacy, or be actively learning it. This includes understanding the basics of *files* and *folders*, familiarity with basic hardware terms like *processor* and *drive*, and other common usages.
 
-2. **Linux Literacy:** You don’t need to be a Linux expert to start using HPC, but building this skill set will help you get the most out of our system. This includes tasks like managing files, submitting jobs, and troubleshooting common issues. If you're new to Linux, consider starting with some introductory resources to build confidence as you go.
+2. **Linux Literacy:** You don’t need to be a Linux expert to start using HPC, but building this skill set will help you get the most out of our system. This includes tasks like managing files, submitting jobs, and troubleshooting common issues. If you're new to Linux, consider starting with some [introductory resources](https://www.youtube.com/playlist?list=PLhznUsiowt261tbLSHplkZHcvZAv_hEcT) to build confidence as you go.
 
-3. **Programming Skills:** The level of programming knowledge needed varies depending on your use case. While some workflows require minimal coding, others can be code-intensive. Our consultants are available to assist with diagnosing issues and troubleshooting, but we are unable to provide in-depth programming instruction.
+3. **Programming Skills:** Some HPC workflows require minimal coding, while others can be code-intensive. These skills are often highly specific to a particular domain of research, making across-the-board support difficult. The general expectation is that users will receive support on domain-specific programming knowledge from their departments, collaborators, and mentors. 
+<!-- Our consultants are available to assist with diagnosing issues and troubleshooting, but we are unable to provide in-depth programming instruction. -->
 
-Our [support team](../../support_and_training/consulting_services) is excited to assist with HPC-related questions, troubleshoot issues, and guide users toward solutions. However, we are unable to provide comprehensive instruction on foundational skills like Linux, general computer literacy, or programming. To make the most of our support, we encourage users to actively seek and utilize training resources (including [workshops we offer](../../events/workshop_materials) and online tutorials/courses) to build skills over time. 
+Our [support team](../../support_and_training/consulting_services) is available to assist with HPC-related questions, troubleshoot issues, and guide users toward solutions. However, we are unable to provide comprehensive instruction on foundational skills like Linux, general computer literacy, or programming. To make the most of our support, we encourage users to actively seek and utilize training resources (including [workshops we offer](../../events/workshop_materials) and online tutorials/courses) to build skills over time. 
 
 ## Proper Usage of Nodes
 
