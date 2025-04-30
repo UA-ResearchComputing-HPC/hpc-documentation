@@ -1,12 +1,19 @@
 # Time Allocations
 
-??? danger "Do not run computations on the login nodes." 
+???+ danger "Do not run computations on the login nodes." 
     CPU time allocations do not apply to login nodes. See [Running Jobs](../../running_jobs/overview/) for detailed instructions on the proper way to run computationally intensive tasks. 
+
+
+???+ link "You may also be interested in these pages:"
+    
+    - [Standard Practices](../../policies/standard_practices/) - important policies, system features, and recommended practices
+    - [Running Jobs](../../running_jobs/overview/) - how to run your work on the HPC 
 
 
 ## Group Allocations
 
 All University of Arizona Principal Investigators (PIs; typically faculty) that register for access to UArizona High Performance Computing (HPC) services receive free standard allocations on the HPC clusters which are shared among all members of their team and refreshed on a monthly basis. All PIs receive a standard allocation in addition to the windfall partition. A breakdown of the allocations available on the system and their usage is shown below. 
+
 
 !!! Warning "High Priority"
 

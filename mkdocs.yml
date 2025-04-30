@@ -222,6 +222,7 @@ extra_javascript:
  
 extra_css:
     - assets/stylesheets/extra.css
+    - assets/stylesheets/admonitions.css
 
 theme:
   name: material

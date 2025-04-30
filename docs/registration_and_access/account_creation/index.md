@@ -5,6 +5,14 @@ All UArizona Faculty, Staff, Students, and Affiliates are eligible for HPC accou
 
 If you are considered to be a PI in the University's employee system (EDS) you may establish a PI account. PI Accounts are self-sponsored, manage their own HPC group(s), and receive their own time and storage allocations to be shared among group members. Staff, students and affiliates must be sponsored by a PI at the PI's discretion to obtain HPC access. Users may be a member of more than one HPC group.
 
+??? link "Getting Started with HPC - Helpful Pages"
+
+    - [HPC Quick Start](../../quick_start/overview/) - introduction to our HPC system
+    - [Standard Practices](../../policies/standard_practices/) - important policies, recommendations, and helpful tips 
+    - [Frequently Asked Questions](../../support_and_training/faqs/) - solutions to common issues
+    - [HPC Terms Glossary](../../support_and_training/glossary/) - definitions and explanations of selected jargon
+    - [Linux Cheat Sheet](../../support_and_training/cheat_sheet/) - helpful information on linux, bash, file permissions, etc.
+
 ## How to Register
 
 The process of registering for an HPC account varies depending on your affiliation with the university. Take a look at the list below to determine how you should register:

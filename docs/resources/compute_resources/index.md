@@ -1,7 +1,13 @@
 # Compute Resources
 
-??? danger "Do not run computations on the login nodes." 
-    The compute resources described on this page are designed for handling computationally intensive tasks. See [Running Jobs](../../running_jobs/overview/) for detailed instructions. 
+!!! danger "Do not run computations on the login nodes." 
+    The compute resources described on this page are designed for handling computationally intensive tasks, but the login nodes are not.
+
+???+ link "You may also be interested in these pages:"
+
+    - [Standard Practices](../../policies/standard_practices/) - important policies, recommendations, and helpful tips 
+    - [Running Jobs](../../running_jobs/overview/) - how to run your work on the HPC 
+    - [Frequently Asked Questions](../../support_and_training/faqs/) - solutions to common issues
 
 ## Compute Resources Available by Cluster
 

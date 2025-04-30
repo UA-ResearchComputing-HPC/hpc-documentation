@@ -2,9 +2,16 @@
 
 <link rel="stylesheet" href="../../assets/stylesheets/images.css">
 
-[Open OnDemand](https://ood.hpc.arizona.edu/){ .md-button }
+[Launch Open OnDemand](https://ood.hpc.arizona.edu/){ .md-button }
 
 Open OnDemand (OOD), which is an NSF-funded open-source HPC portal, is available for users and provides web browser access for graphically interfacing with HPC. This service is available at [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/). 
+
+???+ link "You may also be interested in:"
+    
+    - [Standard Practices](../../policies/standard_practices/) - important policies, recommendations, and helpful tips 
+    - [Compute Resources](../../resources/compute_resources/) - details on the number and type of compute nodes
+    - [Resource Optimization](../../running_jobs/resource_optimization) - improve the efficiency of your jobs on HPC
+    - [Frequently Asked Questions](../../support_and_training/faqs/) - solutions to common issues
 
 ### Why use Open OnDemand?
 

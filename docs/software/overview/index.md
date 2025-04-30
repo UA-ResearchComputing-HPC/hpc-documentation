@@ -5,6 +5,13 @@
 ???+ warning "Module availability"
     Software modules are not available on the login nodes. To access them, you will need to connect to a compute node either via an interactive session or batch job.
 
+???+ link "You may also be interested in:"
+    
+    - [Standard Practices](../../policies/standard_practices/) - important policies, recommendations, and helpful tips 
+    - [Compute Resources](../../resources/compute_resources/) - details on the number and type of compute nodes
+    - [Running Jobs](../../running_jobs/overview/) - how to run your work on the HPC 
+    - [Frequently Asked Questions](../../support_and_training/faqs/) - solutions to common issues
+
 Our HPC systems support over 100 software applications.  The first thing to know is that the compute nodes on each cluster are where you use and manage software.  
 
 The software is available in three different ways:
