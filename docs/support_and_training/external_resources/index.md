@@ -5,17 +5,7 @@ Explore a number of resources beyond our center's offerings, from local communit
 ## ACCESS
 <img src="images/access_ci.jpg" title="ACCESS logo" style="height:50px;"> 
 
-!!! tip "ACCESS has succeeded the XSEDE program which concluded in August 2022."
-
-ACCESS is a comprehensive NSF-funded initiative designed to facilitate usage of national supercomputing resources for researchers, educators, and students. These resources encompass state-of-the-art computing clusters, data and storage services, scientific applications, educational materials, workshops, and dedicated support services.
-
-For University of Arizona (UArizona) affiliates, ACCESS presents an opportunity to leverage additional computing power and resources beyond what is available through UArizona's existing High-Performance Computing (HPC) infrastructure. Notable advantages and use cases for UArizona affiliates include:
-
-- Researchers requiring extended computing time or additional computational resources beyond the capacity of UArizona's HPC systems.
-- Users seeking computational resources for Windows-based software applications. For instance, Jetstream2, a national resource, offers Windows Virtual Machines (VMs) to accommodate such needs.
-- Educators looking to harness GPU resources for classroom instruction. While UArizona's HPC facilities do provide GPU resources, high demand may lead to prolonged wait times, making ACCESS an appealing alternative.
-
-For more information on ACCESS, see: [https://access-ci.org/](https://access-ci.org/)
+ACCESS is an NSF-funded national program that provides compute resources for researchers, educators, and students on request. See our page on ACCESS for more comprehensive information: <a href="../nsf_access?reload/">NSF ACCESS CI</a>
 
 
 ## Ansys
