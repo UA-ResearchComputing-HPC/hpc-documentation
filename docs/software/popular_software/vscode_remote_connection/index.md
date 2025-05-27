@@ -7,6 +7,11 @@ Visual Studio Code (VS Code) can be used to edit source code and other files on 
 
 VS Code can also be run locally on laptop or desktop computers and used to make a remote connection to the HPC systems. This documentation is intended to detail the steps that must be taken to allow such a connection. For more detailed information on establishing SSH connections, refer to the VS Code documentation here: [https://code.visualstudio.com/docs/remote/ssh-tutorial](https://code.visualstudio.com/docs/remote/ssh-tutorial). There is also a general example shown in the section [Connection Example](#specifics-with-example) below.
 
+???+ warning "Not Available on Older Clusters"
+
+    Due to compatibility issues, VS Code remote connection is no longer available on Ocelote and El Gato. It is still available on Puma. 
+
+
 ## General Method
 
 {==Remote VSCode sessions should connect to a compute node==}. The reasons for this are:
@@ -47,21 +52,23 @@ Note that {==The HPC VPN==} is needed to connect directly to a compute node. Thi
 
 This can either be done directly on the command line, or you can start an Open OnDemand graphical job so you don't have to worry about timing out due to inactivity
 
-Note that starting a job either on Ocelote or ElGato will likely get you though the queue faster. As an example, from the command line we could request an eight-hour session with:
+While starting a job on Ocelote or ElGato will likely get you though the queue faster, VS Code remote connection is no longer compatible with the older clusters. You will need to start a job on Puma to use this feature.
+
+As an example, from the command line we could request an eight-hour session with:
  
 ```bash hl_lines="8 9" title="Interactive session on the command line"
-(ocelote) [netid@wentletrap ~]$ interactive -a hpcteam -n 4 -t 8:00:00
+(puma) [netid@wentletrap ~]$ interactive -a hpcteam -n 4 -t 8:00:00
 Run "interactive -h for help customizing interactive use"
 Submitting with /usr/local/bin/salloc --job-name=interactive --mem-per-cpu=4GB --nodes=1    --ntasks=4 --time=8:00:00 --account=hpcteam --partition=standard
-salloc: Pending job allocation 3293757
-salloc: job 3293757 queued and waiting for resources
-salloc: job 3293757 has been allocated resources
-salloc: Granted job allocation 3293757
-[netid@i16n10 ~]$ hostname
-i16n10.ocelote.hpc.arizona.edu
+salloc: Pending job allocation 1234567
+salloc: job 1234567 queued and waiting for resources
+salloc: job 1234567 has been allocated resources
+salloc: Granted job allocation 1234567
+[netid@r6u24n2 ~]$ hostname
+r6u24n2.puma.hpc.arizona.edu
 ```
 
-After the interactive session starts, type ```hostname```, which will give something like `i16n10.ocelote.hpc.arizona.edu` (shown highlighted in the code above). This is the name that you will enter in your local VS Code as the remote computer to connect to.
+After the interactive session starts, type ```hostname```, which will give something like `r6u24n2.puma.hpc.arizona.edu` (shown highlighted in the code above). This is the name that you will enter in your local VS Code as the remote computer to connect to.
 
 !!! tip "Different jobs are allocated different nodes"
     Note that each time you start an interactive session you will likely get a different node, and will therefore need to tell VS Code the specific host to connect to for each unique connection.
@@ -82,7 +89,7 @@ Select **+Add New SSH Host...**
 
 <img src="./images/add-new-ssh-host.png" style="width: 450px;">
 
-Then enter the ssh connection information (replacing `netid` with your own NetID). In this case, the command with the specific hostname would be `ssh netid@i16n10.ocelote.hpc.arizona.edu`. 
+Then enter the ssh connection information (replacing `netid` with your own NetID). In this case, the command with the specific hostname would be `ssh netid@r6u24n2.puma.hpc.arizona.edu`. 
 
 <img src="./images/enter-connection-command.png" style="width: 450px;">
 

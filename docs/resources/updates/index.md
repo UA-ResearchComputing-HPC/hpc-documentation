@@ -1,4 +1,35 @@
-# Updates 
+# Operating System Updates 
+
+## Overview
+
+In early 2025, the Puma cluster was updated to a newer operating system called Rocky Linux 9. Ocelote and El Gato remain on the older OS called CentOS 7. Below is a summary of the main points of relevance to users:
+
+**Files and Scheduling Unchanged**
+
+All user files are untouched. The Slurm scheduler has not changed in any notable way.
+
+**System Software**
+
+The versions and locations of system software on Puma may now be different than Ocelote/El Gato. Any software compiled on CentOS 7 will most likely need to be recompiled on Rocky 9 for use on Puma. 
+
+**Module Availability**
+
+The module system on Puma is now distinct from Ocelote/El Gato. While many modules available on the older OS are still available on Puma, some are not available at all, and some have changed version. Check available modules/versions on your cluster of choice. Significant changes include:
+
+- The default compiler updated from GCC 8 (module `gnu8`) to GCC 13 (module `gnu13`).
+- The default MPI distribution updated from OpenMPI 3 (module `openmpi3`) to OpenMPI 5 (module `openmpi5`).
+
+**Environment Compatibility**
+
+Software environments/libraries for programs like Python and R that were built on CentOS 7 may not function properly on Rocky 9. Users may need to rebuild custom environments on Puma to ensure compatibility.
+
+**Contrib Space Noninteroperable**
+
+Users who utilize the `/contrib` space should note that this space on Puma is now distinct from the space on Ocelote/ElGato.
+
+
+
+<!-- ## January 2025 Updates
 
 The Puma cluster is currently being updated from the outdated CentOS 7 operating system to Rocky Linux 9. This will involve updating both the operating system and much of the installed software.
 
@@ -25,14 +56,17 @@ This update will have a number of impacts, and we are taking steps to minimize d
         * updating the default MPI distribution from OpenMPI 3 (module `openmpi3`) to OpenMPI 5 (module `openmpi5`).
     * Some previously compiled software will not run on the new system, and will need to be recompiled.
     * HPC staff have recompiled public software modules when necessary.
-    * The majority of software modules previously available will remain available, sometimes with version changes.
+    * The majority of software modules previously available will remain available, sometimes with version changes. -->
 
   
 ## Submitting jobs to the updated cluster
 
-* Subsets of nodes will be converted to the new OS, effectively creating a new cluster.
+* During the upgrade, subsets of nodes were converted to the new OS, effectively creating two distinct versions of the Puma cluster: one set of nodes on CentOS 7, and another set of nodes on Rocky 9. During this interim period, the command `puma9` was used to target the latter.
+* Now that the upgrade is complete, the command `puma9` has been discontinued, and `puma` now targets the entire Puma cluster, which is operating on Rocky 9.
+
+<!-- * Subsets of nodes will be converted to the new OS, effectively creating a new cluster.
 * The updated cluster can be selected by entering `puma9`, just as the target cluster is currently specified by entering `puma`, `ocelote` or `elgato`. 
-* The resources available on the Puma9 cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications.
+* The resources available on the Puma9 cluster will remain functionally identical to those on the existing Puma, including the number of CPUs per node and memory per CPU. Thus, Slurm batch scripts that work properly on Puma should work on the new Puma without modifications. -->
 
 ## Adapting existing analyses. 
 
