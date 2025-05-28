@@ -29,38 +29,57 @@ Shortcuts can be used as stand-ins for system locations, avoiding the need for f
 |```rm```| Delete a file. **Be careful**, files deleted this way **can't be retrieved**|
 |```rm -r```|Delete a directory. **Be careful**, directories deleted this way **can't be retrieved**|
 
+-----
+
 ## Hidden Files and Directories
-Hidden files and directories start with a dot ```.``` and won't show up when you do a simple ```ls```. Some of these files are used to configure your environment when you first log in. Be careful when removing or modifying these files since doing so can cause unintended consequences.
+Hidden files and directories start with a dot `.` and won't show up when you do a simple `ls`. [Some of these files are used to configure your environment](#configuration-files) when you first log in. Be careful when removing or modifying these files since doing so can cause unintended consequences.
 
-!!! tip 
-    The `~` in the filenames below indicates your home directory. For example, `~/.bashrc` is specifying a file in your home called `.bashrc`.
+Note that sometimes hidden directories can be the culprits of full home directories. Check our our [HPC storage page](../../storage_and_transfers/storage/hpc_storage/#home-directory-storage-management) for some tips on how to tackle this issue. 
 
-|<div style="width:120px">File/Directory</div>|What It Does|Warnings|
-|-|-|-|
-|```~/.bash_profile```|	This file sets your working environment when you first log into HPC. This file sources your ```~/.bashrc``` (see below).|See the list in the danger block below.|
-|```~/.bashrc```|This file sets your working environment when you first log into HPC.|See the list in the danger block below.|
-|```~/.local```|This is a hidden directory in your home where pip-installed python packages, jupyter kernels, RStudio session information, etc. goes.|If you pip-install python packages when a virtual environment is not active, they will be installed in this directory. These will then be automatically loaded for all future python sessions (version-specific), including in Singularity images. This may cause versioning issues. We recommend always using [virtual environments](../../software/popular_software/python/).|
-|```~/.apptainer```|A hidden directory in your home where Apptainer images and cache files are stored by default.|This directory can grow large quickly and fill up your home. You can modify your ```~/.bashrc``` to [set a different cache directory location](../../software/containers/containers_on_hpc/#cache-directory) that has a larger quota.
+Note that it's possible to see and manage hidden files and directories in the [Open OnDemand](https://ood.hpc.arizona.edu) file browser by selecting the box "Show Dotfiles"
+ 
+<img src="./images/show_dotfiles.png" style="width: 600px; box-shadow: 10px 10px 5px gray;">
 
-!!! danger
-    When working with hidden configuration files in your account (`.bashrc` and `.bash_profile`), be careful of:
+-----
 
-    1. **Aliasing important Linux commands**
+## Configuration Files
 
-        For example, the character `.` is a shortcut for `source`. If you do something like add `alias .=<command>` to your bashrc, you will lose basic functionality in the terminal, e.g., access to modules, virtual environments, etc. 
+When you log in to an HPC system, your environment is shaped by a few special hidden files in your home directory: `~/.bashrc` and `~/.bash_profile`. These files are very important as they configure what executables you have access to, set up access to software modules, and more. 
 
-    2. **Recursively sourcing configuration files**
+Configuration files can be powerful tools because they let you customize your HPC experience by letting you define your own aliases and functions, set or modify environment variables, set default linux permission settings, and more. You can do this by editing the file `~/.bashrc`, and adding the commands you'd like to be executed at each login. 
 
-        If you add `source ~/.bashrc` or `source ~/.bash_profile` to your bashrc, then you will enter an infinite sourcing loop. This means when you try to log in, your terminal will freeze, then your access will be denied. 
-    
-    3. **Using `echo`**
+Because of the critical nature of these files, it's important to be careful when editing them. A few pointers on making modifications to your configuration files are listed below:
 
-        If you use CLI tools for data transfer, e.g. `scp` or `sftp`, they may require a "silent" terminal. If you're trying to initiate transfers and are getting the error "Received message too long", check your bashrc to make sure you aren't printing anything to the terminal. 
-    
-    4. **Removing your files**
 
-        If you delete either your `~/.bashrc` or `~/.bash_profile`, you will lose access to `module` commands. 
+<center>:white_check_mark: Dos :white_check_mark:</center>
 
+* **Add useful command aliases**. This is the ideal place to add environment variables, aliases. Save time and reduce typing for common tasks:
+
+    ```bash
+    alias ll='ls -lh'
+    alias extra="cd /xdisk/<your_pi>/<your_netid>"
+    ```
+
+* **Add locally-installed software to your PATH**. If you install tools in a custom directory (e.g., $HOME/bin), make them accessible automatically using something like:
+
+    ```bash
+    export PATH=$HOME/bin:$PATH
+    ```
+
+<center>:rotating_light: Don'ts :rotating_light:</center>
+
+* **Don't delete your configuration files**. This will result in unwanted environment changes. For example, you will lose access to the `module` command. 
+
+* **Never source your configuration files within themselves**. For example, do not add the lines `source ~/.bashrc` or `source ~/.bash_profile` to your bashrc. This sets up an infinite sourcing loop that will prevent future logins without intervention.
+* **Be careful when using `echo`**. If you use CLI tools for data transfer (e.g. `scp` or `sftp`), they may require a "silent" terminal. If you're trying to initiate transfers and are getting the error "Received message too long", check your `.bashrc` or `.bash_profile` to make sure you aren't printing anything to the terminal
+
+* **Don't alias critical commands**. For example, `.` is a shortcut for source. If you add:
+    ```bash
+    alias .=<command>
+    ```
+    you'll break the ability to load modules, activate virtual environments, and use other essential features.
+
+-----
 
 ## Environment Variables
 
@@ -83,6 +102,60 @@ This is what modules do: they update your environment variables to put new softw
 | `OMP_NUM_THREADS` | Specifies the number of OpenMP threads to use for parallelized programs. This variable controls the number of threads used in parallel regions of OpenMP-enabled programs. For example: `export OMP_NUM_THREADS=4` |
 
 [Slurm also sets its own environment variables](../../running_jobs/batch_jobs/environment_variables/).
+
+-----
+
+## Command Line Text Editors
+
+When working on an HPC system, it is often more efficient to edit files directly from the command line rather than using a graphical text editor. This is especially useful when connected to a remote system via SSH. Command-line text editors allow you to quickly modify configuration files, scripts, and other documents without leaving the terminal.
+
+There are many command-line text editors available, but two of the most commonly used are Nano and Vim, both of which are installed on our systems.
+
+### Nano
+<img src="./gifs/nano_example.gif" title="Example of using nano" alt="Gif showing the process of using nano" align=right width="500px">
+
+Nano is a beginner-friendly command-line text editor with a simple interface. To open a file in Nano, use:
+
+```bash
+nano <filename>
+```
+Where `<filename>` is the name of the file you want to edit. If the file does not exist, Nano will create it when you save.
+
+Once the file is open, you can start typing immediately. To navigate and edit:
+
+* Use the arrow keys to move the cursor.
+* Add or delete text as needed.
+* When finished, press ++ctrl+x++ to exit.
+* Press ++y++ to save changes or ++n++ to discard them.
+* If saving, press ++enter++ to confirm the filename.
+
+More detailed information on using Nano can be found in various sources online, for example [Linuxize has a how-to tutorial](https://linuxize.com/post/how-to-use-nano-text-editor/) that new users may find helpful.
+
+### Vim
+<img src="./gifs/vim_example.gif" title="Example of using vim" alt="Gif showing the process of using vim" align=right width="500px">
+
+Vim is a powerful text editor with advanced features but has a steeper learning curve than Nano. To open a file in Vim, use:
+
+```bash
+vim <filename>
+```
+Where `<filename>` is the name of the file you want to edit. If the file does not exist, it will be created when you save.
+
+Vim has multiple modes; the two main ones are Normal mode (for navigation and commands) and Insert mode (for editing text).
+
+* When you first open a file, Vim starts in Normal mode.
+* Press ++"i"++ to enter Insert mode and begin editing.
+* When done, press ++escape++ to return to Normal mode.
+* To save and exit, type `:`, then `wq`, then press ++enter++.
+* To exit without saving, type `:q` if no changes were made, or `q!` to force quit (if edits were made that you wish to discard). Then press ++enter++.
+
+For more in-depth information, Vim has an interactive tutorial you can access by running:
+
+```bash
+vimtutor
+```
+
+-----
 
 ## Linux File Permissions
 

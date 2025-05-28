@@ -2,6 +2,9 @@
 
 ## Overview
 
+!!! danger "Data on HPC are not backed up"
+    For information on our data policies, see the section [Storage Expectations and Policies](#storage-expectations-and-policies) below.
+
 The University’s Research Data Center provides data storage for active analysis on the high-performance computers (HPCs). Using central computing storage services and resources, researchers are able to:
 
 * Share research data in a collaborative environment with other UArizona affiliates on the HPC system.
@@ -21,6 +24,34 @@ Every user has access to individual and shared storage on the system where they 
 
 !!! tip "Managing permissions"
     If you're working with other members of your group and need to make your files more accessible, see our [bash cheat sheet](../../../support_and_training/cheat_sheet/#linux-file-permissions). This offers an overview on Linux file permissions, ownership, and some tips for working with collaborators. 
+
+## Storage Expectations and Policies
+
+Our HPC storage array is designed for high performance, not long-term storage. It is built entirely on high-speed flash, which is significantly more expensive and limited in capacity than typical archival storage.
+
+1. **{==Important: Your Data are Not Backed Up==}**
+
+    Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination.
+
+    In particular:
+
+    * Users are responsible for making their own backups of important data to alternative storage for archival purposes. Examples include our [rental](../rental_storage/) or [AWS](../tier2_storage/) offerings, local lab storage, external hard drives, university storage services, among others. 
+
+    * Data will be deleted when a user’s affiliation ends (e.g., graduation, job change, retirement), in accordance with our [data retention policy](../../../policies/loss_of_university_affiliation/).
+
+2. **HPC Storage is Not Infinite**
+
+    Because our flash-based storage is optimized for performance, we rely on all users to perform regular housekeeping to manage their storage usage. Assuming infinite space can lead to full filesystems, which can cause system-wide slowdowns or failures.
+
+    Please:
+
+    * Perform periodic housekeeping. 
+
+    * Avoid accumulating redundant or outdated datasets.
+
+    * Use alternative storage for archival purposes.
+
+If you're unsure about how to move or back up your data, or would like recommendations, don’t hesitate to [contact support](../../../support_and_training/consulting_services/).
 
 ## Best Practices
 
@@ -74,6 +105,62 @@ The shared file system on HPC is the location for everything in ```/home```, ```
     <img src="images/check_storage_quota.png" title="User portal storage tab" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 
+------
+
+## Home Directory Storage Management
+
+Because home directories are limited to 50 GB, it can be easy for them to fill up leading to issues like the inability to use X11 forwarding, OnDemand access issues, job failures, and more. 
+
+Below are some tips for managing your home directory's quota and tracking down usage.
+
+### What's Using the Space?
+
+Users may not be aware of [hidden files and directories](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) in their home, often created automatically by software or package managers. These can take up a surprising amount of space over time. You can view the sizes of all of the objects in your home, including hidden objects, with the command:
+
+```bash
+cd ~
+du -sh $(ls -A ~)
+```
+
+Common culprits to look out for include `~/.cache`, `~/.conda`, `~/.local`, `~/.singularity`, and `~/.apptainer`. 
+
+### Cache Directories
+
+Cache directories frequently contain cache files used for performance improvements. For example, the directory `~/.cache/pip` stores pip cache files to speed up package installations. These directories may start out small, but they can balloon over time. In particular, RStudio, Apptainer, and HuggingFace, the latter of which stores its large datasets under `~/.cache/huggingface`.
+
+Often, software provides ways to redirect cache files to a new system location using [environment variables](../../../support_and_training/cheat_sheet/#environment-variables). By setting these [in your ~/.bashrc](../../../support_and_training/cheat_sheet/#configuration-files), you can ensure that your cache files will always go to an appropriate location.
+
+#### Common Cache Environment Variables
+
+|<div style="width: 150px;">Environment Variable</div>|<div style="width: 150px;">Default Location</div>|Usage|
+|-|-|-|
+|<pre><code>APPTAINER_CACHEDIR</code></pre>|`~/.apptainer`|Location for where to store cached apptainer files.|
+|<pre><code>PIP_CACHE_DIR</code></pre>|`~/.cache/pip`|Defines the location for [pip's cache directory](https://pip.pypa.io/en/stable/topics/caching/).|
+|<pre><code>RSTUDIO_DATA_HOME</code></pre>|`~/.local/share/rstudio`|Storage for RStudio cache files (including saved and active sessions). This directory can get very large, depending on the work you are doing.|
+|<pre><code>HF_HOME</code></pre>|`~/.cache/huggingface/datasets`|Relocates HuggingFace cache and dataset files. See [their cache documentation](https://huggingface.co/docs/datasets/en/cache) for more information.|
+
+#### Example of Cache Relocation
+
+The typical method for relocating a cache is to move the existing directory to a new location that has more space (`/groups` or `/xdisk`), then set the corresponding cache variable (if one exists) to that new location.
+
+For example, say you found RStudio's cache files were taking up a lot of space in your home (typically found under `~/.local/share/rstudio`). To change this location, you could move the default directory to a new location:
+
+```bash
+mkdir -p /groups/<pi_netid>/<your_netid>/cache_files
+mv ~/.local/share/rstudio /groups/<pi_netid>/<your_netid>/cache_files/rstudio
+```
+
+Then, set the corresponding environment variable in your `~/.bashrc` to point to that new path. In this case, the line to add would be:
+
+```bash
+export RSTUDIO_DATA_HOME=/groups/<pi_netid>/<your_netid>/cache_files/rstudio
+```
+
+
+
+
+
+-----
 
 ## xdisk
  
