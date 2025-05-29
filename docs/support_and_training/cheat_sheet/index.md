@@ -51,7 +51,7 @@ Configuration files can be powerful tools because they let you customize your HP
 Because of the critical nature of these files, it's important to be careful when editing them. A few pointers on making modifications to your configuration files are listed below:
 
 
-<center>:white_check_mark: Dos :white_check_mark:</center>
+### Dos
 
 * **Add useful command aliases**. This is the ideal place to add environment variables, aliases. Save time and reduce typing for common tasks:
 
@@ -66,7 +66,7 @@ Because of the critical nature of these files, it's important to be careful when
     export PATH=$HOME/bin:$PATH
     ```
 
-<center>:rotating_light: Don'ts :rotating_light:</center>
+### Don'ts 
 
 * **Don't delete your configuration files**. This will result in unwanted environment changes. For example, you will lose access to the `module` command. 
 
