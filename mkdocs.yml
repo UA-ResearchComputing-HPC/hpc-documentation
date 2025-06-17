@@ -131,6 +131,8 @@ nav:
         - Headless Batch Rendering: running_jobs/visualization/paraview/headless_batch_rendering/index.md
         - Speeding up Filters & Rendering with Client Server configurations: running_jobs/visualization/paraview/speeding_up_filters_and_rendering_with_client_server_configurations/index.md
         - Visualizing NetCDF Files: running_jobs/visualization/paraview/visualizing_netcdf_files/index.md
+      - Accelerated Remote Desktops: 
+        - Selkies: running_jobs/visualization/accelerated_remote_desktops/selkies/index.md
       - ArcGIS Pro Heightmaps: running_jobs/visualization/arcgis_pro_heightmaps/index.md 
       - VisIt: running_jobs/visualization/visit/index.md
 
