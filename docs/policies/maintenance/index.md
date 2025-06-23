@@ -32,6 +32,17 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 ## Maintenance History 
 
 <html>
+  <button class="collapsible">April 30, 2025</button>
+  <div class="content">
+  <p>
+  <b>
+  </p>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine patching of all nodes.</li>
+  <li>Upgrade of Open OnDemand (OOD) to 4.0 with relatively minor changes. <a href="https://osc.github.io/ood-documentation/latest/release-notes.html">Link to Release Note.</a>.</li>
+  </ul>
+  </div>
+
   <button class="collapsible">January 29, 2025</button>
   <div class="content">
   <p>
