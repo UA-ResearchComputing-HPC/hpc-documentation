@@ -357,9 +357,10 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
     <p>
         If you are trying to log in to Open OnDemand and are seeing the following:
         <br>
-        <img src="images/somethingwentwrong.png" title="Something Went Wrong error" style="width:500px;">
+        <img src="images/somethingwentwrong.png" title="Something Went Wrong error" style="width:500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <br>
-        check your storage usage in your home directory. You can do this by logging into HPC in a terminal session and using the command <code>uquota</code>. If your storage usage is >50 GB, OnDemand cannot create the temporary files necessary to give access to the website. Try clearing out some space in your home and then logging back into OnDemand.
+        your home directory is likely full. To check your storage usage, connect to HPC via a <a href="../../registration_and_access/system_access/#command-line-access">local SSH client</a> (this bypasses the OnDemand interface). Once there, use the command <code>uquota</code>. If your storage usage is >50 GB, OnDemand cannot create the temporary files necessary to give access to the website.<br>
+        To resolve the issue, try clearing out some space in your home and then logging back into OnDemand. For tips and tricks on how to make space in your home, take a look at our <a href="../../storage_and_transfers/storage/hpc_storage/#home-directory-storage-management">Home Directory Storage Management</a> documentation.
     </p>
   </div>
 
