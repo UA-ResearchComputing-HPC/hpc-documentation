@@ -102,7 +102,7 @@ You can check your allocation's size and current usage either through the user p
     <img src="images/check_rental_quota.png" title="Check rental quota" style="width: 700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
 
 === "Command Line"
-    From an HPC login node, enter the command ```uquota```, for example:
+    From an HPC login node or on a filexfer node, enter the command `uquota`, for example:
     ```
     [user@local_machine ~]$$ ssh netid@hpc.arizona.edu
     [netid@gatekeeper ~]$ shell
@@ -113,3 +113,28 @@ You can check your allocation's size and current usage either through the user p
     /rental/pi                                 11.8G      931.3G      931.3G
     /xdisk/pi                                   9.0T        9.9T        9.9T
     ```
+
+## Deleting Your Allocation
+
+PI's can submit a deletion request to remove their rental storage through our [user portal](https://portal.hpc.arizona.edu).
+
+{==Prior to submitting a deletion request==}, please:
+
+1. Create a backup of any data you need to keep.
+2. Delete the data stored in your `/rental` space. 
+
+To submit a deletion request: 
+
+1. Go to [portal.hpc.arizona.edu](https://portal.hpc.arizona.edu) and navigate to the **Storage** tab.
+
+    <img src="./images/delete_storage_tab.png" title="Check rental quota" style="width: 700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
+
+2. Scroll down to the section **Rental Storage** and click **Delete Rental Storage**.
+
+    <img src="./images/click-delete.png" title="Check rental quota" style="width: 400px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
+
+3. In the page that opens, type **confirm** in the box that says **type confirm here** to confirm your deletion request. Once you have confirmed, click **DELETE**.
+
+    <img src="./images/confirm-and-delete.png" title="Check rental quota" style="width: 700px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
+
+Submitting a deletion request will open a ServiceNow ticket and will initiate the process of deleting your rental space and the cancellation of any automatic renewal charges to your account. The ticket will be closed and you will be notified when the process is complete.
