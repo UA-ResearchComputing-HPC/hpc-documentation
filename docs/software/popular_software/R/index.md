@@ -1,127 +1,201 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/animated_dropdown.css">
+
 # R
 
-R is a popular language for data analysis and visualization. Different versions are available as software modules and we provide the graphical interface RStudio for R through our Open OnDemand web interface.
+R is a popular language for data analysis and visualization. Different versions are available as software modules and we provide the graphical interface RStudio through our [Open OnDemand web interface](https://ood.hpc.arizona.edu).
 
 Similar to other languages that use package managers to install libraries contributed by the user community, we recommend you create and manage your own local libraries in your account. This ensures a stable global environment for all users and that you have the most control over your packages' versions and dependencies.
 
 We provide instructions below for how to create, use, and switch between libraries as well as some debugging techniques for when package installations fail.
 
-RStudio is a popular method for running analyses (and for good reason!), but for longer-running jobs (say, many hours or days) or workflows that need more flexibility in their environment (e.g., need access to software installed as system modules such as gdal), we recommend batch submissions.
+## Creating R Libraries
 
-## Creating a Custom Library
+### What is a Library?
 
-!!! tip "R Package Debugging"
-     R packages can be finicky. See [Switching Between Custom Libraries](#switching-between-custom-libraries) and [Common Problems](#common-problems-and-how-to-debug-them) below to help with frequent user issues. Alternatively, you can consider using [Mamba](../mamba/index.md#r) to manage your R packages.
+An R library is a directory where the R packages you install are stored. Creating a custom library allows you to have control over where your packages are installed (faciliting storage management and enabling library sharing among groups), lets you isolate your environments (great for version control), and allows you to switch between different package ecosystems. 
 
-**Creating your first library**
+### Library Best Practices
 
-1. Make a local directory to store your packages. It's recommended to include information about your library in the name, e.g., which version of R you're using. It's important to maintain a consistent version of R with your libraries since installing packages into one library with multiple versions or R will often cause trouble. Need to switch versions of R? [Creating a new library](#switching-between-custom-libraries) will help.
-   ```bash
-   mkdir -p ~/R/library_4.2
-   ```
-  
-2. Tell R where your library is by creating an environment file
-    ```bash
-    echo 'R_LIBS=~/R/library_4.2/' >> ~/.Renviron
+Before we cover how to create a library, here are a few important considerations to ensure a stable R environment and avoid runtime and installation failures:
+
+1. **Each R library you create should correspond to a single version of R.**
+
+    Installing different R packages using multiple versions of R into a common library will frequently lead to installation and runtime failures. If you're changing R versions, change your library.
+
+
+2. **Each R library should correspond to a single operating system (OS).**
+
+    Installing R packages on one OS and attempting to use them on another will frequently result in crashes. If you're switching between clusters that use different operating systems (for example, switching from Puma to Ocelote), ensure the R library you're using was built on that OS. 
+
+3. **Create your own libraries and avoid using the default that R creates for you.**
+
+    If you haven't set up a custom library and install R packages, R will create a default directory for you stored under:
+
     ```
-    The file ```~/.Renviron``` [is a "dot" file](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) which means it does not show up when you run a standard ```ls```. This particular file can be used to control your R environment for each subsequent time you start a session. All the `echo` command does is append the line ```R_LIBS=~/R/library_4.2/``` to this file. 
+    ~/R/x86_64-pc-linux-gnu-library/<R_version>
+    ``` 
+
+    Any packages installed in this library will **always** be loaded into your environment whenever you use R version `<R_version>`, regardless of whether you're specifying a custom library or not. On your local computer, this may not be an issue, but in the context of HPC, this can become a source of trouble. The largest drawback is the potential for mixing operating systems when switching between clusters. Installing packages on one OS and attempting to use them on another will most often lead to software failures. 
+
+    If you find you have accidentally created a default R library, you can either delete it, or you can move it to a new location and [manually load it when desired](#how-to-switch-libraries).
+
+
+### Create Your First Library
+
+1. **Make a directory to store your packages.**
+
+    We recommend including information about your library in the name, e.g.:
+
+    1. Which version of R you're using.
+    2. Which OS was used to create it. Puma's OS is Rocky Linux 9. Ocelote and El Gato run on CentOS 7.
     
-3. That's it! Now you can install packages and they will be stored in the directory you just created. For example, to install and load the package ```ggplot2```:
+    It's important to maintain a consistent version of R with your libraries since installing packages into one library with multiple versions of R will often cause trouble. Similarly, installing an R package on one operating system and using it on another will result in failures. 
+
+    An example of creating a library:
+
+    ```bash 
+    mkdir -p ~/R/library_4.2_rocky9
+    ```
+  
+2. **Create an environment file.**
+
+    R reads from a [dot file (a hidden, plain text file)](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) called `~/.Renviron` when it starts. This allows you to define custom behavior. In the case of creating a custom library, we can tell R where to look for and install packages by setting the variable `R_LIBS` in this file. A quick, easy way to do this is to run:
+
     ```bash
-    module load R/4.2
-    R
-    install.packages("ggplot2")
+    echo 'R_LIBS=~/R/library_4.2_rocky9/' >> ~/.Renviron
     ```
 
+    replacing `~/R/library_4.2_rocky9/` with the path to your own library. All this does is append the line `R_LIBS=~/R/library_4.2_rocky9/` to the file `~/.Renviron`.
 
-## Switching Between Custom Libraries
+    
+3. **Install your packages.**
 
-If you're switching versions of R, we recommend you use a different library. See **Common Problems** below for more information. When creating a library, consider including pertinent information in the name such as R version. For example, if you were previously using R 4.2 and wanted to switch to using R 4.1, you could create a directory called ```library_4.1``` using:
-```bash
-mkdir -p ~/R/library_4.1
+    That's it! Once you have a custom library and `R_LIBS` is defined in `~/.Renviron`, you can install packages by starting R and using something like `install.packages()`. For example, we could install the package `ggplot2` using:
+
+
+    ```bash
+    $ module load R/4.2
+    $ R
+    > install.packages("ggplot2")
+    ```
+
+    
+
+
+### How to Switch Libraries
+
+If you're changing the version of R you're using, or if you're changing operating systems (for example, switching clusters from Puma to Ocelote), we recommend using a different library. To do this: 
+
+1. **Create a new directory, if needed.**
+
+    If you already have an existing library set up for the environment you're planning to use, you can skip this step. Otherwise, you can create a new library using similar steps to those [shown in the preceding section](#create-your-first-library)
+
+    If you're creating a new library, remember to include pertinant information in the name. For example:
+
+    ```bash
+    mkdir -p ~/R/library_4.4_centos7
+    ```
+
+2. **Edit your `~/.Renviron` file.**
+
+    Open the file `~/.Renviron` in a text editor. If you're not familiar with command line text editing, check out the [Command Line Text Editors section in our Linux Cheat Sheet](../../../support_and_training/cheat_sheet/#command-line-text-editors). For example, you could open the file using `nano`:
+
+    ```bash
+    nano ~/.Renviron
+    ```
+
+    Once your text editor opens, set the `R_LIBS` variable previously defined in your file to the name and location of your new library. In this example, this would look like:
+
+    ```bash
+    R_LIBS=~/R/library_4.4_centos7
+    ```
+    Then, save and exit.
+
+That's it! Now, when you install new packages, they will be saved to this new directory. 
+
+## Tips for Installing Packages
+
+### Use a Terminal
+
+When installing R packages, we recommend using an [interactive terminal session](../../../running_jobs/interactive_jobs/) and avoiding RStudio. This is because RStudio uses a [container](../../containers/what_are_containers/) under the hood which may override some system variables necessary for successful compilations. 
+    
+This is particularly true if your software relies on [software modules](../../modules/). For example, hdf5r and Seurat rely on modules hdf5 and gdal, respectively (see [popular packages](#popular-packages) for more information). RStudio does not have access to modules, so these packages will not be able to compile in that environment. Instead, they should be compiled on the command line with the necessary software modules loaded. If modules were needed to compile a package, they may be loaded in RStudio by following the instructions further down on this page under [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew). {==Note that using this method only allows you to **load** R packages that have already been installed on the command line and does **not** work for **compile time** issues==}. This is due to Apptainer overriding environment variables necessary for compilation. 
+
+### Explicitly Specify R Version
+    
+We recommend **always** loading `R` with its version specified, both when installing packages and when running [batch jobs](../../../running_jobs/batch_jobs/intro/). I.e.:
+
 ```
-Then, to use your new library, edit your ```~/.Renviron``` file using a text editor such as ```nano```:
-```bash
-nano ~/.Renviron
+module load R/<version>
 ```
-Once your text editor opens, set the ```R_LIBS``` previously defined in your file to the name and location of your new library. In this case, this would look like:
-```bash
-R_LIBS=~/R/library_4.1
-```
-To exit ```nano```, use ++ctrl+x++ and save at the prompt. Once your file is saved, you're ready to start installing files into your new library. 
+
+and not simply using `module load R`. When a version is not specified, modules default to the newest version. This means that when an update is made, the default version of R that is loaded changes which can lead to version conflicts and incompatabilities. 
+
+### Remove Anaconda From Your Environment
+
+Anaconda is a common culprit for R package installation failures. If you have Anaconda or Miniconda initialized in your account, we recommend fully removing it from your environment prior to attempting any R package installations. We have information on how to do this on our Anaconda page under **Removing Anaconda From Your Environment** --> **Temporary Removal** which can be [found here](http://localhost:6120/software/popular_software/anaconda/#__tabbed_1_2).
+
+
+
 
 ## Common Problems and How to Debug Them
 
-Working on a cluster without root privileges can lead to complications. For general information on package installations, see the [r-bloggers documentation](http://www.r-bloggers.com/installing-r-packages/). For information on common installation problems on our clusters, see the section below with with suggested solutions:
+### Presence of Anaconda
 
-=== "Anaconda"
-    One common reason R packages won't install is an altered environment. This can frequently be caused by the presence of Anaconda (or Miniconda) installed locally or initialized in your account from our system module.
+Anaconda is a common culprit for R package installation failures. If you have Anaconda or Miniconda initialized in your account, we recommend fully removing it from your environment prior to attempting any R package installations. We have information on how to do this on our Anaconda page under **Removing Anaconda From Your Environment** --> **Temporary Removal** which can be [found here](http://localhost:6120/software/popular_software/anaconda/#__tabbed_1_2).
+
+### Mixed R Versions
+
+If packages are failing to load or install, double check that your library was built with a consistent version of R. To check this, you can open an R session and run:
+
+```R
+installed.packages()[, c("Package", "Version", "Built")]
+```
+
+This will display the versions of R used to install each package in the right column. Some example output might look like:
+
+```R
+> installed.packages()[, c("Package", "Version", "Built")]
+                     Package                Version     Built  
+abind                "abind"                "1.4-8"     "4.4.0"
+AnnotationDbi        "AnnotationDbi"        "1.68.0"    "4.4.0"
+boot                 "boot"                 "1.3-28"    "4.2.2"
+class                "class"                "7.3-20"    "4.2.2"
+cluster              "cluster"              "2.1.4"     "4.2.2"
+```
+Note in the above example, two different versions of R (4.4.0 and 4.2.2) were used during package installations. If your library has this issue, reinstalling packages, uninstalling packages, or creating a new library to ensure all packages were installed using a consistent version of R may resolve your problem.
+
+### Mixed Operating Systems
+
+If your R workflows are failing with errors referencing `glibc`, `libstdc++`, or other system libraries, this may be an issue resulting from installing packages on one OS and trying to run them on a different one. 
+
+Ocelote and ElGato run on the OS CentOS 7 while Puma runs on Rocky Linux 9. If you're getting errors of the type mentioned above, try loading your packages on a different cluster (with a different OS) to see if you get the same errors. If your packages load successfully, they were likely compiled there. 
+
+To run your analyses on a different OS, you will need to create a new library and reinstall your packages in that new environment. 
+
+### R Environment Issues
+
+R Stores previous saved sessions and configuration options in different files, typically stored in your home. For example, old sessions may be saved as a hidden file `~/.RData`. Alternatively, they may be stored under `~/.local/share/rstudio`. Where they are stored is dependent on the version of R you are using. These may sometimes cause environment corrpution, or for your job to run out of memory immediately after starting. Removing or moving these old session files may help. Note that if these files are causing storage issues, it's possible to [set a new user state directory](#setting-a-new-user-state-directory).
+
+It's also important to pay attention to the lines added to the following files, if they exist: `~/.Renviron`, `~/.UAz_ood/rstudio.sh`, and `~/.R/Makevars`. Corruption of environment variables and loading nonexistent modules may cause package installation failures, RStudio sessions to crash before starting (e.g., in your job tile in OOD, RStudio will immediately go from Starting to Completed), among other unwanted behavior. 
+
+
+### Installations in RStudio
+
+If you're trying to install an R package in RStudio, you may run into dependency or system library issues. We recommend retrying the installation in an [interactive terminal session](../../../running_jobs/interactive_jobs/) on the command line to see if this resolves the issue. 
+
+This is particularly true if your R package dependes on an external software module such as hdf5 or gdal (see [Popular Packages](#popular-packages) lower on this page for some examples of this case).
+
+See [our best practices section above](#use-a-terminal) for more detailed information. 
+
     
-    We have instructions on how to remove Anaconda from your environment in our [Anaconda documentation](../anaconda/#removing-anaconda-from-your-environment). 
-
-=== "A Corrupted Environment"
-
-    If Anaconda is not initialized in your account, there might be other culprits that are corrupting your environment.
-
-    Look for any of the file types listed below on your account. If you find them, try removing them (make a backup if you need them) and try the installation again.
-
-    * Saved R sessions. If this is the case, after starting a session, you will get the message `[Previously saved workspace restored]`. Old sessions may be saved as a hidden file ```.RData``` in your home directory. Alternatively, they may be stored under `~/.local/share/rstudio`. Where old sessions are stored is dependent on the version of R you are using.
-    * Gnu compilers
-    * Windows files
-
-=== "Library Issues"
-
-    Have you set up a custom library? Are you switching between custom libraries? You may want to check that everything is being loaded from the correct location and that there are not multiple or unwanted libraries being used.
-    
-    Double-check that you have an ```.Renviron``` file. This is a hidden file located in your home directory and should set the path to your custom R library. If you do not have a custom library name set up, R will create one for you saved as something like:
-    ```bash
-    ~/R/x86_64-pc-linux-gnu-library
-    ```
-    This directory can lead to unwanted behavior. For example, if you're trying to use a new custom library (such as when switching R version), R will still search x86_64-pc-linux-gnu-library for package dependencies and may cause installs to fail. To fix this, rename these types of folders something unique and descriptive.
-
-    To set up/switch custom libraries, follow the instructions in the [Creating a Custom R Library](#creating-a-custom-library) section above.
-
-=== "Mixing R Versions"
-
-    Because HPC is a cluster where multiple versions of R are available, users should take care to avoid mixing and matching. Because packages often depend on one another, libraries using different versions of R can turn into a tangled mess.  Common errors that can crop up include: `Error: package or namespace load failed.`
-
-    If you're switching R versions and have a custom library defined in your `~/.Renviron` file, we recommend creating a new library.
-
-=== "Open OnDemand RStudio Issues"
-    RStudio is a great tool! Sometimes though, because it's a different environment than working directly from the terminal, you may run into problems. Specifically, these typically arise for installs or when using packages that rely on software modules.  
-
-    **Package Installations**
-
-    If you're trying to install a package in an OOD RStudio session and you've tried all the troubleshooting advice in the other tabs without luck, try starting R in the terminal and give the installation another try. You can access an R session in the terminal by first starting an [interactive session](../../../running_jobs/interactive_jobs/), then using:
-
-    ```
-    $ module load R/<version>
-    $ R
-    > install.packages("package_name")
-    ```
-
-    **Accessing Modules**
-
-    RStudio does not natively have access to `module load` commands. This means that if you have a package that relies on a system module, the easiest option is to work through an [interactive terminal session](../../../running_jobs/interactive_jobs/) or to [submit a batch script](../../../running_jobs/batch_jobs/intro/).
-
-    The alternative is to create a hidden directory in your account called `~/.UAz_ood/rstudio.sh` with the module load commands you need. More information on this can be found in the section [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) below.
-
-    **Font Issues**
-
-    RStudio uses [Apptainer](../../containers/what_are_containers/) under the hood. As a result, there are some environment differences that may affect correct font formatting in images generated in RStudio. If you are experiencing this, add the following line to the hidden file `~/.Renviron` in your account (you can create this file if it does not exist):
-
-    ```
-    FONTCONFIG_PATH=/opt/ohpc/pub/apps/fontconfig/2.14.2/etc/fonts
-    ```
 
 
 ## Using RStudio
 
-!!! info "Jupyter"
-    R is one of the core languages that Jupyter supports. You can also use Jupyter as an alternative GUI to RStudio. For more information, see [Mamba](../mamba/index.md#jupyter).
 
 === "Open OnDemand"
-    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules. These issues can sometimes worked around by following the guide in the debugging section above.
+    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules.
 
 === "Apptainer/Singularity"
     In some circumstances, you may want to run RStudio using your own Apptainer (rebranded from Singularity) image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
@@ -181,6 +255,7 @@ Working on a cluster without root privileges can lead to complications. For gene
 
     <img src="images/rstudio_open.png" title="Open RStudio session" style="width: 650px;">
 
+
 ### Loading Modules in RStudio {==(:material-alert-decagram:New!)==}
 
 !!! danger annotate "Library installations still must be performed on the command line"
@@ -189,11 +264,16 @@ Working on a cluster without root privileges can lead to complications. For gene
     
 1.  This is because the container that is necessary to start RStudio overrides environment variables set by modules that are necessary for successful library compilations.
 
+
+
 If you are using the RStudio application in Open OnDemand, it is now possible to load additional [software modules](../../modules/) into your environment. You might want to do this if your R libraries depend on modules. An example of this might be the [Seurat package](#popular-packages) which depends on the modules gdal, proj, sqlite3, and geos. 
+
+!!! danger inline end "Use caution"
+    Be careful with the lines you add to rstudio.sh. If you add invalid commands (e.g., try to load a nonexistent module), new RStudio sessions will crash during initialization. 
 
 **Method to Load Modules**
 
-To load modules, you will need to create a hidden directory in your home called `~/.UAz_ood`. Inside that directory, create a file called `rstudio.sh`. You can then add any `module load` statements you need to this file. The file `rstudio.sh` is sourced when your RStudio session initiates, so if you modify your the file, you will need to start a new RStudio session for the changes to take effect.
+To load modules, you will need to create a [hidden directory](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) in your home called `~/.UAz_ood`. Inside that directory, create a file called `rstudio.sh`. You can then add any `module load` statements you need to this file. The file `rstudio.sh` is sourced when your RStudio session initiates, so {==if you modify this file, you will need to start a new RStudio session for the changes to take effect==}.
 
 An example of how to create this file with example contents is shown below. 
 
@@ -205,7 +285,7 @@ This example assumes you are working on the command line. Start by first creatin
 mkdir -p ~/.UAz_ood
 touch ~/.UAz_ood/rstudio.sh
 ```
-Next, open `rstudio.sh` in your favorite text editor. If you are not familiar with command line text editors, a beginner-friendly tool is nano. For example:
+Next, open `rstudio.sh` in your favorite text editor. One option is to use the command line text editor nano. If you have not used a command line text editor, see [this page](../../../support_and_training/cheat_sheet/#command-line-text-editors) for details. For example:
 
 ```bash
 nano ~/.UAz_ood/rstudio.sh
@@ -216,7 +296,7 @@ Next, in the file add the modules that you would like to load in RStudio. For ex
 module load gdal/3.8.5 geos/3.9.5 proj/9.4.0 sqlite/3.45
 ```
 
-Now, save and exit. If you're using nano, you can do this with ++ctrl+x++, then select ++y++ to save your changes and exit. Once your file exists with the desired contents, start an new OnDemand RStudio session. 
+Now, save and exit. Once your file exists with the desired contents, start an new OnDemand RStudio session. 
 
 ### Setting a New User State Directory
 
@@ -266,45 +346,57 @@ where ```</path/to/new/directory>``` is the path to a different location where y
 
     <img src="images/session-files.png" width=500px>
 
+### Font Issues
+
+The RStudio application available through Open OnDemand uses [Apptainer](../../containers/what_are_containers/) under the hood. As a result, there are some environment differences that may affect correct font formatting in images generated in RStudio. If you are experiencing this, add the following line to the hidden file `~/.Renviron` in your account (you can create this file if it does not exist):
+
+```
+FONTCONFIG_PATH=/opt/ohpc/pub/apps/fontconfig/2.14.2/etc/fonts
+```
+
 ## Popular Packages
 
 Below, we document some installation instructions for common R packages. We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact our consultants](../../../support_and_training/consulting_services/) and they can help. 
 
-!!! tip "Alternative installation"
-    The instructions below show how you can install these packages with the R modules described above. An alternative is to install these packages in a Conda environment with a package manager like Mamba. For more information, see [Mamba](../mamba/index.md#r).
+{==Installs below assume you are using the Puma cluster==}. The module dependencies shown may not work properly for clusters that run on a different operating system and may need to be adjusted.
 
 === "Seurat and SeuratDisk"
-    !!! info "R Studio Version"
-        If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
 
     !!! bug "Anaconda must be removed from your environment"
         You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
 
-    !!! warning "Installs must be done in a terminal"
+    !!! warning "RStudio Users"
     
-        To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
+        To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
 
-    
 
     === "Seurat"
+        !!! tip "CentOS 7 Installation"
+            The additional module `libpng/1.6.37` is required if installing Seurat on Ocelote or ElGato.
+
         ```
-        (elgato) [netid@junonia ~]$ interactive -a <your_group>
-        [netid@cpu38 ~]$ module load R/<version>
-        [netid@cpu38 ~]$ module load gdal/3.3.2 glpk/5.0 libpng/1.6.37 # software modules that are needed for Seurat's dependencies
-        [netid@cpu38 ~]$ R
+        (puma) [netid@junonia ~]$ interactive -a <your_group>
+        [netid@r6u19n1 ~]$ module load R/<version>
+        [netid@r6u19n1 ~]$ module load gdal/3.8.5 glpk/5.0  # software modules that are needed for Seurat's dependencies
+        [netid@r6u19n1 ~]$ R
         > install.packages("Seurat")
         ```
 
         If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above for more information. 
 
     === "SeuratDisk"
-        SeuratDisk is similar to Seurat with a few more dependencies. It also includes the line ```unset CPPFLAGS``` due to a [reported issue with the dependency hdf5r](https://github.com/hhoeflin/hdf5r/issues/132):
+
+        !!!tip "CentOS 7 Installation"
+            The additional modules `libpng/1.6.37` and `libgit2/1.8.1` are required if installing Seurat on Ocelote or ElGato. 
+            
+            Additionally, you will need to run `unset CPPFLAGS` after loading the dependency modules, prior to starting R. This is due to a [reported issue with the dependency hdf5r](https://github.com/hhoeflin/hdf5r/issues/132):
+
+        SeuratDisk is similar to Seurat with a few more dependencies. 
 
         ```
-        (elgato) [netid@junonia ~]$ interactive -a <your_group>
-        [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2 geos/3.9.1 hdf5/1.10.5 libpng/1.6.37 glpk/5.0 libgit2/1.8.1
-        [netid@cpu1 ~]$ unset CPPFLAGS
-        [netid@cpu1 ~]$ R
+        (puma) [netid@junonia ~]$ interactive -a <your_group>
+        [netid@r6u19n1 ~]$ module load R/<version> gdal/3.8.5 hdf5/1.14.0 glpk/5.0
+        [netid@r6u19n1 ~]$ R
         > install.packages("Seurat")
         > install.packages("remotes")
         > remotes::install_github("mojaveazure/seurat-disk")
@@ -314,10 +406,9 @@ Below, we document some installation instructions for common R packages. We atte
 
 === "Monocle3"
 
-    !!! info "R Studio Version"
-        If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
-    !!! warning "Installs must be done in a terminal"
-        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
+    !!! warning "RStudio Users"
+
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
 
     !!! bug "Anaconda must be removed from your environment"
         You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
@@ -327,9 +418,9 @@ Below, we document some installation instructions for common R packages. We atte
     [Monocle3's documentation](https://cole-trapnell-lab.github.io/monocle3/docs/installation/) includes steps that you can use for a successful installation.
 
     ```
-    (elgato) [netid@junonia ~]$ interactive -a your_group
-    [netid@cpu1 ~]$ module load R/<version> gdal/3.3.2
-    [netid@cpu1 ~]$ R
+    (puma) [netid@junonia ~]$ interactive -a your_group
+    [netid@r6u19n1 ~]$ module load R/<version> gdal/3.8.5
+    [netid@r6u19n1 ~]$ R
     > install.packages("BiocManager")
     > BiocManager::install(c('BiocGenerics', 'DelayedArray', 'DelayedMatrixStats',
                            'limma', 'lme4', 'S4Vectors', 'SingleCellExperiment',
@@ -343,10 +434,8 @@ Below, we document some installation instructions for common R packages. We atte
 
 === "Terra"
 
-    !!! info "R Studio Version"
-        If you use RStudio for your analyses, make sure that you load the same version of R when working with modules on the command line.
-    !!! warning "Installs must be done in a terminal"
-        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session. Once your installation is successful, it is possible to load these modules in RStudio. More details are provided below. 
+    !!! warning "RStudio Users"
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
 
     !!! bug "Anaconda must be removed from your environment"
         You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
@@ -354,12 +443,12 @@ Below, we document some installation instructions for common R packages. We atte
     To install the R package `terra`, you will need to load the module `gdal` which will pull in other dependencies (`geos`, `proj`, and `sqlite`). In this example, we'll use the modules `R/4.3` and `gdal/3.8.5`
 
     ```
-    (elgato) [netid@junonia ~]$ interactive -a <your_group>
-    [netid@cpu1 ~]$ module load R/<version> gdal/3.8.5
-    [netid@cpu1 ~]$ R
+    (puma) [netid@junonia ~]$ interactive -a <your_group>
+    [netid@r6u19n1 ~]$ module load R/<version> gdal/3.8.5
+    [netid@r6u19n1 ~]$ R
     > install.packages("terra")
     ```
-    Then, to load Terra in RStudio, you will need to create the file `~/.UAz_ood/rstudio.sh` as detailed in the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above. 
+
 
 ## Example Jobs
 
@@ -406,7 +495,7 @@ Below are some examples on how to submit R analyses as batch jobs. R jobs may al
     #SBATCH --partition=standard
     #SBATCH --account=YOUR_GROUP
 
-    module load R/4.0.0
+    module load R/4.4.0
     Rscript hello_world.r
     ```
 
@@ -465,7 +554,7 @@ Below are some examples on how to submit R analyses as batch jobs. R jobs may al
     #SBATCH --partition=standard
     #SBATCH --account=YOUR_GROUP
 
-    module load R/4.0.0
+    module load R/4.4.0
     Rscript example.r
     ```
 
@@ -563,7 +652,7 @@ Below are some examples on how to submit R analyses as batch jobs. R jobs may al
     #SBATCH --nodes=1
     #SBATCH --array=1-2
 
-    module load R/4.1.0
+    module load R/4.4.0
 
     Rscript save_example.R $SLURM_ARRAY_TASK_ID
     ```
