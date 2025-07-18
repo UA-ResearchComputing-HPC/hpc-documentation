@@ -108,6 +108,9 @@ To request a high memory node, you will need the additional flag ```--constraint
 !!! warning "GPU options are per node"
     When using `--gres=gpu:N`, keep in mind that the total number of GPUs the job is allocated is `N` per node. 
 
+!!! danger "MIG Node Unavailable"
+    The A100 MIG node `r5u13n1` on Puma is currently down due to hardware issues. Until further notice, please submit Puma GPU jobs to V100 (Volta) nodes instead.
+
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
 
 <table>

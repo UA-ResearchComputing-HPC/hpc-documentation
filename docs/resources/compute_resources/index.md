@@ -65,6 +65,9 @@ Below is a list of the node types and physical hardware that are available on ea
     
     **Multi-Instance GPU (MIG) Resources**    
 
+    !!! danger "MIG Node Unavailable"
+        The A100 MIG node `r5u13n1` on Puma is currently down due to hardware issues. Until further notice, please submit Puma GPU jobs to V100 (Volta) nodes instead.
+
     !!! info "MIG resources are only available on Puma"
 
     The Four A100 GPUs on Puma Node r5u13n1 are each subdivided into three smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 20 GB of GPU memory. The vast majority of jobs run on Puma in 2023 used less than this amount of GPU memory. The 12 MIG GPUs increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory.
