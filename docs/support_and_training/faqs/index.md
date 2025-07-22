@@ -364,6 +364,17 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
     </p>
   </div>
 
+  <button class="collapsible">Why am I getting a Proxy Error when trying to access Open OnDemand?</button>
+  <div class="content">
+    <p>
+        If you are trying to log in to Open OnDemand and are seeing the following:
+        <br>
+        <img src="images/proxyerror.png" title="Proxy Error" style="width:500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <br>
+        <a href="../consulting_services/">reach out to our consulting team</a> so they can reset your web instance for you. Proxy errors are often triggered by either an internet disruption at an inopportune moment, or by using the OnDemand file browser to navigate to directories with a very large number of files stored in them. 
+    </p>
+  </div>
+
   </html>
 
 ### Applications
