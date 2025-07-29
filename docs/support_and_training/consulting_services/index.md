@@ -7,6 +7,9 @@
 
 <!-- <img class="img" src="images/SupportServicesInfoSlide.jpg" title="Support Services Info" width="800px" style="padding: 20px;"> -->
 
+!!! info "Listserv Changes"
+    Starting Wednesday, July 30, 2025, emails sent to the hpc-consult listserv will automatically create a ticket in ServiceNow. This change will help us improve support tracking. Submitting tickets directly via the ServiceNow link below remains unchanged.
+
 
 [Contact Us](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f){ .md-button }
 
