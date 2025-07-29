@@ -32,26 +32,39 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 ## Maintenance History 
 
 <html>
+  <button class="collapsible">July 30, 2025</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Network and device software updates.</li>
+  <li>Quarterly OS patching and associated reboots.</li>
+  <li>cuDNN module fix: The existing cudnn/9.3 module was incorrectly pointing to cuDNN 9.2. During maintenance, it will be updated to correctly point to cuDNN 9.3. If this change disrupts your workflow, you can load cudnn/9.2 instead.</li>
+  <li>Ticketing system change: all emails sent to hpc-consult will now automatically open a ServiceNow ticket for assignment and tracking purposes.
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">April 30, 2025</button>
   <div class="content">
   <p>
-  <b>
-  </p>Type</b>: Rolling Maintenance
+  <b>Type</b>: Rolling Maintenance
   <ul>
   <li>Routine patching of all nodes.</li>
-  <li>Upgrade of Open OnDemand (OOD) to 4.0 with relatively minor changes. <a href="https://osc.github.io/ood-documentation/latest/release-notes.html">Link to Release Note.</a>.</li>
+  <li>Upgrade of Open OnDemand (OOD) to 4.0 with relatively minor changes. <a href="https://osc.github.io/ood-documentation/latest/release-notes.html">Link to Release Note</a>.</li>
   </ul>
+  </p>
   </div>
 
   <button class="collapsible">January 29, 2025</button>
   <div class="content">
   <p>
-  <b>
-  </p>Type</b>: Rolling Maintenance
+  <b>Type</b>: Rolling Maintenance
   <ul>
   <li>Routine patching of all nodes.</li>
   <li>Completion of OS migration. All remaining CentOS 7 Puma nodes migrated to Rocky Linux 9. Puma9 made default cluster.</li>
   </ul>
+  </p>
   </div>
 
   <button class="collapsible">October 30, 2024</button>
