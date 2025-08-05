@@ -7,13 +7,13 @@
      - comment out block announce to remove announcement in the docs
      - Remove comment to add announcement to header
 #}
-
+{#
 {% block announce %}
 <p style="font-size: 15px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
     <b>Upcoming Maintenance</b>: Quarterly maintenance is scheduled for Wednesday, July 30th 2025. For details, see <a href="https://hpcdocs.hpc.arizona.edu/policies/maintenance/#maintenance-history">our maintenance page</a>.<br>
     <b>MIG Node Unavailable</b>: <a href="https://hpcdocs.hpc.arizona.edu/resources/compute_resources/#gpu-nodes">The A100 MIG node</a> <code style="background-color: #e0d5c8 ;color: #3c2f25";>r5u13n1</code> on Puma is currently down due to hardware issues. Until further notice, please submit Puma GPU jobs to V100 (Volta) nodes instead.</b>
 {% endblock %}
-
+#}
  
 {% block footer %}
 <!--
