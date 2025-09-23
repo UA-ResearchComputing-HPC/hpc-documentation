@@ -79,6 +79,52 @@ There is an easy solution, however. You can use a virtual environment to create 
     1. Always use the same `<version>` as the one you used to create your environment
     2. Use the `module load` command before running your `source` command. If you activate your environment first, you will get a library error. 
 
+
+## Package Conflicts and Installation Failures
+
+### The problem with `~/.local`
+
+A common culprit for package installation and loading failures that users run into is [a hidden directory](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) called `~/.local`. This directory may be created when a package is pip-installed and a virtual or conda/mamba environment is not activated. When this happens, the package manager will automatically create a directory in the user's home with the path:
+
+!!! info inline end
+    Note that `<version>` stands for the version of Python used to install the package. So if the package were installed with Python 3.9, the directory would be called `python3.9`.
+
+```
+~/.local/lib/python<version>
+```
+where it will then store the installed packages. 
+
+While this can be convenient, it can also introduce problems. The primary issue is that {==Python, by default, will always search the path ~/.local/lib/python<version> corresponding to its own version when importing packages==}. For example, Python 3.9 will search ~/.local/lib/python3.9, while Python 3.10 will search ~/.local/lib/python3.10. This happens during both package installations and when importing libraries, even inside virtual environments, conda/mamba environments, or containers (which on our systems see your home directory by default). This can create cross-contamination issues if packages are installed outside the intended environment.
+
+### Example of package conflicts introduced by `~/.local`
+
+Say a user needs a package `A` that relies on a dependency `depends` version `<1.0` for one project and successfully installs it. But, later, the user finds they also need package `B`, which also relies on package `depends`, but needs version `>2.0`. If `A` and `depends` are already installed in `~/.local`, pip will refuse to update `depends` to accommodate package `B` because that would break package `A`. As a result, there is no way to cleanly install `B` without taking corrective steps due to these versioning conflicts. 
+
+### Avoiding Conflicts
+
+In general, it's best practice to **always** use some form of isolated environment when installing your packages. This means using something like a virtual environment, conda or mamba environment, or building a container. This ensures that you can easily switch between Python ecosystems for your various projects without worrying about how those ecosystems interact with one another. 
+
+Additionally, {==we strongly recommend installing Python packages on the command line and **not** in a Jupyter Notebook using `!pip install packagename`==}. This is because using a shell escape (`!`) in Jupyter executes bash commands in a subshell that does not have knowledge of the virtual environment you're using. This means packages installed that way will wind up in `~/.local`.
+
+### Resolving Conflicts
+
+If you find that a `~/.local/lib/python<version>` environment has accidentally been created, you can remove it from your environment by either renaming or deleting it. For example, if you wanted to rename your environment, on the command line you could use:
+
+```
+mv ~/.local/lib/python<version> ~/.local/lib/python<version>.bak
+```
+
+replacing `<version>` with the relevant version number. Renaming this directory will allow you to restore it, if desired, while ensuring Python cannot access the packages installed there. Once the packages have been removed from your environment, try reinstalling your packages either in a new or existing isolated environment. 
+
+If you wish to keep your `~/.local` environment as-is (not as robust), you may also try using the workaround:
+
+```
+export PYTHONNOUSERSITE=1
+```
+which will force Python to ignore the contents of `~/.local`. You may then try creating and using a virtual environment without interference from `~/.local`. It should be noted, this export statement will need to be run in every new shell and added to each batch script that wants to exclude `~/.local` as this setting does not persist between sessions. 
+
+
+
 ## Custom Jupyter Kernel
 
 !!! warning 
@@ -160,3 +206,5 @@ The part you need to change is the section under `argv`. We will change this fro
 Replace `<your_modules_here>` with the modules you would like to load and `</path/to/your/environment>/bin/python` with the path to your environment's python. 
 
 **Step 4:** Save the `kernel.json` file and restart your Jupyter notebook session.
+
+
