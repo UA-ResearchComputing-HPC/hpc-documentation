@@ -37,7 +37,7 @@ This page contains a catalogue of our previous training materials. Feel free to 
 
 
 | | **Special Guest Workshops** | | | | 
-| - | - | - | - | - |
+| :-: | - | - | - | - |
 | :material-rocket-launch-outline: | Intro to ACCESS: Get Your First Project | [:fontawesome-brands-google-drive: Slides](https://drive.google.com/file/d/1hs1ePFUf6ppODqYzP2VQxiNl0INQKWxK/view?usp=sharing) | [:fontawesome-solid-paper-plane: ACCESS](https://access-ci.org/) | |
 
 <!-- ## Previous Workshops -->
