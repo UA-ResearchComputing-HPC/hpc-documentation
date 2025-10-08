@@ -18,7 +18,7 @@ Our users do some really cool stuff! Check out the list below for publications t
 
 
 <center>
-## Steward Observatory, Department of Astronomy
+<h2> Steward Observatory, Department of Astronomy </h2>
 </center>
 
 <div class="body-container">
@@ -109,7 +109,7 @@ Our users do some really cool stuff! Check out the list below for publications t
 
 
 <center>
-## Schwartz Research Group
+<h2> Schwartz Research Group </h2>
 </center>
 
 <div class="body-container">
@@ -155,7 +155,7 @@ Our users do some really cool stuff! Check out the list below for publications t
 
 
 <center>
-## Others
+<h2> Others </h2>
 </center>
 
 <div class="body-container">
