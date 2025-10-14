@@ -70,7 +70,7 @@ Logging into the HPC supercomputers starts with your UArizona NetID and password
      Windows systems do not have any built-in support for using SSH, so you will have to download a software package to do so. There are several available for Windows workstations.  Free SSH clients are available for download from the University of Arizona's [Site License website](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=26fe95e12f309150a55e95acf699b686&sysparm_category=4bced1e12f309150a55e95acf699b6ad).  
         
     === "PuTTY"
-        PuTTY is the most popular open source SSH Windows client. To use it: download, install, and open the [Putty client](https://www.putty.org/). Next, open a connection and enter ```hpc.arizona.edu``` under **Host Name** and press **Open**
+        PuTTY is the most popular open source SSH Windows client. To use it: download, install, and open the [Putty client](https://putty.software/). Next, open a connection and enter ```hpc.arizona.edu``` under **Host Name** and press **Open**
             
         <img src="images/putty-login.jpg" title="PuTTY configuration"width="400"/>
             
