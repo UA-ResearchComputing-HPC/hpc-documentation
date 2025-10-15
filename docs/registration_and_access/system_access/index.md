@@ -17,8 +17,7 @@ Logging into the HPC supercomputers starts with your UArizona NetID and password
 
 ## Web Access
 
-<center>[Open OnDemand](https://ood.hpc.arizona.edu){ .md-button }</center>
-
+<html><center><a href="https://ood.hpc.arizona.edu" title="Open OnDemand" class="md-button">Open OnDemand</a></center></html>
 
 === "Browser Terminal"
 
