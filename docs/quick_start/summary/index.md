@@ -5,7 +5,7 @@ That's it! You now should have a sense of how UArizona's HPC systems are laid ou
 
 To continue learning about HPC, our online documentation has a lot more information that can help get you started. For example [FAQs](../../support_and_training/faqs/), information on [HPC storage](../../storage_and_transfers/storage/hpc_storage/), and [file transfers](../../storage_and_transfers/transfers/overview/). You may also want to check out [our workshops as well as other community events](../../events/calendar/) which offer great training materials on a variety of topics. 
 
-Other great resources include: [virtual office hours every Wednesday](../../support_and_training/consulting_services/#office-hours) from 2:00-4:00pm, [consultation services](../../support_and_training/consulting_services/) offered through ServiceNow, and a [YouTube channel](https://www.youtube.com/@universityofarizonauitsres7597) with training videos. 
+Other great resources include: [virtual office hours every Wednesday](../../support_and_training/office_hours/) from 2:00-4:00pm, [consultation services](../../support_and_training/consulting_services/) offered through ServiceNow, and a [YouTube channel](https://www.youtube.com/@universityofarizonauitsres7597) with training videos. 
 
 ## External Resources
 
