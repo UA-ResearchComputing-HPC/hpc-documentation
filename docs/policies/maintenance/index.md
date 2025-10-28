@@ -32,6 +32,19 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 ## Maintenance History 
 
 <html>
+
+  <button class="collapsible">October 29, 2025</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine software and firmware updates for the compute nodes and storage.</li>
+  <li>Login nodes OS update to Rocky Linux 9.</li>
+  <li>Minor Open OnDemand update to improve usability</li>
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">July 30, 2025</button>
   <div class="content">
   <p>
@@ -40,7 +53,7 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
   <li>Network and device software updates.</li>
   <li>Quarterly OS patching and associated reboots.</li>
   <li>cuDNN module fix: The existing cudnn/9.3 module was incorrectly pointing to cuDNN 9.2. During maintenance, it will be updated to correctly point to cuDNN 9.3. If this change disrupts your workflow, you can load cudnn/9.2 instead.</li>
-  <li>Ticketing system change: all emails sent to hpc-consult will now automatically open a ServiceNow ticket for assignment and tracking purposes.
+  <li>Ticketing system change: all emails sent to hpc-consult will now automatically open a ServiceNow ticket for assignment and tracking purposes.</li>
   </ul>
   </p>
   </div>
