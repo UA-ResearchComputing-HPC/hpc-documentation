@@ -24,6 +24,7 @@ nav:
     - Loss of University Affiliation: policies/loss_of_university_affiliation/index.md
     - Maintenance: policies/maintenance/index.md
     - Special Projects: policies/special_projects/index.md
+    - HPC For Instruction: policies/hpc_for_instruction/index.md
     
   - Resources:
     - Allocations: resources/allocations/index.md
