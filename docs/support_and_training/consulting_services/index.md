@@ -48,11 +48,18 @@ To ensure you get the fastest and most accurate support possible, please take a 
     1.  Emails directed to individual staff may go unseen if that staff member is out of the office, has retired, or has a very full inbox.
     2.  We will cc this listserv when responding to ServiceNow tickets. This is for internal tracking purposes only.
 
-2. **Double-check our FAQs and Documentation**
+2. **Availability**
+
+    Our consulting team is available from 8:00 am - 5:00 pm Monday through Friday. We're unavailable on weekends and university holidays. We welcome you to reach out any time, but to be aware that you will likely not receive a response outside of normal business hours. 
+
+    If you anticipate an urgent issue arising outside business hours (for example, a job close to expiring or an xdisk nearing its end date), we recommend contacting us in advance so we can help you plan ahead.
+
+
+3. **Double-check our FAQs and Documentation**
 
     Before reaching out for help, double-check that your question has not been answered [in our FAQs](../faqs/) or general documentation. We actively update our public documentation to include answers to frequent user issues, address common points of confusion, provide training materials and walkthroughs, and more, so you may find what you're looking for there. 
 
-3. **Include Details and Context**
+4. **Include Details and Context**
 
     When you open a ticket, include as much relevant information as possible, such as:
 
