@@ -26,6 +26,9 @@ The storage array is located in the Research Data Center to benefit from the net
 
 PIs can request an allocation on R-DAS from [https://portal.hpc.arizona.edu/portal](https://portal.hpc.arizona.edu/portal)
 
+!!! failure "PI Account Setup Required"
+    In order to successfully create an R-DAS allocation, PI's **must** have completed their [HPC account setup](../../../registration_and_access/account_creation/index.md), including self-sponsorship. Additionally, R-DAS's servers **require** that PI's have an HPC group that is exactly identical to their net id. Without both, R-DAS creation will fail, and the HPC team will need to manually fix it, which will take some time.
+
 1. Go to the **Storage** tab
 2. Select **Create Shared Desktop Storage** under **Research Desktop Storage**
 
