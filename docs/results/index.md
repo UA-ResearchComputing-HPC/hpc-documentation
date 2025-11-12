@@ -162,6 +162,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
+ <!-- July 25, 2025 -->
+ <tr><td>Qiu, Y., Famiglietti, J. S., Behrangi, A., Farmani, M. A., Yousefi Sohi, H., Gupta, A., Fengwei, H., Abdelmohsen, K., & Niu, G. Y. (2025). <a href="https://doi.org/10.1029/2025GL114747">The strong impact of precipitation intensity on groundwater recharge and terrestrial water storage change in Arizona, a typical dryland</a>. <i>Geophysical Research Letters</i>, 52(14), e2025GL114747.</td></tr>
+
   <!-- November 6, 2024 -->
   <tr><td>Wu, J., Zhu, X., AlYahyaei, K., Peyghambarian, N., & Norwood, R. A. (2024). <a href="https://doi.org/10.1364/JOSAB.540894">Toward 10-watt-level single-frequency fiber laser oscillators</a>. <i>Journal of the Optical Society of America B</i>, 41(12), 2675-2683.</td></tr>
 
