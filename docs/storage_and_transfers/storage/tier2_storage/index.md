@@ -140,20 +140,37 @@ The time it takes for an object to be retrieved is dependent on its storage clas
 
 === "CLI"
     A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool. This can be accessed using:
-    ```bash
-    (elgato) [netid@junonia ~]$ interactive
-    [netid@cpu37 ~]$ module load contrib ; module load bjoyce3/sarawillis/tier2-viewer
-    ```
-    For information on usage:
-    ```bash
-    tier2-viewer --help
-    ```
-    To play a tutorial in your terminal, use:
-    ```bash
-    tier2-viewer --example
-    ```
-    The ```--restore``` flag can be used to either restore a file or a full directory. 
 
+    === "Ocelote/El Gato"
+        ```bash
+        (elgato) [netid@junonia ~]$ interactive
+        [netid@cpu37 ~]$ module load contrib 
+        [netid@cpu37 ~]$ module load bjoyce3/sarawillis/tier2-viewer
+        ```
+        For information on usage:
+        ```bash
+        tier2-viewer --help
+        ```
+        To play a tutorial in your terminal, use:
+        ```bash
+        tier2-viewer --example
+        ```
+        The ```--restore``` flag can be used to either restore a file or a full directory. 
+    === "Puma"
+        ```bash
+        (puma) [netid@junonia ~]$ interactive
+        [netid@r6u19n1 ~]$ module load contrib 
+        [netid@r6u19n1 ~]$ module load hpcteam/tier2-viewer
+        ```
+        For information on usage:
+        ```bash
+        tier2-viewer --help
+        ```
+        To play a tutorial in your terminal, use:
+        ```bash
+        tier2-viewer --example
+        ```
+        The ```--restore``` flag can be used to either restore a file or a full directory. 
 
 [^2]: More up-to-date pricing information can be found on [AWS's website](https://aws.amazon.com/s3/pricing/?nc=sn&loc=4).
 
