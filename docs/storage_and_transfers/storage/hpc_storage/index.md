@@ -183,11 +183,13 @@ PIs may request a new xdisk allocation immediately after their previous one has 
 
 #### User Portal
 
+[User Portal](https://portal.hpc.arizona.edu/portal){ .md-button }
+
 === "Requesting an Allocation"
     !!! warning
         If a group has an active xdisk allocation, a new one cannot be created until the active allocation expires or is deleted.
     
-    PIs or delegates can request an xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Create XDisk**
+    PIs or delegates can request an xdisk allocation at any time through the [**user portal**](https://portal.hpc.arizona.edu/portal). On that page, under the **Storage** tab, select **Create XDisk**
     
     <img src="images/create-xdisk.png" title="Manage xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
@@ -197,7 +199,7 @@ PIs may request a new xdisk allocation immediately after their previous one has 
 
 === "Modifying an Allocation"
 
-    PIs or delegates may manage their xdisk allocation at any time through the user portal. Under the **Storage** tab, either select **Update XDisk Size** or **Update XDisk Duration**, depending on the property you would like to update.
+    PIs or delegates may manage their xdisk allocation at any time through the [**user portal**](https://portal.hpc.arizona.edu/portal). On that page, under the **Storage** tab, either select **Update XDisk Size** or **Update XDisk Duration**, depending on the property you would like to update.
     
     <img src="images/manage_xdisk.png" title="Manage xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
@@ -205,7 +207,7 @@ PIs may request a new xdisk allocation immediately after their previous one has 
     
 
 === "Deleting an Allocation"
-    PIs or delegates may delete their xdisk allocation at any time through the user portal. Under the **Storage** tab, select **Delete XDisk**
+    PIs or delegates may delete their xdisk allocation at any time through the [**user portal**](https://portal.hpc.arizona.edu/portal). On that page, under the **Storage** tab, select **Delete XDisk**
     
     <img src="images/delete-xdisk.png" title="Delete xdisk" style="width:800px; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);">
     
