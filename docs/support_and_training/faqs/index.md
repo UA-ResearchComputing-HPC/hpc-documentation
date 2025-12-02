@@ -395,10 +395,10 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
     </p>
   </div>
 
-  <button class="collapsible">Why are my Desktop sessions freezing with: 'noVNC encountered an error: Incomplete zlib block'?</button>
+  <button class="collapsible">Why is my application freezing with: 'noVNC encountered an error: Incomplete zlib block'?</button>
   <div class="content">
     <p> 
-      If you're seeing the following error pop up when using an OnDemand Desktop session:
+      If you're seeing the following error pop up when using an OnDemand application:
       <br>
       <img src="images/desktop_zlib_error.png" title="Desktop zlib error" style="width:500px;">
       <br>
