@@ -3,6 +3,16 @@
 
 # Maintenance
 
+## HPC Downtime Jan 4 - 6, 2026
+
+Scheduled maintainance on the Computer Center requires power to be shut off on the HPC data center. **HPC systems will be unavailable from 6pm on January 4th until the work is completed on January 6th.**
+
+<mark>Jobs submitted prior to January 4th whose run times overlap with this period will be held until servives are restored.</mark>
+
+This shutdown will be the final step to resolve the issue that prevented the emergency power generator from switching to backup power during a TEP power loss on July 14, 2024. It is unrelated to our regular quarterly maintenance. 
+
+
+
 ## Planned Maintenance
 Most maintenance is performed during regular hours with no interruption to service.  System wide maintenance is usually planned ahead of time and is scheduled for Wednesdays from 8:00 AM to 5:00 PM with at least 10 days notice.  These will be planned to occur four times per year.
 
