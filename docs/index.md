@@ -8,7 +8,7 @@
 
     HPC systems will be unavailable from 6pm on January 4th until power maintenance is completed on January 6th. An all-clear will be sent once the HPC systems are operational upon completion of the scheduled building work.
 
-    **Jobs submitted prior to January 4th whose run times overlap with this period will be held until servives are restored.**
+    **Jobs submitted prior to January 4th whose run times overlap with this period will be held until services are restored.**
 
 ## Introduction
 
