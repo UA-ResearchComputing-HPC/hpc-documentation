@@ -4,7 +4,7 @@
 
 <img class="img-right" src="assets/images/home/uofa_cactus_computing3.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">
 
-???+ warning "HPC Downtime Jan 4-6"
+???+ warning "Planned HPC Downtime Jan 4 - 6, 2026"
 
     HPC systems will be unavailable from 6pm on January 4th until power maintenance is completed on January 6th. An all-clear will be sent once the HPC systems are operational upon completion of the scheduled building work.
 
