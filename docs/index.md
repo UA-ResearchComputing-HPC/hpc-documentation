@@ -4,12 +4,12 @@
 
 <img class="img-right" src="assets/images/home/uofa_cactus_computing3.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">
 
-???+ warning "Planned HPC Downtime Jan 4 - 6, 2026"
+<!-- ???+ warning "Planned HPC Downtime Jan 4 - 6, 2026"
 
     HPC systems will be unavailable from 6pm on January 4th until power maintenance is completed on January 6th. An all-clear will be sent once the HPC systems are operational upon completion of the scheduled building work.
 
-    **Jobs submitted prior to January 4th whose run times overlap with this period will be held until services are restored.**
-
+    **Jobs submitted prior to January 4th whose run times overlap with this period will be held until services are restored.** -->
+    
 ## Introduction
 
 The University of Arizona offers High Performance Computing (HPC) resources in the Research Data Center (RDC), a state-of-the-art facility that hosts our large computer clusters. HPC services are available at no cost to researchers. Each faculty member is eligible for a free standard allocation of [CPU time](./resources/allocations/) and [storage space](./storage_and_transfers/storage/overview/). 
