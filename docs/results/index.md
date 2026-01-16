@@ -162,6 +162,12 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
+<!-- January 12, 2026 -->
+ <tr><td>Lemoine, D. (2026). <a href="https://www.pnas.org/doi/10.1073/pnas.2504376122">Climate change has already made the United States poorer</a>. <i>Proceedings of the National Academy of Sciences</i>, 122(51), e2504376122.</td></tr>
+
+<!-- January 12, 2026 -->
+ <tr><td>Baluja, R, Guo, B., Howden, W., Lemoine, D (2026). <a href="https://www.pnas.org/doi/10.1073/pnas.2509801122">PFAS-contaminated drinking water harms infants</a>. <i>Proceedings of the National Academy of Sciences</i>, 122(50), e2509801122.</td></tr>
+
  <!-- July 25, 2025 -->
  <tr><td>Qiu, Y., Famiglietti, J. S., Behrangi, A., Farmani, M. A., Yousefi Sohi, H., Gupta, A., Fengwei, H., Abdelmohsen, K., & Niu, G. Y. (2025). <a href="https://doi.org/10.1029/2025GL114747">The strong impact of precipitation intensity on groundwater recharge and terrestrial water storage change in Arizona, a typical dryland</a>. <i>Geophysical Research Letters</i>, 52(14), e2025GL114747.</td></tr>
 
