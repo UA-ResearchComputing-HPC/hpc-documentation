@@ -4,16 +4,20 @@
 
 Before submitting your job to the scheduler, it's important to know that the number of CPUs you allocate to your job determines the amount of memory you receive. 
 
-{==Each cluster has a fixed amount of memory per CPU based on the node type==}. Accepted values by cluster and node type are listed below:
+{==Each cluster has a fixed amount of memory per CPU based on the node type==}. Accepted values by cluster and node type are listed below, including the number of each type of node:
 
-|Cluster|Standard Node|High-Memory Node|GPU Node|
-|-|-|-|-|
-|Puma| 5 GB | 32 GB | 5 GB|
-|Ocelote| 6 GB | 41 GB | 8 GB|
-|El Gato| 4 GB | - | -|
+|Cluster|Standard Node|*Count*|High-Memory Node|*Count*|GPU Node|*Count*|
+|-|-|-|-|-|-|-|
+|Puma| 5 GB | 300 | 32 GB | 5 | 5 GB| 15 |
+|Ocelote| 6 GB | 360 | 41 GB | 1 | 8 GB| 60 |
+|El Gato| 4 GB | - | - | - | - | - |
 
 
 For example, using the table above we can see on Puma standard nodes you get 5 GB for each CPU you request. This means a standard job using 4 CPUs gets 5 GB/CPU × 4 CPUs = 20 GB of total memory.
+
+???+ warning "Limited Number of High Memory Nodes"
+
+    Please be aware that there are significantly fewer high memory nodes (3 public + 2 buy-in) compared to hundreds of standard nodes. Additional memory can be provided on standard nodes by increasing the core count. Generally, work should only be moved to high memory nodes if the memory requirement exceeds the maximum available memory on standard nodes (470 GB).
 
 The video below shows the relationship between memory and CPUs, specifically looking at one of our Puma nodes. 
 

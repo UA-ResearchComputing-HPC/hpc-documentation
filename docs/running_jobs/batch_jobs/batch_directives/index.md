@@ -5,8 +5,85 @@
 
 The first section of a batch script (after the shebang) always contains the Slurm Directives, which specify the resource requests for your job. The scheduler parses these in order to allocate CPUs, memory, walltime, etc. to your job request.
 
+We would appreciate if you took a moment to review our [Standard Practices](../../../policies/standard_practices/) to ensure fair access and use of compute resources for all users.
 
- 
+## Minimum Viable Batch Directives
+
+There is a certain set of directives that must be present in all batch scripts in order for the scheduler to have enough information to run your job. There is no one-size-fits-all solution, and there are some options that are either redundant or should not be used simultaneously. You should always review and adjust your batch directives for your particular scenario.
+
+At a minimum, batch scripts should have:
+
+<!-- <div class="annotate" markdown>
+<ul>
+<li><b>Job Name</b> <br> <pre><code>#SBATCH --job-name=hello_world</code></pre></li>
+<li><b>Partition</b> <br> <pre><code>#SBATCH --partition=standard</code></pre></li> 
+<li><b>Account</b> (1) <br> <pre><code>#SBATCH --account=your_group</code></pre></li>
+<li><b>Number of Nodes</b> <br> <pre><code>#SBATCH --nodes=1</code></pre></li>
+<li><b>Core count or total memory(2)</b> <pre><code>#SBATCH --ntasks=1<br>#SBATCH --cpus-per-task=10</code></pre><br>or<br><pre><code>#SBATCH --mem=50gb</code></pre> </li>
+<li><b>Time limit</b> <br> <pre><code>#SBATCH --time=01:00:00</code></pre> </li>
+</ul>
+</div> -->
+
+**Job Name**
+
+```
+#SBATCH --job-name=hello_world
+```
+
+**Partition**
+
+```
+#SBATCH --partition=standard
+```
+
+**Account** (1)
+{ .annotate }
+
+1. Account does not need to be specified when using windfall
+
+```
+#SBATCH --account=your_group
+```
+
+**Number of Nodes** 
+
+```
+#SBATCH --nodes=1
+```
+
+**Core Count or Total Memory** (1)
+{ .annotate }
+
+1. Only one of these should be specified. See [CPUs and Memory](#cpus-and-memory) for details.
+
+```
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+```
+
+or
+
+```
+#SBATCH --mem=50gb
+```
+
+**Time Limit**
+
+```
+#SBATCH --time=01:00:00
+```
+
+
+<!-- | Item | Directive Example | Comment |
+| Nodes | `` | | 
+| CPUs or Memory |  | Either a number of CPUs or an amount of memory should be specified, not both. The scheduler automatically determines memory from a specified number of CPUs, and a number of CPUs from a specified total memory. |
+-->
+   
+The above options are examples for a single node job in the standard partition. Your needs may vary. Use the sections below to determine which options are appropriate for your job.    
+
+See the [Examples and Explanations](#examples-and-explanations) section at the end of the page for detailed examples with descriptions. 
+
+
 ## Allocations and Partitions
 
 The partitions, or queues, on the UArizona HPC which determine the priority of your jobs and resources available to them are shown in the table below. With the exception of Windfall, these consume your monthly allocation. See our [allocations documentation](../../../resources/allocations/) for more detailed information on each. The syntax to request each of the following is shown below:
@@ -29,39 +106,7 @@ The partitions, or queues, on the UArizona HPC which determine the priority of y
 |Qualified|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;</code></pre>|Available to groups with an activate [special project](../../../policies/special_projects/).|
 |Qualified GPU|<pre><code>#SBATCH --account=&#60;PI GROUP&#62;<br>#SBATCH --partition=gpu_standard<br>#SBATCH --qos=qual_qos_&#60;PI GROUP&#62;<br>#SBATCH --gres=gpu:&#60;options&#62;|Request GPU resources with qualified hours. Available to groups with an activate [special project](../../../policies/special_projects/). See [the GPUs section below](#gpus) for details on the `gres` directive.|
 
-
-## CPUs
-
-Each job must specify the requested number of CPUs with the ```--ntasks``` directive.  This can be done in one of two ways:
-
-1. If your application is making use of MPI or is executing simultaneous distinct processes, you can request ```<N>``` CPUs with
-
-    ```bash
-    #SBATCH --ntasks=<N>
-    ```
-
-2. If you are using a multithreaded application, then you can request ```<N>``` CPUs with:
-    ```bash
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=<N>
-    ```
-
-## Nodes
-
-???+ danger "Single vs. Multi-Node Programs"
-    
-    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
-
-    **If your application is not MPI-enabled, always set** ```--nodes=1```
-
-The term node refers to the number of physical computers allocated to your job. The syntax to allocate ```<N>``` nodes to a job is:
-
-```
-#SBATCH --nodes=<N>
-```
-
-
-## Time
+## Time Limits
 
 The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:SS```. The maximum amount of time that can be requested is 10 days for a batch job. More details in [Job Limits](../../job_limits/).
 
@@ -69,6 +114,74 @@ The syntax for requesting time for your job is ```HHH:MM:SS``` or ```DD-HHH:MM:S
 #SBATCH --time=HHH:MM:SS
 ```
 
+or 
+
+```
+#SBATCH --time=DD-HH:MM:SS
+```
+
+## CPUs and Memory 
+
+The number of CPUs (1) for a job can either be specified by the user, or it can be left to the Scheduler to determine. Generally, the user should specify the number of CPUs per node **or** the total memory per node, but **not both**. Exactly one of these should always be specified. Both over-specification and under-specification can result in error or unexpected behavior.
+{ .annotate }
+
+1. Note that the terms "CPU" and "core" are used interchangably in the context of scheduling jobs, even though they do not have the same meaning in a hardware context.
+
+When the number of CPUs (per node) is specified, the total amount of memory will be determined by the Scheduler using the product of the number of CPUs and the fixed quantity of memory per CPU for the hardware in use. To find the amount of memory per CPU by cluster and node type, see our [Compute Resources page](../../../resources/compute_resources/#compute-resources-available-by-cluster). 
+
+When the total memory (per node) is specified, the number of CPUs will be determined by the Scheduler using the ratio of the total memory requested to the value of memory per CPU for the given hardware.
+
+**Example: Single-Node, CPU-specified, Puma Standard Node**
+
+```bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=30
+```
+
+Total memory is determinded to be 150 GB based on 30 CPUs and 5 GB of memory per CPU on node type. User should not specify total memory.
+
+**Example: Single-Node, Memory-specified, Puma Standard Node**
+
+```bash
+#SBATCH --nodes=1
+#SBATCH --mem=200gb
+```
+
+The number of CPUs allocated to this job is determined to be 40 based on 200 GB of total memory and 5 GB of memory per CPU. User should not specify number of CPUs.
+
+**Memory Per CPU**
+
+The value of `mem-per-cpu` is determined automatically by the Scheduler based on the cluster and node type and generally does not need to be specified by the user. See our [Compute Resources page](../../../resources/compute_resources/#compute-resources-available-by-cluster) for a lookup table. Since this value varies across clusters and node types, specifying it manually may lead to unexpected behaviors, such as standard jobs being placed on high memory nodes, which both increases wait time for the user and reduces availability of limited resources.
+
+## Multi-Node Jobs
+
+The same considerations described above apply to multi-node jobs, but the `--mem` flag determines the total memory *per node*.
+
+The batch directives to specify CPUs are different for multi-node jobs than for single-node jobs. 
+
+To specify the total number of CPUs across nodes, use
+
+```bash
+#SBATCH --nodes=<n_nodes>
+#SBATCH --ntasks=<n_tasks>
+```
+
+To specify the number of CPUs per node, use
+
+```bash
+#SBATCH --nodes=<n_nodes>
+#SBATCH --ntasks-per-node=<n_tasks>
+```
+
+
+???+ warning "Single vs. Multi-Node Programs"
+    
+    In order for your job to make use of more than one node, it must be able to make use of something like MPI. 
+
+    If your application is not MPI-enabled, always set ```--nodes=1```
+
+<!-- 
 ## Memory and High Memory Nodes
 
 !!! tip "Memory and CPUs are connected"
@@ -88,17 +201,36 @@ The general syntax for requesting ```<N>``` GB of memory per node is
 or, to request ```<N>``` GB of memory per CPU:
 ```
 #SBATCH --mem-per-cpu=<N>gb
-```
+``` 
+-->
 
-**High Memory Node Requests**
+## High Memory Nodes
 
-To request a high memory node, you will need the additional flag ```--constraint=hi_mem```. It is recommended to use the exact directives below to avoid unexpected behavior.
+Please note that there are only three public and two buy-in high memory nodes on Puma, and only one high memory node on Ocelote, compared to hundreds of standard nodes on each cluster. Wait times are typically much longer on these nodes as compared to standard nodes. 
+<!-- As such, ***high memory nodes are limited resources and should be only be used if need is clearly demonstrated.*** -->
 
-|Cluster|Command|
+Before requesting a high memory node, please take the time to test your job on standard nodes, increasing the requested memory as necessary. Additional memory can be allocated to standard nodes by increasing the value of the `--mem` flag or the number of CPUs (see previous sections). 
+
+<mark>There generally is no benefit to running a job on a high memory node unless it requires more than 470 GB of memory</mark>, which is the total amount of memory available on a Puma standard node. 
+
+<mark>If your job requires less than 470 GB of memory to run, please adjust your batch directives to run on a standard node with an appropriate amount of memory.</mark> See [CPUs and Memory](#cpus-and-memory) for details. It may take some testing to find an optimal value.
+
+If your work is MPI-enabled, using multiple standard nodes may be a viable option to increase the total memory. Careful testing is needed to ensure that this will be beneficial to your workflow.
+
+To request a high memory node, you will need the additional flag ```--constraint=hi_mem```. It is recommended to include the exact directives below to avoid unexpected behavior.
+
+|Cluster|Directives|
 |-|-|
 |Ocelote|<pre><code>#SBATCH --mem-per-cpu=41gb<br>#SBATCH --constraint=hi_mem</code></pre>|
 |Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=hi_mem</code></pre>|
 
+???+ question "Automatic assignment to high memory nodes"
+
+    If a value of `mem-per-cpu` is requested that is higher than the value available on a given cluster, the Scheduler will automatically migrate the job to a high memory node, even if you did not explicitly request this. 
+
+    The most common case of this would be migrating a job from Ocelote, which has 6 GB per CPU, to Puma, which has 5 GB per CPU. 
+
+    Since the Scheduler is able to detect and assign this value automatically, it is recommended to remove requests for `mem-per-cpu` and specify either the total memory or number of CPUs. See the [CPUs and Memory](#cpus-and-memory) section for details.
 
 ## GPUs
 
@@ -107,6 +239,8 @@ To request a high memory node, you will need the additional flag ```--constraint
 
 !!! warning "GPU options are per node"
     When using `--gres=gpu:N`, keep in mind that the total number of GPUs the job is allocated is `N` per node. 
+
+<mark>GPUs are limited resources.</mark> Before requesting a GPU, please ensure that the program you intend to run is GPU-enabled and properly configured to utilize the GPU. 
 
 GPUs are an optional resource that may be requested with the ```--gres``` directive. For an overview of the specific GPU resources available on each cluster, see our [resources page](../../../resources/compute_resources/#gpu-nodes). 
 
@@ -272,7 +406,7 @@ The below examples are complete sections of Slurm directives that will produce v
 
 === "Multi-Node"
     
-    When requesting a multi-node job, up to 94 ```--ntasks-per-node``` can be requested on Puma. The numbers below are chosen for illustrative purposes and can be replaced with your choice, up to system limitations. It should be noted that there is no advantage to requesting multiple nodes when the total number of CPUs needed is less than or equal to the number of CPUs on one node.  
+    When requesting a multi-node job, up to 94 ```--ntasks-per-node``` can be requested on Puma. The numbers below are chosen for illustrative purposes and can be replaced with your choice, up to system limitations. It should be noted that there is no advantage to requesting multiple nodes when the total number of CPUs needed is less than or equal to the number of CPUs on one node. The numbers below are just for demonstration purposes. 
 
     ```
     #SBATCH --job-name=Multi-Node-MPI-Job
