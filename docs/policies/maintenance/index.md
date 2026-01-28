@@ -43,6 +43,18 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 
 <html>
 
+  <button class="collapsible">January 28, 2026</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Disruptive Maintenance
+  <ul>
+  <li>Routine software and firmware updates for the compute nodes and storage.</li>
+  <li>The scheduler will receive a major update. Please report any unexpected scheduler issues after service is restored.</li>
+  <li>Newer intel software will be made available.</li>
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">October 29, 2025</button>
   <div class="content">
   <p>
