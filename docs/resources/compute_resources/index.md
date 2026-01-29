@@ -61,19 +61,21 @@ Below is a list of the node types and physical hardware that are available on ea
     
     Puma's GPU nodes have four Nvidia V100S model GPUs. They are provisioned with 32 GB memory compared to 16 GB on the P100's.  
 
-    In addition to the V100 nodes, one node has four A100s, each subdivided into three smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. 
+    In addition to the V100 nodes, one node has four A100s, each subdivided into two smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. 
     
     **Multi-Instance GPU (MIG) Resources**    
 
     !!! info "MIG resources are only available on Puma"
 
-    The Four A100 GPUs on Puma Node r5u13n1 are each subdivided into three smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 20 GB of GPU memory. The vast majority of jobs run on Puma in 2023 used less than this amount of GPU memory. The 12 MIG GPUs increase overall GPU availability on Puma by freeing the 32 GB V100 GPUs for users requiring larger amounts of GPU memory.
+    The Four A100 GPUs on Puma Node r7u25n1 are each subdivided into two smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 40 GB of GPU memory. The increased VRAM enables workloads requiring more memory than the V100 GPUs. 
 
-    Jobs requesting MIG resources will ideally be scheduled more quickly than those requesting the standard V100 GPUs, so MIG resources should be preferred when sufficient.
+    <!-- Jobs requesting MIG resources will ideally be scheduled more quickly than those requesting the standard V100 GPUs, so MIG resources should be preferred when sufficient. -->
 
     A limitation is that only one MIG slice can be addressed by a single application, so {==MIG slices are not appropriate for jobs utilizing multiple GPUs==}.
 
     The addition of the MIG devices to the Slurm queues will have a number of impacts, and some users may need to make changes to submissions to ensure proper functioning of analyses. 
+
+    To see the proper syntax for requesting a MIG slice versus a V100, please see our page on batch directives. 
 
 
 === "Ocelote"

@@ -261,7 +261,7 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
     <td>Request a single GPU. This will either target one Volta GPU (v100) or one <a href="../../../resources/compute_resources/#__tabbed_2_1">A100 MIG slice</a>, depending on availability. Only one GPU should be selected with this method to avoid being allocated multiple MIG slices.</td>
   </tr>
   <tr>
-    <td><pre><code>#SBATCH --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb</code></pre></td>
+    <td><pre><code>#SBATCH --gres=gpu:nvidia_a100_80gb_pcie_3g.40gb</code></pre></td>
     <td>Target one A100 MIG slice.</td>
   </tr>
   <tr>
