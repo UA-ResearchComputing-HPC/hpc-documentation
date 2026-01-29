@@ -75,7 +75,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
     The addition of the MIG devices to the Slurm queues will have a number of impacts, and some users may need to make changes to submissions to ensure proper functioning of analyses. 
 
-    To see the proper syntax for requesting a MIG slice versus a V100, please see our page on batch directives. 
+    To see the proper syntax for requesting a MIG slice versus a V100, please see our page on [Batch Directives](../../running_jobs/batch_jobs/batch_directives/#gpus). 
 
 
 === "Ocelote"
