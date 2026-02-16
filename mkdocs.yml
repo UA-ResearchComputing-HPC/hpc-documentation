@@ -70,6 +70,7 @@ nav:
       - AlphaFold: software/popular_software/alphafold/index.md
       - Mamba: software/popular_software/mamba/index.md
       - Matlab: software/popular_software/matlab/index.md
+      - Ollama: software/popular_software/ollama/index.md
       - Perl: software/popular_software/perl/index.md
       - Python: software/popular_software/python/index.md
       - R: software/popular_software/R/index.md
