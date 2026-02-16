@@ -8,7 +8,7 @@ Ollama is a popular open-source platform to run LLMs. Ollama can be built as a c
 
 The ollama executable can easily be built using apptainer. For more information on apptainer see our page on [containers](../../containers/containers_on_hpc/). 
 
-To access the apptainer command and sufficient compute resources to build the container, please use a compute node via [interactive session](../../../running_jobs/interactive_jobs/). The apptainer command is not available on login nodes:
+To access the apptainer command and sufficient compute resources to build the container, please use a compute node via [interactive session](../../../running_jobs/interactive_jobs/). The apptainer command is not available on login nodes.
 
 <!-- ```bash
 (puma) [ejahn@junonia:~]$ apptainer
@@ -49,7 +49,7 @@ apptainer exec --nv --env "OLLAMA_MODELS=/path/to/your/models" ollama.sif ollama
 
 LLM model images can be a few to hundreds of gigabytes in size. Storing these files in the default location (your home folder) is very likely to cause storage space issues. It is highly recommended to create a dedicated folder for your models somewhere in `/groups` or `/xdisk`. Note that the command above specifies a folder to the environment variable `OLLAMA_MODELS`. It is recommend to include this option every time you run the command, otherwise models will be saved to `/home/.ollama/models`. If you accidentally save a model there, you should remove `/home/.ollama/models` to free up space in your home.
 
-Not only do we have to consider disk space when storing our models, but we also have to consider VRAM (GPU memory). Models that are larger than the amount of GPU memory available will not run! Check the size of the model file on the ollama webside before pulling it to ensure that it will run on your GPU configuration. 
+Not only do we have to consider disk space when storing our models, but we also have to consider VRAM (GPU memory). Models that are larger than the amount of GPU memory available will not run! Check the size of the model file on the ollama website before pulling it to ensure that it will run on your GPU configuration. 
 
 The P100 GPUs (16 GB VRAM) on Ocelote are good options because they can be run in tandem, giving twice the available GPU memory as a single P100 for a total of 32 GB VRAM. Plus, they are significantly more available than GPUs on Puma. To request an interactive session with two P100 GPUs on Ocelote, use this command:
 
