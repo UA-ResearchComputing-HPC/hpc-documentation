@@ -16,6 +16,10 @@ This page contains a catalogue of our previous training materials. Feel free to 
     | <details><summary>Scheduling and Running Jobs on HPC</summary>The ins-and-outs of running jobs on the HPC system. Provides details related to partitions and CPU-time allocations in relation to the scheduling system. Describes HPC hardware information relevant to submitting resource requests. Covers details for each type of job, including Open OnDemand graphical jobs, interactive terminal sessions, batch jobs, and array jobs. Provides best practices and clarification related to the queueing system and Slurm terminology. A basic batch job example is included. Basic programming experience including familiarity with bash recommended but not required. Participants should be familiar with topics covered in Workshops 1 and 2</details> | Feb 28th 2025  | Ethan Jahn |
     | <details><summary>Managing and Optimizing Jobs</summary>Motivates, defines, and describes tools/techniques for managing jobs, including Open OnDemand and command-line tools (both provided by Slurm – e.g. ```squeue``` – and other tools such as ```seff``` and ```job-history```). Provides detailed examples and use cases for these tools. Additionally provides clarity and motivation for job optimization, including decreasing time to result and improving overall HPC throughput. Outlines best practices and principles of constructing optimal resource requests. Basic programming experience and familiarity with previous workshop topics is recommended.</details> | Feb 28th 2025 | Ethan Jahn | -->
 
+???+ warning "University of Arizona Login Required"
+
+    The Google Drive links below are restricted to verified University of Arizona accounts. You should be able to access them if you use your U of A account, but they will not be accessible to generic Gmail accounts. Please do not request access to these files as their permissions are already set up as intended.
+    
 
 | | Topic | Links | | |
 | :-: | - | - | - | - |
