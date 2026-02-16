@@ -47,7 +47,7 @@ apptainer exec --nv --env "OLLAMA_MODELS=/path/to/your/models" ollama.sif ollama
 
 **Model files are large! Manage your space carefully.**
 
-LLM model images can be a few to hundreds of gigabytes in size. Storing these files in the default location (your home folder) is very likely to cause storage space issues. It is highly recommended to create a dedicated folder for your models somewhere in `/groups` or `/xdisk`. Note that the command above specifies a folder to the environment variable `OLLAMA_MODELS`. It is recommend to include this option every time you run the command, otherwise models will be saved to `/home/.ollama/models`. If you accidentally save a model there, you should remove `/home/.ollama/models` to free up space in your home.
+LLM model images can be a few to hundreds of gigabytes in size. Storing these files in the default location (your home folder) is very likely to cause storage space issues. It is highly recommended to create a dedicated folder for your models somewhere in `/groups` or `/xdisk`. Note that the command above specifies a folder to the environment variable `OLLAMA_MODELS`. It is recommend to include this option every time you run the command, otherwise models will be saved to `~/.ollama/models`. If you accidentally save a model there, you should remove `~/.ollama/models` to free up space in your home.
 
 Not only do we have to consider disk space when storing our models, but we also have to consider VRAM (GPU memory). Models that are larger than the amount of GPU memory available will not run! Check the size of the model file on the ollama website before pulling it to ensure that it will run on your GPU configuration. 
 
