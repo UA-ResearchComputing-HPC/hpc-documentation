@@ -124,6 +124,15 @@ du -sh $(ls -A ~)
 
 Common culprits to look out for include `~/.cache`, `~/.conda`, `~/.local`, `~/.singularity`, and `~/.apptainer`. 
 
+#### Graphical Disk Utility
+
+A recently added tool called `gdu` provides an interface within the terminal that allows users to navigate through folders using the arrows to interactively assess disk usage. It is activated with the simple command `gdu` and is available on login nodes and the file transfer node. It will scan the current folder by default, but a path can be specified with `gdu /path/to/location`.
+
+<figure markdown="span">
+  ![gdu demo](./images/gdu.gif){ align=right }
+  <figcaption>Demonstration of using <code>gdu</code> to identify large files in the home directory</figcaption>
+</figure>
+
 ### Cache Directories
 
 Cache directories frequently contain cache files used for performance improvements. For example, the directory `~/.cache/pip` stores pip cache files to speed up package installations. These directories may start out small, but they can balloon over time. In particular, RStudio, Apptainer, and HuggingFace, the latter of which stores its large datasets under `~/.cache/huggingface`.
