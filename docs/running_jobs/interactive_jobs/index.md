@@ -39,6 +39,20 @@ salloc: Nodes i16n1 are ready for job
 
 Notice in the example above how the command prompt changes once your session starts. When you're on a login node, your prompt will show `junonia` or `wentletrap`. Once you're in an interactive session, you'll see the name of the compute node you're connected to. 
 
+**Slurm Update on Puma 2026**
+
+An update to the version of Slurm on Puma in early 2026 changed how Slurm processes interactive sessions. The `interactive` command is now a wrapper for `srun` rather than `salloc`. This change does not apply to Ocelote or El Gato. 
+
+```bash
+(puma) [netid@junonia:~]$ interactive -a mygroup
+Run "interactive -h for help customizing interactive use"
+Submitting with /usr/local/bin/srun --job-name=interactive --mem-per-cpu=4GB --nodes=1    --ntasks=1 --time=01:00:00 --account=mygroup --partition=standard --constraint=interactive --pty /bin/bash 
+srun: job 21118640 queued and waiting for resources
+srun: job 21118640 has been allocated resources
+[netid@r6u19n1:~]$ 
+```
+Note that this only affects how the `interactive` command submits jobs. Manually entering `salloc` commands on Puma should work as expected. 
+
 **Customizing Your Resources**
 
 The command ```interactive``` when run without any arguments will allocate a windfall session using one CPU for one hour which isn't ideal for most use cases. You can modify this by including additional flags. To see the available options, you can use the help flag ```-h```
@@ -87,5 +101,5 @@ salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --ti
 
 **GPU MIG Slice Example**
 ```
-salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_2g.20gb
+salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_3g.40gb
 ```
