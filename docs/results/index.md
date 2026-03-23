@@ -162,6 +162,9 @@ Our users do some really cool stuff! Check out the list below for publications t
 <div class="table-container">
  <table class="table">
 
+ <!-- January 12, 2026 -->
+ <tr><td>Zhao, X., Fraschetti, F., & Giacalone, J. (2026). <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae231e/meta">Dynamics of Null-points across Shocks Interacting with Preexisting Turbulence</a>. <i>The Astrophysical Journal</i>, 997(1), 107.</td></tr>
+
 <!-- January 12, 2026 -->
  <tr><td>Lemoine, D. (2026). <a href="https://www.pnas.org/doi/10.1073/pnas.2504376122">Climate change has already made the United States poorer</a>. <i>Proceedings of the National Academy of Sciences</i>, 122(51), e2504376122.</td></tr>
 
