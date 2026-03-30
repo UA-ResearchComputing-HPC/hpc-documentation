@@ -39,20 +39,19 @@ The University of Arizona's High Performance Computing (HPC) clusters are server
 
 ### Cost and Allocations
 ???+ warning "Notice"
-    * With V100S GPU's no longer available the pricing will be different.
-    * The locked in pricing expired February 28, 2022.  
-    
-|Option Number|CPU Cores|V100s GPU|RAM (GB)|Monthly High-priority Allocation|Cost|
+    * There is no locked in pricing. Each order will need a fresh quote.  
+   
+|Option Number|CPU Cores|H200 GPU|RAM (GB)|Monthly High-priority Allocation|Cost|
 |-|-|-|-|-|-|
-|**CPU-only Options**|
-|1A - One CPU node|96||512|70,080|$8,037.50  (expired)|
-|1B - Two CPU nodes|192||512|140,160|$16,075.00  (expired)|
-|1C - Three CPU nodes|288||512|210,240|$24,112.00  (expired)|
-|1D - Full [Altus XE2242](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe2242-server/)|384||512|280,320|$32,150.00  (expired)|
+|**CPU-only Option**|
+|*The new nodes are a 1U server so they can be purchased individually whereas Puma nodes came four in one server*|
+|*Price on 3/1/26: $150,000. This price fluctuates constantly*|
+| Full Lenovo SR645 V3|192|768|138,240|Market Price|
 | **GPU Node Options**|
-|2A - 1/4 [Altus XE2214GT](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe2214gt-server/)|24|1|512|17,520|$8,523.75  (expired)|
-|2B - 2/4 [Altus XE2214GT](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe2214gt-server/)|48|2|512|35,040|$17,047.50  (expired)|
-|2C - 3/4 [Altus XE2214GT](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe2214gt-server/)|72|3|512|52,560|$25,571.25  (expired)|
-|2D - Full [Altus XE2214GT](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe2214gt-server/)|96|4|512|70,080|$34,095.00  (expired)
+|* There are eight H200s in each server, so we support buying 1/8th of the server cost*|
+|* Price on 3/1/26: $30,293 This price fluctuates constantly*|
+| 1/8 Lenovo SR675 V3|24|1|192|17,280|Market Price|
 |**High Memory Node**|
-|3 - Full [Altus XE1212](https://www.penguincomputing.com/products/servers/altus-servers/altus-xe1212-server/)|96||3072|70,080|$42,230.00  (expired)|
+|*This is the same server as the standard node, with a lot more memory *|
+|* Price on 3/1/26: $150,000. This price fluctuates constantly *|
+| Full Lenovo SR645 V3|192||3072|138,240|Market Price| 
