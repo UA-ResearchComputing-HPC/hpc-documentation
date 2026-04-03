@@ -11,7 +11,7 @@
 
 ## Compute Resources Available by Cluster
 
-Below is a list of the node types and physical hardware that are available on each of our three clusters. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
+Below is a list of the node types and physical hardware that are available on each cluster. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
 
 !!! tip "Requesting resources in jobs"
     For information on the specifics of requesting the compute resources detailed below, see our [Batch Jobs](../../running_jobs/batch_jobs/batch_directives/), [Interactive Jobs](../../running_jobs/interactive_jobs/#the-interactive-command), and/or [Open OnDemand Jobs](../../running_jobs/open_on_demand/#interactive-graphical-applications) guides. 
@@ -29,6 +29,15 @@ Below is a list of the node types and physical hardware that are available on ea
 
 !!! tip "CPUs and Memory"
     For information on memory to CPU ratios, shown as RAM/CPU in the tables below, see [CPUs and Memory](../../running_jobs/cpus_and_memory/)
+
+=== "The new cat"
+    **Resources Available**
+
+    | Node Type | <div style="width: 100px;">Number of Nodes</div>| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|<div style="width: 95px;">RAM/GPU</div>|GPU RAM/Node|Total GPUs|
+    |-|-|-|-|-|-|-|-|-|
+    |Standard|40 standard<br>15 buy-in|192|4 GB|768 GB|-|-|-|-|
+    |High Memory|1 standard<br>0 buy-in| 94|32 GB|3008 GB|-|-|-|-|-|
+    |GPU|2 standard<br>3 buy-in|94|5 GB|1536 GB|8|141 GB/H200|1128 GB|16 standard<br>24 buy-in|
 
 === "Puma"
     **Resources Available**
@@ -48,28 +57,27 @@ Below is a list of the node types and physical hardware that are available on ea
     |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
     |Dual GPU Nodes|35|28|8 GB|224 GB|2|16 GB|32 GB|70|
     
-=== "El Gato"
-    | Node Type | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|
-    |-|-|-|-|-|
-    |Standard|118|16|4 GB|64 GB|
 
 ## GPU Nodes
 
+=== "The new cat"
+
+    There are 8 H200s in both of the GPU nodes.
+
+    The new cat may have MIG provisioned on the GPUs, depending on the results of our tests.The GPUs would be subdivided into two virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 70 GB of GPU memory.
+
+     <img src="images/H200_Specs.png" title="H200 GPU specifications" width=500px>
+
+
 === "Puma"
     <img src="images/v100_info.jpg" title="v100 GPU specifications" width=400px style="float: right; margin: 5px;">
-    Puma has a different arrangement for GPU nodes than Ocelote. Whereas Ocelote has one GPU per node, Puma has four. This has a financial advantage for providing GPU's with lower overall cost, and a technical advantage of allowing jobs that can use multiple GPU's to run faster than spanning multiple nodes.
+    There are 4 V100S's in each of the 9 Puma nodes. The new cat will have 8 H200's in each node. Ocelote has 2 P100s in each of the 36 nodes. 
     
-    Puma's GPU nodes have four Nvidia V100S model GPUs. They are provisioned with 32 GB memory compared to 16 GB on the P100's.  
-
-    In addition to the V100 nodes, one node has four A100s, each subdivided into two smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. 
+    On Puma, one node has four A100s, each subdivided into two smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. We may implement this on the new cat.
     
     **Multi-Instance GPU (MIG) Resources**    
 
-    !!! info "MIG resources are only available on Puma"
-
     The Four A100 GPUs on Puma Node r7u25n1 are each subdivided into two smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 40 GB of GPU memory. The increased VRAM enables workloads requiring more memory than the V100 GPUs. 
-
-    <!-- Jobs requesting MIG resources will ideally be scheduled more quickly than those requesting the standard V100 GPUs, so MIG resources should be preferred when sufficient. -->
 
     A limitation is that only one MIG slice can be addressed by a single application, so {==MIG slices are not appropriate for jobs utilizing multiple GPUs==}.
 
@@ -80,37 +88,35 @@ Below is a list of the node types and physical hardware that are available on ea
 
 === "Ocelote"
 
-    <img src="images/p100_info.png" title="p100 GPU specifications" width=400px style="float: right; margin: 5px;">
+    <img src="images/p100_info.png" title="p100 GPU specifications" width=500px style="float: right; margin: 5px;">
 
-    Ocelote has 25 compute nodes with one Nvidia P100 and 35 compute nodes with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
+    Ocelote has 36 compute nodes each with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
 
-    Previously, one node with a V100 was available, but it has since been replaced with a P100. 
-
-=== "El Gato"
-    El Gato has no GPU nodes. During the quarterly maintenance cycle on April 27, 2022 the El Gato K20s and Ocelote K80s were removed after support was ended by Nvidia.
-
+    We plan to keep the GPU nodes for Ocelote as long as the GPU's are useful. We have observed the wait time is usually short and they are good for lightweight AI / ML / visualization workloads.
 
 
 
 
 ## System Technical Specifications
 
-||El Gato|Ocelote|Puma|
+   These counts include the buy-in high priority nodes
+
+||The new cat|Ocelote|Puma|
 |-|-|-|-|
-|Model|IBM System X iDataPlex dx360 M4|Lenovo NeXtScale nx360 M5|Penguin Altus XE2242|
-|Year Purchased|2013|2016 (2018 P100 nodes)|2020|
-|Node Count|118|360 CPU-only<br>60 GPU<br>1 High Memory|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
-|Total System Memory|23.5 TB|83.3 TB|169.7 TB|
-|Processors|2x Xeon E5-2650v2 8-core (Ivy Bridge)|2x Xeon E5-2695v3 14-core (Haswell)<br>2x Xeon E5-2695v4 14-core (Broadwell)<br>4x Xeon E7-4850v2 12-core (Ivy Bridge)|2x AMD EPYC 7642 48-core (Rome)|
-|Cores/Node (Schedulable)|16|28 (48 - High-memory node)|94|
-|Total Cores|1888|11724[^1]|30720[^1]|
-|Processor Speed|2.66 GHz|2.3 GHz (2.4GHz - Broadwell CPUs)|2.4 GHz|
-|Memory/Node|64 GB|192 GB<br>(2 TB - High-memory node)|512 GB<br>(3 TB - High-memory nodes)|
-|Accelerators||60 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>12 A100 20 GB MIG slices|
-|/tmp[^2]|~840 GB spinning|~840 GB spinning|~1440 TB NVMe|
-|HPL Rmax (TFlop/s)|46|382||
-|OS|CentOS 7|CentOS 7|Rocky Linux 9|
-|Interconnect|FDR Inifinband|FDR Infiniband for node-node<br>10 Gb Ethernet node-storage|1x 25 Gb/s Ethernet RDMA (RoCEv2)<br>1x 25 Gb/s Ethernet to storage|
+|Model|Lenovo V3 Servers|Lenovo NeXtScale nx360 M5|Penguin Altus XE2242|
+|Year Purchased|2026|2016 (2018 P100 nodes)|2020|
+|Node Count|55 CPU-only<br>5 GPU<br>1 High Memory|360 CPU-only<br>36 GPU|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
+|Total System Memory|41.4 TB|83.3 TB|169.7 TB|
+|Processors|2x AMD 9655 96-core (Turin)<br>2x AMD 9455 48-core (Turin)<br>2x AMD 9455 48-core (Turin)|2x Xeon E5-2695v3 14-core (Haswell)<br>2x Xeon E5-2695v4 14-core (Broadwell)<br>4x Xeon E7-4850v2 12-core (Ivy Bridge)|2x AMD EPYC 7642 48-core (Rome)|
+|Cores/Node (Schedulable)|192|28 (48 - High-memory node)|94|
+|Total Cores|11136|11724[^1]|30720[^1]|
+|Processor Speed|2.66 GHz<br>3.15GHz|2.3 GHz (2.4GHz - Broadwell CPUs)|2.4 GHz|
+|Memory/Node|768 GB<br>3 TB - High memory|192 GB|512 GB<br>(3 TB - High-memory|
+|Accelerators|40 NVIDIA H200|36 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>8 A100 40 GB MIG slices|
+|/tmp[^2]|~1.9 TB NVMe|~840 GB spinning|~1.9 TB NVMe|
+|HPL Rmax (TFlop/s)||382||
+|OS|Rocky Linux 9|CentOS 7|Rocky Linux 9|
+|Interconnect|NDR Inifiniband for MPI<br>25 Gb Ethernet |FDR Infiniband for MPI<br>10 Gb Ethernet node-storage|1x 25 Gb/s Ethernet RDMA (RoCEv2)<br>1x 25 Gb/s Ethernet to storage|
 
 
 [^1]: Includes high-memory and GPU node CPUs
