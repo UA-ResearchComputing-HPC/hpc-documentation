@@ -64,6 +64,7 @@ At a minimum, batch scripts should have:
 or
 
 ```
+#SBATCH --ntasks=1
 #SBATCH --mem=50gb
 ```
 
@@ -145,6 +146,7 @@ Total memory is determinded to be 150 GB based on 30 CPUs and 5 GB of memory per
 
 ```bash
 #SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --mem=200gb
 ```
 
