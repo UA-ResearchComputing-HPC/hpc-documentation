@@ -173,7 +173,7 @@ Ocelote and ElGato run on the OS CentOS 7 while Puma runs on Rocky Linux 9. If y
 
 To run your analyses on a different OS, you will need to create a new library and reinstall your packages in that new environment. 
 
-### R Environment Issues
+### R Environment Issues and Home Storage Issues
 
 R Stores previous saved sessions and configuration options in different files, typically stored in your home. For example, old sessions may be saved as a hidden file `~/.RData`. Alternatively, they may be stored under `~/.local/share/rstudio`. Where they are stored is dependent on the version of R you are using. These may sometimes cause environment corrpution, or for your job to run out of memory immediately after starting. Removing or moving these old session files may help. Note that if these files are causing storage issues, it's possible to [set a new user state directory](#setting-a-new-user-state-directory).
 
@@ -309,6 +309,19 @@ export RSTUDIO_DATA_HOME=</path/to/new/directory>
 ```
 
 where ```</path/to/new/directory>``` is the path to a different location where you have a larger space quota. For example, ```/groups/<YOUR_PI>/<YOUR_NETID>/rstudio_sessions```.
+
+If you already have a session file that is consuming excessive space in your home, you can either relocate your rstudio session directory or simply delete the session file. For example:
+
+``` title="Moving the Session Directory"
+mv ~/.local/share/rstudio /path/to/new/dir
+echo 'RSTUDIO_DATA_HOME=/path/to/new/dir/rstudio' >> ~/.bashrc
+```
+
+Alternatively
+
+``` title="Deleting the Session File"
+rm -r ~/.local/share/rstudio/sessions/active
+```
 
 ### Setting Your Working Directory
 

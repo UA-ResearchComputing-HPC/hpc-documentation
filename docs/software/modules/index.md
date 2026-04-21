@@ -8,6 +8,31 @@ High-Performance Computing (HPC) environments host a diverse array of software a
 
 To address this, HPC systems employ a **module system**. Software packages are installed in non-standard locations, avoiding conflicts with system-wide paths. Instead of modifying global settings, users dynamically manage their software environments using modules. With simple commands, users can load, unload, and switch between different software packages and versions, ensuring a clean and consistent environment tailored to their needs.
 
+## Module Policies
+
+!!! tip "More Information"
+    For more information on our software policies, see [our software policies page](../overview/#policies) 
+
+- **Default Module Versions**
+
+    Typically, the latest available software release is set as the default module version. This means that running module load <software> without specifying a version will load the most recent version (with some exceptions).
+
+    This behavior may not always be desirable. For example, if you rely on a specific version for your analyses and a newer version becomes the default, your workflow may break. To avoid this, {==we recommend explicitly specifying module versions to ensure a stable and reproducible environment==}.   
+
+- **Module Removal**
+
+    Multiple versions of software are often provided as modules. {==Versions that have reached end of life (EOL) may be removed during scheduled maintenance windows==}. For example, Python 3.6 reached EOL in late 2021 and was subsequently removed.
+
+    We also reserve the right to remove older versions as newer ones become available.
+
+    Advance notice will be sent to the community via the hpc-announce mailing list prior to any removals.
+
+- **Installation Policies**
+
+    We accept [installation requests](#software-install-requests) from the community and make our best effort to make requested software available. For information, see our [software requirements](../overview/#policies) and [unsupported software](../overview/#unsupported-software).
+
+
+
 
 ## How Software Modules Work
 

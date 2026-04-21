@@ -42,6 +42,7 @@ There is a plethora of software generally available for scientific and research 
 |**Public license**|We do not install software if that would be a violation of its licensing.|
 |**Reasonably well written**|Some software takes days of effort and still does not work right.  We have limited resources and reserve the right to "give up". Sometimes software is written for workstations and does not function correctly in a shared environment.|
 |**Downloadable**|Some software requires additional steps to download installation files, such as registering on a website or accepting a license agreement. In these cases we ask researchers to download files and put them in a directory on the HPC storage. When you submit a software installation request, let us know that you have already downloaded the files and provide path to the directory where they are located.|
+|**Has a stable release**|To ensure reproducibility, only official software releases are installed. For example, when software is hosted on GitHub, acceptable versions include those published under “Releases” (typically distributed as tarballs or compressed archives), rather than live development versions obtained via `git clone`.|
 
 
 ### Commercial/Fee-based Software
