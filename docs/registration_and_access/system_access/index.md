@@ -82,15 +82,47 @@ Logging into the HPC supercomputers starts with your UArizona NetID and password
         You will then be prompted to Duo-Authenticate. If the process is successful, you will be connected to the bastion host.
         
     === "MobaXterm"
+
+        **Basic Connection**
+
         MobaXterm is another available SSH Windows client. To connect to HPC, [download and install MobaXterm](https://mobaxterm.mobatek.net/download.html), open the software, select **Session** 
             
-        <img src="images/MobaXterm-session.png" title="MobaXterm session" width="650px"/>
+        <img src="images/MobaXterm-session.png" title="MobaXterm session" width="650px" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
 
         From there, select **SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your UArizona NetID. To connect, click OK at the bottom of the screen:
         
-        <img src="images/MobaXterm-connect.png" title="MobaXterm SSH" width="650"/>
+        <img src="images/MobaXterm-connect.png" title="MobaXterm SSH" width="650" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
             
         This will open a terminal and will prompt you for your UArizona password. You will then need to Duo-authenticate. If everything is successful, you will be connected to the bastion host.
+
+        **Using a Jump Host**
+
+        MobaXterm has a built-in file browser that allows you to see the files in your working directory. If you would like to use this interface to view your files on the system when connected via SSH, you will need to connect using a jump host. To do this, select **Session**. From there, select **SSH**:
+
+        Under **Remote host** enter `shell.hpc.arizona.edu` and under **Username** enter your NetID.
+
+        Then under the **Network settings** tab, select the large button that says **SSH gateway (jump host)**.
+
+        <img src="images/mobaxterm_ssh_settings.png" title="MobaXterm SSH Settings" width="650px" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
+
+        In the box that appears, under **Gateway host** enter `hpc.arizona.edu`, then under **Username** enter your NetID, then select **OK**
+
+        <img src="images/mobaxterm_jumphost.png" title="MobaXterm SSH Settings" width="650px" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
+
+        After clicking OK, you will be returned to your SSH window. From there, select **OK**. A terminal will appear prompting you for your password (unless you've specified an SSH key). Enter your password at the prompt(1), then duo authenticate. If this is done successfully, you will be logged into one of the login nodes and will have access to view your files in the built-in browser.
+        { .annotate }
+
+        1.  No characters will appear when you type. This is a normal Linux security setting. Your keystrokes will still be logged.
+
+        !!! warning "Dos and Donts with the file browser"
+            It's important to be aware of what you're doing when navigating the filesystem. 
+
+            1. If you are going to `cd` to a directory where many files live (think thousands or more), uncheck the **Follow terminal folder** option.
+
+            2. Only open small files in the browser, **do not open large files**. This may run the login node out of memory and cause performance issues for other users. 
+
+        !!! tip "Using a Jump Host"
+            Using a jump host will put you onto a login node when you connect which bypasses the bastion host. You can skip the next step where it says to type `shell`
         
         
 Once you reach the bastion host, regardless of method, you should see the following:

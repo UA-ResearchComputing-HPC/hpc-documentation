@@ -43,6 +43,23 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 
 <html>
 
+  <button class="collapsible">April 29, 2026</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine software and firmware updates for the compute nodes and storage.</li>
+  <li>Open OnDemand update from 4.0.10 to 4.1.4.</li>
+  <li>VPN updates.</li>
+  <li>Removal of old module versions:<br>
+  &emsp; Python: 3.8, 3.8 <br>
+  &emsp; Matlab: r2020b, r2022a, r2023b <br>
+  &emsp; R: 4.0, 4.1, 4.2 </li>
+  
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">January 28, 2026</button>
   <div class="content">
   <p>

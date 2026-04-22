@@ -391,8 +391,6 @@ The below examples are complete sections of Slurm directives that will produce v
     On Puma, up to 94 CPUs or 470 GB of memory can be requested. 
 
 === "Single GPU Node"
-    !!! info "{==:material-alert-decagram:NEW!==} July 31, 2024 Partitions update"
-        Beginning July 31, GPU jobs must use a GPU partition. See the [partitions](#allocations-and-partitions) section at the top of this page for details.
 
     ```
     #SBATCH --job-name=hello_world
