@@ -65,3 +65,8 @@ data-macro-name="view-file"><a href="/wiki/download/attachments/75989475/vespa.m
 <span id="confluence-server-performance"
 style="display:none;">{"serverDuration": 17, "requestCorrelationId":
 "6bc9cdeba83c4a7bb82f184a96d6b19b"}</span>
+
+
+[demo file](scripts/demo_state.pvsm)
+
+<iframe width="1000" height="750" title="Paraview on HPC walkthrough" src="videos/vespa.mp4" allowfullscreen></iframe>
