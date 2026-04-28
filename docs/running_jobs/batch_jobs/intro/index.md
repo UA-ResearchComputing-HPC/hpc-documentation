@@ -22,13 +22,16 @@ Batch jobs differ from [interactive jobs](../../interactive_jobs/) and [graphica
 
 ## Batch Job Workflow and Analogy
 
-<img class="img-right" src="images/post-and-factory.jpg" title="Post office and factory" alt="post office and factory" width="250px" style="margin: 10px;">
+
 
 Think of a batch job like a researcher who wants something custom-made at a factory. There are a few steps they need to take:
 
 1. **Get the Address**: First, they need to know where the factory is so they can contact the right person to make their request.
 2. **Provide Instructions**: Next, they need to write instructions, or schematics, for the person who will do the manufacturing.
 3. **Send the Instructions**: Finally, they need to send these instructions to the factory so the builder can receive them and start working.
+
+<img src="images/factory.png" title="Post office and factory" alt="post office and factory" width="700px">
+
 
 We'll continue with this analogy, breaking down each step in more detail below.
 
@@ -101,7 +104,7 @@ python3 hello_world.py</div></code></pre>
 
 ## Submit Your Job
 
-<img class="img-right" src="images/postman.jpg" title="Postman getting a letter" alt="postman" width="250px" style="margin: 10px;">
+<img class="img-right" src="images/post.png" title="Postman getting a letter" alt="postman" width="350px" style="margin: 10px;">
 
 
 After writing your batch script, the next step is to submit it to the scheduler. The scheduler is software designed to coordinate jobs efficiently across the system. It reads the batch directives from the second section of your batch script (described above) and uses those resource requests to determine where to send your workflow. Continuing with our factory analogy, the scheduler acts like the postman, serving as the intermediary between you and the compute nodes (the factory) and handling all communication and resource scheduling.
@@ -138,7 +141,7 @@ The amount of time your job spends waiting before it starts running often is det
 
 
 ## Retrieve Your Results
-<img class="img-right" src="images/package-delivery.jpg" title="Retrieving results" alt="package delivery" width="250px" style="margin: 10px;">
+<img class="img-right" src="images/crab_results.png" title="Retrieving results" alt="package delivery" width="250px" style="margin: 10px;">
 
 
 Once your job starts running, a file will be generated {==in the directory where you submitted your batch script==}. This file logs the job's standard output (stdout) as it runs—essentially, what would have been printed to the terminal if you had run the job interactively. The file is updated in real-time, so you can log into the cluster at any time to check your job's progress. By default, this file is named `slurm-<jobid>.out`, but you can [customize the filename using batch directives](../batch_directives/#output-filenames) if desired. 

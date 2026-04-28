@@ -52,7 +52,7 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
   <li>Open OnDemand update from 4.0.10 to 4.1.4.</li>
   <li>VPN updates.</li>
   <li>Removal of old module versions:<br>
-  &emsp; Python: 3.8, 3.8 <br>
+  &emsp; Python: 3.8, 3.9 <br>
   &emsp; Matlab: r2020b, r2022a, r2023b <br>
   &emsp; R: 4.0, 4.1, 4.2 </li>
   
