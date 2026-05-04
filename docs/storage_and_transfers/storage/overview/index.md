@@ -5,7 +5,7 @@
 ## Where Should I Store My Data?
 
 1. Data undergoing active analyses should be stored in HPC's local [High Performance Storage](../hpc_storage/).
-2. Large amounts of data not requiring immediate access from our HPC compute nodes can be stored at reasonable rates on our [Rental Storage](../rental_storage/). 
+2. Your `Home` directories and `Groups` storage are kept on the primary all flash array. Larger amounts can be stored on [xdisk](../hpc_storage/) or [Rental Storage](../rental_storage/). 
 3. RDAS is a [research data service](../rdas_storage/) which supports the mounting of SMB shares. The supported operating systems are MacOS, Linux, and Windows. It provides 5 TB of free storage. 
 4. Research data not requiring immediate access should be stored in [General Research Data Storage (Tier 2)](../tier2_storage/). For example:
     1. Large datasets where only subsets are actively being analyzed.
@@ -73,11 +73,11 @@ graph LR
 </tr>
 <tr>
   <th>Rental Storage</th>
-  <td>Research data. Large datasets. Typically for staging to HPC</td>
+  <td>Research data. Large datasets. Follow Best Practices</td>
   <td>Rented per TB per year</td>
   <td>$47.35 per TB per year</td>
   <td>&#10060;</td>
-  <td>Uses Globus and DTNs. Copy data to Primary</td>
+  <td>Directly mounted on HPC. Also uses Globus and DTNs</td>
   <td>Long term. Aligns with HPC purchase cycle</td>
   <td>No</td>
 </tr>

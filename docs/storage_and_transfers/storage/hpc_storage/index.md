@@ -3,7 +3,7 @@
 ## Overview
 
 !!! danger "Data on HPC are not backed up"
-    For information on our data policies, see the section [Storage Expectations and Policies](#storage-expectations-and-policies) below.
+    For information on our data policies, see the section [Storage Expectations and Policies](#storage-expectations-and-policies) below. Our storage arrays implement Snapshots so we may be able to restore recently lost or deleted data.
 
 The University’s Research Data Center provides data storage for active analysis on the high-performance computers (HPCs). Using central computing storage services and resources, researchers are able to:
 
@@ -21,17 +21,18 @@ Every user has access to individual and shared storage on the system where they 
 |```/groups/pi_netid```|A communal storage allocation provided for every research group|500 GB|Accessible for the duration of a PI's account|
 |```/xdisk/pi_netid```|Temporary communal storage available for every group on request. [See xdisk section below](#xdisk) for details.|200 GB to 20  TB|Up to 300 days|
 |```/tmp```|Local storage available on individual compute nodes.|$<$ 800 GB to 1.4 TB|Only accessible for the duration of a job's run|
+|```/rental```|An optional allocation at a reasonable rate.|Your budget|Accessible for the duration of PI'ss account|
 
 !!! tip "Managing permissions"
     If you're working with other members of your group and need to make your files more accessible, see our [bash cheat sheet](../../../support_and_training/cheat_sheet/#linux-file-permissions). This offers an overview on Linux file permissions, ownership, and some tips for working with collaborators. 
 
 ## Storage Expectations and Policies
 
-Our HPC storage array is designed for high performance, not long-term storage. It is built entirely on high-speed flash, which is significantly more expensive and limited in capacity than typical archival storage.
+Our HPC storage array is designed for high performance, not long-term storage. It is mostly built on high-speed flash, which is significantly more expensive and limited in capacity than typical data storage.
 
 1. **{==Important: Your Data are Not Backed Up==}**
 
-    Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination.
+    Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination. Our storage arrays implement Snapshots so we may be able to restore recently lost or deleted data.
 
     In particular:
 
@@ -57,7 +58,17 @@ If you're unsure about how to move or back up your data, or would like recommend
 
 The shared file system on HPC is the location for everything in ```/home```, ```/groups```, and ```/xdisk```. The ```/tmp``` directory is also available to users, and refers to the local disk on each node. Your I/O activity can have dramatic activity on other users. Extreme read/write activity can cause bottlenecks and may be cancelled without warning. It is generally best to limit I/O whenever possible to avoid straining the system. The HPC consult team is available to help optimize workflows that may be impacted by I/O. 
     
-- [x] **Be aware of I/O load.**
+- [x] **Data Locality**
+
+	If you are using `/rental` storage you must consider performance. You can run your jobs directly from data in `/rental`, but that array does not have the same performance as the all-flash array that supports xdisk.  If your workload uses significant I/O to read or write files, then consider using `/xdisk` as project space. Consider these options:
+
+	You can run your jobs reading and writing directly from `/rental`. This is best for independent jobs with light to moderate I/O.
+
+	You can copy your data to `/xdisk`, run the job, and copy results back to `/rental` when complete. This is best for jobs with intensive I/O.
+
+	You can copy the dataset to `/xdisk`, and run many jobs against that data, then copy the data back to rental at the conclusion of the project. This is best when the dataset is used repeatedly.
+
+- [x] **Be aware of I/O load**
     
 	Running multiple instances of jobs performing significant I/O activity may be detrimental to the system, especially if these occur within the same subdirectories. It may be best to read in data at the beginning of a workflow, perform the entire analysis, then write at the very end. Reconfiguring your workflow to limit I/O may cost some time up front, but will most likely be made back through faster job completion. 
 
@@ -66,6 +77,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
 - [x] **Use /tmp for working space**
 
 	If you have multiple jobs that will use the same data, consider copying it to ```/tmp``` and run multiple jobs. This can increase performance and reduce I/O load.
+
 
 - [x] **Avoid storing many files in a single directory**
 
