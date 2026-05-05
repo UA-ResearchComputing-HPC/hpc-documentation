@@ -2,41 +2,66 @@
 
 ## Affiliation Loss Policy
 
-When you lose affiliation with the university, such as through graduation or leaving a work position, access to HPC resources will be automatically terminated on the effective date listed in the University of Arizona Records Database.
+When you lose affiliation with the university, such as through graduation or leaving a work position, access to HPC resources will be automatically terminated on the effective date listed in the University of Arizona Records Database. You will receive an automated email notification from our systems with your account's deactivation date.
 
-Unfortunately, we are unable to extend HPC access for those losing affiliation. However, you may regain access by registering as a [Designated Campus Colleague (DCC)](https://it.arizona.edu/service/designated-campus-colleague-accounts) through Human Resources. Once approved, DCCs can request sponsorship from a university faculty member.
+{==We are unable to extend HPC access for those losing affiliation==}. However, you may retain access by registering as a [Designated Campus Colleague (DCC)](https://it.arizona.edu/service/designated-campus-colleague-accounts) through Human Resources. 
+
+See below for more information on the specific effects of affiliation loss and our data retention policies. 
 
 
-## Retirement and Emeritus Faculty
+## Principal Investigator (PI) Loss of Affiliation
 
-HPC users who retire retain their university affiliation and are entitled to maintain access to HPC resources. However, emeritus faculty are not eligible for Principal Investigator (PI) status. This means:
+### Emeritus
+
+PIs who retire with emeritus status will retain their PI status. This means they will continue to have access to their HPC storage and time allocations and will retain their ability to sponsor users and request xdisk storage. There are no additional steps required to maintain access.
+
+
+### Other
+
+PIs who leave the university will lose access to all HPC systems and services. Any active university member they have sponsored for access will need to find a new PI sponsor to continue using the system.
+
+PIs who retire **without** emeritus status, or who leave The University of Arizona but obtain DCC status are entitled to maintain access to HPC resources. However, they are not eligible for Principal Investigator (PI) status. This means:
 
 - They will not be able to sponsor new users.
 - They may not request additional storage such as xdisk.
 - They must be sponsored by an active university PI or faculty member to maintain continued access the system. To request HPC sponsorship, see the **I'm a student, postdoc, staff member, or Designated Campus Colleague** dropdown under **How to Register** on our [account creation page](../../registration_and_access/account_creation/).
 
-Note that emeritus faculty will be able to retain their `/groups` storage space. However, if there is a gap between when their faculty position ends and their emeritus status begins, their `/groups` allocation may be removed for the duration of their affiliation loss and all associated data deleted. {==It's important to back up all HPC data to prevent unwanted loss==}. If any files have been removed, retrieval may be possible if you [contact our consulting services](../../support_and_training/consulting_services/) *as soon as possible*. Retrieval of deleted `/groups` data after 90 days have elapsed is not possible. 
+Note that they will be able to retain their `/groups` storage space. However, if there is a gap between when their faculty position ends and their DCC status begins, their `/groups` allocation may be removed for the duration of their affiliation loss and all associated data deleted. {==It's important to back up all HPC data to prevent unwanted loss==}. If any files have been removed, retrieval may be possible if you [contact our consulting services](../../support_and_training/consulting_services/) *as soon as possible*. Retrieval of deleted `/groups` data after 90 days have elapsed is not possible. 
 
+## Sponsored Users Loss of Affiliation
 
+Non-PI HPC members who lose university affiliation will lose access to all HPC systems and their resources. An automated email will be sent to them and their PI sponsors notifying them of the date when their account is scheduled for deletion. We are unable to extend HPC access once university affiliation is lost.
 
+If continued access to the systems is needed, users may [apply for DCC status](https://it.arizona.edu/service/designated-campus-colleague-accounts) through Human Resources. This will provide them with active university credentials and allow them to access all HPC resources once obtained.
+
+If DCC status is obtained prior to the account deletion date, no further action is required and their account will not be removed. If there is a gap between the account's deletion date and when DCC status is obtained, there will be a period when HPC is not accessible. As soon as DCC status is obtained, the user may request sponsorship from their PI to regain access.
 
 
 ## Data After Affiliation Loss
 
-### Non-PI Users
+### Home Directories
 
-Home directory data are retained for 90 days following loss of affiliation. If university affiliation is reestablished and HPC access is restored within those 90 days, files will be accessible upon login.
+Home directory data are retained for 90 days following loss of affiliation. If university affiliation is reestablished and HPC access is restored within those 90 days, files will be retrievable by our staff and can be restored. If you are looking to have your home directory files retrieved, [contact our consultants](../../support_and_training/consulting_services/) and they can assist you.
 
-Data stored in shared locations such as `/groups` or `/xdisk` persist for as long as the storage location is available ([see below](#pis)) and are not deleted after affiliation loss. However, it should be noted that without access to HPC, data will not be directly downloadable by the user. Users will want to plan ahead of time and retrieve any data they need off the system before they lose access. Otherwise, users will need to coordinate with active group members who may retrieve their data on their behalf. If file permission changes are needed, [contact our consultants](../../support_and_training/consulting_services/) and they can help.  
+### Data in `/groups`
 
-### PIs
+The `/groups` directory associated with an HPC group will persist for as long as the PI sponsor is affiliated with the university and has an active HPC account. If that PI leaves the university without emeritus or DCC status (see [section above on PI policy](#principal-investigator-pi-loss-of-affiliation)), their `/groups` directory will be removed. Contents in a removed `/groups` directory are retained for 90 days before being permanently deleted. If files need to be recovered from deleted storage, [contact our consultants](../../support_and_training/consulting_services/) *as soon as possible*.
 
-Home directory data are retained for 90 days following loss of affiliation. If university affiliation is reestablished and HPC access is restored within those 90 days, files will be accessible upon login.
+Files in `/groups` will persist for as long as that space is available. This means that if a group member loses access to the system, their files will remain in this communal storage location and will not be purged by our systems.
 
-A PI's communal `/groups` directory will be removed on the first day of denial of access. PI's should coordinate with their group members to ensure data are moved off the system prior to this to prevent data loss. The exception is if the faculty member is retiring with emeritus status or transitioning to DCC status, provided there is no gap in affiliation between their faculty status and the new role. In this case, they may retain their `/groups` directory. 
+### Data in `/xdisk`
 
-Similar to above, a PI's communal directory `/xdisk` will be removed on the first day of denial of access. The exception is if the faculty member is retiring with emeritus status or transitioning to DCC status, provided there is no gap in affiliation between their faculty status and the new role, then the xdisk will remain until its expiration date. It should be noted that because emeritus faculty and most DCC affiliates are not classified as PIs, once the xdisk expires, a new one cannot be requested. 
+If an `/xdisk` directory exists for an HPC group, it will persist until its expiration date or it is manually deleted. 
 
-If a communal directory (`/xdisk` or `/groups`) has been deleted and data retrieval is needed, contact us *immediately* and we may be able to restore your files.
+If the PI sponsor associated with that xdisk leaves the university without emeritus or DCC status, their xdisk will remain until it expires, then will be deleted along with all associated data. 
+
+PIs who retire without emeritus status or who have DCC status will not be able to request a new xdisk once their previous xdisk has been deleted. 
+
+PIs with emeritus status retain their HPC sponsor status and may request a new xdisk. 
+
+Files in `/xdisk` will persist for as long as that space is available. This means that if a group member loses access to the system, their files will remain in this communal storage location and will not be purged by our systems until the xdisk allocation expires.
+
+
+
 
 
