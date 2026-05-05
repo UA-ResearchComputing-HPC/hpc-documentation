@@ -23,6 +23,7 @@ We offer a rental storage solution that has less performance than our primary al
 3. The `/rental` filesystem is not backed up.  Snapshots are taken so we may be able to retrieve lost data.
 4. Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
 5. The allocation will be found in `/rental/<pi_netid>`
+6. The rental array is not backed up. It implements Snaphots so your data may be recovered if you notify us promptly.
 
 
 

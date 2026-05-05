@@ -3,7 +3,7 @@
 ## Overview
 
 !!! danger "Data on HPC are not backed up"
-    For information on our data policies, see the section [Storage Expectations and Policies](#storage-expectations-and-policies) below. Our storage arrays implement Snapshots so we may be able to restore recently lost or deleted data.
+    For information on our data policies, see the section [Storage Expectations and Policies](#storage-expectations-and-policies) below. Our storage arrays implement Snapshots so we may be able to restore your data if you notify us promptly.
 
 The University’s Research Data Center provides data storage for active analysis on the high-performance computers (HPCs). Using central computing storage services and resources, researchers are able to:
 
@@ -32,7 +32,7 @@ Our HPC storage array is designed for high performance, not long-term storage. I
 
 1. **{==Important: Your Data are Not Backed Up==}**
 
-    Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination. Our storage arrays implement Snapshots so we may be able to restore recently lost or deleted data.
+    Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination. Our storage arrays implement Snapshots so we may be able to restore your data if you notify us promptly.
 
     In particular:
 
@@ -60,7 +60,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
     
 - [x] **Data Locality**
 
-	If you are using `/rental` storage you must consider performance. You can run your jobs directly from data in `/rental`, but that array does not have the same performance as the all-flash array that supports xdisk.  If your workload uses significant I/O to read or write files, then consider using `/xdisk` as project space. Consider these options:
+	If you are using `/rental` storage you must consider performance. You can run your jobs directly from data in `/rental`, but that array does not have the same performance as the all-flash array that supports xdisk.  If your workload uses significant I/O to read or write files, then consider using `/xdisk` as project space. Review these options:
 
 	1. You can run your jobs reading and writing directly from `/rental`. This is best for independent jobs with light to moderate I/O.
 
