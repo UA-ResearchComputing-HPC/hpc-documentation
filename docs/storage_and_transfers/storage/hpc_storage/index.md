@@ -56,17 +56,17 @@ If you're unsure about how to move or back up your data, or would like recommend
 
 ## Best Practices
 
-The shared file system on HPC is the location for everything in ```/home```, ```/groups```, and ```/xdisk```. The ```/tmp``` directory is also available to users, and refers to the local disk on each node. Your I/O activity can have dramatic activity on other users. Extreme read/write activity can cause bottlenecks and may be cancelled without warning. It is generally best to limit I/O whenever possible to avoid straining the system. The HPC consult team is available to help optimize workflows that may be impacted by I/O. 
+The shared file system on HPC is the location for everything in ```/home```, ```/groups```, ```/xdisk``` and ```/rental```. The ```/tmp``` directory is also available to users, and refers to the local disk on each node. Your I/O activity can have dramatic activity on other users. Extreme read/write activity can cause bottlenecks and may be cancelled without warning. It is generally best to limit I/O whenever possible to avoid straining the system. The HPC consult team is available to help optimize workflows that may be impacted by I/O. 
     
 - [x] **Data Locality**
 
 	If you are using `/rental` storage you must consider performance. You can run your jobs directly from data in `/rental`, but that array does not have the same performance as the all-flash array that supports xdisk.  If your workload uses significant I/O to read or write files, then consider using `/xdisk` as project space. Consider these options:
 
-	You can run your jobs reading and writing directly from `/rental`. This is best for independent jobs with light to moderate I/O.
+	1. You can run your jobs reading and writing directly from `/rental`. This is best for independent jobs with light to moderate I/O.
 
-	You can copy your data to `/xdisk`, run the job, and copy results back to `/rental` when complete. This is best for jobs with intensive I/O.
+	2. You can copy your data to `/xdisk`, run the job, and copy results back to `/rental` when complete. This is best for jobs with intensive I/O.
 
-	You can copy the dataset to `/xdisk`, and run many jobs against that data, then copy the data back to rental at the conclusion of the project. This is best when the dataset is used repeatedly.
+	3. You can copy the dataset to `/xdisk`, and run many jobs against that data, then copy the data back to rental at the conclusion of the project. This is best when the dataset is used repeatedly.
 
 - [x] **Be aware of I/O load**
     
@@ -109,6 +109,7 @@ The shared file system on HPC is the location for everything in ```/home```, ```
     /groups/pi_netid                            6.6G      500.0G      500.0G
     /home                                      37.1G       50.0G       50.0G
     /xdisk/pi_netid                            12.9G        9.8T        9.8T
+    /rental/pi_netid			       14.4T       20.0T       20.0T	
     ```
     
 === "User Portal"

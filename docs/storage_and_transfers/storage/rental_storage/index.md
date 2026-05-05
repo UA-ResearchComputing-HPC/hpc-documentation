@@ -21,7 +21,7 @@ We offer a rental storage solution that has less performance than our primary al
 1. This storage does not have the same very high performance of the primary array, so be aware of your workflow characteristics.  See the [Best Practices](../hpc_storage) for advice on how to manage your workflow.
 2. You will be billed at the end of the Fiscal Year for the maximum amount of space reserved.
 3. The `/rental` filesystem is not backed up.  Snapshots are taken so we may be able to retrieve lost data.
-4. Allocations up to 20TB in size can be requested through the user portal.
+4. Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
 5. The allocation will be found in `/rental/<pi_netid>`
 
 
@@ -30,8 +30,6 @@ We offer a rental storage solution that has less performance than our primary al
 
 ### Requesting an Allocation
 
-!!! warning
-    Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
 !!! tip
     It can take a few days to process the request as it has to route through the Financial Services Office (FSO). You will receive an email confirmation once it is complete.
 
