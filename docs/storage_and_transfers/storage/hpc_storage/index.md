@@ -60,13 +60,11 @@ The shared file system on HPC is the location for everything in ```/home```, ```
     
 - [x] **Data Locality**
 
-	If you are using `/rental` storage you must consider performance. You can run your jobs directly from data in `/rental`, but that array does not have the same performance as the all-flash array that supports xdisk.  If your workload uses significant I/O to read or write files, then consider using `/xdisk` as project space. Review these options:
+	If you are using `/rental` storage you must consider performance. You are expected to use the all flash array to manage the I/O for your job.
 
-	1. You can run your jobs reading and writing directly from `/rental`. This is best for independent jobs with light to moderate I/O.
+	1. You can copy your data for the job within your submission script. So copy the data to /groups or /xdisk and copy results back to `/rental` when complete.
 
-	2. You can copy your data to `/xdisk`, run the job, and copy results back to `/rental` when complete. This is best for jobs with intensive I/O.
-
-	3. You can copy the dataset to `/xdisk`, and run many jobs against that data, then copy the data back to rental at the conclusion of the project. This is best when the dataset is used repeatedly.
+	2. You can copy the dataset to `/xdisk`, and run many jobs against that data, then copy the data back to rental at the conclusion of the project. This is best when the dataset is used repeatedly.
 
 - [x] **Be aware of I/O load**
     
