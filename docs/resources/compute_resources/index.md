@@ -11,6 +11,10 @@
 
 ## Compute Resources Available by Cluster
 
+
+!!! info "The New Cat"
+    We are in the process of acquiring a new computing cluster, referred to as "The new cat". Information on the coming hardware is included in the tables below. {==This cluster is not available yet==}. We will notify the community as we get closer to its release 
+
 Below is a list of the node types and physical hardware that are available on each cluster. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
 
 !!! tip "Requesting resources in jobs"
@@ -50,10 +54,14 @@ Below is a list of the node types and physical hardware that are available on ea
     
     
 === "Ocelote"
+
+    !!! danger "High memory node removed"
+        The high memory node is no longer available on Ocelote. 
+
     | <div style="width: 120px;">Node Type</div> | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
     |-|-|-|-|-|-|-|-|-|
     |Standard|360|28|6 GB|168 GB|-|-|-|-|
-    |High Memory|1| 48|41 GB|1968 GB|-|-|-|-|
+    |{--High Memory--}|{--1--}|{--48--}|{--41 GB--}|{--1968 GB--}|-|-|-|-|
     |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
     |Dual GPU Nodes|35|28|8 GB|224 GB|2|16 GB|32 GB|70|
     
@@ -111,7 +119,7 @@ Below is a list of the node types and physical hardware that are available on ea
 |Cores/Node (Schedulable)|192|28 (48 - High-memory node)|94|
 |Total Cores|11136|11724[^1]|30720[^1]|
 |Processor Speed|2.66 GHz<br>3.15GHz|2.3 GHz (2.4GHz - Broadwell CPUs)|2.4 GHz|
-|Memory/Node|768 GB<br>3 TB - High memory|192 GB|512 GB<br>(3 TB - High-memory|
+|Memory/Node|768 GB<br>3 TB - High memory|192 GB|512 GB<br>(3 TB - High-memory)|
 |Accelerators|40 NVIDIA H200|36 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>8 A100 40 GB MIG slices|
 |/tmp[^2]|~1.9 TB NVMe|~840 GB spinning|~1.9 TB NVMe|
 |HPL Rmax (TFlop/s)||382||
