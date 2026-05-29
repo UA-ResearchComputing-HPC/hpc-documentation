@@ -9,7 +9,7 @@ Before submitting your job to the scheduler, it's important to know that the num
 |Cluster|Standard Node|*Count*|High-Memory Node|*Count*|GPU Node|*Count*|
 |-|-|-|-|-|-|-|
 |Puma| 5 GB | 300 | 32 GB | 5 | 5 GB| 15 |
-|Ocelote| 6 GB | 360 | 41 GB | 1 | 8 GB| 60 |
+|Ocelote| 6 GB | 360 | - | 1 | 8 GB| 60 |
 |El Gato| 4 GB | - | - | - | - | - |
 
 
@@ -68,4 +68,4 @@ Be careful when requesting memory and memory per CPU. Note that {==if you reques
 
     If you request a mem/CPU value that isn't valid, the scheduler won't outright reject your job. Instead, it will attempt to accommodate your request. This could involve your job being moved to a high memory node if you ask for more than the standard ratio. However, high memory nodes usually have considerably longer wait times compared to standard nodes, potentially resulting in a longer queue time than anticipated.
     
-    Alternatively, you might end up with less memory allocated than you expected. For instance, there aren't any machines with a memory ratio exceeding 41 GB/CPU. Therefore, if you request 100 GB/CPU, your job will still be constrained by the physical limits of available memory.
+    Alternatively, you might end up with less memory allocated than you expected. For instance, there aren't any machines with a memory ratio exceeding 32 GB/CPU. Therefore, if you request 100 GB/CPU, your job will still be constrained by the physical limits of available memory.

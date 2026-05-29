@@ -69,7 +69,7 @@ If you run jobs on either type of these limited nodes, please review the guideli
 
 ### High Memory Nodes
 
-Our system currently has 6 total high memory nodes. There are five on Puma and one on Ocelote. Compare this to the 300 standard nodes on Puma and the 360 standard nodes on Ocelote. **High memory nodes are significantly limited in capacity when compared to standard nodes.**
+Our system currently has five total high memory nodes, all on Puma. Compare this to the 300 standard nodes on Puma and the 360 standard nodes on Ocelote. **High memory nodes are significantly limited in capacity when compared to standard nodes.**
 
 As such, <mark>we request that our users only submit jobs to the high memory nodes when their workflow has been tested extensively and has demonstrated sufficient and specific need for these nodes</mark>. When jobs that do not need the additional memory are submitted to the high memory nodes, this increases wait times for all users, including the submitter (since queue times on standard nodes are significantly shorter). 
 

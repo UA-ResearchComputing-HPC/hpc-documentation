@@ -208,7 +208,10 @@ or, to request ```<N>``` GB of memory per CPU:
 
 ## High Memory Nodes
 
-Please note that there are only three public and two buy-in high memory nodes on Puma, and only one high memory node on Ocelote, compared to hundreds of standard nodes on each cluster. Wait times are typically much longer on these nodes as compared to standard nodes. 
+!!! danger "Ocelote high memory node"
+    The high memory node on Ocelote has been removed due to failed hardware. 
+
+Please note that there are only three public and two buy-in high memory nodes on Puma, compared to hundreds of standard nodes on each cluster. Wait times are typically much longer on these nodes as compared to standard nodes. 
 <!-- As such, ***high memory nodes are limited resources and should be only be used if need is clearly demonstrated.*** -->
 
 Before requesting a high memory node, please take the time to test your job on standard nodes, increasing the requested memory as necessary. Additional memory can be allocated to standard nodes by increasing the value of the `--mem` flag or the number of CPUs (see previous sections). 
@@ -223,7 +226,6 @@ To request a high memory node, you will need the additional flag ```--constraint
 
 |Cluster|Directives|
 |-|-|
-|Ocelote|<pre><code>#SBATCH --mem-per-cpu=41gb<br>#SBATCH --constraint=hi_mem</code></pre>|
 |Puma|<pre><code>#SBATCH --mem-per-cpu=32gb<br>#SBATCH --constraint=hi_mem</code></pre>|
 
 ???+ question "Automatic assignment to high memory nodes"

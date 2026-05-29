@@ -135,7 +135,6 @@ Researchers rely on our HPC resources not only for computational power, but also
             - 192GB RAM per node
             - FDR infiniband for fast MPI interconnect
             - Qumulo all flash storage array (all HPC storage is integrated into one array)
-            - One large memory node with 2TB RAM, Intel Ivy Bridge V2 48 cores
             - 46 nodes with Nvidia P100 GPU's
 
     === "El Gato"
