@@ -13,7 +13,7 @@ We offer a rental storage solution that has less performance than our primary al
 2. Your data does not expire like `/xdisk`.
 3. You can run compute jobs directly. 
 4. You can use `/rental` as a secondary location for your `/xdisk` data. 
-5. The rental rates are reasonable at $47.35 per year.
+5. The rental rates are reasonable at $47.35 per TB per year.
 6. You can use simple commands like "cp" to move data between filesystems.
 
 ## Things to Note
