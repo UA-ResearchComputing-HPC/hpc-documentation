@@ -15,7 +15,11 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 ---
 
-## Fall 2025 HPC Workshops Schedule
+!!! warning "Workshops for Fall 2026 are currently under construction!"
+
+    The next series of workshops will be announced via `hpc-announce@list.arizona.edu` - please stay tuned!
+
+<!-- ## Fall 2025 HPC Workshops Schedule
 
 [**Register Here!**](https://docs.google.com/forms/d/e/1FAIpQLSfjRhn1xF7wcd6G_wyVKtdYqosxxPaM_2V-nfTJZa8BXEe5lA/viewform)
 
@@ -60,7 +64,7 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 | <details><summary>Using GPUs on HPC</summary>This workshop provides a basic introduction to GPUs, and how to access GPUs on UA HPC clusters. It provides some simple examples to demonstrate GPU accelerated computation, and discusses some common issues that arise when working with GPUs.</details> | 11:00am | Ethan Jahn |
 | Lunch Break | 12:00pm | -- |
 | <details><summary>Leveraging Free GPU Resources Through NSF ACCESS</summary>Introduction to the NSF's Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support ([ACCESS](https://access-ci.org/about/)) program, including how to create an account, the types of services offered, and how to create your account. Additional focus placed on GPU resources.</details> | 1:00pm | -- |
-| <details><summary>Getting Started with the NAIRR Pilot Program</summary>This webinar presents an overview of the process for requesting no-charge access to technology resources via the National AI Research Resources Pilot program ( [https://nairrpilot.org/](https://nairrpilot.org/) ). In addition to introducing the available, no-charge technology resources, the presentation prepares AI Researchers and Educators for the development of successful resource allocation requests by covering: program eligibility and requirements for Classroom/Educator and Research projects; the proposal review and resource allocation processes; specific proposal instructions from the NAIRR Pilot portal; strategies for addressing specified review criterial; and example resource estimates that quantitatively justify requested NAIRR Pilot resources.</details> | 2:00pm | [Timothy Middelkoop](https://internet2.edu/community/research-engagement/internet2-research-engagement-team/) |
+| <details><summary>Getting Started with the NAIRR Pilot Program</summary>This webinar presents an overview of the process for requesting no-charge access to technology resources via the National AI Research Resources Pilot program ( [https://nairrpilot.org/](https://nairrpilot.org/) ). In addition to introducing the available, no-charge technology resources, the presentation prepares AI Researchers and Educators for the development of successful resource allocation requests by covering: program eligibility and requirements for Classroom/Educator and Research projects; the proposal review and resource allocation processes; specific proposal instructions from the NAIRR Pilot portal; strategies for addressing specified review criterial; and example resource estimates that quantitatively justify requested NAIRR Pilot resources.</details> | 2:00pm | [Timothy Middelkoop](https://internet2.edu/community/research-engagement/internet2-research-engagement-team/) | -->
 
 
 <!-- <object class="pdf" 
@@ -82,9 +86,32 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 Please check out these workshops and activities from our partners around campus!
 
-- The Data Science Institute's [official calendar](https://datascience.arizona.edu/calendar)
+<!-- - The Data Science Institute's [official calendar](https://datascience.arizona.edu/calendar)
 - Data Lab [home page](https://datainsight.arizona.edu/uarizona-data-lab)
-- The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events)
+- The UArizona Libraries [event calendar](https://libcal.library.arizona.edu/calendar/events) -->
+
+
+<div class="grid cards" markdown>
+
+-   :material-calendar-month:{ .lg .middle } __AI2S__
+
+    ---
+
+    The Arizona Institute for AI and Society has an [event calendar](https://responsibleai.arizona.edu/news-events/calendar-events), [training and workshops](https://responsibleai.arizona.edu/faculty-staff/training-workshops-1) for students, and resources for [faculty and staff](https://responsibleai.arizona.edu/faculty-staff/overview). 
+
+-   :material-calendar-month:{ .lg .middle } __Data Lab Resources__
+
+    ---
+
+    The UA DataLab has a repository of training materials on their [github website](https://ua-datalab.github.io/). 
+
+-   :material-calendar-month:{ .lg .middle } __UA Libraries__
+
+    ---
+
+    Check out the [event calendar](https://libcal.library.arizona.edu/calendar/events) for the University of Arizona Libraries. 
+
+</div>
 
 
 <!--
