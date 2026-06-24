@@ -157,35 +157,35 @@ These resources specifically do not support Regulated Research, which might be I
 
 <div class="grid cards" markdown>
 
--   :material-update:{ .lg .middle } __Puma OS Update__
+-   :material-wrench-clock:{ .lg .middle } __July 2026 Maintenance__
 
     ---
 
-    As of January 29th, 2025, Puma’s operating system has been updated from CentOS 7 to Rocky Linux 9. Need help transitioning to the new operating system? Visit our [migration documentation](./resources/updates/) for detailed instructions.
+    There will be an upcoming maintenance period on July 29th, 2026. This will be a [rolling maintenance](./policies/maintenance/#rolling-maintenance) period so there will be no system downtime. 
 
--   :material-chair-school:{ .lg .middle } __Fall Semester Workshops__
+    During this maintenance period, our documentation will be updated to have a different look!
+
+-   :material-cat:{ .lg .middle } __Update on Plans for a New Cat__
+
+    ---
+
+    The university’s Research Data Center (RDC) is preparing to install its next HPC cluster in fall 2026. The new system will have 40 nodes of CPU compute, two 8-GPU nodes with H200 GPUs, and one 3TB High-memory node, and will incorporate InfiniBand networking for MPI capabilities.
+
+-   :material-tools:{ .lg .middle } __New user tools__
 
     ---
     
-    This Fall semester we are conducting the workshops in a different manner.  Rather than compress them into a week, there will be one each Friday at 11am.  We plan to use a hybrid modality – you can attend in person which provides greater opportunity to engage; or attend virtually by Zoom. In person sessions will be held in Weaver Science and Engineering Library Rm 212. There will be a recorded version made available on YouTube.
+    We have two very useful command-line tools to make your workflow a little easier.
 
-    <center>[Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSeUV_zHbrPPJCp1qU0ztCuXa5EPuGUK06eLG1pXacfbQo3rCQ/viewform) :fontawesome-solid-hippo: [Calendar](./events/calendar/) </center>
+    Have you tried to find what all the data is in your home directory, or why it is taking up so much space?
 
--   :material-alert-decagram:{ .lg .middle } __July 2024 Maintenance__
+    The command `gdu` can be run from a login node and will, by default, sort your directories by size, including hidden directories.
 
-    ---
-
-    * [User portal](https://portal.hpc.arizona.edu) interface change for mobile compatibility. 
-    * [Open OnDemand graphical jobs](./running_jobs/open_on_demand/#interactive-graphical-applications) limited to four days, reduced from 10 days. For workflows that need longer than four days, batch jobs can be used. [Contact our consultants](./support_and_training/consulting_services/) for help if you're unsure how to do this. 
-    * New partitions have been introduced for GPU jobs. This will prevent non-GPU jobs from running on GPU nodes, improving availability. See [batch directives](./running_jobs/batch_jobs/batch_directives/#allocations-and-partitions) for more information on how to request GPU nodes. 
-
--   :material-expansion-card-variant:{ .lg .middle } __New Ocelote GPUs__
-
-    ---
-
-    We recently added 22 new P100 GPUs to Ocelote. Need to request multiple GPUs on a node and you're finding Puma queue times too slow? You can now request two GPUs per node on Ocelote using `--gres=gpu:2`. 
+    What about reviewing recent jobs for some brief metrics and analyzing their efficiency? Maybe you need to assign more memory. Or less. Try `multiseff -h`, also from the login nodes.
 
 </div>
+
+
 
 ## Acknowledgements
 
