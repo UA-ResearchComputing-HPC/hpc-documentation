@@ -256,7 +256,7 @@ See [our best practices section above](#use-a-terminal) for more detailed inform
     <img src="images/rstudio_open.png" title="Open RStudio session" style="width: 650px;">
 
 
-### Loading Modules in RStudio {==(:material-alert-decagram:New!)==}
+### Loading Modules in RStudio 
 
 !!! danger annotate "Library installations still must be performed on the command line"
     The method detailed below is used to faciliate **loading** R libraries in RStudio when they depend on system software modules. R library **installations** will still need to take place in an [interactive session](../../../running_jobs/interactive_jobs/) on the command line. (1)
