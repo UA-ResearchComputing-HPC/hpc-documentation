@@ -7,9 +7,10 @@
 
 The University’s Research Data Center provides data storage for active analysis on the high-performance computers (HPCs). Using central computing storage services and resources, researchers are able to:
 
+* Run computation from very fast storage.
 * Share research data in a collaborative environment with other UArizona affiliates on the HPC system.
-* Store large-scale computational research data.
-* Request additional storage for further data analysis.
+* Store large-scale computational research data at an affordable rate..
+* Request additional storage for larger data collections.
 
 All clusters share access to the same mounted HPC storage, so your files are available regardless of which cluster you’re using.
 
@@ -28,7 +29,11 @@ Every user has access to individual and shared storage on the system where they 
 
 ## Storage Expectations and Policies
 
-Our HPC storage array is designed for high performance, not long-term storage. It is mostly built on high-speed flash, which is significantly more expensive and limited in capacity than typical data storage.
+Our HPC storage is a shared resource for all University researchers. With this in mind we offer expectations and best practices.
+
+Our performant HPC storage array is designed for high performance, not long-term storage. It is mostly built on high-speed flash, which is significantly more expensive and limited in capacity than typical data storage. This is where we locate the `/home`, `/groups`, and `/xdisk` filesystems. 
+
+Our capacity HPC storage is intended for longer term usage at an affordable rate. The filesystem is `/rental`. We discourage running computations directly from the rental storage.
 
 1. **{==Important: Your Data are Not Backed Up==}**
 
@@ -56,11 +61,13 @@ If you're unsure about how to move or back up your data, or would like recommend
 
 ## Best Practices
 
-The shared file system on HPC is the location for everything in ```/home```, ```/groups```, ```/xdisk``` and ```/rental```. The ```/tmp``` directory is also available to users, and refers to the local disk on each node. Your I/O activity can have dramatic activity on other users. Extreme read/write activity can cause bottlenecks and may be cancelled without warning. It is generally best to limit I/O whenever possible to avoid straining the system. The HPC consult team is available to help optimize workflows that may be impacted by I/O. 
+The shared filesystems on HPC are the location for everything in ```/home```, ```/groups```, ```/xdisk``` and ```/rental```. The HPC consult team is available to help optimize workflows that may be impacted by I/O.
+
+The ```/tmp``` directory is also available to users, and refers to the local disk on each node. This is ideal for temporary data created while the job is running. At the end of the job this space is automatically cleared.
     
 - [x] **Data Locality**
 
-	If you are using `/rental` storage you must consider performance. You are expected to use the all flash array to manage the I/O for your job.
+	If you are using `/rental` storage you must consider performance. {==Important: It is highly recommended that you do not run your compute directly from the /rental storage==}
 
 	1. You can copy your data for the job within your submission script. So copy the data to /groups or /xdisk and copy results back to `/rental` when complete.
 
