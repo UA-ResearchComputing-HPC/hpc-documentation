@@ -5,26 +5,24 @@
 !!! warning "No Controlled Data"
     This service is not intended for HIPAA or otherwise controlled data. Please see [Secure HPC](/resources/secure_hpc/) for more information. 
 
-We offer a rental storage solution that has less performance than our primary all-flash array making it affordable for researchers to rent. This storage array is located in the Research Data Center and is mounted on our data transfer nodes and compute nodes.
+We offer a rental storage solution that has less performance and lower cost than our primary all-flash array making it affordable for research data. This storage array is located in the Research Data Center and is mounted on our data transfer nodes and compute nodes.
 
 ## Why Use Rental
 
 1. Your capacity is not limited like `/xdisk`.
 2. Your data does not expire like `/xdisk`.
-3. You can run compute jobs directly. 
-4. You can use `/rental` as a secondary location for your `/xdisk` data. 
-5. The rental rates are reasonable at $47.35 per TB per year.
-6. You can use simple commands like "cp" to move data between filesystems.
+3. You can use `/rental` as the primary location for your research data. We strongly recommend that you do not run your compute directly from the /rental storage due to performance limitations. See the [Best Practices](../hpc_storage) for advice on how to manage your workflow.
+4. The rental rates are reasonable at $47.35 per year.
+5. You can use simple commands like "cp" and "mv" to transfer data between filesystems.
 
 ## Things to Note
 
-1. This storage does not have the same very high performance of the primary array, so be aware of your workflow characteristics.  See the [Best Practices](../hpc_storage) for advice on how to manage your workflow.
-2. You will be billed at the end of the Fiscal Year for the maximum amount of space reserved.
-3. The `/rental` filesystem is not backed up.  Snapshots are taken so we may be able to retrieve lost data.
-4. Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
-5. The allocation will be found in `/rental/<pi_netid>`
-6. The rental array is not backed up. It implements Snaphots so your data may be recovered if you notify us promptly.
-
+1. You will be billed at the end of the Fiscal Year for the maximum amount of space reserved.
+2. The `/rental` filesystem is not backed up.  Snapshots are taken so we may be able to retrieve recently lost data.
+3. Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
+4. The allocation will be found in `/rental/<pi_netid>`
+5. When your `/xdisk` is nearing the expiration it will be quite easy to copy your data to `/rental`. The same applies when you create an `/xdisk` to copy data in from `/rental`.
+6. This storage does not have the same very high performance of the primary array, so keep in mind this is intended for longer term storage, not direct compute.  See the [Best Practices](../hpc_storage).
 
 
 ## Managing a Rental Allocation Through the Portal
