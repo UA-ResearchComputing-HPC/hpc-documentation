@@ -32,6 +32,10 @@ Logging into the HPC supercomputers starts with your UArizona NetID and password
     4. This will put you on the command line on one of the login nodes where you may perform regular housekeeping work, submit jobs, or request an interactive session. By default, you will automatically be connected to Puma. To navigate to a different cluster, use the displayed shortcuts. 
         
 === "Virtual Desktop"
+
+    !!! bug "Anaconda compatibility issues"
+        If you have Anaconda initialized in your account, ensure you have [turned off Conda's auto-activation feature](../../software/popular_software/anaconda/#__tabbed_1_1). If auto-activation is enabled, your desktop jobs will likely fail with the error `Could not connect to session bus` 
+
     Users may also interact with a cluster using a virtual desktop interface. To do this:
 
     1. Log into [Open OnDemand](https://ood.hpc.arizona.edu/) and, under My Interactive Sessions, select Interactive Desktop under Desktops on the left-hand side of the page.

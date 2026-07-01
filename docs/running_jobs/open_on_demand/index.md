@@ -63,6 +63,9 @@ You will be able to select your `/home` directory, `/groups`, or `/xdisk`. If yo
 
 ### Editing Files
 
+!!! bug "Directories cannot have spaces in their names"
+    There is a [known issue with Open OnDemand's utilities](https://osc.github.io/ood-documentation/release-3.0/issues/overview.html#file-names-with-xml-or-html-break-display), including file editing, that can cause failures when any parent directory in the file path contains an XML or HTML special character or a space. If you attempt to edit a file and OnDemand displays an error indicating that the file does not exist, check the file path for special characters or spaces in any directory name. A resolution might be to rename a directory `Directory Name` to `Directory_Name`.
+
 First, navigate to the file you wish to edit. Then, click the vertical ellipses on the right-hand side and select **Edit**
 
 <img class="ood-screenshots" title="OnDemand file editing" src="images/choose_edit.png">

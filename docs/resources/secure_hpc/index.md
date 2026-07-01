@@ -86,10 +86,15 @@ All users are granted a home directory. Additional communal space can be found i
 
 1.  hostname: ```filexfer.hpc.arizona.edu```
 
+### Quotas 
 |Storage Allocation|Availability|Quota|<div style="width:120px">Location on Soteria</div>|<div style="width:200px">Location on `filexfer`</div>|
 |-|-|-|-|-|
 |Home|Allocated to each user|50 GB|`/home/u<xx>/<your_netid>`|`/hipaa/home/u<xx>/<your_netid>`|
 |Groups|Allocated to each PI group|Unlimited|`/groups/<pi_netid>`|`/hipaa/groups/<pi_netid>`|
+
+### View Your Storage Usage
+
+To view your storage usage and quotas, use the command `uquota`.
 
 
 ## Transferring Data
