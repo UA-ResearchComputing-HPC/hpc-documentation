@@ -71,7 +71,7 @@ This update will have a number of impacts, and we are taking steps to minimize d
 ## Adapting existing analyses. 
 
 !!! Tip "Support"
-    Please open a [support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) if you have difficulty using the new updated Puma9 system.
+    Please open a [support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d) if you have difficulty using the new updated Puma9 system.
 
 Researchers may currently use cluster resources in a number of ways. {==Here are general guidelines for adapting to the new environment:==}
 

@@ -280,7 +280,7 @@ extra:
   generator: false
   social:
     - icon: material/email
-      link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f
+      link: https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
       name: Contact HPC consulting
     - icon: material/help-box-multiple
       link: /support_and_training/faqs/

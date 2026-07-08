@@ -4,7 +4,7 @@
 
 # FAQs
 
-Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=8c4aa2761b1df0107947edf1604bcbd0&sysparm_category=84d3d1acdbc8f4109627d90d6896191f) and we will be happy to add it. 
+Welcome to our Frequently Asked Questions page. The FAQs are organized by topic for ease of navigation. Use the sidebar on the left to find your topic. If you cannot find an entry related to your question, please [let us know](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d) and we will be happy to add it. 
 
 
 <!-- ----------------------------------------------------------------------------------------------
@@ -1129,7 +1129,7 @@ _\ \  __/ (__| |_| | | |  __/ _\ \  __/ |   \ V /| | (_|  __/\__ \
 
     You do not need your personal computer's Globus endpoint set to high assurance for the purposes of transferring data to Soteria using our UArizona HPC HIPAA Filesystems endpoint. HIPAA requires data transfer auditing. We log transfers on our DTN that use the HIPAA endpoint, regardless of the client's managed status.
     <br><br>
-    If you are working with another institution/endpoint that only allows connections from high assurance endpoints, then you must enable High Assurance during your Globus Personal Connect configuration process. This requires that you are added to our Globus subscription which can be done by <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f">opening a support ticket</a> to request help from our consultants. Your endpoint must be set to public to allow us to add you. Once you have been added, you may set your endpoint to private.
+    If you are working with another institution/endpoint that only allows connections from high assurance endpoints, then you must enable High Assurance during your Globus Personal Connect configuration process. This requires that you are added to our Globus subscription which can be done by <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d">opening a support ticket</a> to request help from our consultants. Your endpoint must be set to public to allow us to add you. Once you have been added, you may set your endpoint to private.
 
     </p>
   </div>
