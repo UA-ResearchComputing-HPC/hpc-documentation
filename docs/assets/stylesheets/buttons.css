@@ -4,7 +4,7 @@
 .quick-links-button {
     border: none;
     color: white;
-    background-color:#AB0520;
+    background-color:var(--md-accent-fg-color);
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
@@ -13,6 +13,7 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 1.2rem;
 }
 
 .quick-links-button:hover {
@@ -33,7 +34,7 @@
 
 .left-button, .right-button {
     padding: 10px 20px;
-    background-color: #AB0520;
+    background-color: var(--md-primary-fg-color);
     color: white;
     border: none;
     border-radius: 60px;
@@ -42,15 +43,15 @@
 }
 
 .left-button::before {
-    content: "\2190"
+    content: "\2190  Previous Page"
 }
 
 .right-button::before {
-    content: "\2192"
+    content: "Next Page \2192"
 }
 
 .left-button:hover, .right-button:hover {
-    background-color: #8B0015;
+    background-color: var(--md-accent-fg-color);
     color: white;
 }
 

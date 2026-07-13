@@ -3,6 +3,32 @@
     max-width: 100%; /* Ensure the code block doesn't extend beyond screen width */
 }
 
+.code-line-header {
+    background-color: #d7fbff;
+    padding: 10px;
+}
+
+.code-line-batch {
+    background-color: #e6fff2;
+    padding: 10px;
+}
+
+.code-line-bash {
+    background-color: #feffe6;
+    padding: 10px
+}
+
+[data-md-color-scheme="slate"] .code-line-header {
+    background-color: #325b6b;
+}
+
+[data-md-color-scheme="slate"] .code-line-batch {
+    background-color: #4a7282;
+}
+
+[data-md-color-scheme="slate"] .code-line-bash {
+    background-color: #5a8e8a;
+}
 
 /* Media query for screens smaller than 600px (adjust as needed) */
 @media (max-width: 600px) {

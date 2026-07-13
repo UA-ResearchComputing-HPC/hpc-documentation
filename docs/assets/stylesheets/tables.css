@@ -39,13 +39,18 @@
   transition: background-color 0.3s ease;
 }
 
+[data-md-color-scheme="slate"] .storage-summary-table tr:hover {
+  background-color: #282b42;
+  transition: background-color 0.3s ease;
+}
+
 .storage-summary-table td {
   max-width: 200px; 
   word-wrap: break-word;
 }
 
 .storage-summary-table td, .storage-summary-table th {
-  padding: 20px;
+  padding: 7px;
   border-bottom: 1px solid #E2E9EB;
   text-align: left;
 }

@@ -4,6 +4,11 @@
     float: right;
 }
 
+.img-left {
+    float: left;
+    padding-right: 15px;
+}
+
 .ood-screenshots{
     box-shadow: 5px 5px 5px #999;
     width: 70%;
@@ -11,7 +16,16 @@
 
 @media (max-width: 800px) {
     .img-right {
-        float: left; /* or float: left; depending on your preference */
+        float: none;
+        display: block;
+        margin: 1rem auto;
+        max-width: 80%;
+    }
+    .img-left {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+        max-width: 80%;
     }
     .ood-form {
         float: none; 

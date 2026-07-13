@@ -17,35 +17,40 @@ The University of Arizona offers High Performance Computing (HPC) resources in t
 This documentation site provides technical details relevant to using our HPC system. Whether you are just starting your journey into computational sciences or are a seasoned programmer, we hope you will find something useful in these pages. This site is managed by the HPC Consult team. Please [contact us](./support_and_training/consulting_services/) if you have questions or comments about the content of this site.
 
 
+
 ## Featured Links
 
-<p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./registration_and_access/account_creation/"> Account Creation</a></span>
-</p>
+<div class="grid cards link-cards" markdown>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC). </p>
+-  :material-cactus:{ .lg .gcacti } [__Account Creation__](./registration_and_access/account_creation/) 
 
-<p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./quick_start/overview/">HPC Quick Start</a></span>
-</p>
+    If you are an active UArizona affiliate (e.g. student, post-doc, faculty), you can register an account. If you are not affiliated with UArizona but are working with collaborators here, you can register as a <a href="https://it.arizona.edu/service/designated-campus-colleague-accounts">Designated Campus Colleague</a> (DCC).
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.</p>
+</div>
 
-<p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./support_and_training/consulting_services/"> Getting Help</a> | <a href="./support_and_training/faqs/">FAQs</a></span>
-</p>
+<div class="grid cards link-cards" markdown>
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;"> Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more! </p>
+-  :material-cactus:{ .lg .gcacti } [__HPC Quick Start__](./quick_start/overview/) 
 
-<p style="display:inline-block;">
-  <img src="assets/images/home/uofa_cactus_only.png" title="image bullet point" style="width: 40px; vertical-align: middle;">
-  <span style="font-size: 20px; vertical-align: middle; margin-left: 0.5em;"><a href="./events/calendar/"> Events Calendar</a> | <a href="./events/workshop_materials/"> Workshop Materials</a></span>
-</p>
+    If you are new to the UArizona HPC, or to HPC in general, our self-guided quick start tutorial will provide a solid foundation for using our system.
 
-<p style="margin-top: -0.7em; margin-bottom: 0em; margin-left: 3.4em;">Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus. </p>
+</div>
+
+<div class="grid cards link-cards" markdown>
+
+-  :material-cactus:{ .lg .gcacti } [__Getting Help__](./support_and_training/consulting_services/) | [__FAQs__](./support_and_training/faqs/)
+
+    Find out how to contact the HPC Consult team, or view our FAQs, glossary, cheat sheets, and more!
+
+</div>
+
+<div class="grid cards link-cards" markdown>
+
+-  :material-cactus:{ .lg .gcacti } [__Events Calendar__](./events/calendar/) | [__Workshop Materials__](./events/workshop_materials/)
+
+    Every semester we host training sessions on topics including intro to HPC, machine learning, parallel computing, and beyond. Click the link above to see our workshop schedule, our old training materials, and find more workshops from around campus.
+
+</div>
 
 ## System Highlights 2025
 

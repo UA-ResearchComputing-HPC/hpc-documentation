@@ -1,7 +1,4 @@
-body {
-    font-family: Roboto, mono;
-    margin: 0; /* Remove default margin to ensure the table spans the entire viewport width */
-}
+
 
 .table-container {
     margin-left: auto;
