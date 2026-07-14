@@ -187,7 +187,9 @@ nav:
       # - Managing and Optimizing Jobs: events/workshop_materials/optimization/index.md
   - Blog: 
     - blog/index.md
-  - Results: results/index.md
+  - Research Showcase: 
+    - User Publications: results/publications/index.md
+    - Research Stories: results/research_stories/index.md
   
 
 

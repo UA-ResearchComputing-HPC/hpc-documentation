@@ -52,6 +52,14 @@ This documentation site provides technical details relevant to using our HPC sys
 
 </div>
 
+<div class="grid cards link-cards" markdown>
+
+-  :material-cactus:{ .lg .gcacti } [__User Publications__](./results/publications/) | [__Research Stories__](./results/research_stories/)
+
+    Our users do some really cool stuff! Want to see what they've been up to? Check out a list of publications that were made possible by our computing infrastructure and some in-depth stories behind those publications in our research showcase. 
+
+</div>
+
 ## System Highlights 2025
 
 [Download Full Report](./assets/pdfs/Annual%20Report%20HPC%202025.pdf){ .md-button .md-button--primary }
@@ -68,49 +76,16 @@ Researchers rely on our HPC resources not only for computational power, but also
 
 ## Highlighted Research
 
-=== "Ten Millionth Job"
+<img src=./assets/images/home/brain_health_research.png>
 
-    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/tenmillion.png" width="30%" style="margin: 20px;">
+To help unlock the mysteries of how our brains age, the Precision Aging Network (PAN) is examining MRIs of more than 1,000 diverse participants across four American cities. The nationwide study, led by Dr. Carol Barnes, is looking at how factors like heart health, blood sugar, inflammation, and even genetics influence cognitive decline as we age.
 
-    Puma has been a tremendous resource for our research community. Just recently it processed the 10 millionth job since we provisioned it in 2020. Just to get a perspective on that, if you took one step for each job you could walk to Niagara Falls. And back.
+Each participant undergoes a series of detailed brain scans—anatomical, functional, diffusion, and perfusion MRI, which provide a rich view of brain structure and activity. Then the university’s Brain and Body Imaging Center relies on the U of A Research Data Center’s high-performance computing (HPC) systems to process and analyze the millions of 3D data points, called voxels, per scan.
 
-    David Castellano, a member of Dr. Ryan Gutenkunst's team, was the researcher who achieved this milestone. They study the evolutionary processes that generated the complex networks that comprise life. Dr. Gutenkunst told us that David’s been maximizing his chances to hit this milestone with all the jobs he’s been running.
+Read more about [HPC support of PAN](https://click.comms.arizona.edu/?qs=ABB7InYiOjEsImQiOjQ5MDN9AAsAAAAAAdbYMufy-8uzjvjum_Za9cRpb76yhWyJe7uPcz-TEhm6FJ84FEqviepFqozD0qdqohcf7VOj2d3NOmTpYjK2v9x5ZiXnxh9vA1KkJQ)
 
-    David says about his work: “Understanding the relationship between DNA mutation rates and fitness effects is central to evolutionary biology. My work is investigating this relationship in three species: Homo sapiens, Mus musculus, and Arabidopsis thaliana. The inference of fitness effects from population genomics data requires intensive computation which could not be possible without a High Performance Computing service.”
+For more cool stories on what our users do, see our [research showcase](./results/research_stories/).
 
-    The software used in their research is called  ‘dadi’: Diffusion Approximations for Demographic Inference. This work on three species with 96 mutation types and 1000 bootstrap replicates equates to 288,000 compute jobs.
-
-
-=== "Planetary History"
-    
-    **Reconstructing the History of the Solar System Using HPC**
-
-    <img class="highlighted-research" title="'kiss-and-capture' astronomy simulation" src="./assets/images/home/highlighted_research.png" width="50%" style="margin: 20px;">
-
-    Erik Asphaug’s Planetary Formation Lab in the Lunar and Planetary Laboratory uses smoothed-particle hydrodynamics (SPH) simulations to explore how collisions between bodies in the Solar System shape its evolution through time. These three-dimensional simulations, which approximate planetary bodies as collections of particles, incorporate realistic geologic properties to track their structural and thermal changes during and after giant impacts. 
-    From Eric: “The access to increased time allocations as well as large volumes of temporary storage on xdisk provided by the HPC has revolutionized our ability to run our most complex simulations at high resolution, with enough space and time to explore the full parameter space necessary to make key discoveries that inform our understanding of Solar System evolution.”
-
-    One of their major projects has occupied a large fraction of their HPC hours and storage: the capture of Pluto’s moon, Charon, from a giant impact early in the Solar System’s history.
-    High resolution is also critical to track detailed interactions between Pluto and Charon, including any material transferred between them. Without the HPC and the allocation of computation time and storage space, they would not have been able to run the hundreds of models necessary to successfully reproduce systems that look similar to Pluto and Charon today. The models have revealed new insights about how bodies like Pluto capture satellites: the dwarf planet and its proto-satellite collide, briefly merge, and then re-separate as Charon slow begins to move outward. They call this new process, which significantly redefines our understanding of giant collisions, “kiss and capture.” An example kiss-and-capture is shown in the image above. The simulation shown covers 60 hours of model time, which takes ~1.5 months on the HPC. The ability to run such long simulations in parallel was crucial to completing this work. 
-
-    [Read more about the full story here!](https://news.arizona.edu/news/how-pluto-got-its-heart)
-
-=== "Cloud Research"
-    <img src="./assets/images/home/sullivan_lab.png" title="cloud research" align="right" width="300px">
-    Sylvia Sullivan is an Assistant Professor in Chemical and Environmental Engineering who performs atmospherically related research and has a joint appointment to the Department of Hydrology and Atmospheric Sciences. Her academic background is in chemical engineering, but she has picked up atmospheric science and computing skills along the way to model and understand cloud and storm systems. “I really liked environmental work because I felt it was very impactful,” she says.  Her research includes investigating cloud ice formation. From a chemical engineering perspective, you can think about clouds as a control volume, flows in and out and phase changes occurring inside. Along with this more technical view, Sylvia says she “fell in love with clouds because they are very beautiful and poetic”. This blend of fields brought her to the University of Arizona as it is one of the only Universities where Chemical and Environmental Engineering are in the same department. And besides, “Tucson is a wonderful location”.
-
-    <img src="./assets/images/home/cloud_research.png" title="cloud research" align="left" width="300px">
-    She is building a research group to study the impact of ice clouds, particularly their energetic and precipitation effects. Sylvia’s group runs very high-resolution simulations called storm resolving simulations, where the meshes are fine enough to represent individual storms. In global climate models, the mesh has a resolution on the order of 100 km, in which several storm cells can form simultaneously. These storm-resolving computations are very expensive and produce terabytes of data, which then need to be post-processed and visualized. Currently, Sylvia and her group are very focused on working with other visualization experts on campus to illustrate the structures and evolution of clouds and storm systems.
-
-=== "Hypersonic Flow"
-    
-    **Faster Speeds Need Faster Computation**
-
-    <img src="./assets/images/home/HypersonicTravel.jpg" title="flow structures visualization" align="right" width="300px">
-
-    Professors Christoph Hader, Hermann Fasel, and their team are exploring the use of our GPUs to optimize Navier-Stokes codes for simulating the flow field around hypersonic vehicles traveling at size times the speed of sound (Mach 6) or more.
-
-    In the image to the right, instantaneous flow structures obtained from a DNS for a flared cone at Mach 6 are visualized using the Q-isocontours colored with instantaneous temperature disturbance values. The small scales towards the end of the computational domain indicate the regions where the boundary layer is turbulent. 
 
 ## Available Resources
 
@@ -196,7 +171,7 @@ These resources specifically do not support Regulated Research, which might be I
 
 Published research that utilized UArizona HPC resources should follow our [guidelines](./policies/acknowledgements/) on how to acknowledge us. 
 
-If you wish for your research to be featured in our [Results](./results/) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
+If you wish for your research to be featured in our [Results](./results/publications/) page, please [contact HPC consult](./support_and_training/consulting_services/) with news of the publication!
 
 
 ----
