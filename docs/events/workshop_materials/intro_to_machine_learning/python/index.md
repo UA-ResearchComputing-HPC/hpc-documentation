@@ -218,7 +218,7 @@ In the image samples above, we see that *Boletus edulis* and *Amanita muscaria* 
 
 We will create a subdirectory called `binary` and copy the `train` and `test` images for the two species to it. This is not strictly necessary, but it will be easier to use the `fastai` dataloaders in this way.
 
-You can copy the images using either [shell tools](../../../cheat_sheet/index.md) from a terminal, or by running the following Python code from Jupyter.
+You can copy the images using either [shell tools](../../../../support_and_training/cheat_sheet/) from a terminal, or by running the following Python code from Jupyter.
 
 ``` python
 import shutil

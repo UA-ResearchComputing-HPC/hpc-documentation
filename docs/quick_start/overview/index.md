@@ -1,5 +1,5 @@
 # HPC Quick Start
-
+<link rel="stylesheet" href="./assets/stylesheets/extra.css">
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
 
 ## Overview

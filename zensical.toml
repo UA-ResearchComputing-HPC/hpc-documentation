@@ -12,7 +12,7 @@ site_name = "Documentation"
 site_description = "Documentation for the University of Arizona's HPC systems."
 site_author = "The University of Arizona HPC consulting team."
 site_url = "https://www.hpcdocs.hpc.arizona.edu"
-repo_url = "https://github.com/SaraMWillis/hpc-documentation-update"
+repo_url = "https://github.com/UA-ResearchComputing-HPC/hpc-documentation"
 copyright = """
 Copyright &copy; 2026 The University of Arizona
 """

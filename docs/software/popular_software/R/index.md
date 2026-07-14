@@ -119,7 +119,7 @@ That's it! Now, when you install new packages, they will be saved to this new di
 
 When installing R packages, we recommend using an [interactive terminal session](../../../running_jobs/interactive_jobs/) and avoiding RStudio. This is because RStudio uses a [container](../../containers/what_are_containers/) under the hood which may override some system variables necessary for successful compilations. 
     
-This is particularly true if your software relies on [software modules](../../modules/). For example, hdf5r and Seurat rely on modules hdf5 and gdal, respectively (see [popular packages](#popular-packages) for more information). RStudio does not have access to modules, so these packages will not be able to compile in that environment. Instead, they should be compiled on the command line with the necessary software modules loaded. If modules were needed to compile a package, they may be loaded in RStudio by following the instructions further down on this page under [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew). {==Note that using this method only allows you to **load** R packages that have already been installed on the command line and does **not** work for **compile time** issues==}. This is due to Apptainer overriding environment variables necessary for compilation. 
+This is particularly true if your software relies on [software modules](../../modules/). For example, hdf5r and Seurat rely on modules hdf5 and gdal, respectively (see [popular packages](#popular-packages) for more information). RStudio does not have access to modules, so these packages will not be able to compile in that environment. Instead, they should be compiled on the command line with the necessary software modules loaded. If modules were needed to compile a package, they may be loaded in RStudio by following the instructions further down on this page under [Loading Modules in RStudio](#loading-modules-in-rstudio). {==Note that using this method only allows you to **load** R packages that have already been installed on the command line and does **not** work for **compile time** issues==}. This is due to Apptainer overriding environment variables necessary for compilation. 
 
 ### Explicitly Specify R Version
     
@@ -380,7 +380,7 @@ Below, we document some installation instructions for common R packages. We atte
 
     !!! warning "RStudio Users"
     
-        To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
+        To install Seurat and SeuratDisk, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio). 
 
 
     === "Seurat"
@@ -395,7 +395,7 @@ Below, we document some installation instructions for common R packages. We atte
         > install.packages("Seurat")
         ```
 
-        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above for more information. 
+        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio) section above for more information. 
 
     === "SeuratDisk"
 
@@ -415,13 +415,13 @@ Below, we document some installation instructions for common R packages. We atte
         > remotes::install_github("mojaveazure/seurat-disk")
         ```
 
-        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above for more information. 
+        If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio) section above for more information. 
 
 === "Monocle3"
 
     !!! warning "RStudio Users"
 
-        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio). 
 
     !!! bug "Anaconda must be removed from your environment"
         You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).
@@ -443,12 +443,12 @@ Below, we document some installation instructions for common R packages. We atte
     > remotes::install_github('cole-trapnell-lab/monocle3')
     ```
 
-    Then, to load Monocle3 in RStudio, you will need to create the file `~/.UAz_ood/rstudio.sh` as detailed in the [Loading Modules in RStudio](#loading-modules-in-rstudio-material-alert-decagramnew) section above. 
+    Then, to load Monocle3 in RStudio, you will need to create the file `~/.UAz_ood/rstudio.sh` as detailed in the [Loading Modules in RStudio](#loading-modules-in-rstudio) section above. 
 
 === "Terra"
 
     !!! warning "RStudio Users"
-        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio-material-alert-decagramnew). 
+        To install Monocle3, you'll need to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and {==not in an RStudio session==}. Once your installation is successful, it is possible to load these modules in RStudio using [the method described here](#loading-modules-in-rstudio). 
 
     !!! bug "Anaconda must be removed from your environment"
         You will need to make sure Anaconda is completely removed from your environment prior to the install. If you have Anaconda initialized in your account, see the code block on our Anaconda page under [Removing Anaconda From Your Environment --> Temporary Removal](../anaconda/#removing-anaconda-from-your-environment).

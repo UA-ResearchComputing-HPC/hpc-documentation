@@ -6,7 +6,7 @@
 
 ???+ link "You may also be interested in:"
     
-    - [Standard Practices](../../policies/standard_practices/index.md) - important policies, recommendations, and helpful tips 
+    - [Standard Practices](../../policies/standard_practices/) - important policies, recommendations, and helpful tips 
     - [Compute Resources](../../resources/compute_resources/) - details on the number and type of compute nodes
     - [Resource Optimization](../../running_jobs/resource_optimization) - improve the efficiency of your jobs on HPC
     - [Frequently Asked Questions](../../support_and_training/faqs/) - solutions to common issues

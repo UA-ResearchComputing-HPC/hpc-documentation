@@ -90,7 +90,7 @@ Researchers may currently use cluster resources in a number of ways. {==Here are
 **Users of R**
 
  * The primary challenge for R users will be to maintain separate R package libraries for the old and new operating systems. R packages installed under the old CentOS 7 operating system may not function under the new Rocky 9 systems, and vice versa. 
- * R users should maintain separate R libraries and switch between them as necessary. See the [Creating a Custom Library](../../software/popular_software/R/index.md#creating-a-custom-library) and [Switching Between Custom Libraries](../../software/popular_software/R/index.md#switching-between-custom-libraries) sections on our [R documentation](../../software/popular_software/R/index.md) page for details.  We suggest that your Puma9 R library be named something like `~/R/library_4.4-puma9`. 
+ * R users should maintain separate R libraries and switch between them as necessary. See the [Creating a Custom Library](../../software/popular_software/R/index.md#create-your-first-library) and [Switching Between Custom Libraries](../../software/popular_software/R/index.md#how-to-switch-libraries) sections on our [R documentation](../../software/popular_software/R/index.md) page for details.  We suggest that your Puma9 R library be named something like `~/R/library_4.4-puma9`. 
 
 **Users who compile code themselves**
 : In many cases user-compiled software will need to be recompiled to run on Puma9.
