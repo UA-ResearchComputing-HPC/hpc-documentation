@@ -10,7 +10,7 @@ Every Slurm job has [environment variables](../../../support_and_training/cheat_
 |```$SLURM_ARRAY_TASK_MAX```|Maximum index for the job array|```7```|
 |```$SLURM_ARRAY_TASK_MIN```|Minimum index for the job array|```1```|
 |```$SLURM_ARRAY_TASK_STEP```|Job array's index step size|```2```|
-|```$SLURM_CLUSTER_NAME```|Which cluster your job is running on|```elgato```|
+|```$SLURM_CLUSTER_NAME```|Which cluster your job is running on|```puma```|
 |```$SLURM_CONF```|Points to the [Slurm configuration file](https://slurm.schedmd.com/slurm.conf.html)|```/var/spool/slurm/d/conf-cache/slurm.conf```|
 |```$SLURM_CPUS_ON_NODE```|Number of CPUs allocated to target node|```3```|
 |```$SLURM_GPUS_ON_NODE```|Number of GPUs allocated to the target node|```1```|

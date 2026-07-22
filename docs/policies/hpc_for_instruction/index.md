@@ -12,7 +12,7 @@ We strongly suggest that instructors who plan to incorporate HPC use into their 
 
 ## Cluster Restrictions
 
-For tax reasons, groups using The University of Arizona's HPC systems for instructional purposes are restricted to Ocelote and may not use Puma or El Gato.
+For tax reasons, groups using The University of Arizona's HPC systems for instructional purposes are restricted to Ocelote and may not use Puma.
 
 ## Compute Resources and Allocations
 

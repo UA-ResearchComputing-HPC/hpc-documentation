@@ -21,7 +21,6 @@ The table below outlines the maximum resources that can be concurrently used at 
             <th></th>
             <th>Puma</th>
             <th>Ocelote</th>
-            <th>El Gato</th>
         </tr>
     </thead>
     <tbody>
@@ -32,11 +31,9 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum Simultaneous User Jobs</td>
             <td>1000</td>
             <td>1000</td>
-            <td>1000</td>
         </tr>
         <tr>
             <td>Maximum Job Walltime</td>
-            <td>10 days</td>
             <td>10 days</td>
             <td>10 days</td>
         </tr>
@@ -46,19 +43,16 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum Memory Per Group</td>
             <td>16996 GB</td>
             <td>10000 GB</td>
-            <td>10000 GB</td>
         </tr>
         <tr>
             <td>Maximum CPUs per Group</td>
             <td>3290</td>
-            <td>1024</td>
             <td>1024</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Group</td>
             <td>4</td>
             <td>10</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <th colspan="4" style="background-color: #E2E9EB;">Windfall Job Resources</th>
@@ -67,11 +61,9 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum Memory per User</td>
             <td>Unlimited</td>
             <td>Unlimited</td>
-            <td>Unlimited</td>
         </tr>
         <tr>
             <td>Maximum CPUs per User</td>
-            <td>6000</td>
             <td>6000</td>
             <td>6000</td>
         </tr>
@@ -79,7 +71,6 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum GPUs per Job</td>
             <td>Unlimited</td>
             <td>Unlimited</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <th colspan="4" style="background-color: #E2E9EB;">High Priority Job Resources</th>
@@ -87,12 +78,10 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum CPUs per Group</td>
             <td>Number Purchased</td>
             <td>N/A</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Group</td>
             <td>Number Purchased</td>
-            <td>N/A</td>
             <td>N/A</td>
         </tr>
     </tbody>
@@ -115,7 +104,6 @@ The table below outlines the maximum resources that can be concurrently used at 
             <th></th>
             <th>Puma</th>
             <th>Ocelote</th>
-            <th>El Gato</th>
         </tr>
     </thead>
     <tbody>
@@ -123,23 +111,19 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Maximum Nodes per Job</td>
             <td>1</td>
             <td>1</td>
-            <td>1</td>
         </tr>
         <tr>
             <td>Maximum CPUs per Job</td>
             <td>94</td>
             <td>28 (Standard/GPU nodes)<br>48 (High memory node)</td>
-            <td>16</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Job</td>
             <td>4</td>
             <td>2</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <td>Maximum Walltime per Job</td>
-            <td>4 days</td>
             <td>4 days</td>
             <td>4 days</td>
     </tbody>
@@ -222,38 +206,5 @@ Please note that the output of `job-limits` is specific to the queried group, me
     --------------------------------------------------------------------------------
     Windfall |     8064G      |      6000      |                    |  10-00:00:00    
     Standard |     8064G      |      1024      |    gres/gpu=10     |  10-00:00:00    
-    --------------------------------------------------------------------------------
-    ```
-
-=== "El Gato"
-    ```bash
-    (elgato) [<your_netid>@wentletrap ~]$ job-limits <group>
-
-                            Group Limits: <group>                            
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |   Job Number    
-            | Running/Limit  | Running/Limit  |   Running/Limit    |Submitted/Limit  
-    --------------------------------------------------------------------------------
-    Standard |     -/10T      |     -/1024     |        -/-         |      -/-        
-    --------------------------------------------------------------------------------
-
-
-                                User Limits: <your_netid>                            
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |  Job Number*    
-            | Running/Limit  | Running/Limit  |   Running/Limit    |Submitted/Limit  
-    --------------------------------------------------------------------------------
-    Windfall |      -/-       |     -/6000     |        -/-         |     -/1000      
-    Standard |     -/10T      |     -/1024     |        -/-         |                 
-    --------------------------------------------------------------------------------
-    *Max jobs across all groups and partitions.
-
-
-                                Individual Job Limits                             
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |      Time       
-    --------------------------------------------------------------------------------
-    Windfall |     8064G      |      6000      |                    |  10-00:00:00    
-    Standard |     8064G      |      1024      |                    |  10-00:00:00    
     --------------------------------------------------------------------------------
     ```

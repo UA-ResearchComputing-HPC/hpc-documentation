@@ -9,7 +9,7 @@ VS Code can also be run locally on laptop or desktop computers and used to make 
 
 ???+ warning "Not Available on Older Clusters"
 
-    Due to compatibility issues, VS Code remote connection is no longer available on Ocelote and El Gato. It is still available on Puma. 
+    Due to compatibility issues, VS Code remote connection is no longer available on Ocelote. It is still available on Puma. 
 
 
 ## General Method

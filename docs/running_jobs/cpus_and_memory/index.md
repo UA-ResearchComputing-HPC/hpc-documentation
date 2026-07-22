@@ -10,7 +10,6 @@ Before submitting your job to the scheduler, it's important to know that the num
 |-|-|-|-|-|-|-|
 |Puma| 5 GB | 300 | 32 GB | 5 | 5 GB| 15 |
 |Ocelote| 6 GB | 360 | - | 1 | 8 GB| 60 |
-|El Gato| 4 GB | - | - | - | - | - |
 
 
 For example, using the table above we can see on Puma standard nodes you get 5 GB for each CPU you request. This means a standard job using 4 CPUs gets 5 GB/CPU × 4 CPUs = 20 GB of total memory.

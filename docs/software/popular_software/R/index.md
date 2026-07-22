@@ -47,7 +47,7 @@ Before we cover how to create a library, here are a few important considerations
     We recommend including information about your library in the name, e.g.:
 
     1. Which version of R you're using.
-    2. Which OS was used to create it. Puma's OS is Rocky Linux 9. Ocelote and El Gato run on CentOS 7.
+    2. Which OS was used to create it. Puma's OS is Rocky Linux 9. Ocelote runs on CentOS 7.
     
     It's important to maintain a consistent version of R with your libraries since installing packages into one library with multiple versions of R will often cause trouble. Similarly, installing an R package on one operating system and using it on another will result in failures. 
 

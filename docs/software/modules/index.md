@@ -46,9 +46,12 @@ Software modules are {==only available on compute nodes==} and are not accessibl
 
 It’s also important to be aware of differences between the clusters:
 
-- **Ocelote** and **El Gato** both run **CentOS 7** and share the same system libraries and modules. These clusters can generally be used interchangeably.
+!!! danger "Ocelote will be decommissioned on August 17th"
+    Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
 
-- **Puma**, however, runs **Rocky Linux 9**, which has different system libraries and modules than Ocelote and El Gato. As a result, workflows that work on Ocelote or El Gato may not be transferable to Puma without modifications.
+- **Ocelote** runs **CentOS 7**.
+
+- **Puma**, however, runs **Rocky Linux 9**, which has different system libraries and modules than Ocelote. As a result, workflows that work on Ocelote may not be transferable to Puma without modifications.
 
 ## Module Commands
 
@@ -71,23 +74,24 @@ It’s also important to be aware of differences between the clusters:
 ## Examples
 
 ### Loading Modules
-```bash title="Loading Python 3.9"
-[netid@cpu39 ~]$ module avail python
+```bash title="Loading Python Modules"
+[netid@r7u01n1 ~]$ module avail python
 
-------------------- /opt/ohpc/pub/modulefiles --------------------
-   python/3.6/3.6.5     python/3.9/3.9.10
-   python/3.8/3.8.2     python/3.11/3.11.4 (D)
-   python/3.8/3.8.12
-[netid@cpu39 ~]$ module load python/3.9
-[netid@cpu39 ~]$ python3 --version
-Python 3.9.10
-[netid@cpu39 ~]$ module swap python/3.9 python/3.11
+---------------- /opt/ohpc/pub/modulefiles ----------------
+   python/3.11/3.11.4 (D)    python/3.14/3.14.2
+
+  Where:
+   D:  Default Module
+[netid@r7u01n1 ~]$ module load python/3.11
+[netid@r7u01n1 ~]$ python3 --version
+Python 3.11.4
+[netid@r7u01n1 ~]$ module swap python/3.11 python/3.14
 
 The following have been reloaded with a version change:
-  1) python/3.9/3.9.10 => python/3.11/3.11.4
+  1) python/3.11/3.11.4 => python/3.14/3.14.2
 
-[netid@cpu39 ~]$ python3 --version
-Python 3.11.4
+[netid@r7u01n1 ~]$ python3 --version
+Python 3.14.2
 ```
 
 ### Finding Executables and Libraries
@@ -95,32 +99,29 @@ Python 3.11.4
 If you're looking for the specific variables that will be modified when loading a module, you can use the command `module show`. For example:
 
 ```bash title="Environment variables modified by Gromacs module"
-[netid@cpu38 ~]$ module show gromacs
----------------------------------------------------------
-   /opt/ohpc/pub/moduledeps/gnu8-openmpi3/gromacs/2021.5:
----------------------------------------------------------
-whatis("Name: gromacs ")
-whatis("Version: 2021.5 ")
-whatis("Molecular dynamics for biophysical chemistry ")
-setenv("GROMACS_BASE","/opt/ohpc/pub/apps/gromacs/2021.5")
-prepend_path("PATH","/opt/ohpc/pub/apps/gromacs/2021.5/bin")
-prepend_path{"CPPFLAGS","-I/opt/ohpc/pub/apps/gromacs/2021.5/include",delim=" "}
-prepend_path("MANPATH","/opt/ohpc/pub/apps/gromacs/2021.5/share/man")
-prepend_path("PKG_CONFIG_PATH","/opt/ohpc/pub/apps/gromacs/2021.5/lib64/pkgconfig")
-prepend_path{"LDFLAGS","-L/opt/ohpc/pub/apps/gromacs/2021.5/lib64",delim=" "}
-prepend_path("LD_LIBRARY_PATH","/opt/ohpc/pub/apps/gromacs/2021.5/lib64")
-unload("gnu8")
-load("gnu8")
-help([[ Adds gromacs to your environment
+[netid@r7u01n1 ~]$ module show gromacs
+--------------------------------------------------------
+   /opt/ohpc/pub/modulefiles/gromacs/2026.2:
+--------------------------------------------------------
+whatis("Name: gromacs")
+whatis("Version: 2026.2")
+setenv{"GROMACS_BASE","/opt/ohpc/pub/apps/gromacs/2026.2"}
+prepend_path{"PATH","/opt/ohpc/pub/apps/gromacs/2026.2/bin",delim=":",priority="0"}
+prepend_path{"CPPFLAGS","-I/opt/ohpc/pub/apps/gromacs/2026.2/include",delim=" ",priority="0"}
+prepend_path{"MANPATH","/opt/ohpc/pub/apps/gromacs/2026.2/share/man",delim=":",priority="0"}
+prepend_path{"PKG_CONFIG_PATH","/opt/ohpc/pub/apps/gromacs/2026.2/lib64/pkgconfig",delim=":",priority="0"}
+load("cuda12/12.5")
+help([[	Adds gromacs to your environment
 ]])
 ```
 These paths can help you to determine the locations of the executables, libraries, header files, etc. available to you after loading the software. For example, the environment variable `PATH` is what allows the system to find executables, so, in the case above, we would look at the line: `prepend_path("PATH","/opt/ohpc/pub/apps/gromacs/2021.5/bin")` to determine where Gromacs' executables live. We can then search this path to see what they are:
 
 ```bash title="Executables provided by Gromacs"
-[netid@cpu38 ~]$ ls /opt/ohpc/pub/apps/gromacs/2021.5/bin
-gmx_mpi     GMXRC      gmx-completion.bash  gmx-completion-gmx_mpi.bash
-GMXRC.bash  GMXRC.csh  demux.pl             xplor2gmx.pl
-GMXRC.zsh
+[netid@r7u01n1 ~]$ ls /opt/ohpc/pub/apps/gromacs/2026.2/bin
+gmx                  gmx_mpi                  GMXRC
+gmx-completion.bash  gmx-completion-gmx.bash  gmx-completion-gmx_mpi.bash
+GMXRC.bash           GMXRC.csh                demux.pl
+xplor2gmx.pl         GMXRC.zsh
 ```
 
 
@@ -138,7 +139,10 @@ GMXRC.zsh
 |intel|2024.1.2|<pre><code>module load intel/2024.1.2</code></pre>|
 
 
-### Ocelote and El Gato
+### Ocelote 
+
+!!! danger "Ocelote will be decommissioned on August 17th"
+    Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
 
 |Compiler|Version|Module Command|
 |-|-|-|

@@ -141,11 +141,11 @@ The time it takes for an object to be retrieved is dependent on its storage clas
 === "CLI"
     A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool. This can be accessed using:
 
-    === "Ocelote/El Gato"
+    === "Ocelote"
         ```bash
-        (elgato) [netid@junonia ~]$ interactive
-        [netid@cpu37 ~]$ module load contrib 
-        [netid@cpu37 ~]$ module load bjoyce3/sarawillis/tier2-viewer
+        (ocelote) [netid@junonia ~]$ interactive
+        [netid@i0n0 ~]$ module load contrib 
+        [netid@i0n0 ~]$ module load bjoyce3/sarawillis/tier2-viewer
         ```
         For information on usage:
         ```bash

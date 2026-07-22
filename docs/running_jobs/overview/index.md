@@ -87,22 +87,21 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">What compute resources are available on each cluster?</button>
 <div class="content">
-    <p>We have three clusters available for use: Puma, Ocelote, and El Gato. See <a href="../../resources/compute_resources/">Compute Resources</a> for details on each.
+    <p>We have two clusters available for use: Puma and Ocelote, with a third new cat, Lynx, on the way. See <a href="../../resources/compute_resources/">Compute Resources</a> for details on each.
     <br>
     </p>
 </div>
 
-<button class="collapsible">Are the three clusters Puma, Ocelote, and El Gato interchangeable?</button>
+<button class="collapsible">Are all the HPC clusters interchangeable?</button>
 <div class="content">
-    <p>Generally no. Puma is our newest cluster and runs on the operating system Rocky Linux 9. Ocelote and El Gato are older and run on CentOS 7. Software compiled on Puma may not be compatible with the older clusters and vice versa. 
+    <p>Generally no. Puma is our newest cluster and runs on the operating system Rocky Linux 9. Ocelote is older and run on CentOS 7. Software compiled on Puma may not be compatible with the older clusters and vice versa. 
     <br>
-    Because Ocelote and El Gato run on the same OS and share the same system libraries and software modules, workflows can generally run on either. 
     </p>
 </div>
 
 <button class="collapsible">I submitted a job request, but it isn't running yet. Why?</button>
 <div class="content">
-    <p>Job requests go to our task scheduler, Slurm, which manages all incoming job requests and determines the optimal order to run them in order to maximize the efficiency of the system. The amount of wait time for your job depends on the number and size of jobs before your job in the queue; the amount of compute resources requested by your job; and the requested wall time for your job. Variation in wait times is a natural consequence of this system. Typically, our most advanced cluster, Puma, experiences longer wait times due to increased usage. Smaller or interactive jobs are recommended to run on Ocelote or El Gato. 
+    <p>Job requests go to our task scheduler, Slurm, which manages all incoming job requests and determines the optimal order to run them in order to maximize the efficiency of the system. The amount of wait time for your job depends on the number and size of jobs before your job in the queue; the amount of compute resources requested by your job; and the requested wall time for your job. Variation in wait times is a natural consequence of this system. 
     <br>
     </p>
 </div>

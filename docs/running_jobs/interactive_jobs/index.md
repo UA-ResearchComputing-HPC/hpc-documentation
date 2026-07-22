@@ -8,40 +8,27 @@ The term "interactive session" in this context refers to jobs run from within th
 
 ## Clusters 
 
-An interactive session can be requested on any of our three clusters: El Gato, Ocelote, and Puma. 
+!!! danger "Ocelote will be decommissioned on August 17th"
+    Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information.
 
-Ocelote and El Gato share the same operating system (CentOS 7), system libraries, and software modules. El Gato typically has shorter wait times, so if you're compiling software or running small test jobs for workflows to run on either El Gato or Ocelote, it may be advantageous to request a session on El Gato for more immediate access. 
+An interactive session can be requested on either Ocelote or Puma. 
 
-Puma runs a newer operating system (Rocky Linux 9), has newer system libraries, and its own software modules. If you are using Puma for your production work, you will want to stick to requesting interactive sessions on Puma for testing and compiling. Workflows may not be transferrable between the older clusters and Puma, so make sure to check which software ecosystem you're using to ensure the most predictable results. 
+Puma runs a newer operating system (Rocky Linux 9) than Ocelote (CentOS 7), has newer system libraries, and its own software modules. If you are using Puma for your production work, you will want to stick to requesting interactive sessions on Puma for testing and compiling. Workflows may not be transferrable between Ocelote and Puma, so make sure to check which software ecosystem you're using to ensure the most predictable results. 
 
 
 ## How to Request an Interactive Session
 
 
-### The ```interactive``` Command
+### The `interactive` Command
 
 We have a built-in shortcut command that will allow you to quickly and easily request a session by simply entering: ```interactive```
 
-The ```interactive``` command is essentially a convenient wrapper for a Slurm command called ```salloc```. This can be thought of as similar to the `sbatch` command, but for interactive jobs rather than [batch jobs](../batch_jobs/intro/). When you request a session using interactive, the full `salloc` command being executed will be displayed for reference.
+The `interactive` command is essentially a convenient wrapper for native Slurm commands. It can be thought of as similar to the `sbatch` command, but for interactive jobs rather than [batch jobs](../batch_jobs/intro/). When you request a session using `interactive`, the full Slurm command being executed will be displayed for reference.
 
-```bash
-(ocelote) [netid@junonia ~]$ interactive
-Run "interactive -h for help customizing interactive use"
-Submitting with /usr/local/bin/salloc --job-name=interactive --mem-per-cpu=4GB --nodes=1    --ntasks=1 --time=01:00:00 --account=windfall --partition=windfall
-salloc: Pending job allocation 531843
-salloc: job 531843 queued and waiting for resources
-salloc: job 531843 has been allocated resources
-salloc: Granted job allocation 531843
-salloc: Waiting for resource configuration
-salloc: Nodes i16n1 are ready for job
-[netid@i16n1 ~]$
-```
+!!! note "Slurm update on Puma 2026"
+    An update to the version of Slurm on Puma in early 2026 changed how Slurm processes interactive sessions. On Puma, the `interactive` command is now a wrapper for `srun` rather than `salloc`. This change does not apply to Ocelote which still uses `salloc`.
 
-Notice in the example above how the command prompt changes once your session starts. When you're on a login node, your prompt will show `junonia` or `wentletrap`. Once you're in an interactive session, you'll see the name of the compute node you're connected to. 
-
-**Slurm Update on Puma 2026**
-
-An update to the version of Slurm on Puma in early 2026 changed how Slurm processes interactive sessions. The `interactive` command is now a wrapper for `srun` rather than `salloc`. This change does not apply to Ocelote or El Gato. 
+    Note that this only affects how the `interactive` command submits jobs. Manually entering `salloc` commands on Puma should work as expected. 
 
 ```bash
 (puma) [netid@junonia:~]$ interactive -a mygroup
@@ -51,14 +38,15 @@ srun: job 21118640 queued and waiting for resources
 srun: job 21118640 has been allocated resources
 [netid@r6u19n1:~]$ 
 ```
-Note that this only affects how the `interactive` command submits jobs. Manually entering `salloc` commands on Puma should work as expected. 
+
+Notice in the example above how the command prompt changes once your session starts. When you're on a login node, your prompt will show `junonia` or `wentletrap`. Once you're in an interactive session, you'll see the name of the compute node you're connected to. 
 
 **Customizing Your Resources**
 
-The command ```interactive``` when run without any arguments will allocate a windfall session using one CPU for one hour which isn't ideal for most use cases. You can modify this by including additional flags. To see the available options, you can use the help flag ```-h```
+The command `interactive` when run without any arguments will allocate a windfall session using one CPU for one hour which isn't ideal for most use cases. You can modify this by including additional flags. To see the available options, you can use the help flag ```-h```
 
 ```bash
-(ocelote) [netid@junonia ~]$ interactive -h
+(puma) [netid@junonia ~]$ interactive -h
 Usage: /usr/local/bin/interactive [-x] [-g] [-N nodes] [-m memory per core] [-n total number of tasks] [-Q optional qos] [-t hh::mm:ss] [-a account to charge]
 ```
 The values shown in the output can be combined and each mean the following:
@@ -78,28 +66,24 @@ You may also create your own [salloc](https://slurm.schedmd.com/salloc.html) com
 
 ### The ```salloc``` Command
 
-If ```interactive``` is insufficient to meet your resource requirements (e.g., if you need to request more than one GPU or a GPU MIG slice), you can use the Slurm command ```salloc``` to further customize your job. 
+If `interactive` is insufficient to meet your resource requirements (e.g., if you need to request more than one GPU or a GPU MIG slice), you can use the Slurm command `salloc` to further customize your job. 
 
-The command ```salloc``` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using ```salloc```, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
+The command `salloc` expects [Slurm directives](../batch_jobs/batch_directives/) as input arguments that it uses to customize your interactive session. For comprehensive documentation on using `salloc`, see [Slurm's official documentation](https://slurm.schedmd.com/salloc.html).
 
+### `salloc` Examples
 
-**Single CPU Example**
-
-```
+```title="Single CPU Example"
 salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=interactive
 ```
-**Single Node, Multi-CPU Example**
 
-```
+```title="Single CPU Example"
 salloc --account=<YOUR_GROUP> --partition=standard --nodes=1 --ntasks=16 --time=1:00:00 --job-name=interactive
 ```
 
-**Multi-GPU Example (Puma)**
-```
+```title="Multi-GPU Example (Puma)"
 salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=multi-gpu --gres=gpu:volta:2
 ```
 
-**GPU MIG Slice Example**
-```
+```title="GPU MIG Slice Example"
 salloc --account=<YOUR_GROUP> --partition=gpu_standard --nodes=1 --ntasks=1 --time=1:00:00 --job-name=mig-gpu --gres=gpu:nvidia_a100_80gb_pcie_3g.40gb
 ```

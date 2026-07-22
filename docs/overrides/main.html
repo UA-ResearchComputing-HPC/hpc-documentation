@@ -8,14 +8,16 @@
      - Remove comment to add announcement to header
 #}
 
-{#
+
 
 {% block announce %}
 <p style="font-size: 15px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
-    <b>Upcoming Maintenance</b>: Quarterly maintenance is scheduled for Wednesday, April 29th 2026. For details, see <a href="https://hpcdocs.hpc.arizona.edu/policies/maintenance/#maintenance-history">our maintenance page</a>.
+    &#8226; <b>Upcoming Maintenance</b>: Quarterly maintenance is scheduled for Wednesday, July 29th 2026. For details, see <a href="https://hpcdocs.hpc.arizona.edu/policies/maintenance/#maintenance-history">our maintenance page</a>.
+    <br>
+    &#8226; <b>Important:</b> El Gato will be decommissioned during the maintenance period on Wednesday, July 29th, 2026. Ocelote will follow on Monday August 17, 2026. Any users still running workloads on these systems are advised to migrate to Puma before Ocelote goes offline. See <a href="https://hpcdocs.hpc.arizona.edu/resources/updates/">our operating system updates page</a> for tips on migrating to Rocky Linux 9 (Puma).</a>
 {% endblock %}
 
-#}
+
 
 {#
 {% block announce %}

@@ -75,7 +75,7 @@ If you are a faculty member and are teaching a course that makes use of HPC reso
 
 ### Class Group Restrictions
 
-Due to Arizona sales tax restrictions {==class groups are restricted to the Ocelote cluster and cannot use Puma or El Gato==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
+Due to Arizona sales tax restrictions {==class groups are restricted to the Ocelote cluster and cannot use Puma==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
 
 ```bash
 #SBATCH --account=hpc101

@@ -43,6 +43,19 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 
 <html>
 
+  <button class="collapsible">July 29, 2026</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine software and firmware updates for the compute nodes and storage.</li>
+  <li>Open OnDemand update from 4.1.5 to 4.2.3.</li>
+  <li>This documentation will be updated to have a new look.</li>
+  <li>El Gato will be decommissioned and will go offline permanently.</li>
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">April 29, 2026</button>
   <div class="content">
   <p>

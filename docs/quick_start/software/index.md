@@ -19,14 +19,13 @@ System software represents executables pre-installed on the system, and are avai
 You can view and load software modules using the commands ```module avail``` and ```module load```, respectively. For example:
 
 ```
-[netid@gpu66 ~]$ module avail python
- 
-------------------------------------------------- /opt/ohpc/pub/modulefiles --------------------------------------------------
-   python/3.6/3.6.5    python/3.8/3.8.2 (D)    python/3.8/3.8.12    python/3.9/3.9.10
- 
-[netid@gpu66 ~]$ module load python/3.9
-[netid@gpu66 ~]$ python3 --version
-Python 3.9.10
+[netid@r6u19n1 ~]$ module avail python
+
+------------------------ /opt/ohpc/pub/modulefiles -------------------------
+   python/3.11/3.11.4 (D)    python/3.14/3.14.2
+
+  Where:
+   D:  Default Module
 ```
 
 Try running ```module avail``` without specifying any arguments. You'll notice we have *a lot* available. These software packages can be used both interactively for shorter jobs and testing, or in your batch scripts.

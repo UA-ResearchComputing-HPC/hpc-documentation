@@ -20,7 +20,7 @@ While you cannot add or update system software or libraries using tools that req
     For a typical Linux installation, the default settings may attempt to install files in system locations. This is not permitted, so the installation process (specifically, the ```./configure``` step) needs to be changed so that files are installed somewhere you have write access.  There is frequently done with the syntax ```--prefix=/path/to/software```.
 
 !!! warning "Compiling on different clusters"
-    Be sure to note which cluster you are compiling your software on. El Gato and Ocelote run the operating system CentOS 7 and share the same system libraries and modules. Puma runs Rocky Linux 9 and has its own newer system libraries and modules. Compiling software on one operating system and trying to use it on another may result in failures.
+    Be sure to note which cluster you are compiling your software on. Ocelote runs the operating system CentOS 7. Puma runs Rocky Linux 9 and has its own newer system libraries and modules. Compiling software on one operating system and trying to use it on another may result in failures.
     
 === "configure/make/make install example"
     Here is a typical example of installing software on a Linux cluster with the ```configure```, ```make```, ```make install``` method. We'll use a simple hello world example downloaded from [https://ftp.gnu.org/gnu/hello/](https://ftp.gnu.org/gnu/hello/)
