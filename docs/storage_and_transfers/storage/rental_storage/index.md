@@ -7,23 +7,56 @@
 
 We offer a rental storage solution that has less performance and lower cost than our primary all-flash array making it affordable for research data. This storage array is located in the Research Data Center and is mounted on our data transfer nodes and compute nodes.
 
-## Why Use Rental
+## At a Glance
+
+<div class="grid cards" markdown>
+
+- :material-timer-sand: __Storage Type__
+
+    Long term rental space
+
+- :material-currency-usd: __Pricing__
+
+    $47.35 per terabyte per year
+
+- :material-clock-time-eight-outline: __Maximum Duration__
+
+    Unlimited
+
+- :material-database: __Maximum Size__
+
+    Up to 20 TB can automatically be requested through the user portal. Groups requiring additional space can submit a request by [opening a ticket](../../../support_and_training/consulting_services/). 
+
+- :material-map-marker: __Storage Location__
+
+    `/rental/<pi_netid>`, accessible on the [file transfer nodes](../../transfers/overview/) and Puma compute nodes. 
+
+- :material-account: __Managed By__
+
+    Faculty members (PIs) and [authorized delegates](../../../registration_and_access/group_management/#delegating-group-management-rights)
+</div>
+
+## Benefits of Rental
 
 1. Your capacity is not limited like `/xdisk`.
 2. Your data does not expire like `/xdisk`.
-3. You can use `/rental` as the primary location for your research data. We strongly recommend that you do not run your compute directly from the /rental storage due to performance limitations. See the [Best Practices](../hpc_storage) for advice on how to manage your workflow.
-4. The rental rates are reasonable at $47.35 per year.
-5. You can use simple commands like "cp" and "mv" to transfer data between filesystems.
+3. You can use `/rental` as the primary location for your research data. We **strongly** recommend that you do not run your compute directly from `/rental` due to performance limitations. See the [Best Practices](../hpc_storage/#best-practices) for advice on how to manage your workflow.
+4. The rental rates are reasonable at $47.35 per terabyte per year.
+5. You can use simple commands like `cp` and `mv` to transfer data between filesystems.
 
-## Things to Note
+## Pricing
 
-1. You will be billed at the end of the Fiscal Year for the maximum amount of space reserved.
-2. The `/rental` filesystem is not backed up.  Snapshots are taken so we may be able to retrieve recently lost data.
-3. Allocations up to 20TB in size can be requested through the user portal. For allocations larger than 20TB, [contact our consulting team](/support_and_training/consulting_services/) for help.
-4. The allocation will be found in `/rental/<pi_netid>`
-5. When your `/xdisk` is nearing the expiration it will be quite easy to copy your data to `/rental`. The same applies when you create an `/xdisk` to copy data in from `/rental`.
-6. This storage does not have the same very high performance of the primary array, so keep in mind this is intended for longer term storage, not direct compute.  See the [Best Practices](../hpc_storage).
+The cost for rental storage space is $47.35 per terabyte per year. PIs will need to provide their KFS account number when requesting an allocation. Rental allocations are billed at the end of each Fiscal Year and are not prorated. This means the charges will reflect the maximum amount of storage space requested for the fiscal year. 
 
+Allocations up to 20 TB can automatically be requested by a PI through our [user portal](https://portal.hpc.arizona.edu/portal/). For allocations larger than 20 TB, [contact our consulting team](/support_and_training/consulting_services/) for assistance. 
+
+## Data Locality, Management, and Transfers
+
+You will find your rental allocation space under `/rental/<pi_netid>` where `<pi_netid>` is the NetID of the PI who requested the space. This space is accessible on our [file transfer nodes](../../transfers/overview/) and Puma compute nodes. This enables files to be copied (e.g. with `mv` or `cp`) directly between your rental allocation and the rest of the HPC filesystem (i.e. `/groups`, `/xdisk`, and `/home`). We also provide a Globus endpoint for rental storage. See our [Globus documentation](../../transfers/globus/) for more information on this graphical file transfer tool.
+
+The rental array is not as performant as our all-flash primary array so **we strongly discourage running compute directly from** `/rental` due to performance limitations. Instead, we recommend using a temporary xdisk as scratch space for jobs. This is especially important for high I/O workloads. We have more specifics in our [Best Practices documentation](../hpc_storage/#best-practices).
+
+The rental array is not backed up. We do keep nightly snapshots so we may be able to retrieve recently lost data. If you accidentally delete a file, [contact us](../../../support_and_training/consulting_services/) promptly to ensure the best chances of data retrieval.
 
 ## Managing a Rental Allocation Through the Portal
 
