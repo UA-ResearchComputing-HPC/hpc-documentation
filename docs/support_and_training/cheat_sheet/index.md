@@ -360,9 +360,6 @@ One thing to keep in mind is that the owner of the parent directory will still b
 
 ## Compression and Archiving 
 
-!!! tip
-    For very large directories, use the file transfer node. Hostname: ```filexfer.hpc.arizona.edu```
-
 Are you planning on transferring files to or from HPC? Do you have a lot of them? Then archiving is for you! 
 
 Archiving files is the process of consolidating one or more files or directories into a single, compressed package or archive file. This simplifies data management, reduces storage space, and streamlines file transfer and backup operations. Transferring a single archived file to an external backup location my result in transfer speeds that are an order of magnitude faster than transferring the same data as an uncompressed directory with thousands (or sometimes millions) of files.
