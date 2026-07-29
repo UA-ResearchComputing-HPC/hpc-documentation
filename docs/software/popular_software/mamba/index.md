@@ -190,7 +190,7 @@ Some of the most widely used R packages on the HPC have non-trivial installation
     We attempt to keep these instructions reasonably up-to-date. However, given the nature of ongoing software and package updates, there may be discrepancies due to version changes. If you notice any instructions that don't work, [contact us](../../../support_and_training/consulting_services/) and we will help. 
     
 
-{==You have to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session to run the commands below.==} To install any of the R packages, first create a Conda environment with R installed in it:
+==You have to be in an [interactive terminal session](../../../running_jobs/interactive_jobs/) and not in an RStudio session to run the commands below.== To install any of the R packages, first create a Conda environment with R installed in it:
 ```bash
 micromamba create -n <env_name> r=4.4
 micromamba activate <env_name>

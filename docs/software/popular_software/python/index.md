@@ -94,7 +94,7 @@ A common culprit for package installation and loading failures that users run in
 ```
 where it will then store the installed packages. 
 
-While this can be convenient, it can also introduce problems. The primary issue is that {==Python, by default, will always search the path ~/.local/lib/python<version> corresponding to its own version when importing packages==}. For example, Python 3.9 will search ~/.local/lib/python3.9, while Python 3.10 will search ~/.local/lib/python3.10. This happens during both package installations and when importing libraries, even inside virtual environments, conda/mamba environments, or containers (which on our systems see your home directory by default). This can create cross-contamination issues if packages are installed outside the intended environment.
+While this can be convenient, it can also introduce problems. The primary issue is that ==Python, by default, will always search the path ~/.local/lib/python<version> corresponding to its own version when importing packages==. For example, Python 3.9 will search ~/.local/lib/python3.9, while Python 3.10 will search ~/.local/lib/python3.10. This happens during both package installations and when importing libraries, even inside virtual environments, conda/mamba environments, or containers (which on our systems see your home directory by default). This can create cross-contamination issues if packages are installed outside the intended environment.
 
 ### Example of package conflicts introduced by `~/.local`
 
@@ -104,7 +104,7 @@ Say a user needs a package `A` that relies on a dependency `depends` version `<1
 
 In general, it's best practice to **always** use some form of isolated environment when installing your packages. This means using something like a virtual environment, conda or mamba environment, or building a container. This ensures that you can easily switch between Python ecosystems for your various projects without worrying about how those ecosystems interact with one another. 
 
-Additionally, {==we strongly recommend installing Python packages on the command line and **not** in a Jupyter Notebook using `!pip install packagename`==}. This is because using a shell escape (`!`) in Jupyter executes bash commands in a subshell that does not have knowledge of the virtual environment you're using. This means packages installed that way will wind up in `~/.local`.
+Additionally, ==we strongly recommend installing Python packages on the command line and **not** in a Jupyter Notebook using `!pip install packagename`==. This is because using a shell escape (`!`) in Jupyter executes bash commands in a subshell that does not have knowledge of the virtual environment you're using. This means packages installed that way will wind up in `~/.local`.
 
 ### Resolving Conflicts
 

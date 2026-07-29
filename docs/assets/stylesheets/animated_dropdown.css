@@ -1,7 +1,7 @@
  
  /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  background-color: #eee;
+  background-color: #E2E9EB;
   color: #444;
   font-weight: bold;
   cursor: pointer;
@@ -14,24 +14,24 @@
 }
 
 [data-md-color-scheme="slate"] .collapsible {
-  background-color: #474747;
+  background-color: #28394a;
   color: #C6C6C6;
 }
 
 /* Add a background color to the button when it's focused */
 .collapsible:focus {
-  background-color: #ccc;
-  border: 2px solid #EF4056;
+  background-color: #ccd2d4;
+  border: 2px solid #1E5288;
 }
 
 [data-md-color-scheme="slate"] .collapsible:focus {
-  background-color: #474747;
+  background-color: #28394a;
   border: 2px solid #1E5288;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: #ccd2d4;
 }
 
 [data-md-color-scheme="slate"] .active, [data-md-color-scheme="slate"] .collapsible:hover {

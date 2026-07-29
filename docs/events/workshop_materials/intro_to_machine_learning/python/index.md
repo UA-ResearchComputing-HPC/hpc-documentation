@@ -23,7 +23,7 @@ The popularity of Python also means that there are a lot of moving pieces. Somet
 - Not all Python package managers play well with HPC environments
 
 ## Setting up Python for machine learning on HPC
-{==Use virtual environments to install Python packages.==} See [Python](../../../../software/popular_software/python/index.md) to learn how to create virtual environments with built-in Python tools. See [Anaconda](../../../../software/popular_software/anaconda/index.md) to learn how to create virtual environments with Conda (or its variants).
+==Use virtual environments to install Python packages.== See [Python](../../../../software/popular_software/python/index.md) to learn how to create virtual environments with built-in Python tools. See [Anaconda](../../../../software/popular_software/anaconda/index.md) to learn how to create virtual environments with Conda (or its variants).
 
 For the hands-on examples we will need the following packages (with GPU support):
 
@@ -527,7 +527,7 @@ The figure above shows that only when we plot `bill_length_mm` vs `bill_depth_mm
 
 #### Mean shift clustering
 
-{==Clustering is an unsupervised machine learning process==}, we do not provide any labels when we train the model. This is unlike the previous case of image classification, where we provided the labels (the species that image belonged to). What this means is that a clustering model will not be able to tell if a particular cluster corresponds to a penguin species (or any other suitable label depending on the problem), but it will show the clusters that are there in the dataset.
+==Clustering is an unsupervised machine learning process==, we do not provide any labels when we train the model. This is unlike the previous case of image classification, where we provided the labels (the species that image belonged to). What this means is that a clustering model will not be able to tell if a particular cluster corresponds to a penguin species (or any other suitable label depending on the problem), but it will show the clusters that are there in the dataset.
 
 In mean shift clustering, candidates for centroids are updated to be the mean of the points within a given region. Each observation belongs to the cluster with the nearest mean. See [Mean shift: a robust approach toward feature space analysis](https://ieeexplore.ieee.org/document/1000236) for more information on mean shift clustering.
 

@@ -16,11 +16,11 @@ A list of endpoint names managed by HPC are shown below for reference. For more 
 ## Accessing Globus
 Globus can be used as a web application. To access it, navigate to [https://www.globus.org/](https://www.globus.org/). Next, click **Log In** in the upper right-hand corner
 
-<img src="images/login.png" title="Globus login" style="width:100%;">
+<img src="images/login.png" title="Globus login" style="width:800px; box-shadow: 5px 5px 5px #999;">
 
 On the next page, enter **The University of Arizona** in the search field and click the result.
 
-<img src="images/university_name.png" title="Select university affiliation" style="width:100%; box-shadow: 5px 5px 5px #999;">
+<img src="images/university_name.png" title="Select university affiliation" style="width:800px; box-shadow: 5px 5px 5px #999;">
 
 This will take you through the standard university WebAuth login process. Once you successfully log in, you will be placed in a File Manager window. The various steps for setting up endpoints, initiating transfers, and viewing a transfer's progress can be found in the sections below.
 
@@ -33,11 +33,11 @@ To transfer files to/from your personal computer with Globus, you'll need to hav
 
 To start, regardless of operating system, go to [https://www.globus.org/](https://www.globus.org/), log in, navigate to the **Collections** tab, and select Get Globus Connect Personal
 
-<img src="images/get_gcp.png" title="Get Globus Connect Personal" style="width:100%; box-shadow: 5px 5px 5px #999;">
+<img src="images/get_gcp.png" title="Get Globus Connect Personal" style="width:800px; box-shadow: 5px 5px 5px #999;">
 
 From there, choose your operating system to proceed with the download and setup process
 
-<img src="images/gcp_choose_os.png" title="Download Globus Connect Personal" style="width:100%; box-shadow: 5px 5px 5px #999;">
+<img src="images/gcp_choose_os.png" title="Download Globus Connect Personal" style="width:800px; box-shadow: 5px 5px 5px #999;">
 
 === "Mac"
     Once you've downloaded the .dmg file, open it and drag/drop the Globus icon into your Applications directory
@@ -118,7 +118,7 @@ HPC managed endpoints allow you to connect to HPC-affiliated storage to initiate
 Below are a list of HPC managed endpoints and how to configure them:
 
 === "HPC Storage"
-    The endpoint for HPC can be found by typing {==**UA HPC Filesystems**==} in the search bar under the **Collections** tab.
+    The endpoint for HPC can be found by typing ==**UA HPC Filesystems**== in the search bar under the **Collections** tab.
 
     <img src="images/ua_hpc_filesystems_endpoint.png" title="UA HPC Filesystems endpoint" style="width:100%; box-shadow: 5px 5px 5px #999;">
     
@@ -135,7 +135,7 @@ Below are a list of HPC managed endpoints and how to configure them:
 
 === "Rental Storage"
 
-    The endpoint for [rental storage](../../storage/rental_storage/) (found on the filexfer nodes under ```/rental```) can be found by typing {==**UA Rental Storage Filesystem**==} in the search bar under the **Collections** tab.
+    The endpoint for [rental storage](../../storage/rental_storage/) (found on the filexfer nodes under ```/rental```) can be found by typing ==**UA Rental Storage Filesystem**== in the search bar under the **Collections** tab.
 
     <img src="images/globus_rental_endpoint.png" title="HPC rental endpoint" style="width:100%;box-shadow: 5px 5px 5px #999;">
 
@@ -153,7 +153,7 @@ Below are a list of HPC managed endpoints and how to configure them:
 
 === "Tier 2 AWS Storage"
 
-    To access a [Tier 2 AWS S3 bucket](../../storage/tier2_storage/), in the Collections tab, type {==**UA AWS S3**==} in the search bar. In the results, you should see the name UA AWS S3 show up with the description {==Subscribed Mapped Collection==}. Click the endpoint's name to proceed
+    To access a [Tier 2 AWS S3 bucket](../../storage/tier2_storage/), in the Collections tab, type ==**UA AWS S3**== in the search bar. In the results, you should see the name UA AWS S3 show up with the description ==Subscribed Mapped Collection==. Click the endpoint's name to proceed
 
     <img src="images/aws_s3_endpoint.png" title="Tier 2 AWS endpoint" style="width:100%; box-shadow: 5px 5px 5px #999;">
 

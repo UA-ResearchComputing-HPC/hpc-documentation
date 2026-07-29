@@ -289,7 +289,7 @@ Steps for Linux
 
 Connect to the HPC VPN, preferably with Cisco AnyConnect. For detailed information on connecting to the HPC VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/).
 
-Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
+Note that ==The HPC VPN== is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
 
 ### Installing visit
 

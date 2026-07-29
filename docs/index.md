@@ -1,5 +1,10 @@
+---
+icon: lucide/house
+---
+
 # Welcome to the UArizona HPC Documentation Site
-<link rel="stylesheet" href="assets/stylesheets/images.css">
+<link rel="stylesheet" href="./assets/stylesheets/extra.css">
+<link rel="stylesheet" href="./assets/stylesheets/images.css">
 
 
 <img class="img-right" src="assets/images/home/uofa_cactus_computing3.png" title="Computing cactus" alt="cactus" width="300px" style="margin: 10px;">

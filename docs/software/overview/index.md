@@ -1,6 +1,8 @@
-# Software Overview
+---
+icon: material/floppy
+---
 
-## Overview
+# Software
 
 ???+ warning "Module availability"
     Software modules are not available on the login nodes. To access them, you will need to connect to a compute node either via an interactive session or batch job.
@@ -24,9 +26,9 @@ The software is available in three different ways:
 
 It's important to note which cluster you're using for your analyses as all three do not share the same operating system, software, and libraries.
 
-{==Ocelote and ElGato both run on CentOS 7==} and share the same filesystem. This means identical software modules, compilers, and system libraries are available on both. 
+==Ocelote and ElGato both run on CentOS 7== and share the same filesystem. This means identical software modules, compilers, and system libraries are available on both. 
 
-{==Puma runs on Rocky Linux 9==} with different software modules, compilers, and system libraries than the other two systems.
+==Puma runs on Rocky Linux 9== with different software modules, compilers, and system libraries than the other two systems.
 
 When compiling your own software or installing packages (e.g., with Python, R, Julia, etc), take note of which cluster you're using as migrating between Puma and the other clusters may result in failures. 
 

@@ -36,11 +36,11 @@ Welcome to our Support Staff page, where you can get acquainted with the individ
   </div>
 
   <div class="card">
-    <img src="images/willis.png" title="Sara Willis" style="width:200px;">
+    <img src="images/willis.jpg" title="Sara Willis" style="width:200px;">
     <div class="container">
       <h4><b>Sara Willis</b></h4>
 
-      <p>Sara Willis is originally from the San Francisco Bay Area and graduated from The University of Arizona with a double major in math and physics. Following graduation, she transitioned to a role as a bioinformatician performing research in protein evolution. Finding she was weirdly passionate about software installations, writing and optimizing code, and debugging, she joined the HPC consulting team in 2019 to assist researchers with their computation.</p>
+      <p>Sara Willis graduated from The University of Arizona with a double major in math and physics. Following graduation, she transitioned to a role as a bioinformatician performing research in protein evolution. Finding she was weirdly passionate about software installations, writing and optimizing code, and debugging, she joined the HPC consulting team in 2019 to assist researchers with their computation.</p>
     </div>
   </div>
 

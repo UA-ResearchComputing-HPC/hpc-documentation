@@ -12,8 +12,8 @@
 ## Compute Resources Available by Cluster
 
 
-!!! info "The New Cat"
-    We are in the process of acquiring a new computing cluster, referred to as "The new cat". Information on the coming hardware is included in the tables below. {==This cluster is not available yet==}. We will notify the community as we get closer to its release 
+!!! info "The New Cat: Lynx"
+    We are in the process of acquiring a new computing cluster, Lynx. Information on the coming hardware is included in the tables below. ==This cluster is not available yet==. We will notify the community as we get closer to its release 
 
 Below is a list of the node types and physical hardware that are available on each cluster. These can be used as a reference when submitting jobs to the system to ensure you are targeting the correct machines and getting the computational resources you need.
 
@@ -87,7 +87,7 @@ Below is a list of the node types and physical hardware that are available on ea
 
     The Four A100 GPUs on Puma Node r7u25n1 are each subdivided into two smaller virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 40 GB of GPU memory. The increased VRAM enables workloads requiring more memory than the V100 GPUs. 
 
-    A limitation is that only one MIG slice can be addressed by a single application, so {==MIG slices are not appropriate for jobs utilizing multiple GPUs==}.
+    A limitation is that only one MIG slice can be addressed by a single application, so ==MIG slices are not appropriate for jobs utilizing multiple GPUs==.
 
     The addition of the MIG devices to the Slurm queues will have a number of impacts, and some users may need to make changes to submissions to ensure proper functioning of analyses. 
 

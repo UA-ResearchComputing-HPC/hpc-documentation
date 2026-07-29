@@ -1,6 +1,8 @@
 # Linux Cheat Sheet
 
+<link rel="stylesheet" href="../../../assets/stylesheets/code.css">
 ## Why Learn Bash
+
 
 Bash is a powerful command line shell that allows you to interact with our systems efficiently. It enables scripting and automation, job submission, file and directory management, remote access, resource monitoring, environment customization, parallel computing, data preprocessing, version control, error handling, software dependency management, custom workflows, and offers a valuable skill set applicable beyond HPC tasks. In other words, it allows you to do a lot!
 
@@ -179,14 +181,14 @@ When a permission is missing, you will see a ```-```
 ### Viewing Permissions
 To see a file or directory's file permissions, run the command ```ls -l```. This will show you output that looks like the following:
 
-<center><code style="background-color: #faca89;">-</code><code style="background-color: #fff0bf;">rwx</code><code style="background-color: #deffbf;">r-x</code><code style="background-color: #bffff6;">---</code><code> 1 </code><code style="background-color: #fff0bf;">username</code><code> </code><code style="background-color: #deffbf;">groupname</code><code> 0 Feb 27 09:54 file</code></center>
+<center><code class="perm-type">-</code><code class="perm-u">rwx</code><code class="perm-g">r-x</code><code class="perm-o">---</code><code> 1 </code><code class="perm-u">username</code><code> </code><code class="perm-g">groupname</code><code> 0 Feb 27 09:54 file</code></center>
 
 |String|Access Group|Meaning|
 |-|-|-|
-|<code style="background-color: #faca89;">-</code>|Tells you whether this item is a regular file (```-```), directory (```d```), or link ```(l)```|In this example, we're looking at a regular file|
-|<code style="background-color: #fff0bf;">rwx</code>|This describes the permissions that are set at the user level. In this case, they apply to the user with the username <code style="background-color: #fff0bf;">username</code>. Your username is your NetID| In this example, the file's owner can read, modify, and execute this file.|
-|<code style="background-color: #deffbf;">r-x</code>|This describes the permissions that are set at the group level. In this case, they apply to anyone who is a member of the group <code style="background-color: #deffbf;">groupname</code>. To see your groups you're a member of, run the command ```groups```.|In this example, group members are allowed to see and execute the contents of this file, but they cannot modify it. 
-|<code style="background-color: #bffff6;">---</code>|This describes the permissions that are set for anyone else on the system.|In this example, the rest of the HPC community can't see or edit the contents of this file and can't execute it|
+|<code class="perm-type">-</code>|Tells you whether this item is a regular file (`-`), directory (`d`), or link `(l)`|In this example, we're looking at a regular file|
+|<code class="perm-u">rwx</code>|This describes the permissions that are set at the user level. In this case, they apply to the owner with the username <code class="perm-u">username</code>. Your username is your NetID| In this example, the file's owner can read, modify, and execute this file.|
+|<code class="perm-g">r-x</code>|This describes the permissions that are set at the group level. In this case, they apply to anyone who is a member of the group <code class="perm-g">groupname</code>. To see your groups you're a member of, run the command `groups`.|In this example, group members are allowed to see and execute the contents of this file, but they cannot modify it. 
+|<code class="perm-o">---</code>|This describes the permissions that are set for anyone else on the system.|In this example, the rest of the HPC community can't see or edit the contents of this file and can't execute it|
 
 ### Changing Permissions
 
@@ -293,7 +295,7 @@ drwxr-sr-x. 2 netid hpcteam 0 Sep  4 12:50 parent_directory/
 
 #### Default Permissions
 
-The `umask` command controls the default file permissions for all new files and directories created {==at a user level==}. It defines which permissions should **not** be set by default, and thus indirectly determines the default permissions. 
+The `umask` command controls the default file permissions for all new files and directories created ==at a user level==. It defines which permissions should **not** be set by default, and thus indirectly determines the default permissions. 
 
 By setting an appropriate `umask`, you can ensure that files and directories are created with the permissions that are appropriate for your collaborative environment.
 
@@ -329,7 +331,7 @@ Note how once `umask` is set by the user, the default permissions applied to the
 
 Some things to keep in mind: 
 
-* {==`umask` only affects your active terminal session and does not propagate to future sessions.==} This means if you log out and log back in, your umask will be reset to the system default. If you'd like your default file permissions to be permanently changed, you can add your `umask` command to your ~/.bashrc. For more information on this file, see [hidden files and directories](#hidden-files-and-directories) above. 
+* ==`umask` only affects your active terminal session and does not propagate to future sessions.== This means if you log out and log back in, your umask will be reset to the system default. If you'd like your default file permissions to be permanently changed, you can add your `umask` command to your ~/.bashrc. For more information on this file, see [hidden files and directories](#hidden-files-and-directories) above. 
 
 * `umask` applies to **all** new files and directories you create, so you'll want to make sure you are not inadvertently giving unwanted access to your data.
 

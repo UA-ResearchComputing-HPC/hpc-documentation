@@ -1,5 +1,6 @@
-Visualization Consulting
-========================
+# Visualization Consulting
+
+---
 
 <span class="s1">To see a gallery of past projects please visit
 <a href="https://rtdatavis.github.io/" class="external-link">https://rtdatavis.github.io/</a>.  

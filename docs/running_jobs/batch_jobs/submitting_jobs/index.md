@@ -2,11 +2,11 @@
 
 ## Submitting a Job
 
-To submit a batch job to the scheduler, use the command ```sbatch```. This will place your job in line for execution and will return a job ID that you can use to [track and monitor your job](../../system_commands/). 
+To submit a batch job to the scheduler, use the command `sbatch`. This will place your job in line for execution and will return a job ID that you can use to [track and monitor your job](../../system_commands/). 
 
 As an example:
 
-```
+```bash
 [netid@gpu66 hello_world]$ sbatch hello_world.slurm
 Submitted batch job 807387
 [netid@gpu66 hello_world]$ squeue --job 807387
@@ -14,7 +14,7 @@ Submitted batch job 807387
             807387  standard hello_wo    netid PD       0:06      1 
 ```
 
-The command ```squeue``` gives us detailed information about our batch jobs while they're in queue or running. Under the heading ```ST``` you can check the state of your job. In this case, it's pending (```PD```) which means it's waiting in line with other jobs. Once the job starts running, it's state will change to ```R```, and when the job has completed running, ```squeue``` will return a blank line. 
+The command `squeue` gives us detailed information about our batch jobs while they're in queue or running. Under the heading ```ST``` you can check the state of your job. In this case, it's pending (`PD`) which means it's waiting in line with other jobs. Once the job starts running, it's state will change to ```R```, and when the job has completed running, `squeue` will return a blank line. 
 
 
 
@@ -33,7 +33,7 @@ The best way to submit related jobs is to use job arrays. Jobs arrays allow user
 
 ## Output Files
 
-Once your job completes, you should see an output file {==in the directory where you submitted the batch script==}. This output file captures anything that would have been printed to the terminal if you had run it interactively. By default, output filenames will be ```slurm-<jobid>.out```(1). In the example above, this translates to filename ```slurm-807387.out```. 
+Once your job completes, you should see an output file ==in the directory where you submitted the batch script==. This output file captures anything that would have been printed to the terminal if you had run it interactively. By default, output filenames will be `slurm-<jobid>.out`(1). In the example above, this translates to filename `slurm-807387.out`. 
 { .annotate }
 
 1.  Custom output filenames can be set with [batch directives](../batch_directives/).

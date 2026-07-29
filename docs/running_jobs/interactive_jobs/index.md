@@ -57,8 +57,8 @@ The values shown in the output can be combined and each mean the following:
 |```-t```|The amount of time to reserve for your job in the format ```hhh:mm:ss```.|```-t 05:00:00```|
 |```-n```|Total number of tasks (CPUs) to allocate to your job. By default, these CPUs will be allocated on a single node.|```-n 16```|
 |```-N```|Total number of nodes (physical computers) to allocate to your job.|```-N 2```|
-|```-m```|Total amount of memory {==per CPU==}. See [CPUs and Memory](../cpus_and_memory/) for more details and information on potential complications.|```-m 5gb```|
-|```-Q```|Used to access {==high priority or qualified hours==}. Only for groups with [buy-in or special project hours](../../resources/allocations/).|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
+|```-m```|Total amount of memory ==per CPU==. See [CPUs and Memory](../cpus_and_memory/) for more details and information on potential complications.|```-m 5gb```|
+|```-Q```|Used to access ==high priority or qualified hours==. Only for groups with [buy-in or special project hours](../../resources/allocations/).|High Priority: ```-Q user_qos_<PI NETID>```<br>Qualified: ```-Q qual_qos_<PI NETID>```|
 |```-g```|Request one GPU. This flag takes no arguments. On Puma, you may be allocated **either** a v100 **or** [a MIG slice](../../resources/compute_resources/#__tabbed_2_1). If you want more control over your resources, you can use [`salloc` directly](#the-salloc-command) using [GPU batch directives](../batch_jobs/batch_directives/#gpus).|```-g```|
 |```-x```|Enable [X11 forwarding](/registration_and_access/system_access/#x11-forwarding). This flag takes no arguments.|```-x```|
 

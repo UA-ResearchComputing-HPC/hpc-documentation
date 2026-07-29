@@ -14,6 +14,7 @@
   --md-mermaid-label-fg-color: #1F2933;
   --md-mermaid-edge-color: #4DA8C7;
   --md-mermaid-sequence-number-fg-color: #1F2933;
+  --md-typeset-mark-color: #fac21b87;
 }
 
 
@@ -26,6 +27,7 @@
   --md-primary-fg-color:        #0C234B;
   --md-accent-fg-color: #81D3EB;
   --md-typeset-a-color:  #81D3EB;
+  --md-typeset-mark-color: #0888a4a1;;
 }
 
 [data-md-color-scheme="slate"] .md-typeset a {
@@ -170,11 +172,11 @@
   color: #1F6F78;
 }
 
-/* Modify the footer color. Wait to activate this when Zensical is live.
+
 .md-footer-meta {
   background-color: #F4EDE5
 }
-*/
+
 
 [data-md-color-scheme="slate"] .md-footer-meta {
   background-color: #2B2622

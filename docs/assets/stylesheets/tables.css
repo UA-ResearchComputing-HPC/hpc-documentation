@@ -59,3 +59,12 @@
 .storage-summary-table td:nth-child(3) {
     width: 150px; 
 }
+
+
+[data-md-color-scheme="uofa_light"] .limits-header {
+    background-color: #E2E9EB;
+}
+
+[data-md-color-scheme="slate"] .limits-header {
+    background-color: #2D3E50;
+}

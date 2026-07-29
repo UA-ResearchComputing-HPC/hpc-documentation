@@ -4,7 +4,7 @@
 
 When you lose affiliation with the university, such as through graduation or leaving a work position, access to HPC resources will be automatically terminated on the effective date listed in the University of Arizona Records Database. You will receive an automated email notification from our systems with your account's deactivation date.
 
-{==We are unable to extend HPC access for those losing affiliation==}. However, you may retain access by registering as a [Designated Campus Colleague (DCC)](https://it.arizona.edu/service/designated-campus-colleague-accounts) through Human Resources. 
+==We are unable to extend HPC access for those losing affiliation==. However, you may retain access by registering as a [Designated Campus Colleague (DCC)](https://it.arizona.edu/service/designated-campus-colleague-accounts) through Human Resources. 
 
 See below for more information on the specific effects of affiliation loss and our data retention policies. 
 
@@ -26,7 +26,7 @@ PIs who retire **without** emeritus status, or who leave The University of Arizo
 - They may not request additional storage such as xdisk.
 - They must be sponsored by an active university PI or faculty member to maintain continued access the system. To request HPC sponsorship, see the **I'm a student, postdoc, staff member, or Designated Campus Colleague** dropdown under **How to Register** on our [account creation page](../../registration_and_access/account_creation/).
 
-Note that they will be able to retain their `/groups` storage space. However, if there is a gap between when their faculty position ends and their DCC status begins, their `/groups` allocation may be removed for the duration of their affiliation loss and all associated data deleted. {==It's important to back up all HPC data to prevent unwanted loss==}. If any files have been removed, retrieval may be possible if you [contact our consulting services](../../support_and_training/consulting_services/) *as soon as possible*. Retrieval of deleted `/groups` data after 90 days have elapsed is not possible. 
+Note that they will be able to retain their `/groups` storage space. However, if there is a gap between when their faculty position ends and their DCC status begins, their `/groups` allocation may be removed for the duration of their affiliation loss and all associated data deleted. ==It's important to back up all HPC data to prevent unwanted loss==. If any files have been removed, retrieval may be possible if you [contact our consulting services](../../support_and_training/consulting_services/) *as soon as possible*. Retrieval of deleted `/groups` data after 90 days have elapsed is not possible. 
 
 ## Sponsored Users Loss of Affiliation
 

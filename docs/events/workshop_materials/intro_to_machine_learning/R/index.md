@@ -199,7 +199,7 @@ The figure above shows that only when we plot `bill_length_mm` vs `bill_depth_mm
 
 #### K-means clustering
 
-{==Clustering is an unsupervised machine learning process==}, we do not provide any labels when we train the model. This is unlike the next examples, where we provided the labels. What this means is that a clustering model will not be able to tell if a particular cluster corresponds to a penguin species (or any other suitable label depending on the problem), but it will show the clusters that are there in the dataset. 
+==Clustering is an unsupervised machine learning process==, we do not provide any labels when we train the model. This is unlike the next examples, where we provided the labels. What this means is that a clustering model will not be able to tell if a particular cluster corresponds to a penguin species (or any other suitable label depending on the problem), but it will show the clusters that are there in the dataset. 
 
 In K-means clustering the dataset is partitioned into K clusters, and each observation belongs to the cluster with the nearest mean (also known as centroid). The `stats` module of R comes with an implementation of K-means. See [A K-means clustering algorithm](https://academic.oup.com/jrsssc/article-abstract/28/1/100/6953842?login=false) for more information on the algorithm used in R's implementation of K-means clustering. K-means while one of the most popular clustering methods comes with the caveat that we have to choose K. The algorithm will then find those K clusters. There is no standard way to decide on a value of K. To keep things simple, here we will look at the `bill_length_mm` vs `bill_depth_mm` subset of the `penguins` dataset, which has at least two clusters.
 

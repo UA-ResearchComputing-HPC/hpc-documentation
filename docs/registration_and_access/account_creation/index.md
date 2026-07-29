@@ -31,12 +31,6 @@ The general process for obtaining access is:
 
 
 ```mermaid
----
-
-config:
-  theme: base
-  look: handDrawn
----
 flowchart LR
         A["Are you a<br>PI or faculty <br>member?"]
         A -->|yes| B["Create HPC<br>group"]

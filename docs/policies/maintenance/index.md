@@ -23,14 +23,14 @@ The notification will describe the nature and extent (partial or full) of the in
 ### System-wide Maintenance
 
 !!! abstract "Impacts to job queues"
-    During system-wide maintenance cycles, {==jobs queues are impacted **before and during** maintenance==}. Jobs submitted whose runtimes would overlap with maintenance are held until maintenance is concluded.
+    During system-wide maintenance cycles, ==jobs queues are impacted **before and during** maintenance==. Jobs submitted whose runtimes would overlap with maintenance are held until maintenance is concluded.
 
 Some maintenance cycles require the entire system to be taken offline. In preparation, batch queues will be modified prior to scheduled downtimes to hold jobs which request more wallclock time than remains before the shutdown. Held jobs will be released to run once maintenance concludes.
 
 ### Rolling maintenance
 
 !!! abstract "Impacts to job queues"
-    During rolling maintenance cycles, {==job queues are impacted **during and after** maintenance==}. All nodes are drained, meaning they cannot accept new jobs and must allow running jobs to complete before they can be updated, rebooted, and put back online. The system may be slower to accept new jobs for 10 days following these maintenance cycles.
+    During rolling maintenance cycles, ==job queues are impacted **during and after** maintenance==. All nodes are drained, meaning they cannot accept new jobs and must allow running jobs to complete before they can be updated, rebooted, and put back online. The system may be slower to accept new jobs for 10 days following these maintenance cycles.
 
 Rolling maintenance cycles are implemented to facilitate updates or maintenance tasks without necessitating a complete system shutdown. Throughout rolling maintenance, nodes will stop accepting new jobs, allowing currently running tasks to finish uninterrupted. As nodes gradually become vacant, they are taken offline, updated, rebooted, and then restored to service. This iterative process ensures minimal disruption to ongoing computational tasks while maintenance is underway. It's important to note that during rolling maintenance cycles, job queues may experience a temporary slowdown as nodes await reboot.
 

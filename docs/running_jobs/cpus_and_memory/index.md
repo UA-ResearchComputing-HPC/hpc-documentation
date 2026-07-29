@@ -4,7 +4,7 @@
 
 Before submitting your job to the scheduler, it's important to know that the number of CPUs you allocate to your job determines the amount of memory you receive. 
 
-{==Each cluster has a fixed amount of memory per CPU based on the node type==}. Accepted values by cluster and node type are listed below, including the number of each type of node:
+==Each cluster has a fixed amount of memory per CPU based on the node type==. Accepted values by cluster and node type are listed below, including the number of each type of node:
 
 |Cluster|Standard Node|*Count*|High-Memory Node|*Count*|GPU Node|*Count*|
 |-|-|-|-|-|-|-|
@@ -57,7 +57,7 @@ Note that there is no deterministic method of finding the exact amount of memory
 
 ## Things to Watch out for
 
-Be careful when requesting memory and memory per CPU. Note that {==if you request invalid mem/cpu values, unpredictable results may occur==}:
+Be careful when requesting memory and memory per CPU. Note that ==if you request invalid mem/cpu values, unpredictable results may occur==:
 
 - **Memory and CPU Mismatches**
 

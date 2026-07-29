@@ -75,7 +75,7 @@ If you are a faculty member and are teaching a course that makes use of HPC reso
 
 ### Class Group Restrictions
 
-Due to Arizona sales tax restrictions {==class groups are restricted to the Ocelote cluster and cannot use Puma==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
+Due to Arizona sales tax restrictions ==class groups are restricted to the Ocelote cluster and cannot use Puma==. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
 
 ```bash
 #SBATCH --account=hpc101
@@ -98,7 +98,7 @@ Once this process is complete, you can find your group's dropdown under the **Gr
 Students in your class group will only be able to access files and directories owned by the class group. This means they will not be able to access files and directories owned by your standard research group. 
 
 ### Running Jobs and Allocations
-Due to Arizona sales tax restrictions {==class groups may only use the Ocelote cluster==}. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
+Due to Arizona sales tax restrictions ==class groups may only use the Ocelote cluster==. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
 
 ```bash
 #SBATCH --account=hpc101

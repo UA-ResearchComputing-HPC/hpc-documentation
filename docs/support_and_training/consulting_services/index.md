@@ -6,19 +6,16 @@
 ## HPC Consulting Services
 
 !!! abstract "Important: Listserv Changes"
-    {==Starting Wednesday, July 30, 2025, **emails sent to the hpc-consult listserv automatically create a ticket in ServiceNow**==}. This change helps us improve support tracking. Submitting tickets directly via the ServiceNow link below remains unchanged.
 
-    Please note that {==**when you email hpc-consult, we will reach out to you via the generated ServiceNow ticket and will not respond to your email directly**.==}
+    ==Starting Wednesday, July 30, 2025, **emails sent to the hpc-consult listserv automatically create a ticket in ServiceNow**==. This change helps us improve support tracking. Submitting tickets directly via the ServiceNow link below remains unchanged.
+
+    Please note that ==**when you email hpc-consult, we will reach out to you via the generated ServiceNow ticket and will not respond to your email directly**.==
 
 
 ### Services We Offer
 
-<!-- <img class="img" src="images/SupportServicesInfoSlide.jpg" title="Support Services Info" width="800px" style="padding: 20px;"> -->
 
-
-
-
-<html><center><a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d" title="Click here to open a ServiceNow ticket" class="md-button">Contact Us</a></center></html>
+<html><center><a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d" title="Click here to open a ServiceNow ticket" class="md-button md-button--primary" target="blank">Contact Us</a></center></html>
 
 
 <img class="img-right" src="images/HelpDesk_0.png" title="Helpdesk illustration" width="350px" style="padding: 20px;">
@@ -38,9 +35,9 @@ To ensure you get the fastest and most accurate support possible, please take a 
 1. **Submit a Ticket**
 
     !!! info "Use of hpc-consult"
-        If you are using the retired hpc-consult listserv to contact us, please note that this will automatically generate a ServiceNow ticket. {==We will reply to you via a ServiceNow email and will not respond to your email directly==}. 
+        If you are using the retired hpc-consult listserv to contact us, please note that this will automatically generate a ServiceNow ticket. ==We will reply to you via a ServiceNow email and will not respond to your email directly==. 
     
-    When reaching out to the consulting team, please use a [ServiceNow ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d). Submitting a ticket immediately notifies all members of our team and allows us to efficiently track and coordinate responses. This is the fastest and most reliable way to receive support (we promise!).
+    When reaching out to the consulting team, please use a <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d" target="blank">ServiceNow ticket</a>. Submitting a ticket immediately notifies all members of our team and allows us to efficiently track and coordinate responses. This is the fastest and most reliable way to receive support (we promise!).
 
     Please **do not** email individual staff members directly(1), reply to HPC announcements, or start help threads using the hpc-chat listserv(2). Communications sent this way aren't tracked and may be overlooked. If we receive a support question through one of these channels, we’ll open a ServiceNow ticket on your behalf so our team can respond through the proper system.
     { .annotate }

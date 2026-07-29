@@ -21,7 +21,7 @@ To gain access, you will need to submit a [Soteria request form](https://forms.o
 
 - [x] **Assignment to the Soteria VPN**
 
-    Once you have completed your required training, the CRRSP team will notify you via email when you have been assigned access to the Soteria VPN. This VPN is an important part of our HIPAA compliance and differentiates Soteria usage from the standard HPC clusters. {==Soteria access cannot be established when not connected to the VPN==}. For VPN access, use: ```vpn.arizona.edu/soteria```.
+    Once you have completed your required training, the CRRSP team will notify you via email when you have been assigned access to the Soteria VPN. This VPN is an important part of our HIPAA compliance and differentiates Soteria usage from the standard HPC clusters. ==Soteria access cannot be established when not connected to the VPN==. For VPN access, use: `vpn.arizona.edu/soteria`.
 
     <img src="images/vpn_screenshot.jpg" title="Soteria VPN connection" width=400px style="box-shadow: 5px 5px 5px #999">
 

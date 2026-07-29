@@ -1,6 +1,10 @@
-<link rel="stylesheet" href="/assets/stylesheets/tables.css">
+---
+icon: material/database
+---
 
-# Storage Overview
+<link rel="stylesheet" href="../../../assets/stylesheets/tables.css">
+
+# Storage 
 
 ## Where Should I Store My Data?
 

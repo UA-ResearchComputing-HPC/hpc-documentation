@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
+<link rel="stylesheet" href="../../assets/stylesheets/code.css">
 # Accessing Compute Nodes
 
 ### The Compute Nodes
@@ -122,9 +123,9 @@ Batch jobs are the real workhorses of HPC. In contrast to interactive jobs, batc
 
 Batch jobs are run using batch scripts. Batch scripts are just text files that act as blueprints that the scheduler uses to allocate resources and execute the terminal commands needed to run your analysis. Batch scripts have three sections: 
 
-1. <mark style="background-color: #d7fbff;">The "**shebang**"</mark> will always be the line ```#!/bin/bash```. This tells the system to interpret your file as a bash script. Our HPC systems use bash for all our environments, so it should be used in your scripts to get the most consistent, predictable results.
-2. <mark style="background-color: #e6fff2;">The **directives** section</mark> will have multiple lines, all of which start with ```#SBATCH```. These lines are interpreted as [Slurm directives](../../running_jobs/batch_jobs/batch_directives/) by the scheduler and are how you request resources on the compute nodes, set your output filenames, set your job name, request emails, etc. 
-3. <mark style="background-color: #feffe6;">The **code** section</mark> in your script is a set of bash commands that tells the system how to run your analyses.
+1. <div class="code-line-header">The "**shebang**"</div> will always be the line ```#!/bin/bash```. This tells the system to interpret your file as a bash script. Our HPC systems use bash for all our environments, so it should be used in your scripts to get the most consistent, predictable results.
+2. <div class="code-line-batch">The **directives** section</div> will have multiple lines, all of which start with ```#SBATCH```. These lines are interpreted as [Slurm directives](../../running_jobs/batch_jobs/batch_directives/) by the scheduler and are how you request resources on the compute nodes, set your output filenames, set your job name, request emails, etc. 
+3. <div class="code-line-bash">The **code** section</div> in your script is a set of bash commands that tells the system how to run your analyses.
 
 An example batch script might look like the following:
 
@@ -132,7 +133,7 @@ An example batch script might look like the following:
 
 <html>
 <div class="code-container">
-  <pre style="background-color: transparent;"><code  style="background-color: transparent;"><div style="background-color: #d7fbff; padding: 10px;">#!/bin/bash</div><div style="background-color: #e6fff2; padding: 10px;"><span># --------------------
+  <pre style="background-color: transparent;"><code  style="background-color: transparent;"><div class="code-line-header">#!/bin/bash</div><div class="code-line-batch"><span># --------------------
 ### Directives Section
 # --------------------
 #SBATCH --job-name=hello_world
@@ -140,7 +141,7 @@ An example batch script might look like the following:
 #SBATCH --partition=standard
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=00:01:00</span></div><div style="background-color: #feffe6; padding: 10px;"># --------------------
+#SBATCH --time=00:01:00</span></div><div class="code-line-bash"># --------------------
 ### Code Section
 # --------------------
 echo "Hello world, I am running on compute node $HOSTNAME"

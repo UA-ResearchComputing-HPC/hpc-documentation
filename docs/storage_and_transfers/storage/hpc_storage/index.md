@@ -35,7 +35,7 @@ Our performant HPC storage array is designed for high performance, not long-term
 
 Our capacity HPC storage is intended for longer term usage at an affordable rate. The filesystem is `/rental`. We discourage running computations directly from the rental storage.
 
-1. **{==Important: Your Data are Not Backed Up==}**
+1. **==Important: Your Data are Not Backed Up==**
 
     Data stored on our system are not backed up. While we strive for high reliability, we cannot guarantee data recovery in the event of hardware failure, accidental deletion, or account termination. Our storage arrays implement Snapshots so we may be able to restore your data if you notify us promptly.
 
@@ -67,7 +67,7 @@ The ```/tmp``` directory is also available to users, and refers to the local dis
     
 - [x] **Data Locality**
 
-	If you are using `/rental` storage you must consider performance. {==Important: It is highly recommended that you do not run your compute directly from the /rental storage==}
+	If you are using `/rental` storage you must consider performance. ==Important: It is highly recommended that you do not run your compute directly from the /rental storage==
 
 	1. You can copy your data for the job within your submission script. So copy the data to /groups or /xdisk and copy results back to `/rental` when complete.
 

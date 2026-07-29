@@ -25,11 +25,11 @@ jobs:
         with: 
           python-version: '3.10'
 
-      - name: Install mkdocs
-        run: pip install mkdocs-material
+      - name: Install zensical
+        run: pip install zensical
       
       - name: Build documentation
-        run: mkdocs build
+        run: zensical build --clean
 
       - name: Sync with S3
         run: | 

@@ -1,5 +1,7 @@
 # Job Limits
 
+<link rel="stylesheet" href="../../assets/stylesheets/tables.css">
+
 ## Job Limits
 
 To ensure equitable access and efficient use of our clusters, we impose restrictions on the total compute resources available to individual users, jobs, and HPC groups. These limits vary based on the specific cluster and partition in use. 
@@ -25,7 +27,7 @@ The table below outlines the maximum resources that can be concurrently used at 
     </thead>
     <tbody>
         <tr>
-            <th colspan="4" style="background-color: #E2E9EB;">Global Limits</th>
+            <th colspan="4" class="limits-header">Global Limits</th>
         </tr>
         <tr>
             <td>Maximum Simultaneous User Jobs</td>
@@ -38,7 +40,7 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>10 days</td>
         </tr>
         <tr>
-            <th colspan="4" style="background-color: #E2E9EB;">Standard Job Resources</th>
+            <th colspan="4" class="limits-header">Standard Job Resources</th>
         <tr>
             <td>Maximum Memory Per Group</td>
             <td>16996 GB</td>
@@ -55,7 +57,7 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>10</td>
         </tr>
         <tr>
-            <th colspan="4" style="background-color: #E2E9EB;">Windfall Job Resources</th>
+            <th colspan="4" class="limits-header">Windfall Job Resources</th>
         </tr>
         <tr>
             <td>Maximum Memory per User</td>
@@ -73,7 +75,7 @@ The table below outlines the maximum resources that can be concurrently used at 
             <td>Unlimited</td>
         </tr>
         <tr>
-            <th colspan="4" style="background-color: #E2E9EB;">High Priority Job Resources</th>
+            <th colspan="4" class="limits-header">High Priority Job Resources</th>
         <tr>
             <td>Maximum CPUs per Group</td>
             <td>Number Purchased</td>

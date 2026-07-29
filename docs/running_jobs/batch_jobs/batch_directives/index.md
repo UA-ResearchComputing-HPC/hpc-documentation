@@ -183,29 +183,6 @@ To specify the number of CPUs per node, use
 
     If your application is not MPI-enabled, always set ```--nodes=1```
 
-<!-- 
-## Memory and High Memory Nodes
-
-!!! tip "Memory and CPUs are connected"
-    More detailed information on memory and CPU requests can be found on our [CPUs and Memory page](../../cpus_and_memory/).
-    
-!!! warning "Include Units"
-    If you exclude ```gb``` from your memory request, Slurm will default to `mb`.
-
-Memory is an optional flag. By default, the scheduler will allocate you the [standard CPU/memory ratio](../../cpus_and_memory/) available on the cluster. 
-
-Memory can either be requested with the ```--mem``` or ```--mem-per-cpu``` flags. The ```--mem``` flag indicates the amount of {==Memory per **node**==} to allocate to your job. If you are running multi-node MPI jobs with this flag, the total amount of memory you will receive will be ```mem```$\times$```nodes```
-
-The general syntax for requesting ```<N>``` GB of memory per node is
-```
-#SBATCH --mem=<N>gb
-```
-or, to request ```<N>``` GB of memory per CPU:
-```
-#SBATCH --mem-per-cpu=<N>gb
-``` 
--->
-
 ## High Memory Nodes
 
 !!! danger "Ocelote high memory node"
@@ -333,8 +310,6 @@ Filenames take patterns that allow for job information substitution. A list of f
 |```%N```|Hostname of the first compute node allocated to the job|<pre><code>#SBATCH -o %N.out</code></pre>|```r1u11n1.out```|
 |```%u```|Username|<pre><code>#SBATCH -o %u.out</code></pre>|```netid.out```|
 |```%x```|Job name|<pre><code>#SBATCH --job-name=JobName<br>#SBATCH -o %x.out</code></pre>|```JobName.out```|
-
-[^1]: Groups and users are subject to limitations on resource usage. For more information, see [job limits](/running_jobs/job_limits/).
 
 
 ## Additional Directives

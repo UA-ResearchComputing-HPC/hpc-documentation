@@ -52,7 +52,7 @@ flowchart LR
 - Computers aren't smart, but can be (over)confident
 - While we do not manually code the individual steps in the program, we still do a lot
     - We decide which model, data, training hyperparameters, ...
-- {==Data is central to machine learning==}
+- ==Data is central to machine learning==
     - Untrained models are generally no better than random chance
     - Trained models often learn biases in data
 - Lot of machine learning has traditionally been known as Statistics

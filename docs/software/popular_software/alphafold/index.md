@@ -51,7 +51,7 @@ You can find out the full list of options that you can specify by loading the mo
 
 ## AlphaFold 3
 
-We host AlphaFold version 3.0.0. Unlike AlphaFold 2, AlphaFold 3 is not completely free. We host the datasets it needs for inference. However, you need to obtain the model parameters from Google directly. {==Fill and submit [this form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform) to request access to the model parameters from Google.==} Please ensure that you have read the terms and conditions mentioned in the form and that you can comply with them.
+We host AlphaFold version 3.0.0. Unlike AlphaFold 2, AlphaFold 3 is not completely free. We host the datasets it needs for inference. However, you need to obtain the model parameters from Google directly. ==Fill and submit [this form](https://docs.google.com/forms/d/e/1FAIpQLSfWZAgo1aYk0O4MuAXZj8xRQ8DafeFJnldNOnh_13qAx2ceZw/viewform) to request access to the model parameters from Google.== Please ensure that you have read the terms and conditions mentioned in the form and that you can comply with them.
 
 After Google approves your request, they will send you an email with a link to download a file containing the model parameters. You will likely download the file on your local computer, it is little less than 1 GB in size. Use one of our file [transfer](../../../storage_and_transfers/transfers/overview/index.md) options to transfer this file to your HPC storage. The model parameters file is in a compressed format. You will need to decompress it to use it. From an interactive session, run:
 

@@ -60,7 +60,7 @@ When you submit a job array, Slurm will assign a single job ID to the array. Whe
 
 ## Output Files
 
-Each subjob in an array produces its own output file. By default, these are formatted as ```slurm-<parent_job_id>_<job_array_index>.out```. {==Be careful if you [set your own custom output filenames](../batch_directives/#output-filenames). ==} If the output filenames are not distinguished from one another using an array task ID, your output files will overwrite one another. 
+Each subjob in an array produces its own output file. By default, these are formatted as ```slurm-<parent_job_id>_<job_array_index>.out```. ==Be careful if you [set your own custom output filenames](../batch_directives/#output-filenames).== If the output filenames are not distinguished from one another using an array task ID, your output files will overwrite one another. 
 
 
 ## Example Jobs

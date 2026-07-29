@@ -14,7 +14,7 @@ VS Code can also be run locally on laptop or desktop computers and used to make 
 
 ## General Method
 
-{==Remote VSCode sessions should connect to a compute node==}. The reasons for this are:
+==Remote VSCode sessions should connect to a compute node==. The reasons for this are:
 
 1. Connecting to the bastion host (hostname: `hpc.arizona.edu`) will generate files that may overfill your 10 MB quota. This can cause unpredictable connection issues for any future SSH sessions. Additionally, the bastion host is not connected to the shared storage array which means your HPC files will not be accessible.
 
@@ -25,7 +25,7 @@ Briefly, the general procedure is as follows:
 ```mermaid
 graph LR
 subgraph Only needed once
-    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style A fill:#C69A2D,stroke:#333,stroke-width:2px
     A[Set up SSH keys<br>on the filexfer nodes.]
 end
 A -.-> B[Connect to the HPC VPN]
@@ -38,7 +38,7 @@ C --> D[Connect VSCode to the<br>allocated compute node]
 
 **Step 1: Set up SSH key authentication**
 
-{==This step needs to be performed one time only==}. Once you've set up SSH keys, they will persist in your environment for subsequent sessions. The hostname for the file transfer nodes is `filexfer.hpc.arizona.edu`. Once this process is complete, it will allow VS Code to directly connect to the HPC systems without using passwords or Duo authentication (which may cause connection issues). 
+==This step needs to be performed one time only==. Once you've set up SSH keys, they will persist in your environment for subsequent sessions. The hostname for the file transfer nodes is `filexfer.hpc.arizona.edu`. Once this process is complete, it will allow VS Code to directly connect to the HPC systems without using passwords or Duo authentication (which may cause connection issues). 
 
 We have detailed documentation for setting up SSH keys on the bastion host here: [SSH Keys](/registration_and_access/system_access/#ssh-keys). Follow the procedure documented on that page, but replace `hpc.arizona.edu` in any commands with `filexfer.hpc.arizona.edu`.
 
@@ -46,7 +46,7 @@ We have detailed documentation for setting up SSH keys on the bastion host here:
 
 Connect to the HPC VPN, preferably with Cisco AnyConnect. For detailed information on connecting to the HPC VPN, see [VPN - Virtual Private Network](../../../registration_and_access/vpn/).
 
-Note that {==The HPC VPN==} is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
+Note that ==The HPC VPN== is needed to connect directly to a compute node. This differs from the standard UArizona VPN or campus network which are not sufficient. The HPC VPN is `vpn.hpc.arizona.edu`.
  
 **Step 3: Start an HPC job for the length of time that you’d like to connect VS Code**
 

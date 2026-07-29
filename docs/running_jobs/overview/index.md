@@ -1,4 +1,8 @@
-# Overview
+---
+icon: material/rocket-launch-outline
+---
+
+# Running Jobs
 
 HPC operates as a shared system with resources in high demand. Computational tasks must be executed as jobs on dedicated compute resources. These resources are granted to each user for a limited time per session, and sessions are organized by [Slurm](https://slurm.schedmd.com/), an open source, fault-tolerant, and highly scalable cluster manager and task scheduler. Users can interact with Slurm via an internet browser through [Open OnDemand](https://ood.hpc.arizona.edu), or via an [SSH connection](../../registration_and_access/system_access/#command-line-access) to one of the login nodes to start an [interactive job](../interactive_jobs/) or [submit a batch job](../batch_jobs/intro/). 
 

@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="../../assets/stylesheets/images.css">
 
-[Launch Open OnDemand](https://ood.hpc.arizona.edu/){ .md-button }
+[Launch Open OnDemand](https://ood.hpc.arizona.edu/){ .md-button .md-button--primary }
 
 Open OnDemand (OOD), which is an NSF-funded open-source HPC portal, is available for users and provides web browser access for graphically interfacing with HPC. This service is available at [https://ood.hpc.arizona.edu/](https://ood.hpc.arizona.edu/). 
 
@@ -118,7 +118,7 @@ First, select the desired application from Interactive Apps. This will take you 
 |Queue|The partition to use. Standard is the most common. If your group has buy-in hours, you may use High Priority. If you need access to GPUs, select your partition in the dropdown with the additional descriptor "With GPU(s)"|Standard|
 |Run Time|The number of hours to reserve for your job. The maximum allowable is 96 hours (4 days).|10|
 |Core Count on a single node| The number of CPUs needed. This affects the amount of memory your job is allocated. The maximum that can be requested is [dependent on which cluster you choose](../../resources/compute_resources/). | 8|
-|Memory per core|The amount of memory needed {==per core==} in GB. The amount that can be requested is dependent on which cluster you choose and your desired node type. For more information, see our [CPUs and Memory page](../cpus_and_memory/).|5GB/core|
+|Memory per core|The amount of memory needed ==per core== in GB. The amount that can be requested is dependent on which cluster you choose and your desired node type. For more information, see our [CPUs and Memory page](../cpus_and_memory/).|5GB/core|
 |PI Group|Your accounting group. If you do not know your group name, you can either check in the user portal, or can run `va` on the command line. If the group you entered does not exist, you will receive an error `sg: group 'group_name' does not exist`|your-group|
 
 

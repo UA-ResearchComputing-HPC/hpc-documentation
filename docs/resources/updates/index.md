@@ -3,7 +3,7 @@
 ## Overview
 
 !!! tip "No migration needed for Lynx"
-    "The new HPC cluster, Lynx, will share the same OS (Rocky Linux 9) as Puma. No migration will be necessary for current Puma users when the cluster goes live. This documentation is only relevant for current Ocelote users."
+    The new HPC cluster, Lynx, will share the same OS (Rocky Linux 9) as Puma. No migration will be necessary for current Puma users when the cluster goes live. This documentation is only relevant for current Ocelote users.
 
 In early 2025, the Puma cluster was updated to a newer operating system called Rocky Linux 9. Ocelote has remained on the older OS called CentOS 7. Ocelote will be decommissioned on August 17th, 2026 so it is now necessary for users to migrate their workflows to Puma to continue using HPC. Below is a summary of the main points of relevance to users:
 
@@ -31,7 +31,7 @@ Users who utilize the `/contrib` space should note that this space on Puma is no
 !!! Tip "Support"
     Please open a [support ticket](https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d) if you have problems migrating to Rocky Linux 9.
 
-Researchers may currently use cluster resources in a number of ways. {==Here are general guidelines for adapting to the new environment:==}
+Researchers may currently use cluster resources in a number of ways. ==Here are general guidelines for adapting to the new environment:==
 
 **Users of Open OnDemand**
 : Open OnDemand users should generally be able to continue usage unchanged. However, users of RStudio should see the R section below. 

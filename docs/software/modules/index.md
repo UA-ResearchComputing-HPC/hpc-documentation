@@ -17,11 +17,11 @@ To address this, HPC systems employ a **module system**. Software packages are i
 
     Typically, the latest available software release is set as the default module version. This means that running module load <software> without specifying a version will load the most recent version (with some exceptions).
 
-    This behavior may not always be desirable. For example, if you rely on a specific version for your analyses and a newer version becomes the default, your workflow may break. To avoid this, {==we recommend explicitly specifying module versions to ensure a stable and reproducible environment==}.   
+    This behavior may not always be desirable. For example, if you rely on a specific version for your analyses and a newer version becomes the default, your workflow may break. To avoid this, ==we recommend explicitly specifying module versions to ensure a stable and reproducible environment==.   
 
 - **Module Removal**
 
-    Multiple versions of software are often provided as modules. {==Versions that have reached end of life (EOL) may be removed during scheduled maintenance windows==}. For example, Python 3.6 reached EOL in late 2021 and was subsequently removed.
+    Multiple versions of software are often provided as modules. ==Versions that have reached end of life (EOL) may be removed during scheduled maintenance windows==. For example, Python 3.6 reached EOL in late 2021 and was subsequently removed.
 
     We also reserve the right to remove older versions as newer ones become available.
 
@@ -42,7 +42,7 @@ This approach gives you fine-grained control over your software environment, ena
 
 ## Module Availability
 
-Software modules are {==only available on compute nodes==} and are not accessible on the login nodes. 
+Software modules are ==only available on compute nodes== and are not accessible on the login nodes. 
 
 It’s also important to be aware of differences between the clusters:
 

@@ -1,3 +1,8 @@
+---
+status: deprecated
+---
+
+
 # Anaconda
 
 !!! Danger "Anaconda modules are deprecated"
@@ -29,7 +34,7 @@ Initializing Anaconda in your account only needs to be performed once and is wha
     Conda will direct you to close and reopen your shell to complete the initialization process. You can skip this by running the command ```source ~/.bashrc``` listed in the instructions below. 
     
 !!! danger "Turn Off Auto-Activate"
-    To ensure proper functioning of built-in system functions, turning off auto-activation is {==**highly recommended**==}. Do this by running ```conda config --set auto_activate_base false``` in a terminal following initialization.
+    To ensure proper functioning of built-in system functions, turning off auto-activation is ==**highly recommended**==. Do this by running ```conda config --set auto_activate_base false``` in a terminal following initialization.
     
 In an interactive session, replacing `<version>` with your desired Anaconda module version:
 

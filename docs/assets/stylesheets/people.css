@@ -21,10 +21,22 @@
     
 }
 
+[data-md-color-scheme="slate"] .card {
+    max-width: 500px; /* Adjust the maximum width of the card */
+    width: 100%;
+    background-color: rgb(31, 31, 33);
+    border: 1px solid #E2E9EB; /* Border around the card */
+
+    padding: 20px;
+    
+}
+
 .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Drop shadow */
     transition: .5s;
 }
+
+
 
 .card .container h4::after {
     content: ''; /* Add content to the pseudo-element */

@@ -14,7 +14,7 @@ show:
 If you've never used an HPC system before, you may be wondering what one is and why you'd want to use it. This section is designed to give you a big picture understanding of what these systems offer and how they may benefit your research.
 
 ## Introduction to HPC
-<img class="img-right" src="./images/simple_hpc_diagram.png" style="width: 400px; padding: 10px;" title="Simplified HPC diagram">
+<img class="img-right" src="./images/simple_hpc_diagram.png" style="width: 450px; padding: 10px;" title="Simplified HPC diagram">
 
 ### What is HPC?
 

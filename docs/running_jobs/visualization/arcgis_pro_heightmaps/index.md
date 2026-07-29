@@ -31,7 +31,7 @@ start:
 3.  Record the tile labels.
 
 <span
-class="confluence-embedded-file-wrapper"><img src="../../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-7_0.png " class="confluence-embedded-image" /></span>
+class="confluence-embedded-file-wrapper"><img src="../all_images/uarizona.atlassian.net/wiki/download/attachments/75990163/image2022-4-26_8-51-7_0.png " class="confluence-embedded-image" /></span>
 
   
   

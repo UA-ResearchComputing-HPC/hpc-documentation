@@ -115,7 +115,7 @@ You can check your allocation's size and current usage either through the user p
 
 PI's can submit a deletion request to remove their rental storage through our [user portal](https://portal.hpc.arizona.edu).
 
-{==Prior to submitting a deletion request==}, you **must**:
+==Prior to submitting a deletion request==, you **must**:
 
 1. Create a backup of any data you need to keep.
 2. Delete the data stored in your `/rental` space. 

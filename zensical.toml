@@ -120,11 +120,11 @@ nav = [
             "running_jobs/batch_jobs/index.md",
             {"Batch Tutorial" = "running_jobs/batch_jobs/batch_tutorial/index.md"},
             {"Batch Directives" = "running_jobs/batch_jobs/batch_directives/index.md"},
+            {"Submitting Jobs" = "running_jobs/batch_jobs/submitting_jobs/index.md"},
             {"Environment Variables" = "running_jobs/batch_jobs/environment_variables/index.md"},
             {"Array Jobs" = "running_jobs/batch_jobs/array_jobs/index.md"},
             {"Jobs with GNU Parallel" = "running_jobs/batch_jobs/gnu_parallel_jobs/index.md"},
-            {"Job Dependencies" = "running_jobs/batch_jobs/job_dependencies/index.md"},
-            {"Submitting Jobs" = "running_jobs/batch_jobs/submitting_jobs/index.md"}
+            {"Job Dependencies" = "running_jobs/batch_jobs/job_dependencies/index.md"}            
         ]},
         {"Monitoring Jobs and Resources" = "running_jobs/monitoring_jobs_and_resources/index.md"},
         {"Resource Optimization" = "running_jobs/resource_optimization/index.md"},
@@ -172,7 +172,7 @@ nav = [
         {"Research Showcase" = [
             "results/index.md",
             {"User Publications" = "results/publications/index.md"},
-            {"Highlighted Research" = "results/highlighted_research/index.md"}
+            {"Research Stories" = "results/research_stories/index.md"}
         ]}
  ]
 
@@ -250,7 +250,7 @@ name = "HPC job metrics"
 
 [project.extra.analytics]
 provider = "google"
-property = "G-XXXXXXXXXX"
+property = "G-3V0VRBSRZF"
 
 [project.extra.analytics.feedback]
 title = "Was this page helpful?"

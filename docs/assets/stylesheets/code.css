@@ -37,3 +37,35 @@
         max-width: none; /* Allow the code block to expand to fit smaller screens */
     }
 }
+
+[data-md-color-scheme="uofa_light"] .perm-type {
+    background-color: #faca89;
+}
+
+[data-md-color-scheme="uofa_light"] .perm-u {
+    background-color: #fff0bf;
+}
+
+[data-md-color-scheme="uofa_light"] .perm-g {
+    background-color: #deffbf;
+}
+
+[data-md-color-scheme="uofa_light"] .perm-o {
+    background-color: #bffff6;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code.perm-type {
+    background-color: #8C5A1F;  /* warm bronze */
+}
+
+[data-md-color-scheme="slate"] .md-typeset code.perm-u {
+    background-color: #806600;  /* dark gold */
+}
+
+[data-md-color-scheme="slate"] .md-typeset code.perm-g {
+    background-color: #3F6E2D;  /* forest green */
+}
+
+[data-md-color-scheme="slate"] .md-typeset code.perm-o {
+    background-color: #1F6D75;  /* deep teal */
+}

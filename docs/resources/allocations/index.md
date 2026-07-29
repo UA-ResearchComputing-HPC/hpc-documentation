@@ -47,7 +47,7 @@ All University of Arizona Principal Investigators (PIs; typically faculty) that 
 
 
 === "Windfall"
-    {==Windfall is a partition available to jobs that enables them to run **without consuming your allocation**, but it also **reduces their priority**==}. This means windfall jobs are slower to start than other partitions. In addition to lower priority, windfall jobs are preemptible, meaning standard and high-priority jobs can interrupt a running windfall job, effectively placing it back in the queue. The purpose of windfall is to ensure that the clusters are busy at all times, and to allow researchers additional compute while increasing the efficiency of the system.
+    ==Windfall is a partition available to jobs that enables them to run **without consuming your allocation**, but it also **reduces their priority**==. This means windfall jobs are slower to start than other partitions. In addition to lower priority, windfall jobs are preemptible, meaning standard and high-priority jobs can interrupt a running windfall job, effectively placing it back in the queue. The purpose of windfall is to ensure that the clusters are busy at all times, and to allow researchers additional compute while increasing the efficiency of the system.
 
     !!! note "The `--account` flag should be omitted when using the Windfall partition."
 

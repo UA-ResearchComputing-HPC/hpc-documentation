@@ -1,18 +1,23 @@
 {% extends "main.html" %}
+
 {% block tabs %}
 {{ super() }}
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/assets/stylesheets/404.css">
-<link rel="stylesheet" href="/assets/stylesheets/buttons.css">
+<link rel="stylesheet" href="{{ 'assets/stylesheets/404.css' | url }}">
+<link rel="stylesheet" href="{{ 'assets/stylesheets/buttons.css' | url }}">
 
-<center><img src="/assets/images/404/404.jpg" width="300px" style="padding: 20px;"></center>
-<center><h4 style="padding-left: 8cm; padding-right: 8cm;" >404 Error: It appears your data packet took a detour through a black hole. Don't worry, our astrophysicists are on it! Meanwhile, feel free to explore the rest of our galaxy.</h2></center>
-<center><a href="/"><button class="quick-links-button">Home</button></a></center>
+<center><img src="{{ 'assets/images/404/404.png' | url }}" width="90%" style="max-width: 350px; max-height: 60%; padding: 20px;"></center>
+<center><h4 style="padding-left: 3rem; padding-right: 3rem; max-width: 1000px;" >404 Error: It appears your data packet took a detour through a black hole. Don't worry, our astrophysicists are on it! Meanwhile, feel free to explore the rest of our galaxy.</h2></center>
+
+<center>
+  <a href="{{ '' | url }}">
+    <button class="quick-links-button">Home</button>
+  </a>
+</center>
 
 {% endblock %}
 {% block content %}{% endblock %}
 
 {% block footer %}
 {% endblock %}
-

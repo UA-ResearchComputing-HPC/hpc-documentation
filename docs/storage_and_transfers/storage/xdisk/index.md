@@ -4,7 +4,7 @@
 
 ## What is xdisk?
 
-For groups that need more [HPC storage](../hpc_storage/) than `/groups` (500 GB limit) or `/home` (50 GB limit) can provide, faculty members (PIs) or their [delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) may request a {==**temporary**==} project space for their group called xdisk. This option grants research groups up to 20 TB of additional HPC storage for a maximum duration of 300 days. 
+For groups that need more [HPC storage](../hpc_storage/) than `/groups` (500 GB limit) or `/home` (50 GB limit) can provide, faculty members (PIs) or their [delegates](../../../registration_and_access/group_management/#delegating-group-management-rights) may request a ==**temporary**== project space for their group called xdisk. This option grants research groups up to 20 TB of additional HPC storage for a maximum duration of 300 days. 
 
 Groups requiring long-term storage without an expiration date should consider our [rental storage offerings](../rental_storage/) instead.
 
@@ -58,7 +58,7 @@ Groups requiring long-term storage without an expiration date should consider ou
 
 3. **Allocation expires**
 
-    Once an allocation expires, {==**all associated data are deleted**==}. 
+    Once an allocation expires, ==**all associated data are deleted**==. 
 
      It is the group's responsibility to back up or move any files they wish to keep before the expiration date.
 
