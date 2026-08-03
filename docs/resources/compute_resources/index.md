@@ -61,7 +61,7 @@ Below is a list of the node types and physical hardware that are available on ea
     | <div style="width: 120px;">Node Type</div> | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
     |-|-|-|-|-|-|-|-|-|
     |Standard|360|28|6 GB|168 GB|-|-|-|-|
-    |{--High Memory--}|{--1--}|{--48--}|{--41 GB--}|{--1968 GB--}|-|-|-|-|
+    |~~High Memory~~|~~1~~|~~48~~|~~41 GB~~|~~1968 GB~~|-|-|-|-|
     |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
     |Dual GPU Nodes|35|28|8 GB|224 GB|2|16 GB|32 GB|70|
     

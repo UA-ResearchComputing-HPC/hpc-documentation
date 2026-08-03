@@ -181,3 +181,16 @@
 [data-md-color-scheme="slate"] .md-footer-meta {
   background-color: #2B2622
 }
+
+
+del {
+    background-color: #fdecec;
+    text-decoration-color: #c0392b;
+    text-decoration-thickness: 2px;
+}
+
+[data-md-color-scheme="slate"] del {
+    background-color: #3c0707;
+    text-decoration-color: #792016;
+    text-decoration-thickness: 2px;
+}
