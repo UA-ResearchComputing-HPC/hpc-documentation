@@ -31,8 +31,7 @@ You can use these variables to easily access the container and the datasets. You
  
 module load alphafold/2.3.0
  
-alphafold --nv \
-          --use_gpu_relax \
+alphafold --use_gpu_relax \
           --uniref90_database_path=/data/uniref90/uniref90.fasta  \
           --uniref30_database_path=/data/uniref30/UniRef30_2021_03 \
           --mgnify_database_path=/data/mgnify/mgy_clusters_2022_05.fa  \

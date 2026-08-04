@@ -226,3 +226,35 @@ You can get additional information the Activity panel on the left-hand side of t
 <img src="images/activity_panel.png" title="Globus transfer activity" style="width:100%; box-shadow: 5px 5px 5px #999;">
 
 Once your transfer has completed, you should receive an email with its status.
+
+## Sharing Data With External Collaborators
+
+Users who have data stored on the UA HPC filesystems can set up shared collections with Globus to make those files accessible to collaborators lacking University of Arizona credentials. 
+
+To do so, log into Globus and navigate to the File Manager. After connecting to your desired endpoint (e.g. **UA HPC Filesystems**) and navigate to the directory you'd like to share. Click on the directory you'd like to make available and click **Share**.
+
+<img src="images/fm_external_share.png" title="Initiate transfer" style="width:100%; box-shadow: 5px 5px 5px #999;"> 
+
+On the resulting page, select **Add Guest Collection**.
+
+<img src="images/add_guest_collection.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 
+
+In the form that opens, give your collection a name and click **Create Collection**.
+
+<img src="images/add_guest_collection_form.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 
+
+Once your collection has been created, you can adjust the permissions to share the contents by selecting **Add Permissions -- Share With**.
+
+<img src="images/add_permissions.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 
+
+The **Path** field sets the path within the directory that you are making accessible. If you leave it as `/`, this will make the entire directory (in the example below, this is `external_share` and its contents) accessible to the user you grant permissions to. Under Username or Email, enter your collaborator's Globus information, for example their institutional email address. Leaving the **write** option unselected will keep the collection read-only which will prevent collaborators from adding to or deleting from your shared collection. 
+
+<img src="images/add_collaborator.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 
+
+Once you've shared your collection, your collaborator can log into Globus and find the share by navigating to the File Manager, selecting the **Collection** field, and navigating to the **Shared With You** tab. 
+
+<img src="images/shared_with_you.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 
+
+Selecting the shared collection will allow them to view and download the contents. 
+
+<img src="images/shared_with_you_fm.png" title="Initiate transfer" style="width: 750px; box-shadow: 5px 5px 5px #999;"> 

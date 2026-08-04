@@ -148,3 +148,7 @@ For efficient file transfers to and from the HPC system, utilize the designated 
 
 ## File Transfers and SSH Keys
 Several of the file transfer methods listed below use authentication based on the SSH protocol, including SCP, SFTP, and Rsync. Therefore, adding your SSH Key to the ```filexfer.hpc.arizona.edu``` node can allow one to **avoid entering passwords** when using those methods. See the documentation for [adding SSH Keys](/registration_and_access/system_access/#ssh-keys).
+
+## Sharing Data With External Collaborators
+
+Users who wish to share data with external collaborators can use Globus. This allows users to share files with non-UA members by setting up what is known as a shared collection. Instructions can be found in our [Globus documentation](../globus/#sharing-data-with-external-collaborators).
