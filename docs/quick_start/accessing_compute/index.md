@@ -4,14 +4,13 @@
 
 ### The Compute Nodes
 
-Unlike the bastion host and login nodes, there are many compute nodes and each has, as the name suggests, a large amount of computational resources available to run your work. For example, Puma standard nodes have 94 available CPUs and a whopping 470 GB of RAM. 
+Unlike the bastion host and login nodes, there are many compute nodes and each has, as the name suggests, a large number of computational resources available to run your work. For example, Puma standard nodes have 94 available CPUs and a whopping 470 GB of RAM. 
 
 <center><img src="images/compute.png" title="HPC compute nodes" style="height: 300px;"></center>
 
 To get a sense of what the cluster looks like, try running the command `nodes-busy`. The output should look something like this:
 
 ```
-✚    Buy-in nodes. Only accept high_priority and windfall jobs
 (puma) [netid@wentletrap ~]$ nodes-busy 
 ==============================================================
 
@@ -28,33 +27,9 @@ r1u26n1  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%
 r1u26n2  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%   
 r1u27n1  :[▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒] 100.0%   
 ```
-!!! danger "El Gato and Ocelote soon to be decommissioned"
-    El Gato and Ocelote will no longer be available as separate clusters beginning on July 29th and August 17th, 2026, respectively. All new users are advised to utilize Puma. 
 
-Each line shows one compute node on the cluster you're connected to and how busy it is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest, newest, and generally provides the most in terms of computational resources.  
+Each line shows one compute node on the cluster and how busy it is running jobs. By default, when you first log in you're connected to the Puma cluster. This is the largest, newest, and generally provides the most in terms of computational resources.  
 
-When you first connected to a login node in the previous section, your terminal should have displayed:
-
-```
- ***
-The default cluster for job submission is Puma
-***
-Shortcut commands change the target cluster
------------------------------------------
-Puma:
-$ puma
-(puma) $
-Ocelote:
-$ ocelote
-(ocelote) $
-ElGato:
-$ elgato
-(elgato) $
------------------------------------------
-
-```
-
-This shows you the various shortcuts you can use to connect to the different clusters (for example, typing `ocelote` will connect you to the cluster Ocelote).  For this tutorial, we will stick with using Puma as the older two clusters, Ocelote and El Gato, will be decomissioned in the summer of 2026. These instructions will be updated once our new HPC cluster, Lynx, arrives.
 
 ### Job Charging
 

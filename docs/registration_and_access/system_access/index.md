@@ -137,23 +137,13 @@ This is a bastion host used to access the rest of the RT/HPC environment.
    
 Type "shell" to access the job submission hosts for all environments
 ```
-From there, type ```shell``` to connect to the login nodes that will provide access to our three clusters. On the login nodes, you should see:
+
+From there, type `shell` to connect to one of the login nodes (hostname either `wentletrap` or `junonia`) that will provide access to our three clusters. 
+
 ```bash
-***
-The default cluster for job submission is Puma
-***
-Shortcut commands change the target cluster
------------------------------------------
-Puma:
-$ puma
-(puma) $
-Ocelote:
-$ ocelote
-(ocelote) $
-ElGato:
-$ elgato
-(elgato) $
------------------------------------------
+[netid@gatekeeper 14:55:57 ~]$ shell
+Last login: Wed Aug  5 14:52:29 2026 from hpc.arizona.edu
+(puma) [netid@junonia ~]$ 
 ```
     
     
@@ -250,9 +240,9 @@ The steps to set up port forwarding are the following:
     This can either be done using an [interactive session](../../running_jobs/interactive_jobs/) or an [Open OnDemand job](../../running_jobs/open_on_demand/) (e.g. an interactive desktop session). Once your job starts, make note of the node name. For example, in an interactive session, you can use the command `hostname`
 
     ```
-    (elgato) [user@wentletrap ~]$ interactive -a hpcteam -t 5:00:00
-    [user@cpu37 ~]$ hostname
-    cpu37.elgato.hpc.arizona.edu
+    (puma) [netid@wentletrap ~]$ interactive -a hpcteam -t 5:00:00
+    [netid@r3u11n1 ~]$ hostname
+    r3u11n1.puma.hpc.arizona.edu
     ```
 
 2. **Connect to the HPC VPN**
@@ -268,7 +258,7 @@ The steps to set up port forwarding are the following:
     Once you're connected to the HPC VPN, ssh into your compute node with the additional arguments `-L <port>:localhost:<port>` where `<port>` is the port you want to use. For example:
 
     ```
-    ssh -L 1234:localhost:1234 user@cpu37.elgato.hpc.arizona.edu
+    ssh -L 1234:localhost:1234 user@r3u11n1.puma.hpc.arizona.edu
     ```
 4. **Start your application and launch it in a web browser**
 

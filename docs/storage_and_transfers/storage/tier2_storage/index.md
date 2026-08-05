@@ -87,8 +87,9 @@ Submitting this form will open a ServiceNow ticket. Processing time may take up 
 === "CLI"
     A command line tool is available on our compute nodes that will allow you to view the size and storage classes of the contents in your bucket. You will need to generate access keys to use this tool (see the next section). This can be accessed using:
     ```bash
-    (elgato) [netid@junonia ~]$ interactive
-    [netid@cpu37 ~]$ module load contrib ; module load bjoyce3/sarawillis/tier2-viewer
+    (puma) [netid@junonia ~]$ interactive
+    [netid@r4u14n2 ~]$ module load contrib 
+    [netid@r4u14n2 ~]$ module load hpcteam/tier2-viewer
     ```
     For information on usage:
     ```bash

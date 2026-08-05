@@ -132,17 +132,17 @@ Allocations are refreshed on the first day of each month. Unused hours from the 
 
 ## How to Find Your Remaining Allocation
 
-To view your allocation's used, unused, and [encumbered hours](../../support_and_training/glossary/ "For information on terminology, see our glossary"), use the command ```va``` (short for "view allocation") in a terminal. For example:
-```bash
-(elgato) [user@gpu5 ~]$ va
+To view your allocation's used, unused, and [encumbered hours](../../support_and_training/glossary/ "For information on terminology, see our glossary"), use the command `va` (short for "view allocation") in a terminal. For example:
+```bash title="Example of checking your allocation"
+(puma) [netid@junonia ~]$ va
 Windfall: Unlimited
  
-PI: parent_974 Total time: 7000:00:00
-    Total used*: 1306:39:00
-    Total encumbered: 92:49:00
-    Total remaining: 5600:32:00
-    Group: group1 Time used: 862:08:00 Time encumbered: 92:49:00
-    Group: group2 Time used: 0:00:00 Time encumbered: 0:00:00
+PI: parent_974 Total time: 150000:00:00
+	Total used*: 486:50:00
+	Total encumbered: 28:14:00
+	Total remaining: 149484:56:00
+	Group: group1 Time used: 486:50:00 Time encumbered: 28:14:00
+	Group: group2 Time used: 0:00:00 Time encumbered: 0:00:00
  
 *Usage includes all subgroups, some of which may not be displayed here
 ```

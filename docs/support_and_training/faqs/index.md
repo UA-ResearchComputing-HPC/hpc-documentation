@@ -259,7 +259,7 @@ sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (
     Cur_Cluster=$(eval ${PROMPT_COMMAND} 2>/dev/null)
     PS1="${Cur_Cluster}${SavePS1}"
     unset PROMPT_COMMAND
-    for c in puma ocelote elgato; do
+    for c in puma ocelote; do
       alias ${c}="PS1=\"(${c}) ${SavePS1}\"; . /usr/local/bin/slurm-selector.sh ${c}; unset PROMPT_COMMAND"
     done
     unset Cur_Cluster SavePS1
