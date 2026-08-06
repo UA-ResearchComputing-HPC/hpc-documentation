@@ -23,6 +23,16 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
     Please note that **you will need to use your Univerity of Arizona Google account** to access the registration form. If you do not have access, please double check that you are logged in appropriately. **Please do not click "request access."** If you do not have a University of Arizona Google account, please contact us directly at [hpc-consult@list.arizona.edu](mailto:hpc-consult@list.arizona.edu).
 
+
+<iframe src="images/f26-flyer.pdf" width="100%" height="900" style="border: none;">
+</iframe>
+
+<!-- ![Image title](images/f26-flyer.png){ align=left } -->
+
+<!-- <img class="img-left" src="images/f26-flyer.png" title="Workshop Flyer" alt="flyer" width="auto"> -->
+
+<!-- text -->
+
 ### Day 1: Friday 9/11 - Introduction to HPC
 
 **Location: [Main Library B252 CATalyst Learning Studio](https://lib.arizona.edu/sites/default/files/main-floor2.pdf)**
@@ -108,7 +118,7 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 ## Special Topic: Quantum Computing
 
-**Thursday, September 17th -- 10:00am - 12:00pm**
+**Thursday, September 17th -- 12:00pm - 1:30pm**
 
 ??? info "Introduction to Quantum Computing with MATLAB"
 
