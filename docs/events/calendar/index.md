@@ -21,15 +21,11 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 !!! warning "Arizona Email Required"
 
-    Please note that **you will need to use your Univerity of Arizona Google account** to access the registration form. If you do not have access, please double check that you are logged in appropriately. **Please do not click "request access."** If you do not have a University of Arizona Google account, please contact us directly at [hpc-consult@list.arizona.edu](mailto:hpc-consult@list.arizona.edu).
+    Please note that **you will need to use your Univerity of Arizona Google account** to access the registration form. If you do not have access, please double check that you are logged in appropriately. **Please do not click "request access."** If you do not have a University of Arizona Google account and are interested in attending the workshops, please contact us directly by [submitting a support ticket](../../support_and_training/consulting_services/).
 
 
 <iframe src="images/f26-flyer.pdf" width="100%" height="900" style="border: none;">
 </iframe>
-
-<!-- ![Image title](images/f26-flyer.png){ align=left } -->
-
-<!-- <img class="img-left" src="images/f26-flyer.png" title="Workshop Flyer" alt="flyer" width="auto"> -->
 
 <!-- text -->
 
