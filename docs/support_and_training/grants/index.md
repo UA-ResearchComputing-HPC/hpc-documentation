@@ -31,11 +31,15 @@ You might consider these scenarios:
 
 
 ## The University of Arizona Research Computing and Cyberinfrastructure Plan 2022
+
+<html>
 <center>
-[Click here to download .docx version](files/University_Arizona_Cyberinfrastructure_Report.docx){ .md-button .md-button--primary }
+<a href="./files/University_Arizona_Cyberinfrastructure_Report.docx" title="Click here to download .docx version" class="md-button md-button--primary" target="blank">Click here to download .docx version</a>
+
+<br><br>
 
 
-<html> 
+
     <div class="pdf-container">
         <object data="files/University_Arizona_Cyberinfrastructure_Report.pdf" 
                 width="100%"
