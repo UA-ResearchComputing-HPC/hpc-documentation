@@ -11,18 +11,14 @@
 
 
 {% block announce %}
-<p style="font-size: 15px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
-    <b>Important:</b> El Gato was decommissioned during the maintenance period on Wednesday, July 29th, 2026. Ocelote will be decommissioned on Monday August 17, 2026. Any users still running workloads on Ocelote are advised to migrate to Puma. See <a href="https://hpcdocs.hpc.arizona.edu/resources/updates/">our operating system updates page</a> for tips on migrating to Rocky Linux 9 (Puma).</a>
+<p class="announce-important">
+    <b>Important: Both El Gato and Ocelote have been decommissioned as of Monday, August 17th, 2026</b>.<br>
+    See <a href="https://hpcdocs.hpc.arizona.edu/resources/updates/">our operating system updates page</a>
+    for tips on migrating to Rocky Linux 9 (Puma).
+</p>
 {% endblock %}
 
 
-
-{#
-{% block announce %}
-<p style="font-size: 15px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
-    <b>Upcoming Maintenance</b>: Due to scheduled quarterly maintenance, HPC services will be unavailable from 6AM - 6PM on January 28, 2026. For details, see <a href="https://hpcdocs.hpc.arizona.edu/policies/maintenance/#maintenance-history">our maintenance page</a>.
-{% endblock %}
-#}
  
 {% block footer %}
 <!--

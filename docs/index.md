@@ -115,18 +115,6 @@ For more cool stories on what our users do, see our [research showcase](./result
         - Two large memory nodes with 3TB memory and the same processors and memory as the other nodes
         - Six nodes with four Nvidia V100S GPU's each
 
-    === "Ocelote"
-        <img class="img-right" src="assets/images/home/ocelote.png" title="Ocelote image" alt="ocelote" width="250" hspace=50 vspace=20>
-        Ocelote arrived in 2016. Lenovo's Nextscale M5 technology was the winner of the RFP mainly on price, performance and meeting our specific requirements. Ocelote has one large memory node with 2TB of memory and 46 nodes with Nvidia P100 GPUs for GPU-accelerated workflows. This cluster is actually the next generation of the IBM cluster we call El Gato. Lenovo purchased IBM's Intel server line in 2015.
-
-        In 2021, Ocelote's operating system was upgraded from CentOS 6 to CentOS 7 and was configured to use Slurm. It will be decomissioned on August 17th, 2026.
-
-        - Intel Haswell V3 28 core processors
-        - 192GB RAM per node
-        - FDR infiniband for fast MPI interconnect
-        - Qumulo all flash storage array (all HPC storage is integrated into one array)
-        - 46 nodes with Nvidia P100 GPU's
-
 
 <h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg> Compute</h3>
 

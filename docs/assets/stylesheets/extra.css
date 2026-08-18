@@ -194,3 +194,25 @@ del {
     text-decoration-color: #792016;
     text-decoration-thickness: 2px;
 }
+
+.announce-important {
+    font-size: 15px;
+    color: #AB0520;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.announce-important a {
+    color: #1E5288;
+}
+
+[data-md-color-scheme="slate"] .announce-important {
+    font-size: 15px;
+    color: #B45A68;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+[data-md-color-scheme="slate"] .announce-important a {
+    color: #4F718F;
+}
