@@ -11,11 +11,6 @@ The term "interactive session" in this context refers to jobs run from within th
 !!! danger "Ocelote will be decommissioned on August 17th"
     Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information.
 
-An interactive session can be requested on either Ocelote or Puma. 
-
-Puma runs a newer operating system (Rocky Linux 9) than Ocelote (CentOS 7), has newer system libraries, and its own software modules. If you are using Puma for your production work, you will want to stick to requesting interactive sessions on Puma for testing and compiling. Workflows may not be transferrable between Ocelote and Puma, so make sure to check which software ecosystem you're using to ensure the most predictable results. 
-
-
 ## How to Request an Interactive Session
 
 
@@ -26,7 +21,7 @@ We have a built-in shortcut command that will allow you to quickly and easily re
 The `interactive` command is essentially a convenient wrapper for native Slurm commands. It can be thought of as similar to the `sbatch` command, but for interactive jobs rather than [batch jobs](../batch_jobs/intro/). When you request a session using `interactive`, the full Slurm command being executed will be displayed for reference.
 
 !!! note "Slurm update on Puma 2026"
-    An update to the version of Slurm on Puma in early 2026 changed how Slurm processes interactive sessions. On Puma, the `interactive` command is now a wrapper for `srun` rather than `salloc`. This change does not apply to Ocelote which still uses `salloc`.
+    An update to the version of Slurm on Puma in early 2026 changed how Slurm processes interactive sessions. The `interactive` command is now a wrapper for `srun` rather than `salloc`. 
 
     Note that this only affects how the `interactive` command submits jobs. Manually entering `salloc` commands on Puma should work as expected. 
 

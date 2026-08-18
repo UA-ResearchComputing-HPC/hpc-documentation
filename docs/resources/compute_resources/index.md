@@ -34,7 +34,7 @@ Below is a list of the node types and physical hardware that are available on ea
 !!! tip "CPUs and Memory"
     For information on memory to CPU ratios, shown as RAM/CPU in the tables below, see [CPUs and Memory](../../running_jobs/cpus_and_memory/)
 
-=== "The new cat"
+=== "Lynx"
     **Resources Available**
 
     | Node Type | <div style="width: 100px;">Number of Nodes</div>| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|<div style="width: 95px;">RAM/GPU</div>|GPU RAM/Node|Total GPUs|
@@ -52,36 +52,25 @@ Below is a list of the node types and physical hardware that are available on ea
     |High Memory|3 standard<br>2 buy-in| 94|32 GB|3008 GB|-|-|-|-|-|
     |GPU|9 standard<br>6 buy-in|94|5 GB|470 GB|4|32 GB (v100s)<br>20 GB (MIGs)|128 GB|36 standard<br>24 buy-in|
     
-    
-=== "Ocelote"
 
-    !!! danger "High memory node removed"
-        The high memory node is no longer available on Ocelote. 
-
-    | <div style="width: 120px;">Node Type</div> | Number of Nodes| CPUs/Node|RAM/CPU|CPU RAM/Node|GPUs/Node|RAM/GPU|GPU RAM/Node|Total GPUs|
-    |-|-|-|-|-|-|-|-|-|
-    |Standard|360|28|6 GB|168 GB|-|-|-|-|
-    |~~High Memory~~|~~1~~|~~48~~|~~41 GB~~|~~1968 GB~~|-|-|-|-|
-    |Single GPU Nodes|25|28|8 GB|224 GB|1|16 GB|16 GB|25|
-    |Dual GPU Nodes|35|28|8 GB|224 GB|2|16 GB|32 GB|70|
     
 
 ## GPU Nodes
 
-=== "The new cat"
+=== "Lynx"
 
     There are 8 H200s in both of the GPU nodes.
 
-    The new cat may have MIG provisioned on the GPUs, depending on the results of our tests.The GPUs would be subdivided into two virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 70 GB of GPU memory.
+    Lynx may have MIG provisioned on the GPUs, depending on the results of our tests.The GPUs would be subdivided into two virtual GPUs using the Nvidia MIG (Multi-Instance GPU) method.  Each of these MIG slices allows the use of 70 GB of GPU memory.
 
      <img src="images/H200_Specs.png" title="H200 GPU specifications" width=500px>
 
 
 === "Puma"
     <img src="images/v100_info.jpg" title="v100 GPU specifications" width=400px style="float: right; margin: 5px;">
-    There are 4 V100S's in each of the 9 Puma nodes. The new cat will have 8 H200's in each node. Ocelote has 2 P100s in each of the 36 nodes. 
+    There are 4 V100S's in each of the 9 Puma nodes. Lynx will have 8 H200's in each node. 
     
-    On Puma, one node has four A100s, each subdivided into two smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. We may implement this on the new cat.
+    On Puma, one node has four A100s, each subdivided into two smaller virtual GPUs. See the MIG (Multi-instance GPU) Resources section below for details. We may implement this on Lynx.
     
     **Multi-Instance GPU (MIG) Resources**    
 
@@ -94,37 +83,27 @@ Below is a list of the node types and physical hardware that are available on ea
     To see the proper syntax for requesting a MIG slice versus a V100, please see our page on [Batch Directives](../../running_jobs/batch_jobs/batch_directives/#gpus). 
 
 
-=== "Ocelote"
-
-    <img src="images/p100_info.png" title="p100 GPU specifications" width=500px style="float: right; margin: 5px;">
-
-    Ocelote has 36 compute nodes each with two Nvidia P100 GPUs that are available to researchers on campus. Research groups are limited to using a maximum of 10 GPUs simultaneously. 
-
-    We plan to keep the GPU nodes for Ocelote as long as the GPU's are useful. We have observed the wait time is usually short and they are good for lightweight AI / ML / visualization workloads.
-
-
 
 
 ## System Technical Specifications
 
    These counts include the buy-in high priority nodes
 
-||The new cat|Ocelote|Puma|
-|-|-|-|-|
-|Model|Lenovo V3 Servers|Lenovo NeXtScale nx360 M5|Penguin Altus XE2242|
-|Year Purchased|2026|2016 (2018 P100 nodes)|2020|
-|Node Count|55 CPU-only<br>5 GPU<br>1 High Memory|360 CPU-only<br>36 GPU|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
-|Total System Memory|41.4 TB|83.3 TB|169.7 TB|
-|Processors|2x AMD 9655 96-core (Turin)<br>2x AMD 9455 48-core (Turin)<br>2x AMD 9455 48-core (Turin)|2x Xeon E5-2695v3 14-core (Haswell)<br>2x Xeon E5-2695v4 14-core (Broadwell)<br>4x Xeon E7-4850v2 12-core (Ivy Bridge)|2x AMD EPYC 7642 48-core (Rome)|
-|Cores/Node (Schedulable)|192|28 (48 - High-memory node)|94|
-|Total Cores|11136|11724[^1]|30720[^1]|
-|Processor Speed|2.66 GHz<br>3.15GHz|2.3 GHz (2.4GHz - Broadwell CPUs)|2.4 GHz|
-|Memory/Node|768 GB<br>3 TB - High memory|192 GB|512 GB<br>(3 TB - High-memory)|
-|Accelerators|40 NVIDIA H200|36 NVIDIA P100 (16GB)|56 NVIDIA V100S<br>8 A100 40 GB MIG slices|
-|/tmp[^2]|~1.9 TB NVMe|~840 GB spinning|~1.9 TB NVMe|
-|HPL Rmax (TFlop/s)||382||
-|OS|Rocky Linux 9|CentOS 7|Rocky Linux 9|
-|Interconnect|NDR Inifiniband for MPI<br>25 Gb Ethernet |FDR Infiniband for MPI<br>10 Gb Ethernet node-storage|1x 25 Gb/s Ethernet RDMA (RoCEv2)<br>1x 25 Gb/s Ethernet to storage|
+||Lynx|Puma|
+|-|-|-|
+|Model|Lenovo V3 Servers|Penguin Altus XE2242|
+|Year Purchased|2026|2020|
+|Node Count|55 CPU-only<br>5 GPU<br>1 High Memory|300 CPU-only<br>15 GPU<br>5 High Memory<br>|
+|Total System Memory|41.4 TB|169.7 TB|
+|Processors|2x AMD 9655 96-core (Turin)<br>2x AMD 9455 48-core (Turin)<br>2x AMD 9455 48-core (Turin)|2x AMD EPYC 7642 48-core (Rome)|
+|Cores/Node (Schedulable)|192|94|
+|Total Cores|11136|30720[^1]|
+|Processor Speed|2.66 GHz<br>3.15GHz|2.4 GHz|
+|Memory/Node|768 GB<br>3 TB - High memory|512 GB<br>(3 TB - High-memory)|
+|Accelerators|40 NVIDIA H200|56 NVIDIA V100S<br>8 A100 40 GB MIG slices|
+|/tmp[^2]|~1.9 TB NVMe|~1.9 TB NVMe|
+|OS|Rocky Linux 9|Rocky Linux 9|
+|Interconnect|NDR Inifiniband for MPI<br>25 Gb Ethernet|1x 25 Gb/s Ethernet RDMA (RoCEv2)<br>1x 25 Gb/s Ethernet to storage|
 
 
 [^1]: Includes high-memory and GPU node CPUs

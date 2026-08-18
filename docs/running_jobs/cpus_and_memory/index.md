@@ -6,10 +6,13 @@ Before submitting your job to the scheduler, it's important to know that the num
 
 ==Each cluster has a fixed amount of memory per CPU based on the node type==. Accepted values by cluster and node type are listed below, including the number of each type of node:
 
+!!!danger "Ocelote decommissioning"
+    Ocelote will be decommissioned on Monday, August 17th, 2026. Our newest cluster, Lynx, will become available later this fall. 
+
 |Cluster|Standard Node|*Count*|High-Memory Node|*Count*|GPU Node|*Count*|
 |-|-|-|-|-|-|-|
 |Puma| 5 GB | 300 | 32 GB | 5 | 5 GB| 15 |
-|Ocelote| 6 GB | 360 | - | 1 | 8 GB| 60 |
+
 
 
 For example, using the table above we can see on Puma standard nodes you get 5 GB for each CPU you request. This means a standard job using 4 CPUs gets 5 GB/CPU × 4 CPUs = 20 GB of total memory.
@@ -50,7 +53,7 @@ graph LR
 
 The dotted line above indicates that setting mem/CPU in your job is not generally necessary. If you are requesting a standard node, this value is set for you by the scheduler. The only times you will need to set this value is:
 
-1. If you're requesting a non-standard node (e.g. a high memory or Ocelote GPU node)
+1. If you're requesting a non-standard node (e.g. a high memory node)
 2. If you're requesting an OnDemand application session. There is a field where you will fill in your mem/CPU requirement. 
 
 Note that there is no deterministic method of finding the exact amount of memory needed by a job _in advance_. A general rule of thumb is to overestimate it slightly and then scale down based on previous runs. Significant overestimation, however, can lead to inefficiency of system resources and unnecessary expenditure of CPU time allocations. 

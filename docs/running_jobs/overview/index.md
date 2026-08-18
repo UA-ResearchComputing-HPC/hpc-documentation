@@ -91,17 +91,19 @@ Below is a FAQ that includes answers to common questions and misconceptions abou
 
 <button class="collapsible">What compute resources are available on each cluster?</button>
 <div class="content">
-    <p>We have two clusters available for use: Puma and Ocelote, with a third new cat, Lynx, on the way. See <a href="../../resources/compute_resources/">Compute Resources</a> for details on each.
+    <p>We have one cluster available for use: Puma, with a new cat, Lynx, on the way. See <a href="../../resources/compute_resources/">Compute Resources</a> for details on each.
     <br>
     </p>
 </div>
 
+<!-- Removing because of Ocelote's decommissioning. We'll have unified cluster OSs once Lynx is available. We might want to add this back if an OS mismatch happens again. 
 <button class="collapsible">Are all the HPC clusters interchangeable?</button>
 <div class="content">
     <p>Generally no. Puma is our newest cluster and runs on the operating system Rocky Linux 9. Ocelote is older and run on CentOS 7. Software compiled on Puma may not be compatible with the older clusters and vice versa. 
     <br>
     </p>
 </div>
+-->
 
 <button class="collapsible">I submitted a job request, but it isn't running yet. Why?</button>
 <div class="content">

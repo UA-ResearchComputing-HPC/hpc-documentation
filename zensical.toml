@@ -259,14 +259,14 @@ title = "Was this page helpful?"
 icon = "material/cow"
 name = "Moo-velous!"
 data = 1
-note = "Thanks for your feedback!"
+note = "Legen-dairy!"
 
 [[project.extra.analytics.feedback.ratings]]
 icon = "material/cow-off"
 name = "Udder Disappointment"
 data = 0
 note = """
-  Not helpful? Tell us why! Our <a href="https://forms.gle/WWMkVU66A6pJvmhc9" target="_blank" rel="noopener">feedback form</a> is anonymous and takes 15 seconds. 
+  Sorry this page wasn't moo-ch help. Let us know what we can improve with our <a href="https://forms.gle/WWMkVU66A6pJvmhc9" target="_blank" rel="noopener">super fast, anonymous feedback form</a>.  
 """
 
 
