@@ -142,7 +142,7 @@ Anaconda is a common culprit for R package installation failures. If you have An
 
 ### Presence of Anaconda
 
-Anaconda is a common culprit for R package installation failures. If you have Anaconda or Miniconda initialized in your account, we recommend fully removing it from your environment prior to attempting any R package installations. We have information on how to do this on our Anaconda page under **Removing Anaconda From Your Environment** --> **Temporary Removal** which can be [found here](http://localhost:6120/software/popular_software/anaconda/#__tabbed_1_2).
+Anaconda is a common culprit for R package installation failures. If you have Anaconda or Miniconda initialized in your account, we recommend fully removing it from your environment prior to attempting any R package installations. We have information on how to do this on our Anaconda page under **Removing Anaconda From Your Environment** --> **Temporary Removal** which can be [found here](../anaconda/#__tabbed_1_2).
 
 ### Mixed R Versions
 

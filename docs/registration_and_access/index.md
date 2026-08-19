@@ -46,7 +46,7 @@ icon: material/account-plus
 
     A general overview of how our systems are laid out and what nodes are used for what purposes. This is a helpful page for folks just getting started who want a general roadmap to help understand where they are when attached to our systems.
 
-    [:octicons-arrow-right-24: View documentation](#)
+    [:octicons-arrow-right-24: View documentation](./system_overview/)
 
 -   :material-key:{ .lg .middle } __VPN__
 

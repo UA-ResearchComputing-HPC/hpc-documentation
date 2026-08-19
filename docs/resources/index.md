@@ -30,7 +30,7 @@ This section provides information about the computing infrastructure, storage sy
 
     Information on our data centers including their power and cooling, security, networking, and fire suppression. 
 
-    [:octicons-arrow-right-24: View page](#)
+    [:octicons-arrow-right-24: View page](./data_center/)
 
 -   :material-lock:{ .lg .middle } __Secure Services__
 

@@ -22,6 +22,7 @@ The software is available in three different ways:
 - [**Personal software**](../user_installations/) that you build or download and place in your own directory space;
 - [**Modules**](../module/), which are external packages built and maintained by HPC team for system-wide usage.
 
+<!--
 ## Cluster Differences
 
 It's important to note which cluster you're using for your analyses as all three do not share the same operating system, software, and libraries.
@@ -31,6 +32,8 @@ It's important to note which cluster you're using for your analyses as all three
 ==Puma runs on Rocky Linux 9== with different software modules, compilers, and system libraries than the other two systems.
 
 When compiling your own software or installing packages (e.g., with Python, R, Julia, etc), take note of which cluster you're using as migrating between Puma and the other clusters may result in failures. 
+
+-->
 
 ## Policies
 ### Academic/Free Software

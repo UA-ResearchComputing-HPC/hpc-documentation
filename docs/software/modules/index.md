@@ -44,14 +44,9 @@ This approach gives you fine-grained control over your software environment, ena
 
 Software modules are ==only available on compute nodes== and are not accessible on the login nodes. 
 
-It’s also important to be aware of differences between the clusters:
-
 !!! danger "Ocelote will be decommissioned on August 17th"
     Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
 
-- **Ocelote** runs **CentOS 7**.
-
-- **Puma**, however, runs **Rocky Linux 9**, which has different system libraries and modules than Ocelote. As a result, workflows that work on Ocelote may not be transferable to Puma without modifications.
 
 ## Module Commands
 
@@ -138,19 +133,6 @@ xplor2gmx.pl         GMXRC.zsh
 |intel|2024.0.0|<pre><code>module load intel/2024.0.0 # Default</code></pre>|
 |intel|2024.1.2|<pre><code>module load intel/2024.1.2</code></pre>|
 
-
-### Ocelote 
-
-!!! danger "Ocelote will be decommissioned on August 17th"
-    Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
-
-|Compiler|Version|Module Command|
-|-|-|-|
-|gcc|5.4.0|<pre><code>module load gnu/5.4.0</code></pre>|
-|gcc|7.3.0|<pre><code>module load gnu7/7.3.0</code></pre>|
-|gcc|8.3.0|<pre><code>module load gnu8/8.3.0 # Recommended. Loaded by default</code></pre>|
-|Intel|2020.1|<pre><code>module load intel/2020.1</code></pre>|
-|Intel|2020.4|<pre><code>module load intel/2020.4</code></pre>|
 
 
 ## Software Install Requests
