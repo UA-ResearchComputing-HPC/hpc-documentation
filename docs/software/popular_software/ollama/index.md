@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ollama is a popular open-source platform to run LLMs. Ollama can be built as a container on HPC and run efficiently using GPU nodes on Puma or Ocelote. The full library of models available on ollama can be found [here](https://ollama.com/library). 
+Ollama is a popular open-source platform to run LLMs. Ollama can be built as a container on HPC and run efficiently using GPU nodes. The full library of models available on ollama can be found [here](https://ollama.com/library). 
 
 ## Building Ollama
 
@@ -51,13 +51,13 @@ LLM model images can be a few to hundreds of gigabytes in size. Storing these fi
 
 Not only do we have to consider disk space when storing our models, but we also have to consider VRAM (GPU memory). Models that are larger than the amount of GPU memory available will not run! Check the size of the model file on the ollama website before pulling it to ensure that it will run on your GPU configuration. 
 
-The P100 GPUs (16 GB VRAM) on Ocelote are good options because they can be run in tandem, giving twice the available GPU memory as a single P100 for a total of 32 GB VRAM. Plus, they are significantly more available than GPUs on Puma. To request an interactive session with two P100 GPUs on Ocelote, use this command:
+The v100 GPUs (32 GB VRAM) on Puma are good options because they can be run in tandem, giving twice the available GPU memory as a single V100 for a total of 64 GB VRAM. To request an interactive session with two V100 GPUs, use this command:
 
 ```bash
-salloc --job-name=interactive --account=<your_group> --partition=gpu_standard --nodes=1 --gres=gpu:2 --ntasks=6 --time=4:0:0  
+salloc --job-name=interactive --account=<your_group> --partition=gpu_standard --nodes=1 --gres=gpu:2 --ntasks=13 --time=4:0:0  
 ```
 
-A general rule of thumb for GPU jobs is to provide at least as much CPU memory as GPU memory. Since Ocelote has 6 GB per core, we requested 6 cores to provide 36 GB of CPU memory.
+A general rule of thumb for GPU jobs is to provide at least as much CPU memory as GPU memory. Since Puma has 5 GB per core, we requested 13 cores to provide 65 GB of CPU memory.
 
 Other GPU configurations can be found on our [batch directives](../../../running_jobs/batch_jobs/batch_directives/) page, and a description of the GPU resources can be found in our [compute resources](../../../resources/compute_resources/) page. 
 

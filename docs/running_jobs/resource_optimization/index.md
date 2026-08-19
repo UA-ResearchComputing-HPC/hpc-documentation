@@ -69,9 +69,7 @@ If you run jobs on either type of these limited nodes, please review the guideli
 
 ### High Memory Nodes
 
-Our system currently has five total high memory nodes, all on Puma. Compare this to the 300 standard nodes on Puma and the 360 standard nodes on Ocelote. **High memory nodes are significantly limited in capacity when compared to standard nodes.**
-
-As such, <mark>we request that our users only submit jobs to the high memory nodes when their workflow has been tested extensively and has demonstrated sufficient and specific need for these nodes</mark>. When jobs that do not need the additional memory are submitted to the high memory nodes, this increases wait times for all users, including the submitter (since queue times on standard nodes are significantly shorter). 
+Our system currently has five total high memory nodes. As such, <mark>we request that our users only submit jobs to the high memory nodes when their workflow has been tested extensively and has demonstrated sufficient and specific need for these nodes</mark>. When jobs that do not need the additional memory are submitted to the high memory nodes, this increases wait times for all users, including the submitter (since queue times on standard nodes are significantly shorter). 
 
 There is no single rule that can determine whether a job should be moved from standard to high memory nodes. However, if it is possible to complete the job on a standard node with a small increase in the number of CPUs (and hence [memory](../cpus_and_memory/)) requested, this should **always** be favored over a migration to high memory. 
 
@@ -107,7 +105,7 @@ If you run your jobs on the high memory nodes, please use the `seff` report to d
 
 ### GPU Nodes
 
-While GPU nodes are not nearly as limited as the high memory nodes, they are limited and in very high demand. There are 9 public and 6 buy-in GPU nodes on Puma, most with four V100 GPUs and one with A100s that are sub-divided into [MIG slices](../../resources/compute_resources/#gpu-nodes). On Ocelote, there are 25 nodes with a single P100 GPU, and 35 nodes with two P100 GPUs. Compared to the hundreds of standard nodes on each cluster, GPU nodes are significantly limited in capacity.
+While GPU nodes are not nearly as limited as the high memory nodes, they are limited and in very high demand. There are 9 public and 6 buy-in GPU nodes on Puma, most with four V100 GPUs and one with A100s that are sub-divided into [MIG slices](../../resources/compute_resources/#gpu-nodes). Compared to the hundreds of standard nodes, GPU nodes are significantly limited in capacity.
 
 Unfortunately, there are no tools like `seff` available to produce quantitative metrics for GPU efficiency, but `nvidia-smi` can be used to provide some limited information.
 

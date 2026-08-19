@@ -1,5 +1,9 @@
 # HPC For Instruction
 
+
+!!! danger "Ocelote has been removed"
+    The Ocelote cluster has been removed as of Monday, August 17th 2026. If you wish to use HPC for instructional purposes, please [contact our consulting team](../../support_and_training/consulting_services/). 
+
 ## Overview
 
 Our HPC systems are primarily designed to support research, but some instructors may wish to incorporate HPC use into their courses. We can accommodate this in limited ways, provided instructors understand the constraints and responsibilities involved.

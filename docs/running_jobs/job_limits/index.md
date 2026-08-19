@@ -22,7 +22,6 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr style="background-color: #0C234B; color: white;">
             <th></th>
             <th>Puma</th>
-            <th>Ocelote</th>
         </tr>
     </thead>
     <tbody>
@@ -32,11 +31,9 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr>
             <td>Maximum Simultaneous User Jobs</td>
             <td>1000</td>
-            <td>1000</td>
         </tr>
         <tr>
             <td>Maximum Job Walltime</td>
-            <td>10 days</td>
             <td>10 days</td>
         </tr>
         <tr>
@@ -44,17 +41,14 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr>
             <td>Maximum Memory Per Group</td>
             <td>16996 GB</td>
-            <td>10000 GB</td>
         </tr>
         <tr>
             <td>Maximum CPUs per Group</td>
             <td>3290</td>
-            <td>1024</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Group</td>
             <td>4</td>
-            <td>10</td>
         </tr>
         <tr>
             <th colspan="4" class="limits-header">Windfall Job Resources</th>
@@ -62,16 +56,13 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr>
             <td>Maximum Memory per User</td>
             <td>Unlimited</td>
-            <td>Unlimited</td>
         </tr>
         <tr>
             <td>Maximum CPUs per User</td>
             <td>6000</td>
-            <td>6000</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Job</td>
-            <td>Unlimited</td>
             <td>Unlimited</td>
         </tr>
         <tr>
@@ -79,12 +70,10 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr>
             <td>Maximum CPUs per Group</td>
             <td>Number Purchased</td>
-            <td>N/A</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Group</td>
             <td>Number Purchased</td>
-            <td>N/A</td>
         </tr>
     </tbody>
 </table>
@@ -105,28 +94,23 @@ The table below outlines the maximum resources that can be concurrently used at 
         <tr style="background-color: #0C234B; color: white;">
             <th></th>
             <th>Puma</th>
-            <th>Ocelote</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Maximum Nodes per Job</td>
             <td>1</td>
-            <td>1</td>
         </tr>
         <tr>
             <td>Maximum CPUs per Job</td>
             <td>94</td>
-            <td>28 (Standard/GPU nodes)<br>48 (High memory node)</td>
         </tr>
         <tr>
             <td>Maximum GPUs per Job</td>
             <td>4</td>
-            <td>2</td>
         </tr>
         <tr>
             <td>Maximum Walltime per Job</td>
-            <td>4 days</td>
             <td>4 days</td>
     </tbody>
 </table>

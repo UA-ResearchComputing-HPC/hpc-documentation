@@ -134,10 +134,7 @@ Welcome to our Frequently Asked Questions page. The FAQs are organized by topic 
         <li><b>Allocation exhausted</b>: Your group may have run out of standard hours. You can check your allocation using the command <code>va</code>.</li>
         <li><b>Resource usage limitations</b>: Your group/job has reached a resource usage limit (e.g., number of GPUs that may be used concurrently by a group, or a job has requested more than the 10 day max walltime). Try running <code>job-limits &#60;group_name&#62;</code> to see what limits you're subject to and if there are any problem jobs listed. For more information on limits, see <a href="../../running_jobs/job_limits/">Job Limits documentation</a>.</li>
         <li><b>Requesting rare resources</b>: You may be requesting a rare resource (e.g., 4 GPUs on a single node on Puma or a high memory node).
-        <ul>
-            <li>If you are requesting a single GPU on Puma and are frustrated with the wait times, you might consider checking if Ocelote will work for your analyses. There are more GPU nodes available on that cluster, typically with shorter wait times. See our <a href="../../resources/compute_resources/">Compute Resources page</a> for more information on the resources available by cluster.</li>
-            <li>If you are trying to run a job on a standard node and have been waiting for a very long time, try checking its status using <code>job-history &#60;jobid&#62;</code>. If you see <code>Allocated RAM/CPU</code> above 5 GB on Puma or above 6 GB on Ocelote, then you are queued for the high memory node which can have very long wait times. To queue for a standard node, cancel your job and check that your script has <a href="../../../running_jobs/cpus_and_memory/">the correct ratios</a>.</li>
-        </ul></li>
+        </li>
         </ul>
     </p>
   </div>

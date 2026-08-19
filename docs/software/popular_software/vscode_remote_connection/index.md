@@ -7,9 +7,7 @@ Visual Studio Code (VS Code) can be used to edit source code and other files on 
 
 VS Code can also be run locally on laptop or desktop computers and used to make a remote connection to the HPC systems. This documentation is intended to detail the steps that must be taken to allow such a connection. For more detailed information on establishing SSH connections, refer to the VS Code documentation here: [https://code.visualstudio.com/docs/remote/ssh-tutorial](https://code.visualstudio.com/docs/remote/ssh-tutorial). There is also a general example shown in the section [Connection Example](#specifics-with-example) below.
 
-???+ warning "Not Available on Older Clusters"
 
-    Due to compatibility issues, VS Code remote connection is no longer available on Ocelote. It is still available on Puma. 
 
 
 ## General Method
@@ -51,8 +49,6 @@ Note that ==The HPC VPN== is needed to connect directly to a compute node. This 
 **Step 3: Start an HPC job for the length of time that you’d like to connect VS Code**
 
 This can either be done directly on the command line, or you can start an Open OnDemand graphical job so you don't have to worry about timing out due to inactivity
-
-While starting a job on Ocelote or ElGato will likely get you though the queue faster, VS Code remote connection is no longer compatible with the older clusters. You will need to start a job on Puma to use this feature.
 
 As an example, from the command line we could request an eight-hour session with:
  

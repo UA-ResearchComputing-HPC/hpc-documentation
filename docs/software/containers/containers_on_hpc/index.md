@@ -7,7 +7,7 @@
 
 ## Available Containers
 
-We support the use of HPC and ML/DL containers available on NVIDIA GPU Cloud (NGC). Many of the popular HPC applications including NAMD, LAMMPS and GROMACS containers are optimized for performance and available to run in Apptainer on Ocelote or Puma. The containers and respective README files can be found in ```/contrib/singularity/nvidia```. They are only available from compute nodes, so start an interactive session if you want to view them.
+We support the use of HPC and ML/DL containers available on NVIDIA GPU Cloud (NGC). Many of the popular HPC applications including NAMD, LAMMPS and GROMACS containers are optimized for performance and available to run in Apptainer. The containers and respective README files can be found in ```/contrib/singularity/nvidia```. They are only available from compute nodes, so start an interactive session if you want to view them.
 
 | <div style="width:200px"> Container </div>| Description|
 |-|-|

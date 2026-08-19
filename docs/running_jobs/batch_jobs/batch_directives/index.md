@@ -185,9 +185,6 @@ To specify the number of CPUs per node, use
 
 ## High Memory Nodes
 
-!!! danger "Ocelote high memory node"
-    The high memory node on Ocelote has been removed due to failed hardware. 
-
 Please note that there are only three public and two buy-in high memory nodes on Puma, compared to hundreds of standard nodes on each cluster. Wait times are typically much longer on these nodes as compared to standard nodes. 
 <!-- As such, ***high memory nodes are limited resources and should be only be used if need is clearly demonstrated.*** -->
 
@@ -208,8 +205,6 @@ To request a high memory node, you will need the additional flag ```--constraint
 ???+ question "Automatic assignment to high memory nodes"
 
     If a value of `mem-per-cpu` is requested that is higher than the value available on a given cluster, the Scheduler will automatically migrate the job to a high memory node, even if you did not explicitly request this. 
-
-    The most common case of this would be migrating a job from Ocelote, which has 6 GB per CPU, to Puma, which has 5 GB per CPU. 
 
     Since the Scheduler is able to detect and assign this value automatically, it is recommended to remove requests for `mem-per-cpu` and specify either the total memory or number of CPUs. See the [CPUs and Memory](#cpus-and-memory) section for details.
 
@@ -248,11 +243,6 @@ GPUs are an optional resource that may be requested with the ```--gres``` direct
   <tr>
     <td><pre><code>#SBATCH --gres=gpu:volta:N</code></code></td>
     <td>Request <code>N</code> V100 GPUs where 1&le;<code>N</code>&le;4</td>
-  </tr>
-  <tr>
-    <td rowspan=1  style="vertical-align: middle;">Ocelote</td>
-    <td><pre><code>#SBATCH --gres=gpu:N<br>#SBATCH --mem-per-cpu=8gb</code></pre></td>
-    <td>Request <code>N</code> GPUs, where 1&le;<code>N</code>&le;2. This will target either one or two Pascals (p100s)</td>
   </tr>
 </table>
 
