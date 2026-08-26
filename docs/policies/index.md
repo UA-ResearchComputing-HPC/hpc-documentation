@@ -24,6 +24,15 @@ Users with questions about these policies or their applicability to specific wor
 
     [:octicons-arrow-right-24: View details](./acceptable_use/)
 
+-   :material-shield-account:{ .lg .middle } __Agentic AI__
+
+    ---
+
+    This policy establishes requirements for the use of agentic AI, autonomous workflows, coding assistants, large language models (LLMs), and traditional machine-learning applications
+
+    [:octicons-arrow-right-24: View details](./agentic_ai/)
+
+
 -   :material-key-variant:{ .lg .middle } __Access__
 
     ---
