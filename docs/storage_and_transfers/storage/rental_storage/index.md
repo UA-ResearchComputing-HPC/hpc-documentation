@@ -50,13 +50,19 @@ The cost for rental storage space is $47.35 per terabyte per year. PIs will need
 
 Allocations up to 20 TB can automatically be requested by a PI through our [user portal](https://portal.hpc.arizona.edu/portal/). For allocations larger than 20 TB, [contact our consulting team](/support_and_training/consulting_services/) for assistance. 
 
-## Data Locality, Management, and Transfers
+## Data Locality and Management
 
-You will find your rental allocation space under `/rental/<pi_netid>` where `<pi_netid>` is the NetID of the PI who requested the space. This space is accessible on our [file transfer nodes](../../transfers/overview/) and Puma compute nodes. This enables files to be copied (e.g. with `mv` or `cp`) directly between your rental allocation and the rest of the HPC filesystem (i.e. `/groups`, `/xdisk`, and `/home`). We also provide a Globus endpoint for rental storage. See our [Globus documentation](../../transfers/globus/) for more information on this graphical file transfer tool.
+You will find your rental allocation space under `/rental/<pi_netid>` where `<pi_netid>` is the NetID of the PI who requested the space. This space is accessible on our [file transfer nodes](../../transfers/overview/) and Puma compute nodes.
 
 The rental array is not as performant as our all-flash primary array so **we strongly discourage running compute directly from** `/rental` due to performance limitations. Instead, we recommend using a temporary xdisk as scratch space for jobs. This is especially important for high I/O workloads. We have more specifics in our [Best Practices documentation](../hpc_storage/#best-practices).
 
 The rental array is not backed up. We do keep nightly snapshots so we may be able to retrieve recently lost data. If you accidentally delete a file, [contact us](../../../support_and_training/consulting_services/) promptly to ensure the best chances of data retrieval.
+
+## Data Transfers
+
+Rental allocations are accessible on the [file transfer nodes](../../transfers/overview/) and compute nodes, allowing files to be copied (e.g. with `mv` or `cp`) directly between your rental allocation and the rest of the HPC filesystem (i.e. `/groups`, `/xdisk`, and `/home`). 
+
+We also provide a Globus endpoint for rental storage. This endpoint is distinct from the general HPC endpoint and can be accessed as **UA Rental Storage Filesystem** See our [Globus documentation](../../transfers/globus/) for more information on this graphical file transfer tool.
 
 ## Managing a Rental Allocation Through the Portal
 

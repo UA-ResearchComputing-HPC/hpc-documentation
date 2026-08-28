@@ -35,6 +35,7 @@ nav = [
    { "Policies" = [
        "policies/index.md",
        {"Acceptable Use" = "policies/acceptable_use/index.md"},
+       {"Agentic AI" = "policies/agentic_ai/index.md"},
        {"Access" = "policies/access/index.md"},
        {"Standard Practices" = "policies/standard_practices/index.md"},
        {"Acknowledgements" = "policies/acknowledgements/index.md"},

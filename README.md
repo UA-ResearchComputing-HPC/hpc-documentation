@@ -2,7 +2,7 @@
 
 This repository hosts the source files for The University of Arizona's HPC documentation site. 
 
-This documentation provides information about our facility's computing resources, Slurm usage, policies, software, 
+This documentation provides information about our facility's computing resources, Slurm usage, policies, software, etc. 
 
 ## Documentation
 
@@ -10,9 +10,9 @@ The published documentation is available at:
 
 [https://hpcdocs.hpc.arizona.edu](https://hpcdocs.hpc.arizona.edu)
 
-## Contributing
+## Customization
 
-Documentation is written in Markdown and built with [Zensical](https://zensical.org/).
+This documentation is written in Markdown and built with [Zensical](https://zensical.org/).
 
 To work on the documentation locally:
 
