@@ -6,6 +6,9 @@ In order to access Gaussian and Gaussview, you will need to belong to a special 
 
 ## GPU Notes
 
+!!! warning "Ocelote no longer available"
+    The notes below were created when Ocelote was available. Currently, the P100 nodes are not accessible on the cluster. The installation of Ocelote's P100s into Puma is planned, however, we don't have a set date for when this will be completed. 
+
 When reading these notes, keep in mind that the GPU nodes on Ocelote have one P100 GPU, 28 cores and 256 GB RAM.
 
 1. Gaussian 16 can use the NVIDIA P100 GPUs installed on Ocelote.  Earlier

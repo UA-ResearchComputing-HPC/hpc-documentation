@@ -126,71 +126,38 @@ Below is an example output from this command for a sample user who is a member o
 
 Please note that the output of `job-limits` is specific to the queried group, meaning the User Limits displayed apply only to jobs submitted by that user using the group's account.
 
-=== "Puma"
-    ```bash
-    (puma) [<your_netid>@wentletrap ~]$ job-limits <group>
 
-                            Group Limits: <group>                            
-    --------------------------------------------------------------------------------
-    Job Type      |    Memory    |     CPU      |        GPU         |  Job Number   
-                  |Running/Limit |Running/Limit |   Running/Limit    |Submitted/Limit 
-    --------------------------------------------------------------------------------
-    Standard      |   -/16998G   |    -/3290    |    -/gres/gpu=4    |     -/-       
-    High Priority |   -/16998G   |     -/94     |    -/gres/gpu=0    |     -/-       
-    --------------------------------------------------------------------------------
+```bash title="Checking job limits on the command line"
+(puma) [<your_netid>@wentletrap ~]$ job-limits <group>
 
-
-                                User Limits: <your_netid>                          
-    --------------------------------------------------------------------------------
-    Job Type      |    Memory    |     CPU      |        GPU         | Job Number*   
-                  |Running/Limit |Running/Limit |   Running/Limit    |Submitted/Limit 
-    --------------------------------------------------------------------------------
-    Windfall      |     -/-      |    -/6000    |        -/-         |    -/1000     
-    Standard      |   -/16998G   |    -/3290    |    -/gres/gpu=4    |               
-    High Priority |   -/16998G   |     -/94     |    -/gres/gpu=0    |               
-    --------------------------------------------------------------------------------
-    *Max jobs across all groups and partitions.
+                        Group Limits: <group>                            
+--------------------------------------------------------------------------------
+Job Type      |    Memory    |     CPU      |        GPU         |  Job Number   
+              |Running/Limit |Running/Limit |   Running/Limit    |Submitted/Limit 
+--------------------------------------------------------------------------------
+Standard      |   -/16998G   |    -/3290    |    -/gres/gpu=4    |     -/-       
+High Priority |   -/16998G   |     -/94     |    -/gres/gpu=0    |     -/-       
+--------------------------------------------------------------------------------
 
 
-                                Individual Job Limits                             
-    --------------------------------------------------------------------------------
-    Job Type      |    Memory    |     CPU      |        GPU         |     Time      
-    --------------------------------------------------------------------------------
-    Windfall      |    16998G    |     6000     |                    | 10-00:00:00   
-    Standard      |    16998G    |     3290     |     gres/gpu=4     | 10-00:00:00   
-    High Priority |    16998G    |      94      |     gres/gpu=0     | 10-00:00:00   
-    --------------------------------------------------------------------------------
-    ```
-
-=== "Ocelote"
-    ```bash
-    (ocelote) [<your_netid>@wentletrap ~]$ job-limits <group>
-
-                            Group Limits: <group>                            
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |   Job Number    
-            | Running/Limit  | Running/Limit  |   Running/Limit    |Submitted/Limit  
-    --------------------------------------------------------------------------------
-    Standard |     -/10T      |     -/1024     |   -/gres/gpu=10    |      -/-        
-    --------------------------------------------------------------------------------
+                            User Limits: <your_netid>                          
+--------------------------------------------------------------------------------
+Job Type      |    Memory    |     CPU      |        GPU         | Job Number*   
+              |Running/Limit |Running/Limit |   Running/Limit    |Submitted/Limit 
+--------------------------------------------------------------------------------
+Windfall      |     -/-      |    -/6000    |        -/-         |    -/1000     
+Standard      |   -/16998G   |    -/3290    |    -/gres/gpu=4    |               
+High Priority |   -/16998G   |     -/94     |    -/gres/gpu=0    |               
+--------------------------------------------------------------------------------
+*Max jobs across all groups and partitions.
 
 
-                                User Limits: <your_netid>                            
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |  Job Number*    
-            | Running/Limit  | Running/Limit  |   Running/Limit    |Submitted/Limit  
-    --------------------------------------------------------------------------------
-    Windfall |      -/-       |     -/6000     |        -/-         |     -/1000      
-    Standard |     -/10T      |     -/1024     |   -/gres/gpu=10    |                 
-    --------------------------------------------------------------------------------
-    *Max jobs across all groups and partitions.
-
-
-                                Individual Job Limits                             
-    --------------------------------------------------------------------------------
-    Job Type |     Memory     |      CPU       |        GPU         |      Time       
-    --------------------------------------------------------------------------------
-    Windfall |     8064G      |      6000      |                    |  10-00:00:00    
-    Standard |     8064G      |      1024      |    gres/gpu=10     |  10-00:00:00    
-    --------------------------------------------------------------------------------
-    ```
+                            Individual Job Limits                             
+--------------------------------------------------------------------------------
+Job Type      |    Memory    |     CPU      |        GPU         |     Time      
+--------------------------------------------------------------------------------
+Windfall      |    16998G    |     6000     |                    | 10-00:00:00   
+Standard      |    16998G    |     3290     |     gres/gpu=4     | 10-00:00:00   
+High Priority |    16998G    |      94      |     gres/gpu=0     | 10-00:00:00   
+--------------------------------------------------------------------------------
+```

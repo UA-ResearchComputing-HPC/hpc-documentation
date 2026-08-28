@@ -70,18 +70,11 @@ PI: parent_1206 Total time: 7000:00:00
 
 !!! tip 
     If you are interested in having an HPC staff member come to your class to do an Intro to HPC presentation, reach out to our consultants.
+
+!!! info "Puma now available for class groups"
+    As of August 28, 2026, Puma is now available for class group usage.
     
 If you are a faculty member and are teaching a course that makes use of HPC resources, you can create a class group that will grant your students system access. Class groups are designed to be created and used for one semester only.
-
-### Class Group Restrictions
-
-Due to Arizona sales tax restrictions ==class groups are restricted to the Ocelote cluster and cannot use Puma==. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
-
-```bash
-#SBATCH --account=hpc101
-#SBATCH --partition=standard
-```
-Class group members may also use the Windfall partition on Ocelote. 
 
 ### Creating a Class Group
 
@@ -98,24 +91,26 @@ Once this process is complete, you can find your group's dropdown under the **Gr
 Students in your class group will only be able to access files and directories owned by the class group. This means they will not be able to access files and directories owned by your standard research group. 
 
 ### Running Jobs and Allocations
-Due to Arizona sales tax restrictions ==class groups may only use the Ocelote cluster==. To submit standard jobs on Ocelote, students will use the class group's name for the `--account` Slurm directive. For example:
+
+To submit standard jobs, students will use the class group's name for the `--account` Slurm directive. For example, if the class group's name were `classgroup`:
 
 ```bash
-#SBATCH --account=hpc101
+#SBATCH --account=classgroup
 #SBATCH --partition=standard
 ```
-Standard hours used on Ocelote are pulled from the same pool as your research group so make sure to plan accordingly. If a student runs the command ```va```, they will see the class group as being nested under the total time allocated to your primary research group as well as any others you may have created. Students will not see the names of your other research groups if they run `va` unless they are members. 
+Class group members may also use the Windfall partition.
+
+Standard hours are pulled from the same pool as your research group so make sure to plan accordingly. If a student runs the command `va`, they will see the class group as being nested under the total time allocated to your primary research group as well as any others you may have created. Students will not see the names of your other research groups if they run `va` unless they are members. 
 
 ```bash
-(ocelote) [faculty_netid@wentletrap ~]$ va
+(puma) [netid@junonia ~]$ va
 Windfall: Unlimited
- 
-PI: parent_000 Total time: 100000:00:00
-    Group: hpc101 Time used: 0:00:00 Time encumbered: 0:00:00
-    Group: faculty_netid Time used: 0:00:00 Time encumbered: 0:00:00
-    Total used: 0:00:00
-    Total encumbered: 0:00:00
-    Total remaining: 100000:00:00
+
+PI: parent_1206 Total time: 150000:00:00
+	Total used*: 0:00:00
+	Total encumbered: 0:00:00
+	Total remaining: 150000:00:00
+	Group: classgroup Time used: 0:00:00 Time encumbered: 0:00:00
 ```
 
 ## Delegating Group Management Rights

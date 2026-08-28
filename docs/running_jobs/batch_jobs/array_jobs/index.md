@@ -229,7 +229,7 @@ Each subjob in an array produces its own output file. By default, these are form
     When our analyses are complete, we should see an output file corresponding to each of our input files:
 
     ```bash
-    (ocelote) [netid@junonia array_filenames_example]$ tree
+    [netid@junonia array_filenames_example]$ tree
     .
     ├── input
     │   ├── AJD81427.fa

@@ -6,8 +6,6 @@ Before submitting your job to the scheduler, it's important to know that the num
 
 ==Each cluster has a fixed amount of memory per CPU based on the node type==. Accepted values by cluster and node type are listed below, including the number of each type of node:
 
-!!!danger "Ocelote decommissioning"
-    Ocelote will be decommissioned on Monday, August 17th, 2026. Our newest cluster, Lynx, will become available later this fall. 
 
 |Cluster|Standard Node|*Count*|High-Memory Node|*Count*|GPU Node|*Count*|
 |-|-|-|-|-|-|-|
@@ -47,7 +45,7 @@ graph LR
    E["`Set mem/CPU=**MpC**`"]
    Z[Done]
    A -->|CPU| B --> C --> Z
-   A -->|mem| D -.-> E --> Z
+   A -->|mem| D -.-> E --> Za
    D --> Z
 ```
 

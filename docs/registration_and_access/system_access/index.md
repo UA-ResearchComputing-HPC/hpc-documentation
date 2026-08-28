@@ -186,19 +186,7 @@ If it comes back blank, X11 forwarding is not enabled.
     [netid@gatekeeper ~]$ echo $DISPLAY
     localhost:13.0
  
-    [netid@gatekeeper ~]$ shell -X
-    ***
-    The default cluster for job submission is Puma
-    ***
-    Shortcut commands change the target cluster
-    -----------------------------------------
-    Ocelote:
-    $ ocelote
-    (ocelote) $
-    Puma:
-    $ puma
-    (puma) $
- 
+    [netid@gatekeeper ~]$ shell -X 
     (puma)[netid@junonia ~]$ echo $DISPLAY
     localhost:18.0
     ```

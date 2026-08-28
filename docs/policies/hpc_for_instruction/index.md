@@ -1,8 +1,8 @@
 # HPC For Instruction
 
 
-!!! danger "Ocelote has been removed"
-    The Ocelote cluster has been removed as of Monday, August 17th 2026. If you wish to use HPC for instructional purposes, please [contact our consulting team](../../support_and_training/consulting_services/). 
+!!! info "Puma is now available for class groups"
+    PIs who wish to use HPC for instruction may now use Puma. 
 
 ## Overview
 
@@ -14,13 +14,10 @@ Instructional use differs from research use in several important respects, parti
 
 We strongly suggest that instructors who plan to incorporate HPC use into their curriculum either have significant experience using our HPC system, or they take sufficient time to familiarize themselves with our system, including reading our documentation, running test jobs, and any other tasks that students may be expected to perform. Prior experience on other systems may not directly translate to ours. This will ensure that instructors are prepared to assist their students should any issues arise.
 
-## Cluster Restrictions
-
-For tax reasons, groups using The University of Arizona's HPC systems for instructional purposes are restricted to Ocelote and may not use Puma.
 
 ## Compute Resources and Allocations
 
-See our [compute resources documentation](../../resources/compute_resources/), [allocations documentation](../../resources/allocations/), and [resource limits documentation](../../running_jobs/job_limits/) for information on Ocelote's available hardware, OS, time allocations, and concurrent resource usage limits to verify they meet your class' needs. 
+See our [compute resources documentation](../../resources/compute_resources/), [allocations documentation](../../resources/allocations/), and [resource limits documentation](../../running_jobs/job_limits/) for information on our available hardware, OS, time allocations, and concurrent resource usage limits to verify they meet your class' needs. 
 
 It should be noted, a separate time allocation is not created for class groups. This means time allocations are shared between a faculty member's research and class groups, so usage should be planned accordingly.
 
