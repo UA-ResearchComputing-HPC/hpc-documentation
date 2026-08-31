@@ -5,7 +5,7 @@
 !!! tip "No migration needed for Lynx"
     The new HPC cluster, Lynx, will share the same OS (Rocky Linux 9) as Puma. No migration will be necessary for current Puma users when the cluster goes live. This documentation is only relevant for current Ocelote users.
 
-In early 2025, the Puma cluster was updated to a newer operating system called Rocky Linux 9. Ocelote has remained on the older OS called CentOS 7. Ocelote will be decommissioned on August 17th, 2026 so it is now necessary for users to migrate their workflows to Puma to continue using HPC. Below is a summary of the main points of relevance to users:
+In early 2025, the Puma cluster was updated to a newer operating system called Rocky Linux 9. Ocelote remained on the older OS called CentOS 7. Ocelote has been decommissioned on August 17th, 2026 so it is now necessary for users to migrate their workflows to Puma to continue using HPC. Below is a summary of the main points of relevance to users:
 
 **System Software**
 

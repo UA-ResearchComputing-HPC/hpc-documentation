@@ -12,7 +12,7 @@ We provide instructions below for how to create, use, and switch between librari
 
 ### What is a Library?
 
-An R library is a directory where the R packages you install are stored. Creating a custom library allows you to have control over where your packages are installed (faciliting storage management and enabling library sharing among groups), lets you isolate your environments (great for version control), and allows you to switch between different package ecosystems. 
+An R library is a directory where the R packages you install are stored. Creating a custom library allows you to have control over where your packages are installed (facilitating storage management and enabling library sharing among groups), lets you isolate your environments (great for version control), and allows you to switch between different package ecosystems. 
 
 ### Library Best Practices
 
@@ -25,7 +25,16 @@ Before we cover how to create a library, here are a few important considerations
 
 2. **Each R library should correspond to a single operating system (OS).**
 
-    Installing R packages on one OS and attempting to use them on another will frequently result in crashes. If you're switching between clusters that use different operating systems (for example, switching from Puma to Ocelote), ensure the R library you're using was built on that OS. 
+    Installing R packages on one OS and attempting to use them on another will frequently result in crashes. While we attempt to ensure our computing environments remain stable for user workflows, periodically (typically every few years) a new cluster may come online or an existing cluster may be updated such that not all clusters run on the same OS. It's good practice to keep track of which OS was used to create your R libraries to avoid potential system library or other errors. To see which operating system you're using, you can use (on a compute node) `cat /etc/os-release`. For example:
+
+    ```
+    $ cat /etc/os-release
+    NAME="Rocky Linux"
+    VERSION="9.8 (Blue Onyx)"
+    . . .
+    ```
+
+    shows the cluster has OS Rocky Linux 9.
 
 3. **Create your own libraries and avoid using the default that R creates for you.**
 
@@ -35,7 +44,7 @@ Before we cover how to create a library, here are a few important considerations
     ~/R/x86_64-pc-linux-gnu-library/<R_version>
     ``` 
 
-    Any packages installed in this library will **always** be loaded into your environment whenever you use R version `<R_version>`, regardless of whether you're specifying a custom library or not. On your local computer, this may not be an issue, but in the context of HPC, this can become a source of trouble. The largest drawback is the potential for mixing operating systems when switching between clusters. Installing packages on one OS and attempting to use them on another will most often lead to software failures. 
+    Any packages installed in this library will **always** be loaded into your environment whenever you use R version `<R_version>`, regardless of whether you're specifying a custom library or not. On your local computer, this may not be an issue, but in the context of HPC, this can become a source of trouble. The largest drawback is the potential for mixing operating systems. Installing packages on one OS and attempting to use them on another will most often lead to software failures. 
 
     If you find you have accidentally created a default R library, you can either delete it, or you can move it to a new location and [manually load it when desired](#how-to-switch-libraries).
 
@@ -47,7 +56,7 @@ Before we cover how to create a library, here are a few important considerations
     We recommend including information about your library in the name, e.g.:
 
     1. Which version of R you're using.
-    2. Which OS was used to create it. Puma's OS is Rocky Linux 9. Ocelote runs on CentOS 7.
+    2. Which OS was used to create it. 
     
     It's important to maintain a consistent version of R with your libraries since installing packages into one library with multiple versions of R will often cause trouble. Similarly, installing an R package on one operating system and using it on another will result in failures. 
 
@@ -70,7 +79,7 @@ Before we cover how to create a library, here are a few important considerations
     
 3. **Install your packages.**
 
-    That's it! Once you have a custom library and `R_LIBS` is defined in `~/.Renviron`, you can install packages by starting R and using something like `install.packages()`. For example, we could install the package `ggplot2` using:
+    Once you have a custom library and `R_LIBS` is defined in `~/.Renviron`, you can install packages (once you [connect to a compute node](../../../running_jobs/interactive_jobs/)) by starting R and using something like `install.packages()`. For example, we could install the package `ggplot2` using:
 
 
     ```bash
@@ -90,7 +99,7 @@ If you're changing the version of R you're using, or if you're changing operatin
 
     If you already have an existing library set up for the environment you're planning to use, you can skip this step. Otherwise, you can create a new library using similar steps to those [shown in the preceding section](#create-your-first-library)
 
-    If you're creating a new library, remember to include pertinant information in the name. For example:
+    If you're creating a new library, remember to include pertinent information in the name. For example:
 
     ```bash
     mkdir -p ~/R/library_4.4_centos7
@@ -104,7 +113,7 @@ If you're changing the version of R you're using, or if you're changing operatin
     nano ~/.Renviron
     ```
 
-    Once your text editor opens, set the `R_LIBS` variable previously defined in your file to the name and location of your new library. In this example, this would look like:
+    Once your text editor opens, set `R_LIBS`, previously defined in your file, to the name and location of your new library. In this example, this would look like:
 
     ```bash
     R_LIBS=~/R/library_4.4_centos7
@@ -117,7 +126,7 @@ That's it! Now, when you install new packages, they will be saved to this new di
 
 ### Use a Terminal
 
-When installing R packages, we recommend using an [interactive terminal session](../../../running_jobs/interactive_jobs/) and avoiding RStudio. This is because RStudio uses a [container](../../containers/what_are_containers/) under the hood which may override some system variables necessary for successful compilations. 
+When installing R packages, we recommend using an [interactive terminal session](../../../running_jobs/interactive_jobs/) and avoiding RStudio. This is because RStudio uses a [container](../../containers/what_are_containers/) under the hood which may override some system variables and paths necessary for successful compilations. 
     
 This is particularly true if your software relies on [software modules](../../modules/). For example, hdf5r and Seurat rely on modules hdf5 and gdal, respectively (see [popular packages](#popular-packages) for more information). RStudio does not have access to modules, so these packages will not be able to compile in that environment. Instead, they should be compiled on the command line with the necessary software modules loaded. If modules were needed to compile a package, they may be loaded in RStudio by following the instructions further down on this page under [Loading Modules in RStudio](#loading-modules-in-rstudio). ==Note that using this method only allows you to **load** R packages that have already been installed on the command line and does **not** work for **compile time** issues==. This is due to Apptainer overriding environment variables necessary for compilation. 
 
@@ -129,7 +138,7 @@ We recommend **always** loading `R` with its version specified, both when instal
 module load R/<version>
 ```
 
-and not simply using `module load R`. When a version is not specified, modules default to the newest version. This means that when an update is made, the default version of R that is loaded changes which can lead to version conflicts and incompatabilities. 
+and not simply using `module load R`. When a version is not specified, modules default to the newest version. This means that when an update is made, the default version of R that is loaded changes which can lead to version conflicts and incompatibilities. 
 
 ### Remove Anaconda From Your Environment
 
@@ -167,15 +176,11 @@ Note in the above example, two different versions of R (4.4.0 and 4.2.2) were us
 
 ### Mixed Operating Systems
 
-If your R workflows are failing with errors referencing `glibc`, `libstdc++`, or other system libraries, this may be an issue resulting from installing packages on one OS and trying to run them on a different one. 
-
-Ocelote and ElGato run on the OS CentOS 7 while Puma runs on Rocky Linux 9. If you're getting errors of the type mentioned above, try loading your packages on a different cluster (with a different OS) to see if you get the same errors. If your packages load successfully, they were likely compiled there. 
-
-To run your analyses on a different OS, you will need to create a new library and reinstall your packages in that new environment. 
+If your R workflows are failing with errors referencing `glibc`, `libstdc++`, or other system libraries, this may be an issue resulting from installing packages on one OS and trying to run them on a different one. If you're getting these types of errors, you will likely need to create a new library and reinstall your packages in that new environment, or switch clusters (if applicable). 
 
 ### R Environment Issues and Home Storage Issues
 
-R Stores previous saved sessions and configuration options in different files, typically stored in your home. For example, old sessions may be saved as a hidden file `~/.RData`. Alternatively, they may be stored under `~/.local/share/rstudio`. Where they are stored is dependent on the version of R you are using. These may sometimes cause environment corrpution, or for your job to run out of memory immediately after starting. Removing or moving these old session files may help. Note that if these files are causing storage issues, it's possible to [set a new user state directory](#setting-a-new-user-state-directory).
+R stores previous saved sessions and configuration options in your home. For example, old sessions may be saved as a [hidden file](../../../support_and_training/cheat_sheet/#hidden-files-and-directories) `~/.RData`. Alternatively, they may be stored under `~/.local/share/rstudio`. Where they are stored is dependent on the version of R you are using. These may sometimes cause environment corruption, or for your job to run out of memory immediately after starting. Removing or moving these old session files may help. Note that if these files are causing storage issues, it's possible to [set a new user state directory](#setting-a-new-user-state-directory).
 
 It's also important to pay attention to the lines added to the following files, if they exist: `~/.Renviron`, `~/.UAz_ood/rstudio.sh`, and `~/.R/Makevars`. Corruption of environment variables and loading nonexistent modules may cause package installation failures, RStudio sessions to crash before starting (e.g., in your job tile in OOD, RStudio will immediately go from Starting to Completed), among other unwanted behavior. 
 
@@ -184,7 +189,7 @@ It's also important to pay attention to the lines added to the following files, 
 
 If you're trying to install an R package in RStudio, you may run into dependency or system library issues. We recommend retrying the installation in an [interactive terminal session](../../../running_jobs/interactive_jobs/) on the command line to see if this resolves the issue. 
 
-This is particularly true if your R package dependes on an external software module such as hdf5 or gdal (see [Popular Packages](#popular-packages) lower on this page for some examples of this case).
+This is particularly true if your R package depends on an external software module such as hdf5 or gdal (see [Popular Packages](#popular-packages) lower on this page for some examples of this case).
 
 See [our best practices section above](#use-a-terminal) for more detailed information. 
 
@@ -195,7 +200,7 @@ See [our best practices section above](#use-a-terminal) for more detailed inform
 
 
 === "Open OnDemand"
-    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it is a less flexible environment than using R from the command line. This is because RStudio sets its own environment which prevents easy access to third party software installed as system modules.
+    We provide access to the popular development environment RStudio through our [Open OnDemand](../../../running_jobs/open_on_demand/#applications-available/) web interface. This is a very handy tool, though it should be noted that it's a less flexible environment than using R from the command line. This is because RStudio sets up its own environment which prevents easy access to third party software installed as system modules.
 
 === "Apptainer/Singularity"
     In some circumstances, you may want to run RStudio using your own Apptainer (rebranded from Singularity) image. For example, this allows access to different versions of R not provided when using our OOD application. We have some instructions on one way to do this below.
@@ -226,7 +231,7 @@ See [our best practices section above](#use-a-terminal) for more detailed inform
     touch rserver.sh
     chmod u+x rserver.sh
     ```
-    Open the file in your favorite editor and enter the content below. Modify the variables under ```USER OPTIONS``` to match your account if necessary. You can change ```PASSWORD``` to any password you'd like to use. Once you've entered the contents, save and exit:
+    Open the file in your favorite editor and enter the content below. Modify the variables under `USER OPTIONS` to match your account if necessary. You can change `PASSWORD` to any password you'd like to use. Once you've entered the contents, save and exit:
 
     ```
     #!/bin/bash
@@ -243,11 +248,11 @@ See [our best practices section above](#use-a-terminal) for more detailed inform
     PASSWORD=$PASSWORD apptainer exec -B $TMPDIR/var/lib:/var/lib/rstudio-server -B $TMPDIR/var/run:/var/run/rstudio-server  -B $TMPDIR/tmp:/tmp $SIF rserver --auth-none=0 --auth-pam-helper-path=pam-helper --server-user=$NETID --www-address=127.0.0.1
     ```
 
-    Now, in your desktop session's terminal, execute the rserver.sh script using ```./rserver.sh```
+    Now, in your desktop session's terminal, execute the rserver.sh script using `./rserver.sh`
 
     <img src="images/rserver_execute.png" title="Execute rserver.sh" style="width: 600px;" >
 
-    Next, open a Firefox window and enter ```localhost:8787``` for the URL. In your browser, you will be prompted to log into your RStudio server. Enter your NetID under Username. Under Password, enter the password you defined in the script server.sh.
+    Next, open a Firefox window and enter `localhost:8787` for the URL. In your browser, you will be prompted to log into your RStudio server. Enter your NetID under Username. Under Password, enter the password you defined in the script server.sh.
 
     <img src="images/rstudio_login.png" title="Sign into RStudio" style="width: 500px; box-shadow: 5px 5px 5px #999;">
 
@@ -266,10 +271,10 @@ See [our best practices section above](#use-a-terminal) for more detailed inform
 
 
 
-If you are using the RStudio application in Open OnDemand, it is now possible to load additional [software modules](../../modules/) into your environment. You might want to do this if your R libraries depend on modules. An example of this might be the [Seurat package](#popular-packages) which depends on the modules gdal, proj, sqlite3, and geos. 
+If you are using the RStudio application in Open OnDemand, it is possible to load additional [software modules](../../modules/) into your environment. You might want to do this if your R libraries depend on modules. An example of this might be the [Seurat package](#popular-packages) which depends on the modules gdal, proj, sqlite3, and geos. 
 
 !!! danger inline end "Use caution"
-    Be careful with the lines you add to rstudio.sh. If you add invalid commands (e.g., try to load a nonexistent module), new RStudio sessions will crash during initialization. 
+    Be careful with the lines you add to rstudio.sh. If you add invalid commands (e.g., try to load a nonexistent module, switch to an Intel environment, etc.), new RStudio sessions will crash during initialization and your RStudio job will immediately end before you can connect. 
 
 **Method to Load Modules**
 
@@ -285,7 +290,7 @@ This example assumes you are working on the command line. Start by first creatin
 mkdir -p ~/.UAz_ood
 touch ~/.UAz_ood/rstudio.sh
 ```
-Next, open `rstudio.sh` in your favorite text editor. One option is to use the command line text editor nano. If you have not used a command line text editor, see [this page](../../../support_and_training/cheat_sheet/#command-line-text-editors) for details. For example:
+Next, open `rstudio.sh` in your favorite text editor. One option is to use Nano. If you have not used a command line text editor, see [this page](../../../support_and_training/cheat_sheet/#command-line-text-editors) for details. For example:
 
 ```bash
 nano ~/.UAz_ood/rstudio.sh
@@ -300,33 +305,33 @@ Now, save and exit. Once your file exists with the desired contents, start an ne
 
 ### Setting a New User State Directory
 
-When working on a large project in RStudio, it is possible for your R session's data to fill up your home directory resulting in out-of-space errors (e.g. when trying to edit files, create new OOD sessions, etc). With the newest version of RStudio, you can find these saved session files under ```~/.local/share/rstudio```.
+When working on a large project in RStudio, it is possible for your R session's data to fill up your home directory resulting in Out of Space errors (e.g. when trying to edit files, create new OOD sessions, etc). With the newest version of RStudio, you can find these saved session files under `~/.local/share/rstudio`.
 
-To preserve space in your home, you can specify a different directory by setting the environment variable ```RSTUDIO_DATA_HOME```. To do this, open the hidden file ```~/.bashrc``` and add:
+To preserve space in your home, you can specify a different directory by setting the [environment variable](../../../support_and_training/cheat_sheet/#environment-variables) `RSTUDIO_DATA_HOME`. To do this, open the hidden file `~/.bashrc` and add:
 
 ```
 export RSTUDIO_DATA_HOME=</path/to/new/directory>
 ```
 
-where ```</path/to/new/directory>``` is the path to a different location where you have a larger space quota. For example, ```/groups/<YOUR_PI>/<YOUR_NETID>/rstudio_sessions```.
+where `</path/to/new/directory>` is the path to a different location where you have a larger space quota. For example, `/groups/<YOUR_PI>/<YOUR_NETID>/rstudio_sessions`.
 
 If you already have a session file that is consuming excessive space in your home, you can either relocate your rstudio session directory or simply delete the session file. For example:
 
-``` title="Moving the Session Directory"
+```bash title="Moving the Session Directory"
 mv ~/.local/share/rstudio /path/to/new/dir
 echo 'RSTUDIO_DATA_HOME=/path/to/new/dir/rstudio' >> ~/.bashrc
 ```
 
 Alternatively
 
-``` title="Deleting the Session File"
+```bash title="Deleting the Session File"
 rm -r ~/.local/share/rstudio/sessions/active
 ```
 
 ### Setting Your Working Directory
 
 === "Current Session"
-    If you'd like to change your working directory in an RStudio session, one option is to use ```setwd("/path/to/directory")``` in your terminal. Alternatively, if you'd like to see the contents of your new workspace in your file browser, you can navigate to the **Session** dropdown tab, navigate to **Set Working Directory**, and click **Choose Directory...**
+    If you'd like to change your working directory in an RStudio session, one option is to use `setwd("/path/to/directory")` in your terminal. Alternatively, if you'd like to see the contents of your new workspace in your file browser, you can navigate to the **Session** dropdown tab, navigate to **Set Working Directory**, and click **Choose Directory...**
 
     <img src="images/session-choose-directory.png" title="Choose working directory" style="width: 700px;">
 
@@ -384,8 +389,6 @@ Below, we document some installation instructions for common R packages. We atte
 
 
     === "Seurat"
-        !!! tip "CentOS 7 Installation"
-            The additional module `libpng/1.6.37` is required if installing Seurat on Ocelote or ElGato.
 
         ```
         (puma) [netid@junonia ~]$ interactive -a <your_group>
@@ -398,11 +401,6 @@ Below, we document some installation instructions for common R packages. We atte
         If you want to load this software in an RStudio session, you will need to create the file `~/.UAz_ood/rstudio.sh`. See the [Loading Modules in RStudio](#loading-modules-in-rstudio) section above for more information. 
 
     === "SeuratDisk"
-
-        !!!tip "CentOS 7 Installation"
-            The additional modules `libpng/1.6.37` and `libgit2/1.8.1` are required if installing Seurat on Ocelote or ElGato. 
-            
-            Additionally, you will need to run `unset CPPFLAGS` after loading the dependency modules, prior to starting R. This is due to a [reported issue with the dependency hdf5r](https://github.com/hhoeflin/hdf5r/issues/132):
 
         SeuratDisk is similar to Seurat with a few more dependencies. 
 

@@ -137,10 +137,10 @@ These resources specifically do not support Regulated Research, which might be I
 
     We will be decommissioning two of our older clusters in the summer of 2026 to make space for the new cluster, Lynx. The dates for the decommissioning are as follows:
 
-    * El Gato will go offline permanently on Wednesday, July 29th, 2026.
-    * Ocelote will go offline permanently on Monday, August 17th, 2026. 
+    * El Gato went permanently on Wednesday, July 29th, 2026.
+    * Ocelote went offline permanently on Monday, August 17th, 2026. 
 
-    Ocelote and El Gato users are advised to start migrating their workflows as soon as possible. Information on changing to Puma can be found in our [operating system updates documentation](./resources/updates/).
+    Ocelote and El Gato users will need to migrate their workflows to Puma to continue using HPC. Information on how to do this can be found in our [operating system updates documentation](./resources/updates/).
 
 -   :material-wrench-clock:{ .lg .middle } __July 2026 Maintenance__
 
