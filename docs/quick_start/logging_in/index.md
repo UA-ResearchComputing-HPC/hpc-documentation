@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../../assets/stylesheets/buttons.css">
+<link rel="stylesheet" href="../../assets/stylesheets/images.css">
 
 # Logging In
 
@@ -29,20 +30,71 @@ The inner workings of HPC systems may be somewhat obscured to new users. In this
 
 ### The bastion host
 
-In another browser window, open [our instructions on logging in from the command line](../../registration_and_access/system_access/#command-line-access). Start by following the first step shown that's specific to your operating system. Stop when your terminal displays 
+!!! question "HPC Credentials"
+    Note that for all HPC services, you will use your University of Arizona NetID and password. There are no HPC-specific usernames or passwords needed.
+
+Let's get started by connecting to HPC using a local SSH client. The term SSH refers to a network protocol that allows you to securely connect to a remote server. In this case, the remote server is HPC. 
+
+Select your local computer's operating system from the tabs below and follow the instructions given on how to connect. 
+
+
+=== "Linux/Mac"
+    ???+ info "Mac terminal access"
+        Mac systems provide a built-in SSH client, so there is no need to install any additional software. You will find the terminal application under **Applications → Utilities → Terminal**.
+        
+    Open the terminal and enter:
+    ```bash
+    ssh <netid>@hpc.arizona.edu
+    ```
+    where `<netid>` is your UArizona NetID. When you press enter, you will be prompted for your university password. Type it on the command line, then press ++enter++. Note that when you enter your password on the command line, no characters will appear. This is normal security behavior and doesn't mean your terminal is frozen. After successfully entering your password, you will be prompted to Duo Authenticate. 
+
+
+=== "Windows"
+    Windows systems have limited native support for SSH. It is generally recommended to use one of these programs.
+        
+    === "PuTTY"
+        PuTTY is the most popular open source SSH Windows client. To use it: download, install, and open the [Putty client](https://putty.software/). Next, open a connection and enter `hpc.arizona.edu` under **Host Name** and press **Open**
+            
+        <img src="images/putty-login.jpg" title="PuTTY configuration"width="400"/>
+            
+        This will open a terminal. At the prompt, enter the following, replacing ```<netid>``` with your own NetID:
+            
+        ```bash
+        Login as: <netid>
+        ```
+            
+        You will then be prompted to enter your NetID password, then to Duo-Authenticate.
+        
+    === "MobaXterm"
+
+        **Basic Connection**
+
+        MobaXterm is an available SSH Windows client. To connect to HPC, [download and install MobaXterm](https://mobaxterm.mobatek.net/download.html), open the software, select **Session** 
+            
+        <img src="images/MobaXterm-session.png" title="MobaXterm session" width="650px" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
+
+        From there, select **SSH** and enter ```hpc.arizona.edu``` under **Remote host**. Next, select the box next to **Specify username** and enter your UArizona NetID. To connect, click OK at the bottom of the screen:
+        
+        <img src="images/MobaXterm-connect.png" title="MobaXterm SSH" width="650" style="box-shadow: 0 10px 20px rgba(0,0,0,0.25);"/>
+            
+        This will open a terminal and will prompt you for your NetID password. You will then need to Duo-authenticate. 
+
+
+If everything was successful, you will be connected to what's know as the **bastion host**. When you first connect to this machine, you should see the following:
 
 ```
 Success. Logging you in...
 Last login:
 This is a bastion host used to access the rest of the RT/HPC environment.
-
+   
 Type "shell" to access the job submission hosts for all environments
 ```
-If all has gone well, you are now connected to what is known as the bastion host. 
 
-<center><img src="images/bastion.png" title="HPC bastion host" style="height: 300px;"></center>
+<center><img class="img-right" src="images/bastion.png" title="HPC bastion host" style="height: 300px;"></center>
 
-The bastion host is the first computer you land on when you log in using the hostname ```hpc.arizona.edu```. This machine is only used to validate your credentials and provide a gateway to the rest of the HPC environment. It is not used for storing files and has no software installed so no computational work is done at this stage. As a test, try running the command ```hostname```:
+The bastion host is the first computer you land on when you log in using the hostname `hpc.arizona.edu`. ==This machine is only used to validate your credentials and provide a gateway to the rest of the HPC environment. It is not used for storing files and has no software installed so no computational work is done at this stage==. 
+
+As a test, try running the command `hostname`:
 
 ```
 [user@gatekeeper 14:50:49 ~]$ hostname
@@ -55,16 +107,22 @@ Next, to advance from the bastion host, type the command ```shell```.
 
 
 ### The login nodes
+<center><img class="img-right" src="images/login.png" title="HPC login nodes" style="height: 300px;"></center>
 
-After you type ```shell``` on the bastion host, you're connected to a computer called a login node. 
+After you type ```shell``` on the bastion host, you're connected to a computer called a **login node**. 
 
-<center><img src="images/login.png" title="HPC login nodes" style="height: 300px;"></center>
 
-We have two of these available and you will be assigned one at random. If you run the ```hostname``` command as you did on the bastion host, you should see either ```wentletrap``` or ```junonia```. 
+
+We have two of these available and you will be assigned one at random. If you run the `hostname` command as you did on the bastion host, you should see either `wentletrap` or `junonia`. 
+
+```
+(puma) [user@junonia ~]$ hostname
+junonia.hpc.arizona.edu
+```
 
 A login node is a shared workspace with minimal computational capabilities and very little software installed. This is not the place where computational work is done so users should not run their analyses, compile their software, or perform computationally intensive work in this location. Instead, the login nodes are meant for activities such as managing files, writing scripts, submitting and monitoring jobs, and viewing system resources.
 
-
+<br style="clear: both;">
 
 
 <html>
