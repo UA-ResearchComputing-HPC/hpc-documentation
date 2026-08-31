@@ -44,8 +44,8 @@ This approach gives you fine-grained control over your software environment, ena
 
 Software modules are ==only available on compute nodes== and are not accessible on the login nodes. 
 
-!!! danger "Ocelote will be decommissioned on August 17th"
-    Ocelote will no longer be available as a separate cluster on August 17th, 2026. All workloads that were developed on a CentOS 7 cluster will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
+!!! danger "Ocelote was decommissioned on August 17th"
+    Ocelote is no longer available as a separate cluster. All workloads that were developed on CentOS 7 (Ocelote or El Gato's OS) will need to be migrated to Rocky Linux 9. See our [Operating System Updates](../../resources/updates/) documentation for more information. 
 
 
 ## Module Commands

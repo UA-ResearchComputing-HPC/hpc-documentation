@@ -319,7 +319,7 @@ If you already have a session file that is consuming excessive space in your hom
 
 ```bash title="Moving the Session Directory"
 mv ~/.local/share/rstudio /path/to/new/dir
-echo 'RSTUDIO_DATA_HOME=/path/to/new/dir/rstudio' >> ~/.bashrc
+echo 'export RSTUDIO_DATA_HOME=/path/to/new/dir/rstudio' >> ~/.bashrc
 ```
 
 Alternatively
