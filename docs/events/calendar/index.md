@@ -27,7 +27,6 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 <iframe src="images/f26-flyer.pdf" width="100%" height="900" style="border: none;">
 </iframe>
 
-<!-- text -->
 
 ### Day 1: Friday 9/11 - Introduction to HPC
 
@@ -101,20 +100,14 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
     
     Introduction to the NSF's Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support ([ACCESS](https://access-ci.org/about/)) program, including how to create an account, the types of services offered, and how to create your account. Additional focus placed on GPU resources.
 
-
-
-<!-- <object class="pdf" 
-    data="images/SupportServicesInfoSlide.pdf"
-    width="800"
-    height="500"
-    border="0">
-</object> -->
-
 ---
 
 ## Special Topic: Quantum Computing
 
-**Thursday, September 17th -- 12:00pm - 1:30pm**
+**Thursday, September 17th 12:00pm - 1:30pm**
+
+**Location: [Main Library B254 CATalyst Learning Studio](https://lib.arizona.edu/sites/default/files/main-floor2.pdf)**
+
 
 ??? info "Introduction to Quantum Computing with MATLAB"
 
