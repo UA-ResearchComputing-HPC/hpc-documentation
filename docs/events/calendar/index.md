@@ -17,7 +17,7 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 ## Fall 2026 HPC Workshops
 
-<html><center><a href="https://docs.google.com/forms/d/e/1FAIpQLSfiWXoj_IhONrkrjD-gLp6JwKTescAPvHkhDCZxjg89J89XNw/viewform?usp=publish-editor" title="Click here to register" class="md-button md-button--primary" target="blank">Register for HPC Workshops Here!</a></center></html>
+<html><center><a href="https://docs.google.com/forms/d/e/1FAIpQLSfiWXoj_IhONrkrjD-gLp6JwKTescAPvHkhDCZxjg89J89XNw/viewform?usp=publish-editor" title="Click here to register" class="md-button md-button--primary" target="blank">Register for HPC Workshops Here</a></center></html>
 
 !!! warning "Arizona Email Required"
 
@@ -26,6 +26,8 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
 <iframe src="images/f26-flyer.pdf" width="100%" height="900" style="border: none;">
 </iframe>
+
+[Click here](images/f26-flyer.pdf) to download above flyer.
 
 
 ### Day 1: Friday 9/11 - Introduction to HPC
@@ -117,8 +119,99 @@ Every semester, we host training workshops on topics ranging from intro to HPC, 
 
     Participants will also learn to validate quantum algorithms through simulation and how they can run them on cloud-based quantum hardware connected through MATLAB, including IBM Quantum Compute Service and AWS Braket devices. By the end of the workshop, attendees will have a practical foundation for developing and evaluating quantum computing solutions in MATLAB.
 
-<html><center><a href="https://docs.google.com/forms/d/e/1FAIpQLSf3HzIdF5P_woqYv_FIlywZM1uGb8tj8LhgrTagO8M-IjIJdg/viewform?usp=publish-editor" title="Click here to register" class="md-button md-button--primary" target="blank">Register for Quantum Computing Workshop Here!</a></center></html>
+<html><center><a href="https://docs.google.com/forms/d/e/1FAIpQLSf3HzIdF5P_woqYv_FIlywZM1uGb8tj8LhgrTagO8M-IjIJdg/viewform?usp=publish-editor" title="Click here to register" class="md-button md-button--primary" target="blank">Register for Quantum Computing Workshop Here</a></center></html>
 
+---
+
+## NVIDIA Deep Learning Institute
+
+<!-- ??? info "10:00am - Intro to Machine Learning on HPC" -->
+
+### Day 1: Fundamentals of Accelerated Data Science with RAPIDS
+
+**Thursday October 1, 2026 9:00AM - 4:20PM**
+
+**Location: Main Library room B201**
+
+??? info "Day 1: Fundamentals of Accelerated Data Science with RAPIDS"
+	
+    In this Deep Learning Institute (DLI) workshop, participants will learn how to build and execute end-to-end GPU-accelerated data science workflows that enable them to quickly explore, iterate, and make predictions. Using the RAPIDS accelerated data science libraries, participants will apply a wide variety of GPU-accelerated machine learning algorithms, including XGBoost, cuGRAPH’s single-source shortest path, and cuML’s KNN, DBSCAN, and logistic regression to perform data analysis at scale.
+
+    By participating in this workshop, you’ll:
+
+    - Implement GPU-accelerated data preparation and feature extraction using cuDF and Apache Arrow data frames  
+    - Apply a broad spectrum of GPU-accelerated machine learning tasks using XGBoost and a variety of cuML algorithms  
+    - Execute GPU-accelerated graph analysis with cuGraph, achieving massive-scale analytics in small amounts of time  
+    - Rapidly achieve massive-scale graph analytics using cuGraph routines  
+
+    Topics: RAPIDS, cuDF, XGBoost, cuML, cuGraph, Dask, cuPy, pandas, NumPy, Bokeh,data science, data analytics, machine learning
+
+    Prerequisites: Experience with Python, ideally including pandas and NumPy. Assessment Type: Code-based
+    Certificate Available  
+
+    [Learn more here](https://www.nvidia.com/en-in/training/instructor-led-workshops/fundamentals-of-accelerated-dat a-science)
+
+    ( ignore mentions of price, workshop is hosted free )
+
+<!-- [Day 1 Registration form](https://forms.gle/VwKwGzhJW8mCzWZo7) -->
+
+<html><center><a href="https://forms.gle/VwKwGzhJW8mCzWZo7" title="Click here to register" class="md-button md-button--primary" target="blank">Register for NVIDIA DLI Day 1</a></center></html>
+
+### Day 2: Fundamentals of Deep Learning
+
+**October 8, 2026 9:00AM - 4:20PM**
+
+**Location: Main Library room B201**
+
+??? info "Day 2: Fundamentals of Deep Learning"
+
+    In this Deep Learning Institute (DLI) workshop, participants will learn the fundamentals of multi-layered artificial neural networks to deliver state-of-the-art accuracy in tasks such as object detection, speech recognition, and language translation. Using deep learning, computers can learn and recognize patterns from data that are considered too complex or subtle for expert-written software. This course will build intuition and experience in python with the PyTorch library and many topics related to Deep Learning.
+
+    By participating in this workshop, you’ll:
+
+    - Learn the fundamental techniques and tools required to train a deep learning model 
+    - Gain experience with common deep learning data types and model architectures 
+    - Enhance datasets through data augmentation to improve model accuracy 
+    - Leverage transfer learning between models to achieve efficient results with less data and computation 
+    -  Build confidence to take on your own project with a modern deep learning framework
+	
+    Topics: PyTorch, Pandas, Convolutional Neural Networks (CNNs), Data Augmentation, Transfer LearNatural Language Processing
+
+    Prerequisites: Experience with Python, functions, loops, dictionaries, and arrays. Pandas Data Processing, Computing Regression lines.
+
+    Assessment Type: Code-based
+
+    Certificate Available
+
+    [Learn more here](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+C-FX-01+V3)
+
+    ( ignore mentions of price, workshop is hosted free )
+      
+<!-- [Day 2 Registration form](https://forms.gle/Z5YjoXbENfofXU4f7) -->
+
+<html><center><a href="https://forms.gle/Z5YjoXbENfofXU4f7" title="Click here to register" class="md-button md-button--primary" target="blank">Register for NVIDIA DLI Day 2</a></center></html>
+
+## Pittsburgh Supercomputing Center Remote Learning
+
+### GPU Programming Using OpenACC
+
+**Monday September 28, 2026 9am - 3pm**
+
+**Location: Computer Center Room 130**
+
+OpenACC is the accepted standard using compiler directives to allow quick development of GPU capable codes using standard languages and compilers. It has been used with great success to accelerate real applications within very short development periods. This workshop assumes knowledge of either C or Fortran programming. It will have a hands-on component using the Bridges-2 computing platform at the Pittsburgh Supercomputing Center. 
+
+<html><center><a href="https://www.psc.edu/resources/training/hpc-workshop-september-28-2026-gpu-programming-using-openacc/" title="Click here to register" class="md-button md-button--primary" target="blank">Register for GPU Programming Workshop</a></center></html>
+
+### Machine Learning and Big Data
+
+**Tuesday-Wednesday October 13-14, 2026**
+
+**Location: Computer Center Room 130**
+
+This workshop will focus on topics including big data analytics and machine learning with Spark, as well as deep learning. We will share the registration page when it becomes available. 
+
+Registration link will be posted when it is made available.
 
 
 ## Our Friends and Partners
