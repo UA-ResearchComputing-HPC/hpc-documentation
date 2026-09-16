@@ -11,5 +11,6 @@ Periodically, we share updates and news with the HPC community in a biannual new
 <div class="grid cards" markdown>
 
 - [**Volume 7 - June 9, 2026**](./vol7/)
+- [**Volume 6 - May 29, 2025**](./vol6/)
 
 </div>
