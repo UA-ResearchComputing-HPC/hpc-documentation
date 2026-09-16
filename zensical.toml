@@ -170,6 +170,10 @@ nav = [
             {"Calendar" = "events/calendar/index.md"},
             {"HPC Workshop Materials" = "events/workshop_materials/index.md"}
         ]},
+        {"Newsletters" = [
+            "newsletters/index.md",
+            {"Volume 7 - June 9, 2026" = "newsletters/vol7/index.md"}
+        ]},
         {"Research Showcase" = [
             "results/index.md",
             {"User Publications" = "results/publications/index.md"},
