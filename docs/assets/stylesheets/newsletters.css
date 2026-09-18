@@ -31,3 +31,42 @@
     border: none; 
     border-top: 2px solid;
 }
+
+.newsletter-colored-block {
+  background: #F2EFEA;
+  padding: 20px;
+  margin: 1px 0;
+}
+
+.newsletter-blue-block {
+  background: #0C234B;
+  color: white;
+  padding: 20px;
+  margin: 1px 0;
+}
+
+.newsletter-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.newsletter-table th {
+  /* all <th> elements inside this table */
+  background-color: rgba(195, 195, 195, 0.297);
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+}
+
+.newsletter-table td {
+  /* all <td> elements inside this table */
+
+  padding: 8px;
+}
+
+.newsletter-table th,
+.newsletter-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}

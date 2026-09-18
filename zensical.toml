@@ -172,7 +172,13 @@ nav = [
         ]},
         {"Newsletters" = [
             "newsletters/index.md",
-            {"Volume 7 - June 9, 2026" = "newsletters/vol7/index.md"}
+            {"Volume 8" = "newsletters/vol8/index.md"},
+            {"Volume 7" = "newsletters/vol7/index.md"},
+            {"Volume 6" = "newsletters/vol6/index.md"},
+            {"Volume 5" = "newsletters/vol5/index.md"},
+            {"Volume 4" = "newsletters/vol4/index.md"},
+            {"Volume 3" = "newsletters/vol3/index.md"},
+            {"Volume 2" = "newsletters/vol2/index.md"}
         ]},
         {"Research Showcase" = [
             "results/index.md",
@@ -281,6 +287,7 @@ note = """
 
 # Extensions 
 [project.markdown_extensions]
+
 pymdownx.snippets.auto_append = [
   "includes/abbreviations.md",
 ]
