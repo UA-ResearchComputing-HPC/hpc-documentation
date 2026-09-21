@@ -69,7 +69,7 @@ This documentation site provides technical details relevant to using our HPC sys
 
 </div>
 
-## System Highlights FY 2025
+## System Highlights FY 2026
 
 [Download Full Report](./assets/pdfs/FY26_Annual_Report.pdf){ .md-button .md-button--primary }
 
