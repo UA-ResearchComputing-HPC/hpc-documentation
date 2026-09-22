@@ -209,9 +209,9 @@ OpenACC is the accepted standard using compiler directives to allow quick develo
 
 **Location: Computer Center Room 130**
 
-This workshop will focus on topics including big data analytics and machine learning with Spark, as well as deep learning. We will share the registration page when it becomes available. 
+This workshop will focus on topics including big data analytics and machine learning with Spark, as well as deep learning. 
 
-Registration link will be posted when it is made available.
+<html><center><a href="https://www.psc.edu/resources/training/hpc-workshop-big-data-october-13-14-2026/" title="Click here to register" class="md-button md-button--primary" target="blank">Register for GPU Programming Workshop</a></center></html>
 
 
 ## Our Friends and Partners
