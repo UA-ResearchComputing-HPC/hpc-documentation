@@ -234,3 +234,12 @@ del {
 .ycaution {
   color: #f1c40f;
 }
+
+span.blockspam {
+  display: none;
+}
+
+email-spam-block {
+  color: red;
+  background-color: yellow;
+}

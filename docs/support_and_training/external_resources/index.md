@@ -11,11 +11,11 @@ ACCESS is an NSF-funded national program that provides compute resources for res
 ## Ansys
 <img src="images/Ansys_logo.jpg" title="Ansys logo" style="height:50px;"> 
 
-For help with local installations, contact the College of Engineering IT services: **support@engr.arizona.edu**
+For help with local installations, contact the **[College of Engineering IT services](https://support.engr.arizona.edu/en/)**.
 
-Ansys-specific support (debugging, questions about usage, etc) is available through PADT: **support@padtinc.com**
+Ansys-specific support (debugging, questions about usage, etc) is available through PADT: <span class="blockspam" aria-hidden="true">Please do not send us bot spam</span> <span class="email-spam-block">support@</span><!-- sdfjsdhfkjypcs -->padtinc.com. 
 
-To report license connection issues, contact: [HPC consulting](../consulting_services/)
+To report license connection issues, contact **[HPC consulting](../consulting_services/)**.
 
 ## Code Commons
 

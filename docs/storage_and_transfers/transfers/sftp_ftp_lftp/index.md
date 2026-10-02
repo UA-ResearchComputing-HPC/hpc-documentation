@@ -45,3 +45,41 @@ You will then be able to move files between HPC and the remote host using ```get
 > get /path/to/remote/file /path/to/local/directory ### retrieves file from remote host
 > put /path/to/local/file /path/to/remote/directory ### Uploads file from HPC to remote host
 ```
+
+
+## Filezilla
+
+Filezilla is an FTP/STFP graphical utility that can be used to transfer files between a user's local computer and the HPC filesystem. Instruction on how to connect are provided below.
+
+**Step 1**: Open the Site Manager and select New Site in the window that opens
+
+<img src="./images/site_manager.png" style=" box-shadow: 5px 5px 5px #999;">
+
+<img src="./images/new_site.png" style=" box-shadow: 5px 5px 5px #999;">
+
+**Step 2**: In the site configuration window that opens:
+
+1. Select **SFTP - SSH File Transfer Protocol** for Protocol
+2. Enter `filexfer.hpc.arizona.edu` for Host
+3. Enter `22` for Port
+4. Select **Interactive** for Logon Type
+5. Enter your NetID for User
+6. Select OK
+
+<img src="./images/config_site.png" style=" box-shadow: 5px 5px 5px #999;">
+
+**Step 3**: Enter your NetID password at the prompt
+
+<img src="./images/password_prompt.png" style=" box-shadow: 5px 5px 5px #999;">
+
+**Step 4**: Duo Authenticate
+
+In the next box that opens, enter your Duo authentication option. For example, in this case I entered `1` to send a push notification.
+
+<img src="./images/duo_authenticate.png" style=" box-shadow: 5px 5px 5px #999;">
+
+If everything's successful, you should now be connected and see a command style window with your local filesystem on the left and your HPC's filesystem on the right. 
+
+<img src="./images/file_manager.png" style=" box-shadow: 5px 5px 5px #999;">
+
+To transfer files, you can simply drag and drop between the frames. To change to a different path (e.g., `/xdisk` or `/groups` from your `/home`), simply enter the path under **Remote site** and hit ++enter++
