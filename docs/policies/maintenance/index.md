@@ -43,6 +43,18 @@ Any emergency outages will be announced via email through the **hpc-announce@lis
 
 <html>
 
+  <button class="collapsible">October 28, 2026</button>
+  <div class="content">
+  <p>
+  <b>Type</b>: Rolling Maintenance
+  <ul>
+  <li>Routine software and firmware updates for the compute nodes and storage.</li>
+  <li>Open OnDemand update to add new features.</li>
+  <li>Update to user portal to add new features.</li>
+  </ul>
+  </p>
+  </div>
+
   <button class="collapsible">July 29, 2026</button>
   <div class="content">
   <p>
