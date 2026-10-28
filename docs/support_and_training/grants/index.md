@@ -5,11 +5,11 @@
 
 ## Overview 
 
-University of Arizona (UArizona) researchers have access to a variety of high performance computing and storage resources through both UArizona HPC and the [NSF-funded CyVerse project](http://cyverse.org). A moderate amount of compute time and storage is free to any research faculty, also known as principal investigators (PIs).
+University of Arizona (UArizona) researchers have access to a variety of high performance computing and storage resources. A centrally funded amount of compute time and storage is free to any research faculty, also known as principal investigators (PIs).
 
 You might consider these scenarios:
 
-1. **Run proof-of-concept on the HPC clusters**
+1. **Run proof-of-concept on the HPC clusters (aka supercomputers)**
 
     Compute time and storage are free on a moderate scale so no funding is needed to test and develop code, workflows, and methodologies for grants.
 
@@ -21,16 +21,12 @@ You might consider these scenarios:
 
     Take advantage of the enterprise class facilities and support to save space and reduce administration and setup costs. [More information here](https://it.arizona.edu/service/research-computing-colocation).
 
-4. **CyVerse data center**
+4. **ACCESS and NAIRR national cyberinfrastructure HPC and Cloud providers.**
 
-    These reside at UArizona, are funded by the National Science Foundation’s Directorate for Biological Sciences, and provide [life scientists with powerful computational infrastructure](https://cyverse.org/).
-    
-5. **ACCESS (formerly XSEDE) national cyberinfrastructure HPC and Cloud providers.**
-
-    Available for free to any US-based researcher. [Get started here](https://access-ci.org/). UArizona [researchers can request startup allocations](https://allocations.access-ci.org/) to test out their system(s) of choice. After the startup allocation, full allocations can be requested for millions of CPU-hours.
+    Available for free to any US-based researcher. [Get started here for ACCESS](https://access-ci.org/) or [Get started here for NAIRR](https://nairrpilot.org/). UArizona [researchers can request startup allocations](https://allocations.access-ci.org/) to test out their system(s) of choice. After the startup allocation, full allocations can be requested for millions of CPU-hours.
 
 
-## The University of Arizona Research Computing and Cyberinfrastructure Plan 2022
+## The University of Arizona Research Computing and Cyberinfrastructure Plan 2026
 
 <html>
 <center>
@@ -54,7 +50,7 @@ You might consider these scenarios:
 
 ## Data Management Plans
 
-**A data management plan documents the lifecycle of your data**. The plan provides details on data collection for storage, access, sharing, and reproducibility of your results.  A good data management plan will ensure the availability and accessibility of your research results after your project is complete and you have published the results, increasing the value of your research and possible reuse by other researchers. 
+**A Data Management Plan documents the lifecycle of your data**. The plan provides details on data collection for storage, access, sharing, and reproducibility of your results.  A good data management plan will ensure the availability and accessibility of your research results after your project is complete and you have published the results, increasing the value of your research and possible reuse by other researchers. 
 
 The UArizona Libraries host automated tools to design and execute data management plans for grants. More information here: [https://data.library.arizona.edu/](https://data.library.arizona.edu/)
 
