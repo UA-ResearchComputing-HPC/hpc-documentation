@@ -9,11 +9,16 @@ title: UArizona HPC Events Calendar
 
 Every semester, we host training workshops on topics ranging from intro to HPC, to machine learning, to parallel computing, and beyond. In addition, there are many great opportunities for learning hosted by other organizations within the community. Whether you're interested in learning about specific programming languages, exploring data analytics techniques, or cloud computing, there's a wide array of learning opportunities available.
 
-!!! info "Old Workshops"
+!!! info "Workshop Materials"
     
-    Looking for materials from or recordings of previous workshops? Check out our [Workshop Materials](../workshop_materials/) page!
+    Looking for slides or recordings from previous workshops? Check out our [Workshop Materials](../workshop_materials/) page!
 
 ---
+
+## Spring 2027 HPC Workshops
+
+Stay tuned! We will announce upcoming events via the hpc-announce list serve.
+
 
 ## Fall 2026 HPC Workshops
 
