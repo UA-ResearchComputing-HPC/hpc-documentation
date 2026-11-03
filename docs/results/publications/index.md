@@ -68,7 +68,7 @@ Have a publication to share? [Contact the HPC team](../../support_and_training/c
 
 [Deep reinforcement learning for airfoil pitching moment control](https://doi.org/10.1016/j.compfluid.2026.107325)
 
-Rajendran, P. T., Pagnier, L., & Mashayek, F.
+Thoguluva Rajendran, P., Pagnier, L., & Mashayek, F.
 
 *Computers & Fluids*
 </div>
