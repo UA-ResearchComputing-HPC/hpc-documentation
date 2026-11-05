@@ -60,11 +60,11 @@ Have a publication to share? [Contact the HPC team](../../support_and_training/c
 
 <div class="publication-grid" markdown>
 
-### 2026
+### 2027
 
-<!---------------------------------------------------------  2026 -------------------------------------------------------->
+<!---------------------------------------------------------  2027 -------------------------------------------------------->
 <div class="publication-card" markdown>
-**2026** · :material-cog: Aerospace & Mechanical Engineering | :material-math-integral: Mathematics
+**2027** · :material-cog: Aerospace & Mechanical Engineering | :material-math-integral: Mathematics
 
 [Deep reinforcement learning for airfoil pitching moment control](https://doi.org/10.1016/j.compfluid.2026.107325)
 
@@ -73,6 +73,19 @@ Thoguluva Rajendran, P., Pagnier, L., & Mashayek, F.
 *Computers & Fluids*
 </div>
 
+
+### 2026
+
+<!---------------------------------------------------------  2026 -------------------------------------------------------->
+<div class="publication-card" markdown>
+**2026** · :material-cog: Aerospace & Mechanical Engineering 
+
+[Capillary breakup of liquid jets in the dripping regime and successive drop impacts on a solid surface](https://doi.org/10.1108/HFF-10-2025-0768)
+
+Mostafavi, A., Ranjbar, M., Yurkiv, V., Yarin, A. L., & Mashayek, F. 
+
+*International Journal of Numerical Methods for Heat & Fluid Flow*
+</div>
 
 
 
@@ -101,6 +114,18 @@ Habensus, I., Sun, Q., Astashkin, A. V., North, L. J., Bredas, J. L., Coropceanu
 
 
 
+<!--------------------------------------------------------- January 20, 2026 -------------------------------------------------------->
+<div class="publication-card" markdown>
+**2026** · :material-cog: Aerospace & Mechanical Engineering
+
+[Self-tuning dynamic explicit modal filtering based on local flow characteristics for large-eddy simulation](https://doi.org/10.1063/5.0309811)
+
+Ranjbar, M., Mostafavi, A., & Mashayek, F.
+
+*Physics of Fluids*
+</div>
+
+
 <!--------------------------------------------------------- January 16, 2026 -------------------------------------------------------->
 <div class="publication-card" markdown>
 **2026** · :material-earth: Lunar & Planetary Laboratory
@@ -111,6 +136,9 @@ Zhao, X., Fraschetti, F., & Giacalone, J.
 
 *The Astrophysical Journal*
 </div>
+
+
+
 
 ### 2025
 
@@ -135,6 +163,17 @@ Lemoine, D.
 Baluja, R, Guo, B., Howden, W., Lemoine, D
 
 *Proceedings of the National Academy of Sciences*
+</div>
+
+<!--------------------------------------------------------- July, 2025 -------------------------------------------------------->
+<div class="publication-card" markdown>
+**2025** · :material-cog: Aerospace & Mechanical Engineering
+
+[On the energy analysis of two-phase flows simulated with the diffuse interface method](https://doi.org/10.1063/5.0276045)
+
+Mostafavi, A., Ranjbar, M., Yurkiv, V., Yarin, A. L., & Mashayek, F. 
+
+*Physics of Fluids*
 </div>
 
 
@@ -162,8 +201,35 @@ Sennary, M., Shah, J., Yuan, M., Mahjoub, A., Pervak, V., Golubev, N. V., & Hass
 </div>
 
 
+<!--------------------------------------------------------- April 15, 2025 -------------------------------------------------------->
+<div class="publication-card" markdown>
+**2025** · :material-cog: Aerospace & Mechanical Engineering
+
+[MOOSE-based finite element framework for mass-conserving two-phase flow simulations on adaptive grids using the diffuse interface approach and a Lagrange multiplier](https://doi.org/10.1016/j.jcp.2025.113755)
+
+Mostafavi, A., Ranjbar, M., Yurkiv, V., Yarin, A. L., & Mashayek, F.
+
+*Journal of Computational Physics*
+</div>
+
+
 
 ### 2024
+
+
+<!--------------------------------------------------------- December 2024 -------------------------------------------------------->
+<div class="publication-card" markdown>
+**2024** · :material-cog: Aerospace & Mechanical Engineering
+
+[Modal analysis of turbulent flows simulated with spectral element method](https://doi.org/10.1063/5.0234014)
+
+Ranjbar, M., Mostafavi, A., Thoguluva Rajendran, P., Komperda, J., & Mashayek, F.
+
+*Physics of Fluids*
+</div>
+
+
+
 
 <!--------------------------------------------------------- November 6, 2024 -------------------------------------------------------->
 <div class="publication-card" markdown>
